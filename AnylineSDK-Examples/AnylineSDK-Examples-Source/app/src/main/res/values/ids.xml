@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="radio_button_electric" type="id"/>
+    <item name="radio_button_electric_5_1" type="id"/>
+    <item name="radio_button_electric_6_1" type="id"/>
+    <item name="radio_button_electric_white" type="id"/>
+    <item name="radio_button_electric_7" type="id"/>
+    <item name="radio_button_gas_4" type="id"/>
+    <item name="radio_button_gas_5" type="id"/>
+    <item name="radio_button_gas_6" type="id"/>
+    <item name="radio_button_gas_7" type="id"/>
+    <item name="radio_button_water_white" type="id"/>
+    <item name="radio_button_water_black" type="id"/>
+</resources>

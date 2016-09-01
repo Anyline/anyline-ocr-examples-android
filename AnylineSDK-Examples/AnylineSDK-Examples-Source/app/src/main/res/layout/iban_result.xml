@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="@drawable/iban_background"
+    android:paddingBottom="16dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="16dp"
+    tools:context="io.anyline.examples.ocr.result.IbanResultView">
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="75dp"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        android:textColor="@android:color/black"
+        />
+</merge>

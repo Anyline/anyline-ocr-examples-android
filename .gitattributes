@@ -1,0 +1,7 @@
+AnylineSDK/anylinesdk-3.6.1.aar filter=lfs diff=lfs merge=lfs -text
+AnylineSDK-Examples/AnylineSDK-Examples_3.6.1.apk filter=lfs diff=lfs merge=lfs -text
+AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/assets/tessdata/deu.traineddata filter=lfs diff=lfs merge=lfs -text
+images/visualFeedback/default/contour_point.gif filter=lfs diff=lfs merge=lfs -text
+images/visualFeedback/default/contour_rect.gif filter=lfs diff=lfs merge=lfs -text
+images/visualFeedback/default/contour_underline.gif filter=lfs diff=lfs merge=lfs -text
+images/visualFeedback/default/rect.gif filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Anyline
+  ~ mrz_result.xml
+  ~
+  ~ Copyright (c) 2015 9yards GmbH
+  ~
+  ~ Created by martin at 2015-07-03
+  -->
+
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="217dp"
+    android:background="@drawable/passport_background"
+    android:paddingBottom="16dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="16dp"
+    tools:context="io.anyline.examples.mrz.MrzResultView">
+
+    <TextView
+        android:id="@+id/text_type"
+        style="@style/MrzResultText"
+        android:layout_marginLeft="100dp"
+        tools:text="P"
+        />
+
+    <TextView
+        android:id="@+id/text_country_code"
+        style="@style/MrzResultText"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/text_type"
+        tools:text="AUT"
+        />
+
+    <TextView
+        android:id="@+id/text_number"
+        style="@style/MrzResultText"
+        android:layout_alignParentRight="true"
+        tools:text="1234564XY"
+        android:layout_marginRight="8dp"
+        />
+
+    <TextView
+        android:id="@+id/text_surnames"
+        style="@style/MrzResultText"
+        android:layout_below="@+id/text_type"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="6dp"
+        tools:text="WHATEVA"
+        />
+
+    <TextView
+        android:id="@+id/text_given_names"
+        style="@style/MrzResultText"
+        android:layout_below="@+id/text_surnames"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="6dp"
+        tools:text="PETER PAUL JOHN"
+        />
+
+    <TextView
+        android:id="@+id/text_day_of_birth"
+        style="@style/MrzResultText"
+        android:layout_below="@+id/text_given_names"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="6dp"
+        tools:text="690609"
+        />
+
+    <TextView
+        android:id="@+id/text_expiration_date"
+        style="@style/MrzResultText"
+        android:layout_below="@+id/text_day_of_birth"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="6dp"
+        tools:text="180102"
+        />
+
+    <TextView
+        android:id="@+id/text_sex"
+        style="@style/MrzResultText"
+        android:layout_below="@+id/text_expiration_date"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="6dp"
+        tools:text="M"
+        />
+
+    <TextView
+        android:id="@+id/text_mrz"
+        style="@style/MrzResultMrzText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        tools:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        />
+
+</merge>

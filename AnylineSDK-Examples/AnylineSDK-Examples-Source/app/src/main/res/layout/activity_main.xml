@@ -1,0 +1,14 @@
+<!--
+  ~ Anyline
+  ~ activity_main.xml
+  ~
+  ~ Copyright (c) 2015 9yards GmbH
+  ~
+  ~ Created by martin at 2015-07-03
+  -->
+
+<ListView
+    android:id="@+id/list_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

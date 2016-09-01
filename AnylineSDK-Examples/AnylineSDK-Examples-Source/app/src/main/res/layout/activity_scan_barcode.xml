@@ -1,0 +1,37 @@
+<!--
+  ~ Anyline
+  ~ activity_scan_barcode.xml
+  ~
+  ~ Copyright (c) 2015 9yards GmbH
+  ~
+  ~ Created by martin at 2015-07-03
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.anyline.examples.barcode.ScanBarcodeActivity"
+    android:animateLayoutChanges="true">
+
+    <at.nineyards.anyline.modules.barcode.BarcodeScanView
+        android:id="@+id/barcode_scan_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:textColor="@android:color/white"
+        tools:text="1234656479765"
+        android:textSize="24sp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"/>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+{
+    "captureResolution":"720p",
+    "pictureResolution":"1080p",
+    "pictureAspectRatios":["16:9"],
+    "cutout": {
+        "style": "rect",
+        "maxWidthPercent": "100%",
+        "maxHeightPercent": "100%",
+        "width": 720,
+        "ratioFromSize": {
+            "width": 10,
+            "height": 15
+        },
+        "alignment": "center",
+        "strokeWidth": 2,
+        "cornerRadius": 0,
+        "strokeColor": "00000000"
+    },
+    "flash": {
+        "mode": "manual",
+        "alignment": "bottom_left",
+        "offset": {
+            "x": 10,
+            "y": 0
+        }
+    },
+    "beepOnResult": true,
+    "vibrateOnResult": true,
+    "blinkAnimationOnResult": true,
+    "cancelOnResult": false
+}

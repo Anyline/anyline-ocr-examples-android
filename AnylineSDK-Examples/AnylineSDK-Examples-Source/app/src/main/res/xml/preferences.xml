@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fragment="io.anyline.examples.SettingsFragment">
+    <CheckBoxPreference
+        android:key="pref_report_energy"
+        android:title="@string/pref_reporting"
+        android:summary="@string/pref_reporting_summary"
+        android:defaultValue="true" />
+</PreferenceScreen>

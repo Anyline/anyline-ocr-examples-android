@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array
+        name="example_activity_names">
+        <item>@string/category_energy</item>
+        <item>@string/scan_analog_electric_meter</item>
+        <item>@string/scan_analog_gas_meter</item>
+        <item>@string/scan_analog_water_meter</item>
+        <item>@string/scan_digital_meters</item>
+        <item>@string/scan_heat_meters</item>
+        <item>@string/category_identification</item>
+        <item>@string/scan_mrz</item>
+        <item>@string/category_barcodes</item>
+        <item>@string/scan_barcode</item>
+        <item>@string/category_fintech</item>
+        <item>@string/scan_iban</item>
+        <item>@string/category_documents</item>
+        <item>@string/scan_document</item>
+        <item>@string/category_loyality</item>
+        <item>@string/scan_voucher_code</item>
+        <item>@string/scan_red_bull_code</item>
+        <item>@string/scan_bottlecap</item>
+        <item>@string/category_others</item>
+        <item>@string/scan_scrabble</item>
+        <item>@string/scan_isbn</item>
+        <item>@string/scan_record</item>
+        <item>@string/category_vehicles</item>
+        <item>@string/license_plates</item>
+        <item>@string/license_plates_austria</item>
+        <item>@string/license_plates_germany</item>
+    </string-array>
+
+    <string-array
+        name="example_activity_classes">
+        <item>HEADER</item>
+        <item>io.anyline.examples.meter.ScanAnalogElectricMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanAnalogGasMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanAnalogWaterMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanEnergyDigitalMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanDigitalHeatMeterActivity</item>
+        <item>HEADER</item>
+        <item>io.anyline.examples.mrz.ScanMrzActivity</item>
+        <item>HEADER</item>
+        <item>io.anyline.examples.barcode.ScanBarcodeActivity</item>
+        <item>HEADER</item>
+        <item>io.anyline.examples.ocr.ScanIbanActivity</item>
+        <item>HEADER</item>
+        <item>io.anyline.examples.document.ScanDocumentActivity</item>
+        <item>HEADER</item>
+        <item>io.anyline.examples.ocr.ScanVoucherCodeActivity</item>
+        <item>io.anyline.examples.ocr.ScanRedBullCodeActivity</item>
+        <item>io.anyline.examples.ocr.ScanBottlecapActivity</item>
+        <item>HEADER</item>
+        <item>io.anyline.examples.ocr.ScanScrabbleActivity</item>
+        <item>io.anyline.examples.ocr.ScanIsbnActivity</item>
+        <item>io.anyline.examples.ocr.ScanRecordActivity</item>
+        <item>HEADER</item>
+        <item>io.anyline.examples.ocr.ScanLicensePlateActivity</item>
+        <item>io.anyline.examples.ocr.ScanLicensePlateAustriaActivity</item>
+        <item>io.anyline.examples.ocr.ScanLicensePlateGermanyActivity</item>
+    </string-array>
+</resources>

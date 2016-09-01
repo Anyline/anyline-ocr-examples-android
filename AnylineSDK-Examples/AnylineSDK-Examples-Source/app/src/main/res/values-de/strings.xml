@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Anyline Examples</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="camera_permission_required">Berechtigung</string>
+    <string name="camera_permission_required_details">Anyline benötigt Zugriff auf die Kamera um das Scannen zu
+    ermöglichen</string>
+    <string name="category_barcodes">Barcodes</string>
+    <string name="category_documents">Dokumente</string>
+    <string name="category_energy">Energie</string>
+    <string name="category_fintech">Fintech</string>
+    <string name="category_identification">Identifikation</string>
+    <string name="category_loyality">Kundenbindung</string>
+    <string name="category_others">Andere</string>
+    <string name="digital_meter">Digitalzähler</string>
+    <string name="heat_meter">Wärmezähler</string>
+    <string name="document_advanced_outline_detection">Erweiterte Umrisserkennung</string>
+    <string name="document_error_glare_detected">Bitte vermeide Reflexionen</string>
+    <string name="document_error_not_sharp">Das Dokument ist nicht scharf. Bitte halte die Kamera still und fokusiere
+        das Dokument.</string>
+    <string name="document_error_outline_not_found">Die Umrisse des Dokuments konnten nicht gefunden werden</string>
+    <string name="document_error_skew_too_high">Das Dokument ist zu verzerrt. Bitte halte die Kamera direkt über das
+        Dokument.</string>
+    <string name="document_error_too_dark">Das Bild ist zu dunkel. Bitte sorge für ausreichend helle Lichtverhältnisse
+        .</string>
+    <string name="document_error_unknown">Unbekannter Fehler</string>
+    <string name="document_fast_outline_detection">Schnelle Umrisserkennung</string>
+    <string name="document_picture_error">Fehler beim scannen des hochauflösenden Dokumentes:\n</string>
+    <string name="document_picture_success">Dokument erfolgreich gescannt</string>
+    <string name="document_preview_success">Hochauflösendes Dokument wird gescannt. Bitte still halten.</string>
+    <string name="document_using_advanced_mode">Zu erweitertem Erkennungsmodus gewechselt</string>
+    <string name="document_using_fast_mode">Zu schnellem Erkennungsmodus gewechselt</string>
+    <string name="document_image_saved_to">Bild gespeichert unter</string>
+    <string name="document_processing_picture">Das Bild wird analysiert</string>
+    <string name="document_processing_picture_header">Analysiere</string>
+
+    <string name="electric_meter">Stromzähler</string>
+    <string name="gas_meter">Gas Zähler</string>
+    <string name="header_config">Einstellung: %1$s</string>
+    <string name="isbn_description">Beschreibung</string>
+    <string name="isbn_no_information_found">Wir konnten keine Information für diesen ISBN finden. Hier
+            ist das Ergebnis einer einfachen Google Suche.</string>
+    <string name="isbn_no_information_found_no_internet">Wir konnten keine Information für ISBN %s finden. </string>
+    <string name="isbn_product_details">Produktdetails</string>
+    <string name="mrz_result_details">Name: %1$s %2$s\nNr.: %3$s\nLändercode: %4$s\nGeburtstag: %5$s\nAblaufdatum: %6$s</string>
+    <string name="no_internet">Die Seite konnte nicht geladen werden. Besteht eine Internetverbindung?</string>
+    <string name="pref_reporting">Übertragung von Ergebnissen</string>
+    <string name="pref_reporting_summary">Die Übertragung von Ergebnissen in der Community Edition - inklusive der Bilder des gescannten Gegenstandes -
+hilft uns unser Produkt zu verbessern. Wenn du diese Funktion abschalten willst, ist das hier und in deiner eigenen App möglich.
+In unserer Dokumentation gibt es mehr Infos dazu. Ergebnisse und Bilder von MRZ, Barcodes und Dokumenten werden NICHT übertragen.</string>
+    <string name="record_search">Platten Suche</string>
+    <string name="scan_analog_electric_meter">Analoge Stromzähler scannen</string>
+    <string name="scan_analog_gas_meter">Analoge Gaszähler scannen</string>
+    <string name="scan_analog_water_meter">Analoge Wasserzähler scannen</string>
+    <string name="scan_barcode">Barcodes scannen</string>
+    <string name="scan_bottlecap">Kronkorken scannen</string>
+    <string name="scan_digital_meters">Digitalzähler scannen (Alpha)</string>
+    <string name="scan_document">Dokumente scannen</string>
+    <string name="scan_heat_meters">Wärmezähler scannen (Alpha)</string>
+    <string name="scan_iban">IBAN scannen</string>
+    <string name="scan_isbn">ISBN scannen</string>
+    <string name="scan_mrz">MRZ von Pässen und IDs scannen</string>
+    <string name="scan_record">Schallplatten-Katalognummern scannen</string>
+    <string name="scan_red_bull_code">RedBull Mobile Collect Codes scannen</string>
+    <string name="scan_scrabble">Scrabble Buchstaben scannen</string>
+    <string name="scan_voucher_code">Gutschein-Codes scannen</string>
+    <string name="scrabble_disclaimer">Achtung: Wir können keine Garantie geben, dass die vorgeschlagenen Wörter
+        gültige
+        Scrabble-Wörter sind.\nEs werden nur englische Wörter vorgeschlagen.\nSonderbuchstaben, wie unsere Umlaute, werden ignoriert.\nLeere Steine werden auch nicht berücksichtigt.\nDie berechneten Punkte beziehen sich auch auf die englische Scrabble Version.</string>
+    <string name="scrabble_no_match">Oje, es wurden keine Wörter gefunden!</string>
+    <string name="scrabble_points">%1$s Punkte:</string>
+    <string name="scrabble_suggestions">Vorgeschlagene Wörter</string>
+    <string name="settings">Einstellungen</string>
+    <string name="title_barcode">Barcode</string>
+    <string name="title_bottlecap">Kronkorken</string>
+    <string name="title_digital_meter">Digitalzähler (Alpha)</string>
+    <string name="title_document">Dokumente</string>
+    <string name="title_electric_meter">Stromzähler (Analog)</string>
+    <string name="title_gas_meter">Gaszähler (Analog)</string>
+    <string name="title_heat_meter">Wärmezähler (Alpha)</string>
+    <string name="title_iban">IBAN</string>
+    <string name="title_isbn">ISBN</string>
+    <string name="title_isbn_result">ISBN Ergebnis</string>
+    <string name="title_mrz">MRZ</string>
+    <string name="title_record">Schallplatten-Katalognummern</string>
+    <string name="title_record_result">Schallplatten Ergebnis</string>
+    <string name="title_redbull">RedBull Mobile Collect</string>
+    <string name="title_scrabble">Scrabble Buchstaben</string>
+    <string name="title_scrabble_result">Scrabble Ergebnis</string>
+    <string name="title_select_config">Scanmodus wählen</string>
+    <string name="title_voucher">Gutschein-Code</string>
+    <string name="title_water_meter">Wasserzähler (Analog)</string>
+    <string name="water_meter">Wasserzähler</string>
+    <string name="water_meter_black">Schwarz (Alpha)</string>
+    <string name="water_meter_white">Weiß (Alpha)</string>
+    <string name="your_scrabble_squares">Deine Scrabble-Steine</string>
+    <string name="electric_meter_5_1">5 Vorkommastellen</string>
+    <string name="electric_meter_5_1_short">5 Vorkommastellen</string>
+    <string name="electric_meter_6_1">6 Vorkommastellen</string>
+    <string name="electric_meter_6_1_short">6 Vorkommastellen</string>
+    <string name="electric_meter_7">7 Vorkommastellen</string>
+    <string name="electric_meter_7_short">7 Vorkommastellen</string>
+    <string name="electric_meter_auto">5 oder 6 Vorkommastellen</string>
+    <string name="electric_meter_short">5 oder 6 Vorkommastellen</string>
+    <string name="electric_meter_white">5 oder 6 Vorkommastellen auf weißem Hintergrund</string>
+    <string name="electric_meter_white_short">5 oder 6 Vorkommast. auf weiß</string>
+    <string name="gas_meter_4">4 Vorkommastellen</string>
+    <string name="gas_meter_5">5 Vorkommastellen</string>
+    <string name="gas_meter_6">6 Vorkommastellen</string>
+    <string name="gas_meter_7">7 Vorkommastellen</string>
+    <string name="heat_meter_4_3">4 Vorkommastellen</string>
+    <string name="heat_meter_4_3_short">4 Vorkommastellen</string>
+    <string name="heat_meter_5_3">5 Vorkommastellen</string>
+    <string name="heat_meter_5_3_short">5 Vorkommastellen</string>
+    <string name="heat_meter_6_3">6 Vorkommastellen</string>
+    <string name="heat_meter_6_3_short">6 Vorkommastellen</string>
+
+    <string name="category_vehicles">Kraftfahrzeuge</string>
+    <string name="title_license_plate">Kfz-Kennzeichen (Alpha)</string>
+    <string name="license_plates">Kfz-Kennzeichen (Alpha)</string>
+    <string name="license_plates_germany">Deutsche\nKfz-Kennzeichen (Alpha)</string>
+    <string name="title_license_plate_germany">Deutsche Kennzeichen (Alpha)</string>
+    <string name="license_plates_austria">Österreichische\nKfz-Kennzeichen (Alpha)</string>
+    <string name="title_license_plate_austria">Österr. Kennzeichen (Alpha)</string>
+
+</resources>

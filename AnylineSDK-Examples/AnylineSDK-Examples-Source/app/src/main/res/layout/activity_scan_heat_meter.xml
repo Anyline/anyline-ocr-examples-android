@@ -1,0 +1,95 @@
+<!--
+  ~ Anyline
+  ~ activity_scan_heat_meter.xml
+  ~
+  ~ Copyright (c) 2015 9yards GmbH
+  ~
+  ~ Created by martin at 2015-12-03
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.anyline.examples.meter.ScanDigitalHeatMeterActivity">
+
+
+
+    <at.nineyards.anyline.modules.energy.EnergyScanView
+        android:id="@+id/scan_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cutout_alignment="top"
+        app:cutout_style="rect"
+        app:cutout_outside_color="#55000000"
+        app:cutout_offset_y="120"
+        app:cutout_rect_corner_radius_in_dp="4"
+        app:cutout_stroke_width_in_dp="2"
+        app:cutout_stroke_color="#FFFFFF"
+        app:flash_mode="manual"
+        app:flash_alignment="bottom_right"
+        app:beep_on_result="true"
+        app:vibrate_on_result="true"
+        app:blink_animation_on_result="true"
+        app:cancel_on_result="true"
+        app:visual_feedback_style="rect"
+        app:visual_feedback_fill_color="#110099FF"
+        app:visual_feedback_stroke_color="#0099FF"
+
+        />
+
+
+    <TextView
+        android:id="@+id/radio_button_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radio_group"
+        android:layout_alignLeft="@+id/radio_group"
+        android:layout_alignRight="@+id/radio_group"
+        android:background="#88000000"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="8dp"
+        android:paddingTop="2dp"
+        android:text="@string/title_select_config"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/activity_radio_group_padding"
+        android:background="#88FFFFFF"
+        >
+
+        <RadioButton
+            android:id="@+id/radio_heat_4_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heat_meter_4_3"
+            android:buttonTint="@android:color/black"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_heat_5_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/black"
+
+            android:text="@string/heat_meter_5_3"/>
+
+        <RadioButton
+            android:id="@+id/radio_heat_6_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/black"
+
+            android:text="@string/heat_meter_6_3"/>
+
+    </RadioGroup>
+
+
+</RelativeLayout>
