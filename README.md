@@ -60,7 +60,7 @@ The config file enables a quick and easy adaption of the “Scan-View”. You ca
 
 Example barcode_view_config.json:
 
-```java
+```json
 {
     "captureResolution":"720p",
     "cutout": {
@@ -108,7 +108,7 @@ __XML__
 
 Alternatively to a json config, it is also possible to configure the view (EnergyScanView, MrzScanView, BarcodeScanView) using XML-attributes in the layout-file.
 
-```java
+```xml
 <RelativeLayout
      xmlns:android="http://schemas.android.com/apk/res/android"
      xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -132,7 +132,8 @@ Alternatively to a json config, it is also possible to configure the view (Energ
         app:blink_animation_on_result="true"
         app:cancel_on_result="true"
      />
-</RelativeLayout>```
+</RelativeLayout>
+```
 
 ### 3. Add your License 
 
@@ -142,7 +143,7 @@ Add your license to your string resources (can be a separate xml file).
 
 There are module specific options - take a look at the description of the desired module in the Anyline Documentation to get more detailed information.
 
-```java
+```xml
 <string name="anyline_license_key" translatable="false">
     icaCo34adsfasdferJBAerisdlfkjerj1234adsflkerhlakherDAdfjlafherGs\n
     h4ll0we1t7h1s1sno74r34ll1c3n53yO00asdfkaer455alksdfASDSlallernde\n
