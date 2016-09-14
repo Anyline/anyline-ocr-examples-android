@@ -48,7 +48,7 @@ repositories {
 }
 
 dependencies {
-    compile(name:'anylinesdk-3.6.0', ext:'aar')
+    compile(name:'anylinesdk-3.6.1', ext:'aar')
     //... your other dependencies
 }
 ```
