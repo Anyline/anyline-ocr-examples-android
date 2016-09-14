@@ -28,7 +28,7 @@ repositories {
 
 dependencies {
     //add the anyline sdk as dependency (maybe adapt version name)
-    compile 'io.anyline:anylinesdk:3.6.0@aar'
+    compile 'io.anyline:anylinesdk:3.6.1@aar'
     //... your other dependencies
 }
 ```
