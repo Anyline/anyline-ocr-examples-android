@@ -15,8 +15,6 @@
     android:layout_height="match_parent"
     tools:context="io.anyline.examples.meter.ScanEnergyActivity">
 
-
-
     <at.nineyards.anyline.modules.energy.EnergyScanView
         android:id="@+id/energy_scan_view"
         android:layout_width="match_parent"
@@ -37,7 +35,6 @@
         app:visual_feedback_style="rect"
         app:visual_feedback_stroke_color="#0099FF"
         />
-
 
     <TextView
         android:id="@+id/radio_button_header"

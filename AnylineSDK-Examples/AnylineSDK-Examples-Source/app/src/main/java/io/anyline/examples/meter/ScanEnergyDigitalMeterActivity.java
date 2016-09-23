@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.RadioGroup;
 
+import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
 import at.nineyards.anyline.modules.energy.EnergyResultListener;
@@ -123,9 +124,8 @@ public class ScanEnergyDigitalMeterActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onCameraOpened(int id, Camera camera, int width, int height) {
-        //the camera is opened async and this is called when the opening is finished,
-        // with the used camera and the used frame resolution
+    public void onCameraOpened(CameraController cameraController, int width, int height) {
+        //the camera is opened async and this is called when the opening is finished
         Log.d(TAG, "Camera opened successfully. Frame resolution " + width + " x " + height);
     }
 

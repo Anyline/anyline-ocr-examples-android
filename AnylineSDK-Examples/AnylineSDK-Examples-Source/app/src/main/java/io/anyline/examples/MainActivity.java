@@ -48,10 +48,19 @@ public class MainActivity extends AppCompatActivity {
         final ActivityListAdapter adapter = new ActivityListAdapter(this);
         listView.setAdapter(adapter);
 
+        final TextView versionTextView = new TextView(this);
+        String versionInfo = String.format("Version Info:\nApp: %s (%s), %s\nSDK: %s (%s)",
+                BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE, BuildConfig.FLAVOR ,
+                at.nineyards.anyline.BuildConfig.VERSION_NAME,at.nineyards.anyline.BuildConfig.VERSION_CODE);
+        versionTextView.setText(versionInfo);
+        int padding = DimensUtil.getPixFromDp(this, 16);
+        versionTextView.setPadding(padding, padding, padding, padding);
+        listView.addFooterView(versionTextView);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (adapter.getItemViewType(position) == ActivityListAdapter.TYPE_HEADER) {
+                if (view == versionTextView || adapter.getItemViewType(position) == ActivityListAdapter.TYPE_HEADER) {
                     return;
                 }
                 try {
@@ -64,15 +73,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-
-        TextView textView = new TextView(this);
-        String versionInfo = String.format("Version Info:\nApp: %s (%s), %s\nSDK: %s (%s)",
-                BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE, BuildConfig.FLAVOR ,
-                at.nineyards.anyline.BuildConfig.VERSION_NAME,at.nineyards.anyline.BuildConfig.VERSION_CODE);
-        textView.setText(versionInfo);
-        int padding = DimensUtil.getPixFromDp(this, 16);
-        textView.setPadding(padding, padding, padding, padding);
-        listView.addFooterView(textView);
     }
 
     private void checkedStartActivity(Intent intent) {

@@ -5,7 +5,7 @@
         "style": "rect",
         "maxWidthPercent": "90%",
         "maxHeightPercent": "90%",
-        "alignment": "top_half",
+        "alignment": "center",
         "strokeWidth": 2,
         "cornerRadius": 4,
         "strokeColor": "FFFFFF",

@@ -1,7 +1,6 @@
 package io.anyline.examples.ocr;
 
 import android.graphics.PointF;
-import android.hardware.Camera;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +12,8 @@ import android.widget.RelativeLayout;
 import java.util.List;
 
 import at.nineyards.anyline.camera.AnylineViewConfig;
-import at.nineyards.anyline.camera.FocusConfig;
+import at.nineyards.anyline.camera.CameraConfig;
+import at.nineyards.anyline.camera.CameraFeatures;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrError;
 import at.nineyards.anyline.modules.ocr.AnylineOcrListener;
@@ -80,20 +80,18 @@ public class ScanIbanActivity extends AppCompatActivity {
         // set the ocr config
         scanView.setAnylineOcrConfig(anylineOcrConfig);
 
-        // set an individual focus configuration for this example
-        FocusConfig focusConfig = new FocusConfig.Builder()
-                .setDefaultMode(Camera.Parameters.FOCUS_MODE_AUTO) // set default focus mode to be auto focus
-                .setAutoFocusInterval(8000) // set an interval of 8 seconds for auto focus
-                .setEnableFocusOnTouch(true) // enable focus on touch functionality
-                .setEnablePhaseAutoFocus(true)  // enable phase focus for faster focusing on new devices
-                .setEnableFocusAreas(true)  // enable focus areas to coincide with the cutout
-                .build();
-        // set the focus config
-        scanView.setFocusConfig(focusConfig);
-        // set the highest possible preview fps range
-        scanView.setUseMaxFpsRange(true);
-        // set sports scene mode to try and bump up the fps count even more
-        scanView.setSceneMode(Camera.Parameters.SCENE_MODE_SPORTS);
+        // set individual camera settings for this example by getting the current preferred settings and adapting them
+        CameraConfig camConfig = scanView.getPreferredCameraConfig();
+        // change default focus mode to auto (works better if cutout is not in the center)
+        camConfig.setFocusMode(CameraFeatures.FocusMode.AUTO);
+        // autofocus is called in this interval (8000 is default)
+        camConfig.setAutoFocusInterval(8000);
+        // call autofocus if view is touched (true is default)
+        camConfig.setFocusOnTouchEnabled(true);
+        // focus where the cutout is (true is default)
+        camConfig.setFocusRegionEnabled(true);
+        // automatic exposure calculation based on where the cutout is (true is default)
+        camConfig.setAutoExposureRegionEnabled(true);
 
         // initialize with the license and a listener
         scanView.initAnyline(license, new AnylineOcrListener() {

@@ -8,7 +8,6 @@ at.nineyards.anyline.modules.document
 at.nineyards.anyline.modules.energy
 at.nineyards.anyline.modules.mrz
 at.nineyards.anyline.modules.ocr
-at.nineyards.anyline.reporter
 at.nineyards.anyline.util
 org.opencv.core
 org.opencv.highgui

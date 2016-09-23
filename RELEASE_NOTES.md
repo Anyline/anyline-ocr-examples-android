@@ -1,5 +1,68 @@
 # Anyline SDK Android Release Notes #
 
+## Anyline SDK 3.7.0 ##
+Release Date 2016-09-23
+
+_**Note:** This release contains improvements in the Camera API that require breaking changes. 
+We are sorry for any inconvenience. However, we focused on keeping the changes small and easy to adapt to._
+
+### Improved ###
+- Energy: further improved speed
+- Focusing behaviour of the camera
+- Added MRZ support for Portuguese Citizen Cards
+
+### Fixed ###
+- Fixed a bug where visual feedback was sometimes still visible when the result was displayed already
+- Fixed: Camera frozen when returned from lock screen
+
+### New ###
+#### Camera API 2 (Alpha) support ####
+The Android Camera API 2 is completely different from the old API
+and a lot of work had to be done to enable both APIs at the same time.
+In the long run this should further improve focusing,
+auto exposure compensation etc. on devices that support the new API.
+
+Currently API 1 is still used by default, but API 2 can be tested if enabled via XML:
+```
+<at.nineyards.anyline.modules.ocr.AnylineOcrScanView
+    android:id="@+id/scan_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:api_2_enabled="true"
+    />
+```
+Note: The device must have more than legacy support for the new API or the old API will still be used.
+
+### Breaking Changes ###
+
+In order to integrate the API 2 with our SDK some API breaks have been necessary:
+
+- CameraOpenListener: since there is no "Camera" object in the new API this listener had to be changed
+```
+// new signature
+public void onCameraOpened(CameraController cameraController, int width, int height) {
+}
+
+// old signature
+public void onCameraOpened(int cameraId, Camera camera, int width, int height) {
+}
+```
+If you used the camera object to control the flash, you can now do that with the *CameraController.setFlashOn(boolean)* method.
+
+- FocusConfig is deprecated and the new CameraConfig should be used instead
+
+Other changes that should not effect SDK users:
+
+- CameraView:
+  - methods removed: getCamera, getSurfaceView, getCameraId, resetPreviewCallback, openCamera, initCamera
+  - setSceneMode: the default changed from "sport" to none (scene modes are inconsistent between devices)
+
+- CameraUtil:
+  return type of getters for best size changed from Camera.Size to CameraSize (a wrapper class for api1 and 2 sizes)
+
+- FlashControl, SimpleFlashView: setCamera removed
+
+
 ## Anyline SDK 3.6.1 ##
 Release Date 2016-08-25
 
