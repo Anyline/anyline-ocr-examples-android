@@ -1,5 +1,5 @@
 Anyline, AnylineSDK  
-Copyright (c) 2015 9Yards GmbH. All rights reserved.
+Copyright (c) 2016 9Yards GmbH. All rights reserved.
 
 
 Community Version User License Agreement
