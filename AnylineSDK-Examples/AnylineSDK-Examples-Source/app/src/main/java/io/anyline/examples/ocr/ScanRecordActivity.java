@@ -78,13 +78,8 @@ public class ScanRecordActivity extends AppCompatActivity {
         });
 
         // disable the reporting if set to off in preferences
-        if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(
-                SettingsFragment.KEY_PREF_REPORTING_ON, true)) {
-            // The reporting of results - including the photo of a scanned meter -
-            // helps us in improving our product, and the customer experience.
-            // However, if you wish to turn off this reporting feature, you can do it like this:
-            scanView.setReportingEnabled(false);
-        }
+        scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
+                .KEY_PREF_REPORTING_ON, true));
     }
 
     @Override

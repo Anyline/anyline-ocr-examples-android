@@ -82,18 +82,15 @@ public class ScanBottlecapActivity extends AppCompatActivity {
         });
 
         // disable the reporting if set to off in preferences
-        if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(
-                SettingsFragment.KEY_PREF_REPORTING_ON, true)) {
-            // The reporting of results - including the photo of a scanned meter -
-            // helps us in improving our product, and the customer experience.
-            // However, if you wish to turn off this reporting feature, you can do it like this:
-            scanView.setReportingEnabled(false);
-        }
+        scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
+                .KEY_PREF_REPORTING_ON, true));
         bottlecapResultView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 bottlecapResultView.setVisibility(View.INVISIBLE);
-                scanView.startScanning();
+                if (!scanView.isRunning()) {
+                    scanView.startScanning();
+                }
             }
         });
     }
@@ -131,7 +128,9 @@ public class ScanBottlecapActivity extends AppCompatActivity {
         //close the result view on back press if it is open
         if (bottlecapResultView.getVisibility() == View.VISIBLE) {
             bottlecapResultView.setVisibility(View.INVISIBLE);
-            scanView.startScanning();
+            if (!scanView.isRunning()) {
+                scanView.startScanning();
+            }
         } else {
             super.onBackPressed();
         }

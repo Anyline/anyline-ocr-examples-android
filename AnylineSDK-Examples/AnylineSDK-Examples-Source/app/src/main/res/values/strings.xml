@@ -1,29 +1,11 @@
 <resources>
     <string name="app_name">Anyline Examples</string>
 
-    <string name="scan_analog_electric_meter">Scan Analog Electric Meter</string>
-    <string name="scan_analog_gas_meter">Scan Analog Gas Meter</string>
-    <string name="scan_analog_water_meter">Scan Analog Water Meter</string>
     <string name="scan_barcode">Scan Barcode</string>
     <string name="scan_mrz">Scan MRZ of Passport or ID</string>
-    <string name="scan_digital_meters">Scan Digital Meter (Alpha)</string>
-    <string name="scan_heat_meters">Scan Heat Meter (Alpha)</string>
-
-    <string name="electric_meter">Electric Meter</string>
-    <string name="gas_meter">Gas Meter</string>
-    <string name="gas_meter_4">4 pre-decimal places</string>
-    <string name="gas_meter_5">5 pre-decimal places</string>
-    <string name="gas_meter_6">6 pre-decimal places</string>
-    <string name="gas_meter_7">7 pre-decimal places</string>
-    <string name="water_meter_white">5 pre-decimal places on white</string>
-    <string name="water_meter_black">5 pre-decimal places on black</string>
-    <string name="water_meter">Water Meter</string>
-
-    <string name="electric_meter_auto">5 or 6 pre-decimal places</string>
-    <string name="electric_meter_5_1">5 pre-decimal places</string>
-    <string name="electric_meter_6_1">6 pre-decimal places</string>
-    <string name="electric_meter_white">5 or 6 pre-decimal places on white</string>
-    <string name="electric_meter_7">7 pre-decimal places</string>
+    <string name="scan_digital_meters">Scan Digital Meter</string>
+    <string name="scan_heat_meters">Scan Heat Meter</string>
+    <string name="scan_analog_meters">Scan Analog Meter</string>
 
     <string name="digital_meter">Digital Meter</string>
     <string name="heat_meter">Heat Meter</string>
@@ -43,14 +25,11 @@
     <string name="pref_reporting_summary">
         The reporting of results in the Community Edition - including the photo of a scanned item -
         helps us in improving our product, and the customer experience.
-        However, if you wish to turn off this reporting feature, you can do so here,
-        as well as in the code of your application.
-        For more information about turning off the reporting within the code, please refer to the documentation.
         Results and images of the MRZ, Barcode, and Document modules are NOT reported in any case.
     </string>
 
-    <string name="settings">Settings</string>
-    <string name="action_settings">Settings</string>
+    <string name="settings">Info</string>
+    <string name="action_settings">Info</string>
     <string name="scan_document">Scan Document</string>
     <string name="document_advanced_outline_detection">Advanced Outline Detection</string>
     <string name="document_fast_outline_detection">Fast Outline Detection</string>
@@ -60,7 +39,7 @@
     <string name="document_error_glare_detected">Please remove the glare</string>
     <string name="document_error_too_dark">The image is too dark. Please ensure there is enough light</string>
     <string name="document_error_unknown">Unknown Failure</string>
-    <string name="document_picture_error">Error scanning full document:\n</string>
+    <string name="document_picture_error">Error scanning document:\n</string>
     <string name="document_preview_success">Scanning full document. Please hold still</string>
     <string name="document_picture_success">Document scanned successfully</string>
     <string name="document_using_fast_mode">Switched to fast detection mode</string>
@@ -102,13 +81,12 @@
     <string name="category_others">Others</string>
 
 
-    <string name="title_electric_meter">Electric Meter (analog)</string>
-    <string name="title_gas_meter">Gas Meter (analog)</string>
-    <string name="title_water_meter">Water Meter (analog)</string>
+
     <string name="title_barcode">Barcode</string>
     <string name="title_mrz">MRZ</string>
-    <string name="title_digital_meter">Digital Meter (Alpha)</string>
-    <string name="title_heat_meter">Heat Meter (Alpha)</string>
+    <string name="title_digital_meter">Digital Meter</string>
+    <string name="title_heat_meter">Heat Meter</string>
+    <string name="title_analog_meter">Analog Meter</string>
 
     <string name="title_document">Document</string>
     <string name="title_iban">IBAN</string>
@@ -126,12 +104,6 @@
 
     <string name="header_config">Configuration: %1$s</string>
 
-    <string name="electric_meter_short">5 or 6 pre-decimal places</string>
-    <string name="electric_meter_5_1_short">5 pre-decimal places</string>
-    <string name="electric_meter_6_1_short">6 pre-decimal places</string>
-    <string name="electric_meter_white_short">5 or 6 pre-decimal places on white</string>
-    <string name="electric_meter_7_short">7 pre-decimal places</string>
-
     <string name="heat_meter_4_3_short">4 pre-decimal places</string>
     <string name="heat_meter_5_3_short">5 pre-decimal places</string>
     <string name="heat_meter_6_3_short">6 pre-decimal places</string>
@@ -139,12 +111,21 @@
     <string name="title_license_plate">License Plates (Alpha)</string>
     <string name="license_plates">License Plates (Alpha)</string>
     <string name="category_vehicles">Vehicles</string>
-    <string name="austria">Austria</string>
-    <string name="germany">Germany</string>
-    <string name="auto">Auto</string>
+
     <string name="license_plates_germany">German\nLicense Plates (Alpha)</string>
     <string name="title_license_plate_germany">German LPN (Alpha)</string>
     <string name="license_plates_austria">Austrian\nLicense Plates (Alpha)</string>
     <string name="title_license_plate_austria">Austrian LPN (Alpha)</string>
+    <string name="enable_barcode_detection">Barcode Detection</string>
+
+    <string name="switch_off">OFF</string>
+    <string name="switch_on">ON</string>
+
+    <string name="document_error_shake">Shake detected</string>
+    <string name="document_error_closer">Come closer</string>
+    <string name="document_error_format">Unrecognised format</string>
+    <string name="camera_error_fatal">Camera Error</string>
+    <string name="error_no_camera_permission">Error: No camera permission</string>
+    <string name="error_wait_for_action">Please wait...</string>
 
 </resources>

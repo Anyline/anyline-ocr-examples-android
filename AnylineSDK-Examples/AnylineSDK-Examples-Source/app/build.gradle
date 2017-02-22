@@ -8,8 +8,8 @@ android {
         applicationId "io.anyline.examples"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 54
-        versionName "3.7.2"
+        versionCode 63
+        versionName "3.9.0"
 
         // filter to the architectures included in anyline
         ndk {
@@ -30,10 +30,14 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
 
+    // Vision API used for simultaneous barcode scanning
+    compile 'com.google.android.gms:play-services-vision:10.0.0'
+
     //include AnylineSDK from maven
-    compile 'io.anyline:anylinesdk:3.7.2@aar'
+   compile 'io.anyline:anylinesdk:3.9.0@aar'
+
 
     //include AnylineSDK from locale libs folder
-    //compile(name:'anylinesdk-release-3.7.2', ext:'aar')
+   // compile(name:'anylinesdk-3.9.0', ext:'aar')
 }
 

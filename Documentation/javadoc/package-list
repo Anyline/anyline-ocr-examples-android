@@ -10,4 +10,3 @@ at.nineyards.anyline.modules.mrz
 at.nineyards.anyline.modules.ocr
 at.nineyards.anyline.util
 org.opencv.core
-org.opencv.highgui

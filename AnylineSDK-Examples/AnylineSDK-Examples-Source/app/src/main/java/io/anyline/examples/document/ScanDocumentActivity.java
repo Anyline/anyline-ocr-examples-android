@@ -1,22 +1,22 @@
 package io.anyline.examples.document;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.PointF;
-import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.ScaleAnimation;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -40,8 +40,35 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
     private Toast notificationToast;
     private ImageView imageViewResult;
     private ProgressDialog progressDialog;
-    private ImageView imageViewFull;
     private List<PointF> lastOutline;
+    private ObjectAnimator errorMessageAnimator;
+    private FrameLayout errorMessageLayout;
+    private TextView errorMessage;
+    private long lastErrorRecieved = 0;
+
+    private android.os.Handler handler = new android.os.Handler();
+
+    // takes care of fading the error message out after some time with no error reported from the SDK
+    private Runnable errorMessageCleanup = new Runnable(){
+        @Override
+        public void run() {
+            if( System.currentTimeMillis() > lastErrorRecieved + getApplication().getResources().getInteger(R.integer.error_message_delay)) {
+                if(errorMessage == null || errorMessageAnimator == null){
+                    return;
+                }
+                if(errorMessage.getAlpha() == 0f){
+                    errorMessage.setText("");
+                } else if(!errorMessageAnimator.isRunning()){
+                    errorMessageAnimator = ObjectAnimator.ofFloat(errorMessage, "alpha", errorMessage.getAlpha(), 0f);
+                    errorMessageAnimator.setDuration(getResources().getInteger(R.integer.error_message_delay));
+                    errorMessageAnimator.setInterpolator(new AccelerateInterpolator());
+                    errorMessageAnimator.start();
+                }
+            }
+            handler.postDelayed(errorMessageCleanup, getResources().getInteger(R.integer.error_message_delay));
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +78,8 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         imageViewResult = (ImageView) findViewById(R.id.image_result);
-
-        imageViewFull = (ImageView) findViewById(R.id.full_image);
+        errorMessageLayout = (FrameLayout) findViewById(R.id.error_message_layout);
+        errorMessage = (TextView) findViewById(R.id.error_message);
 
         documentScanView = (DocumentScanView) findViewById(R.id.document_scan_view);
         // add a camera open listener that will be called when the camera is opened or an error occurred
@@ -62,21 +89,23 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
         // (alternatively it can be configured via xml, see the Energy Example for that)
         documentScanView.setConfigFromAsset("document_view_config.json");
 
+        // Optional: Set a ratio you want the documents to be restricted to. default is set to DIN_AX
+        documentScanView.setDocumentRatios(DocumentScanView.DocumentRatio.DIN_AX_PORTRAIT.getRatio());
+
+        // Optional: Set a maximum deviation for the ratio. 0.15 is the default
+        documentScanView.setMaxDocumentRatioDeviation(0.15);
+
         // initialize Anyline with the license key and a Listener that is called if a result is found
         documentScanView.initAnyline(getString(R.string.anyline_license_key), new DocumentResultListener() {
             @Override
-            public void onResult(AnylineImage transformedImage, AnylineImage fullFrame) {
+            public void onResult(AnylineImage transformedImage, AnylineImage fullFrame, List<PointF> documentOutline) {
 
                 // handle the result document images here
                 if (progressDialog != null && progressDialog.isShowing()) {
                     progressDialog.dismiss();
                 }
 
-                showToast(getString(R.string.document_picture_success));
-
-                // perform some animation
-                performScaleOutAnimation(transformedImage);
-
+                imageViewResult.setImageBitmap(Bitmap.createScaledBitmap(transformedImage.getBitmap(), 100, 160, false));
 
                 /**
                  * IMPORTANT: cache provided frames here, and release them at the end of this onResult. Because
@@ -109,13 +138,11 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
                 fullFrame.release();
             }
 
+
             @Override
             public void onPreviewProcessingSuccess(AnylineImage anylineImage) {
                 // this is called after the preview of the document is completed, and a full picture will be
                 // processed automatically
-
-                performScaleInAnimation(anylineImage);
-                showToast(getString(R.string.document_preview_success));
             }
 
             @Override
@@ -123,44 +150,17 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
                 // this is called on any error while processing the document image
                 // Note: this is called every time an error occurs in a run, so that might be quite often
                 // An error message should only be presented to the user after some time
+
+                showErrorMessageFor(documentError);
             }
 
             @Override
             public void onPictureProcessingFailure(DocumentScanView.DocumentError documentError) {
 
-                // handle an error while processing the full picture here
-                // the preview will be restarted automatically
-                String text = getString(R.string.document_picture_error);
-                switch (documentError) {
-                    case DOCUMENT_NOT_SHARP:
-                        text += getString(R.string.document_error_not_sharp);
-                        break;
-                    case DOCUMENT_SKEW_TOO_HIGH:
-                        text += getString(R.string.document_error_skew_too_high);
-                        break;
-                    case DOCUMENT_OUTLINE_NOT_FOUND:
-                        text += getString(R.string.document_error_outline_not_found);
-                        break;
-                    case GLARE_DETECTED:
-                        text += getString(R.string.document_error_glare_detected);
-                        break;
-                    case IMAGE_TOO_DARK:
-                        text += getString(R.string.document_error_too_dark);
-                        break;
-                    case UNKNOWN:
-                    default:
-                        text += getString(R.string.document_error_unknown);
-                        break;
-                }
-
-                showToast(text);
+                showErrorMessageFor(documentError,true);
                 if(progressDialog != null && progressDialog.isShowing()){
                     progressDialog.dismiss();
                 }
-
-                // cancel the animation on error
-                imageViewFull.clearAnimation();
-                imageViewFull.setVisibility(View.INVISIBLE);
 
                 // if there is a problem, here is how images could be saved in the error case
                 // this will be a full, not cropped, not transformed image
@@ -181,7 +181,7 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
             }
 
             @Override
-            public boolean onDocumentOutlineDetected(List<PointF> list, boolean anglesValid) {
+            public boolean onDocumentOutlineDetected(List<PointF> list, boolean documentShapeAndBrightnessValid) {
                 // is called when the outline of the document is detected. return true if the outline is consumed by
                 // the implementation here, false if the outline should be drawn by the DocumentScanView
                 lastOutline = list; // saving the outline for the animations
@@ -192,13 +192,21 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
             public void onTakePictureSuccess() {
                 // this is called after the image has been captured from the camera and is about to be processed
                 progressDialog = ProgressDialog.show(ScanDocumentActivity.this, getString(R.string
-                        .document_processing_picture_header), getString(R
-                        .string
-                        .document_processing_picture),
+                                .document_processing_picture_header), getString(R
+                                .string
+                                .document_processing_picture),
                         true);
 
-                if(notificationToast != null){
-                    notificationToast.cancel();
+                if (errorMessageAnimator != null && errorMessageAnimator.isRunning()) {
+
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            errorMessageAnimator.cancel();
+                            errorMessageLayout.setVisibility(View.GONE);
+                        }
+                    });
+
                 }
             }
 
@@ -216,125 +224,86 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
 
     }
 
-    /**
-     * Performs an animation on a successful preview. This is just an example.
-     * @param anylineImage The cropped successful preview image
-     */
-    private void performScaleInAnimation(AnylineImage anylineImage) {
-        final AlphaAnimation scanPulseAnimation = new AlphaAnimation(0.05f, 0.3f);
-        scanPulseAnimation.setDuration(500);
-        scanPulseAnimation.setFillAfter(true);
-        scanPulseAnimation.setRepeatMode(Animation.REVERSE);
-        scanPulseAnimation.setRepeatCount(Animation.INFINITE);
 
-        if (lastOutline != null) {
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams
-                    .WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT); //WRAP_CONTENT param can be
-            // FILL_PARENT
-            params.leftMargin = (lastOutline.get(0).x < lastOutline.get(3).x) ? (int) lastOutline.get(0).x :
-                    (int) lastOutline.get(3).x; //XCOORD
-            params.topMargin = (lastOutline.get(0).y < lastOutline.get(1).y) ? (int) lastOutline.get(0).y :
-                    (int) lastOutline.get(0).y; //YCOORD
-            params.width = (lastOutline.get(1).x > lastOutline.get(2).x) ? (int) (lastOutline.get(1).x -
-                    params.leftMargin) : (int) (lastOutline.get(2).x - params.leftMargin);
-            params.height = (lastOutline.get(2).y > lastOutline.get(3).y) ? (int) (lastOutline.get(2).y -
-                    params.topMargin) : (int) (lastOutline.get(3).y - params.topMargin);
-            imageViewFull.setLayoutParams(params);
+    private void showErrorMessageFor(DocumentScanView.DocumentError documentError){
+        showErrorMessageFor(documentError,false);
+    }
+    private void showErrorMessageFor(DocumentScanView.DocumentError documentError, boolean highlight) {
+        String text = getString(R.string.document_picture_error);
+        switch (documentError) {
+            case DOCUMENT_NOT_SHARP:
+                text += getString(R.string.document_error_not_sharp);
+                break;
+            case DOCUMENT_SKEW_TOO_HIGH:
+                text += getString(R.string.document_error_skew_too_high);
+                break;
+            case DOCUMENT_OUTLINE_NOT_FOUND:
+                //text += getString(R.string.document_error_outline_not_found);
+                return; // exit and show no error message for now!
+            case IMAGE_TOO_DARK:
+                text += getString(R.string.document_error_too_dark);
+                break;
+            case SHAKE_DETECTED:
+                text += getString(R.string.document_error_shake);
+                break;
+            case DOCUMENT_BOUNDS_OUTSIDE_OF_TOLERANCE:
+                text += getString(R.string.document_error_closer);
+                break;
+            case DOCUMENT_RATIO_OUTSIDE_OF_TOLERANCE:
+                text += getString(R.string.document_error_format);
+                break;
+            case UNKNOWN:
+                break;
+            default:
+                text += getString(R.string.document_error_unknown);
+                return; // exit and show no error message for now!
         }
 
-
-        imageViewFull.setImageBitmap(anylineImage.getBitmap());
-
-
-        final AlphaAnimation alphaAnimation = new AlphaAnimation(0.1f, 1.0f);
-        alphaAnimation.setDuration(500);
-        alphaAnimation.setFillAfter(true);
-        alphaAnimation.setRepeatCount(0);
-
-
-        float scaleWidth = (float) documentScanView.getWidth() / imageViewFull.getLayoutParams().width;
-        float scaleHeight = (float) documentScanView.getHeight() / imageViewFull.getLayoutParams().height;
-
-        float maxScale = (scaleWidth > scaleHeight) ? scaleWidth : scaleHeight;
-        ScaleAnimation scaleAnimation = new ScaleAnimation(1f, maxScale, 1f, maxScale, Animation
-                .RELATIVE_TO_SELF, 0.5f,
-                Animation.RELATIVE_TO_SELF, 0.5f);
-        scaleAnimation.setDuration(500);
-        scaleAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
-        scaleAnimation.setRepeatCount(0);
-        scaleAnimation.setFillAfter(true);
-        scaleAnimation.setFillEnabled(true);
-        scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-                imageViewFull.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) imageViewFull
-                        .getLayoutParams();
-                params.addRule(RelativeLayout.CENTER_HORIZONTAL);
-                params.addRule(RelativeLayout.CENTER_VERTICAL);
-                imageViewFull.setLayoutParams(params);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-        });
-        AnimationSet set = new AnimationSet(false);
-        set.addAnimation(scaleAnimation);
-        set.addAnimation(alphaAnimation);
-        set.setFillAfter(true);
-        set.setFillEnabled(true);
-        imageViewFull.startAnimation(set);
+        if(highlight) {
+            showHighlightErrorMessageUiAnimated(text);
+        }
+        else {
+            showErrorMessageUiAnimated(text);
+        }
     }
 
-    /**
-     * Performs an animation after the final image was successfully processed. This is just an example.
-     * @param transformedImage The transformed final image
-     */
-    private void performScaleOutAnimation(AnylineImage transformedImage) {
-        float targetHeight = transformedImage.getHeight() * (100.0f / transformedImage.getWidth());
+    private void showErrorMessageUiAnimated(String message) {
+        if(lastErrorRecieved == 0) {
+            // the cleanup takes care of removing the message after some time if the error did not show up again
+            handler.post(errorMessageCleanup);
+        }
+        lastErrorRecieved = System.currentTimeMillis();
+        if (errorMessageAnimator != null && (errorMessageAnimator.isRunning() || errorMessage.getText().equals
+                (message))) {
+            return;
+        }
 
-        ScaleAnimation scaleAnimation = new ScaleAnimation(1f, (float) imageViewResult.getWidth() / imageViewFull
-                .getWidth(), 1f, targetHeight / imageViewFull.getHeight(), Animation.RELATIVE_TO_SELF, 1f,
-                Animation.RELATIVE_TO_SELF, 1f);
-        scaleAnimation.setDuration(500);
-        scaleAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+        errorMessageLayout.setVisibility(View.VISIBLE);
+        errorMessage.setBackgroundColor(ContextCompat.getColor(this, R.color.anyline_blue_darker));
+        errorMessage.setAlpha(0f);
+        errorMessage.setText(message);
+        errorMessageAnimator = ObjectAnimator.ofFloat(errorMessage, "alpha", 0f, 1f);
+        errorMessageAnimator.setDuration(getResources().getInteger(R.integer.error_message_delay));
+        errorMessageAnimator.setInterpolator(new DecelerateInterpolator());
+        errorMessageAnimator.start();
+    }
+    private void showHighlightErrorMessageUiAnimated(String message){
+        lastErrorRecieved = System.currentTimeMillis();
+        errorMessageLayout.setVisibility(View.VISIBLE);
+        errorMessage.setBackgroundColor(ContextCompat.getColor(this,R.color.anyline_red));
+        errorMessage.setAlpha(0f);
+        errorMessage.setText(message);
 
-        AlphaAnimation animation1 = new AlphaAnimation(1f, 0.0f);
-        animation1.setDuration(500);
-        animation1.setFillAfter(true);
+        if(errorMessageAnimator != null && errorMessageAnimator.isRunning()){
+            errorMessageAnimator.cancel();
+        }
 
-        AnimationSet set = new AnimationSet(false);
-        set.addAnimation(scaleAnimation);
-        set.addAnimation(animation1);
-
-        imageViewFull.setImageBitmap(Bitmap.createScaledBitmap(transformedImage.getBitmap(), imageViewFull
-                        .getLayoutParams().width,
-                imageViewFull.getLayoutParams().height, false));
-        imageViewFull.startAnimation(set);
-        set.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                imageViewFull.setVisibility(View.INVISIBLE);
-                imageViewResult.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-
-        imageViewResult.setImageBitmap(Bitmap.createScaledBitmap(transformedImage.getBitmap(), 100, 160, false));
-        imageViewResult.setVisibility(View.INVISIBLE);
+        errorMessageAnimator = ObjectAnimator.ofFloat(errorMessage, "alpha", 0f, 1f);
+        errorMessageAnimator.setDuration(getResources().getInteger(R.integer.error_message_delay));
+        errorMessageAnimator.setInterpolator(new DecelerateInterpolator());
+        errorMessageAnimator.setRepeatMode(ValueAnimator.REVERSE);
+        errorMessageAnimator.setRepeatCount(1);
+        errorMessageAnimator.start();
     }
 
     private void showToast(String text) {

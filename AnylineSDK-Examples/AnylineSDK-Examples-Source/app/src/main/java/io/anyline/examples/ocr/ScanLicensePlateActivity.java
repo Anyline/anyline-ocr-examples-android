@@ -84,9 +84,13 @@ public class ScanLicensePlateActivity extends AppCompatActivity {
             public void onResult(AnylineOcrResult result) {
                 // Called when a valid result is found
                 String results[] = result.getText().split("-");
+                String country  = results[0];
                 String licensePlate = results[1];
 
                 licensePlateResultView.setLicensePlate(licensePlate);
+                if(country != null && !country.isEmpty()) {
+                    licensePlateResultView.setCountry(country);
+                }
                 licensePlateResultView.setVisibility(View.VISIBLE);
             }
 
@@ -99,13 +103,8 @@ public class ScanLicensePlateActivity extends AppCompatActivity {
 
 
         // disable the reporting if set to off in preferences
-        if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(
-                SettingsFragment.KEY_PREF_REPORTING_ON, true)) {
-            // The reporting of results - including the photo of a scanned meter -
-            // helps us in improving our product, and the customer experience.
-            // However, if you wish to turn off this reporting feature, you can do it like this:
-            scanView.setReportingEnabled(false);
-        }
+        scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
+                .KEY_PREF_REPORTING_ON, true));
         addLicensePlateResultView();
     }
 
@@ -124,16 +123,23 @@ public class ScanLicensePlateActivity extends AppCompatActivity {
         licensePlateResultView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clearAndHideLicensePlateResultView();
                 startScanning();
-
             }
         });
     }
 
-    private void startScanning() {
+    private void clearAndHideLicensePlateResultView() {
+        licensePlateResultView.setCountry("");
+        licensePlateResultView.setLicensePlate("");
         licensePlateResultView.setVisibility(View.INVISIBLE);
+    }
+
+    private void startScanning() {
         // this must be called in onResume, or after a result to start the scanning again
-        scanView.startScanning();
+        if (!scanView.isRunning()) {
+            scanView.startScanning();
+        }
     }
 
     @Override
@@ -153,6 +159,7 @@ public class ScanLicensePlateActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (licensePlateResultView.getVisibility() == View.VISIBLE) {
+            clearAndHideLicensePlateResultView();
             startScanning();
         } else {
             super.onBackPressed();

@@ -14,13 +14,13 @@
     <TextView
         android:id="@+id/text_country"
         android:layout_height="wrap_content"
-        android:layout_width="30dp"
-        android:layout_marginLeft="13dp"
+        android:layout_width="23dp"
+        android:layout_marginLeft="11dp"
         android:layout_marginTop="85dp"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textStyle="normal"
         android:textColor="@android:color/white"
-        />
+        android:textAlignment="center"/>
     <TextView
         android:id="@+id/text_license_plate"
         android:layout_height="wrap_content"

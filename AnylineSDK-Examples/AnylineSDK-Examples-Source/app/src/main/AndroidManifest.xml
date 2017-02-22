@@ -21,33 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".meter.ScanAnalogElectricMeterActivity"
-            android:label="@string/title_electric_meter"
+        <activity android:name=".meter.ScanAnalogMeterActivity"
+            android:label="@string/title_analog_meter"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.anyline.examples.MainActivity"/>
-        </activity>
-        <activity
-            android:name=".meter.ScanAnalogGasMeterActivity"
-            android:label="@string/title_gas_meter"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.anyline.examples.MainActivity"/>
-        </activity>
-        <activity
-            android:name=".meter.ScanAnalogWaterMeterActivity"
-            android:label="@string/title_water_meter"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.anyline.examples.MainActivity"/>
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".meter.ScanEnergyDigitalMeterActivity"
             android:label="@string/title_digital_meter"

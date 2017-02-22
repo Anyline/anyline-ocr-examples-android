@@ -41,7 +41,7 @@ public class ScanEnergyDigitalMeterActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan_energy);
+        setContentView(R.layout.activity_scan_energy_digital);
         //Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
@@ -63,6 +63,10 @@ public class ScanEnergyDigitalMeterActivity extends AppCompatActivity implements
             // However, if you wish to turn off this reporting feature, you can do it like this:
             energyScanView.setReportingEnabled(false);
         }
+        // set reporting according to prefs or true on default
+        energyScanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
+                .KEY_PREF_REPORTING_ON, true));
+
         // initialize Anyline with the license key and a Listener that is called if a result is found
         energyScanView.initAnyline(getString(R.string.anyline_license_key), new EnergyResultListener() {
             @Override
@@ -85,14 +89,18 @@ public class ScanEnergyDigitalMeterActivity extends AppCompatActivity implements
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                energyScanView.startScanning();
+                                if (!energyScanView.isRunning()){
+                                    energyScanView.startScanning();
+                                }
                             }
                         })
                         .setTitle(R.string.digital_meter)
                         .setOnCancelListener(new DialogInterface.OnCancelListener() {
                             @Override
                             public void onCancel(DialogInterface dialogInterface) {
-                                energyScanView.startScanning();
+                                if (!energyScanView.isRunning()){
+                                    energyScanView.startScanning();
+                                }
                             }
                         })
                         .show();
@@ -136,5 +144,6 @@ public class ScanEnergyDigitalMeterActivity extends AppCompatActivity implements
         // This is useful to present an alternative way to enter the required data if no camera exists.
         throw new RuntimeException(e);
     }
+
 
 }

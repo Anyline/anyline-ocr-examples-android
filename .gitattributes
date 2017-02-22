@@ -5,3 +5,5 @@ images/visualFeedback/default/contour_point.gif filter=lfs diff=lfs merge=lfs -t
 images/visualFeedback/default/contour_rect.gif filter=lfs diff=lfs merge=lfs -text
 images/visualFeedback/default/contour_underline.gif filter=lfs diff=lfs merge=lfs -text
 images/visualFeedback/default/rect.gif filter=lfs diff=lfs merge=lfs -text
+*.apk filter=lfs diff=lfs merge=lfs -text
+*.aar filter=lfs diff=lfs merge=lfs -text

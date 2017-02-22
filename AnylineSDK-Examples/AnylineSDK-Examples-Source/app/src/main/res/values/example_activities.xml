@@ -4,9 +4,7 @@
     <string-array
         name="example_activity_names">
         <item>@string/category_energy</item>
-        <item>@string/scan_analog_electric_meter</item>
-        <item>@string/scan_analog_gas_meter</item>
-        <item>@string/scan_analog_water_meter</item>
+        <item>@string/scan_analog_meters</item>
         <item>@string/scan_digital_meters</item>
         <item>@string/scan_heat_meters</item>
         <item>@string/category_identification</item>
@@ -34,9 +32,7 @@
     <string-array
         name="example_activity_classes">
         <item>HEADER</item>
-        <item>io.anyline.examples.meter.ScanAnalogElectricMeterActivity</item>
-        <item>io.anyline.examples.meter.ScanAnalogGasMeterActivity</item>
-        <item>io.anyline.examples.meter.ScanAnalogWaterMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanAnalogMeterActivity</item>
         <item>io.anyline.examples.meter.ScanEnergyDigitalMeterActivity</item>
         <item>io.anyline.examples.meter.ScanDigitalHeatMeterActivity</item>
         <item>HEADER</item>

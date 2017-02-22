@@ -62,6 +62,10 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
             // However, if you wish to turn off this reporting feature, you can do it like this:
             energyScanView.setReportingEnabled(false);
         }
+        // set reporting according to prefs or true on default
+        energyScanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
+                .KEY_PREF_REPORTING_ON, true));
+
         // initialize Anyline with the license key and a Listener that is called if a result is found
         energyScanView.initAnyline(getString(R.string.anyline_license_key), new EnergyResultListener() {
             @Override
@@ -84,14 +88,18 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                energyScanView.startScanning();
+                                if (!energyScanView.isRunning()){
+                                    energyScanView.startScanning();
+                                }
                             }
                         })
                         .setTitle(R.string.heat_meter)
                         .setOnCancelListener(new DialogInterface.OnCancelListener() {
                             @Override
                             public void onCancel(DialogInterface dialogInterface) {
-                                energyScanView.startScanning();
+                                if (!energyScanView.isRunning()){
+                                    energyScanView.startScanning();
+                                }
                             }
                         })
                         .show();
@@ -108,18 +116,24 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
                 if (R.id.radio_heat_4_3 == checkedId) {
                     showToast(getString(R.string.header_config, getString(R.string.heat_meter_4_3_short)));
                     energyScanView.setScanMode(EnergyScanView.ScanMode.HEAT_METER_4);
-                    energyScanView.startScanning();
+                    if (!energyScanView.isRunning()){
+                        energyScanView.startScanning();
+                    }
 
                 } else if (R.id.radio_heat_5_3 == checkedId) {
                     showToast(getString(R.string.header_config, getString(R.string.heat_meter_5_3_short)));
 
                     energyScanView.setScanMode(EnergyScanView.ScanMode.HEAT_METER_5);
-                    energyScanView.startScanning();
+                    if (!energyScanView.isRunning()){
+                        energyScanView.startScanning();
+                    }
                 } else if (R.id.radio_heat_6_3 == checkedId) {
                     showToast(getString(R.string.header_config, getString(R.string.heat_meter_6_3_short)));
 
                     energyScanView.setScanMode(EnergyScanView.ScanMode.HEAT_METER_6);
-                    energyScanView.startScanning();
+                    if (!energyScanView.isRunning()){
+                        energyScanView.startScanning();
+                    }
                 }
             }
         });

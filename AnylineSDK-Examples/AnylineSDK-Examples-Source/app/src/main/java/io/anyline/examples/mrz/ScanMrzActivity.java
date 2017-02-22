@@ -69,7 +69,9 @@ public class ScanMrzActivity extends AppCompatActivity implements CameraOpenList
             @Override
             public void onClick(View v) {
                 mrzResultView.setVisibility(View.INVISIBLE);
-                mrzScanView.startScanning();
+                if (!mrzScanView.isRunning()){
+                    mrzScanView.startScanning();
+                }
             }
         });
     }
@@ -96,7 +98,9 @@ public class ScanMrzActivity extends AppCompatActivity implements CameraOpenList
         //close the result view on back press if it is open
         if (mrzResultView.getVisibility() == View.VISIBLE) {
             mrzResultView.setVisibility(View.INVISIBLE);
-            mrzScanView.startScanning();
+            if (!mrzScanView.isRunning()){
+                mrzScanView.startScanning();
+            }
         } else {
             super.onBackPressed();
         }

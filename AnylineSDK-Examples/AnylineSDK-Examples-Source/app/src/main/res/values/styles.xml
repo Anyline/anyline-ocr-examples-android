@@ -30,4 +30,8 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="switch_text_selector">
+        <item name="android:textColor">#E5E5E5</item>
+        <item name="android:textSize">14dp</item>
+    </style>
 </resources>
