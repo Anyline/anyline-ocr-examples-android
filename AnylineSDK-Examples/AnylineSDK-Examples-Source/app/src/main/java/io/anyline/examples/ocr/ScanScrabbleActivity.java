@@ -11,9 +11,8 @@ import java.util.List;
 
 import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrError;
-import at.nineyards.anyline.modules.ocr.AnylineOcrListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
+import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.SettingsFragment;
@@ -75,38 +74,15 @@ public class ScanScrabbleActivity extends AppCompatActivity {
         // Configure the view (cutout, the camera resolution, etc.) via json (can also be done in xml in the layout)
         scanView.setConfig(new AnylineViewConfig(this, "scrabble_view_config.json"));
 
-        scanView.initAnyline(lic, new AnylineOcrListener() {
+        scanView.initAnyline(lic, new AnylineOcrResultListener() {
             @Override
-            public void onReport(String identifier, Object value) {
-                // Called with interesting values, that arise during processing.
-                // Some possibly reported values:
-                //
-                // $brightness - the brightness of the center region of the cutout as a float value
-                // $confidence - the confidence, an Integer value between 0 and 100
-                // $thresholdedImage - the current image transformed into black and white
-            }
-
-            @Override
-            public boolean onTextOutlineDetected(List<PointF> list) {
-                // Called when the outline of a possible text is detected.
-                // If false is returned, the outline is drawn automatically.
-                return false;
-            }
-
-            @Override
-            public void onResult(AnylineOcrResult result) {
+            public void onResult(AnylineOcrResult anylineOcrResult) {
                 // Called when a valid result is found (minimum confidence is exceeded and validation with regex was ok)
-                if (result.getText() != null && !result.getText().isEmpty()) {
+                if (!anylineOcrResult.getResult().isEmpty()) {
                     Intent i = new Intent(ScanScrabbleActivity.this, AnagramActivity.class);
-                    i.putExtra(AnagramActivity.SCRABBLE_INPUT, result.getText().trim());
+                    i.putExtra(AnagramActivity.SCRABBLE_INPUT, anylineOcrResult.getResult().trim());
                     startActivity(i);
                 }
-            }
-
-            @Override
-            public void onAbortRun(AnylineOcrError code, String message) {
-                // Is called when no result was found for the current image.
-                // E.g. if no text was found or the result is not valid.
             }
         });
 

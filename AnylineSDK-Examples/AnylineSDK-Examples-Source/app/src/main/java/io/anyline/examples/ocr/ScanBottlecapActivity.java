@@ -13,9 +13,8 @@ import java.util.List;
 
 import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrError;
-import at.nineyards.anyline.modules.ocr.AnylineOcrListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
+import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.SettingsFragment;
@@ -60,24 +59,12 @@ public class ScanBottlecapActivity extends AppCompatActivity {
 
         scanView.setConfig(new AnylineViewConfig(this, "bottlecap_view_config.json"));
 
-        scanView.initAnyline(lic, new AnylineOcrListener() {
-            @Override
-            public void onReport(String identifier, Object value) {
-            }
+        scanView.initAnyline(lic, new AnylineOcrResultListener() {
 
             @Override
-            public boolean onTextOutlineDetected(List<PointF> list) {
-                return false;
-            }
-
-            @Override
-            public void onResult(AnylineOcrResult result) {
-                bottlecapResultView.setResult(result.getText());
+            public void onResult(AnylineOcrResult anylineOcrResult) {
+                bottlecapResultView.setResult(anylineOcrResult.getResult());
                 bottlecapResultView.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAbortRun(AnylineOcrError code, String message) {
             }
         });
 
@@ -123,6 +110,7 @@ public class ScanBottlecapActivity extends AppCompatActivity {
         scanView.cancelScanning();
         scanView.releaseCameraInBackground();
     }
+
     @Override
     public void onBackPressed() {
         //close the result view on back press if it is open

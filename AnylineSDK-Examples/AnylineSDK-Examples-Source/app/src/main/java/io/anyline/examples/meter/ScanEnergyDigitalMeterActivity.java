@@ -23,6 +23,7 @@ import android.widget.RadioGroup;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
+import at.nineyards.anyline.modules.energy.EnergyResult;
 import at.nineyards.anyline.modules.energy.EnergyResultListener;
 import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
@@ -70,9 +71,7 @@ public class ScanEnergyDigitalMeterActivity extends AppCompatActivity implements
         // initialize Anyline with the license key and a Listener that is called if a result is found
         energyScanView.initAnyline(getString(R.string.anyline_license_key), new EnergyResultListener() {
             @Override
-            public void onResult(EnergyScanView.ScanMode scanMode, String result,
-                                 AnylineImage resultImage, AnylineImage fullImage) {
-
+            public void onResult(EnergyResult energyResult) {
                 // This is called when a result is found.
                 // The scanMode is the mode the result was found for. The result is the actual result.
                 // If the a meter reading was scanned two images are provided as well, one shows the targeted area only
@@ -82,14 +81,14 @@ public class ScanEnergyDigitalMeterActivity extends AppCompatActivity implements
                 //display the result in a simple dialog
 
                 new ResultDialogBuilder(ScanEnergyDigitalMeterActivity.this)
-                        .setResultImage(resultImage)
+                        .setResultImage(energyResult.getCutoutImage())
                         .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 32)
                         .setTextGravity(Gravity.CENTER)
-                        .setText(result)
+                        .setText(energyResult.getResult())
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                if (!energyScanView.isRunning()){
+                                if (!energyScanView.isRunning()) {
                                     energyScanView.startScanning();
                                 }
                             }
@@ -98,7 +97,7 @@ public class ScanEnergyDigitalMeterActivity extends AppCompatActivity implements
                         .setOnCancelListener(new DialogInterface.OnCancelListener() {
                             @Override
                             public void onCancel(DialogInterface dialogInterface) {
-                                if (!energyScanView.isRunning()){
+                                if (!energyScanView.isRunning()) {
                                     energyScanView.startScanning();
                                 }
                             }

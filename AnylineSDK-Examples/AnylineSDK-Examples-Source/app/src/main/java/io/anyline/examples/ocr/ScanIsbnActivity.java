@@ -11,9 +11,8 @@ import java.util.List;
 
 import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrError;
-import at.nineyards.anyline.modules.ocr.AnylineOcrListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
+import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.SettingsFragment;
@@ -55,27 +54,14 @@ public class ScanIsbnActivity extends AppCompatActivity {
 
         scanView.setConfig(new AnylineViewConfig(this, "isbn_view_config.json"));
 
-        scanView.initAnyline(lic, new AnylineOcrListener() {
+        scanView.initAnyline(lic, new AnylineOcrResultListener() {
             @Override
-            public void onReport(String identifier, Object value) {
-            }
-
-            @Override
-            public boolean onTextOutlineDetected(List<PointF> list) {
-                return false;
-            }
-
-            @Override
-            public void onResult(AnylineOcrResult result) {
-                if (result.getText() != null && !result.getText().isEmpty()) {
+            public void onResult(AnylineOcrResult anylineOcrResult) {
+                if (!anylineOcrResult.getResult().isEmpty()) {
                     Intent i = new Intent(ScanIsbnActivity.this, IsbnActivity.class);
-                    i.putExtra(IsbnActivity.ISBN_INPUT, result.getText().trim());
+                    i.putExtra(IsbnActivity.ISBN_INPUT, anylineOcrResult.getResult().trim());
                     startActivity(i);
                 }
-            }
-
-            @Override
-            public void onAbortRun(AnylineOcrError code, String message) {
             }
         });
 

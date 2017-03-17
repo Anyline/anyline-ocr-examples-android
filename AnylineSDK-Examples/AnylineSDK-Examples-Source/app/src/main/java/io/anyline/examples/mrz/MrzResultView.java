@@ -10,6 +10,7 @@
 package io.anyline.examples.mrz;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,6 +18,9 @@ import android.widget.TextView;
 import at.nineyards.anyline.modules.mrz.Identification;
 import at.nineyards.anyline.util.DimensUtil;
 import io.anyline.examples.R;
+
+import java.text.DateFormat;
+import java.util.Locale;
 
 /**
  * A view to show MRZ-Scan-Results
@@ -32,6 +36,8 @@ public class MrzResultView extends RelativeLayout {
     private TextView expirationDateText;
     private TextView sexText;
     private TextView mrzText;
+
+    private DateFormat mrzDateFormat;
 
     public MrzResultView(Context context) {
         super(context);
@@ -67,6 +73,8 @@ public class MrzResultView extends RelativeLayout {
         expirationDateText = (TextView) findViewById(R.id.text_expiration_date);
         sexText = (TextView) findViewById(R.id.text_sex);
         mrzText = (TextView) findViewById(R.id.text_mrz);
+
+        mrzDateFormat = DateFormat.getDateInstance(DateFormat.SHORT, getCurrentLocale());
     }
 
     public void setIdentification(Identification identification) {
@@ -76,8 +84,20 @@ public class MrzResultView extends RelativeLayout {
         numberText.setText(identification.getDocumentNumber());
         surNamesText.setText(identification.getSurNames());
         givenNamesText.setText(identification.getGivenNames());
-        dayOfBirthText.setText(identification.getDayOfBirth());
-        expirationDateText.setText(identification.getExpirationDate());
+
+        if (identification.getDayOfBirthObject() != null) {
+            dayOfBirthText.setText(mrzDateFormat.format(identification.getDayOfBirthObject()));
+        }
+        else {
+            dayOfBirthText.setText(identification.getDayOfBirth());
+        }
+
+        if (identification.getExpirationDateObject() != null) {
+            expirationDateText.setText(mrzDateFormat.format(identification.getExpirationDateObject()));
+        }
+        else {
+            expirationDateText.setText(identification.getExpirationDate());
+        }
         sexText.setText(identification.getSex());
 
         String mrzString;
@@ -129,5 +149,14 @@ public class MrzResultView extends RelativeLayout {
         }
         mrzString = mrzString.replaceAll(" ", "<");
         mrzText.setText(mrzString);
+    }
+
+    private Locale getCurrentLocale(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
+            return getResources().getConfiguration().getLocales().get(0);
+        } else{
+            //noinspection deprecation
+            return getResources().getConfiguration().locale;
+        }
     }
 }

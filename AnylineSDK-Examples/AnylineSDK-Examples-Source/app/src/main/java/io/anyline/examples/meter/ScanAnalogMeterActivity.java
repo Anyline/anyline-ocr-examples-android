@@ -1,6 +1,6 @@
 /*
  * Anyline
- * ScanEnergyActivity.java
+ * ScanAnalogMeterActivity.java
  *
  * Copyright (c) 2015 9yards GmbH
  *
@@ -30,6 +30,7 @@ import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
 import at.nineyards.anyline.modules.barcode.NativeBarcodeResultListener;
+import at.nineyards.anyline.modules.energy.EnergyResult;
 import at.nineyards.anyline.modules.energy.EnergyResultListener;
 import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
@@ -43,7 +44,6 @@ public class ScanAnalogMeterActivity extends AppCompatActivity implements Camera
 
     private static final String TAG = ScanAnalogMeterActivity.class.getSimpleName();
     protected EnergyScanView energyScanView;
-    private Switch barcodeDetectionSwitch;
     private String lastDetectedBarcodeValue = "";
 
     @Override
@@ -56,7 +56,7 @@ public class ScanAnalogMeterActivity extends AppCompatActivity implements Camera
         // get the view from the layout (check out the xml for the configuration of the view)
         energyScanView = (EnergyScanView) findViewById(R.id.energy_scan_view);
 
-        barcodeDetectionSwitch = (Switch) findViewById(R.id.barcode_scanner_switch);
+        Switch barcodeDetectionSwitch = (Switch) findViewById(R.id.barcode_scanner_switch);
 
         // set a listener on the switch to enable and disable barcode detection
         barcodeDetectionSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -97,9 +97,7 @@ public class ScanAnalogMeterActivity extends AppCompatActivity implements Camera
         // initialize Anyline with the license key and a Listener that is called if a result is found
         energyScanView.initAnyline(getString(R.string.anyline_license_key), new EnergyResultListener() {
             @Override
-            public void onResult(EnergyScanView.ScanMode scanMode, String result,
-                                 AnylineImage resultImage, AnylineImage fullImage) {
-
+            public void onResult(EnergyResult energyResult) {
                 // This is called when a result is found.
                 // The scanMode is the mode the result was found for. The result is the actual result.
                 // If the a meter reading was scanned two images are provided as well, one shows the targeted area only
@@ -107,16 +105,16 @@ public class ScanAnalogMeterActivity extends AppCompatActivity implements Camera
                 // The result for meter readings is a String with leading zeros (if any) and no decimals.
 
                 new ResultDialogBuilder(ScanAnalogMeterActivity.this)
-                        .setResultImage(resultImage)
+                        .setResultImage(energyResult.getCutoutImage())
                         .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 22)
                         .setTextGravity(Gravity.CENTER)
-                        .setText(getFormattedResult(result, lastDetectedBarcodeValue))
+                        .setText(getFormattedResult(energyResult.getResult(), lastDetectedBarcodeValue))
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // reset the last detected barcode value, as it has already been displayed
                                 lastDetectedBarcodeValue = "";
-                                if (!energyScanView.isRunning()){
+                                if (!energyScanView.isRunning()) {
                                     energyScanView.startScanning();
                                 }
                             }
@@ -127,15 +125,14 @@ public class ScanAnalogMeterActivity extends AppCompatActivity implements Camera
                             public void onCancel(DialogInterface dialogInterface) {
                                 // reset the last detected barcode value, as it has already been displayed
                                 lastDetectedBarcodeValue = "";
-                                if (!energyScanView.isRunning()){
+                                if (!energyScanView.isRunning()) {
                                     energyScanView.startScanning();
                                 }
                             }
                         })
                         .show();
-
-
             }
+
         });
 
         // ANALOG_METER will work for all types of analog meters (gas, electric, water) and

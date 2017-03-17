@@ -21,8 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".meter.ScanAnalogMeterActivity"
+        <activity
+            android:name=".meter.ScanAnalogMeterActivity"
             android:label="@string/title_analog_meter"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".meter.ScanDoubleTariffMeterActivity"
+            android:label="@string/title_double_tariff_meter"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"/>
         <activity

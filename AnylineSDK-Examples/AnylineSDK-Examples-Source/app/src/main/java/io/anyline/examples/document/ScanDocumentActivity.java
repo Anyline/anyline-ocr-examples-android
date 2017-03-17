@@ -26,6 +26,7 @@ import java.util.List;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
+import at.nineyards.anyline.modules.document.DocumentResult;
 import at.nineyards.anyline.modules.document.DocumentResultListener;
 import at.nineyards.anyline.modules.document.DocumentScanView;
 import io.anyline.examples.R;
@@ -98,12 +99,14 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
         // initialize Anyline with the license key and a Listener that is called if a result is found
         documentScanView.initAnyline(getString(R.string.anyline_license_key), new DocumentResultListener() {
             @Override
-            public void onResult(AnylineImage transformedImage, AnylineImage fullFrame, List<PointF> documentOutline) {
-
+            public void onResult(DocumentResult documentResult) {
                 // handle the result document images here
                 if (progressDialog != null && progressDialog.isShowing()) {
                     progressDialog.dismiss();
                 }
+
+                AnylineImage transformedImage = documentResult.getResult();
+                AnylineImage fullFrame = documentResult.getFullImage();
 
                 imageViewResult.setImageBitmap(Bitmap.createScaledBitmap(transformedImage.getBitmap(), 100, 160, false));
 
@@ -137,7 +140,6 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
                 transformedImage.release();
                 fullFrame.release();
             }
-
 
             @Override
             public void onPreviewProcessingSuccess(AnylineImage anylineImage) {

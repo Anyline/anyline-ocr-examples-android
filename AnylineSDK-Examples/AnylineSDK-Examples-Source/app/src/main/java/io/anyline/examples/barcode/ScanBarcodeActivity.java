@@ -18,6 +18,7 @@ import android.widget.TextView;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
+import at.nineyards.anyline.modules.barcode.BarcodeResult;
 import at.nineyards.anyline.modules.barcode.BarcodeResultListener;
 import at.nineyards.anyline.modules.barcode.BarcodeScanView;
 import io.anyline.examples.R;
@@ -55,10 +56,9 @@ public class ScanBarcodeActivity extends AppCompatActivity implements CameraOpen
         // initialize Anyline with the license key and a Listener that is called if a result is found
         barcodeScanView.initAnyline(getString(R.string.anyline_license_key), new BarcodeResultListener() {
             @Override
-            public void onResult(String result, BarcodeScanView.BarcodeFormat format, AnylineImage image) {
+            public void onResult(BarcodeResult barcodeResult) {
                 // This is called when a result is found.
-
-                resultText.setText(result);
+                resultText.setText(barcodeResult.getResult());
             }
         });
     }

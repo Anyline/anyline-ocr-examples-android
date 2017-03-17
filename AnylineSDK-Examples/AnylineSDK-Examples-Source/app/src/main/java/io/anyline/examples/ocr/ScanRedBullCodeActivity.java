@@ -13,9 +13,8 @@ import java.util.List;
 
 import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrError;
-import at.nineyards.anyline.modules.ocr.AnylineOcrListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
+import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.SettingsFragment;
@@ -60,26 +59,14 @@ public class ScanRedBullCodeActivity extends AppCompatActivity {
 
         scanView.setConfig(new AnylineViewConfig(this, "rb_view_config.json"));
 
-        scanView.initAnyline(lic, new AnylineOcrListener() {
+        scanView.initAnyline(lic, new AnylineOcrResultListener() {
             @Override
-            public void onReport(String identifier, Object value) {
-            }
-
-            @Override
-            public boolean onTextOutlineDetected(List<PointF> list) {
-                return false;
-            }
-
-            @Override
-            public void onResult(AnylineOcrResult result) {
-                redBullResultView.setResult(result.getText());
+            public void onResult(AnylineOcrResult anylineOcrResult) {
+                redBullResultView.setResult(anylineOcrResult.getResult());
                 redBullResultView.setVisibility(View.VISIBLE);
             }
-
-            @Override
-            public void onAbortRun(AnylineOcrError code, String message) {
-            }
         });
+
         // disable the reporting if set to off in preferences
         scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
                 .KEY_PREF_REPORTING_ON, true));

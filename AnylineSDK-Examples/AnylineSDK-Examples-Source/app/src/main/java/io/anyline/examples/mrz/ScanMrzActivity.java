@@ -19,6 +19,7 @@ import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
 import at.nineyards.anyline.modules.mrz.Identification;
+import at.nineyards.anyline.modules.mrz.MrzResult;
 import at.nineyards.anyline.modules.mrz.MrzResultListener;
 import at.nineyards.anyline.modules.mrz.MrzScanView;
 import io.anyline.examples.R;
@@ -53,23 +54,21 @@ public class ScanMrzActivity extends AppCompatActivity implements CameraOpenList
         mrzScanView.initAnyline(getString(R.string.anyline_license_key), new MrzResultListener() {
 
             @Override
-            public void onResult(Identification mrzResult, AnylineImage anylineImage) {
-
+            public void onResult(MrzResult mrzResult) {
                 // This is called when a result is found.
                 // The Identification includes all the data read from the MRZ
                 // as scanned and the given image shows the scanned ID/Passport
-
-                mrzResultView.setIdentification(mrzResult);
+                mrzResultView.setIdentification(mrzResult.getResult());
                 mrzResultView.setVisibility(View.VISIBLE);
-
             }
+
         });
 
         mrzResultView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mrzResultView.setVisibility(View.INVISIBLE);
-                if (!mrzScanView.isRunning()){
+                if (!mrzScanView.isRunning()) {
                     mrzScanView.startScanning();
                 }
             }
@@ -98,7 +97,7 @@ public class ScanMrzActivity extends AppCompatActivity implements CameraOpenList
         //close the result view on back press if it is open
         if (mrzResultView.getVisibility() == View.VISIBLE) {
             mrzResultView.setVisibility(View.INVISIBLE);
-            if (!mrzScanView.isRunning()){
+            if (!mrzScanView.isRunning()) {
                 mrzScanView.startScanning();
             }
         } else {

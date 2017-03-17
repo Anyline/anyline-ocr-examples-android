@@ -27,6 +27,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
+import at.nineyards.anyline.camera.CameraPermissionHelper;
 import at.nineyards.anyline.util.DimensUtil;
 
 /**
@@ -34,8 +35,8 @@ import at.nineyards.anyline.util.DimensUtil;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private static final int PERMISSIONS_REQUEST_CAMERA = 1;
     private Intent targetIntent;
+    private CameraPermissionHelper cameraPermissionHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
         versionTextView.setPadding(padding, padding, padding, padding);
         listView.addFooterView(versionTextView);
 
+        // CameraPermissionHelper simplifies the request for the camera permission
+        cameraPermissionHelper = new CameraPermissionHelper(this);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -76,61 +80,44 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkedStartActivity(Intent intent) {
-        this.targetIntent = intent;
 
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            //use this if the usage of the permission is not clear
-//            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
-//
-//                // Show an expanation to the user *asynchronously* -- don't block
-//                // this thread waiting for the user's response! After the user
-//                // sees the explanation, try again to request the permission.
-//
-//            } else {
-//                ActivityCompat.requestPermissions(this,
-//                        new String[]{Manifest.permission.CAMERA},
-//                        PERMISSIONS_REQUEST_CAMERA);
-//            }
-
-            // No explanation needed, it should be obvious that the camera is needed to scan something
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.CAMERA},
-                    PERMISSIONS_REQUEST_CAMERA);
-
-            return;
+        // ask if permissions were already granted
+        if(cameraPermissionHelper.hasPermissions()){
+            startActivity(intent);
+        } else{
+            // otherwise request the permissions
+            cameraPermissionHelper.requestPermissions();
+            this.targetIntent = intent;
         }
-
-        startActivity(intent);
     }
 
-    // part of the Example of how to use the new Permission model of Android Marshmallow
+    /**
+     * Callback from the permission request. Can be directly forwarded to the
+     * {@link CameraPermissionHelper#onRequestPermissionsResult(int, String[], int[])} to check the Camera
+     * Permissions for Anyline.
+     *
+     * Any other permissions result requested by the app will also be forwarded to here, and should be checked after
+     * the call to the {@link CameraPermissionHelper}
+     *
+     * @param requestCode the code of the permission request
+     * @param permissions the requested permissions
+     * @param grantResults the results of the request
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case PERMISSIONS_REQUEST_CAMERA: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    startActivity(targetIntent);
-
-                } else {
-
-                    new AlertDialog.Builder(this)
-                            .setTitle(R.string.camera_permission_required)
-                            .setMessage(R.string.camera_permission_required_details)
-                            .show();
-                }
-                return;
-            }
-
-            // other 'case' lines to check for other
-            // permissions this app might request
+        // CameraPermissionHelper will return true if the permission for the camera was granted (and was made via the
+        // CameraPermissionHelper class)
+        if(cameraPermissionHelper.onRequestPermissionsResult(requestCode, permissions, grantResults)){
+            startActivity(targetIntent);
+        } else{
+            // Displays a message to the user, asking to grant the permissions for the camera in order for Anyline to
+            // work
+            cameraPermissionHelper.showPermissionMessage(null);
         }
+
+        // Other app permission checks go here
     }
 
     @Override

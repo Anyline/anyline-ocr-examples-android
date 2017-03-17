@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "io.anyline.examples"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 63
-        versionName "3.9.0"
+        versionCode 66
+        versionName "3.10.0"
 
         // filter to the architectures included in anyline
         ndk {
@@ -34,10 +34,10 @@ dependencies {
     compile 'com.google.android.gms:play-services-vision:10.0.0'
 
     //include AnylineSDK from maven
-   compile 'io.anyline:anylinesdk:3.9.0@aar'
+   compile 'io.anyline:anylinesdk:3.10.0@aar'
 
 
     //include AnylineSDK from locale libs folder
-   // compile(name:'anylinesdk-3.9.0', ext:'aar')
+   //compile(name:'anylinesdk-3.10.0', ext:'aar')
 }
 

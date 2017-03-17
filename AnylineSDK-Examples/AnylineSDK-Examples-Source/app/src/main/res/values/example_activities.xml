@@ -5,6 +5,7 @@
         name="example_activity_names">
         <item>@string/category_energy</item>
         <item>@string/scan_analog_meters</item>
+        <item>@string/scan_double_tariff_meters</item>
         <item>@string/scan_digital_meters</item>
         <item>@string/scan_heat_meters</item>
         <item>@string/category_identification</item>
@@ -33,6 +34,7 @@
         name="example_activity_classes">
         <item>HEADER</item>
         <item>io.anyline.examples.meter.ScanAnalogMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanDoubleTariffMeterActivity</item>
         <item>io.anyline.examples.meter.ScanEnergyDigitalMeterActivity</item>
         <item>io.anyline.examples.meter.ScanDigitalHeatMeterActivity</item>
         <item>HEADER</item>

@@ -13,9 +13,8 @@ import java.util.List;
 
 import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrError;
-import at.nineyards.anyline.modules.ocr.AnylineOcrListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
+import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.SettingsFragment;
@@ -61,46 +60,21 @@ public class ScanLicensePlateActivity extends AppCompatActivity {
         scanView.setAnylineOcrConfig(anylineOcrConfig);
 
         // initialize with the license and a listener
-        scanView.initAnyline(license, new AnylineOcrListener() {
+        scanView.initAnyline(license, new AnylineOcrResultListener() {
             @Override
-            public void onReport(String identifier, Object value) {
-                // Called with interesting values, that arise during processing.
-                // Some possibly reported values:
-                //
-                // $brightness - the brightness of the center region of the cutout as a float value
-                // $confidence - the confidence, an Integer value between 0 and 100
-                // $thresholdedImage - the current image transformed into black and white
-                // $sharpness - the detected sharpness value (only reported if minSharpness > 0)
-            }
-
-            @Override
-            public boolean onTextOutlineDetected(List<PointF> list) {
-                // Called when the outline of a possible text is detected.
-                // If false is returned, the outline is drawn automatically.
-                return false;
-            }
-
-            @Override
-            public void onResult(AnylineOcrResult result) {
+            public void onResult(AnylineOcrResult anylineOcrResult) {
                 // Called when a valid result is found
-                String results[] = result.getText().split("-");
-                String country  = results[0];
+                String results[] = anylineOcrResult.getResult().split("-");
+                String country = results[0];
                 String licensePlate = results[1];
 
                 licensePlateResultView.setLicensePlate(licensePlate);
-                if(country != null && !country.isEmpty()) {
+                if (country != null && !country.isEmpty()) {
                     licensePlateResultView.setCountry(country);
                 }
                 licensePlateResultView.setVisibility(View.VISIBLE);
             }
-
-            @Override
-            public void onAbortRun(AnylineOcrError code, String message) {
-                // Is called when no result was found for the current image.
-                // E.g. if no text was found or the result is not valid.
-            }
         });
-
 
         // disable the reporting if set to off in preferences
         scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment

@@ -24,6 +24,7 @@ import android.widget.Toast;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
+import at.nineyards.anyline.modules.energy.EnergyResult;
 import at.nineyards.anyline.modules.energy.EnergyResultListener;
 import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
@@ -69,9 +70,7 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
         // initialize Anyline with the license key and a Listener that is called if a result is found
         energyScanView.initAnyline(getString(R.string.anyline_license_key), new EnergyResultListener() {
             @Override
-            public void onResult(EnergyScanView.ScanMode scanMode, String result,
-                                 AnylineImage resultImage, AnylineImage fullImage) {
-
+            public void onResult(EnergyResult energyResult) {
                 // This is called when a result is found.
                 // The scanMode is the mode the result was found for. The result is the actual result.
                 // If the a meter reading was scanned two images are provided as well, one shows the targeted area only
@@ -81,14 +80,14 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
                 //display the result in a simple dialog
 
                 new ResultDialogBuilder(ScanDigitalHeatMeterActivity.this)
-                        .setResultImage(resultImage)
+                        .setResultImage(energyResult.getCutoutImage())
                         .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 32)
                         .setTextGravity(Gravity.CENTER)
-                        .setText(result)
+                        .setText(energyResult.getResult())
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                if (!energyScanView.isRunning()){
+                                if (!energyScanView.isRunning()) {
                                     energyScanView.startScanning();
                                 }
                             }
@@ -97,7 +96,7 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
                         .setOnCancelListener(new DialogInterface.OnCancelListener() {
                             @Override
                             public void onCancel(DialogInterface dialogInterface) {
-                                if (!energyScanView.isRunning()){
+                                if (!energyScanView.isRunning()) {
                                     energyScanView.startScanning();
                                 }
                             }
@@ -116,7 +115,7 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
                 if (R.id.radio_heat_4_3 == checkedId) {
                     showToast(getString(R.string.header_config, getString(R.string.heat_meter_4_3_short)));
                     energyScanView.setScanMode(EnergyScanView.ScanMode.HEAT_METER_4);
-                    if (!energyScanView.isRunning()){
+                    if (!energyScanView.isRunning()) {
                         energyScanView.startScanning();
                     }
 
@@ -124,14 +123,14 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
                     showToast(getString(R.string.header_config, getString(R.string.heat_meter_5_3_short)));
 
                     energyScanView.setScanMode(EnergyScanView.ScanMode.HEAT_METER_5);
-                    if (!energyScanView.isRunning()){
+                    if (!energyScanView.isRunning()) {
                         energyScanView.startScanning();
                     }
                 } else if (R.id.radio_heat_6_3 == checkedId) {
                     showToast(getString(R.string.header_config, getString(R.string.heat_meter_6_3_short)));
 
                     energyScanView.setScanMode(EnergyScanView.ScanMode.HEAT_METER_6);
-                    if (!energyScanView.isRunning()){
+                    if (!energyScanView.isRunning()) {
                         energyScanView.startScanning();
                     }
                 }

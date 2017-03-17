@@ -1,0 +1,48 @@
+<!--
+  ~ Anyline
+  ~ dialog_double_result.xml
+  ~
+  ~ Copyright (c) 2015 9yards GmbH
+  ~
+  ~ Created by hanna at 2017-03-01
+  -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/first_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/first_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"/>
+
+        <ImageView
+            android:id="@+id/second_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/second_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"/>
+
+    </LinearLayout>
+</ScrollView>
