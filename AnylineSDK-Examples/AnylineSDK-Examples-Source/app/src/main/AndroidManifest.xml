@@ -50,6 +50,11 @@
                 android:value="io.anyline.examples.MainActivity"/>
         </activity>
         <activity
+            android:name=".meter.ScanAutoAnalogDigitalMeterActivity"
+            android:label="@string/title_auto_analog_digital_meter"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".mrz.ScanMrzActivity"
             android:label="@string/title_mrz"
             android:parentActivityName=".MainActivity">

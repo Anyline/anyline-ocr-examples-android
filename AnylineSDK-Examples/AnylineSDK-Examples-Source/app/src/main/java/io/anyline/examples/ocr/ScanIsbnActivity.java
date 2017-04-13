@@ -41,15 +41,10 @@ public class ScanIsbnActivity extends AppCompatActivity {
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         anylineOcrConfig.setTesseractLanguages("eng_no_dict", "deu");
         anylineOcrConfig.setCharWhitelist("ISBN0123456789<>-X");
-        anylineOcrConfig.setMinCharHeight(20);
-        anylineOcrConfig.setMaxCharHeight(70);
-        anylineOcrConfig.setMinConfidence(65);
         anylineOcrConfig.setValidationRegex("^ISBN((-)?\\s*(13|10))?:?\\s*((978|979){1}-?\\s*)*[0-9]{1,5}-?\\s*[0-9]{2,7}-?\\s*[0-9]{2," +
                 "7}-?\\s*[0-9X]$");
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.LINE);
-        anylineOcrConfig.setRemoveSmallContours(true);
-        anylineOcrConfig.setRemoveWhitespaces(true);
-        anylineOcrConfig.setMinSharpness(62);
+        // AUTO ScanMode automatically detects the correct text without any further parameters to be set
+        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
         scanView.setAnylineOcrConfig(anylineOcrConfig);
 
         scanView.setConfig(new AnylineViewConfig(this, "isbn_view_config.json"));

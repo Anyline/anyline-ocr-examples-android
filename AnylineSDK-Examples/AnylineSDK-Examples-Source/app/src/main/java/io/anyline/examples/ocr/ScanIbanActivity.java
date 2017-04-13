@@ -52,31 +52,18 @@ public class ScanIbanActivity extends AppCompatActivity {
 
         //Configure the OCR for IBANs
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        // use the line mode (line length and font may vary)
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.LINE);
+        // AUTO ScanMode automatically detects the correct text without any further parameters to be set
+        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
         // set the languages used for OCR
         anylineOcrConfig.setTesseractLanguages("eng_no_dict", "deu");
         // allow only capital letters and numbers
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890");
-        // set the height range the text can have
-        anylineOcrConfig.setMinCharHeight(20);
-        anylineOcrConfig.setMaxCharHeight(60);
         // The minimum confidence required to return a result, a value between 0 and 100.
         // (higher confidence means less likely to get a wrong result, but may be slower to get a result)
         anylineOcrConfig.setMinConfidence(65);
         // a simple regex for a basic validation of the IBAN, results that don't match this, will not be returned
         // (full validation is more complex, as different countries have different formats)
         anylineOcrConfig.setValidationRegex("^[A-Z]{2}([0-9A-Z]\\s*){13,32}$");
-        // removes small contours (helpful in this case as no letters with small artifacts are allowed, like iöäü)
-        anylineOcrConfig.setRemoveSmallContours(true);
-        // removes whitespaces from the result
-        // (also causes faster processing, because optimizations can be made if whitespaces are not relevant)
-        anylineOcrConfig.setRemoveWhitespaces(true);
-        // Experimental parameter to set the minimum sharpness (value between 0-100; 0 to turn sharpness detection off)
-        // The goal of the minimum sharpness is to avoid a time consuming ocr step,
-        // if the image is blurry and good results are therefor not likely.
-        anylineOcrConfig.setMinSharpness(66);
-        // set the ocr config
         scanView.setAnylineOcrConfig(anylineOcrConfig);
 
         // set individual camera settings for this example by getting the current preferred settings and adapting them

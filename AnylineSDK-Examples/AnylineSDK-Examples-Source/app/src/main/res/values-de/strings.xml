@@ -99,9 +99,11 @@ hilft uns unser Produkt zu verbessern. Ergebnisse und Bilder von MRZ, Barcodes u
     <string name="title_license_plate_austria">Österr. Kennzeichen (Alpha)</string>
 
     <string name="scan_double_tariff_meters">Doppeltarifzähler scannen</string>
-    <string name="scan_analog_meters">Analoge Zähler scannen</string>
+    <string name="scan_analog_meters">Analogzähler scannen</string>
+    <string name="scan_auto_analog_digital_meters">Analog-/Digitalzähler scannen</string>
     <string name="title_double_tariff_meter">Doppeltarifzähler</string>
-    <string name="title_analog_meter">Analoger Zähler</string>
+    <string name="title_analog_meter">Analogzähler</string>
+    <string name="title_auto_analog_digital_meter">Analog-/Digitalzähler</string>
     <string name="enable_barcode_detection">Barcode Erkennung</string>
     <string name="switch_off">AUS</string>
     <string name="switch_on">AN</string>

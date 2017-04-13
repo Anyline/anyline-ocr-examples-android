@@ -46,15 +46,8 @@ public class ScanVoucherCodeActivity extends AppCompatActivity {
         anylineOcrConfig.setTesseractLanguages("anyline_capitals");
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
         anylineOcrConfig.setValidationRegex("[A-Z0-9]{8}$");
-        anylineOcrConfig.setMinCharHeight(45);
-        anylineOcrConfig.setMaxCharHeight(85);
-        anylineOcrConfig.setMinConfidence(85);
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.GRID);
-        anylineOcrConfig.setCharCountX(8);
-        anylineOcrConfig.setCharCountY(1);
-        anylineOcrConfig.setCharPaddingXFactor(0.5);
-        anylineOcrConfig.setIsBrightTextOnDark(true);
-
+        // AUTO ScanMode automatically detects the correct text without any further parameters to be set
+        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
         scanView.setAnylineOcrConfig(anylineOcrConfig);
 
         scanView.setConfig(new AnylineViewConfig(this, "voucher_code_view_config.json"));
