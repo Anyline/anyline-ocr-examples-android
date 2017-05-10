@@ -3,7 +3,6 @@ at.nineyards.anyline.camera
 at.nineyards.anyline.models
 at.nineyards.anyline.modules
 at.nineyards.anyline.modules.barcode
-at.nineyards.anyline.modules.debitcard
 at.nineyards.anyline.modules.document
 at.nineyards.anyline.modules.energy
 at.nineyards.anyline.modules.mrz

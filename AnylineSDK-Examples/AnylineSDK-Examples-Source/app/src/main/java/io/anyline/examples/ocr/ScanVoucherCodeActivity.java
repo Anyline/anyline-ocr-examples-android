@@ -41,12 +41,11 @@ public class ScanVoucherCodeActivity extends AppCompatActivity {
 
         scanView.copyTrainedData("tessdata/anyline_capitals.traineddata", "cee65c74833eb85e3c31e213b25e72a2");
 
-        // see ScanIbanActivity for a more detailed description
+        // see ScanScrabbleActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         anylineOcrConfig.setTesseractLanguages("anyline_capitals");
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
         anylineOcrConfig.setValidationRegex("[A-Z0-9]{8}$");
-        // AUTO ScanMode automatically detects the correct text without any further parameters to be set
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
         scanView.setAnylineOcrConfig(anylineOcrConfig);
 

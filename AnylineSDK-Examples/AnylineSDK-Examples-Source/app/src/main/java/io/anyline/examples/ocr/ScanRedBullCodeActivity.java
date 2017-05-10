@@ -41,20 +41,34 @@ public class ScanRedBullCodeActivity extends AppCompatActivity {
 
         scanView.copyTrainedData("tessdata/rbf_jan2015_v2.traineddata", "cdb7f35f1af00030178deefc01722f65");
 
-        // see ScanScrabbleActivity for a more detailed description
+
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setTesseractLanguages("rbf_jan2015_v2");
-        anylineOcrConfig.setCharWhitelist("2346789ABCDEFGHKLMNPQRTUVWXYZ");
-        anylineOcrConfig.setMinCharHeight(15);
-        anylineOcrConfig.setMaxCharHeight(30);
-        anylineOcrConfig.setMinConfidence(75);
-        anylineOcrConfig.setValidationRegex("^[0-9A-Z]{4}\n[0-9A-Z]{4}");
+        // use the GRID mode, since an imaginable grid can be put on top of the code character
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.GRID);
+        // set the languages used for OCR (can be multiple)
+        anylineOcrConfig.setTesseractLanguages("rbf_jan2015_v2");
+        // allow only capital letters and some numbers - these are the only characters the SDK will consider
+        anylineOcrConfig.setCharWhitelist("2346789ABCDEFGHKLMNPQRTUVWXYZ");
+        // a simple regex for a basic validation of the codes. We require 4 characters per row
+        anylineOcrConfig.setValidationRegex("^[0-9A-Z]{4}\n[0-9A-Z]{4}");
+        // the characters height is 15 pixels minimum (make sure your cutout size is aligned to this)
+        anylineOcrConfig.setMinCharHeight(15);
+        // the characters height is 30 pixels maximum (make sure your cutout size is aligned to this)
+        anylineOcrConfig.setMaxCharHeight(30);
+        // the minimum confidence required to return a result, a value between 0 and 100.
+        // (higher confidence means less likely to get an incorrect result, but may be slower to deliver a result)
+        anylineOcrConfig.setMinConfidence(75);
+        // the character count in a row may is 4
         anylineOcrConfig.setCharCountX(4);
+        // there are two rows
         anylineOcrConfig.setCharCountY(2);
+        // the characters may be up to 0.3 times their width (horizontally) apart from each other in this example
         anylineOcrConfig.setCharPaddingXFactor(0.3);
+        // the characters may be up to 0.5 times their width (vertically) apart from each other in this example
         anylineOcrConfig.setCharPaddingYFactor(0.5);
+        // the text is bright on darker background
         anylineOcrConfig.setIsBrightTextOnDark(true);
+
         scanView.setAnylineOcrConfig(anylineOcrConfig);
 
         scanView.setConfig(new AnylineViewConfig(this, "rb_view_config.json"));

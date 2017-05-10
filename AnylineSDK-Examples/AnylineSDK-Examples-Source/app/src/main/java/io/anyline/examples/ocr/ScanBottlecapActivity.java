@@ -41,7 +41,7 @@ public class ScanBottlecapActivity extends AppCompatActivity {
 
         scanView.copyTrainedData("tessdata/bottlecap.traineddata", "a8224bfaf4d2085f5b0de7018dee29eb");
 
-        // see ScanScrabbleActivity for a more detailed description
+        // see ScanRedBullCodeActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         anylineOcrConfig.setTesseractLanguages("bottlecap");
         anylineOcrConfig.setCharWhitelist("123456789ABCDEFGHJKLMNPRSTUVWXYZ");

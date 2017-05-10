@@ -37,12 +37,12 @@ public class ScanIsbnActivity extends AppCompatActivity {
         scanView.copyTrainedData("tessdata/eng_no_dict.traineddata", "d142032d86da1be4dbe22dce2eec18d7");
         scanView.copyTrainedData("tessdata/deu.traineddata", "2d5190b9b62e28fa6d17b728ca195776");
 
-        // see ScanIbanActivity for a more detailed description
+        // see ScanScrabbleActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         anylineOcrConfig.setTesseractLanguages("eng_no_dict", "deu");
         anylineOcrConfig.setCharWhitelist("ISBN0123456789<>-X");
-        anylineOcrConfig.setValidationRegex("^ISBN((-)?\\s*(13|10))?:?\\s*((978|979){1}-?\\s*)*[0-9]{1,5}-?\\s*[0-9]{2,7}-?\\s*[0-9]{2," +
-                "7}-?\\s*[0-9X]$");
+        // use predefined regular expression
+        anylineOcrConfig.setValidationRegex(AnylineOcrConfig.AnylineOcrRegex.ISBN.getRegex());
         // AUTO ScanMode automatically detects the correct text without any further parameters to be set
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
         scanView.setAnylineOcrConfig(anylineOcrConfig);
