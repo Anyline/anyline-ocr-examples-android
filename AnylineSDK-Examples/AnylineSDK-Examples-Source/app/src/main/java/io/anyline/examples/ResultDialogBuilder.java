@@ -11,7 +11,6 @@ package io.anyline.examples;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -44,8 +43,7 @@ public class ResultDialogBuilder extends AlertDialog.Builder {
         super(context);
         if (isDoubleResult) {
             initDoubleResult();
-        }
-        else {
+        } else {
             init();
         }
     }

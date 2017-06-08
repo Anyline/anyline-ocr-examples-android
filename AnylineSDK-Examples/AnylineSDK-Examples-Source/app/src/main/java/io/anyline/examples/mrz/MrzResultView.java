@@ -15,12 +15,12 @@ import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.util.Locale;
+
 import at.nineyards.anyline.modules.mrz.Identification;
 import at.nineyards.anyline.util.DimensUtil;
 import io.anyline.examples.R;
-
-import java.text.DateFormat;
-import java.util.Locale;
 
 /**
  * A view to show MRZ-Scan-Results
@@ -100,54 +100,7 @@ public class MrzResultView extends RelativeLayout {
         }
         sexText.setText(identification.getSex());
 
-        String mrzString;
-        if (identification.getDocumentType() != null && identification.getDocumentType().startsWith("P")) {
-            mrzString = String.format("%-44s\n\n", String.format("%-2s%s%s<<%s",
-                    identification.getDocumentType(),
-                    identification.getIssuingCountryCode(),
-                    identification.getSurNames(),
-                    identification.getGivenNames()));
-
-
-            mrzString += String.format("%-42s%1s%1s", String.format("%-9s%1s%s%6s%1s%1s%6s%1s%-14s",
-                            identification.getDocumentNumber(),
-                            identification.getCheckDigitNumber(),
-                            identification.getNationalityCountryCode(),
-                            identification.getDayOfBirth(),
-                            identification.getCheckDigitDayOfBirth(),
-                            identification.getSex(),
-                            identification.getExpirationDate(),
-                            identification.getCheckDigitExpirationDate(),
-                            identification.getPersonalNumber()),
-                    identification.getCheckDigitPersonalNumber(),
-                    identification.getCheckDigitFinal());
-
-        } else {
-
-            mrzString = String.format("%-30s\n", String.format("%-2s%-3s%-9s%s%s",
-                    identification.getDocumentType(),
-                    identification.getIssuingCountryCode(),
-                    identification.getDocumentNumber(),
-                    identification.getCheckDigitNumber(),
-                    identification.getPersonalNumber()));
-
-
-            mrzString += String.format("%-29s%1s\n", String.format("%s%s%s%s%s%s%s",
-                            identification.getDayOfBirth(),
-                            identification.getCheckDigitDayOfBirth(),
-                            identification.getSex(),
-                            identification.getExpirationDate(),
-                            identification.getCheckDigitExpirationDate(),
-                            identification.getNationalityCountryCode(),
-                            identification.getPersonalNumber2()),
-                    identification.getCheckDigitFinal());
-
-
-            mrzString += String.format("%-30s", String.format("%s<<%s",
-                    identification.getSurNames(),
-                    identification.getGivenNames()));
-        }
-        mrzString = mrzString.replaceAll(" ", "<");
+        String mrzString = identification.getMrzString().replace("\\n", "\n");
         mrzText.setText(mrzString);
     }
 

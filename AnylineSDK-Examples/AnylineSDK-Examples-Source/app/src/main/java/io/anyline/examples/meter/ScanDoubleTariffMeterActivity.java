@@ -25,9 +25,9 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.widget.RelativeLayout;
 import android.view.WindowManager;
 import android.widget.CompoundButton;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 
 import at.nineyards.anyline.camera.CameraController;
@@ -38,10 +38,10 @@ import at.nineyards.anyline.modules.barcode.NativeBarcodeResultListener;
 import at.nineyards.anyline.modules.energy.EnergyResult;
 import at.nineyards.anyline.modules.energy.EnergyResultListener;
 import at.nineyards.anyline.modules.energy.EnergyScanView;
-import io.anyline.examples.view.InactiveCutoutView;
 import io.anyline.examples.R;
 import io.anyline.examples.ResultDialogBuilder;
 import io.anyline.examples.SettingsFragment;
+import io.anyline.examples.view.InactiveCutoutView;
 
 /**
  * Example activity for the Anyline-Energy-Module using double tariff meters

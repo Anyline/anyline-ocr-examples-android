@@ -50,16 +50,16 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
     private android.os.Handler handler = new android.os.Handler();
 
     // takes care of fading the error message out after some time with no error reported from the SDK
-    private Runnable errorMessageCleanup = new Runnable(){
+    private Runnable errorMessageCleanup = new Runnable() {
         @Override
         public void run() {
-            if( System.currentTimeMillis() > lastErrorRecieved + getApplication().getResources().getInteger(R.integer.error_message_delay)) {
-                if(errorMessage == null || errorMessageAnimator == null){
+            if (System.currentTimeMillis() > lastErrorRecieved + getApplication().getResources().getInteger(R.integer.error_message_delay)) {
+                if (errorMessage == null || errorMessageAnimator == null) {
                     return;
                 }
-                if(errorMessage.getAlpha() == 0f){
+                if (errorMessage.getAlpha() == 0f) {
                     errorMessage.setText("");
-                } else if(!errorMessageAnimator.isRunning()){
+                } else if (!errorMessageAnimator.isRunning()) {
                     errorMessageAnimator = ObjectAnimator.ofFloat(errorMessage, "alpha", errorMessage.getAlpha(), 0f);
                     errorMessageAnimator.setDuration(getResources().getInteger(R.integer.error_message_delay));
                     errorMessageAnimator.setInterpolator(new AccelerateInterpolator());
@@ -131,7 +131,7 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
                     // Bitmap bmp = transformedImage.getBitmap();
                     // save the image with quality 100 (only used for jpeg, ignored for png)
                     transformedImage.save(outFile, 100);
-                    showToast(getString(R.string.document_image_saved_to) +" " + outFile.getAbsolutePath());
+                    showToast(getString(R.string.document_image_saved_to) + " " + outFile.getAbsolutePath());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -159,8 +159,8 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
             @Override
             public void onPictureProcessingFailure(DocumentScanView.DocumentError documentError) {
 
-                showErrorMessageFor(documentError,true);
-                if(progressDialog != null && progressDialog.isShowing()){
+                showErrorMessageFor(documentError, true);
+                if (progressDialog != null && progressDialog.isShowing()) {
                     progressDialog.dismiss();
                 }
 
@@ -227,9 +227,10 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
     }
 
 
-    private void showErrorMessageFor(DocumentScanView.DocumentError documentError){
-        showErrorMessageFor(documentError,false);
+    private void showErrorMessageFor(DocumentScanView.DocumentError documentError) {
+        showErrorMessageFor(documentError, false);
     }
+
     private void showErrorMessageFor(DocumentScanView.DocumentError documentError, boolean highlight) {
         String text = getString(R.string.document_picture_error);
         switch (documentError) {
@@ -261,16 +262,15 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
                 return; // exit and show no error message for now!
         }
 
-        if(highlight) {
+        if (highlight) {
             showHighlightErrorMessageUiAnimated(text);
-        }
-        else {
+        } else {
             showErrorMessageUiAnimated(text);
         }
     }
 
     private void showErrorMessageUiAnimated(String message) {
-        if(lastErrorRecieved == 0) {
+        if (lastErrorRecieved == 0) {
             // the cleanup takes care of removing the message after some time if the error did not show up again
             handler.post(errorMessageCleanup);
         }
@@ -289,14 +289,15 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
         errorMessageAnimator.setInterpolator(new DecelerateInterpolator());
         errorMessageAnimator.start();
     }
-    private void showHighlightErrorMessageUiAnimated(String message){
+
+    private void showHighlightErrorMessageUiAnimated(String message) {
         lastErrorRecieved = System.currentTimeMillis();
         errorMessageLayout.setVisibility(View.VISIBLE);
-        errorMessage.setBackgroundColor(ContextCompat.getColor(this,R.color.anyline_red));
+        errorMessage.setBackgroundColor(ContextCompat.getColor(this, R.color.anyline_red));
         errorMessage.setAlpha(0f);
         errorMessage.setText(message);
 
-        if(errorMessageAnimator != null && errorMessageAnimator.isRunning()){
+        if (errorMessageAnimator != null && errorMessageAnimator.isRunning()) {
             errorMessageAnimator.cancel();
         }
 

@@ -27,7 +27,7 @@ public class IsbnActivity extends AppCompatActivity implements RequestListener {
 
     private static final String TAG = IsbnActivity.class.getSimpleName();
 
-    public final String GOOGLE_BOOKS_API_CALL =  "https://www.googleapis.com/books/v1/volumes?q=isbn:";
+    public final String GOOGLE_BOOKS_API_CALL = "https://www.googleapis.com/books/v1/volumes?q=isbn:";
     public static final String ISBN_INPUT = "ISBN_INPUT";
 
     private String isbn;
@@ -137,7 +137,7 @@ public class IsbnActivity extends AppCompatActivity implements RequestListener {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 googleWebView.setVisibility(View.GONE);
                 ((TextView) layoutNotFound.findViewById(R.id.isbn_not_found_info)).
-                        setText(String.format(getString(R.string.isbn_no_information_found_no_internet),isbn) +
+                        setText(String.format(getString(R.string.isbn_no_information_found_no_internet), isbn) +
                                 "\n\n" + getString(R.string.no_internet));
 
             }

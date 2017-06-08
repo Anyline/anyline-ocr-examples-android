@@ -1,13 +1,10 @@
 package io.anyline.examples.ocr;
 
 import android.content.Intent;
-import android.graphics.PointF;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
-
-import java.util.List;
 
 import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
@@ -19,14 +16,13 @@ import io.anyline.examples.SettingsFragment;
 import io.anyline.examples.ocr.apis.IsbnActivity;
 
 public class ScanIsbnActivity extends AppCompatActivity {
-
     private static final String TAG = ScanIsbnActivity.class.getSimpleName();
     private AnylineOcrScanView scanView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
+        // Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.activity_anyline_ocr);
@@ -40,8 +36,8 @@ public class ScanIsbnActivity extends AppCompatActivity {
         // see ScanScrabbleActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         anylineOcrConfig.setTesseractLanguages("eng_no_dict", "deu");
-        anylineOcrConfig.setCharWhitelist("ISBN0123456789<>-X");
-        // use predefined regular expression
+        // use predefined whitelist and regular expression
+        anylineOcrConfig.setCharWhitelist(AnylineOcrConfig.AnylineOcrRegex.ISBN.getWhiteList());
         anylineOcrConfig.setValidationRegex(AnylineOcrConfig.AnylineOcrRegex.ISBN.getRegex());
         // AUTO ScanMode automatically detects the correct text without any further parameters to be set
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
@@ -61,8 +57,8 @@ public class ScanIsbnActivity extends AppCompatActivity {
         });
 
         // disable the reporting if set to off in preferences
-        scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
-                .KEY_PREF_REPORTING_ON, true));
+        scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(
+                SettingsFragment.KEY_PREF_REPORTING_ON, true));
     }
 
     @Override

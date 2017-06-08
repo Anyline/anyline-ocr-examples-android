@@ -9,14 +9,9 @@
 
 package io.anyline.examples;
 
-import android.Manifest;
-import android.app.AlertDialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -51,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView versionTextView = new TextView(this);
         String versionInfo = String.format("Version Info:\nApp: %s (%s), %s\nSDK: %s (%s)",
-                BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE, BuildConfig.FLAVOR ,
-                at.nineyards.anyline.BuildConfig.VERSION_NAME,at.nineyards.anyline.BuildConfig.VERSION_CODE);
+                BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE, BuildConfig.FLAVOR,
+                at.nineyards.anyline.BuildConfig.VERSION_NAME, at.nineyards.anyline.BuildConfig.VERSION_CODE);
         versionTextView.setText(versionInfo);
         int padding = DimensUtil.getPixFromDp(this, 16);
         versionTextView.setPadding(padding, padding, padding, padding);
@@ -82,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
     private void checkedStartActivity(Intent intent) {
 
         // ask if permissions were already granted
-        if(cameraPermissionHelper.hasPermissions()){
+        if (cameraPermissionHelper.hasPermissions()) {
             startActivity(intent);
-        } else{
+        } else {
             // otherwise request the permissions
             cameraPermissionHelper.requestPermissions();
             this.targetIntent = intent;
@@ -95,12 +90,12 @@ public class MainActivity extends AppCompatActivity {
      * Callback from the permission request. Can be directly forwarded to the
      * {@link CameraPermissionHelper#onRequestPermissionsResult(int, String[], int[])} to check the Camera
      * Permissions for Anyline.
-     *
+     * <p>
      * Any other permissions result requested by the app will also be forwarded to here, and should be checked after
      * the call to the {@link CameraPermissionHelper}
      *
-     * @param requestCode the code of the permission request
-     * @param permissions the requested permissions
+     * @param requestCode  the code of the permission request
+     * @param permissions  the requested permissions
      * @param grantResults the results of the request
      */
     @Override
@@ -109,9 +104,9 @@ public class MainActivity extends AppCompatActivity {
 
         // CameraPermissionHelper will return true if the permission for the camera was granted (and was made via the
         // CameraPermissionHelper class)
-        if(cameraPermissionHelper.onRequestPermissionsResult(requestCode, permissions, grantResults)){
+        if (cameraPermissionHelper.onRequestPermissionsResult(requestCode, permissions, grantResults)) {
             startActivity(targetIntent);
-        } else{
+        } else {
             // Displays a message to the user, asking to grant the permissions for the camera in order for Anyline to
             // work
             cameraPermissionHelper.showPermissionMessage(null);

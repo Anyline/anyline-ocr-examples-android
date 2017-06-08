@@ -17,8 +17,6 @@ import android.view.WindowManager;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.models.AnylineImage;
-import at.nineyards.anyline.modules.mrz.Identification;
 import at.nineyards.anyline.modules.mrz.MrzResult;
 import at.nineyards.anyline.modules.mrz.MrzResultListener;
 import at.nineyards.anyline.modules.mrz.MrzScanView;

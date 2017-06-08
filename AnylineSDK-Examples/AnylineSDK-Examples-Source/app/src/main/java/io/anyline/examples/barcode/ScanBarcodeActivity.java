@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.models.AnylineImage;
 import at.nineyards.anyline.modules.barcode.BarcodeResult;
 import at.nineyards.anyline.modules.barcode.BarcodeResultListener;
 import at.nineyards.anyline.modules.barcode.BarcodeScanView;

@@ -1,13 +1,10 @@
 package io.anyline.examples.ocr;
 
 import android.content.Intent;
-import android.graphics.PointF;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
-
-import java.util.List;
 
 import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;

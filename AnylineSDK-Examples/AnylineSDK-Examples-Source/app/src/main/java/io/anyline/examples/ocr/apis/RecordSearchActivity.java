@@ -44,7 +44,7 @@ public class RecordSearchActivity extends AppCompatActivity {
 
             }
         });
-        webView.loadUrl("https://www.google.at/search?q=\"" +scannedRecord +"\" site:discogs.com OR site:musbrainz.org OR site:allmusic.com");
+        webView.loadUrl("https://www.google.at/search?q=\"" + scannedRecord + "\" site:discogs.com OR site:musbrainz.org OR site:allmusic.com");
     }
 
 
