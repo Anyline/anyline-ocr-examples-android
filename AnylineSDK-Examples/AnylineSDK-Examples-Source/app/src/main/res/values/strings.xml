@@ -8,6 +8,7 @@
     <string name="scan_analog_meters">Scan Analog Meter</string>
     <string name="scan_double_tariff_meters">Scan Double Tariff Meter</string>
     <string name="scan_auto_analog_digital_meters">Scan Analog/Digital Meter</string>
+    <string name="scan_dial_meters">Scan Dial Meter (Alpha)</string>
 
     <string name="digital_meter">Digital Meter</string>
     <string name="heat_meter">Heat Meter</string>
@@ -91,6 +92,7 @@
     <string name="title_analog_meter">Analog Meter</string>
     <string name="title_double_tariff_meter">Double Tariff Meter</string>
     <string name="title_auto_analog_digital_meter">Analog/Digital Meter</string>
+    <string name="title_dial_meter">Dial Meter (Alpha)</string>
 
     <string name="title_document">Document</string>
     <string name="title_iban">IBAN</string>

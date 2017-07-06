@@ -53,7 +53,20 @@
             android:name=".meter.ScanAutoAnalogDigitalMeterActivity"
             android:label="@string/title_auto_analog_digital_meter"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".meter.ScanDialMeterActivity"
+            android:label="@string/title_dial_meter"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity"/>
+        </activity>
         <activity
             android:name=".mrz.ScanMrzActivity"
             android:label="@string/title_mrz"

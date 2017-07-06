@@ -9,6 +9,7 @@
         <item>@string/scan_digital_meters</item>
         <item>@string/scan_heat_meters</item>
         <item>@string/scan_auto_analog_digital_meters</item>
+        <item>@string/scan_dial_meters</item>
         <item>@string/category_identification</item>
         <item>@string/scan_mrz</item>
         <item>@string/category_barcodes</item>
@@ -39,6 +40,7 @@
         <item>io.anyline.examples.meter.ScanEnergyDigitalMeterActivity</item>
         <item>io.anyline.examples.meter.ScanDigitalHeatMeterActivity</item>
         <item>io.anyline.examples.meter.ScanAutoAnalogDigitalMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanDialMeterActivity</item>
         <item>HEADER</item>
         <item>io.anyline.examples.mrz.ScanMrzActivity</item>
         <item>HEADER</item>
