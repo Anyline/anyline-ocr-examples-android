@@ -8,7 +8,7 @@ android {
         applicationId "io.anyline.examples"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 83
+        versionCode 84
         versionName "3.14.0"
 
         // filter to the architectures included in anyline
