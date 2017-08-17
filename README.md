@@ -21,7 +21,7 @@ brew install git-lfs
 git lfs install
 ```
 
-* If you prefer downloading a package, use the provided `zip` package on the [releases page](https://github.com/Anyline/anyline-ocr-examples-ios/releases). Be aware that the github download zip button does not work for projects with git-lfs.
+* If you prefer downloading a package, use the provided `zip` package on the [releases page](https://github.com/Anyline/anyline-ocr-examples-android/releases). Be aware that the github download zip button does not work for projects with git-lfs.
 
 ### 1. Add AnylineSDK as a dependency 
 
