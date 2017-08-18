@@ -32,7 +32,7 @@
         app:vibrate_on_result="true"
         app:blink_animation_on_result="true"
         app:cancel_on_result="true"
-        app:visual_feedback_style="rect"
+        app:visual_feedback_style="contour_rect"
         app:visual_feedback_stroke_color="#0099FF"
         />
 
