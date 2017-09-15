@@ -133,5 +133,5 @@
     <string name="camera_error_fatal">Camera Error</string>
     <string name="error_no_camera_permission">Error: No camera permission</string>
     <string name="error_wait_for_action">Please wait...</string>
-
+    <string name="ok">OK</string>
 </resources>

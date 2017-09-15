@@ -1,20 +1,39 @@
 apply plugin: 'com.android.application'
 
+def getVersionNumber() {
+    def vn = currentVersion.toInteger()
+    println "Version: " +vn
+    return vn
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion '25.0.0'
 
+
+    def versionPropsFile = file('version.properties')
+
+    def vName = "3.16.0"
+    def code = 110
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionPropsFile))
+        vName = versionProps['versionName']
+        code = versionProps['currentVersion'].toInteger()
+
+    }
+
     defaultConfig {
         applicationId "io.anyline.examples"
+        versionCode code
+        versionName vName
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 90
-        versionName "3.15.0"
 
-        // filter to the architectures included in anyline
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+
     }
 }
 
@@ -34,10 +53,10 @@ dependencies {
     compile 'com.google.android.gms:play-services-vision:10.0.0'
 
     //include AnylineSDK from maven
-    compile 'io.anyline:anylinesdk:3.15.0@aar'
+    compile 'io.anyline:anylinesdk:3.16.0@aar'
 
 
     //include AnylineSDK from locale libs folder
-    //compile(name:'anylinesdk-3.15.0', ext:'aar')
+    //compile(name:'anylinesdk-3.16.0', ext:'aar')
 }
 
