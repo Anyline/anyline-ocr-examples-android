@@ -5,12 +5,14 @@ at.nineyards.anyline.modules
 at.nineyards.anyline.modules.barcode
 at.nineyards.anyline.modules.document
 at.nineyards.anyline.modules.energy
+at.nineyards.anyline.modules.licenseplate
 at.nineyards.anyline.modules.mrz
 at.nineyards.anyline.modules.ocr
 at.nineyards.anyline.util
 io.anyline.plugin
 io.anyline.plugin.barcode
 io.anyline.plugin.document
+io.anyline.plugin.licenseplate
 io.anyline.plugin.meter
 io.anyline.plugin.mrz
 io.anyline.plugin.ocr

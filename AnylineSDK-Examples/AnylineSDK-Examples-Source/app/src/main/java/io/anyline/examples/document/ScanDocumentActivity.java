@@ -103,12 +103,12 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
             @Override
             public void onResult(DocumentResult documentResult) {
                 // handle the result document images here
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
 
                 AnylineImage transformedImage = documentResult.getResult();
                 AnylineImage fullFrame = documentResult.getFullImage();
+
+                // close progress dialog after we get both images from the result
+                closeProgressDialog();
 
                 // resize display view based on larger side of document, and display document
                 int widthDP, heightDP;
@@ -180,9 +180,7 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
             public void onPictureProcessingFailure(DocumentScanView.DocumentError documentError) {
 
                 showErrorMessageFor(documentError, true);
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+                closeProgressDialog();
 
                 // if there is a problem, here is how images could be saved in the error case
                 // this will be a full, not cropped, not transformed image
@@ -213,11 +211,13 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
             @Override
             public void onTakePictureSuccess() {
                 // this is called after the image has been captured from the camera and is about to be processed
-                progressDialog = ProgressDialog.show(ScanDocumentActivity.this, getString(R.string
-                                .document_processing_picture_header), getString(R
-                                .string
-                                .document_processing_picture),
-                        true);
+                if (progressDialog == null) {
+                    progressDialog = ProgressDialog.show(ScanDocumentActivity.this, getString(R.string
+                                    .document_processing_picture_header), getString(R
+                                    .string
+                                    .document_processing_picture),
+                            true);
+                }
 
                 if (errorMessageAnimator != null && errorMessageAnimator.isRunning()) {
 
@@ -237,6 +237,26 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
                 // This is called if the image could not be captured from the camera (most probably because of an
                 // OutOfMemoryError)
                 throw new RuntimeException(throwable);
+            }
+
+            @Override
+            public void onPictureCornersDetected(AnylineImage anylineImage, List<PointF> list) {
+                // This is called after manual corner detection was requested
+                // Further process the detected corners here
+                // Note: not used in this example
+            }
+
+            @Override
+            public void onPictureTransformed(AnylineImage anylineImage) {
+                // This is called after a full frame image and 4 corners were passed to the SDK for
+                // transformation (e.g. when a user manually selected the corners in an image)
+                // Note: not used in this example
+            }
+
+            @Override
+            public void onPictureTransformError(DocumentScanView.DocumentError documentError) {
+                // This is called on any error while transforming the document image from the 4 corners
+                // Note: not used in this example
             }
 
         });
@@ -287,6 +307,13 @@ public class ScanDocumentActivity extends AppCompatActivity implements CameraOpe
         } else {
             showErrorMessageUiAnimated(text);
         }
+    }
+
+    private void closeProgressDialog() {
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
+        progressDialog = null;
     }
 
     private void showErrorMessageUiAnimated(String message) {

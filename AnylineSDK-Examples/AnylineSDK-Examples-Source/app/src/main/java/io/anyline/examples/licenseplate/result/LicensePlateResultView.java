@@ -1,4 +1,4 @@
-package io.anyline.examples.ocr.result;
+package io.anyline.examples.licenseplate.result;
 
 import android.content.Context;
 import android.util.AttributeSet;

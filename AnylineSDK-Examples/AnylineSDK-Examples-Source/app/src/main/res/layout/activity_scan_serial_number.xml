@@ -1,0 +1,102 @@
+<!--
+  ~ Anyline
+  ~ activity_scan_energy.xmll
+  ~
+  ~ Copyright (c) 2017 Anyline GmbH
+  ~
+  ~ Created by Martin Cerman at 2017-09-29
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.anyline.examples.meter.ScanSerialNumberActivity">
+
+    <TextView
+        android:id="@+id/radio_button_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#88000000"
+        android:paddingLeft="8dp"
+        android:paddingTop="2dp"
+        android:text="@string/title_select_config"
+        android:textColor="#FFFFFF" />
+
+
+
+    <View
+        android:id="@+id/view_flash_placeholder"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+
+
+    <at.nineyards.anyline.modules.energy.EnergyScanView
+        android:id="@+id/energy_scan_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:beep_on_result="true"
+        app:blink_animation_on_result="true"
+        app:cancel_on_result="true"
+        app:cutout_alignment="top"
+        app:cutout_offset_y="120"
+        app:cutout_outside_color="#55000000"
+        app:cutout_rect_corner_radius_in_dp="4"
+        app:cutout_stroke_color="#FFFFFF"
+        app:cutout_stroke_width_in_dp="2"
+        app:cutout_style="rect"
+        app:flash_alignment="bottom_right"
+        app:flash_mode="manual"
+        app:vibrate_on_result="true"
+        app:visual_feedback_stroke_color="#0099FF"
+        app:visual_feedback_style="contour_rect"
+        android:layout_alignBottom="@+id/view_flash_placeholder"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/barcode_switch_container"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:background="#88000000"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        >
+
+        <TextView
+            android:id="@+id/enable_barcode_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/barcode_scanner_switch"
+            android:text="@string/enable_barcode_detection"
+            android:textColor="#E5E5E5"
+            android:textSize="14dp"
+            android:paddingBottom="12dp"/>
+
+        <Switch
+            android:id="@+id/barcode_scanner_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:textOff="@string/switch_off"
+            android:textOn="@string/switch_on"
+            android:showText="true"
+            android:switchTextAppearance="@style/switch_text_selector"
+            android:thumb="@drawable/switch_thumb_selector"
+            android:track="@drawable/switch_track_selector"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>

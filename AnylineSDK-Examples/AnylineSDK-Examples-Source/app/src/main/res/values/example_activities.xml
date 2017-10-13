@@ -10,6 +10,7 @@
         <item>@string/scan_heat_meters</item>
         <item>@string/scan_auto_analog_digital_meters</item>
         <item>@string/scan_dial_meters</item>
+        <item>@string/scan_serial_numbers</item>
         <item>@string/category_identification</item>
         <item>@string/scan_mrz</item>
         <item>@string/category_barcodes</item>
@@ -28,8 +29,6 @@
         <item>@string/scan_record</item>
         <item>@string/category_vehicles</item>
         <item>@string/license_plates</item>
-        <item>@string/license_plates_austria</item>
-        <item>@string/license_plates_germany</item>
     </string-array>
 
     <string-array translatable="false"
@@ -41,6 +40,7 @@
         <item>io.anyline.examples.meter.ScanDigitalHeatMeterActivity</item>
         <item>io.anyline.examples.meter.ScanAutoAnalogDigitalMeterActivity</item>
         <item>io.anyline.examples.meter.ScanDialMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanSerialNumberActivity</item>
         <item>HEADER</item>
         <item>io.anyline.examples.mrz.ScanMrzActivity</item>
         <item>HEADER</item>
@@ -58,8 +58,6 @@
         <item>io.anyline.examples.ocr.ScanIsbnActivity</item>
         <item>io.anyline.examples.ocr.ScanRecordActivity</item>
         <item>HEADER</item>
-        <item>io.anyline.examples.ocr.ScanLicensePlateActivity</item>
-        <item>io.anyline.examples.ocr.ScanLicensePlateAustriaActivity</item>
-        <item>io.anyline.examples.ocr.ScanLicensePlateGermanyActivity</item>
+        <item>io.anyline.examples.licenseplate.ScanLicensePlateActivity</item>
     </string-array>
 </resources>

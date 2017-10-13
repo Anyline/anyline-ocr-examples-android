@@ -1,0 +1,23 @@
+<!--
+  ~ Anyline
+  ~ activity_scan_energy.xml
+  ~
+  ~ Copyright (c) 2017 Anyline GmbH
+  ~
+  ~ Created by Martin Cerman at 2017-10-09
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.anyline.examples.licenseplate.ScanLicensePlateActivity"
+    android:id="@+id/license_plate_main_layout">
+
+
+    <at.nineyards.anyline.modules.licenseplate.LicensePlateScanView
+        android:id="@+id/license_plate_scan_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

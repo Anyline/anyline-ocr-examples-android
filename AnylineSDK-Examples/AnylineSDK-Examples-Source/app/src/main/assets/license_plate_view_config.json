@@ -1,13 +1,13 @@
 {
-  "captureResolution":"1080",
+  "captureResolution":"720",
   "cutout": {
     "style": "rect",
     "maxWidthPercent": "80%",
     "maxHeightPercent": "80%",
-    "alignment": "center",
-    "width": 720,
+    "alignment": "top_half",
+    "width": 550,
     "ratioFromSize": {
-      "width": 5,
+      "width": 2,
       "height": 1
     },
     "strokeWidth": 2,
@@ -28,10 +28,10 @@
   "blinkAnimationOnResult": true,
   "cancelOnResult": true,
   "visualFeedback": {
-    "animation": "traverse_multi",
-    "animationDuration" : 70,
-    "style": "contour_rect",
-    "strokeWidth": 2,
-    "strokeColor": "0099FF"
+    "style": "rect",
+    "strokeWidth": 3,
+    "strokeColor": "0099FF",
+    "fillColor": "330099FF",
+    "cornerRadius": 0
   }
 }

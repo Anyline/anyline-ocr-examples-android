@@ -91,22 +91,20 @@ hilft uns unser Produkt zu verbessern. Ergebnisse und Bilder von MRZ, Barcodes u
     <string name="heat_meter_6_3_short">6 Vorkommastellen</string>
 
     <string name="category_vehicles">Kraftfahrzeuge</string>
-    <string name="title_license_plate">Kfz-Kennzeichen (Alpha)</string>
-    <string name="license_plates">Kfz-Kennzeichen (Alpha)</string>
-    <string name="license_plates_germany">Deutsche\nKfz-Kennzeichen (Alpha)</string>
-    <string name="title_license_plate_germany">Deutsche Kennzeichen (Alpha)</string>
-    <string name="license_plates_austria">Österreichische\nKfz-Kennzeichen (Alpha)</string>
-    <string name="title_license_plate_austria">Österr. Kennzeichen (Alpha)</string>
+    <string name="title_license_plate">Kfz-Kennzeichen</string>
+    <string name="license_plates">Kfz-Kennzeichen scannen</string>
 
     <string name="scan_double_tariff_meters">Doppeltarifzähler scannen</string>
     <string name="scan_analog_meters">Analogzähler scannen</string>
     <string name="scan_auto_analog_digital_meters">Analog-/Digitalzähler scannen</string>
     <string name="scan_dial_meters">Drehzähler scannen (Alpha)</string>
+    <string name="scan_serial_numbers">Seriennummer scannen</string>
 
     <string name="title_double_tariff_meter">Doppeltarifzähler</string>
     <string name="title_analog_meter">Analogzähler</string>
     <string name="title_auto_analog_digital_meter">Analog-/Digitalzähler</string>
     <string name="title_dial_meter">Drehzähler (Alpha)</string>
+    <string name="title_serial_number">Seriennummber</string>
     <string name="enable_barcode_detection">Barcode Erkennung</string>
     <string name="switch_off">AUS</string>
     <string name="switch_on">AN</string>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="at.nineyards.anyline.examples.meter.ScanMeterActivity">
+    tools:context="io.anyline.examples.document.ScanDocumentActivity">
 
     <at.nineyards.anyline.modules.document.DocumentScanView
         android:id="@+id/document_scan_view"

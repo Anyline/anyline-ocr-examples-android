@@ -68,6 +68,15 @@
                 android:value="io.anyline.examples.MainActivity"/>
         </activity>
         <activity
+            android:name=".meter.ScanSerialNumberActivity"
+            android:label="@string/title_serial_number"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity"/>
+        </activity>
+        <activity
             android:name=".mrz.ScanMrzActivity"
             android:label="@string/title_mrz"
             android:parentActivityName=".MainActivity">
@@ -157,26 +166,8 @@
                 android:value="io.anyline.examples.MainActivity"/>
         </activity>
         <activity
-            android:name=".ocr.ScanLicensePlateActivity"
+            android:name=".licenseplate.ScanLicensePlateActivity"
             android:label="@string/title_license_plate"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.anyline.examples.MainActivity"/>
-        </activity>
-        <activity
-            android:name=".ocr.ScanLicensePlateAustriaActivity"
-            android:label="@string/title_license_plate_austria"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.anyline.examples.MainActivity"/>
-        </activity>
-        <activity
-            android:name=".ocr.ScanLicensePlateGermanyActivity"
-            android:label="@string/title_license_plate_germany"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
             <meta-data

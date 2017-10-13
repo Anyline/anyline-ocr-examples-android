@@ -1,4 +1,4 @@
-package io.anyline.examples.ocr;
+package io.anyline.examples.licenseplate;
 
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -9,18 +9,17 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
 import at.nineyards.anyline.camera.AnylineViewConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
-import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
+import at.nineyards.anyline.modules.licenseplate.LicensePlateResult;
+import at.nineyards.anyline.modules.licenseplate.LicensePlateResultListener;
+import at.nineyards.anyline.modules.licenseplate.LicensePlateScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.SettingsFragment;
-import io.anyline.examples.ocr.result.LicensePlateResultView;
+import io.anyline.examples.licenseplate.result.LicensePlateResultView;
 
 public class ScanLicensePlateActivity extends AppCompatActivity {
 
     private static final String TAG = ScanLicensePlateActivity.class.getSimpleName();
-    protected AnylineOcrScanView scanView;
+    protected LicensePlateScanView scanView;
     private LicensePlateResultView licensePlateResultView;
 
     @Override
@@ -28,42 +27,22 @@ public class ScanLicensePlateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        setContentView(R.layout.activity_anyline_ocr);
+        setContentView(R.layout.activity_scan_license_plate);
 
         String license = getString(R.string.anyline_license_key);
+
         // Get the view from the layout
-        scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
+        scanView = (LicensePlateScanView) findViewById(R.id.license_plate_scan_view);
         // Configure the view (cutout, the camera resolution, etc.) via json
         // (can also be done in xml in the layout)
         scanView.setConfig(new AnylineViewConfig(this, "license_plate_view_config.json"));
 
-        // Copies given traineddata-file to a place where the core can access it.
-        // This MUST be called for every traineddata file that is used
-        // (before startScanning() is called).
-        // The file must be located directly in the assets directory
-        // (or in tessdata/ but no other folders are allowed)
-        scanView.copyTrainedData("tessdata/GL-Nummernschild-Mtl7_uml.traineddata",
-                "8ea050e8f22ba7471df7e18c310430d8");
-        scanView.copyTrainedData("tessdata/Arial.traineddata", "9a5555eb6ac51c83cbb76d238028c485");
-        scanView.copyTrainedData("tessdata/Alte.traineddata", "f52e3822cdd5423758ba19ed75b0cc32");
-        scanView.copyTrainedData("tessdata/deu.traineddata", "2d5190b9b62e28fa6d17b728ca195776");
-
-        // Configure the OCR for license plate scanning via a custom script file
-        // This is how you could add custom scripts optimized by Anyline for your use-case
-        AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setCustomCmdFile("license_plates.ale");
-
-        // set the ocr config
-        scanView.setAnylineOcrConfig(anylineOcrConfig);
-
-        // initialize with the license and a listener
-        scanView.initAnyline(license, new AnylineOcrResultListener() {
+        scanView.initAnyline(license, new LicensePlateResultListener() {
             @Override
-            public void onResult(AnylineOcrResult anylineOcrResult) {
+            public void onResult(LicensePlateResult licensePlateResult) {
                 // Called when a valid result is found
-                String results[] = anylineOcrResult.getResult().split("-");
-                String country = results[0];
-                String licensePlate = results[1];
+                String country = licensePlateResult.getCountry();
+                String licensePlate = licensePlateResult.getResult();
 
                 licensePlateResultView.setLicensePlate(licensePlate);
                 if (country != null && !country.isEmpty()) {
@@ -80,7 +59,7 @@ public class ScanLicensePlateActivity extends AppCompatActivity {
     }
 
     private void addLicensePlateResultView() {
-        RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
+        RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.license_plate_main_layout);
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
