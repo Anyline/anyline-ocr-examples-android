@@ -105,7 +105,7 @@ public class ScanAutoAnalogDigitalMeterActivity extends AppCompatActivity implem
 
                 new ResultDialogBuilder(ScanAutoAnalogDigitalMeterActivity.this)
                         .setResultImage(energyResult.getCutoutImage())
-                        .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 22)
+                        .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20)
                         .setTextGravity(Gravity.CENTER)
                         .setText(getFormattedResult(energyResult.getResult(), lastDetectedBarcodeValue))
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {

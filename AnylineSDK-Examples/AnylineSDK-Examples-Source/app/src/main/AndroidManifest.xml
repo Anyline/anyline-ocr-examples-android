@@ -32,7 +32,7 @@
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".meter.ScanEnergyDigitalMeterActivity"
+            android:name=".meter.ScanDigitalMeterActivity"
             android:label="@string/title_digital_meter"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
@@ -70,6 +70,15 @@
         <activity
             android:name=".meter.ScanSerialNumberActivity"
             android:label="@string/title_serial_number"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".meter.ScanDotMatrixMeterActivity"
+            android:label="@string/title_dot_matrix_meter"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
             <meta-data

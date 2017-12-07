@@ -13,6 +13,7 @@
     <string name="category_loyality">Kundenbindung</string>
     <string name="category_others">Andere</string>
     <string name="digital_meter">Digitalzähler</string>
+    <string name="dot_matrix_meter">Dotmatrixzähler</string>
     <string name="heat_meter">Wärmezähler</string>
     <string name="document_advanced_outline_detection">Erweiterte Umrisserkennung</string>
     <string name="document_error_glare_detected">Bitte vermeide Reflexionen</string>
@@ -49,6 +50,7 @@ hilft uns unser Produkt zu verbessern. Ergebnisse und Bilder von MRZ, Barcodes u
      <string name="scan_barcode">Barcodes scannen</string>
     <string name="scan_bottlecap">Kronkorken scannen</string>
     <string name="scan_digital_meters">Digitalzähler scannen</string>
+    <string name="scan_dot_matrix_meters">Dotmatrixzähler scannen</string>
     <string name="scan_document">Dokumente scannen</string>
     <string name="scan_heat_meters">Wärmezähler scannen</string>
     <string name="scan_iban">IBAN scannen</string>
@@ -68,6 +70,7 @@ hilft uns unser Produkt zu verbessern. Ergebnisse und Bilder von MRZ, Barcodes u
     <string name="title_barcode">Barcode</string>
     <string name="title_bottlecap">Kronkorken</string>
     <string name="title_digital_meter">Digitalzähler</string>
+    <string name="title_dot_matrix_meter">Dotmatrixzähler</string>
     <string name="title_document">Dokumente</string>
     <string name="title_heat_meter">Wärmezähler</string>
     <string name="title_iban">IBAN</string>

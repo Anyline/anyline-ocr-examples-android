@@ -11,6 +11,7 @@
         <item>@string/scan_auto_analog_digital_meters</item>
         <item>@string/scan_dial_meters</item>
         <item>@string/scan_serial_numbers</item>
+        <item>@string/scan_dot_matrix_meters</item>
         <item>@string/category_identification</item>
         <item>@string/scan_mrz</item>
         <item>@string/category_barcodes</item>
@@ -36,11 +37,12 @@
         <item>HEADER</item>
         <item>io.anyline.examples.meter.ScanAnalogMeterActivity</item>
         <item>io.anyline.examples.meter.ScanDoubleTariffMeterActivity</item>
-        <item>io.anyline.examples.meter.ScanEnergyDigitalMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanDigitalMeterActivity</item>
         <item>io.anyline.examples.meter.ScanDigitalHeatMeterActivity</item>
         <item>io.anyline.examples.meter.ScanAutoAnalogDigitalMeterActivity</item>
         <item>io.anyline.examples.meter.ScanDialMeterActivity</item>
         <item>io.anyline.examples.meter.ScanSerialNumberActivity</item>
+        <item>io.anyline.examples.meter.ScanDotMatrixMeterActivity</item>
         <item>HEADER</item>
         <item>io.anyline.examples.mrz.ScanMrzActivity</item>
         <item>HEADER</item>
