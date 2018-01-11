@@ -8,6 +8,7 @@
  */
 package io.anyline.examples.meter;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -45,6 +46,7 @@ public class ScanDigitalMeterActivity extends AppCompatActivity implements Camer
     private static final String TAG = ScanDigitalMeterActivity.class.getSimpleName();
     private EnergyScanView energyScanView;
     private String lastDetectedBarcodeValue = "";
+    private AlertDialog resultDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,7 +112,7 @@ public class ScanDigitalMeterActivity extends AppCompatActivity implements Camer
 
                 //display the result in a simple dialog
 
-                new ResultDialogBuilder(ScanDigitalMeterActivity.this)
+                resultDialog = new ResultDialogBuilder(ScanDigitalMeterActivity.this)
                         .setResultImage(energyResult.getCutoutImage())
                         .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20)
                         .setTextGravity(Gravity.CENTER)
@@ -135,8 +137,8 @@ public class ScanDigitalMeterActivity extends AppCompatActivity implements Camer
                                     energyScanView.startScanning();
                                 }
                             }
-                        })
-                        .show();
+                        }).create();
+                resultDialog.show();
             }
         });
     }
@@ -144,8 +146,11 @@ public class ScanDigitalMeterActivity extends AppCompatActivity implements Camer
     @Override
     protected void onResume() {
         super.onResume();
-        //start the actual scanning
-        energyScanView.startScanning();
+
+        if(resultDialog == null || !resultDialog.isShowing()) {
+            //start the actual scanning
+            energyScanView.startScanning();
+        }
     }
 
     @Override

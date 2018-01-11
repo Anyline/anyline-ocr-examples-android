@@ -41,18 +41,18 @@ public class ScanIbanActivity extends AppCompatActivity {
         // Configure the view (cutout, the camera resolution, etc.) via json (can also be done in xml in the layout)
         scanView.setConfig(new AnylineViewConfig(this, "iban_view_config.json"));
 
-        // Copies given traineddata-file to a place where the core can access it.
-        // This MUST be called for every traineddata file that is used (before startScanning() is called).
-        // The file must be located directly in the assets directory (or in tessdata/ but no other folders are allowed)
-        scanView.copyTrainedData("tessdata/eng_no_dict.traineddata", "d142032d86da1be4dbe22dce2eec18d7");
-        scanView.copyTrainedData("tessdata/deu.traineddata", "2d5190b9b62e28fa6d17b728ca195776");
 
         //Configure the OCR for IBANs
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
+
+        // Set the languages used for OCR
+        // Copies given traineddata-file to a place where the core can access it.
+        // The file must be located directly in the assets directory (or in tessdata/ but no other folders are allowed)
+        anylineOcrConfig.setLanguages("tessdata/eng_no_dict.traineddata", "tessdata/deu.traineddata");
+
         // AUTO ScanMode automatically detects the correct text without any further parameters to be set
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
-        // set the languages used for OCR
-        anylineOcrConfig.setTesseractLanguages("eng_no_dict", "deu");
+
         // allow only capital letters and numbers
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890");
         // The minimum confidence required to return a result, a value between 0 and 100.
@@ -119,7 +119,9 @@ public class ScanIbanActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        scanView.startScanning();
+        if(ibanResultView == null || ibanResultView.getVisibility() != View.VISIBLE){
+            scanView.startScanning();
+        }
     }
 
     @Override

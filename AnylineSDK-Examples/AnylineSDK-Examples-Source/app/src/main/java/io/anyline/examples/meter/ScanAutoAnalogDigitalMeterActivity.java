@@ -9,6 +9,7 @@
 
 package io.anyline.examples.meter;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class ScanAutoAnalogDigitalMeterActivity extends AppCompatActivity implem
     private static final String TAG = ScanAutoAnalogDigitalMeterActivity.class.getSimpleName();
     protected EnergyScanView energyScanView;
     private String lastDetectedBarcodeValue = "";
+    private AlertDialog resultDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,7 +105,7 @@ public class ScanAutoAnalogDigitalMeterActivity extends AppCompatActivity implem
                 // the other shows the full image. (Images are null in barcode mode)
                 // The result for meter readings is a String with leading zeros (if any) and no decimals.
 
-                new ResultDialogBuilder(ScanAutoAnalogDigitalMeterActivity.this)
+                resultDialog = new ResultDialogBuilder(ScanAutoAnalogDigitalMeterActivity.this)
                         .setResultImage(energyResult.getCutoutImage())
                         .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20)
                         .setTextGravity(Gravity.CENTER)
@@ -128,8 +130,8 @@ public class ScanAutoAnalogDigitalMeterActivity extends AppCompatActivity implem
                                     energyScanView.startScanning();
                                 }
                             }
-                        })
-                        .show();
+                        }).create();
+                resultDialog.show();
             }
 
         });
@@ -143,8 +145,10 @@ public class ScanAutoAnalogDigitalMeterActivity extends AppCompatActivity implem
     @Override
     protected void onResume() {
         super.onResume();
-        //start the actual scanning
-        energyScanView.startScanning();
+        if(resultDialog == null || !resultDialog.isShowing()) {
+            //start the actual scanning
+            energyScanView.startScanning();
+        }
     }
 
     @Override

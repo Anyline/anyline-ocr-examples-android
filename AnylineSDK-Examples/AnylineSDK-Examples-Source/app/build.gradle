@@ -13,8 +13,8 @@ android {
 
     def versionPropsFile = file('version.properties')
 
-    def vName = "3.19.0"
-    def code = 121
+    def vName = "3.20.0"
+    def code = 126
     if (versionPropsFile.canRead()) {
         def Properties versionProps = new Properties()
         versionProps.load(new FileInputStream(versionPropsFile))
@@ -53,9 +53,9 @@ dependencies {
     compile 'com.google.android.gms:play-services-vision:10.0.0'
 
     //include AnylineSDK from maven
-    compile 'io.anyline:anylinesdk:3.19.0@aar'
+    compile 'io.anyline:anylinesdk:3.20.0@aar'
 
     //include AnylineSDK from locale libs folder
-    //compile(name:'anylinesdk-3.19.0', ext:'aar')
+    //compile(name:'anylinesdk-3.20.0', ext:'aar')
 }
 

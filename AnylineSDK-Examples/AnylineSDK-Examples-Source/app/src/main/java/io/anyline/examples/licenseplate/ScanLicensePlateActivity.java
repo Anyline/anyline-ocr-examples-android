@@ -95,7 +95,9 @@ public class ScanLicensePlateActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        startScanning();
+        if(licensePlateResultView == null || licensePlateResultView.getVisibility() != View.VISIBLE){
+            startScanning();
+        }
     }
 
     @Override

@@ -77,7 +77,10 @@ public class ScanMrzActivity extends AppCompatActivity implements CameraOpenList
     protected void onResume() {
         super.onResume();
         //start the actual scanning
-        mrzScanView.startScanning();
+        if(mrzResultView == null || mrzResultView.getVisibility() != View.VISIBLE){
+            mrzScanView.startScanning();
+        }
+
     }
 
     @Override

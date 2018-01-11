@@ -36,11 +36,11 @@ public class ScanVoucherCodeActivity extends AppCompatActivity {
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
 
-        scanView.copyTrainedData("tessdata/anyline_capitals.traineddata", "cee65c74833eb85e3c31e213b25e72a2");
+
 
         // see ScanScrabbleActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setTesseractLanguages("anyline_capitals");
+        anylineOcrConfig.setLanguages("tessdata/anyline_capitals.traineddata");
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
         anylineOcrConfig.setValidationRegex("[A-Z0-9]{8}$");
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
@@ -88,7 +88,9 @@ public class ScanVoucherCodeActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        scanView.startScanning();
+        if(voucherCodeResultView == null || voucherCodeResultView.getVisibility() != View.VISIBLE){
+            scanView.startScanning();
+        }
     }
 
     @Override

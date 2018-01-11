@@ -32,17 +32,14 @@ public class ScanScrabbleActivity extends AppCompatActivity {
         // Get the view from the layout
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
 
-        // Copies given traineddata-file to a place where the core can access it.
-        // This MUST be called for every traineddata file that is used (before startScanning() is called).
-        // The file must be located directly in the assets directory (or in tessdata/ but no other folders are allowed)
-        scanView.copyTrainedData("tessdata/scrabble.traineddata", "855d8088928ee058257f64ccac2837eb");
-
         //Configure the OCR for Scrabble
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         // use the AUTO mode which automatically adjusts the scanning parameters to deliver the best result
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
-        // set the languages used for OCR
-        anylineOcrConfig.setTesseractLanguages("scrabble");
+        // Set the languages used for OCR
+        // Copies given traineddata-file to a place where the core can access it.
+        // The file must be located directly in the assets directory (or in tessdata/ but no other folders are allowed)
+        anylineOcrConfig.setLanguages("tessdata/scrabble.traineddata");
         // allow only capital letters plus some german Umlaute
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZÄÜÖ");
         // the minimum confidence required to return a result, a value between 0 and 100.

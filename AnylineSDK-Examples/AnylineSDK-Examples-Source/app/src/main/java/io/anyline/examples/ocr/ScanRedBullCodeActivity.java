@@ -36,14 +36,12 @@ public class ScanRedBullCodeActivity extends AppCompatActivity {
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
 
-        scanView.copyTrainedData("tessdata/rbf_jan2015_v2.traineddata", "cdb7f35f1af00030178deefc01722f65");
-
 
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         // use the GRID mode, since an imaginable grid can be put on top of the code character
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.GRID);
         // set the languages used for OCR (can be multiple)
-        anylineOcrConfig.setTesseractLanguages("rbf_jan2015_v2");
+        anylineOcrConfig.setLanguages("tessdata/rbf_jan2015_v2.traineddata");
         // allow only capital letters and some numbers - these are the only characters the SDK will consider
         anylineOcrConfig.setCharWhitelist("2346789ABCDEFGHKLMNPQRTUVWXYZ");
         // a simple regex for a basic validation of the codes. We require 4 characters per row
@@ -110,7 +108,9 @@ public class ScanRedBullCodeActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        scanView.startScanning();
+        if(redBullResultView == null || redBullResultView.getVisibility() != View.VISIBLE){
+            scanView.startScanning();
+        }
     }
 
     @Override

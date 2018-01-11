@@ -9,6 +9,7 @@
 
 package io.anyline.examples.meter;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class ScanDialMeterActivity extends AppCompatActivity implements CameraOp
     private static final String TAG = ScanDialMeterActivity.class.getSimpleName();
     protected EnergyScanView energyScanView;
     private String lastDetectedBarcodeValue = "";
+    private AlertDialog resultDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,7 +105,7 @@ public class ScanDialMeterActivity extends AppCompatActivity implements CameraOp
                 // the other shows the full image. (Images are null in barcode mode)
                 // The result for meter readings is a String with leading zeros (if any) and no decimals.
 
-                new ResultDialogBuilder(ScanDialMeterActivity.this)
+                resultDialog =  new ResultDialogBuilder(ScanDialMeterActivity.this)
                         .setResultImage(energyResult.getCutoutImage())
                         .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 22)
                         .setTextGravity(Gravity.CENTER)
@@ -128,8 +130,8 @@ public class ScanDialMeterActivity extends AppCompatActivity implements CameraOp
                                     energyScanView.startScanning();
                                 }
                             }
-                        })
-                        .show();
+                        }).create();
+                resultDialog.show();
             }
 
         });
@@ -143,8 +145,10 @@ public class ScanDialMeterActivity extends AppCompatActivity implements CameraOp
     @Override
     protected void onResume() {
         super.onResume();
-        //start the actual scanning
-        energyScanView.startScanning();
+        if(resultDialog == null || !resultDialog.isShowing()) {
+            //start the actual scanning
+            energyScanView.startScanning();
+        }
     }
 
     @Override

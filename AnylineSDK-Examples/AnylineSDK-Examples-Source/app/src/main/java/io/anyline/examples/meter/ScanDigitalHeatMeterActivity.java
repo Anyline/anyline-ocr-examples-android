@@ -8,6 +8,7 @@
  */
 package io.anyline.examples.meter;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -37,6 +38,7 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
     private static final String TAG = ScanDigitalHeatMeterActivity.class.getSimpleName();
     private EnergyScanView energyScanView;
     private Toast toast;
+    private AlertDialog resultDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +78,7 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
 
                 //display the result in a simple dialog
 
-                new ResultDialogBuilder(ScanDigitalHeatMeterActivity.this)
+                resultDialog = new ResultDialogBuilder(ScanDigitalHeatMeterActivity.this)
                         .setResultImage(energyResult.getCutoutImage())
                         .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 32)
                         .setTextGravity(Gravity.CENTER)
@@ -97,8 +99,8 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
                                     energyScanView.startScanning();
                                 }
                             }
-                        })
-                        .show();
+                        }).create();
+                resultDialog.show();
             }
         });
 
@@ -138,8 +140,10 @@ public class ScanDigitalHeatMeterActivity extends AppCompatActivity implements C
     @Override
     protected void onResume() {
         super.onResume();
-        //start the actual scanning
-        energyScanView.startScanning();
+        if(resultDialog == null || !resultDialog.isShowing()) {
+            //start the actual scanning
+            energyScanView.startScanning();
+        }
     }
 
     @Override

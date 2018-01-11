@@ -30,12 +30,9 @@ public class ScanIsbnActivity extends AppCompatActivity {
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
 
-        scanView.copyTrainedData("tessdata/eng_no_dict.traineddata", "d142032d86da1be4dbe22dce2eec18d7");
-        scanView.copyTrainedData("tessdata/deu.traineddata", "2d5190b9b62e28fa6d17b728ca195776");
-
         // see ScanScrabbleActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setTesseractLanguages("eng_no_dict", "deu");
+        anylineOcrConfig.setLanguages("tessdata/eng_no_dict.traineddata", "tessdata/deu.traineddata");
         // use predefined whitelist and regular expression
         anylineOcrConfig.setCharWhitelist(AnylineOcrConfig.AnylineOcrRegex.ISBN.getWhiteList());
         anylineOcrConfig.setValidationRegex(AnylineOcrConfig.AnylineOcrRegex.ISBN.getRegex());

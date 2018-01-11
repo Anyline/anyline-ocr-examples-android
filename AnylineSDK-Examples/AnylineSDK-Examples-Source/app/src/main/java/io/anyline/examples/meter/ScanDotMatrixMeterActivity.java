@@ -8,6 +8,7 @@
  */
 package io.anyline.examples.meter;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -43,6 +44,7 @@ public class ScanDotMatrixMeterActivity extends AppCompatActivity implements Cam
     private static final String TAG = ScanDotMatrixMeterActivity.class.getSimpleName();
     private EnergyScanView energyScanView;
     private String lastDetectedBarcodeValue = "";
+    private AlertDialog resultDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,7 +103,7 @@ public class ScanDotMatrixMeterActivity extends AppCompatActivity implements Cam
 
                 //display the result in a simple dialog
 
-                new ResultDialogBuilder(ScanDotMatrixMeterActivity.this)
+                resultDialog = new ResultDialogBuilder(ScanDotMatrixMeterActivity.this)
                         .setResultImage(energyResult.getCutoutImage())
                         .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 22)
                         .setTextGravity(Gravity.CENTER)
@@ -126,8 +128,8 @@ public class ScanDotMatrixMeterActivity extends AppCompatActivity implements Cam
                                     energyScanView.startScanning();
                                 }
                             }
-                        })
-                        .show();
+                        }).create();
+                resultDialog.show();
             }
         });
 
@@ -138,8 +140,11 @@ public class ScanDotMatrixMeterActivity extends AppCompatActivity implements Cam
     @Override
     protected void onResume() {
         super.onResume();
-        //start the actual scanning
-        energyScanView.startScanning();
+
+        if(resultDialog == null || !resultDialog.isShowing()) {
+            //start the actual scanning
+            energyScanView.startScanning();
+        }
     }
 
     @Override

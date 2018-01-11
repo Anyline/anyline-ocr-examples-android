@@ -9,6 +9,7 @@
 
 package io.anyline.examples.meter;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.Rect;
@@ -65,6 +66,7 @@ public class ScanDoubleTariffMeterActivity extends AppCompatActivity implements 
     private int cutoutX;
     private int cutoutWidth;
     private int cutoutHeight;
+    private AlertDialog resultDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,7 +137,7 @@ public class ScanDoubleTariffMeterActivity extends AppCompatActivity implements 
                 // In case it is the second scan, both results are displayed.
                 else {
 
-                    new ResultDialogBuilder(ScanDoubleTariffMeterActivity.this, true)
+                    resultDialog = new ResultDialogBuilder(ScanDoubleTariffMeterActivity.this, true)
                             .setResultImage(firstResultImage)
                             .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 22)
                             .setTextGravity(Gravity.CENTER)
@@ -164,8 +166,8 @@ public class ScanDoubleTariffMeterActivity extends AppCompatActivity implements 
                                         energyScanView.startScanning();
                                     }
                                 }
-                            })
-                            .show();
+                            }).create();
+                    resultDialog.show();
 
                 }
             }
@@ -193,8 +195,11 @@ public class ScanDoubleTariffMeterActivity extends AppCompatActivity implements 
     @Override
     protected void onResume() {
         super.onResume();
-        //start the actual scanning
-        energyScanView.startScanning();
+
+        if(resultDialog == null || !resultDialog.isShowing()) {
+            //start the actual scanning
+            energyScanView.startScanning();
+        }
     }
 
     @Override

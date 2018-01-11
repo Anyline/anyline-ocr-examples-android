@@ -9,6 +9,7 @@
 
 package io.anyline.examples.meter;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class ScanSerialNumberActivity extends AppCompatActivity implements Camer
     private static final String TAG = ScanSerialNumberActivity.class.getSimpleName();
     protected EnergyScanView energyScanView;
     private String lastDetectedBarcodeValue = "";
+    private AlertDialog resultDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +104,7 @@ public class ScanSerialNumberActivity extends AppCompatActivity implements Camer
                 // If the a serial number reading was scanned two images are provided as well, one shows the targeted area only
                 // the other shows the full image. (Images are null in barcode mode)
 
-                new ResultDialogBuilder(ScanSerialNumberActivity.this)
+                resultDialog = new ResultDialogBuilder(ScanSerialNumberActivity.this)
                         .setResultImage(energyResult.getCutoutImage())
                         .setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16)
                         .setTextGravity(Gravity.LEFT)
@@ -127,8 +129,8 @@ public class ScanSerialNumberActivity extends AppCompatActivity implements Camer
                                     energyScanView.startScanning();
                                 }
                             }
-                        })
-                        .show();
+                        }).create();
+                resultDialog.show();
             }
 
         });
@@ -141,8 +143,10 @@ public class ScanSerialNumberActivity extends AppCompatActivity implements Camer
     @Override
     protected void onResume() {
         super.onResume();
-        //start the actual scanning
-        energyScanView.startScanning();
+        if(resultDialog == null || !resultDialog.isShowing()) {
+            //start the actual scanning
+            energyScanView.startScanning();
+        }
     }
 
     @Override

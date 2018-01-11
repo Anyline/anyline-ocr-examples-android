@@ -39,11 +39,9 @@ public class ScanBottlecapActivity extends AppCompatActivity {
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
 
-        scanView.copyTrainedData("tessdata/bottlecap.traineddata", "a8224bfaf4d2085f5b0de7018dee29eb");
-
         // see ScanRedBullCodeActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setTesseractLanguages("bottlecap");
+        anylineOcrConfig.setLanguages("tessdata/bottlecap.traineddata");
         anylineOcrConfig.setCharWhitelist("123456789ABCDEFGHJKLMNPRSTUVWXYZ");
         anylineOcrConfig.setMinCharHeight(14);
         anylineOcrConfig.setMaxCharHeight(65);
@@ -100,7 +98,9 @@ public class ScanBottlecapActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        scanView.startScanning();
+        if(bottlecapResultView == null || bottlecapResultView.getVisibility() != View.VISIBLE){
+            scanView.startScanning();
+        }
     }
 
     @Override
