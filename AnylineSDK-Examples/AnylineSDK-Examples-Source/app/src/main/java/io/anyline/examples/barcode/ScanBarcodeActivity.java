@@ -9,23 +9,28 @@
 
 package io.anyline.examples.barcode;
 
+import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.WindowManager;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.barcode.BarcodeResult;
 import at.nineyards.anyline.modules.barcode.BarcodeResultListener;
 import at.nineyards.anyline.modules.barcode.BarcodeScanView;
 import io.anyline.examples.R;
+import io.anyline.examples.ScanActivity;
+import io.anyline.examples.ScanModuleEnum;
+import io.anyline.examples.ocr.ScanBottlecapActivity;
+import io.anyline.examples.ocr.ScanIsbnActivity;
 
 /**
  * Example activity for the Anyline-Barcode-Module
  */
-public class ScanBarcodeActivity extends AppCompatActivity implements CameraOpenListener {
+public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListener {
 
     private static final String TAG = ScanBarcodeActivity.class.getSimpleName();
     private BarcodeScanView barcodeScanView;
@@ -34,9 +39,8 @@ public class ScanBarcodeActivity extends AppCompatActivity implements CameraOpen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan_barcode);
-        //Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getLayoutInflater().inflate(R.layout.activity_scan_barcode,
+                (ViewGroup) findViewById(R.id.scan_view_placeholder));
 
         resultText = (TextView) findViewById(R.id.text_result);
 
@@ -56,15 +60,39 @@ public class ScanBarcodeActivity extends AppCompatActivity implements CameraOpen
         barcodeScanView.initAnyline(getString(R.string.anyline_license_key), new BarcodeResultListener() {
             @Override
             public void onResult(BarcodeResult barcodeResult) {
-                // This is called when a result is found.
                 resultText.setText(barcodeResult.getResult());
+
+                //setup the scan process
+                setupScanProcessView(ScanBarcodeActivity.this, barcodeResult, getScanModule());
+
+                //reset as the scanning will never stop (cancelOnResult = false)
+                resetTime();
             }
         });
     }
 
     @Override
+    public Rect getCutoutRect() {
+        if (barcodeScanView != null) {
+            return barcodeScanView.getCutoutRect();
+        }
+        return null;
+    }
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return barcodeScanView;
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.BARCODE;
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
+        resultText.setText("");
         //start the actual scanning
         barcodeScanView.startScanning();
     }

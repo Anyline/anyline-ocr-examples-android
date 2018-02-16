@@ -18,7 +18,9 @@
   },
   "flash": {
     "mode": "manual",
-    "alignment": "bottom_right"
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off"
   },
   "beepOnResult": true,
   "vibrateOnResult": true,

@@ -12,21 +12,15 @@
         android:orientation="vertical"
         android:padding="15dp">
 
-        <TextView
-            android:id="@+id/record_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/record_search"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
+
 
         <TextView
             android:id="@+id/record_scanned"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/black_50"
             />
 
         <TextView
@@ -35,8 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="@string/no_internet"
-            android:textSize="12dp"
-            android:textStyle="italic"
+            android:textSize="14sp"
             android:visibility="gone"/>
 
         <WebView

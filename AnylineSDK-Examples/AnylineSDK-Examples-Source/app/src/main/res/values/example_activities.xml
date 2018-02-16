@@ -1,65 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array translatable="false"
-        name="example_activity_names">
+    <string-array name="example_products_names">
         <item>@string/category_energy</item>
-        <item>@string/scan_analog_meters</item>
-        <item>@string/scan_double_tariff_meters</item>
-        <item>@string/scan_digital_meters</item>
-        <item>@string/scan_heat_meters</item>
-        <item>@string/scan_auto_analog_digital_meters</item>
-        <item>@string/scan_dial_meters</item>
-        <item>@string/scan_serial_numbers</item>
-        <item>@string/scan_dot_matrix_meters</item>
-        <item>@string/category_identification</item>
-        <item>@string/scan_mrz</item>
-        <item>@string/category_barcodes</item>
-        <item>@string/scan_barcode</item>
-        <item>@string/category_fintech</item>
-        <item>@string/scan_iban</item>
-        <item>@string/category_documents</item>
-        <item>@string/scan_document</item>
-        <item>@string/category_loyality</item>
-        <item>@string/scan_voucher_code</item>
-        <item>@string/scan_red_bull_code</item>
-        <item>@string/scan_bottlecap</item>
-        <item>@string/category_others</item>
-        <item>@string/scan_scrabble</item>
-        <item>@string/scan_isbn</item>
-        <item>@string/scan_record</item>
-        <item>@string/category_vehicles</item>
+        <item>@string/mrz</item>
         <item>@string/license_plates</item>
+        <item>@string/category_others</item>
     </string-array>
 
-    <string-array translatable="false"
-        name="example_activity_classes">
-        <item>HEADER</item>
-        <item>io.anyline.examples.meter.ScanAnalogMeterActivity</item>
-        <item>io.anyline.examples.meter.ScanDoubleTariffMeterActivity</item>
-        <item>io.anyline.examples.meter.ScanDigitalMeterActivity</item>
-        <item>io.anyline.examples.meter.ScanDigitalHeatMeterActivity</item>
-        <item>io.anyline.examples.meter.ScanAutoAnalogDigitalMeterActivity</item>
-        <item>io.anyline.examples.meter.ScanDialMeterActivity</item>
-        <item>io.anyline.examples.meter.ScanSerialNumberActivity</item>
-        <item>io.anyline.examples.meter.ScanDotMatrixMeterActivity</item>
-        <item>HEADER</item>
+    <string-array name="example_products_classes" translatable="false">
+        <item>@string/category_energy</item>
         <item>io.anyline.examples.mrz.ScanMrzActivity</item>
-        <item>HEADER</item>
-        <item>io.anyline.examples.barcode.ScanBarcodeActivity</item>
+        <item>io.anyline.examples.licenseplate.ScanLicensePlateActivity</item>
+        <item>@string/category_others</item>
+    </string-array>
+
+    <string-array name="example_others_names">
+        <item>Others</item>
+        <item>@string/iban</item>
+        <item>@string/bottlecap</item>
+        <item>@string/red_bull_code</item>
+        <item>@string/voucher_code</item>
+        <item>@string/serial_number</item>
+        <item>@string/scrabble</item>
+        <item>@string/record</item>
+        <item>@string/isbn</item>
+        <item>@string/title_driving_license</item>
+        <item>@string/barcode</item>
+        <item>@string/document</item>
+    </string-array>
+
+    <string-array name="example_others_classes" translatable="false">
         <item>HEADER</item>
         <item>io.anyline.examples.ocr.ScanIbanActivity</item>
-        <item>HEADER</item>
-        <item>io.anyline.examples.document.ScanDocumentActivity</item>
-        <item>HEADER</item>
-        <item>io.anyline.examples.ocr.ScanVoucherCodeActivity</item>
-        <item>io.anyline.examples.ocr.ScanRedBullCodeActivity</item>
         <item>io.anyline.examples.ocr.ScanBottlecapActivity</item>
-        <item>HEADER</item>
+        <item>io.anyline.examples.ocr.ScanRedBullCodeActivity</item>
+        <item>io.anyline.examples.ocr.ScanVoucherCodeActivity</item>
+        <item>io.anyline.examples.ocr.ScanSerialNumberActivity</item>
         <item>io.anyline.examples.ocr.ScanScrabbleActivity</item>
-        <item>io.anyline.examples.ocr.ScanIsbnActivity</item>
         <item>io.anyline.examples.ocr.ScanRecordActivity</item>
-        <item>HEADER</item>
-        <item>io.anyline.examples.licenseplate.ScanLicensePlateActivity</item>
+        <item>io.anyline.examples.ocr.ScanIsbnActivity</item>
+        <item>io.anyline.examples.drivinglicense.ScanDrivingLicenseActivity</item>
+        <item>io.anyline.examples.barcode.ScanBarcodeActivity</item>
+        <item>io.anyline.examples.document.ScanDocumentActivity</item>
     </string-array>
+
+
+    <string-array name="example_energy_names">
+        <item>Meter Types</item>
+        <item>@string/title_auto_analog_digital_meter</item>
+        <item>@string/dial_meter</item>=
+        <item>Processes</item>
+        <item>@string/customer</item>
+        <item>@string/workforce</item>
+        <item>@string/category_others</item>
+        <item>@string/serial_number_energy</item>
+    </string-array>
+
+    <string-array name="example_energy_classes" translatable="false">
+        <item>HEADER</item>
+        <item>io.anyline.examples.meter.ScanAutoAnalogDigitalMeterActivity</item>
+        <item>io.anyline.examples.meter.ScanDialMeterActivity</item>
+        <item>HEADER</item>
+        <item></item>
+        <item></item>
+        <item>HEADER</item>
+        <item>io.anyline.examples.meter.ScanEnergySerialNumberActivity</item>
+    </string-array>
+
 </resources>

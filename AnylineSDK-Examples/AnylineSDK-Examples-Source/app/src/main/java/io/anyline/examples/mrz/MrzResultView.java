@@ -15,12 +15,13 @@ import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.text.DateFormat;
-import java.util.Locale;
-
 import at.nineyards.anyline.modules.mrz.Identification;
 import at.nineyards.anyline.util.DimensUtil;
 import io.anyline.examples.R;
+
+import java.text.DateFormat;
+import java.text.Format;
+import java.util.Locale;
 
 /**
  * A view to show MRZ-Scan-Results
@@ -98,6 +99,7 @@ public class MrzResultView extends RelativeLayout {
         else {
             expirationDateText.setText(identification.getExpirationDate());
         }
+
         sexText.setText(identification.getSex());
 
         String mrzString = identification.getMrzString().replace("\\n", "\n");

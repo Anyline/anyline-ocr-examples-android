@@ -26,11 +26,14 @@
     "cropPadding": {
       "x": 10,
       "y": 10
-    }
+    },
+    "feedbackStrokeColor": "0099FF"
   },
   "flash": {
     "mode": "manual",
-    "alignment": "bottom_right"
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off"
   },
   "beepOnResult": true,
   "vibrateOnResult": true,
@@ -38,9 +41,9 @@
   "cancelOnResult": true,
   "visualFeedback": {
     "style": "rect",
-    "strokeWidth": 3,
+    "strokeWidth": 1,
     "strokeColor": "0099FF",
-    "fillColor": "330099FF",
+    "fillColor": "220099FF",
     "cornerRadius": 10
 
   }

@@ -14,19 +14,23 @@
     "cornerRadius": 10,
     "strokeColor": "FFFFFF",
     "outerColor": "000000",
-    "outerAlpha": 0.3
+    "outerAlpha": 0.3,
+    "feedbackStrokeColor": "0099FF"
   },
   "flash": {
     "mode": "manual",
-    "alignment": "bottom_right"
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off"
   },
   "beepOnResult": true,
   "vibrateOnResult": true,
   "blinkAnimationOnResult": true,
   "cancelOnResult": true,
   "visualFeedback": {
+    "animationDuration": 350,
     "style": "contour_point",
     "strokeColor": "0099FF",
-    "strokeWidth": 3
+    "strokeWidth": 2
   }
 }

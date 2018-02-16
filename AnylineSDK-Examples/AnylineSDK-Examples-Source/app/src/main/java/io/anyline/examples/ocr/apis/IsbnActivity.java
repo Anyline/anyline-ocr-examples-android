@@ -5,10 +5,13 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
@@ -20,10 +23,14 @@ import org.json.JSONObject;
 
 import java.io.InputStream;
 
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
+import io.anyline.examples.ScanActivity;
+import io.anyline.examples.ScanModuleEnum;
+import io.anyline.examples.ScanningConfigurationActivity;
 
 
-public class IsbnActivity extends AppCompatActivity implements RequestListener {
+public class IsbnActivity extends ScanningConfigurationActivity implements RequestListener {
 
     private static final String TAG = IsbnActivity.class.getSimpleName();
 
@@ -43,12 +50,16 @@ public class IsbnActivity extends AppCompatActivity implements RequestListener {
     private TextView productDetailsText;
     private TextView linkText;
     private TextView previewLinkText;
+    private int awardedPoints;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_isbn);
+        setContentView(R.layout.activity_base_no_menu);
+        getLayoutInflater().inflate(R.layout.activity_isbn, (ViewGroup) findViewById(R.id.placeholder));
 
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         layoutNotFound = (LinearLayout) findViewById(R.id.isbn_book_not_found);
         layoutBookInfo = (LinearLayout) findViewById(R.id.isbn_book_info);
 
@@ -73,9 +84,13 @@ public class IsbnActivity extends AppCompatActivity implements RequestListener {
             isbn = isbn.replaceAll("-", "").replaceAll(" ", "").replaceAll("ISBN10", "").replaceAll("ISBN13", "").replaceAll("ISBN", "").replaceAll(":", "");
             new RequestTask(GOOGLE_BOOKS_API_CALL + isbn, this).
                     executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
         }
 
+        setupScanResult();
+
     }
+
 
     @Override
     public void onResume() {
@@ -116,14 +131,15 @@ public class IsbnActivity extends AppCompatActivity implements RequestListener {
         productDetailsText.setText(isbn.getAdditionalProductDetails());
         if (isbn.getPreviewLink() != null) {
             previewLinkText.setText(Html.fromHtml("<a href='" + isbn.getPreviewLink()
-                    + "'>Preview available on Google Books</a>"));
+                    + "'>" + getString(R.string.preview_available) + "</a>"));
             previewLinkText.setMovementMethod(LinkMovementMethod.getInstance());
         }
 
         if (isbn.getHtmlLink() != null) {
             linkText.setText(Html.fromHtml("<a href='" + isbn.getHtmlLink()
-                    + "'>See more details on Google Books</a>"));
-            linkText.setMovementMethod(LinkMovementMethod.getInstance());
+                    + "'>" + getString(R.string.more_infos_on_google_books) + "</a>"));
+            linkText.setMovementMethod(LinkMovementMethod.getInstance())
+            ;
         }
         findViewById(R.id.isbn_progress).setVisibility(View.GONE);
         layoutBookInfo.setVisibility(View.VISIBLE);
@@ -133,16 +149,53 @@ public class IsbnActivity extends AppCompatActivity implements RequestListener {
         findViewById(R.id.isbn_progress).setVisibility(View.GONE);
         layoutBookInfo.setVisibility(View.GONE);
         layoutNotFound.setVisibility(View.VISIBLE);
+
+        // no pretty formatted Book info available; show message with result and do simple Google search
+        ((TextView) layoutNotFound.findViewById(R.id.isbn_not_found_info)).
+                setText(String.format(getString(R.string.isbn_no_information_found), isbn));
+
         googleWebView.setWebViewClient(new WebViewClient() {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                // something went wrong; show message with result, and hint on possibly missing internet connection
                 googleWebView.setVisibility(View.GONE);
                 ((TextView) layoutNotFound.findViewById(R.id.isbn_not_found_info)).
-                        setText(String.format(getString(R.string.isbn_no_information_found_no_internet), isbn) +
+                        setText(String.format(getString(R.string.isbn_no_information_found), isbn) +
                                 "\n\n" + getString(R.string.no_internet));
 
             }
         });
         googleWebView.loadUrl("https://www.google.at/search?q=isbn+" + isbn);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+
+        return false;
+    }
+
+    public void goBack(View view) {
+        this.onBackPressed();
+    }
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return null;
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return null;
     }
 
 

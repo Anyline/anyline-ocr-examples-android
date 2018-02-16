@@ -9,23 +9,27 @@
 
 package io.anyline.examples.mrz;
 
+import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
+import android.view.ViewGroup;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
+import at.nineyards.anyline.modules.mrz.Identification;
 import at.nineyards.anyline.modules.mrz.MrzResult;
 import at.nineyards.anyline.modules.mrz.MrzResultListener;
 import at.nineyards.anyline.modules.mrz.MrzScanView;
 import io.anyline.examples.R;
+import io.anyline.examples.ScanActivity;
+import io.anyline.examples.ScanModuleEnum;
 
 /**
  * Example Activity for the Anyline-MRZ-Module.
  */
-public class ScanMrzActivity extends AppCompatActivity implements CameraOpenListener {
+public class ScanMrzActivity extends ScanActivity implements CameraOpenListener {
 
     private static final String TAG = ScanMrzActivity.class.getSimpleName();
     private MrzScanView mrzScanView;
@@ -34,9 +38,7 @@ public class ScanMrzActivity extends AppCompatActivity implements CameraOpenList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan_mrz);
-        //Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getLayoutInflater().inflate(R.layout.activity_scan_mrz, (ViewGroup) findViewById(R.id.scan_view_placeholder));
 
         mrzScanView = (MrzScanView) findViewById(R.id.mrz_view);
         mrzResultView = (MrzResultView) findViewById(R.id.mrz_result);
@@ -56,31 +58,46 @@ public class ScanMrzActivity extends AppCompatActivity implements CameraOpenList
                 // This is called when a result is found.
                 // The Identification includes all the data read from the MRZ
                 // as scanned and the given image shows the scanned ID/Passport
-                mrzResultView.setIdentification(mrzResult.getResult());
-                mrzResultView.setVisibility(View.VISIBLE);
-            }
 
+                Identification identification = mrzResult.getResult();
+
+                mrzResultView.setIdentification(identification);
+                mrzResultView.setVisibility(View.VISIBLE);
+                
+                setupScanProcessView(ScanMrzActivity.this, mrzResult, getScanModule());
+            }
         });
 
         mrzResultView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mrzResultView.setVisibility(View.INVISIBLE);
+                resetTime();
                 if (!mrzScanView.isRunning()) {
                     mrzScanView.startScanning();
                 }
             }
         });
+
+    }
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return mrzScanView;
+    }
+
+    @Override
+    public Rect getCutoutRect() {
+        return mrzScanView.getCutoutRect();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        //start the actual scanning
-        if(mrzResultView == null || mrzResultView.getVisibility() != View.VISIBLE){
-            mrzScanView.startScanning();
-        }
+        mrzResultView.setVisibility(View.INVISIBLE);
 
+        //start the actual scanning
+        mrzScanView.startScanning();
     }
 
     @Override
@@ -119,4 +136,10 @@ public class ScanMrzActivity extends AppCompatActivity implements CameraOpenList
         // This is useful to present an alternative way to enter the required data if no camera exists.
         throw new RuntimeException(e);
     }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.MRZ;
+    }
+
 }

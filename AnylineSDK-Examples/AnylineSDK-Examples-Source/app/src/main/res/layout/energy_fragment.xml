@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+<LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="10px"
+        android:paddingTop="20px"
+        android:text="Types" />
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/gridViewTypes_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:numColumns="2"
+              android:stretchMode="columnWidth"/>
+
+    <TextView
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="10px"
+        android:paddingTop="20px"
+        android:text="Processes" />
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/gridViewProcesses_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:numColumns="2"
+              android:stretchMode="columnWidth"/>
+
+</LinearLayout>
+</RelativeLayout>

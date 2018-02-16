@@ -29,7 +29,7 @@
   "cancelOnResult": true,
   "visualFeedback": {
     "style": "rect",
-    "strokeWidth": 3,
+    "strokeWidth": 2,
     "strokeColor": "0099FF",
     "fillColor": "330099FF",
     "cornerRadius": 0

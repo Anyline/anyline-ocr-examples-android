@@ -9,7 +9,7 @@
         android:height="30dp" />
 
     <solid
-        android:color="#404040" />
+        android:color="@color/black_75" />
 
 </shape>
 

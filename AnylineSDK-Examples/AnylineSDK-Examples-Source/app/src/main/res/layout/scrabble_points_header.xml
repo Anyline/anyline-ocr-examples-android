@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content"
     >
-<TextView
+    <TextView
     android:id="@+id/points_header"
     android:layout_marginTop="10dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="15dp"
-    android:textColor="@color/scrabble_green"
+    android:textSize="16sp"
+    android:textColor="@color/black_75"
     android:textStyle="bold"/>
 
 </LinearLayout>

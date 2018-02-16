@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.anyline.examples.mrz.ScanMrzActivity"
+    android:animateLayoutChanges="true">
+
+    <at.nineyards.anyline.modules.ocr.AnylineOcrScanView
+        android:id="@+id/ocr_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <io.anyline.examples.drivinglicense.DrivingLicenseResultView
+        android:id="@+id/driver_license_result"
+        android:layout_width="300dp"
+        android:layout_height="217dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

@@ -9,12 +9,13 @@
         "width": 720,
         "ratioFromSize": {
             "width": 10,
-            "height": 14
+            "height": 15
         },
         "alignment": "center",
         "strokeWidth": 2,
         "cornerRadius": 0,
-        "strokeColor": "00000000"
+        "strokeColor": "00000000",
+        "feedbackStrokeColor": "0099FF"
     },
     "flash": {
         "mode": "manual",
@@ -22,7 +23,9 @@
         "offset": {
             "x": 10,
             "y": 0
-        }
+        },
+        "imageOn": "flash_on",
+        "imageOff": "flash_off"
     },
     "beepOnResult": true,
     "vibrateOnResult": true,

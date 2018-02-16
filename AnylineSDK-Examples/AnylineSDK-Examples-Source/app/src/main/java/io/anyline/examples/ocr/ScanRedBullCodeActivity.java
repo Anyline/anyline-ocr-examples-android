@@ -1,23 +1,26 @@
 package io.anyline.examples.ocr;
 
+import android.graphics.Rect;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
+import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.AnylineViewConfig;
+import at.nineyards.anyline.core.RunFailure;
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
-import io.anyline.examples.SettingsFragment;
+import io.anyline.examples.ScanActivity;
+import io.anyline.examples.ScanModuleEnum;
+import io.anyline.examples.ocr.feedback.FeedbackType;
 import io.anyline.examples.ocr.result.RedBullResultView;
 
-public class ScanRedBullCodeActivity extends AppCompatActivity {
+public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebugListener {
 
     private static final String TAG = ScanRedBullCodeActivity.class.getSimpleName();
     private AnylineOcrScanView scanView;
@@ -26,68 +29,74 @@ public class ScanRedBullCodeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        setContentView(R.layout.activity_anyline_ocr);
+        getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id
+                .scan_view_placeholder));
 
         addRedBullResultView();
 
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
 
-
+        // see ScanScrabbleActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        // use the GRID mode, since an imaginable grid can be put on top of the code character
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.GRID);
-        // set the languages used for OCR (can be multiple)
         anylineOcrConfig.setLanguages("tessdata/rbf_jan2015_v2.traineddata");
-        // allow only capital letters and some numbers - these are the only characters the SDK will consider
         anylineOcrConfig.setCharWhitelist("2346789ABCDEFGHKLMNPQRTUVWXYZ");
-        // a simple regex for a basic validation of the codes. We require 4 characters per row
-        anylineOcrConfig.setValidationRegex("^[0-9A-Z]{4}\n[0-9A-Z]{4}");
-        // the characters height is 15 pixels minimum (make sure your cutout size is aligned to this)
         anylineOcrConfig.setMinCharHeight(15);
-        // the characters height is 30 pixels maximum (make sure your cutout size is aligned to this)
         anylineOcrConfig.setMaxCharHeight(30);
-        // the minimum confidence required to return a result, a value between 0 and 100.
-        // (higher confidence means less likely to get an incorrect result, but may be slower to deliver a result)
         anylineOcrConfig.setMinConfidence(75);
-        // the character count in a row may is 4
+        anylineOcrConfig.setValidationRegex("^[0-9A-Z]{4}\n[0-9A-Z]{4}");
+        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.GRID);
         anylineOcrConfig.setCharCountX(4);
-        // there are two rows
         anylineOcrConfig.setCharCountY(2);
-        // the characters may be up to 0.3 times their width (horizontally) apart from each other in this example
         anylineOcrConfig.setCharPaddingXFactor(0.3);
-        // the characters may be up to 0.5 times their width (vertically) apart from each other in this example
         anylineOcrConfig.setCharPaddingYFactor(0.5);
-        // the text is bright on darker background
         anylineOcrConfig.setIsBrightTextOnDark(true);
-
         scanView.setAnylineOcrConfig(anylineOcrConfig);
+
+        scanView.setDebugListener(this);
 
         scanView.setConfig(new AnylineViewConfig(this, "rb_view_config.json"));
 
         scanView.initAnyline(lic, new AnylineOcrResultListener() {
+
             @Override
             public void onResult(AnylineOcrResult anylineOcrResult) {
-                redBullResultView.setResult(anylineOcrResult.getResult());
+
+                String result = anylineOcrResult.getResult();
+
+                setFeedbackViewActive(false);
+
+                redBullResultView.setResult(result);
                 redBullResultView.setVisibility(View.VISIBLE);
+
+                setupScanProcessView(ScanRedBullCodeActivity.this, anylineOcrResult, getScanModule());
             }
         });
 
-        // disable the reporting if set to off in preferences
-        scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
-                .KEY_PREF_REPORTING_ON, true));
         redBullResultView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redBullResultView.setVisibility(View.INVISIBLE);
-                if (!scanView.isRunning()) {
-                    scanView.startScanning();
-                }
+                restartScanningAfterResult();
             }
         });
+
+        createFeedbackView(scanView);
+    }
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return scanView;
+    }
+
+    @Override
+    public Rect getCutoutRect() {
+        return scanView.getCutoutRect();
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.RED_BULL_CODE;
     }
 
     private void addRedBullResultView() {
@@ -104,13 +113,21 @@ public class ScanRedBullCodeActivity extends AppCompatActivity {
         mainLayout.addView(redBullResultView, params);
     }
 
+    private void restartScanningAfterResult() {
+        redBullResultView.setVisibility(View.INVISIBLE);
+        setFeedbackViewActive(true);
+        resetTime();
+        if (!scanView.isRunning()) {
+            scanView.startScanning();
+        }
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
+        redBullResultView.setVisibility(View.INVISIBLE);
 
-        if(redBullResultView == null || redBullResultView.getVisibility() != View.VISIBLE){
-            scanView.startScanning();
-        }
+        scanView.startScanning();
     }
 
     @Override
@@ -124,14 +141,36 @@ public class ScanRedBullCodeActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (redBullResultView.getVisibility() == View.VISIBLE) {
-            redBullResultView.setVisibility(View.INVISIBLE);
-            if (!scanView.isRunning()) {
-                scanView.startScanning();
-            }
+            restartScanningAfterResult();
         } else {
             super.onBackPressed();
         }
 
     }
 
+    @Override
+    public void onDebug(String name, Object value) {
+
+        if (AnylineDebugListener.BRIGHTNESS_VARIABLE_NAME.equals(name) &&
+                (AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.equals(value.getClass()) ||
+                        AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.isAssignableFrom(value.getClass()))) {
+            switch (scanView.getBrightnessFeedback()) {
+                case TOO_BRIGHT:
+                    handleFeedback(FeedbackType.TOO_BRIGHT);
+                    break;
+                case TOO_DARK:
+                    handleFeedback(FeedbackType.TOO_DARK);
+                    break;
+                case OK:
+                    handleFeedback(FeedbackType.PERFECT);
+                    break;
+            }
+        } else if(AnylineDebugListener.DEVICE_SHAKE_WARNING_VARIABLE_NAME.equals(name)){
+            handleFeedback(FeedbackType.SHAKY);
+        }
+    }
+
+    @Override
+    public void onRunSkipped(RunFailure runFailure) {
+    }
 }

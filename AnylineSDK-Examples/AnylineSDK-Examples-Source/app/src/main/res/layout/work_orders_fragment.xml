@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_10">
+
+
+    <TextView
+        android:background="@color/white"
+        android:id="@+id/process_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_size_dim"
+        android:padding="20dp"/>
+
+    <TextView
+        android:id="@+id/anyline_info"
+        android:layout_below="@id/process_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_dim"
+        android:text="@string/orders" />
+
+    <include layout="@layout/recycle_viewer_fragment"
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:layout_above="@+id/sync_container"
+             android:layout_below="@id/anyline_info"/>
+
+    <RelativeLayout
+        android:id="@+id/sync_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_dim">
+
+        <LinearLayout
+            android:id="@+id/unsync_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/war_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_warning_dark_grey_24dp" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/war_icon"
+                    android:layout_toLeftOf="@+id/sync_button"
+                    android:layout_toRightOf="@id/war_icon"
+                    android:layout_toStartOf="@+id/sync_button"
+                    android:singleLine="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    android:id="@+id/sync_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:text="@string/sync"
+                    android:textSize="@dimen/text_size_medium" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar_view"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

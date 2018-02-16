@@ -1,12 +1,4 @@
-<!--
-  ~ Anyline
-  ~ activity_scan_energy.xml
-  ~
-  ~ Copyright (c) 2017 Anyline GmbH
-  ~
-  ~ Created by Martin Cerman at 2017-10-09
-  -->
-
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

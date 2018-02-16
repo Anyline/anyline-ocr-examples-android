@@ -1,20 +1,28 @@
 <resources>
-    <string name="app_name">Anyline Examples</string>
+    <string name="app_name">Anyline Bundle Example</string>
+    <string name="anyline">Anyline</string>
 
-    <string name="scan_barcode">Scan Barcode</string>
-    <string name="scan_mrz">Scan MRZ of Passport or ID</string>
-    <string name="scan_digital_meters">Scan Digital Meter</string>
-    <string name="scan_dot_matrix_meters">Scan Dot Matrix Meter</string>
-    <string name="scan_heat_meters">Scan Heat Meter</string>
-    <string name="scan_analog_meters">Scan Analog Meter</string>
-    <string name="scan_double_tariff_meters">Scan Double Tariff Meter</string>
-    <string name="scan_auto_analog_digital_meters">Scan Analog/Digital Meter</string>
-    <string name="scan_dial_meters">Scan Dial Meter (Alpha)</string>
-    <string name="scan_serial_numbers">Scan Serial Number</string>
+    <string name="anyline_email" translatable="false">hello@anyline.com</string>
+    <string name="anyline_website_link" translatable="false"><u>www.anyline.com</u></string>
+    <string name="anyline_website_samples_link" translatable="false"><u>www.anyline.com/samples</u></string>
+    <string name="anyline_website_samples_link_https" translatable="false"><u>https://www.anyline.com/samples/</u></string>
+    <string name="anyline_website_download_link_https" translatable="false"><u>https://www.anyline.com/free-demos/</u></string>
+    <string name="anyline_portal_link" translatable="false"><u>https://portal.anyline.com/HW0HPL0MmPKVDvDIKXfHEt6Vuy5fg2Eo5FZ7kxzCyupEO,22</u></string>
 
+    <string name="gas_meter">Gas Meter</string>
+    <string name="water_meter">Water Meter</string>
     <string name="digital_meter">Digital Meter</string>
-    <string name="dot_matrix_meter">Dot Matrix Meter</string>
+    <string name="barcode">Barcode / QR-Code</string>
+    <string name="mrz">MRZ / Passport</string>
+    <string name="mrz_main">Passport MRZ</string>
     <string name="heat_meter">Heat Meter</string>
+
+    <string name="electric_meter">Electric Meter</string>
+    <string name="auto_analog_digital_meter">Analog/Digital Meter</string>
+    <string name="dial_meter">Dial Meter (Alpha)</string>
+    <string name="serial_number">Universal Serial Number</string>
+    <string name="serial_number_energy">Serial Number</string>
+
     <string name="heat_meter_4_3">4 pre-decimal places</string>
     <string name="heat_meter_5_3">5 pre-decimal places</string>
     <string name="heat_meter_6_3">6 pre-decimal places</string>
@@ -27,16 +35,29 @@
         Name: %1$s %2$s\nNo.: %3$s\nCountry Code: %4$s\nDay of Birth: %5$s\nExpiration Date: %6$s
     </string>
 
+
+    <!--PREFERENCES-->
+    <string name="pref_reporting_key" translatable="false">reporting_enabled</string>
+    <string name="pref_reset_key" translatable="false">reset</string>
+    <string name="pref_version_key" translatable="false">version</string>
     <string name="pref_reporting">Report Results</string>
     <string name="pref_reporting_summary">
-        The reporting of results in the Community Edition - including the photo of a scanned item -
-        helps us in improving our product, and the customer experience.
-        Results and images of the MRZ, Barcode, and Document modules are NOT reported in any case.
+        The reporting of results in the Community Edition, including the photo of a scanned item,
+        helps us improve our product and the customer experience.
+        Results and images of the MRZ, Barcode, and Document modules are NOT
+        reported in any case.
     </string>
 
-    <string name="settings">Info</string>
-    <string name="action_settings">Info</string>
-    <string name="scan_document">Scan Document</string>
+    <string name="pref_reset_title">Reset Data</string>
+    <string name="pref_dialog_reset_message">Reset all scan data?</string>
+    <string name="pref_reset_msg">This will clear all of the data you have generated whilst using the app.</string>
+
+    <string name="version_info">Version</string>
+    <string name="done">Done</string>
+
+    <string name="settings">Settings</string>
+    <string name="action_settings">Settings</string>
+    <string name="document">Document</string>
     <string name="document_advanced_outline_detection">Advanced Outline Detection</string>
     <string name="document_fast_outline_detection">Fast Outline Detection</string>
     <string name="document_error_not_sharp">Document is not sharp. Please hold the camera steadily and ensure the document is in focus</string>
@@ -45,7 +66,7 @@
     <string name="document_error_glare_detected">Please remove the glare</string>
     <string name="document_error_too_dark">The image is too dark. Please ensure there is enough light</string>
     <string name="document_error_unknown">Unknown Failure</string>
-    <string name="document_picture_error">Error scanning document:\n</string>
+    <string name="document_picture_error">Error scanning full document:\n</string>
     <string name="document_preview_success">Scanning full document. Please hold still</string>
     <string name="document_picture_success">Document scanned successfully</string>
     <string name="document_using_fast_mode">Switched to fast detection mode</string>
@@ -54,13 +75,14 @@
     <string name="document_processing_picture_header">Processing</string>
     <string name="document_image_saved_to">Image saved to</string>
 
-    <string name="scan_scrabble">Scan Scrabble Letters</string>
-    <string name="scan_bottlecap">Scan Bottlecap</string>
-    <string name="scan_red_bull_code">Scan RedBull Mobile Collect Code</string>
-    <string name="scan_isbn">Scan ISBN</string>
-    <string name="scan_record">Scan Record Catalog Number</string>
-    <string name="scan_voucher_code">Scan Voucher Code</string>
-    <string name="scan_iban">Scan IBAN</string>
+
+    <string name="scrabble">Scrabble Anagram</string>
+    <string name="bottlecap">Bottlecap</string>
+    <string name="red_bull_code">Red Bull Mobile Collect</string>
+    <string name="isbn">ISBN</string>
+    <string name="record">Record Number</string>
+    <string name="voucher_code">Voucher Code</string>
+    <string name="iban">IBAN</string>
 
     <string name="your_scrabble_squares">Your Scrabble tiles:</string>
     <string name="scrabble_suggestions">Suggested words</string>
@@ -72,41 +94,44 @@
     <string name="scrabble_points">%1$s Points:</string>
     <string name="isbn_description">Description</string>
     <string name="isbn_product_details">Product Details</string>
-    <string name="isbn_no_information_found">No information has been found for this ISBN. A Simple Google search is
-        provided.</string>
-    <string name="isbn_no_information_found_no_internet">No information has been found for ISBN %s.</string>
+    <string name="isbn_no_information_found">Searching on google for ISBN: %s</string>
     <string name="no_internet">Could not load web page. Maybe you have no internet connection?</string>
     <string name="record_search">Record Search</string>
 
-    <string name="category_energy">Energy</string>
+    <string name="category_energy">Meter Reading</string>
+
     <string name="category_identification">Identification</string>
     <string name="category_fintech">Fintech</string>
     <string name="category_barcodes">Barcodes</string>
     <string name="category_documents">Documents</string>
     <string name="category_loyality">Loyality</string>
     <string name="category_others">Others</string>
+    <string name="samples">Samples</string>
+    <string name="history">History</string>
+    <string name="help">Help</string>
+    <string name="free_sdk">Free SDK</string>
 
 
-
-    <string name="title_barcode">Barcode</string>
+    <string name="title_electric_meter">Electric Meter (analog)</string>
+    <string name="title_auto_analog_digital_meter">Analog/Digital</string>
+    <string name="title_gas_meter">Gas Meter (analog)</string>
+    <string name="title_water_meter">Water Meter (analog)</string>
+    <string name="title_barcode">Barcode / QR-Code</string>
     <string name="title_mrz">MRZ</string>
     <string name="title_digital_meter">Digital Meter</string>
     <string name="title_heat_meter">Heat Meter</string>
-    <string name="title_analog_meter">Analog Meter</string>
-    <string name="title_dot_matrix_meter">Dot Matrix Meter</string>
-    <string name="title_double_tariff_meter">Double Tariff Meter</string>
-    <string name="title_auto_analog_digital_meter">Analog/Digital Meter</string>
     <string name="title_dial_meter">Dial Meter (Alpha)</string>
+    <string name="title_serial_number_energy">Energy Serial Number</string>
     <string name="title_serial_number">Serial Number</string>
 
     <string name="title_document">Document</string>
     <string name="title_iban">IBAN</string>
     <string name="title_voucher">Voucher Code</string>
-    <string name="title_redbull">RedBull Mobile Collect</string>
+    <string name="title_redbull">Red Bull Mobile Collect</string>
     <string name="title_bottlecap">Bottlecap</string>
-    <string name="title_scrabble">Scrabble Letters</string>
+    <string name="title_scrabble">Scrabble Anagram</string>
     <string name="title_isbn">ISBN</string>
-    <string name="title_record">Record Catalog Number</string>
+    <string name="title_record">Record Number</string>
 
     <string name="title_record_result">Record Result</string>
     <string name="title_isbn_result">ISBN Result</string>
@@ -118,21 +143,187 @@
     <string name="heat_meter_4_3_short">4 pre-decimal places</string>
     <string name="heat_meter_5_3_short">5 pre-decimal places</string>
     <string name="heat_meter_6_3_short">6 pre-decimal places</string>
+    <string name="place_your_item_like_this">Place your item like this</string>
+    <string name="feedback_helps_during_scanning">This feedback helps you\nduring scanning</string>
+    <string name="lets_go">Let\'s Go</string>
+    <string name="white">white</string>
+    <string name="black">black</string>
+    <string name="feedback_helps_you">This feedback helps you</string>
+    <string name="send">Send</string>
+    <string name="get_your_samples">Get your samples!</string>
+    <string name="why_you_should_get_the_samples">You want to try out all scan modes but you don’t have a digital meter at home or any scrabble letters in your pocket? No problem!</string>
+    <string name="download_to_your_phone">You can download a bundle of sample images directly to your phone or get it via email!</string>
+    <string name="email_note_why">Note that it may be difficult to scan and display the samples simultaneously from the same device ;)</string>
+    <string name="enter_your_mail">enter your email</string>
+    <string name="preview_available">Preview available on Google Books</string>
+    <string name="more_infos_on_google_books">See more details on Google Books</string>
+    <string name="delete_history">Delete History</string>
+    <string name="history_empty">The history is empty.</string>
 
-    <string name="title_license_plate">License Plates</string>
-    <string name="license_plates">Scan License Plate</string>
+    <string name="reporting">Reporting</string>
+    <string name="what_is_anyline">What is Anyline?</string>
+    <string name="anyline_short_description">Anyline is the leading text recognition SDK for your mobile device.\nYou can embed Anyline in your own mobile application and digitize and scan all kinds of texts, codes and numbers.\n\nThis app shows a few things that already work and gives ideas about what you can adjust!</string>
+
+    <string name="email">Email</string>
+    <string name="send_demo_material">Send me demo material</string>
+
+    <string name="feedback_shaky">hold still</string>
+    <string name="feedback_too_bright">too bright</string>
+    <string name="feedback_too_dark">too dark</string>
+    <string name="feedback_perfect">perfect</string>
+
+    <string name="congratulation">Congratulations</string>
+    <string name="delete_all">Delete all</string>
+    <string name="delete_this_history">Delete this history?</string>
+    <string name="delete_all_info">All entries in this list will be deleted.</string>
+
+    <string name="send_me_samples">Send me samples</string>
+    <string name="check_your_mails">Your request was successful - check your mails!</string>
+    <string name="oops_something_went_wrong">Oops, something went wrong...</string>
+    <string name="sorry_please_download">Sorry, but we could not send you the samples. Please download it directly from the website.</string>
+    <string name="sending_request">Great, we will now try to send you the samples!</string>
+    <string name="go_to_website">Open website</string>
+    <string name="not_now">Not now</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+
+
+    <string name="award_scan_1">Congratulations! You did your first scan!</string>
+    <string name="award_scan_10">Hurray! You scanned 10 times already!</string>
+    <string name="award_scan_30">Whoop whoop! 30 scans? Look at you!</string>
+    <string name="award_scan_50">Half of 100 scans? You\'re on a roll!</string>
+    <string name="award_scan_80">20 more scans and we are done!</string>
+    <string name="award_scan_100">We ran out of trophies, good job!</string>
+    <string name="explanation_select_background_electric">Choose the background color  of the meter (black or white), by choosing the buttons on the left or the right side.\nThis mode recognizes meters with 6 or 7 pre-decimal digits.</string>
+    <string name="explanation_select_background_water">Choose the background color  of the meter (black or white), by choosing the buttons on the left or the right side.</string>
+    <string name="explanation_select_digits">Choose the correct number of pre-decimal digits you want to scan by clicking on the "minus" or "plus" symbol.</string>
+    <string name="explanation_thats_it">That is basically all you need to know - now give it a try!</string>
+    <string name="explanation_mrz">Hint: You can use the MRZ scanner in portrait or landscape mode.</string>
+    <string name="explanation_dial">Scan dial meters with this mode. Please only put relevant dials in the cutout in order to get the correct result.</string>
+    <string name="explanation_serial_number">Scan serial numbers with this mode. Please only put relevant numbers in the cutout in order to get the correct result.</string>
+    <string name="selected_mode">selected mode</string>
+    <string name="type">type</string>
+    <string name="explanation_barcode_support">The barcode reader is currently supporting:\nUPC A, UPC E, EAN-8, EAN-13, EAN-14, EAN-18, EAN-99, EAN-128, Identcode, Leitcode, ISBN-13, ISBN-10, ISSN, ISMN, ITF-14, Data matrix, Aztec (limited), Codabar, QR code</string>
+    <string name="result">Result</string>
+    <string name="intercom_barcode" translatable="false">Barcode</string>
+    <string name="intercom_mrz" translatable="false">MRZ</string>
+    <string name="intercom_iban" translatable="false">IBAN</string>
+    <string name="intercom_redbull" translatable="false">RedBull</string>
+    <string name="intercom_isbn" translatable="false">ISBN</string>
+    <string name="intercom_document" translatable="false">Document</string>
+    <string name="intercom_bottlecap" translatable="false">Bottlecap</string>
+    <string name="intercom_records" translatable="false">Records</string>
+    <string name="intercom_scrabble" translatable="false">Scrabble</string>
+    <string name="intercom_voucher" translatable="false">Voucher</string>
+    <string name="intercom_electric_digits" translatable="false">Electric Meter</string>
+    <string name="intercom_water_meter" translatable="false">Water Meter</string>
+    <string name="intercom_gas_meter" translatable="false">Gas Meter</string>
+    <string name="intercom_digital_meter" translatable="false">Digital Meter</string>
+    <string name="intercom_dial_meter" translatable="false">Dial Meter</string>
+    <string name="intercom_serial_number" translatable="false">Serial Number</string>
+    <string name="intercom_analog_digital_meter" translatable="false">Analog/Digital Meter</string>
+    <string name="intercom_heat_meter" translatable="false">Heat Meter</string>
+    <string name="intercom_license_plate" translatable="false">License Plate</string>
+    <string name="intercom_ocr" translatable="false">OCR</string>
+
+
+    <string name="live_chat">Live chat</string>
+    <string name="contact_us">Contact us</string>
+
+    <string name="welcome_to_anyline">Welcome to Anyline</string>
+    <string name="onboarding_questions">Questions while scanning? </string>
+    <string name="onboarding_chat_email_info">Don\'t hesitate to simply reach out via the live chat while scanning or - if you need additional support - simply share your email address with us, and we\'ll have a team member get back to you right away.</string>
+    <string name="enter_your_mail_optional">enter email (optional)</string>
+
+
+    <string name="title_license_plate">License Plate</string>
+    <string name="license_plates">EU License Plate</string>
     <string name="category_vehicles">Vehicles</string>
+    <string name="austria">Austria</string>
+    <string name="germany">Germany</string>
+    <string name="auto">Auto</string>
+    <string name="title_driving_license">Austrian Driving License</string>
 
-    <string name="enable_barcode_detection">Barcode Detection</string>
+    <string name="title_mileometer">Mileometer (PoC)</string>
+    <string name="mileometer">Mileometer (PoC)</string>
+    <string name="click_here_for_intro">Click here to get an introduction</string>
+    <string name="explanation_license_plate">For scanning License Plate Numbers from cars.</string>
+    <string name="skip">Skip</string>
 
-    <string name="switch_off">OFF</string>
+    <!-- override the error message in the dialog to install missing google play services components -->
+    <string name="common_google_play_services_update_text" msgid="9053896323427875356">Anyline OCR is able to scan barcodes simultaneously. This feature will only work if the newest Google Play services are installed.</string>
+    <string name="common_google_play_services_update_title" msgid="8706675115216073244">Update Google Play Services</string>
     <string name="switch_on">ON</string>
+    <string name="switch_off">OFF</string>
+    <string name="enable_barcode_detection">Barcode Detection</string>
+    <string name="barcode_not_operational">The required barcode API is not available.\nSimultaneous barcode scanning will not work.</string>
 
-    <string name="document_error_shake">Shake detected</string>
-    <string name="document_error_closer">Come closer</string>
-    <string name="document_error_format">Unrecognised format</string>
-    <string name="camera_error_fatal">Camera Error</string>
-    <string name="error_no_camera_permission">Error: No camera permission</string>
-    <string name="error_wait_for_action">Please wait...</string>
-    <string name="ok">OK</string>
+    <string name="explanation_analog_meter">Scan all sorts of analog energy meters with this mode. It doesn’t matter how many digits or if there is a black or white background.</string>
+    <string name="explanation_analog_digital_meter">Scan analog or digital meters with this mode. It doesn’t matter how many digits, or if the analog meter has a black or white background.</string>
+
+
+
+    <!-- Intercom push notifications -->
+    <string name="intercom_gcm_sender_id" translatable="false">872077656705</string>
+    <string name="explanation_barcode_detection">Hint: The \"Barcode Detection\" allows to simultaneously scan the meter identifier.</string>
+
+
+    <!-- WorkForce Orders -->
+    <string name="screen_workorders_synced">Orders synchronised</string>
+    <string name="screen_workorders_unsynced_reports_plural">%1$d unsynchronised meter readings</string>
+    <string name="screen_workorders_unsynced_reports_singular">%1$d unsynchronised meter reading</string>
+    <string name="start">Start</string>
+    <string name="sync">Synchronize</string>
+    <string name="orders">Orders</string>
+
+    <string name="scan">Scan</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved</string>
+    <string name="finish">Finish</string>
+    <string name="scan_again">Scan Again</string>
+
+    <!-- Messages -->
+    <string name="customer_not_found">Customer not found!</string>
+
+    <!-- Confirmation messages -->
+    <string name="screen_scan_result_confirm_msg">Please confirm you data before sending.</string>
+    <string name="screen_scan_result_confirm_text">I, %1$s, hereby declare that the data above is complete and correct.</string>
+    <string name="screen_scan_result_confirm_title">Confirmation</string>
+    <string name="screen_scan_result_range_confirm_back">Back</string>
+    <string name="screen_scan_result_range_confirm_msg">Your reading is outside the expected range. Please confirm that this value is correct:  %1$s kWh</string>
+    <string name="screen_scan_result_range_confirm_ok">Confirm</string>
+    <string name="self_reading_screen_received_msg">We have received your meter reading. Thank you!</string>
+
+
+    <!--Industries name-->
+
+    <string name="utilities">Utilities</string>
+    <string name="travel">Travel &amp; Hospitality</string>
+    <string name="transportation">Transportation &amp; Automotive</string>
+    <string name="retail">Retail</string>
+    <string name="finance">Finance &amp; Insurance</string>
+    <string name="media">Media &amp; Telecom</string>
+    <string name="arts">Arts &amp; Entertainment</string>
+    <string name="industries">Industries</string>
+
+    <!-- Unlock Processes-->
+
+    <string name="unlock_processes">Unlock processes!</string>
+    <string name="why_you_should_unlock_processes">These two modes not only allow you to scan, but also show potential process implementations in utilities. In order to see the processes in action, please download the Anyline Scan Samples by entering your email. Enjoy the full Anyline Experience!</string>
+    <string name="unlock_now">Unlock</string>
+
+    <string name="workforce">Workforce</string>
+    <string name="customer">Self Reading</string>
+    <string name="self_reading_title">Customer Self Reading</string>
+    <string name="workforce_title">Workforce Tool</string>
+
+    <string name="customer_self_reading_history">Reading History</string>
+    <string name="readMore">Read more</string>
+
+    <!-- ToolBar Title -->
+    <string name="screen_scan_result_title">Scan Results</string>
+    <string name="screen_customer_title">Customer</string>
+    <string name="processes_scan_screen_title">Barcode</string>
+
 </resources>

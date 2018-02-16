@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/item_overview"
+    android:layout_margin="2dp"
+    android:layout_height="wrap_content">
+
+
+    <io.anyline.examples.customviews.SquareImageView
+        android:id="@+id/item_image"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:background="@drawable/trial"
+        android:layout_height="match_parent"/>
+
+
+    <TextView
+        android:id="@+id/item_overview_description"
+        android:text="@string/skip"
+        android:layout_alignTop="@+id/item_image"
+        style="@style/ListItemOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+
+</RelativeLayout>

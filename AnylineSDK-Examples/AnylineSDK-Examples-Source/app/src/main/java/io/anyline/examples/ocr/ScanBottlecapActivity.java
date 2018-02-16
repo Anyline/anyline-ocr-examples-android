@@ -1,46 +1,43 @@
 package io.anyline.examples.ocr;
 
-import android.graphics.PointF;
+import android.graphics.Rect;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
-import java.util.List;
-
+import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.AnylineViewConfig;
+import at.nineyards.anyline.core.RunFailure;
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
-import io.anyline.examples.SettingsFragment;
+import io.anyline.examples.ScanActivity;
+import io.anyline.examples.ScanModuleEnum;
+import io.anyline.examples.ocr.feedback.FeedbackType;
 import io.anyline.examples.ocr.result.BottlecapResultView;
 
-public class ScanBottlecapActivity extends AppCompatActivity {
+public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugListener {
 
-    private static final String TAG = ScanBottlecapActivity.class.getSimpleName();
     private AnylineOcrScanView scanView;
     private BottlecapResultView bottlecapResultView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        setContentView(R.layout.activity_anyline_ocr);
+        getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id.scan_view_placeholder));
 
         addBottlecapResultView();
 
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
 
-        // see ScanRedBullCodeActivity for a more detailed description
-        AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
+        // see ScanScrabbleActivity for a more detailed description
+        final AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         anylineOcrConfig.setLanguages("tessdata/bottlecap.traineddata");
         anylineOcrConfig.setCharWhitelist("123456789ABCDEFGHJKLMNPRSTUVWXYZ");
         anylineOcrConfig.setMinCharHeight(14);
@@ -57,27 +54,49 @@ public class ScanBottlecapActivity extends AppCompatActivity {
 
         scanView.setConfig(new AnylineViewConfig(this, "bottlecap_view_config.json"));
 
-        scanView.initAnyline(lic, new AnylineOcrResultListener() {
+        scanView.setDebugListener(this);
 
+        scanView.initAnyline(lic, new AnylineOcrResultListener() {
             @Override
             public void onResult(AnylineOcrResult anylineOcrResult) {
-                bottlecapResultView.setResult(anylineOcrResult.getResult());
+
+                setFeedbackViewActive(false);
+
+                String result = anylineOcrResult.getResult();
+
+                bottlecapResultView.setResult(result);
                 bottlecapResultView.setVisibility(View.VISIBLE);
+
+                setupScanProcessView(ScanBottlecapActivity.this, anylineOcrResult, getScanModule());
             }
         });
 
-        // disable the reporting if set to off in preferences
-        scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
-                .KEY_PREF_REPORTING_ON, true));
+
         bottlecapResultView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bottlecapResultView.setVisibility(View.INVISIBLE);
-                if (!scanView.isRunning()) {
-                    scanView.startScanning();
-                }
+                restartScanningAfterResult();
             }
         });
+
+        createFeedbackView(scanView);
+
+    }
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return scanView;
+    }
+
+
+    @Override
+    public Rect getCutoutRect() {
+        return scanView.getCutoutRect();
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.BOTTLECAP;
     }
 
     private void addBottlecapResultView() {
@@ -94,13 +113,23 @@ public class ScanBottlecapActivity extends AppCompatActivity {
         mainLayout.addView(bottlecapResultView, params);
     }
 
+
+    private void restartScanningAfterResult() {
+        bottlecapResultView.setVisibility(View.INVISIBLE);
+        setFeedbackViewActive(true);
+        resetTime();
+        if (!scanView.isRunning()) {
+            scanView.startScanning();
+        }
+    }
+
+
     @Override
     protected void onResume() {
         super.onResume();
+        bottlecapResultView.setVisibility(View.INVISIBLE);
 
-        if(bottlecapResultView == null || bottlecapResultView.getVisibility() != View.VISIBLE){
-            scanView.startScanning();
-        }
+        scanView.startScanning();
     }
 
     @Override
@@ -115,14 +144,36 @@ public class ScanBottlecapActivity extends AppCompatActivity {
     public void onBackPressed() {
         //close the result view on back press if it is open
         if (bottlecapResultView.getVisibility() == View.VISIBLE) {
-            bottlecapResultView.setVisibility(View.INVISIBLE);
-            if (!scanView.isRunning()) {
-                scanView.startScanning();
-            }
+            restartScanningAfterResult();
         } else {
             super.onBackPressed();
         }
 
     }
 
+    @Override
+    public void onDebug(String name, Object value) {
+
+        if (AnylineDebugListener.BRIGHTNESS_VARIABLE_NAME.equals(name) &&
+                (AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.equals(value.getClass()) ||
+                        AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.isAssignableFrom(value.getClass()))) {
+            switch (scanView.getBrightnessFeedback()) {
+                case TOO_BRIGHT:
+                    handleFeedback(FeedbackType.TOO_BRIGHT);
+                    break;
+                case TOO_DARK:
+                    handleFeedback(FeedbackType.TOO_DARK);
+                    break;
+                case OK:
+                    handleFeedback(FeedbackType.PERFECT);
+                    break;
+            }
+        } else if(AnylineDebugListener.DEVICE_SHAKE_WARNING_VARIABLE_NAME.equals(name)){
+            handleFeedback(FeedbackType.SHAKY);
+        }
+    }
+
+    @Override
+    public void onRunSkipped(RunFailure runFailure) {
+    }
 }

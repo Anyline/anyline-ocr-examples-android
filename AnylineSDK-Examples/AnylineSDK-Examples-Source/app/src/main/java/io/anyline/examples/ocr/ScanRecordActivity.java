@@ -1,93 +1,145 @@
 package io.anyline.examples.ocr;
 
 import android.content.Intent;
+import android.graphics.Rect;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
-import android.view.WindowManager;
+import android.view.ViewGroup;
 
+import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.AnylineViewConfig;
+import at.nineyards.anyline.core.RunFailure;
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
 import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
-import io.anyline.examples.SettingsFragment;
+import io.anyline.examples.ScanActivity;
+import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.apis.RecordSearchActivity;
+import io.anyline.examples.ocr.feedback.FeedbackType;
 
-public class ScanRecordActivity extends AppCompatActivity {
+public class ScanRecordActivity extends ScanActivity implements AnylineDebugListener {
 
     private static final String TAG = ScanRecordActivity.class.getSimpleName();
     private AnylineOcrScanView scanView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Set the flag to keep the screen on (otherwise the screen may go dark during scanning)
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id
+                .scan_view_placeholder));
 
-        setContentView(R.layout.activity_anyline_ocr);
 
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
 
-
-        //Configure the OCR for Record Numbers
+        // see ScanIbanActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        // use the LINE mode, since the numbers can be of different length
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.LINE);
-        // Set the languages used for OCR
-        // Copies given traineddata-file to a place where the core can access it.
-        // The file must be located directly in the assets directory (or in tessdata/ but no other folders are allowed)
         anylineOcrConfig.setLanguages("tessdata/eng_no_dict.traineddata", "tessdata/deu.traineddata");
-        // allow only capital letters and some numbers - these are the only characters the SDK will consider
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.");
-        // a simple regex for a basic validation of the record numbers
-        anylineOcrConfig.setValidationRegex("^([A-Z]+\\s*-*\\s*)?[0-9A-Z-\\s\\.]{3,}$");
-        // the characters height is 15 pixels minimum (make sure your cutout size is aligned to this)
         anylineOcrConfig.setMinCharHeight(15);
-        // the characters height is 70 pixels maximum (make sure your cutout size is aligned to this)
         anylineOcrConfig.setMaxCharHeight(70);
-        // the minimum confidence required to return a result, a value between 0 and 100.
-        // (higher confidence means less likely to get an incorrect result, but may be slower to deliver a result)
         anylineOcrConfig.setMinConfidence(75);
-        // we don't want to remove small contours, as a . for example should be kept in the result
+        anylineOcrConfig.setValidationRegex("^([A-Z]+\\s*-*\\s*)?[0-9A-Z-\\s\\.]{3,}$");
+        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.LINE);
         anylineOcrConfig.setRemoveSmallContours(false);
-        // we also don't want whitespaces to be removed - they are required for a search with the scanned record number
-        anylineOcrConfig.setRemoveWhitespaces(false);
+
         scanView.setAnylineOcrConfig(anylineOcrConfig);
+
+        scanView.setDebugListener(this);
 
         scanView.setConfig(new AnylineViewConfig(this, "record_view_config.json"));
 
         scanView.initAnyline(lic, new AnylineOcrResultListener() {
+
             @Override
             public void onResult(AnylineOcrResult anylineOcrResult) {
-                if (!anylineOcrResult.getResult().isEmpty()) {
+
+                String result = anylineOcrResult.getResult();
+
+                if (!result.isEmpty()) {
+                    setFeedbackViewActive(false);
+
                     Intent i = new Intent(ScanRecordActivity.this, RecordSearchActivity.class);
-                    i.putExtra(RecordSearchActivity.RECORD_INPUT, anylineOcrResult.getResult().trim());
+                    i.putExtra(RecordSearchActivity.RECORD_INPUT, result.trim());
+
                     startActivity(i);
+                    overridePendingTransition(R.anim.activity_open_translate, R.anim.fade_out);
+
+                    setupScanProcessView(ScanRecordActivity.this, anylineOcrResult, getScanModule());
                 }
             }
         });
 
-        // disable the reporting if set to off in preferences
-        scanView.setReportingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsFragment
-                .KEY_PREF_REPORTING_ON, true));
+        createFeedbackView(scanView);
+
+    }
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return scanView;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
+    }
+
+    @Override
+    public Rect getCutoutRect() {
+        return scanView.getCutoutRect();
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.RECORD;
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
         scanView.startScanning();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
         scanView.cancelScanning();
         scanView.releaseCameraInBackground();
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setFeedbackViewActive(true);
+    }
+
+    @Override
+    public void onDebug(String name, Object value) {
+
+        if (AnylineDebugListener.BRIGHTNESS_VARIABLE_NAME.equals(name) &&
+                (AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.equals(value.getClass()) ||
+                        AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.isAssignableFrom(value.getClass()))) {
+            switch (scanView.getBrightnessFeedback()) {
+                case TOO_BRIGHT:
+                    handleFeedback(FeedbackType.TOO_BRIGHT);
+                    break;
+                case TOO_DARK:
+                    handleFeedback(FeedbackType.TOO_DARK);
+                    break;
+                case OK:
+                    handleFeedback(FeedbackType.PERFECT);
+                    break;
+            }
+        } else if(AnylineDebugListener.DEVICE_SHAKE_WARNING_VARIABLE_NAME.equals(name)){
+            handleFeedback(FeedbackType.SHAKY);
+        }
+    }
+
+    @Override
+    public void onRunSkipped(RunFailure runFailure) {
+    }
 }

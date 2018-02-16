@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_container"
+        android:layout_alignParentTop="true">
+
+        <at.nineyards.anyline.modules.energy.EnergyScanView
+            android:id="@+id/energy_scan_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:beep_on_result="true"
+            app:blink_animation_on_result="true"
+            app:cancel_on_result="true"
+            app:cutout_alignment="top"
+            app:cutout_offset_y="120"
+            app:cutout_outside_color="#55000000"
+            app:cutout_rect_corner_radius_in_dp="15"
+            app:cutout_stroke_color="#FFFFFF"
+            app:cutout_stroke_width_in_dp="2"
+            app:cutout_style="rect"
+            app:flash_image_auto="@drawable/flash_auto"
+            app:flash_image_off="@drawable/flash_off"
+            app:flash_image_on="@drawable/flash_on"
+            app:flash_alignment="bottom_right"
+            app:flash_mode="auto"
+            app:vibrate_on_result="true"
+            app:visual_feedback_style="contour_rect"/>
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+    android:id="@+id/bottom_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/black_10"
+    android:visibility="gone">
+
+        <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true">
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

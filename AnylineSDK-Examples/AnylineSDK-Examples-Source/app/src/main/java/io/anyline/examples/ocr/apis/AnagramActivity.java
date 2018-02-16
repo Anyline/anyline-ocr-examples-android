@@ -2,7 +2,7 @@ package io.anyline.examples.ocr.apis;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -16,9 +16,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
+import io.anyline.examples.ScanningConfigurationActivity;
 import io.anyline.examples.R;
+import io.anyline.examples.ScanActivity;
+import io.anyline.examples.ScanModuleEnum;
 
-public class AnagramActivity extends AppCompatActivity implements RequestListener {
+public class AnagramActivity extends ScanningConfigurationActivity implements RequestListener {
 
     public final String ANAGRAMICA_API = "http://www.anagramica.com/all/";
 
@@ -34,7 +38,10 @@ public class AnagramActivity extends AppCompatActivity implements RequestListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scrabble_anagram);
+        setContentView(R.layout.activity_base_no_menu);
+        getLayoutInflater().inflate(R.layout.activity_scrabble_anagram, (ViewGroup) findViewById(R.id.placeholder));
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         textError = (TextView) findViewById(R.id.error_msg);
         layout = (LinearLayout) findViewById(R.id.content_layout);
@@ -49,7 +56,10 @@ public class AnagramActivity extends AppCompatActivity implements RequestListene
             input = savedInstanceState.getString(SCRABBLE_INPUT);
             results = savedInstanceState.getStringArrayList(WORD_SUGGESTIONS);
         }
+
+        setupScanResult();
     }
+
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -222,5 +232,34 @@ public class AnagramActivity extends AppCompatActivity implements RequestListene
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+
+        return false;
+    }
+
+    public void goBack(View view) {
+        this.onBackPressed();
+    }
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return null;
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return null;
+    }
 }
