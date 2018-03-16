@@ -11,6 +11,7 @@ package io.anyline.examples.ocr;
 import android.content.DialogInterface;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -72,7 +73,7 @@ public class ScanSerialNumberActivity extends ScanActivity implements AnylineDeb
                 alert.setIcon(null);
 
                 // needed to restart scanning for click outside of dialog
-                final android.app.AlertDialog dialog = alert.show();
+                final AlertDialog dialog = alert.show();
                 dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
                     public void onDismiss(DialogInterface dialog) {

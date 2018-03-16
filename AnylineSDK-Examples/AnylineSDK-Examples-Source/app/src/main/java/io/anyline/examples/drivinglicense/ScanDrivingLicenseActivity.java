@@ -154,6 +154,6 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 
     @Override
     protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.MRZ;
+        return ScanModuleEnum.ScanModule.DRIVER_LICENSE;
     }
 }

@@ -15,7 +15,7 @@ import io.anyline.examples.R;
  * A simple alert dialog that uses a custom view-style
  * Consists of a title, message, header, positive and negative button
  */
-public class SimpleAlertDialog extends AlertDialog.Builder {
+public class SimpleAlertDialog extends android.support.v7.app.AlertDialog.Builder {
     private Context context;
     private ImageView icon;
     private TextView title;

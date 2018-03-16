@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -103,7 +104,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
                 alert.setIcon(null);
 
                 // needed to restart scanning for click outside of dialog
-                final android.app.AlertDialog dialog = alert.show();
+                final AlertDialog dialog = alert.show();
                 dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
                     public void onDismiss(DialogInterface dialog) {

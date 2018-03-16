@@ -53,7 +53,12 @@ public class ProductsFragment extends BaseFragment implements BaseGridListAdapte
                         break;
 
                     case "Others":
-                        fragment = new OthersFragment();
+                        fragment = OthersFragment.newInstance(false);
+                        replaceFragment(fragment, "OTHERS_FRAGMENT");
+                        break;
+
+                    case "MRO":
+                        fragment = OthersFragment.newInstance(true);
                         replaceFragment(fragment, "OTHERS_FRAGMENT");
                         break;
 

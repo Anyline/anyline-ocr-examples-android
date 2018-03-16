@@ -5,6 +5,7 @@
         <item>@string/category_energy</item>
         <item>@string/mrz</item>
         <item>@string/license_plates</item>
+        <item>@string/category_mro</item>
         <item>@string/category_others</item>
     </string-array>
 
@@ -12,6 +13,7 @@
         <item>@string/category_energy</item>
         <item>io.anyline.examples.mrz.ScanMrzActivity</item>
         <item>io.anyline.examples.licenseplate.ScanLicensePlateActivity</item>
+        <item>@string/category_mro</item>
         <item>@string/category_others</item>
     </string-array>
 
@@ -21,7 +23,6 @@
         <item>@string/bottlecap</item>
         <item>@string/red_bull_code</item>
         <item>@string/voucher_code</item>
-        <item>@string/serial_number</item>
         <item>@string/scrabble</item>
         <item>@string/record</item>
         <item>@string/isbn</item>
@@ -36,7 +37,6 @@
         <item>io.anyline.examples.ocr.ScanBottlecapActivity</item>
         <item>io.anyline.examples.ocr.ScanRedBullCodeActivity</item>
         <item>io.anyline.examples.ocr.ScanVoucherCodeActivity</item>
-        <item>io.anyline.examples.ocr.ScanSerialNumberActivity</item>
         <item>io.anyline.examples.ocr.ScanScrabbleActivity</item>
         <item>io.anyline.examples.ocr.ScanRecordActivity</item>
         <item>io.anyline.examples.ocr.ScanIsbnActivity</item>
@@ -66,6 +66,18 @@
         <item></item>
         <item>HEADER</item>
         <item>io.anyline.examples.meter.ScanEnergySerialNumberActivity</item>
+    </string-array>
+
+    <string-array name="example_mro_classes" translatable="false">
+        <item>HEADER</item>
+        <item>io.anyline.examples.ocr.ScanSerialNumberActivity</item>
+        <item>io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity</item>
+    </string-array>
+
+    <string-array name="example_mro_names">
+        <item>@string/category_mro</item>
+        <item>@string/serial_number</item>
+        <item>@string/vin</item>
     </string-array>
 
 </resources>

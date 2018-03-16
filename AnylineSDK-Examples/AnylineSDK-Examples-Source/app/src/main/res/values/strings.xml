@@ -13,6 +13,7 @@
     <string name="water_meter">Water Meter</string>
     <string name="digital_meter">Digital Meter</string>
     <string name="barcode">Barcode / QR-Code</string>
+    <string name="vin">Vehicle Identification Number</string>
     <string name="mrz">MRZ / Passport</string>
     <string name="mrz_main">Passport MRZ</string>
     <string name="heat_meter">Heat Meter</string>
@@ -106,6 +107,7 @@
     <string name="category_documents">Documents</string>
     <string name="category_loyality">Loyality</string>
     <string name="category_others">Others</string>
+    <string name="category_mro">MRO</string>
     <string name="samples">Samples</string>
     <string name="history">History</string>
     <string name="help">Help</string>

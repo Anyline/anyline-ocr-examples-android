@@ -14,22 +14,42 @@ import io.anyline.examples.R;
 
 public class OthersFragment extends BaseFragment implements BaseGridListAdapter.OnItemClickListener {
 
+    private static final String MRO = "MRO_FRAGMENT";
+    private boolean isMRO = false;
+    private String[] classes;
+    private String[] names;
+
     public OthersFragment() {
         // Required empty public constructor
     }
 
+    public static OthersFragment newInstance(boolean isMRO) {
+        OthersFragment fragment = new OthersFragment();
+        Bundle args = new Bundle();
+        args.putBoolean(MRO , isMRO);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            isMRO = getArguments().getBoolean(MRO);
+        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         Resources res = getContext().getResources();
-        String[] classes = res.getStringArray(R.array.example_others_classes);
-        String[] names = res.getStringArray(R.array.example_others_names);
+        if(isMRO){
+            classes = res.getStringArray(R.array.example_mro_classes);
+            names = res.getStringArray(R.array.example_mro_names);
+        }else {
+            classes = res.getStringArray(R.array.example_others_classes);
+            names = res.getStringArray(R.array.example_others_names);
+        }
 
         View view = inflateFragment(R.layout.recycler_viewer_toolbar_fragment, inflater, container, names, classes, this);
         setHasOptionsMenu(true);

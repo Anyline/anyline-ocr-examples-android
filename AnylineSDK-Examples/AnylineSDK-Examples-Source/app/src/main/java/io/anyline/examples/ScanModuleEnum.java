@@ -32,7 +32,9 @@ public class ScanModuleEnum {
         ENERGY_WATER_METER,
         ENERGY_HEAT_METER,
         ENERGY_DIGITAL_METER,
-        ENERGY_DIAL_METER
+        ENERGY_DIAL_METER,
+        DRIVER_LICENSE,
+        VEHICLE_IDENTIFICATION_NUMBER
     }
 
     public ScanModuleEnum getScanModule() {

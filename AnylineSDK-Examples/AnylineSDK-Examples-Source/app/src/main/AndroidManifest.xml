@@ -240,6 +240,15 @@
                 android:value="io.anyline.examples.MainActivity"/>
         </activity>
         <activity
+            android:name=".ocr.ScanVehicleIdentificationNumberActivity"
+            android:label="@string/vin"
+            android:parentActivityName=".MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity"/>
+        </activity>
+        <activity
             android:name=".settings.SettingsActivity"
             android:label=""
             android:parentActivityName=".MainActivity"
