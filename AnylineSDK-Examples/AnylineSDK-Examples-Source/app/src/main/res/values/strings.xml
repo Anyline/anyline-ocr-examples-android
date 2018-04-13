@@ -22,6 +22,7 @@
     <string name="auto_analog_digital_meter">Analog/Digital Meter</string>
     <string name="dial_meter">Dial Meter (Alpha)</string>
     <string name="serial_number">Universal Serial Number</string>
+    <string name="shipping_container">Shipping Container</string>
     <string name="serial_number_energy">Serial Number</string>
 
     <string name="heat_meter_4_3">4 pre-decimal places</string>
@@ -108,6 +109,7 @@
     <string name="category_loyality">Loyality</string>
     <string name="category_others">Others</string>
     <string name="category_mro">MRO</string>
+    <string name="category_identity_documents">Identity Documents</string>
     <string name="samples">Samples</string>
     <string name="history">History</string>
     <string name="help">Help</string>
@@ -139,6 +141,7 @@
     <string name="title_isbn_result">ISBN Result</string>
     <string name="title_scrabble_result">Scrabble Result</string>
     <string name="title_select_config">Select your configuration</string>
+    <string name="title_shipping_container">Shipping Container</string>
 
     <string name="header_config">Configuration: %1$s</string>
 

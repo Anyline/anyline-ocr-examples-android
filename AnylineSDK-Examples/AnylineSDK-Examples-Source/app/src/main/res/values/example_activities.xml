@@ -3,7 +3,7 @@
 
     <string-array name="example_products_names">
         <item>@string/category_energy</item>
-        <item>@string/mrz</item>
+        <item>@string/category_identity_documents</item>
         <item>@string/license_plates</item>
         <item>@string/category_mro</item>
         <item>@string/category_others</item>
@@ -11,7 +11,7 @@
 
     <string-array name="example_products_classes" translatable="false">
         <item>@string/category_energy</item>
-        <item>io.anyline.examples.mrz.ScanMrzActivity</item>
+        <item>@string/category_identity_documents</item>
         <item>io.anyline.examples.licenseplate.ScanLicensePlateActivity</item>
         <item>@string/category_mro</item>
         <item>@string/category_others</item>
@@ -26,7 +26,6 @@
         <item>@string/scrabble</item>
         <item>@string/record</item>
         <item>@string/isbn</item>
-        <item>@string/title_driving_license</item>
         <item>@string/barcode</item>
         <item>@string/document</item>
     </string-array>
@@ -40,11 +39,9 @@
         <item>io.anyline.examples.ocr.ScanScrabbleActivity</item>
         <item>io.anyline.examples.ocr.ScanRecordActivity</item>
         <item>io.anyline.examples.ocr.ScanIsbnActivity</item>
-        <item>io.anyline.examples.drivinglicense.ScanDrivingLicenseActivity</item>
         <item>io.anyline.examples.barcode.ScanBarcodeActivity</item>
         <item>io.anyline.examples.document.ScanDocumentActivity</item>
     </string-array>
-
 
     <string-array name="example_energy_names">
         <item>Meter Types</item>
@@ -72,12 +69,27 @@
         <item>HEADER</item>
         <item>io.anyline.examples.ocr.ScanSerialNumberActivity</item>
         <item>io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity</item>
+        <item>io.anyline.examples.ocr.ScanShippingContainerActivity</item>
     </string-array>
 
     <string-array name="example_mro_names">
         <item>@string/category_mro</item>
         <item>@string/serial_number</item>
         <item>@string/vin</item>
+        <item>@string/shipping_container</item>
+    </string-array>
+
+
+    <string-array name="example_identity_documents_names">
+        <item>@string/category_identity_documents</item>
+        <item>@string/mrz</item>
+        <item>@string/title_driving_license</item>
+    </string-array>
+
+    <string-array name="example_identity_documents_classes" translatable="false">
+        <item>HEADER</item>
+        <item>io.anyline.examples.mrz.ScanMrzActivity</item>
+        <item>io.anyline.examples.drivinglicense.ScanDrivingLicenseActivity</item>
     </string-array>
 
 </resources>

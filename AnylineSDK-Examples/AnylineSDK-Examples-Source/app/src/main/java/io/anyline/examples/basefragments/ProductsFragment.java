@@ -53,12 +53,27 @@ public class ProductsFragment extends BaseFragment implements BaseGridListAdapte
                         break;
 
                     case "Others":
-                        fragment = OthersFragment.newInstance(false);
+
+                        fragment = new OthersFragment();
                         replaceFragment(fragment, "OTHERS_FRAGMENT");
                         break;
 
                     case "MRO":
-                        fragment = OthersFragment.newInstance(true);
+
+                        fragment = new OthersFragment();
+                        Bundle mroArgs = new Bundle();
+                        mroArgs.putBoolean(OthersFragment.MRO, true);
+                        fragment.setArguments(mroArgs);
+                        replaceFragment(fragment, "OTHERS_FRAGMENT");
+                        break;
+
+                    case "Identity Documents":
+
+                        fragment = new OthersFragment();
+                        Bundle identityDocArgs = new Bundle();
+                        identityDocArgs = new Bundle();
+                        identityDocArgs.putBoolean(OthersFragment.DOCUMENT_IDENTITY_FRAGMENT, true);
+                        fragment.setArguments(identityDocArgs);
                         replaceFragment(fragment, "OTHERS_FRAGMENT");
                         break;
 

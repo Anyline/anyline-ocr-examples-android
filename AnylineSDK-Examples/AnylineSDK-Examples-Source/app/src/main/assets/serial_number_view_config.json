@@ -4,6 +4,7 @@
         "style": "rect",
         "width": 720,
         "alignment": "top_half",
+        "maxWidthPercent": "80%",
         "ratioFromSize" : {
             "width": 720,
             "height": 144

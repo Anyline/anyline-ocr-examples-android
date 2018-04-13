@@ -55,7 +55,7 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
         anylineOcrScanView.setConfigFromAsset("driving_license_view_config.json");
 
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setCustomCmdFile("anyline_austrian_driver_license.ale");
+        anylineOcrConfig.setCustomCmdFile("anyline_austrian_driving_license.ale");
         anylineOcrConfig.setLanguages("tessdata/eng_no_dict.traineddata", "tessdata/deu.traineddata");
         anylineOcrScanView.setAnylineOcrConfig(anylineOcrConfig);
 

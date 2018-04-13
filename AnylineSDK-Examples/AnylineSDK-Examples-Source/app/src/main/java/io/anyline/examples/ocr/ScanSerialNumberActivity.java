@@ -47,7 +47,7 @@ public class ScanSerialNumberActivity extends ScanActivity implements AnylineDeb
 
         // see ScanIbanActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("USN_A-Z0-9.any");
+        anylineOcrConfig.setLanguages("USNr.any");
         // AUTO ScanMode automatically detects the correct text without any further parameters to be set
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
         anylineOcrConfig.setValidationRegex("[A-Z0-9]{4,}");

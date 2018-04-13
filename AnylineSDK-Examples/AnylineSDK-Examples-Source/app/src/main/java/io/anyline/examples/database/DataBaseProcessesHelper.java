@@ -111,8 +111,17 @@ public class DataBaseProcessesHelper extends SQLiteOpenHelper
 
     }
 
-    @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+        Log.i(TAG, "Database Version: OLD: "+ oldVersion + " = NEW: "+newVersion);
+
+        if(mContext.deleteDatabase(DB_NAME))
+            Log.i(TAG, "Database Deleted....");
+        else
+            Log.i(TAG, "Database Not Deleted..");
     }
+
+
 }

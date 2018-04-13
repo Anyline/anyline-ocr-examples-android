@@ -13,12 +13,10 @@ import android.widget.LinearLayout;
 
 import io.anyline.examples.R;
 import io.anyline.examples.baseadapters.ViewPagerAdapter;
-import io.anyline.examples.settings.SettingsActivity;
+//import io.anyline.examples.settings.SettingsActivity;
 
 public class ViewPagerFragment extends Fragment {
 
-
-    LinearLayout logoLinearLayout;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
@@ -27,15 +25,6 @@ public class ViewPagerFragment extends Fragment {
         ViewPager pager=(ViewPager)result.findViewById(R.id.pager);
         pager.setAdapter(buildAdapter());
 
-        logoLinearLayout = (LinearLayout) result.findViewById (R.id.anyline_logo_container);
-        logoLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SettingsActivity.class);
-                startActivity(intent);
-                getActivity().overridePendingTransition(R.anim.activity_open_translate, R.anim.fade_out);
-            }
-        });
         return(result);
     }
 

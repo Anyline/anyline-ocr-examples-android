@@ -123,6 +123,15 @@
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
         <activity
+            android:name=".ocr.ScanShippingContainerActivity"
+            android:label="@string/title_shipping_container"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity" />
+        </activity>
+        <activity
             android:name=".mrz.ScanMrzActivity"
             android:label="@string/title_mrz"
             android:parentActivityName=".MainActivity"
