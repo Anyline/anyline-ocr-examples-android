@@ -1,11 +1,10 @@
 package io.anyline.examples.ocr;
 
-import android.content.DialogInterface;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.AnylineViewConfig;
@@ -18,11 +17,9 @@ import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
-import io.anyline.examples.dialog.SimpleAlertDialog;
 import io.anyline.examples.ocr.feedback.FeedbackType;
-
 /**
- * Created by lorena on 08.03.18.
+ * Example Vehicle Identification Number Scan
  */
 
 public class ScanVehicleIdentificationNumberActivity extends ScanActivity implements AnylineDebugListener {
@@ -66,30 +63,8 @@ public class ScanVehicleIdentificationNumberActivity extends ScanActivity implem
 
                 String result = anylineOcrResult.getResult();
 
-                final SimpleAlertDialog alert = new SimpleAlertDialog(ScanVehicleIdentificationNumberActivity.this);
-
-                alert.setMessage(result);
-
-                alert.setIcon(null);
-
-                // needed to restart scanning for click outside of dialog
-                final AlertDialog dialog = alert.show();
-                dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                    @Override
-                    public void onDismiss(DialogInterface dialog) {
-                        resetTime();
-                        if (!scanView.isRunning()) {
-                            scanView.startScanning();
-                        }
-                    }
-                });
-
-                alert.setPositive(getString(R.string.ok), new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                    }
-                });
+                String path = setupImagePath(anylineOcrResult.getCutoutImage());
+                startScanResultIntent(getResources().getString(R.string.vin), getVINResult(result), path);
 
                 setupScanProcessView(ScanVehicleIdentificationNumberActivity.this, anylineOcrResult, getScanModule());
 
@@ -97,6 +72,14 @@ public class ScanVehicleIdentificationNumberActivity extends ScanActivity implem
         });
 
         createFeedbackView(scanView);
+    }
+
+    private HashMap<String, String> getVINResult(String vinResult){
+        HashMap<String, String> VINHashMap = new HashMap<>();
+
+        VINHashMap.put(getResources().getString(R.string.reading_result) , (vinResult == null || vinResult.isEmpty()) ?  getResources().getString(R.string.not_available) : vinResult);
+
+        return VINHashMap;
     }
 
     @Override

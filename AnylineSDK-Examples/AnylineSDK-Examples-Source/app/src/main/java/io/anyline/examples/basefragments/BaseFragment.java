@@ -39,7 +39,7 @@ public class BaseFragment extends Fragment{
     public BaseFragment() {
     }
 
-    protected View inflateFragment(int resId, LayoutInflater inflater, ViewGroup container, String[] names, String[] classes, BaseGridListAdapter.OnItemClickListener onClickListener /*, String[] images*/) {
+    protected View inflateFragment(int resId, LayoutInflater inflater, ViewGroup container, String[] names, String[] classes, BaseGridListAdapter.OnItemClickListener onClickListener) {
 
         View view = inflater.inflate(resId, container, false);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), DEFAULT_SPAN_COUNT);
@@ -56,7 +56,7 @@ public class BaseFragment extends Fragment{
         return view;
     }
 
-    protected View inflateEnergyFragment(int resId, LayoutInflater inflater, ViewGroup container, String[] names, String[] classes, BaseGridListAdapter.OnItemClickListener onClickListener /*, String[] images*/) {
+    protected View inflateEnergyFragment(int resId, LayoutInflater inflater, ViewGroup container, String[] names, String[] classes, BaseGridListAdapter.OnItemClickListener onClickListener) {
         View view = inflater.inflate(resId, container, false);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), DEFAULT_SPAN_COUNT);
         setupToolbar(view);

@@ -284,6 +284,7 @@
 
     <string name="scan">Scan</string>
     <string name="save">Save</string>
+    <string name="confirm">Confirm</string>
     <string name="saved">Saved</string>
     <string name="finish">Finish</string>
     <string name="scan_again">Scan Again</string>
@@ -330,5 +331,30 @@
     <string name="screen_scan_result_title">Scan Results</string>
     <string name="screen_customer_title">Customer</string>
     <string name="processes_scan_screen_title">Barcode</string>
+
+    <!-- MRZ result Screen Keys -->
+    <string name="mrz_given_names">Given Name</string>
+    <string name="mrz_sur_names">Surname</string>
+    <string name="mrz_document_type">Document Type</string>
+    <string name="mrz_sex">Sex</string>
+    <string name="mrz_country_code">Nationality</string>
+    <string name="mrz_document_number">Document Number</string>
+    <string name="mrz_expiration_date">Expiration Date</string>
+    <string name="mrz_date_of_birthday">Date of Birth</string>
+    <string name="not_available">Not Available</string>
+
+    <!-- LicensePlate result Screen Keys -->
+    <string name="license_plate_country">Country</string>
+    <string name="license_plate_result">License Plate</string>
+
+    <!-- MeterReading result Screen Keys -->
+    <string name="reading_result">Reading result</string>
+
+    <!-- Driving License result Screen Keys -->
+    <string name="driving_license_given_names">First Name</string>
+    <string name="driving_license_sur_names">Last Name</string>
+    <string name="driving_license_DOB">Date of Birth</string>
+    <string name="driving_license_document_code">Document Number</string>
+
 
 </resources>

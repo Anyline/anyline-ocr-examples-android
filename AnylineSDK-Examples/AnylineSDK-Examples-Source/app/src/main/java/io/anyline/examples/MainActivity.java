@@ -14,7 +14,6 @@ import io.anyline.examples.basefragments.ViewPagerFragment;
 
 public class MainActivity extends BaseToolbarActivity {
 
-    //private CameraPermissionHelper cameraPermissionHelper;
     private TextView messageCounter;
 
     @Override

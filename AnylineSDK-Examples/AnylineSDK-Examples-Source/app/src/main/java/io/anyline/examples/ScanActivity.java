@@ -1,5 +1,7 @@
 package io.anyline.examples;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -10,11 +12,19 @@ import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+
 import at.nineyards.anyline.camera.AnylineView;
+import at.nineyards.anyline.models.AnylineImage;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.licenseplate.LicensePlateScanView;
+import io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity;
 import io.anyline.examples.ocr.feedback.FeedbackType;
 import io.anyline.examples.ocr.feedback.FeedbackView;
+import io.anyline.examples.scanviewresult.ScanViewResultActivity;
+import io.anyline.examples.util.Constant;
 
 
 abstract public class ScanActivity extends ScanningConfigurationActivity{
@@ -156,6 +166,45 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
         } else if (feedbackViewActive) {
             feedbackView.setFeedbackType(feedbackType);
         }
+    }
+
+    protected String setupImagePath(AnylineImage image){
+        String imagePath = "";
+        try {
+            if(this.getExternalFilesDir(null) != null) {
+
+                imagePath = this
+                        .getExternalFilesDir(null)
+                        .toString() + "/results/" + "mrz_image";
+
+            }else if(this.getFilesDir() != null){
+
+                imagePath = this
+                        .getFilesDir()
+                        .toString() + "/results/" + "mrz_image";
+
+            }
+            File fullFile = new File(imagePath);
+            //create the directory
+            fullFile.mkdirs();
+            image.save(fullFile, 100);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return imagePath;
+    }
+
+    protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String path){
+       // String path = setupImagePath(anylineOcrResult.getCutoutImage());
+
+        Intent i = new Intent(getBaseContext(), ScanViewResultActivity.class);
+        i.putExtra(Constant.SCAN_MODULE, scanMode);
+        i.putExtra(Constant.SCAN_RESULT_DATA, scanResult);
+        i.putExtra(Constant.SCAN_FULL_PICTURE_PATH, path);
+        overridePendingTransition(R.anim.activity_open_translate, R.anim.fade_out);
+        startActivity(i);
     }
 
 }

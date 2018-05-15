@@ -258,11 +258,11 @@
                 android:value="io.anyline.examples.MainActivity"/>
         </activity>
         <activity
-            android:name=".settings.SettingsActivity"
-            android:label=""
+            android:name=".scanviewresult.ScanViewResultActivity"
+            android:label="Result Data"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/PreferencesTheme">
+            android:theme="@style/AppTheme.DarkActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.anyline.examples.MainActivity" />

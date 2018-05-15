@@ -11,17 +11,14 @@ package io.anyline.examples.drivinglicense;
 
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.View;
 import android.view.ViewGroup;
-
-import java.util.Arrays;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.mrz.Identification;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
 import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
@@ -37,7 +34,6 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 
     private static final String TAG = ScanDrivingLicenseActivity.class.getSimpleName();
     private AnylineOcrScanView anylineOcrScanView;
-    private DrivingLicenseResultView drivingLicenseResultView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +41,6 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
         getLayoutInflater().inflate(R.layout.activity_scan_driver_license, (ViewGroup) findViewById(R.id.scan_view_placeholder));
 
         anylineOcrScanView = (AnylineOcrScanView) findViewById(R.id.ocr_view);
-        drivingLicenseResultView = (DrivingLicenseResultView) findViewById(R.id.driver_license_result);
 
         // add a camera open listener that will be called when the camera is opened or an error occurred
         //  this is optional (if not set a RuntimeException will be thrown if an error occurs)
@@ -67,30 +62,12 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
                 // This is called when a result is found.
                 // The Identification includes all the data read from the driving license
                 // as scanned and the given image shows the scanned driving license
+
                 String resultString = result.getResult();
-                String[] results = resultString.split("\\|");
-
-                String[] birthdateDocNumber = results[1].split(" ");
-
-                Identification identification = new Identification();
-                drivingLicenseResultView.setDocumentNumber(birthdateDocNumber[1]);
-                drivingLicenseResultView.setDayOfBirth(birthdateDocNumber[0]);
-                drivingLicenseResultView.setName(results[0]);
-                drivingLicenseResultView.setVisibility(View.VISIBLE);
-
+                String path = setupImagePath(result.getCutoutImage());
+                startScanResultIntent(getResources().getString(R.string.title_driving_license), getDrivingLicenseResult(resultString), path);
 
                 setupScanProcessView(ScanDrivingLicenseActivity.this, result, getScanModule());
-            }
-        });
-
-        drivingLicenseResultView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drivingLicenseResultView.setVisibility(View.INVISIBLE);
-                resetTime();
-                if (!anylineOcrScanView.isRunning()) {
-                    anylineOcrScanView.startScanning();
-                }
             }
         });
 
@@ -109,9 +86,7 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
     @Override
     protected void onResume() {
         super.onResume();
-        drivingLicenseResultView.setVisibility(View.INVISIBLE);
 
-        //start the actual scanning
         anylineOcrScanView.startScanning();
     }
 
@@ -127,15 +102,7 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 
     @Override
     public void onBackPressed() {
-        //close the result view on back press if it is open
-        if (drivingLicenseResultView.getVisibility() == View.VISIBLE) {
-            drivingLicenseResultView.setVisibility(View.INVISIBLE);
-            if (!anylineOcrScanView.isRunning()) {
-                anylineOcrScanView.startScanning();
-            }
-        } else {
-            super.onBackPressed();
-        }
+        super.onBackPressed();
     }
 
     @Override
@@ -155,5 +122,56 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
     @Override
     protected ScanModuleEnum.ScanModule getScanModule() {
         return ScanModuleEnum.ScanModule.DRIVER_LICENSE;
+    }
+
+    public HashMap<String, String> getDrivingLicenseResult(String drivingLicenseResult) {
+
+        HashMap<String, String> drivingLicenseHashMap = new HashMap<>();
+
+
+        String[] results = drivingLicenseResult.split("\\|");
+        String firstName = null ;
+        String secondName = null;
+        String dob = null;
+        String code = null;
+
+        //The result order is predefined and it is like it follows
+        if(results.length == 4){
+
+            //first is surname
+            secondName = results[0];
+            //second is firstname
+            firstName = results[1];
+            //third is date of birth
+            dob = results[2];
+            //the last one is the document code
+            code = results[3];
+        }
+
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_given_names) , (firstName == null || firstName.isEmpty()) ?  getResources().getString(R.string.not_available) : firstName);
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_sur_names) , (secondName == null || secondName.isEmpty()) ?  getResources().getString(R.string.not_available) : secondName);
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_DOB), (dob == null || dob.isEmpty()) ? getResources().getString(R.string.not_available) : dayOfBirthFormat(dob));
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_document_code), (code == null || code.isEmpty()) ? getResources().getString(R.string.not_available) : code);
+
+        return drivingLicenseHashMap;
+    }
+
+    public String dayOfBirthFormat(String dayOfBirth){
+
+        String dateString = dayOfBirth;
+        String inputFormat = "ddMMyyyy";
+        String outputFormat = "yyyy-MM-dd";
+        if(Integer.parseInt(dayOfBirth.substring(2,4)) > 12 || Integer.parseInt(dayOfBirth.substring(4,6)) <= 12){
+            inputFormat = "yyyyMMdd";
+        }
+        SimpleDateFormat inputDateFormat = new SimpleDateFormat(inputFormat);
+        SimpleDateFormat outputDateFormat = new SimpleDateFormat(outputFormat);
+        try {
+            dateString = outputDateFormat.format(inputDateFormat.parse(dayOfBirth));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return dateString;
     }
 }

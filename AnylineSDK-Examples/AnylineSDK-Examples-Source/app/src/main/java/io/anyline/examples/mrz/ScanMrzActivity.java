@@ -12,8 +12,10 @@ package io.anyline.examples.mrz;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.view.ViewGroup;
+
+import java.text.DateFormat;
+import java.util.LinkedHashMap;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
@@ -25,6 +27,7 @@ import at.nineyards.anyline.modules.mrz.MrzScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
+import io.anyline.examples.scanviewresult.ScanViewResultActivity;
 
 /**
  * Example Activity for the Anyline-MRZ-Module.
@@ -33,7 +36,9 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener 
 
     private static final String TAG = ScanMrzActivity.class.getSimpleName();
     private MrzScanView mrzScanView;
-    private MrzResultView mrzResultView;
+
+
+    private ScanViewResultActivity scanViewResultActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,6 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener 
         getLayoutInflater().inflate(R.layout.activity_scan_mrz, (ViewGroup) findViewById(R.id.scan_view_placeholder));
 
         mrzScanView = (MrzScanView) findViewById(R.id.mrz_view);
-        mrzResultView = (MrzResultView) findViewById(R.id.mrz_result);
 
         // add a camera open listener that will be called when the camera is opened or an error occurred
         //  this is optional (if not set a RuntimeException will be thrown if an error occurs)
@@ -60,22 +64,15 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener 
                 // as scanned and the given image shows the scanned ID/Passport
 
                 Identification identification = mrzResult.getResult();
+                identification.toJSONObject();
 
-                mrzResultView.setIdentification(identification);
-                mrzResultView.setVisibility(View.VISIBLE);
-                
+                //set the path of the mrz Image
+                String path = setupImagePath(mrzResult.getCutoutImage());
+
+
+
+                startScanResultIntent(getResources().getString(R.string.title_mrz), getIdentificationResult(identification), path);
                 setupScanProcessView(ScanMrzActivity.this, mrzResult, getScanModule());
-            }
-        });
-
-        mrzResultView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mrzResultView.setVisibility(View.INVISIBLE);
-                resetTime();
-                if (!mrzScanView.isRunning()) {
-                    mrzScanView.startScanning();
-                }
             }
         });
 
@@ -94,8 +91,6 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener 
     @Override
     protected void onResume() {
         super.onResume();
-        mrzResultView.setVisibility(View.INVISIBLE);
-
         //start the actual scanning
         mrzScanView.startScanning();
     }
@@ -112,15 +107,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener 
 
     @Override
     public void onBackPressed() {
-        //close the result view on back press if it is open
-        if (mrzResultView.getVisibility() == View.VISIBLE) {
-            mrzResultView.setVisibility(View.INVISIBLE);
-            if (!mrzScanView.isRunning()) {
-                mrzScanView.startScanning();
-            }
-        } else {
-            super.onBackPressed();
-        }
+        super.onBackPressed();
     }
 
     @Override
@@ -141,5 +128,26 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener 
     protected ScanModuleEnum.ScanModule getScanModule() {
         return ScanModuleEnum.ScanModule.MRZ;
     }
+
+    public LinkedHashMap<String, String> getIdentificationResult(Identification identification) {
+
+        LinkedHashMap<String, String> identificationResult = new LinkedHashMap<>();
+
+        identificationResult.put(getResources().getString(R.string.mrz_document_type) , (identification.getDocumentType() == null || identification.getDocumentType().isEmpty()) ?  getResources().getString(R.string.not_available) : identification.getDocumentType());
+        identificationResult.put(getResources().getString(R.string.mrz_country_code), (identification.getNationalityCountryCode() == null || identification.getNationalityCountryCode().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getNationalityCountryCode());
+        identificationResult.put(getResources().getString(R.string.mrz_document_number), (identification.getDocumentNumber() == null || identification.getDocumentNumber().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getDocumentNumber());
+        identificationResult.put(getResources().getString(R.string.mrz_sur_names),(identification.getSurNames() == null || identification.getSurNames().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getSurNames());
+        identificationResult.put(getResources().getString(R.string.mrz_given_names),(identification.getGivenNames() == null || identification.getGivenNames().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getGivenNames());
+        identificationResult.put(getResources().getString(R.string.mrz_expiration_date),(identification.getExpirationDateObject() == null) ? getResources().getString(R.string.not_available) : DateFormat.getDateInstance(DateFormat.SHORT, getResources().getConfiguration().locale).format(identification.getExpirationDateObject()));
+        identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday),(identification.getDayOfBirthObject() == null) ? getResources().getString(R.string.not_available) : DateFormat.getDateInstance(DateFormat.SHORT, getResources().getConfiguration().locale).format(identification.getDayOfBirthObject()));
+        identificationResult.put(getResources().getString(R.string.mrz_sex), (identification.getSex() == null || identification.getSex().isEmpty()) ?  getResources().getString(R.string.not_available) : identification.getSex());
+
+        return identificationResult;
+    }
+
+
+
+
+
 
 }

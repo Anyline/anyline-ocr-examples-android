@@ -3,7 +3,9 @@ package io.anyline.examples.util;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 
+import java.io.File;
 import java.io.FileInputStream;
 
 /**
@@ -52,18 +54,17 @@ public class BitmapUtil {
     }
 
     public static Bitmap getBitmap (String path){
-        Bitmap bitmapImage = null;
+        Bitmap scaleImage = null;
         try {
             FileInputStream fi = new FileInputStream(path);
-            bitmapImage = BitmapFactory.decodeStream(fi);
+            Bitmap bitmapImage = BitmapFactory.decodeStream(fi);
+            scaleImage = Bitmap.createScaledBitmap(bitmapImage, bitmapImage.getWidth() * 2  , bitmapImage.getHeight() * 2, false);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-        return bitmapImage;
+        return scaleImage;
 
     }
-
-
 
 }

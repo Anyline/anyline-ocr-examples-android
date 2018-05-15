@@ -2,10 +2,10 @@ package io.anyline.examples.licenseplate;
 
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.RelativeLayout;
+
+import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.AnylineViewConfig;
@@ -18,13 +18,11 @@ import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.feedback.FeedbackType;
-import io.anyline.examples.licenseplate.result.LicensePlateResultView;
 
 public class ScanLicensePlateActivity extends ScanActivity implements AnylineDebugListener {
 
     private static final String TAG = ScanLicensePlateActivity.class.getSimpleName();
     protected LicensePlateScanView scanView;
-    private LicensePlateResultView licensePlateResultView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +31,6 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getLayoutInflater().inflate(R.layout.activity_scan_license_plate, (ViewGroup) findViewById(R.id.scan_view_placeholder));
 
-        //setContentView(R.layout.activity_anyline_ocr);
-        addLicensePlateResultView();
         final String license = getString(R.string.anyline_license_key);
 
         // Get the view from the layout
@@ -51,28 +47,13 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
             public void onResult(LicensePlateResult licensePlateResult) {
                 // Called when a valid result is found (minimum confidence is exceeded and validation with regex was ok)
 
-                //getAwardedDialog();
-                //addAwardedPoint();
                 setFeedbackViewActive(false);
 
-                String country = licensePlateResult.getCountry();
-                String licensePlate = licensePlateResult.getResult();
+                String path = setupImagePath(licensePlateResult.getCutoutImage());
 
-                if (country != null && !country.isEmpty()) {
-                    licensePlateResultView.setCountry(country);
-                }
-
-                licensePlateResultView.setLicensePlate(licensePlate);
-                licensePlateResultView.setVisibility(View.VISIBLE);
+                startScanResultIntent(getResources().getString(R.string.title_license_plate), getLicensePlateResult(licensePlateResult), path);
 
                 setupScanProcessView(ScanLicensePlateActivity.this, licensePlateResult, getScanModule());
-            }
-        });
-
-        licensePlateResultView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                restartScanningAfterResult();
             }
         });
 
@@ -94,23 +75,8 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
         return ScanModuleEnum.ScanModule.LICENSE_PLATE;
     }
 
-    private void addLicensePlateResultView() {
-        RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.license_plate_main_layout);
-
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
-        params.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
-
-        licensePlateResultView = new LicensePlateResultView(this);
-        licensePlateResultView.setVisibility(View.INVISIBLE);
-
-        mainLayout.addView(licensePlateResultView, params);
-    }
-
 
     private void restartScanningAfterResult() {
-        clearAndHideLicensePlateResultView();
         setFeedbackViewActive(true);
         if (!scanView.isRunning()) {
             scanView.startScanning();
@@ -122,15 +88,9 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
     protected void onResume() {
         super.onResume();
 
-        clearAndHideLicensePlateResultView();
         scanView.startScanning();
     }
 
-    private void clearAndHideLicensePlateResultView() {
-        licensePlateResultView.setLicensePlate("");
-        licensePlateResultView.setCountry("");
-        licensePlateResultView.setVisibility(View.INVISIBLE);
-    }
 
     @Override
     protected void onPause() {
@@ -142,12 +102,7 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
 
     @Override
     public void onBackPressed() {
-        if (licensePlateResultView.getVisibility() == View.VISIBLE) {
-            restartScanningAfterResult();
-        } else {
-            super.onBackPressed();
-        }
-
+        super.onBackPressed();
     }
 
     @Override
@@ -170,6 +125,16 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
         } else if (AnylineDebugListener.DEVICE_SHAKE_WARNING_VARIABLE_NAME.equals(name)) {
             handleFeedback(FeedbackType.SHAKY);
         }
+    }
+
+    public HashMap<String, String> getLicensePlateResult(LicensePlateResult licensePlateResult) {
+
+        HashMap<String, String> licensePlateResultData = new HashMap<>();
+
+        licensePlateResultData.put(getResources().getString(R.string.license_plate_country) , (licensePlateResult.getCountry() == null || licensePlateResult.getCountry().isEmpty()) ?  getResources().getString(R.string.not_available) : licensePlateResult.getCountry());
+        licensePlateResultData.put(getResources().getString(R.string.license_plate_result), (licensePlateResult.getResult() == null || licensePlateResult.getResult().isEmpty()) ? getResources().getString(R.string.not_available) : licensePlateResult.getResult());
+
+        return licensePlateResultData;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package io.anyline.examples.meter.baseactivities;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.Typeface;
@@ -26,6 +27,8 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.vision.barcode.Barcode;
 
+import java.util.HashMap;
+
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
@@ -36,7 +39,10 @@ import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.dialog.SimpleAlertDialog;
+import io.anyline.examples.licenseplate.ScanLicensePlateActivity;
 import io.anyline.examples.ocr.ScanSerialNumberActivity;
+import io.anyline.examples.scanviewresult.ScanViewResultActivity;
+import io.anyline.examples.util.Constant;
 
 /**
  * Base class for the Energymodule:
@@ -86,45 +92,12 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
                 // The result for meter readings is a String with leading zeros (if any) and no decimals.
 
 
-                final SimpleAlertDialog alert = new SimpleAlertDialog(AbstractEnergyActivity.this);
-
                 String result = energyResult.getResult();
 
-                alert.setMessage(getFormattedResult(result));
-
-                // smaller text size for 6 digit heat meters, because of too narrow screen sizes (e.g. Galaxy Note 2, Galaxy Ace 4)
-                if (energyResult.getScanMode() == EnergyScanView.ScanMode.SERIAL_NUMBER) {
-                    alert.setMessageTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
-                } else if (energyResult.getScanMode() == EnergyScanView.ScanMode.HEAT_METER_6) {
-                    alert.setMessageTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
-                } else {
-                    alert.setMessageTextSize(TypedValue.COMPLEX_UNIT_DIP, 22);
-                }
-
-                alert.setIcon(null);
-
-                // needed to restart scanning for click outside of dialog
-                final AlertDialog dialog = alert.show();
-                dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                    @Override
-                    public void onDismiss(DialogInterface dialog) {
-                        resetTime();
-                        if (!energyScanView.isRunning()) {
-                            energyScanView.startScanning();
-                        }
-                    }
-                });
-
-                alert.setPositive(getString(R.string.ok), new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                    }
-                });
+                String path = setupImagePath(energyResult.getCutoutImage());
+                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResul(result), path);
 
                 setupScanProcessView(AbstractEnergyActivity.this, energyResult, getScanModule());
-
-
 
                 foundBarcodeString = ""; // reset the information about the last found barcode
             }
@@ -219,38 +192,16 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
         throw new RuntimeException(e);
     }
 
-    /**
-     * Format a meter reading to look a bit like a meter.
-     *
-     * @param result the meter reading
-     * @return the formatted string
-     */
-    protected CharSequence getFormattedResult(String result) {
+    protected HashMap<String, String> getMeterReadingResul (String result) {
 
-        SpannableStringBuilder sb = new SpannableStringBuilder();
+        HashMap<String, String> meterReadingResult = new HashMap();
 
-        for (int i = 0, n = result.length(); i < n; i++) {
-            char text = result.charAt(i);
-            sb.append(" ");
-            sb.append(text);
-            sb.append(" ");
-            sb.setSpan(new BackgroundColorSpan(getResources().getColor(R.color.green_alpha_77)), i * 4, i * 4 + 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            sb.setSpan(new ForegroundColorSpan(Color.BLACK), i * 4, i * 4 + 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            sb.append(" ");
-        }
+        meterReadingResult.put(getResources().getString(R.string.reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
+        meterReadingResult.put(getResources().getString(R.string.barcode), (foundBarcodeString.isEmpty() || foundBarcodeString ==null) ? getResources().getString(R.string.not_available) : foundBarcodeString);
 
-        if (foundBarcodeString != null && !foundBarcodeString.isEmpty()) {
-            String tmp = "Barcode: " + foundBarcodeString;
-            sb.append("\n\n");
-            sb.append(tmp);
-
-            int start = result.length() * 4 + 2; // to get the right offset, we have above already length*4 + 2 for the two line breaks
-            sb.setSpan(new StyleSpan(Typeface.ITALIC), start, start + tmp.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            sb.setSpan(new AbsoluteSizeSpan(18, true), start, start + tmp.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);//resize size
-        }
-
-        return sb;
+        return meterReadingResult;
     }
+
 
     @Override
     public Rect getCutoutRect() {

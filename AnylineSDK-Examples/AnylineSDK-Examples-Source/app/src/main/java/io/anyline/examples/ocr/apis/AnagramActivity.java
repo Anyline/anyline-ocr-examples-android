@@ -19,7 +19,6 @@ import java.util.Comparator;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.ScanningConfigurationActivity;
 import io.anyline.examples.R;
-import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 
 public class AnagramActivity extends ScanningConfigurationActivity implements RequestListener {

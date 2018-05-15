@@ -8,12 +8,11 @@
  */
 package io.anyline.examples.ocr;
 
-import android.content.DialogInterface;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.AnylineViewConfig;
@@ -26,7 +25,6 @@ import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
-import io.anyline.examples.dialog.SimpleAlertDialog;
 import io.anyline.examples.ocr.feedback.FeedbackType;
 
 
@@ -66,30 +64,10 @@ public class ScanSerialNumberActivity extends ScanActivity implements AnylineDeb
 
                 setFeedbackViewActive(false);
 
-                final SimpleAlertDialog alert = new SimpleAlertDialog(ScanSerialNumberActivity.this);
-
-                alert.setMessage(result);
-
-                alert.setIcon(null);
-
-                // needed to restart scanning for click outside of dialog
-                final AlertDialog dialog = alert.show();
-                dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                    @Override
-                    public void onDismiss(DialogInterface dialog) {
-                        resetTime();
-                        if (!scanView.isRunning()) {
-                            scanView.startScanning();
-                        }
-                    }
-                });
-
-                alert.setPositive(getString(R.string.ok), new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                    }
-                });
+                //set the path for the image which will be shown in the result screen
+                String path = setupImagePath(anylineOcrResult.getCutoutImage());
+                //start the resultScanView activity
+                startScanResultIntent(getResources().getString(R.string.title_serial_number), getSerialNumberResult(result), path);
 
                 setupScanProcessView(ScanSerialNumberActivity.this, anylineOcrResult, getScanModule());
             }
@@ -147,6 +125,15 @@ public class ScanSerialNumberActivity extends ScanActivity implements AnylineDeb
         } else if(AnylineDebugListener.DEVICE_SHAKE_WARNING_VARIABLE_NAME.equals(name)){
             handleFeedback(FeedbackType.SHAKY);
         }
+    }
+
+    protected HashMap<String, String> getSerialNumberResult (String result) {
+
+        HashMap<String, String> serialNumberResult = new HashMap();
+
+        serialNumberResult.put(getResources().getString(R.string.reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
+
+        return serialNumberResult;
     }
 
     @Override

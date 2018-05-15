@@ -31,7 +31,7 @@
         "strokeColor": "0099FF",
         "fillColor": "220099FF"
     },
-    "beepOnResult": false,
+    "beepOnResult": true,
     "vibrateOnResult": true,
     "blinkAnimationOnResult": true,
     "cancelOnResult": true,

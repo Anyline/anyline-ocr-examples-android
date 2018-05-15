@@ -28,7 +28,7 @@
         "strokeWidth": 2,
         "strokeColor": "0099FF"
     },
-    "beepOnResult": false,
+    "beepOnResult": true,
     "vibrateOnResult": true,
     "blinkAnimationOnResult": true,
     "cancelOnResult": true,
