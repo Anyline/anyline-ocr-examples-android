@@ -347,8 +347,15 @@
     <string name="license_plate_country">Country</string>
     <string name="license_plate_result">License Plate</string>
 
-    <!-- MeterReading result Screen Keys -->
+    <!-- Others result Screen Keys -->
     <string name="reading_result">Reading result</string>
+    <string name="iban_reading_result">IBAN</string>
+    <string name="vin_reading_result">Vehicle Identification Number</string>
+    <string name="shipping_reading_result">Shipping Container Number</string>
+    <string name="universal_reading_result">Universal Serial Number</string>
+    <string name="bottlecap_reading_result">Bottlecap Code</string>
+    <string name="redbull_reading_result">RedBull Mobile Collect Code</string>
+    <string name="voucher_reading_result">Voucher Code</string>
 
     <!-- Driving License result Screen Keys -->
     <string name="driving_license_given_names">First Name</string>

@@ -7,6 +7,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -67,6 +68,7 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
         documentScanView.initAnyline(getString(R.string.anyline_license_key), new DocumentResultListener() {
             @Override
             public void onResult(DocumentResult documentResult) {
+
                 // handle the result document images here
                 if (progressDialog != null && progressDialog.isShowing()) {
                     progressDialog.dismiss();
@@ -77,9 +79,9 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
 
                 showToast(getString(R.string.document_picture_success));
 
-                // perform some animation
-                performScaleOutAnimation(transformedImage);
 
+                // show the picture on the screen
+                displayPicture(transformedImage);
 
                 /**
                  * IMPORTANT: cache provided frames here, and release them at the end of this onResult. Because
@@ -104,6 +106,7 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
                 // release the images
                 transformedImage.release();
                 fullFrame.release();
+
             }
 
             @Override
@@ -111,7 +114,7 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
                 // this is called after the preview of the document is completed, and a full picture will be
                 // processed automatically
 
-                performScaleInAnimation(anylineImage);
+                // performScaleInAnimation(anylineImage);
                 notificationToast = Toast.makeText(ScanDocumentActivity.this, "Scanning full document. Please hold " +
                         "still", Toast.LENGTH_LONG);
                 notificationToast.show();
@@ -158,10 +161,6 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
                 if (progressDialog != null && progressDialog.isShowing()) {
                     progressDialog.dismiss();
                 }
-
-                // cancel the animation on error
-                imageViewFull.clearAnimation();
-                imageViewFull.setVisibility(View.INVISIBLE);
 
                 AnylineImage image = documentScanView.getCurrentFullImage();
 
@@ -223,8 +222,9 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
 
         });
 
+        documentScanView.setPostProcessingEnabled(true);
         // optionally stop the scan once a valid result was returned
-        // documentScanView.cancelOnResult(true);
+        //documentScanView.setCancelOnResult(true);
 
     }
 
@@ -239,126 +239,22 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
     }
 
     /**
-     * Performs an animation on a successful preview. This is just an example.
-     *
-     * @param anylineImage The cropped successful preview image
-     */
-    private void performScaleInAnimation(AnylineImage anylineImage) {
-        final AlphaAnimation scanPulseAnimation = new AlphaAnimation(0.05f, 0.3f);
-        scanPulseAnimation.setDuration(500);
-        scanPulseAnimation.setFillAfter(true);
-        scanPulseAnimation.setRepeatMode(Animation.REVERSE);
-        scanPulseAnimation.setRepeatCount(Animation.INFINITE);
-
-        if (lastOutline != null) {
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams
-                    .WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT); //WRAP_CONTENT param can be
-            // FILL_PARENT
-            params.leftMargin = (lastOutline.get(0).x < lastOutline.get(3).x) ? (int) lastOutline.get(0).x :
-                    (int) lastOutline.get(3).x; //XCOORD
-            params.topMargin = (lastOutline.get(0).y < lastOutline.get(1).y) ? (int) lastOutline.get(0).y :
-                    (int) lastOutline.get(0).y; //YCOORD
-            params.width = (lastOutline.get(1).x > lastOutline.get(2).x) ? (int) (lastOutline.get(1).x -
-                    params.leftMargin) : (int) (lastOutline.get(2).x - params.leftMargin);
-            params.height = (lastOutline.get(2).y > lastOutline.get(3).y) ? (int) (lastOutline.get(2).y -
-                    params.topMargin) : (int) (lastOutline.get(3).y - params.topMargin);
-            imageViewFull.setLayoutParams(params);
-        }
-
-
-        imageViewFull.setImageBitmap(anylineImage.getBitmap());
-
-
-        final AlphaAnimation alphaAnimation = new AlphaAnimation(0.1f, 1.0f);
-        alphaAnimation.setDuration(500);
-        alphaAnimation.setFillAfter(true);
-        alphaAnimation.setRepeatCount(0);
-
-
-        float scaleWidth = (float) documentScanView.getWidth() / imageViewFull.getLayoutParams().width;
-        float scaleHeight = (float) documentScanView.getHeight() / imageViewFull.getLayoutParams().height;
-
-        float maxScale = (scaleWidth > scaleHeight) ? scaleWidth : scaleHeight;
-        ScaleAnimation scaleAnimation = new ScaleAnimation(1f, maxScale, 1f, maxScale, Animation
-                .RELATIVE_TO_SELF, 0.5f,
-                Animation.RELATIVE_TO_SELF, 0.5f);
-        scaleAnimation.setDuration(500);
-        scaleAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
-        scaleAnimation.setRepeatCount(0);
-        scaleAnimation.setFillAfter(true);
-        scaleAnimation.setFillEnabled(true);
-        scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-                imageViewFull.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) imageViewFull
-                        .getLayoutParams();
-                params.addRule(RelativeLayout.CENTER_HORIZONTAL);
-                params.addRule(RelativeLayout.CENTER_VERTICAL);
-                imageViewFull.setLayoutParams(params);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-        });
-        AnimationSet set = new AnimationSet(false);
-        set.addAnimation(scaleAnimation);
-        set.addAnimation(alphaAnimation);
-        set.setFillAfter(true);
-        set.setFillEnabled(true);
-        imageViewFull.startAnimation(set);
-    }
-
-    /**
      * Performs an animation after the final image was successfully processed. This is just an example.
      *
      * @param transformedImage The transformed final image
      */
-    private void performScaleOutAnimation(AnylineImage transformedImage) {
-        float targetHeight = transformedImage.getHeight() * (100.0f / transformedImage.getWidth());
+    private void displayPicture(AnylineImage transformedImage) {
 
-        ScaleAnimation scaleAnimation = new ScaleAnimation(1f, (float) imageViewResult.getWidth() / imageViewFull
-                .getWidth(), 1f, targetHeight / imageViewFull.getHeight(), Animation.RELATIVE_TO_SELF, 1f,
-                Animation.RELATIVE_TO_SELF, 1f);
-        scaleAnimation.setDuration(500);
-        scaleAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+        imageViewResult.setImageBitmap(Bitmap.createScaledBitmap(transformedImage.getBitmap(), imageViewResult.getWidth(), imageViewResult.getHeight(), false));
+        imageViewResult.setVisibility(View.VISIBLE);
 
-        AlphaAnimation animation1 = new AlphaAnimation(1f, 0.0f);
-        animation1.setDuration(500);
-        animation1.setFillAfter(true);
-
-        AnimationSet set = new AnimationSet(false);
-        set.addAnimation(scaleAnimation);
-        set.addAnimation(animation1);
-
-        imageViewFull.setImageBitmap(Bitmap.createScaledBitmap(transformedImage.getBitmap(), imageViewFull
-                        .getLayoutParams().width,
-                imageViewFull.getLayoutParams().height, false));
-        imageViewFull.startAnimation(set);
-        set.setAnimationListener(new Animation.AnimationListener() {
+        imageViewResult.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                imageViewFull.setVisibility(View.INVISIBLE);
-                imageViewResult.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
+            public void onClick(View view) {
+                resetScanning();
             }
         });
 
-        imageViewResult.setImageBitmap(Bitmap.createScaledBitmap(transformedImage.getBitmap(), 100, 160, false));
-        imageViewResult.setVisibility(View.INVISIBLE);
     }
 
     private void showToast(String text) {
@@ -404,5 +300,39 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
     @Override
     protected ScanModuleEnum.ScanModule getScanModule() {
         return ScanModuleEnum.ScanModule.DOCUMENT;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == android.R.id.home) {
+            if(imageViewResult.getVisibility() == View.VISIBLE){
+                resetScanning();
+            }else {
+                onBackPressed();
+            }
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(imageViewResult.getVisibility() == View.VISIBLE){
+            resetScanning();
+        }else {
+            super.onBackPressed();
+            overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
+        }
+    }
+
+    private void resetScanning(){
+        if(imageViewResult.getVisibility() == View.VISIBLE){
+            imageViewResult.setVisibility(View.GONE);
+            if(!documentScanView.isRunning()){
+                documentScanView.startScanning();
+            }
+        }
     }
 }

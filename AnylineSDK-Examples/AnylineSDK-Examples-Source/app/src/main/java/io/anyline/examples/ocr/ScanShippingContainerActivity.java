@@ -127,7 +127,7 @@ public class ScanShippingContainerActivity extends ScanActivity implements Anyli
     private HashMap<String, String> getShippingContainerResult(String shippingContainerResult){
         HashMap<String, String> shippingContainerHashMap = new HashMap<>();
 
-        shippingContainerHashMap.put(getResources().getString(R.string.reading_result) , (shippingContainerResult == null || shippingContainerResult.isEmpty()) ?  getResources().getString(R.string.not_available) : shippingContainerResult);
+        shippingContainerHashMap.put(getResources().getString(R.string.shipping_reading_result) , (shippingContainerResult == null || shippingContainerResult.isEmpty()) ?  getResources().getString(R.string.not_available) : shippingContainerResult);
 
         return shippingContainerHashMap;
     }

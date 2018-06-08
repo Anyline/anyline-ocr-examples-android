@@ -133,13 +133,14 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener 
 
         LinkedHashMap<String, String> identificationResult = new LinkedHashMap<>();
 
+        DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
         identificationResult.put(getResources().getString(R.string.mrz_document_type) , (identification.getDocumentType() == null || identification.getDocumentType().isEmpty()) ?  getResources().getString(R.string.not_available) : identification.getDocumentType());
         identificationResult.put(getResources().getString(R.string.mrz_country_code), (identification.getNationalityCountryCode() == null || identification.getNationalityCountryCode().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getNationalityCountryCode());
         identificationResult.put(getResources().getString(R.string.mrz_document_number), (identification.getDocumentNumber() == null || identification.getDocumentNumber().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getDocumentNumber());
         identificationResult.put(getResources().getString(R.string.mrz_sur_names),(identification.getSurNames() == null || identification.getSurNames().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getSurNames());
         identificationResult.put(getResources().getString(R.string.mrz_given_names),(identification.getGivenNames() == null || identification.getGivenNames().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getGivenNames());
-        identificationResult.put(getResources().getString(R.string.mrz_expiration_date),(identification.getExpirationDateObject() == null) ? getResources().getString(R.string.not_available) : DateFormat.getDateInstance(DateFormat.SHORT, getResources().getConfiguration().locale).format(identification.getExpirationDateObject()));
-        identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday),(identification.getDayOfBirthObject() == null) ? getResources().getString(R.string.not_available) : DateFormat.getDateInstance(DateFormat.SHORT, getResources().getConfiguration().locale).format(identification.getDayOfBirthObject()));
+        identificationResult.put(getResources().getString(R.string.mrz_expiration_date),(identification.getExpirationDateObject() == null) ? getResources().getString(R.string.not_available) : dateFormat.format(identification.getExpirationDateObject()));
+        identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday),(identification.getDayOfBirthObject() == null) ? getResources().getString(R.string.not_available) : dateFormat.format(identification.getDayOfBirthObject()));
         identificationResult.put(getResources().getString(R.string.mrz_sex), (identification.getSex() == null || identification.getSex().isEmpty()) ?  getResources().getString(R.string.not_available) : identification.getSex());
 
         return identificationResult;

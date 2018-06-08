@@ -2,9 +2,9 @@ package io.anyline.examples.ocr;
 
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+
+import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.AnylineViewConfig;
@@ -18,13 +18,11 @@ import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.feedback.FeedbackType;
-import io.anyline.examples.ocr.result.VoucherCodeResultView;
 
 public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebugListener {
 
     private static final String TAG = ScanVoucherCodeActivity.class.getSimpleName();
     private AnylineOcrScanView scanView;
-    private VoucherCodeResultView voucherCodeResultView;
 
 
     @Override
@@ -33,8 +31,6 @@ public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebu
 
         getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id
                 .scan_view_placeholder));
-
-        addVoucherCodeResultView();
 
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
@@ -61,20 +57,14 @@ public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebu
 
                 setFeedbackViewActive(false);
 
-                voucherCodeResultView.setResult(result);
-                voucherCodeResultView.setVisibility(View.VISIBLE);
+                //set the path for the image which will be shown in the result screen
+                String path = setupImagePath(anylineOcrResult.getCutoutImage());
+                //start the resultScanView activity
+                startScanResultIntent(getResources().getString(R.string.title_voucher), getVoucherResult(result), path);
 
                 setupScanProcessView(ScanVoucherCodeActivity.this, anylineOcrResult, getScanModule());
             }
         });
-
-        voucherCodeResultView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                restartScanningAfterResult();
-            }
-        });
-
 
         createFeedbackView(scanView);
     }
@@ -94,33 +84,9 @@ public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebu
         return ScanModuleEnum.ScanModule.VOUCHER;
     }
 
-    private void addVoucherCodeResultView() {
-        RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
-
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
-        params.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
-
-        voucherCodeResultView = new VoucherCodeResultView(this);
-        voucherCodeResultView.setVisibility(View.INVISIBLE);
-
-        mainLayout.addView(voucherCodeResultView, params);
-    }
-
-    private void restartScanningAfterResult() {
-        voucherCodeResultView.setVisibility(View.INVISIBLE);
-        setFeedbackViewActive(true);
-        resetTime();
-        if (!scanView.isRunning()) {
-            scanView.startScanning();
-        }
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
-        voucherCodeResultView.setVisibility(View.INVISIBLE);
         scanView.startScanning();
     }
 
@@ -134,11 +100,9 @@ public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebu
 
     @Override
     public void onBackPressed() {
-        if (voucherCodeResultView.getVisibility() == View.VISIBLE) {
-            restartScanningAfterResult();
-        } else {
-            super.onBackPressed();
-        }
+        //close the result view on back press if it is open
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
 
     }
 
@@ -163,6 +127,15 @@ public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebu
             handleFeedback(FeedbackType.SHAKY);
         }
     }
+
+    private HashMap<String, String> getVoucherResult (String voucherResult){
+        HashMap<String, String> voucherCodeHashMap = new HashMap<>();
+
+        voucherCodeHashMap.put(getResources().getString(R.string.voucher_reading_result) , (voucherResult == null || voucherResult.isEmpty()) ?  getResources().getString(R.string.not_available) : voucherResult);
+
+        return voucherCodeHashMap;
+    }
+
 
     @Override
     public void onRunSkipped(RunFailure runFailure) {

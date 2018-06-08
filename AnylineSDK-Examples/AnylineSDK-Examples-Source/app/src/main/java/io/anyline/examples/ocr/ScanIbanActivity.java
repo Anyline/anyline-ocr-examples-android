@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import java.util.HashMap;
+
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.camera.CameraConfig;
@@ -26,15 +28,12 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
 
     private static final String TAG = ScanIbanActivity.class.getSimpleName();
     private AnylineOcrScanView scanView;
-    private IbanResultView ibanResultView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id.scan_view_placeholder));
-
-        addIbanResultView();
 
         String license = getString(R.string.anyline_license_key);
         // Get the view from the layout
@@ -51,14 +50,20 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
         //Configure the OCR for IBANs
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         // AUTO ScanMode automatically detects the correct text without any further parameters to be set
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
+        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.LINE);
         // set the languages used for OCR
-        anylineOcrConfig.setLanguages("tessdata/eng_no_dict.traineddata", "tessdata/deu.traineddata");
+        anylineOcrConfig.setLanguages("USNr.any");
         // allow only capital letters and numbers
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890");
         // a simple regex for a basic validation of the IBAN, results that don't match this, will not be returned
         // (full validation is more complex, as different countries have different formats)
         anylineOcrConfig.setValidationRegex("^[A-Z]{2}([0-9A-Z]\\s*){13,32}$");
+        // set the height range the text can have
+        anylineOcrConfig.setMinCharHeight(25);
+        anylineOcrConfig.setMaxCharHeight(65);
+        // the minimum confidence required to return a result, a value between 0 and 100.
+        // (higher confidence means less likely to get a wrong result, but may be slower to get a result)
+        anylineOcrConfig.setMinConfidence(70);
         // set the ocr config
         scanView.setAnylineOcrConfig(anylineOcrConfig);
 
@@ -85,17 +90,10 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
 
                 String result = anylineOcrResult.getResult();
 
-                ibanResultView.setResult(result);
-                ibanResultView.setVisibility(View.VISIBLE);
+                String path = setupImagePath(anylineOcrResult.getCutoutImage());
+                startScanResultIntent(getResources().getString(R.string.title_iban), getIbanResult(result), path);
 
                 setupScanProcessView(ScanIbanActivity.this, anylineOcrResult, getScanModule());
-            }
-        });
-
-        ibanResultView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                restartScanningAfterResult();
             }
         });
 
@@ -118,36 +116,9 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
         return ScanModuleEnum.ScanModule.IBAN;
     }
 
-    private void addIbanResultView() {
-        RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
-
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
-        params.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
-
-        ibanResultView = new IbanResultView(this);
-        ibanResultView.setVisibility(View.INVISIBLE);
-
-        mainLayout.addView(ibanResultView, params);
-    }
-
-
-    private void restartScanningAfterResult() {
-        ibanResultView.setVisibility(View.INVISIBLE);
-        setFeedbackViewActive(true);
-        resetTime();
-        if (!scanView.isRunning()) {
-            scanView.startScanning();
-        }
-    }
-
-
     @Override
     protected void onResume() {
         super.onResume();
-        ibanResultView.setVisibility(View.INVISIBLE);
-
         scanView.startScanning();
     }
 
@@ -161,11 +132,9 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
 
     @Override
     public void onBackPressed() {
-        if (ibanResultView.getVisibility() == View.VISIBLE) {
-            restartScanningAfterResult();
-        } else {
-            super.onBackPressed();
-        }
+        //close the result view on back press if it is open
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
 
     }
 
@@ -189,6 +158,14 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
         } else if(AnylineDebugListener.DEVICE_SHAKE_WARNING_VARIABLE_NAME.equals(name)){
             handleFeedback(FeedbackType.SHAKY);
         }
+    }
+
+    private HashMap<String, String> getIbanResult (String ibanResult){
+        HashMap<String, String> ibanHashMap = new HashMap<>();
+
+        ibanHashMap.put(getResources().getString(R.string.iban_reading_result) , (ibanResult == null || ibanResult.isEmpty()) ?  getResources().getString(R.string.not_available) : ibanResult.replaceAll("....(?!$)", "$0 "));
+
+        return ibanHashMap;
     }
 
     @Override

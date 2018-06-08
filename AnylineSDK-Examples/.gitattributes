@@ -1,3 +1,0 @@
-AnylineSDK-Examples_3.19.0.apk filter=lfs diff=lfs merge=lfs -text
-*aar filter=lfs diff=lfs merge=lfs -text
-*.aar filter=lfs diff=lfs merge=lfs -text

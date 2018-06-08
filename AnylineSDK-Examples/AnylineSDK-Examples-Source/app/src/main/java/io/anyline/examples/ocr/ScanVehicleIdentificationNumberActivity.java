@@ -77,7 +77,7 @@ public class ScanVehicleIdentificationNumberActivity extends ScanActivity implem
     private HashMap<String, String> getVINResult(String vinResult){
         HashMap<String, String> VINHashMap = new HashMap<>();
 
-        VINHashMap.put(getResources().getString(R.string.reading_result) , (vinResult == null || vinResult.isEmpty()) ?  getResources().getString(R.string.not_available) : vinResult);
+        VINHashMap.put(getResources().getString(R.string.vin_reading_result) , (vinResult == null || vinResult.isEmpty()) ?  getResources().getString(R.string.not_available) : vinResult);
 
         return VINHashMap;
     }

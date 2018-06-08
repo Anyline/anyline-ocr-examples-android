@@ -30,7 +30,6 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
     private String scanModule;
     private HashMap<String, String> result;
-    private String scanResult;
     private ScanViewResultAdapter scanResultAdapter;
     private RecyclerView recyclerView;
     private ImageView imageView;
@@ -58,14 +57,12 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             Bundle extras = getIntent().getExtras();
             if (extras != null) {
                 scanModule = extras.getString(Constant.SCAN_MODULE, "").trim();
-                scanResult = extras.getString(Constant.SCAN_RESULT_DATA);
 
                 Bitmap bmp =  BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FULL_PICTURE_PATH));
                 imageView.setImageBitmap(bmp);
             }
         } else {
             scanModule = savedInstanceState.getString(Constant.SCAN_MODULE);
-            scanResult = savedInstanceState.getString(Constant.SCAN_RESULT_DATA);
         }
 
 

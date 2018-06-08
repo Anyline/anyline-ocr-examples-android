@@ -131,7 +131,7 @@ public class ScanSerialNumberActivity extends ScanActivity implements AnylineDeb
 
         HashMap<String, String> serialNumberResult = new HashMap();
 
-        serialNumberResult.put(getResources().getString(R.string.reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
+        serialNumberResult.put(getResources().getString(R.string.universal_reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
 
         return serialNumberResult;
     }

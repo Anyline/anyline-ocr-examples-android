@@ -150,28 +150,28 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 
         drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_given_names) , (firstName == null || firstName.isEmpty()) ?  getResources().getString(R.string.not_available) : firstName);
         drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_sur_names) , (secondName == null || secondName.isEmpty()) ?  getResources().getString(R.string.not_available) : secondName);
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_DOB), (dob == null || dob.isEmpty()) ? getResources().getString(R.string.not_available) : dayOfBirthFormat(dob));
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_DOB), (dob == null || dob.isEmpty()) ? getResources().getString(R.string.not_available) : dob);
         drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_document_code), (code == null || code.isEmpty()) ? getResources().getString(R.string.not_available) : code);
 
         return drivingLicenseHashMap;
     }
 
-    public String dayOfBirthFormat(String dayOfBirth){
-
-        String dateString = dayOfBirth;
-        String inputFormat = "ddMMyyyy";
-        String outputFormat = "yyyy-MM-dd";
-        if(Integer.parseInt(dayOfBirth.substring(2,4)) > 12 || Integer.parseInt(dayOfBirth.substring(4,6)) <= 12){
-            inputFormat = "yyyyMMdd";
-        }
-        SimpleDateFormat inputDateFormat = new SimpleDateFormat(inputFormat);
-        SimpleDateFormat outputDateFormat = new SimpleDateFormat(outputFormat);
-        try {
-            dateString = outputDateFormat.format(inputDateFormat.parse(dayOfBirth));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        return dateString;
-    }
+//    public String dayOfBirthFormat(String dayOfBirth){
+//
+//        String dateString = dayOfBirth;
+//        String inputFormat = "ddMMyyyy";
+//        String outputFormat = "dd.MM.yyyy";
+//        if(Integer.parseInt(dayOfBirth.substring(2,4)) > 12 || Integer.parseInt(dayOfBirth.substring(4,6)) <= 12){
+//            inputFormat = "yyyyMMdd";
+//        }
+//        SimpleDateFormat inputDateFormat = new SimpleDateFormat(inputFormat);
+//        SimpleDateFormat outputDateFormat = new SimpleDateFormat(outputFormat);
+//        try {
+//            dateString = outputDateFormat.format(inputDateFormat.parse(dayOfBirth));
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return dateString;
+//    }
 }

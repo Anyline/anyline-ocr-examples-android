@@ -2,9 +2,9 @@ package io.anyline.examples.ocr;
 
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+
+import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.AnylineViewConfig;
@@ -18,13 +18,11 @@ import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.feedback.FeedbackType;
-import io.anyline.examples.ocr.result.RedBullResultView;
 
 public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebugListener {
 
     private static final String TAG = ScanRedBullCodeActivity.class.getSimpleName();
     private AnylineOcrScanView scanView;
-    private RedBullResultView redBullResultView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +30,6 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
 
         getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id
                 .scan_view_placeholder));
-
-        addRedBullResultView();
 
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
@@ -67,17 +63,12 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
 
                 setFeedbackViewActive(false);
 
-                redBullResultView.setResult(result);
-                redBullResultView.setVisibility(View.VISIBLE);
+                //set the path for the image which will be shown in the result screen
+                String path = setupImagePath(anylineOcrResult.getCutoutImage());
+                //start the resultScanView activity
+                startScanResultIntent(getResources().getString(R.string.title_redbull), getRedbullResult(result), path);
 
                 setupScanProcessView(ScanRedBullCodeActivity.this, anylineOcrResult, getScanModule());
-            }
-        });
-
-        redBullResultView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                restartScanningAfterResult();
             }
         });
 
@@ -99,34 +90,9 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
         return ScanModuleEnum.ScanModule.RED_BULL_CODE;
     }
 
-    private void addRedBullResultView() {
-        RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
-
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
-        params.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
-
-        redBullResultView = new RedBullResultView(this);
-        redBullResultView.setVisibility(View.INVISIBLE);
-
-        mainLayout.addView(redBullResultView, params);
-    }
-
-    private void restartScanningAfterResult() {
-        redBullResultView.setVisibility(View.INVISIBLE);
-        setFeedbackViewActive(true);
-        resetTime();
-        if (!scanView.isRunning()) {
-            scanView.startScanning();
-        }
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
-        redBullResultView.setVisibility(View.INVISIBLE);
-
         scanView.startScanning();
     }
 
@@ -140,11 +106,9 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
 
     @Override
     public void onBackPressed() {
-        if (redBullResultView.getVisibility() == View.VISIBLE) {
-            restartScanningAfterResult();
-        } else {
-            super.onBackPressed();
-        }
+        //close the result view on back press if it is open
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
 
     }
 
@@ -169,6 +133,15 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
             handleFeedback(FeedbackType.SHAKY);
         }
     }
+
+    private HashMap<String, String> getRedbullResult (String redbullResult){
+        HashMap<String, String> redbullHashMap = new HashMap<>();
+
+        redbullHashMap.put(getResources().getString(R.string.redbull_reading_result) , (redbullResult == null || redbullResult.isEmpty()) ?  getResources().getString(R.string.not_available) : redbullResult);
+
+        return redbullHashMap;
+    }
+
 
     @Override
     public void onRunSkipped(RunFailure runFailure) {

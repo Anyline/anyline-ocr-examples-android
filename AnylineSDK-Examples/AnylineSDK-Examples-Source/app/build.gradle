@@ -7,9 +7,9 @@ android {
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 15
-        targetSdkVersion 24
-        versionCode 177
-        versionName "3.24.0"
+        targetSdkVersion 26
+        versionCode 188
+        versionName "3.25.0"
 
         ndk {
             abiFilters "armeabi-v7a", "x86"
@@ -35,10 +35,10 @@ dependencies {
     compile 'com.android.support:multidex:1.0.1'
 
     //include AnylineSDK from locale libs folder
-    //compile(name:'anylinesdk-3.24.0', ext:'aar')
+    //compile(name:'anylinesdk-release-3.25.0', ext:'aar')
 
     //include AnylineSDK from maven
-    compile 'io.anyline:anylinesdk:3.24.0@aar'
+    compile 'io.anyline:anylinesdk:3.25.0@aar'
 
 
 
