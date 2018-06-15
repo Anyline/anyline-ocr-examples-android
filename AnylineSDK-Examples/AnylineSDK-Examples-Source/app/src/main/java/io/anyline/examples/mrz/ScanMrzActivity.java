@@ -13,12 +13,16 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.util.LinkedHashMap;
 
+import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
+import at.nineyards.anyline.core.RunFailure;
+import at.nineyards.anyline.core.exception_error_codes;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.mrz.Identification;
 import at.nineyards.anyline.modules.mrz.MrzResult;
@@ -32,10 +36,11 @@ import io.anyline.examples.scanviewresult.ScanViewResultActivity;
 /**
  * Example Activity for the Anyline-MRZ-Module.
  */
-public class ScanMrzActivity extends ScanActivity implements CameraOpenListener {
+public class ScanMrzActivity extends ScanActivity implements CameraOpenListener, AnylineDebugListener {
 
     private static final String TAG = ScanMrzActivity.class.getSimpleName();
     private MrzScanView mrzScanView;
+    private static Toast notificationToast;
 
 
     private ScanViewResultActivity scanViewResultActivity;
@@ -75,6 +80,8 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener 
                 setupScanProcessView(ScanMrzActivity.this, mrzResult, getScanModule());
             }
         });
+
+        mrzScanView.setDebugListener(this);
 
     }
 
@@ -147,8 +154,26 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener 
     }
 
 
+    @Override
+    public void onDebug(String s, Object o) {
+    }
 
+    @Override
+    public void onRunSkipped(RunFailure runFailure) {
 
+        if(runFailure!=null && runFailure.errorCode() == exception_error_codes.PointsOutOfCutout.swigValue()){
+            showToast(runFailure.getMessage());
+            System.out.println("aici sunt");
+        }
+    }
 
-
+    private void showToast(String st) {
+        try {
+            notificationToast.getView().isShown();
+            notificationToast.setText(st);
+        } catch (Exception e) {
+            notificationToast = Toast.makeText(this, st, Toast.LENGTH_SHORT);
+        }
+        notificationToast.show();
+    }
 }
