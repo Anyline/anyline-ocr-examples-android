@@ -95,7 +95,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
                 String result = energyResult.getResult();
 
                 String path = setupImagePath(energyResult.getCutoutImage());
-                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResul(result), path);
+                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResult(result), path);
 
                 setupScanProcessView(AbstractEnergyActivity.this, energyResult, getScanModule());
 
@@ -192,7 +192,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
         throw new RuntimeException(e);
     }
 
-    protected HashMap<String, String> getMeterReadingResul (String result) {
+    protected HashMap<String, String> getMeterReadingResult (String result) {
 
         HashMap<String, String> meterReadingResult = new HashMap();
 

@@ -13,8 +13,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+
 import java.util.HashMap;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
@@ -51,7 +50,7 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         anylineOcrConfig.setCustomCmdFile("anyline_austrian_driving_license.ale");
-        anylineOcrConfig.setLanguages("tessdata/eng_no_dict.traineddata", "tessdata/deu.traineddata");
+        anylineOcrConfig.setLanguages("eng_no_dict.traineddata", "deu.traineddata");
         anylineOcrScanView.setAnylineOcrConfig(anylineOcrConfig);
 
         // initialize Anyline with the license key and a Listener that is called if a result is found

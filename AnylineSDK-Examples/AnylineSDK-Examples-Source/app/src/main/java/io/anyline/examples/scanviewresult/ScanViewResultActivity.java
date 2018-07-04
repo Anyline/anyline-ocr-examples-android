@@ -114,7 +114,16 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_document_code), result.get(getResources().getString(R.string.driving_license_document_code)));
 
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapDrivingLicense);
-        }else{
+
+        }else if(scanModule.equals(getResources().getString(R.string.category_energy))){
+            LinkedHashMap<String, String> orderedHashMapEnergy = new LinkedHashMap();
+
+            orderedHashMapEnergy.put(getResources().getString(R.string.reading_result), result.get(getResources().getString(R.string.reading_result)));
+            orderedHashMapEnergy.put(getResources().getString(R.string.barcode), result.get(getResources().getString(R.string.barcode)));
+
+            scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapEnergy);
+        }
+        else{
 
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), result);
         }

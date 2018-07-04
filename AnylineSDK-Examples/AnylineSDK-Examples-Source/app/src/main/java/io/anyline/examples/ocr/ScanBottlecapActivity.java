@@ -35,7 +35,7 @@ public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugL
 
         // see ScanScrabbleActivity for a more detailed description
         final AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("tessdata/bottlecap.traineddata");
+        anylineOcrConfig.setLanguages("bottlecap.traineddata");
         anylineOcrConfig.setCharWhitelist("123456789ABCDEFGHJKLMNPRSTUVWXYZ");
         anylineOcrConfig.setMinCharHeight(14);
         anylineOcrConfig.setMaxCharHeight(65);

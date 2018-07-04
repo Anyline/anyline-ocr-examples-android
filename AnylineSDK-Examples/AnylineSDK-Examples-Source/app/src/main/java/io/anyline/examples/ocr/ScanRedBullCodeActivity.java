@@ -36,7 +36,7 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
 
         // see ScanScrabbleActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("tessdata/rbf_jan2015_v2.traineddata");
+        anylineOcrConfig.setLanguages("rbf_jan2015_v2.traineddata");
         anylineOcrConfig.setCharWhitelist("2346789ABCDEFGHKLMNPQRTUVWXYZ");
         anylineOcrConfig.setMinCharHeight(15);
         anylineOcrConfig.setMaxCharHeight(30);

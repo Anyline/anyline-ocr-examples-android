@@ -342,6 +342,7 @@
     <string name="mrz_expiration_date">Expiration Date</string>
     <string name="mrz_date_of_birthday">Date of Birth</string>
     <string name="not_available">Not Available</string>
+    <string name="not_valid">Not Valid</string>
 
     <!-- LicensePlate result Screen Keys -->
     <string name="license_plate_country">Country</string>
@@ -363,5 +364,8 @@
     <string name="driving_license_DOB">Date of Birth</string>
     <string name="driving_license_document_code">Document Number</string>
 
+    <!-- Build Version Description -->
+    <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
+    <string name="sdk_build_version" formatted="false">SDK Build Version %s</string>
 
 </resources>

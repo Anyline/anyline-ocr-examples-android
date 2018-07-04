@@ -37,7 +37,7 @@ public class ScanIsbnActivity extends ScanActivity implements AnylineDebugListen
 
         // see ScanIbanActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("tessdata/eng_no_dict.traineddata", "tessdata/deu.traineddata");
+        anylineOcrConfig.setLanguages("eng_no_dict.traineddata", "deu.traineddata");
         anylineOcrConfig.setCharWhitelist("ISBN0123456789<>-X");
         anylineOcrConfig.setValidationRegex("^ISBN((-)?\\s*(13|10))?:?\\s*((978|979){1}-?\\s*)*[0-9]{1," +
                 "5}-?\\s*[0-9]{2,7}-?\\s*[0-9]{2," +

@@ -82,7 +82,6 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
         });
 
         mrzScanView.setDebugListener(this);
-
     }
 
     @Override
@@ -146,8 +145,25 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
         identificationResult.put(getResources().getString(R.string.mrz_document_number), (identification.getDocumentNumber() == null || identification.getDocumentNumber().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getDocumentNumber());
         identificationResult.put(getResources().getString(R.string.mrz_sur_names),(identification.getSurNames() == null || identification.getSurNames().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getSurNames());
         identificationResult.put(getResources().getString(R.string.mrz_given_names),(identification.getGivenNames() == null || identification.getGivenNames().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getGivenNames());
-        identificationResult.put(getResources().getString(R.string.mrz_expiration_date),(identification.getExpirationDateObject() == null) ? getResources().getString(R.string.not_available) : dateFormat.format(identification.getExpirationDateObject()));
-        identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday),(identification.getDayOfBirthObject() == null) ? getResources().getString(R.string.not_available) : dateFormat.format(identification.getDayOfBirthObject()));
+        if(identification.getExpirationDateObject() == null){
+            if(identification.getExpirationDate() != null && (!identification.getExpirationDate().isEmpty())){
+                identificationResult.put(getResources().getString(R.string.mrz_expiration_date), getResources().getString(R.string.not_valid));
+            }else{
+                identificationResult.put(getResources().getString(R.string.mrz_expiration_date), getResources().getString(R.string.not_available));
+            }
+        }else{
+            identificationResult.put(getResources().getString(R.string.mrz_expiration_date), dateFormat.format(identification.getExpirationDateObject()));
+        }
+
+        if(identification.getDayOfBirthObject() == null){
+            if(identification.getDayOfBirth() != null && (!identification.getDayOfBirth().isEmpty())){
+                identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday), getResources().getString(R.string.not_valid));
+            }else{
+                identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday), getResources().getString(R.string.not_available));
+            }
+        }else{
+                identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday), dateFormat.format(identification.getDayOfBirthObject()));
+        }
         identificationResult.put(getResources().getString(R.string.mrz_sex), (identification.getSex() == null || identification.getSex().isEmpty()) ?  getResources().getString(R.string.not_available) : identification.getSex());
 
         return identificationResult;

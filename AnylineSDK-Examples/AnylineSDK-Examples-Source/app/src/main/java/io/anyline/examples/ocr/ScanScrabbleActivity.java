@@ -37,14 +37,14 @@ public class ScanScrabbleActivity extends ScanActivity implements AnylineDebugLi
 
         // Copies given traineddata-file to a place where the core can access it.
         // This MUST be called for every traineddata file that is used (before startScanning() is called).
-        // The file must be located directly in the assets directory (or in tessdata/ but no other folders are allowed)
+        // The file must be located directly in the assets directory (or in trainedModels/ but no other folders are allowed)
 
         //Configure the OCR for Scrabble
         final AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         // Use the grid mode, since it's a one line grid with up to 7 characters
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.GRID);
         // set the languages used for OCR
-        anylineOcrConfig.setLanguages("tessdata/scrabble.traineddata");
+        anylineOcrConfig.setLanguages("scrabble.traineddata");
         // allow only capital letters plus some german Umlaute
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZÄÜÖ");
         // set the height range the text can have

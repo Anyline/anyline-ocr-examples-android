@@ -8,14 +8,15 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 189
-        versionName "3.25.1"
+        versionCode 197
+        versionName "3.26.0"
 
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
         multiDexEnabled true
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/TrainedModels'] } }
 }
 
 repositories {
@@ -38,8 +39,7 @@ dependencies {
     //compile(name:'anylinesdk-3.25.1', ext:'aar')
 
     //include AnylineSDK from maven
-    compile 'io.anyline:anylinesdk:3.25.1@aar'
-
+    compile 'io.anyline:anylinesdk:3.26.0@aar'
 
 
     // include the vision-version we need for barcode scanning

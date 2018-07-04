@@ -37,7 +37,7 @@ public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebu
 
         // see ScanIbanActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("tessdata/anyline_capitals.traineddata");
+        anylineOcrConfig.setLanguages("anyline_capitals.traineddata");
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
         anylineOcrConfig.setValidationRegex("[A-Z0-9]{8}$");
         // AUTO ScanMode automatically detects the correct text without any further parameters to be set

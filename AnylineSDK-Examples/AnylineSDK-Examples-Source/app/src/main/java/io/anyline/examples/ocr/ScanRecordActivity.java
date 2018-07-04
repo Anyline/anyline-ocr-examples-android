@@ -37,7 +37,7 @@ public class ScanRecordActivity extends ScanActivity implements AnylineDebugList
 
         // see ScanIbanActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("tessdata/eng_no_dict.traineddata", "tessdata/deu.traineddata");
+        anylineOcrConfig.setLanguages("eng_no_dict.traineddata", "deu.traineddata");
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.");
         anylineOcrConfig.setMinCharHeight(15);
         anylineOcrConfig.setMaxCharHeight(70);

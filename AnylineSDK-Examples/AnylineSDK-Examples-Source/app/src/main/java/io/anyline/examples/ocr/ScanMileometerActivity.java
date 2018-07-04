@@ -41,9 +41,9 @@ public class ScanMileometerActivity extends ScanActivity implements AnylineDebug
         String lic = getString(R.string.anyline_license_key);
         scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
 
-        scanView.copyTrainedData("tessdata/eng_no_dict.traineddata", "d142032d86da1be4dbe22dce2eec18d7");
-        scanView.copyTrainedData("tessdata/deu.traineddata", "2d5190b9b62e28fa6d17b728ca195776");
-        scanView.copyTrainedData("tessdata/7seg.traineddata", "516562c5fb61d6783cea85d980126d6d");
+        scanView.copyTrainedData("eng_no_dict.traineddata", "d142032d86da1be4dbe22dce2eec18d7");
+        scanView.copyTrainedData("deu.traineddata", "2d5190b9b62e28fa6d17b728ca195776");
+        scanView.copyTrainedData("7seg.traineddata", "516562c5fb61d6783cea85d980126d6d");
 
         // see ScanIbanActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();

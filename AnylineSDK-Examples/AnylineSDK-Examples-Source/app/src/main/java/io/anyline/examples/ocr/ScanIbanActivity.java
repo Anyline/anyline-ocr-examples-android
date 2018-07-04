@@ -45,7 +45,7 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
 
         // Copies given traineddata-file to a place where the core can access it.
         // This MUST be called for every traineddata file that is used (before startScanning() is called).
-        // The file must be located directly in the assets directory (or in tessdata/ but no other folders are allowed)
+        // The file must be located directly in the assets directory (or in trainedModels/ but no other folders are allowed)
 
         //Configure the OCR for IBANs
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
