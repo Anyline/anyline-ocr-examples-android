@@ -34,10 +34,11 @@ public class ScanViewResultAdapter extends RecyclerView.Adapter<ScanViewResultAd
         Object dataFieldTitleResult = scanResultHashMap.keySet().toArray()[position];
         Object scanDataResult = scanResultHashMap.get(dataFieldTitleResult);
 
+//        itemHolder.resultDataTitleTextView.setText("Result Data");
         itemHolder.dataFieldTitleResultTextView.setText(String.valueOf(dataFieldTitleResult));
         itemHolder.resultScanDataTextView.setText(String.valueOf(scanDataResult));
 
-        if(scanDataResult.equals(mContext.getString(R.string.not_available)) || scanDataResult.equals(mContext.getString(R.string.not_valid))){
+        if(scanDataResult.equals(mContext.getString(R.string.not_available))){
             itemHolder.receivedDataImageView.setVisibility(View.GONE);
         }else{
             itemHolder.receivedDataImageView.setVisibility(View.VISIBLE);

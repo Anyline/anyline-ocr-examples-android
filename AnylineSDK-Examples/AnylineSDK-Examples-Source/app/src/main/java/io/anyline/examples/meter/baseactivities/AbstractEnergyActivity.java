@@ -43,6 +43,12 @@ import io.anyline.examples.licenseplate.ScanLicensePlateActivity;
 import io.anyline.examples.ocr.ScanSerialNumberActivity;
 import io.anyline.examples.scanviewresult.ScanViewResultActivity;
 import io.anyline.examples.util.Constant;
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.meter.MeterScanResult;
+import io.anyline.plugin.meter.MeterScanViewPlugin;
+import io.anyline.plugin.ocr.OcrScanResult;
+import io.anyline.plugin.ocr.OcrScanViewPlugin;
+import io.anyline.view.ScanView;
 
 /**
  * Base class for the Energymodule:
@@ -50,14 +56,14 @@ import io.anyline.examples.util.Constant;
  */
 abstract public class AbstractEnergyActivity extends ScanActivity implements CameraOpenListener {
     private static final String TAG = AbstractEnergyActivity.class.getSimpleName();
-    protected EnergyScanView energyScanView;
+    protected ScanView energyScanView;
     protected String foundBarcodeString;
     private Switch barcodeSwitch;
 
     /**
      * inflates the required energy view to a placeholder
      */
-    protected abstract void inflateEnergyView();
+//    protected abstract void inflateEnergyView();
 
     public abstract String getSelectedModeInformation();
 
@@ -66,12 +72,14 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getLayoutInflater().inflate(R.layout.activity_scan_energy_blank, (ViewGroup) findViewById(R.id.scan_view_placeholder));
-        inflateEnergyView();
+        getLayoutInflater().inflate(R.layout.activity_scan_energy,
+                (ViewGroup) findViewById(R.id.energy_view_placeholder));
+
 
         foundBarcodeString = "";
 
         // get the view from the layout (check out the xml for the configuration of the view)
-        energyScanView = (EnergyScanView) findViewById(R.id.energy_scan_view);
+        energyScanView = (ScanView) findViewById(R.id.energy_scan_view);
 
         // Usually the default scan mode would be set here, in this specific case it is done in the subclasses
         //energyScanView.setScanMode(EnergyScanView.ScanMode.ELECTRIC_METER);
@@ -79,32 +87,53 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
         // add a camera open listener that will be called when the camera is opened or an error occurred
         //  this is optional (if not set a RuntimeException will be thrown if an error occurs)
         energyScanView.setCameraOpenListener(this);
-
+        barcodeSwitch = (Switch) findViewById(R.id.barcode_scanner_switch);
 
         // initialize Anyline with the license key and a Listener that is called if a result is found
-        energyScanView.initAnyline(getString(R.string.anyline_license_key), new EnergyResultListener() {
+        try {
+            energyScanView.init("energy_view_config.json", getString(R.string.anyline_license_key));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        MeterScanViewPlugin scanViewPlugin = (MeterScanViewPlugin) energyScanView.getScanViewPlugin();
+
+        scanViewPlugin.addScanResultListener(new ScanResultListener<MeterScanResult>() {
             @Override
-            public void onResult(EnergyResult energyResult) {
-                // This is called when a result is found.
-                // The scanMode is the mode the result was found for. The result is the actual result.
-                // If the a meter reading was scanned two images are provided as well, one shows the targeted area only
-                // the other shows the full image. (Images are null in barcode mode)
-                // The result for meter readings is a String with leading zeros (if any) and no decimals.
+            public void onResult(MeterScanResult result) {
+                String energyResult = result.getResult();
+
+                String path = setupImagePath(result.getCutoutImage());
+                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResul(energyResult), path);
 
 
-                String result = energyResult.getResult();
-
-                String path = setupImagePath(energyResult.getCutoutImage());
-                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResult(result), path);
-
-                setupScanProcessView(AbstractEnergyActivity.this, energyResult, getScanModule());
-
-                foundBarcodeString = ""; // reset the information about the last found barcode
+                setupScanProcessView(AbstractEnergyActivity.this, result, getScanModule());
+                foundBarcodeString = "";
             }
+
         });
 
-
-        barcodeSwitch = (Switch) findViewById(R.id.barcode_scanner_switch);
+       // energyScanView.addScanViewPlugin(scanViewPlugin);
+//        energyScanView.initAnyline(getString(R.string.anyline_license_key), new EnergyResultListener() {
+//            @Override
+//            public void onResult(EnergyResult energyResult) {
+//                // This is called when a result is found.
+//                // The scanMode is the mode the result was found for. The result is the actual result.
+//                // If the a meter reading was scanned two images are provided as well, one shows the targeted area only
+//                // the other shows the full image. (Images are null in barcode mode)
+//                // The result for meter readings is a String with leading zeros (if any) and no decimals.
+//
+//
+//                String result = energyResult.getResult();
+//
+//                String path = setupImagePath(energyResult.getCutoutImage());
+//                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResul(result), path);
+//
+//                setupScanProcessView(AbstractEnergyActivity.this, energyResult, getScanModule());
+//
+//                foundBarcodeString = ""; // reset the information about the last found barcode
+//            }
+//        });
 
         barcodeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -116,7 +145,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
                     int errorCode = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(AbstractEnergyActivity.this);
                     if (errorCode == ConnectionResult.SUCCESS) {
                         foundBarcodeString = "";
-                        energyScanView.enableBarcodeDetection(true, new NativeBarcodeResultListener() {
+                        energyScanView.getCameraView().enableBarcodeDetection(new NativeBarcodeResultListener() {
                                     @Override
                                     public void onBarcodesReceived(SparseArray<Barcode> sparseArray) {
                                         if (sparseArray != null && sparseArray.size() > 0) {
@@ -142,7 +171,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
 
                     // disabled barcode detection
                 } else {
-                    energyScanView.disableBarcodeDetection();
+                    energyScanView.getCameraView().disableBarcodeDetection();
                     foundBarcodeString = "";
                 }
 
@@ -152,18 +181,13 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
     }
 
 
-    @Override
-    protected AnylineBaseModuleView getScanView() {
-        return energyScanView;
-    }
-
 
     @Override
     protected void onResume() {
         super.onResume();
 
         //start the actual scanning
-        energyScanView.startScanning();
+        energyScanView.start();
     }
 
 
@@ -171,7 +195,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
     protected void onPause() {
         super.onPause();
         //stop the scanning
-        energyScanView.cancelScanning();
+        energyScanView.stop();
         //release the camera (must be called in onPause, because there are situations where
         // it cannot be auto-detected that the camera should be released)
         energyScanView.releaseCameraInBackground();
@@ -192,7 +216,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
         throw new RuntimeException(e);
     }
 
-    protected HashMap<String, String> getMeterReadingResult (String result) {
+    protected HashMap<String, String> getMeterReadingResul (String result) {
 
         HashMap<String, String> meterReadingResult = new HashMap();
 
@@ -200,12 +224,6 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
         meterReadingResult.put(getResources().getString(R.string.barcode), (foundBarcodeString.isEmpty() || foundBarcodeString ==null) ? getResources().getString(R.string.not_available) : foundBarcodeString);
 
         return meterReadingResult;
-    }
-
-
-    @Override
-    public Rect getCutoutRect() {
-        return energyScanView.getCutoutRect();
     }
 
 

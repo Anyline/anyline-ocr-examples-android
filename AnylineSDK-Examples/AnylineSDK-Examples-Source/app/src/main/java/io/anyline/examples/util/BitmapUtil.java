@@ -67,18 +67,4 @@ public class BitmapUtil {
 
     }
 
-    public static Bitmap getBitmapLow (String path){
-        Bitmap scaleImage = null;
-        try {
-            FileInputStream fi = new FileInputStream(path);
-            Bitmap bitmapImage = BitmapFactory.decodeStream(fi);
-            scaleImage = Bitmap.createScaledBitmap(bitmapImage, bitmapImage.getWidth()  , bitmapImage.getHeight(), false);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-        return scaleImage;
-
-    }
-
 }

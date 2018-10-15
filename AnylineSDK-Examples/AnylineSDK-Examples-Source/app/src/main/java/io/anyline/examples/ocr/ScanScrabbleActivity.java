@@ -1,43 +1,54 @@
-package io.anyline.examples.ocr;
 
+package io.anyline.examples.ocr;
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
 import at.nineyards.anyline.AnylineDebugListener;
-import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
-import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.apis.AnagramActivity;
 import io.anyline.examples.ocr.feedback.FeedbackType;
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.OcrScanResult;
+import io.anyline.plugin.ocr.OcrScanViewPlugin;
+import io.anyline.view.ScanView;
+//import io.anyline.view.ScanViewConfig;
+
 
 public class ScanScrabbleActivity extends ScanActivity implements AnylineDebugListener {
 
     private static final String TAG = ScanScrabbleActivity.class.getSimpleName();
-    private AnylineOcrScanView scanView;
+    private ScanView scanView;
+    private io.anyline.view.AnylineViewConfig anylineViewConfig;
 
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return null;
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.SCRABBLE;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getLayoutInflater().inflate(R.layout.activity_anyline_ocr,
-                (ViewGroup) findViewById(R.id.scan_view_placeholder));
 
-        String lic = getString(R.string.anyline_license_key);
-        // Get the view from the layout
-        scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
+        getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id
+                .scan_view_placeholder));
 
-        // Copies given traineddata-file to a place where the core can access it.
-        // This MUST be called for every traineddata file that is used (before startScanning() is called).
-        // The file must be located directly in the assets directory (or in trainedModels/ but no other folders are allowed)
+        init();
+
+    }
+
+    void init() {
+        scanView = (ScanView) findViewById(R.id.scan_view);
 
         //Configure the OCR for Scrabble
         final AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
@@ -68,52 +79,35 @@ public class ScanScrabbleActivity extends ScanActivity implements AnylineDebugLi
         // the text is dark on brither background
         anylineOcrConfig.setIsBrightTextOnDark(false);
 
-        // set the ocr config
-        scanView.setAnylineOcrConfig(anylineOcrConfig);
+        //init the scanViewPlugin config
+        scanView.setScanConfig("scrabble_view_config_new.json");
 
-        scanView.setDebugListener(this);
+        //init the scan view
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
 
-        // Configure the view (cutout, the camera resolution, etc.) via json (can also be done in xml in the layout)
-        scanView.setConfig(new AnylineViewConfig(this, "scrabble_view_config.json"));
 
-        scanView.initAnyline(lic, new AnylineOcrResultListener() {
-
+        scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
             @Override
-            public void onResult(AnylineOcrResult anylineOcrResult) {
+            public void onResult(OcrScanResult result) {
 
-                String result = anylineOcrResult.getResult();
-
-                if (!result.isEmpty()) {
+                if (!result.getResult().toString().isEmpty()) {
                     setFeedbackViewActive(false);
 
                     Intent i = new Intent(ScanScrabbleActivity.this, AnagramActivity.class);
-                    i.putExtra(AnagramActivity.SCRABBLE_INPUT, result.trim());
+                    i.putExtra(AnagramActivity.SCRABBLE_INPUT, result.getResult().toString().trim());
 
                     startActivity(i);
                     overridePendingTransition(R.anim.activity_open_translate, R.anim.fade_out);
 
-                    setupScanProcessView(ScanScrabbleActivity.this, anylineOcrResult, getScanModule());
+                    setupScanProcessView(ScanScrabbleActivity.this, result, getScanModule());
 
                 }
             }
+
         });
+        scanViewPlugin.setDebugListener(this);
+        scanView.setScanViewPlugin(scanViewPlugin);
 
-        createFeedbackView(scanView);
-    }
-
-    @Override
-    protected AnylineBaseModuleView getScanView() {
-        return scanView;
-    }
-
-    @Override
-    public Rect getCutoutRect() {
-        return scanView.getCutoutRect();
-    }
-
-    @Override
-    protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.SCRABBLE;
     }
 
     @Override
@@ -127,10 +121,11 @@ public class ScanScrabbleActivity extends ScanActivity implements AnylineDebugLi
             @Override
             public void run() {
                 if (!isFinishing()) {
-                    scanView.startScanning();
+                    scanView.start();
                 }
             }
         }, 1500);
+        createFeedbackView(scanView);
     }
 
     @Override
@@ -143,7 +138,7 @@ public class ScanScrabbleActivity extends ScanActivity implements AnylineDebugLi
     protected void onPause() {
         super.onPause();
 
-        scanView.cancelScanning();
+        scanView.stop();
         scanView.releaseCameraInBackground();
     }
 
@@ -159,7 +154,7 @@ public class ScanScrabbleActivity extends ScanActivity implements AnylineDebugLi
         if (AnylineDebugListener.BRIGHTNESS_VARIABLE_NAME.equals(name) &&
                 (AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.equals(value.getClass()) ||
                         AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.isAssignableFrom(value.getClass()))) {
-            switch (scanView.getBrightnessFeedback()) {
+            switch (scanView.getBrightnessFeedBack()) {
                 case TOO_BRIGHT:
                     handleFeedback(FeedbackType.TOO_BRIGHT);
                     break;
@@ -178,4 +173,5 @@ public class ScanScrabbleActivity extends ScanActivity implements AnylineDebugLi
     @Override
     public void onRunSkipped(RunFailure runFailure) {
     }
+
 }

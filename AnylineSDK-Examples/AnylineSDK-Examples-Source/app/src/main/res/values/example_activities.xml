@@ -4,7 +4,7 @@
     <string-array name="example_products_names">
         <item>@string/category_energy</item>
         <item>@string/category_identity_documents</item>
-        <item>@string/license_plates</item>
+        <item>@string/license_plates</item>=
         <item>@string/category_mro</item>
         <item>@string/category_others</item>
     </string-array>
@@ -46,7 +46,7 @@
     <string-array name="example_energy_names">
         <item>Meter Types</item>
         <item>@string/title_auto_analog_digital_meter</item>
-        <item>@string/dial_meter</item>=
+        <item>@string/dial_meter</item>
         <item>Processes</item>
         <item>@string/customer</item>
         <item>@string/workforce</item>
@@ -89,7 +89,7 @@
     <string-array name="example_identity_documents_classes" translatable="false">
         <item>HEADER</item>
         <item>io.anyline.examples.mrz.ScanMrzActivity</item>
-        <item>io.anyline.examples.drivinglicense.ScanDrivingLicenseActivity</item>
+        <item>io.anyline.examples.mrz.ScanDrivingLicenseActivity</item>
     </string-array>
 
 </resources>

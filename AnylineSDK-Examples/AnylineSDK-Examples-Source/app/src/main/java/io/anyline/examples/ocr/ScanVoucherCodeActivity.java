@@ -1,57 +1,61 @@
-package io.anyline.examples.ocr;
 
-import android.graphics.Rect;
+package io.anyline.examples.ocr;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
 import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
-import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
-import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.feedback.FeedbackType;
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.OcrScanResult;
+import io.anyline.plugin.ocr.OcrScanViewPlugin;
+import io.anyline.view.ScanView;
+
 
 public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebugListener {
 
     private static final String TAG = ScanVoucherCodeActivity.class.getSimpleName();
-    private AnylineOcrScanView scanView;
+    private ScanView scanView;
 
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return null;
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.VOUCHER;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id
+        getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id
                 .scan_view_placeholder));
+        init();
 
-        String lic = getString(R.string.anyline_license_key);
-        scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
+    }
 
-        // see ScanIbanActivity for a more detailed description
-        AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("anyline_capitals.traineddata");
-        anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
-        anylineOcrConfig.setValidationRegex("[A-Z0-9]{8}$");
-        // AUTO ScanMode automatically detects the correct text without any further parameters to be set
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
-        scanView.setAnylineOcrConfig(anylineOcrConfig);
+    void init() {
+        scanView = (ScanView) findViewById(R.id.scan_view);
 
-        scanView.setDebugListener(this);
+        try {
+            scanView.init("voucher_code_view_config.json", getString(R.string.anyline_license_key));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        OcrScanViewPlugin scanViewPlugin = (OcrScanViewPlugin) scanView.getScanViewPlugin();
 
-        scanView.setConfig(new AnylineViewConfig(this, "voucher_code_view_config.json"));
-
-        scanView.initAnyline(lic, new AnylineOcrResultListener() {
-
+        scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
             @Override
-            public void onResult(AnylineOcrResult anylineOcrResult) {
+            public void onResult(OcrScanResult anylineOcrResult) {
 
                 String result = anylineOcrResult.getResult();
 
@@ -64,55 +68,39 @@ public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebu
 
                 setupScanProcessView(ScanVoucherCodeActivity.this, anylineOcrResult, getScanModule());
             }
+
         });
-
-        createFeedbackView(scanView);
+        scanViewPlugin.setDebugListener(this);
     }
 
-    @Override
-    protected AnylineBaseModuleView getScanView() {
-        return scanView;
-    }
-
-    @Override
-    public Rect getCutoutRect() {
-        return scanView.getCutoutRect();
-    }
-
-    @Override
-    protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.VOUCHER;
-    }
 
     @Override
     protected void onResume() {
         super.onResume();
-        scanView.startScanning();
+        scanView.start();
+        createFeedbackView(scanView);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
-        scanView.cancelScanning();
-        scanView.releaseCameraInBackground();
+        scanView.stop();
     }
 
-    @Override
-    public void onBackPressed() {
-        //close the result view on back press if it is open
-        super.onBackPressed();
-        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
+    private HashMap<String, String> getVoucherResult (String voucherResult){
+        HashMap<String, String> voucherCodeHashMap = new HashMap<>();
 
+        voucherCodeHashMap.put(getResources().getString(R.string.voucher_reading_result) , (voucherResult == null || voucherResult.isEmpty()) ?  getResources().getString(R.string.not_available) : voucherResult);
+
+        return voucherCodeHashMap;
     }
 
     @Override
     public void onDebug(String name, Object value) {
-
         if (AnylineDebugListener.BRIGHTNESS_VARIABLE_NAME.equals(name) &&
                 (AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.equals(value.getClass()) ||
                         AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.isAssignableFrom(value.getClass()))) {
-            switch (scanView.getBrightnessFeedback()) {
+            switch (scanView.getBrightnessFeedBack()) {
                 case TOO_BRIGHT:
                     handleFeedback(FeedbackType.TOO_BRIGHT);
                     break;
@@ -128,16 +116,8 @@ public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebu
         }
     }
 
-    private HashMap<String, String> getVoucherResult (String voucherResult){
-        HashMap<String, String> voucherCodeHashMap = new HashMap<>();
-
-        voucherCodeHashMap.put(getResources().getString(R.string.voucher_reading_result) , (voucherResult == null || voucherResult.isEmpty()) ?  getResources().getString(R.string.not_available) : voucherResult);
-
-        return voucherCodeHashMap;
-    }
-
-
     @Override
     public void onRunSkipped(RunFailure runFailure) {
     }
+
 }

@@ -15,13 +15,18 @@ import at.nineyards.anyline.modules.energy.EnergyResultListener;
 import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.baseactivities.BaseToolbarActivity;
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.meter.MeterScanMode;
+import io.anyline.plugin.meter.MeterScanResult;
+import io.anyline.plugin.meter.MeterScanViewPlugin;
+import io.anyline.view.ScanView;
 
-public abstract class MeterReadingProcessActivity extends BaseToolbarActivity implements CompoundButton.OnCheckedChangeListener, EnergyResultListener {
+public abstract class MeterReadingProcessActivity extends BaseToolbarActivity implements CompoundButton.OnCheckedChangeListener, ScanResultListener<MeterScanResult> {
 
     public static final String KEY_SHOW_MODE_CONTROLS = "key_show_mode_controls";
 
     protected View mBottomContainer;
-    protected EnergyScanView mEnergyScanView;
+    protected ScanView mEnergyScanView;
     private Handler mHandler;
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
@@ -35,11 +40,23 @@ public abstract class MeterReadingProcessActivity extends BaseToolbarActivity im
         setContentView(R.layout.activity_multi_scanner);
 
         mBottomContainer = (View) findViewById(R.id.bottom_container);
-        mEnergyScanView = (EnergyScanView) findViewById(R.id.energy_scan_view);
+        mEnergyScanView = (ScanView) findViewById(R.id.energy_scan_view);
         mHandler = new Handler(Looper.getMainLooper());
 
-        setMode(EnergyScanView.ScanMode.BARCODE);
-        mEnergyScanView.initAnyline(getString(R.string.anyline_license_key), this);
+        try {
+            mEnergyScanView.init("multi_scanner_energy_config.json", getString(R.string.anyline_license_key));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        MeterScanViewPlugin scanViewPlugin = (MeterScanViewPlugin) mEnergyScanView.getScanViewPlugin();
+
+        mEnergyScanView.setScanViewPlugin(scanViewPlugin);
+       // scanViewPlugin.addScanResultListener(ScanResultListener<MeterScanResult>)
+        setMode(MeterScanMode.BARCODE);
+
+        scanViewPlugin.addScanResultListener(this);
+      //  mEnergyScanView.initAnyline(getString(R.string.anyline_license_key), this);
 
         if (getIntent() != null) {
             mShowModeControls = getIntent().getBooleanExtra(KEY_SHOW_MODE_CONTROLS, false);
@@ -63,7 +80,7 @@ public abstract class MeterReadingProcessActivity extends BaseToolbarActivity im
     @Override
     protected void onPause() {
 
-        mEnergyScanView.cancelScanning();
+        mEnergyScanView.stop();
         mEnergyScanView.releaseCameraInBackground();
 
         super.onPause();
@@ -72,37 +89,38 @@ public abstract class MeterReadingProcessActivity extends BaseToolbarActivity im
     @Override
     protected void onResume() {
         super.onResume();
-        mEnergyScanView.startScanning();
+        mEnergyScanView.start();
         mScanStartTime = System.currentTimeMillis();
 
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        setMode(isChecked ? EnergyScanView.ScanMode.ANALOG_METER : EnergyScanView.ScanMode.BARCODE);
+        setMode(isChecked ? MeterScanMode.ANALOG_METER : MeterScanMode.BARCODE);
     }
 
     @Override
-    public void onResult(EnergyResult energyResult) {
+    public void onResult(MeterScanResult energyResult) {
+        System.out.print("asfasfsa");
     }
 
     protected void setShowModeControls(boolean show) {
         mShowModeControls = show;
     }
 
-    protected void setMode(EnergyScanView.ScanMode mode) {
-        mEnergyScanView.setScanMode(mode);
+    protected void setMode(MeterScanMode mode) {
+        ((MeterScanViewPlugin)mEnergyScanView.getScanViewPlugin()).setScanMode(mode);
     }
 
     protected void setScanning(boolean scanning) {
         if (scanning) {
-            if (!mEnergyScanView.isRunning()) {
-                mEnergyScanView.startScanning();
+            if (!mEnergyScanView.getScanViewPlugin().isRunning()) {
+                mEnergyScanView.start();
             }
             mScanStartTime = System.currentTimeMillis();
 
         } else {
-            mEnergyScanView.cancelScanning();
+            mEnergyScanView.stop();
         }
     }
 

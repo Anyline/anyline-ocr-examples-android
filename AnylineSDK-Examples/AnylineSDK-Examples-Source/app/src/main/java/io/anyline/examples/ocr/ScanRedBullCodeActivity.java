@@ -1,38 +1,49 @@
-package io.anyline.examples.ocr;
 
-import android.graphics.Rect;
+package io.anyline.examples.ocr;
 import android.os.Bundle;
 import android.view.ViewGroup;
-
 import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
-import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
-import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.feedback.FeedbackType;
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.OcrScanResult;
+import io.anyline.plugin.ocr.OcrScanViewPlugin;
+import io.anyline.view.ScanView;
+
 
 public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebugListener {
 
     private static final String TAG = ScanRedBullCodeActivity.class.getSimpleName();
-    private AnylineOcrScanView scanView;
+    private ScanView scanView;
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return null;
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.RED_BULL_CODE;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id
+        getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id
                 .scan_view_placeholder));
+        init();
 
-        String lic = getString(R.string.anyline_license_key);
-        scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
+    }
+    void init() {
+        scanView = (ScanView) findViewById(R.id.scan_view);
 
         // see ScanScrabbleActivity for a more detailed description
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
@@ -48,77 +59,55 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
         anylineOcrConfig.setCharPaddingXFactor(0.3);
         anylineOcrConfig.setCharPaddingYFactor(0.5);
         anylineOcrConfig.setIsBrightTextOnDark(true);
-        scanView.setAnylineOcrConfig(anylineOcrConfig);
 
-        scanView.setDebugListener(this);
+        //init the scanViewPlugin config
+        scanView.setScanConfig("rb_view_config.json");
+        //init the scan vie plugin
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
 
-        scanView.setConfig(new AnylineViewConfig(this, "rb_view_config.json"));
-
-        scanView.initAnyline(lic, new AnylineOcrResultListener() {
-
+        scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
             @Override
-            public void onResult(AnylineOcrResult anylineOcrResult) {
+            public void onResult(OcrScanResult result) {
+                String path = setupImagePath(result.getCutoutImage());
 
-                String result = anylineOcrResult.getResult();
-
-                setFeedbackViewActive(false);
-
-                //set the path for the image which will be shown in the result screen
-                String path = setupImagePath(anylineOcrResult.getCutoutImage());
-                //start the resultScanView activity
-                startScanResultIntent(getResources().getString(R.string.title_redbull), getRedbullResult(result), path);
-
-                setupScanProcessView(ScanRedBullCodeActivity.this, anylineOcrResult, getScanModule());
+                startScanResultIntent(getResources().getString(R.string.title_redbull), getRedbullResult(result.getResult()), path);
+                setupScanProcessView(ScanRedBullCodeActivity.this, result, getScanModule());
             }
+
         });
-
-        createFeedbackView(scanView);
+        scanViewPlugin.setDebugListener(this);
+        scanView.setScanViewPlugin(scanViewPlugin);
     }
 
-    @Override
-    protected AnylineBaseModuleView getScanView() {
-        return scanView;
-    }
-
-    @Override
-    public Rect getCutoutRect() {
-        return scanView.getCutoutRect();
-    }
-
-    @Override
-    protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.RED_BULL_CODE;
-    }
 
     @Override
     protected void onResume() {
         super.onResume();
-        scanView.startScanning();
+        scanView.start();
+        createFeedbackView(scanView);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
-        scanView.cancelScanning();
-        scanView.releaseCameraInBackground();
+        scanView.stop();
     }
 
-    @Override
-    public void onBackPressed() {
-        //close the result view on back press if it is open
-        super.onBackPressed();
-        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
+    protected HashMap<String, String> getRedbullResult(String result) {
 
+        HashMap<String, String> serialNumberResult = new HashMap();
+
+        serialNumberResult.put(getResources().getString(R.string.redbull_reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
+
+        return serialNumberResult;
     }
 
     @Override
     public void onDebug(String name, Object value) {
-
         if (AnylineDebugListener.BRIGHTNESS_VARIABLE_NAME.equals(name) &&
                 (AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.equals(value.getClass()) ||
                         AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.isAssignableFrom(value.getClass()))) {
-            switch (scanView.getBrightnessFeedback()) {
+            switch (scanView.getBrightnessFeedBack()) {
                 case TOO_BRIGHT:
                     handleFeedback(FeedbackType.TOO_BRIGHT);
                     break;
@@ -134,16 +123,8 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
         }
     }
 
-    private HashMap<String, String> getRedbullResult (String redbullResult){
-        HashMap<String, String> redbullHashMap = new HashMap<>();
-
-        redbullHashMap.put(getResources().getString(R.string.redbull_reading_result) , (redbullResult == null || redbullResult.isEmpty()) ?  getResources().getString(R.string.not_available) : redbullResult);
-
-        return redbullHashMap;
-    }
-
-
     @Override
     public void onRunSkipped(RunFailure runFailure) {
     }
+
 }

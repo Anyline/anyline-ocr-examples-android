@@ -22,6 +22,8 @@ import io.anyline.examples.database.DataBaseProcessesAdapter;
 import io.anyline.examples.meterreadingprocesses.fragments.CustomerFragment;
 import io.anyline.examples.model.Customer;
 import io.anyline.examples.model.Reading;
+import io.anyline.plugin.meter.MeterScanMode;
+import io.anyline.plugin.meter.MeterScanResult;
 
 public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity {
 
@@ -53,12 +55,12 @@ public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity
             return;
         }
 
-        setMode(EnergyScanView.ScanMode.BARCODE);
+        setMode(MeterScanMode.BARCODE);
         setShowModeControls(false);
     }
 
     @Override
-    public void onResult(EnergyResult energyResult) {
+    public void onResult(MeterScanResult energyResult) {
         super.onResult(energyResult);
         try {
             String result = energyResult.getResult();
@@ -112,8 +114,8 @@ public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity
 
                     @Override
                     public void run() {
-                        if (!mEnergyScanView.isRunning()) {
-                            mEnergyScanView.startScanning();
+                        if (!mEnergyScanView.getScanViewPlugin().isRunning()) {
+                            mEnergyScanView.start();
                         }
                     }
                 }, 3000);
@@ -164,7 +166,7 @@ public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity
             return;
         }
 
-        setMode(EnergyScanView.ScanMode.AUTO_ANALOG_DIGITAL_METER);
+        setMode(MeterScanMode.AUTO_ANALOG_DIGITAL_METER);
         setTitle(R.string.category_energy);
         setScanning(true);
 
@@ -244,7 +246,7 @@ public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity
     protected void reScanScreen(){
         mCurrentReading = null;
         mCurrentCustomer = null;
-        setMode(EnergyScanView.ScanMode.BARCODE);
+        setMode(MeterScanMode.BARCODE);
         setTitle(R.string.intercom_barcode);
         setShowModeControls(false);
     }

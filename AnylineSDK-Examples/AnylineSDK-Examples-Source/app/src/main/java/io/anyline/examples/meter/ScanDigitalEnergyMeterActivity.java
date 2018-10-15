@@ -11,6 +11,7 @@ package io.anyline.examples.meter;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
@@ -31,12 +32,13 @@ public class ScanDigitalEnergyMeterActivity extends AbstractEnergyActivity {
         super.onCreate(savedInstanceState);
 
         // set the scan mode to start with
-        energyScanView.setScanMode(EnergyScanView.ScanMode.DIGITAL_METER);
+        //energyScanView.setScanMode(EnergyScanView.ScanMode.DIGITAL_METER);
     }
 
+
     @Override
-    protected void inflateEnergyView() {
-        getLayoutInflater().inflate(R.layout.activity_scan_energy, (ViewGroup) findViewById(R.id.energy_view_placeholder));
+    protected AnylineBaseModuleView getScanView() {
+        return null;
     }
 
     @Override

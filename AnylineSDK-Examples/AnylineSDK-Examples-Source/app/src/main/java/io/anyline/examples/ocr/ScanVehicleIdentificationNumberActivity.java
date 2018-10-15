@@ -1,42 +1,51 @@
-package io.anyline.examples.ocr;
 
-import android.graphics.Rect;
+package io.anyline.examples.ocr;
 import android.os.Bundle;
 import android.view.ViewGroup;
-
 import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
-import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
-import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
-import io.anyline.examples.ocr.feedback.FeedbackType;
-/**
- * Example Vehicle Identification Number Scan
- */
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.OcrScanResult;
+import io.anyline.plugin.ocr.OcrScanViewPlugin;
+import io.anyline.view.ScanView;
+
 
 public class ScanVehicleIdentificationNumberActivity extends ScanActivity implements AnylineDebugListener {
-    private static final String TAG = io.anyline.examples.licenseplate.ScanLicensePlateActivity.class.getSimpleName();
-    private AnylineOcrScanView scanView;
 
+    private static final String TAG = ScanVehicleIdentificationNumberActivity.class.getSimpleName();
+    private ScanView scanView;
+    private io.anyline.view.AnylineViewConfig anylineViewConfig;
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return null;
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.VEHICLE_IDENTIFICATION_NUMBER;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id
+
+        getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id
                 .scan_view_placeholder));
 
+        init();
 
-        String lic = getString(R.string.anyline_license_key);
-        scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
+    }
 
+    void init() {
+        scanView = (ScanView) findViewById(R.id.scan_view);
         // create new Anyline OCR config
         AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
 
@@ -46,101 +55,49 @@ public class ScanVehicleIdentificationNumberActivity extends ScanActivity implem
         // set command file to config
         anylineOcrConfig.setCustomCmdFile("vin.ale");
 
-        // set config to scan view
-        scanView.setAnylineOcrConfig(anylineOcrConfig);
+        //init the scanViewPlugin config
+        scanView.setScanConfig("vin_view_config.json");
+        //init the scan view
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
+        scanView.setScanViewPlugin(scanViewPlugin);
 
-        // use the view configuration defined in "vin_view_config.json" for scanning vehicle identification numbers
-        scanView.setConfig(new AnylineViewConfig(this, "vin_view_config.json"));
-
-        scanView.setDebugListener(this);
-
-        scanView.initAnyline(lic, new AnylineOcrResultListener() {
+        scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
             @Override
-            public void onResult(AnylineOcrResult anylineOcrResult) {
+            public void onResult(OcrScanResult result) {
+                String path = setupImagePath(result.getCutoutImage());
 
-
-                setFeedbackViewActive(false);
-
-                String result = anylineOcrResult.getResult();
-
-                String path = setupImagePath(anylineOcrResult.getCutoutImage());
-                startScanResultIntent(getResources().getString(R.string.vin), getVINResult(result), path);
-
-                setupScanProcessView(ScanVehicleIdentificationNumberActivity.this, anylineOcrResult, getScanModule());
-
+                startScanResultIntent(getResources().getString(R.string.vin_reading_result), getVINResult(result.getResult().toString()), path);
+                setupScanProcessView(ScanVehicleIdentificationNumberActivity.this, result, getScanModule());
             }
+
         });
-
-        createFeedbackView(scanView);
     }
 
-    private HashMap<String, String> getVINResult(String vinResult){
-        HashMap<String, String> VINHashMap = new HashMap<>();
-
-        VINHashMap.put(getResources().getString(R.string.vin_reading_result) , (vinResult == null || vinResult.isEmpty()) ?  getResources().getString(R.string.not_available) : vinResult);
-
-        return VINHashMap;
-    }
-
-    @Override
-    protected AnylineBaseModuleView getScanView() {
-        return scanView;
-    }
-
-    @Override
-    public Rect getCutoutRect() {
-        return scanView.getCutoutRect();
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
-    }
-
-    @Override
-    protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.VEHICLE_IDENTIFICATION_NUMBER;
-    }
 
     @Override
     protected void onResume() {
         super.onResume();
-        scanView.startScanning();
+        scanView.start();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        scanView.cancelScanning();
-        scanView.releaseCameraInBackground();
+        scanView.stop();
+    }
+
+    protected HashMap<String, String> getVINResult(String result) {
+
+        HashMap<String, String> serialNumberResult = new HashMap();
+
+        serialNumberResult.put(getResources().getString(R.string.vin_reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
+
+        return serialNumberResult;
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
-    }
+    public void onDebug(String s, Object o) {
 
-    @Override
-    public void onDebug(String name, Object value) {
-
-        if (AnylineDebugListener.BRIGHTNESS_VARIABLE_NAME.equals(name) &&
-                (AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.equals(value.getClass()) ||
-                        AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.isAssignableFrom(value.getClass()))) {
-            switch (scanView.getBrightnessFeedback()) {
-                case TOO_BRIGHT:
-                    handleFeedback(FeedbackType.TOO_BRIGHT);
-                    break;
-                case TOO_DARK:
-                    handleFeedback(FeedbackType.TOO_DARK);
-                    break;
-                case OK:
-                    handleFeedback(FeedbackType.PERFECT);
-                    break;
-            }
-        } else if(AnylineDebugListener.DEVICE_SHAKE_WARNING_VARIABLE_NAME.equals(name)){
-            handleFeedback(FeedbackType.SHAKY);
-        }
     }
 
     @Override
@@ -148,4 +105,3 @@ public class ScanVehicleIdentificationNumberActivity extends ScanActivity implem
     }
 
 }
-

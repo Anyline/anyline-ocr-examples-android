@@ -1,40 +1,56 @@
-package io.anyline.examples.ocr;
 
-import android.graphics.Rect;
+package io.anyline.examples.ocr;
 import android.os.Bundle;
 import android.view.ViewGroup;
-
 import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
-import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
-import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.feedback.FeedbackType;
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.OcrScanResult;
+import io.anyline.plugin.ocr.OcrScanViewPlugin;
+import io.anyline.view.BaseScanViewConfig;
+import io.anyline.view.ScanView;
+import io.anyline.view.ScanViewPluginConfig;
+
 
 public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugListener {
 
-    private AnylineOcrScanView scanView;
+    private static final String TAG = ScanBottlecapActivity.class.getSimpleName();
+    private ScanView scanView;
+
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return null;
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.BOTTLECAP;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id.scan_view_placeholder));
+        getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id
+                .scan_view_placeholder));
 
+        init();
+    }
+    // see ScanIbanActivity for a more detailed description
 
-        String lic = getString(R.string.anyline_license_key);
-        scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
+    void init() {
+        scanView = (ScanView) findViewById(R.id.scan_view);
 
-        // see ScanScrabbleActivity for a more detailed description
         final AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
+
         anylineOcrConfig.setLanguages("bottlecap.traineddata");
         anylineOcrConfig.setCharWhitelist("123456789ABCDEFGHJKLMNPRSTUVWXYZ");
         anylineOcrConfig.setMinCharHeight(14);
@@ -47,79 +63,70 @@ public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugL
         anylineOcrConfig.setCharPaddingXFactor(0.3);
         anylineOcrConfig.setCharPaddingYFactor(0.5);
         anylineOcrConfig.setIsBrightTextOnDark(true);
-        scanView.setAnylineOcrConfig(anylineOcrConfig);
 
-        scanView.setConfig(new AnylineViewConfig(this, "bottlecap_view_config.json"));
-
-        scanView.setDebugListener(this);
-
-        scanView.initAnyline(lic, new AnylineOcrResultListener() {
+        //init the scanViewPlugin config
+        ScanViewPluginConfig ocrScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "bottlecap_view_config.json");
+        //init the scan view
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, ocrScanViewPluginConfig, "OCR");
+        //init the base config used for camera and flash
+        BaseScanViewConfig ocrBaseScanViewConfig = new BaseScanViewConfig(getApplicationContext(), "bottlecap_view_config.json");
+        //set the scan Base config
+        scanView.setScanViewConfig(ocrBaseScanViewConfig);
+        //set the scan view plugin to the scan view
+        scanView.setScanViewPlugin(scanViewPlugin);
+        //add the scan result listener
+        scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
             @Override
-            public void onResult(AnylineOcrResult anylineOcrResult) {
+            public void onResult(OcrScanResult result) {
+                String path = setupImagePath(result.getCutoutImage());
 
-                setFeedbackViewActive(false);
+                startScanResultIntent(getResources().getString(R.string.title_bottlecap), getSerialNumberResult(result.getResult().toString()), path);
+                setupScanProcessView(ScanBottlecapActivity.this, result, getScanModule());
 
-                String result = anylineOcrResult.getResult();
-
-                //set the path for the image which will be shown in the result screen
-                String path = setupImagePath(anylineOcrResult.getCutoutImage());
-                //start the resultScanView activity
-                startScanResultIntent(getResources().getString(R.string.title_bottlecap), getBottlecapResult(result), path);
-
-                setupScanProcessView(ScanBottlecapActivity.this, anylineOcrResult, getScanModule());
             }
+
         });
 
-        createFeedbackView(scanView);
+
+        //set the debug listener
+        scanViewPlugin.setDebugListener(this);
 
     }
-
-    @Override
-    protected AnylineBaseModuleView getScanView() {
-        return scanView;
-    }
-
-
-    @Override
-    public Rect getCutoutRect() {
-        return scanView.getCutoutRect();
-    }
-
-    @Override
-    protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.BOTTLECAP;
-    }
-
 
     @Override
     protected void onResume() {
         super.onResume();
-        scanView.startScanning();
+        scanView.start();
+        createFeedbackView(scanView);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
-        scanView.cancelScanning();
+        scanView.stop();
         scanView.releaseCameraInBackground();
+
+    }
+
+    protected HashMap<String, String> getSerialNumberResult (String result) {
+
+        HashMap<String, String> serialNumberResult = new HashMap();
+
+        serialNumberResult.put(getResources().getString(R.string.bottlecap_reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
+
+        return serialNumberResult;
     }
 
     @Override
-    public void onBackPressed() {
-        //close the result view on back press if it is open
-        super.onBackPressed();
-        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
-
+    public void onRunSkipped(RunFailure runFailure) {
     }
 
     @Override
     public void onDebug(String name, Object value) {
-
         if (AnylineDebugListener.BRIGHTNESS_VARIABLE_NAME.equals(name) &&
                 (AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.equals(value.getClass()) ||
                         AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.isAssignableFrom(value.getClass()))) {
-            switch (scanView.getBrightnessFeedback()) {
+            switch (scanView.getBrightnessFeedBack()) {
                 case TOO_BRIGHT:
                     handleFeedback(FeedbackType.TOO_BRIGHT);
                     break;
@@ -135,15 +142,4 @@ public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugL
         }
     }
 
-    private HashMap<String, String> getBottlecapResult (String bottlecapResult){
-        HashMap<String, String> bottlecapHashMap = new HashMap<>();
-
-        bottlecapHashMap.put(getResources().getString(R.string.bottlecap_reading_result) , (bottlecapResult == null || bottlecapResult.isEmpty()) ?  getResources().getString(R.string.not_available) : bottlecapResult);
-
-        return bottlecapHashMap;
-    }
-
-    @Override
-    public void onRunSkipped(RunFailure runFailure) {
-    }
 }

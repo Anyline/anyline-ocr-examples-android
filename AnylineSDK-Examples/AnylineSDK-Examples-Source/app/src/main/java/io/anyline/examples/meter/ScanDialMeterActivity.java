@@ -11,10 +11,15 @@ package io.anyline.examples.meter;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.meter.baseactivities.AbstractEnergyActivity;
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.meter.MeterScanMode;
+import io.anyline.plugin.meter.MeterScanResult;
+import io.anyline.plugin.meter.MeterScanViewPlugin;
 
 
 /**
@@ -28,14 +33,33 @@ public class ScanDialMeterActivity extends AbstractEnergyActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        energyScanView.setScanMode(EnergyScanView.ScanMode.DIAL_METER);
+        energyScanView.setScanConfig("dial_meter_view_config_new.json");
+        //init the scanViewPlugin config
+        //init the scan view
+        MeterScanViewPlugin scanViewPlugin = new MeterScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), energyScanView.getScanViewPluginConfig(), "ENERGY");
+        energyScanView.setScanViewPlugin(scanViewPlugin);
+        ((MeterScanViewPlugin)energyScanView.getScanViewPlugin()).setScanMode(MeterScanMode.DIAL_METER);
+
+        scanViewPlugin.addScanResultListener(new ScanResultListener<MeterScanResult>() {
+            @Override
+            public void onResult(MeterScanResult result) {
+                String energyResult = result.getResult();
+
+                String path = setupImagePath(result.getCutoutImage());
+                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResul(energyResult), path);
+
+
+                setupScanProcessView(ScanDialMeterActivity.this, result, getScanModule());
+                foundBarcodeString = "";
+            }
+
+        });
     }
 
-    @Override
-    protected void inflateEnergyView() {
-        getLayoutInflater().inflate(R.layout.activity_scan_dial_meter,
-                (ViewGroup) findViewById(R.id.energy_view_placeholder));
 
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return null;
     }
 
     @Override

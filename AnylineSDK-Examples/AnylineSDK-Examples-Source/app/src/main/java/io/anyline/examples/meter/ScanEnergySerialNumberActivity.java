@@ -3,10 +3,13 @@ package io.anyline.examples.meter;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
+import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.meter.baseactivities.AbstractEnergyActivity;
+import io.anyline.plugin.meter.MeterScanMode;
+import io.anyline.plugin.meter.MeterScanViewPlugin;
 
 
 public class ScanEnergySerialNumberActivity extends AbstractEnergyActivity {
@@ -16,15 +19,13 @@ public class ScanEnergySerialNumberActivity extends AbstractEnergyActivity {
         super.onCreate(savedInstanceState);
 
         // set the scan mode to start with
-        energyScanView.setScanMode(EnergyScanView.ScanMode.SERIAL_NUMBER);
-        // a simple regex for a basic validation of the Energy Serial Number, results that don't match this, will not be returned
-        energyScanView.setSerialNumberValidationRegex("[A-Z0-9]{4,}");
-        energyScanView.setSerialNumberCharWhitelist("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        MeterScanViewPlugin meterScanViewPlugin = ((MeterScanViewPlugin)energyScanView.getScanViewPlugin());
+        meterScanViewPlugin.setScanMode(MeterScanMode.SERIAL_NUMBER);
     }
 
     @Override
-    protected void inflateEnergyView() {
-        getLayoutInflater().inflate(R.layout.activity_scan_energy, (ViewGroup) findViewById(R.id.energy_view_placeholder));
+    protected AnylineBaseModuleView getScanView() {
+        return null;
     }
 
     @Override

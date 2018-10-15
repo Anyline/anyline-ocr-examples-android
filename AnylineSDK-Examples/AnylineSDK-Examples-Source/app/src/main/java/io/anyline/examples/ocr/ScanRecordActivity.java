@@ -1,61 +1,62 @@
 package io.anyline.examples.ocr;
 
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
 import at.nineyards.anyline.AnylineDebugListener;
-import at.nineyards.anyline.camera.AnylineViewConfig;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResult;
-import at.nineyards.anyline.modules.ocr.AnylineOcrResultListener;
-import at.nineyards.anyline.modules.ocr.AnylineOcrScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.apis.RecordSearchActivity;
 import io.anyline.examples.ocr.feedback.FeedbackType;
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.OcrScanResult;
+import io.anyline.plugin.ocr.OcrScanViewPlugin;
+import io.anyline.view.ScanView;
 
 public class ScanRecordActivity extends ScanActivity implements AnylineDebugListener {
 
     private static final String TAG = ScanRecordActivity.class.getSimpleName();
-    private AnylineOcrScanView scanView;
+    private ScanView scanView;
 
+    @Override
+    protected AnylineBaseModuleView getScanView() {
+        return null;
+    }
+
+    @Override
+    protected ScanModuleEnum.ScanModule getScanModule() {
+        return ScanModuleEnum.ScanModule.RECORD;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getLayoutInflater().inflate(R.layout.activity_anyline_ocr, (ViewGroup) findViewById(R.id
+
+        getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id
                 .scan_view_placeholder));
 
+        init();
 
-        String lic = getString(R.string.anyline_license_key);
-        scanView = (AnylineOcrScanView) findViewById(R.id.scan_view);
+    }
 
-        // see ScanIbanActivity for a more detailed description
-        AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("eng_no_dict.traineddata", "deu.traineddata");
-        anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.");
-        anylineOcrConfig.setMinCharHeight(15);
-        anylineOcrConfig.setMaxCharHeight(70);
-        anylineOcrConfig.setMinConfidence(75);
-        anylineOcrConfig.setValidationRegex("^([A-Z]+\\s*-*\\s*)?[0-9A-Z-\\s\\.]{3,}$");
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.LINE);
-        anylineOcrConfig.setRemoveSmallContours(false);
+    void init() {
+        scanView = (ScanView) findViewById(R.id.scan_view);
 
-        scanView.setAnylineOcrConfig(anylineOcrConfig);
+        try {
+            scanView.init("record_view_config.json", getString(R.string.anyline_license_key));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        OcrScanViewPlugin scanViewPlugin = (OcrScanViewPlugin) scanView.getScanViewPlugin();
 
-        scanView.setDebugListener(this);
-
-        scanView.setConfig(new AnylineViewConfig(this, "record_view_config.json"));
-
-        scanView.initAnyline(lic, new AnylineOcrResultListener() {
-
+        scanViewPlugin.getAnylineOcrConfig().setValidationRegex("^([A-Z]+\\s*-*\\s*)?[0-9A-Z-\\s\\.]{3,}$");
+        scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
             @Override
-            public void onResult(AnylineOcrResult anylineOcrResult) {
+            public void onResult(OcrScanResult anylineOcrResult) {
 
                 String result = anylineOcrResult.getResult();
 
@@ -71,59 +72,33 @@ public class ScanRecordActivity extends ScanActivity implements AnylineDebugList
                     setupScanProcessView(ScanRecordActivity.this, anylineOcrResult, getScanModule());
                 }
             }
+
         });
-
-        createFeedbackView(scanView);
+        scanViewPlugin.setDebugListener(this);
 
     }
 
-    @Override
-    protected AnylineBaseModuleView getScanView() {
-        return scanView;
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
-    }
-
-    @Override
-    public Rect getCutoutRect() {
-        return scanView.getCutoutRect();
-    }
-
-    @Override
-    protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.RECORD;
-    }
 
     @Override
     protected void onResume() {
         super.onResume();
-        scanView.startScanning();
+        scanView.start();
+        createFeedbackView(scanView);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        scanView.cancelScanning();
+        scanView.stop();
         scanView.releaseCameraInBackground();
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
-        setFeedbackViewActive(true);
-    }
-
-    @Override
     public void onDebug(String name, Object value) {
-
         if (AnylineDebugListener.BRIGHTNESS_VARIABLE_NAME.equals(name) &&
                 (AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.equals(value.getClass()) ||
                         AnylineDebugListener.BRIGHTNESS_VARIABLE_CLASS.isAssignableFrom(value.getClass()))) {
-            switch (scanView.getBrightnessFeedback()) {
+            switch (scanView.getBrightnessFeedBack()) {
                 case TOO_BRIGHT:
                     handleFeedback(FeedbackType.TOO_BRIGHT);
                     break;

@@ -25,20 +25,22 @@ import io.anyline.examples.ocr.feedback.FeedbackType;
 import io.anyline.examples.ocr.feedback.FeedbackView;
 import io.anyline.examples.scanviewresult.ScanViewResultActivity;
 import io.anyline.examples.util.Constant;
+import io.anyline.plugin.licenseplate.LicensePlateScanViewPlugin;
+import io.anyline.view.ScanView;
 
 
 abstract public class ScanActivity extends ScanningConfigurationActivity{
 
 
-    /**
-     * @return the cutout rect of the corresponding {@link AnylineBaseModuleView}
-     */
-    public abstract Rect getCutoutRect();
-
-    /**
-     * @return the actual used {@link AnylineBaseModuleView}
-     */
-    protected abstract AnylineBaseModuleView getScanView();
+//    /**
+//     * @return the cutout rect of the corresponding {@link AnylineBaseModuleView}
+//     */
+//    public abstract Rect getCutoutRect();
+//
+//    /**
+//     * @return the actual used {@link AnylineBaseModuleView}
+//     */
+//    protected abstract AnylineBaseModuleView getScanView();
 
     /**
      * @return the module type view {@link io.anyline.examples.ScanModuleEnum.ScanModule}
@@ -111,19 +113,18 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
 
     }
 
-
-    protected void createFeedbackView(final AnylineView scanView) {
+    protected void createFeedbackView(final ScanView scanView) {
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
         feedbackView = new FeedbackView(ScanActivity.this);
         RelativeLayout mainLayout;
 
-        if (scanView instanceof LicensePlateScanView) {
-            mainLayout = (RelativeLayout) findViewById(R.id.license_plate_main_layout);
-        } else {
+//        if (scanView.getScanViewPlugin() instanceof LicensePlateScanViewPlugin) {
+//            mainLayout = (RelativeLayout) findViewById(R.id.license_plate_main_layout);
+//        } else {
             mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
-        }
+        //}
 
         mainLayout.addView(feedbackView, params);
 
@@ -134,10 +135,10 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
                     @Override
                     public void onGlobalLayout() {
 
-                        if (scanView == null || scanView.getMeasuredHeight() == 0 || scanView.getMeasuredWidth() == 0 || getCutoutRect() == null) {
+                        if (scanView == null || scanView.getMeasuredHeight() == 0 || scanView.getMeasuredWidth() == 0) {
                             setFeedbackViewActive(false);
                         } else {
-                            int yPos = feedbackView.calculateYPosition(scanView.getCutoutRect(), scanView.getWatermarkRect(),
+                            int yPos = feedbackView.calculateYPosition(scanView.getScanViewPlugin().getCutoutImageOnSurface(), scanView.getWatermarkRect(),
                                     scanView
                                             .getMeasuredHeight());
                             feedbackView.setY(yPos);
