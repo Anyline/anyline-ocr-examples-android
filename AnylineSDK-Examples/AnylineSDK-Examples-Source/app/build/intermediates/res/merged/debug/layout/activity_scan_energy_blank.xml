@@ -1,0 +1,72 @@
+<!--
+  ~ Anyline
+  ~ activity_scan_energy.xmll
+  ~
+  ~ Copyright (c) 2015 9yards GmbH
+  ~
+  ~ Created by martin at 2015-07-03
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+
+    <FrameLayout
+        android:id="@+id/energy_view_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <FrameLayout
+        android:id="@+id/energy_selection_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:animateLayoutChanges="true" />
+
+
+        <LinearLayout
+            android:id="@+id/barcode_switch_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="#88000000"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:id="@+id/enable_barcode_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/barcode_scanner_switch"
+                android:paddingBottom="12dp"
+                android:text="@string/enable_barcode_detection"
+                android:textColor="#E5E5E5"
+                android:textSize="14dp" />
+
+            <Switch
+                android:id="@+id/barcode_scanner_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="false"
+                android:showText="true"
+                android:switchTextAppearance="@style/switch_text_selector"
+                android:textOff="@string/switch_off"
+                android:textOn="@string/switch_on"
+                android:thumb="@drawable/switch_thumb_selector"
+                android:track="@drawable/switch_track_selector" />
+
+
+        </LinearLayout>
+
+
+</RelativeLayout>

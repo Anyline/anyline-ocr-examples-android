@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

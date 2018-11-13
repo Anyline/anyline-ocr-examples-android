@@ -23,7 +23,6 @@
     <string name="dial_meter">Dial (Alpha)</string>
     <string name="serial_number">Universal Serial Number</string>
     <string name="shipping_container">Shipping Container</string>
-    <string name="shipping_container_4">Shipping Container 4.0</string>
     <string name="serial_number_energy">Serial Number</string>
 
     <string name="heat_meter_4_3">4 pre-decimal places</string>
@@ -249,7 +248,7 @@
     <string name="austria">Austria</string>
     <string name="germany">Germany</string>
     <string name="auto">Auto</string>
-    <string name="title_driving_license">Austrian Driving License</string>
+    <string name="title_driving_license">AUT/GER Driving License</string>
 
     <string name="title_mileometer">Mileometer (PoC)</string>
     <string name="mileometer">Mileometer (PoC)</string>
@@ -343,6 +342,8 @@
     <string name="mrz_expiration_date">Expiration Date</string>
     <string name="mrz_date_of_birthday">Date of Birth</string>
     <string name="not_available">Not Available</string>
+    <string name="not_valid">Not Valid</string>
+    <string name="mrz_address">Address</string>
 
     <!-- LicensePlate result Screen Keys -->
     <string name="license_plate_country">Country</string>
@@ -363,6 +364,11 @@
     <string name="driving_license_sur_names">Last Name</string>
     <string name="driving_license_DOB">Date of Birth</string>
     <string name="driving_license_document_code">Document Number</string>
+    <string name="driving_license_authority">Authority</string>
+    <string name="driving_license_POB">Place of Birth</string>
+    <string name="driving_license_categories">Categories</string>
+    <string name="driving_license_issuing_date">Issuing Date</string>
+    <string name="driving_license_expiring_date">Expiration Date</string>
 
     <!-- Build Version Description -->
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>

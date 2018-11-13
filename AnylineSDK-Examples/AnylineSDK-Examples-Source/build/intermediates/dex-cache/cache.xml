@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/3c6355d6aa04d6d21fb426f33534b27c08297230/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_267952a52043b84565c1c3d5d837c1216149178c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/13cc6f7b4429fc3e0f9a7da604f50f60f442b149/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ff96537665671af72234a12bb37deb0cdd5249c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/13cc6f7b4429fc3e0f9a7da604f50f60f442b149/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_e02a07886fc3d7f562308fb0077431486ba9ee0e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/d0301cb867921cbdb0751f9a7a8a2965cc60c2c6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f1173d34da2bacf17e9afdbfa77eaf52fc85a9a7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/8820fb56f7b172efa970e6c0d0519ded8cbc538e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_284d892cf4c30d23b4d06c9cb2cf3ee833cfd95b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/d717e36d4a437ce149d9d05ced22ef868540e582/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f3ef8be70ea9e18b4d1d682b4cbe381acc2cb52d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/d72c1b4dbfa14044b33a193972d2e3f6e68abcdc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_65134b22749a6475728619ab166bd76f3811f50c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/d717e36d4a437ce149d9d05ced22ef868540e582/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f9674013fab2e432a9bb4e4a280986da5f64ca2b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_227321a766f0d9632d9613755af8ed8250c316cb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/51b383f9cd3fdaebee4fa57fe98136b5ab3fbd93/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_37bc8119b100844c12963df3a6e3e9718de6da89/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a8598911e4328931e6a53d1720cd5b913419098f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/ad48c02f3d20699de6944ec516911add51fe0e79/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_42a4367f93e753f6607dac976eecdfc888a692dc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/51b383f9cd3fdaebee4fa57fe98136b5ab3fbd93/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f80e80e007b7f38938c93326682400320a2fbc41/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/d72c1b4dbfa14044b33a193972d2e3f6e68abcdc/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_553d63dd2a59cac5997db156096f491756be34af/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/3c6355d6aa04d6d21fb426f33534b27c08297230/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_baf6f4bee218e790672082d6514ea294f0ff1a2e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lorena/.android/build-cache/62ca660484b50d329123a175541ac16e547ae82d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_43619f2c5ec48cba4ce8fc88fe07718cb7ec4709/classes.dex" />
+    </item>
+
+</items>

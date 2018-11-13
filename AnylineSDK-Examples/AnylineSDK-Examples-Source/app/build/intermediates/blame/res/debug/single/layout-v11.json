@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/layout-v11/preference.xml",
+        "source": "/home/lorena/.android/build-cache/3a7dded0632f4659653c339c89fed01b70bfe6fc/output/res/layout-v11/preference.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/layout-v11/preference_dropdown.xml",
+        "source": "/home/lorena/.android/build-cache/3a7dded0632f4659653c339c89fed01b70bfe6fc/output/res/layout-v11/preference_dropdown.xml"
+    }
+]

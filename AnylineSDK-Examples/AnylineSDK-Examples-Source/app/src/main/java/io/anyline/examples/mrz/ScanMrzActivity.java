@@ -143,7 +143,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 		identificationResult.put(getResources().getString(R.string.mrz_given_names),(identification.getGivenNames() == null || identification.getGivenNames().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getGivenNames());
 		if(identification.getExpirationDateObject() == null){
 			if(identification.getExpirationDate() != null && (!identification.getExpirationDate().isEmpty())){
-				identificationResult.put(getResources().getString(R.string.mrz_expiration_date), getResources().getString(R.string.not_available));
+				identificationResult.put(getResources().getString(R.string.mrz_expiration_date), getResources().getString(R.string.not_valid));
 			}else{
 				identificationResult.put(getResources().getString(R.string.mrz_expiration_date), getResources().getString(R.string.not_available));
 			}
@@ -153,7 +153,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 
 		if(identification.getDayOfBirthObject() == null){
 			if(identification.getDayOfBirth() != null && (!identification.getDayOfBirth().isEmpty())){
-				identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday), getResources().getString(R.string.not_available));
+				identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday), getResources().getString(R.string.not_valid));
 			}else{
 				identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday), getResources().getString(R.string.not_available));
 			}
@@ -162,6 +162,13 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 		}
 		identificationResult.put(getResources().getString(R.string.mrz_sex), (identification.getSex() == null || identification.getSex().isEmpty()) ?  getResources().getString(R.string.not_available) : identification.getSex());
 
+		if(identification.getNationalityCountryCode() != null && identification.getNationalityCountryCode().equals("D")){
+			String address = null;
+			if(identification.getAddress() != null) {
+				address = identification.getAddress().replace("\\n", "\n");
+			}
+			identificationResult.put(getResources().getString(R.string.mrz_address), (address == null || address.isEmpty()) ?  getResources().getString(R.string.not_available) : address);
+		}
 		return identificationResult;
 	}
 

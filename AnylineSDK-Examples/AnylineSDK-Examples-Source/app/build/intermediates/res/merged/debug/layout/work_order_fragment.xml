@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_10"
+                android:orientation="vertical">
+
+
+    <TextView
+        android:background="@color/white"
+        android:id="@+id/process_name"
+        android:textAllCaps="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_dim"
+        android:padding="18dp"/>
+
+    <TextView
+        android:id="@+id/order_name"
+        android:layout_below="@+id/process_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top|start"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_dim"
+        android:padding="20dp"/>
+
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_dim"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@color/blue_light"
+        android:minHeight="@dimen/min_height"
+        android:textAllCaps="true" />
+
+    <include layout="@layout/recycle_viewer_fragment"
+             android:layout_below="@+id/order_name"
+             android:layout_above="@id/button_start"
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"/>
+
+</RelativeLayout>

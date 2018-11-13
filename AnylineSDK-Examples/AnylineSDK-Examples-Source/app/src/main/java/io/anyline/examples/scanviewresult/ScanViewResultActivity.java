@@ -30,7 +30,6 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
     private String scanModule;
     private HashMap<String, String> result;
-    private String scanResult;
     private ScanViewResultAdapter scanResultAdapter;
     private RecyclerView recyclerView;
     private ImageView imageView;
@@ -58,14 +57,12 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             Bundle extras = getIntent().getExtras();
             if (extras != null) {
                 scanModule = extras.getString(Constant.SCAN_MODULE, "").trim();
-                scanResult = extras.getString(Constant.SCAN_RESULT_DATA);
 
                 Bitmap bmp =  BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FULL_PICTURE_PATH));
                 imageView.setImageBitmap(bmp);
             }
         } else {
             scanModule = savedInstanceState.getString(Constant.SCAN_MODULE);
-            scanResult = savedInstanceState.getString(Constant.SCAN_RESULT_DATA);
         }
 
 
@@ -105,6 +102,9 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMap.put(getResources().getString(R.string.mrz_document_number), result.get(getResources().getString(R.string.mrz_document_number)));
             orderedHashMap.put(getResources().getString(R.string.mrz_expiration_date), result.get(getResources().getString(R.string.mrz_expiration_date)));
             orderedHashMap.put(getResources().getString(R.string.mrz_country_code), result.get(getResources().getString(R.string.mrz_country_code)));
+            if(result.get(getResources().getString(R.string.mrz_address)) != null) {
+                orderedHashMap.put(getResources().getString(R.string.mrz_address), result.get(getResources().getString(R.string.mrz_address)));
+            }
 
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMap);
 
@@ -115,9 +115,23 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_given_names), result.get(getResources().getString(R.string.driving_license_given_names)));
             orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_DOB), result.get(getResources().getString(R.string.driving_license_DOB)));
             orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_document_code), result.get(getResources().getString(R.string.driving_license_document_code)));
+            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_authority), result.get(getResources().getString(R.string.driving_license_authority)));
+            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_expiring_date), result.get(getResources().getString(R.string.driving_license_expiring_date)));
+            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_issuing_date), result.get(getResources().getString(R.string.driving_license_issuing_date)));
+            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_categories), result.get(getResources().getString(R.string.driving_license_categories)));
+            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_POB), result.get(getResources().getString(R.string.driving_license_POB)));
 
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapDrivingLicense);
-        }else{
+
+        }else if(scanModule.equals(getResources().getString(R.string.category_energy))){
+            LinkedHashMap<String, String> orderedHashMapEnergy = new LinkedHashMap();
+
+            orderedHashMapEnergy.put(getResources().getString(R.string.reading_result), result.get(getResources().getString(R.string.reading_result)));
+            orderedHashMapEnergy.put(getResources().getString(R.string.barcode), result.get(getResources().getString(R.string.barcode)));
+
+            scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapEnergy);
+        }
+        else{
 
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), result);
         }

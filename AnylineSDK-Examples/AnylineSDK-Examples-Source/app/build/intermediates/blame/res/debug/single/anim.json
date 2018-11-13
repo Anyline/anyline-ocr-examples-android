@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/fade_in.xml",
+        "source": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res/anim/fade_in.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
+        "source": "/home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/res/anim/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
+        "source": "/home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/res/anim/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
+        "source": "/home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/res/anim/design_fab_out.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/left_to_right.xml",
+        "source": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res/anim/left_to_right.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/activity_close_translate.xml",
+        "source": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res/anim/activity_close_translate.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/activity_open_translate.xml",
+        "source": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res/anim/activity_open_translate.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
+        "source": "/home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/res/anim/design_fab_in.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/fade_out.xml",
+        "source": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res/anim/fade_out.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/right_to_left.xml",
+        "source": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res/anim/right_to_left.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/res/anim/abc_slide_out_top.xml"
+    }
+]

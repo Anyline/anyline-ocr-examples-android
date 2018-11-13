@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/layout-v17/preference_category_material.xml",
+        "source": "/home/lorena/.android/build-cache/bd19a070634b28d6ba446c14b0e4fd6739fabfcc/output/res/layout-v17/preference_category_material.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/layout-v17/preference_dropdown_material.xml",
+        "source": "/home/lorena/.android/build-cache/bd19a070634b28d6ba446c14b0e4fd6739fabfcc/output/res/layout-v17/preference_dropdown_material.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/layout-v17/preference_information_material.xml",
+        "source": "/home/lorena/.android/build-cache/bd19a070634b28d6ba446c14b0e4fd6739fabfcc/output/res/layout-v17/preference_information_material.xml"
+    },
+    {
+        "merged": "/home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/res/merged/debug/layout-v17/preference_material.xml",
+        "source": "/home/lorena/.android/build-cache/bd19a070634b28d6ba446c14b0e4fd6739fabfcc/output/res/layout-v17/preference_material.xml"
+    }
+]

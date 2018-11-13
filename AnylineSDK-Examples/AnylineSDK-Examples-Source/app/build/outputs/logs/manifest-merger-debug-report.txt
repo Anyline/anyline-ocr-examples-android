@@ -1,0 +1,402 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-261:12
+	package
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:3:5-34
+	android:versionName
+		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:22-62
+uses-permission#android.permission.VIBRATE
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:22-63
+uses-permission#android.permission.INTERNET
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:5-67
+MERGED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:22-77
+uses-permission#android.permission.MANAGE_DOCUMENTS
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:5-75
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:22-72
+application
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:11:5-259:19
+MERGED from [com.android.support:preference-v14:24.2.1] /home/lorena/.android/build-cache/bd19a070634b28d6ba446c14b0e4fd6739fabfcc/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:preference-v7:24.2.1] /home/lorena/.android/build-cache/3a7dded0632f4659653c339c89fed01b70bfe6fc/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:24.2.1] /home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.1] /home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /home/lorena/.android/build-cache/8820fb56f7b172efa970e6c0d0519ded8cbc538e/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /home/lorena/.android/build-cache/ad48c02f3d20699de6944ec516911add51fe0e79/output/AndroidManifest.xml:23:5-20
+MERGED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:14:5-20:19
+MERGED from [com.google.android.gms:play-services-vision:10.0.1] /home/lorena/.android/build-cache/79a1027e1ac38ec331d23a77d11aa29215fa68d7/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /home/lorena/.android/build-cache/206bd2d47a42ebcfc7e2987bfc68d1140896324c/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:24.2.1] /home/lorena/.android/build-cache/62ca660484b50d329123a175541ac16e547ae82d/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] /home/lorena/.android/build-cache/d717e36d4a437ce149d9d05ced22ef868540e582/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] /home/lorena/.android/build-cache/d72c1b4dbfa14044b33a193972d2e3f6e68abcdc/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] /home/lorena/.android/build-cache/51b383f9cd3fdaebee4fa57fe98136b5ab3fbd93/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] /home/lorena/.android/build-cache/13cc6f7b4429fc3e0f9a7da604f50f60f442b149/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] /home/lorena/.android/build-cache/3c6355d6aa04d6d21fb426f33534b27c08297230/output/AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:15:9-41
+	android:allowBackup
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:14:9-43
+	android:largeHeap
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:13:9-33
+	android:theme
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:16:9-40
+activity#io.anyline.examples.MainActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:18:9-27:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:21:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:20:13-45
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:19:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:22:13-26:29
+action#android.intent.action.MAIN
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:25:27-74
+activity#io.anyline.examples.meterreadingprocesses.activities.ResultActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:28:9-30:51
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:30:13-49
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:29:13-76
+activity#io.anyline.examples.meterreadingprocesses.activities.WorkOrdersActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:31:9-34:15
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:33:13-49
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:32:13-80
+activity#io.anyline.examples.meterreadingprocesses.activities.SelfReadingScannerActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:35:9-37:52
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:37:13-49
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:36:13-88
+activity#io.anyline.examples.meterreadingprocesses.activities.CustomerActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:38:9-40:52
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:40:13-49
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:39:13-78
+activity#io.anyline.examples.meterreadingprocesses.activities.CustomerIdentifyScannerActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:41:9-43:51
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:43:13-49
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:42:13-93
+activity#io.anyline.examples.meter.ScanDigitalEnergyMeterActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:45:9-53:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:49:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:47:13-56
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:48:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:46:13-65
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:50:13-52:68
+	android:value
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:52:17-65
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:51:17-63
+activity#io.anyline.examples.meter.ScanAutoAnalogDigitalMeterActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:54:9-62:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:58:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:56:13-68
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:57:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:55:13-69
+activity#io.anyline.examples.meter.ScanDialMeterActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:63:9-71:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:67:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:65:13-53
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:66:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:64:13-56
+activity#io.anyline.examples.meter.ScanEnergySerialNumberActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:72:9-80:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:76:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:74:13-63
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:75:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:73:13-65
+activity#io.anyline.examples.ocr.ScanSerialNumberActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:81:9-89:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:85:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:83:13-56
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:84:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:82:13-57
+activity#io.anyline.examples.ocr.ScanShippingContainerActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:90:9-98:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:94:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:92:13-61
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:93:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:91:13-62
+activity#io.anyline.examples.mrz.ScanMrzActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:99:9-107:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:103:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:101:13-46
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:102:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:100:13-48
+activity#io.anyline.examples.barcode.ScanBarcodeActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:108:9-116:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:112:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:110:13-50
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:111:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:109:13-56
+activity#io.anyline.examples.document.ScanDocumentActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:117:9-125:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:121:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:119:13-51
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:120:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:118:13-58
+activity#io.anyline.examples.ocr.ScanScrabbleActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:126:9-134:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:130:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:128:13-51
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:129:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:127:13-53
+activity#io.anyline.examples.licenseplate.ScanLicensePlateActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:135:9-143:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:139:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:137:13-56
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:138:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:136:13-66
+activity#io.anyline.examples.ocr.ScanBottlecapActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:144:9-152:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:148:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:146:13-52
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:147:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:145:13-54
+activity#io.anyline.examples.ocr.ScanRedBullCodeActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:153:9-161:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:157:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:155:13-50
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:156:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:154:13-56
+activity#io.anyline.examples.ocr.ScanIsbnActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:162:9-170:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:166:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:164:13-47
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:165:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:163:13-49
+activity#io.anyline.examples.ocr.ScanRecordActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:171:9-179:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:175:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:173:13-49
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:174:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:172:13-51
+activity#io.anyline.examples.ocr.ScanVoucherCodeActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:180:9-188:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:184:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:182:13-50
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:183:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:181:13-56
+activity#io.anyline.examples.ocr.ScanIbanActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:189:9-197:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:193:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:191:13-47
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:192:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:190:13-49
+activity#io.anyline.examples.mrz.ScanDrivingLicenseActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:198:9-206:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:202:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:200:13-58
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:201:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:199:13-59
+activity#io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:207:9-215:20
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:209:13-40
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:210:13-55
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:208:13-72
+activity#io.anyline.examples.scanviewresult.ScanViewResultActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:216:9-225:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:220:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:218:13-40
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:219:13-55
+	android:theme
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:221:13-58
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:217:13-66
+activity#io.anyline.examples.ocr.apis.AnagramActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:226:9-235:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:230:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:228:13-58
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:229:13-67
+	android:theme
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:231:13-58
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:227:13-53
+activity#io.anyline.examples.ocr.apis.IsbnActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:236:9-245:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:240:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:238:13-54
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:239:13-63
+	android:theme
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:241:13-58
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:237:13-50
+activity#io.anyline.examples.ocr.apis.RecordSearchActivity
+ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:246:9-255:20
+	android:screenOrientation
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:250:13-49
+	android:label
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:248:13-56
+	android:parentActivityName
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:249:13-65
+	android:theme
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:251:13-58
+	android:name
+		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:247:13-58
+uses-sdk
+INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /home/lorena/.android/build-cache/9c8e150db8718b6e4a9a2084ef7dbb1e817dcf6d/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:preference-v14:24.2.1] /home/lorena/.android/build-cache/bd19a070634b28d6ba446c14b0e4fd6739fabfcc/output/AndroidManifest.xml:7:5-44
+MERGED from [com.android.support:preference-v7:24.2.1] /home/lorena/.android/build-cache/3a7dded0632f4659653c339c89fed01b70bfe6fc/output/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:design:24.2.1] /home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:24.2.1] /home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] /home/lorena/.android/build-cache/8820fb56f7b172efa970e6c0d0519ded8cbc538e/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] /home/lorena/.android/build-cache/ad48c02f3d20699de6944ec516911add51fe0e79/output/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:24.2.1] /home/lorena/.android/build-cache/d0301cb867921cbdb0751f9a7a8a2965cc60c2c6/output/AndroidManifest.xml:20:5-43
+MERGED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android.gms:play-services-vision:10.0.1] /home/lorena/.android/build-cache/79a1027e1ac38ec331d23a77d11aa29215fa68d7/output/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /home/lorena/.android/build-cache/206bd2d47a42ebcfc7e2987bfc68d1140896324c/output/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:support-v4:24.2.1] /home/lorena/.android/build-cache/62ca660484b50d329123a175541ac16e547ae82d/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.1] /home/lorena/.android/build-cache/d717e36d4a437ce149d9d05ced22ef868540e582/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:24.2.1] /home/lorena/.android/build-cache/d72c1b4dbfa14044b33a193972d2e3f6e68abcdc/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.1] /home/lorena/.android/build-cache/51b383f9cd3fdaebee4fa57fe98136b5ab3fbd93/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] /home/lorena/.android/build-cache/13cc6f7b4429fc3e0f9a7da604f50f60f442b149/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] /home/lorena/.android/build-cache/3c6355d6aa04d6d21fb426f33534b27c08297230/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.2.1] /home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+meta-data#com.google.android.gms.vision.DEPENDENCIES
+ADDED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:17:9-19:39
+	android:value
+		ADDED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:19:13-36
+	android:name
+		ADDED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:18:13-70
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:20:20-65
