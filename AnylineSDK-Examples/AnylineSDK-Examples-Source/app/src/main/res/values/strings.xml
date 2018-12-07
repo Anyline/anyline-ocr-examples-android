@@ -344,6 +344,8 @@
     <string name="not_available">Not Available</string>
     <string name="not_valid">Not Valid</string>
     <string name="mrz_address">Address</string>
+    <string name="issue_date">Issuing Date</string>
+    <string name="personal_number">Personal Number</string>
 
     <!-- LicensePlate result Screen Keys -->
     <string name="license_plate_country">Country</string>

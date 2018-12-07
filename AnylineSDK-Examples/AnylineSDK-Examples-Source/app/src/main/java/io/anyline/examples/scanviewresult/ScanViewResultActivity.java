@@ -105,7 +105,12 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             if(result.get(getResources().getString(R.string.mrz_address)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.mrz_address), result.get(getResources().getString(R.string.mrz_address)));
             }
-
+            if(result.get(getResources().getString(R.string.issue_date)) != null){
+                orderedHashMap.put(getResources().getString(R.string.issue_date), result.get(getResources().getString(R.string.issue_date)));
+            }
+            if(result.get(getResources().getString(R.string.personal_number)) != null) {
+                orderedHashMap.put(getResources().getString(R.string.personal_number), result.get(getResources().getString(R.string.personal_number)));
+            }
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMap);
 
         }else if(scanModule.equals(getResources().getString(R.string.title_driving_license))){

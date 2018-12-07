@@ -48,11 +48,6 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 		super.onCreate(savedInstanceState);
 		getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id.scan_view_placeholder));
 
-
-		// add a camera open listener that will be called when the camera is opened or an error occurred
-		//  this is optional (if not set a RuntimeException will be thrown if an error occurs)
-//		mrzScanView.setCameraOpenListener(this);
-
 		init();
 
 	}
@@ -162,12 +157,16 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 		}
 		identificationResult.put(getResources().getString(R.string.mrz_sex), (identification.getSex() == null || identification.getSex().isEmpty()) ?  getResources().getString(R.string.not_available) : identification.getSex());
 
-		if(identification.getNationalityCountryCode() != null && identification.getNationalityCountryCode().equals("D")){
+		if(identification.getNationalityCountryCode() != null && identification.getDocumentType() != null && identification.getDocumentType().equals("ID") && identification.getNationalityCountryCode().equals("D")) {
 			String address = null;
-			if(identification.getAddress() != null) {
+			if (identification.getAddress() != null) {
 				address = identification.getAddress().replace("\\n", "\n");
 			}
-			identificationResult.put(getResources().getString(R.string.mrz_address), (address == null || address.isEmpty()) ?  getResources().getString(R.string.not_available) : address);
+			identificationResult.put(getResources().getString(R.string.mrz_address), (address == null || address.isEmpty()) ? getResources().getString(R.string.not_available) : address);
+		}if(identification.getIssuingDate() != null && !identification.getIssuingDate().isEmpty()){
+			identificationResult.put(getResources().getString(R.string.issue_date), dateFormat.format(identification.getIssuingDateObject()));
+		}if(identification.getPersonalNumber() != null && !identification.getPersonalNumber().isEmpty()){
+			identificationResult.put(getResources().getString(R.string.personal_number), identification.getPersonalNumber());
 		}
 		return identificationResult;
 	}
@@ -180,9 +179,9 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 	@Override
 	public void onRunSkipped(RunFailure runFailure) {
 
-        if(runFailure!=null && runFailure.errorCode() == exception_error_codes.PointsOutOfCutout.swigValue()){
-            showToast(runFailure.getMessage());
-        }
+		if(runFailure!=null && runFailure.errorCode() == exception_error_codes.PointsOutOfCutout.swigValue()){
+			showToast(runFailure.getMessage());
+		}
 	}
 
 	private void showToast(String st) {

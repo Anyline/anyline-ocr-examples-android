@@ -28,7 +28,7 @@
     "cancelOnResult": false,
     "scanFeedback": {
       "style": "rect",
-      "strokeWidth": 1,
+      "strokeWidth": 2,
       "strokeColor": "0099FF",
       "fillColor": "220099FF",
       "cornerRadius": 10,

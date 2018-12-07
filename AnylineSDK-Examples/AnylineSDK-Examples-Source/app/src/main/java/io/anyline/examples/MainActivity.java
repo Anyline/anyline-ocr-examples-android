@@ -19,6 +19,7 @@ public class MainActivity extends BaseToolbarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_base_no_menu_bundle);

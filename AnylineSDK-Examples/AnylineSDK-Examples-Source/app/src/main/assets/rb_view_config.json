@@ -20,7 +20,7 @@
         "height": 10
       },
       "strokeWidth": 2,
-      "cornerRadius": 15,
+      "cornerRadius": 30,
       "strokeColor": "FFFFFF",
       "outerColor": "000000",
       "outerAlpha": 0.3,
@@ -28,9 +28,10 @@
     },
     "scanFeedback": {
       "style": "rect",
-      "strokeWidth": 1,
+      "strokeWidth": 2,
       "fillColor": "220099FF",
-      "strokeColor": "0099FFFF",
+      "strokeColor": "0099FF",
+      "cornerRadius": 15,
       "beepOnResult": true,
       "vibrateOnResult": true,
       "blinkAnimationOnResult": true
