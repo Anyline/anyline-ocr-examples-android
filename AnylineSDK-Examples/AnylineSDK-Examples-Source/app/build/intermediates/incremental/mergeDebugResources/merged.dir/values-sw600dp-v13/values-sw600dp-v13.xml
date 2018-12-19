@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <bool name="intercom_composer_keyboard_takes_full_screen_in_landscape">false</bool>
+    <bool name="intercom_is_two_pane">true</bool>
     <dimen name="abc_action_bar_content_inset_material">24dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">80dp</dimen>
     <dimen name="abc_action_bar_default_height_material">64dp</dimen>
@@ -14,11 +16,15 @@
     <dimen name="design_snackbar_extra_spacing_horizontal">24dp</dimen>
     <dimen name="design_snackbar_max_width">576dp</dimen>
     <dimen name="design_snackbar_min_width">320dp</dimen>
-    <dimen name="design_snackbar_padding_vertical_2lines">@dimen/design_snackbar_padding_vertical</dimen>
+    <dimen name="design_snackbar_padding_vertical_2lines">@dimen/design_snackbar_padding_vertical
+  </dimen>
     <dimen name="design_tab_scrollable_min_width">160dp</dimen>
     <integer name="design_snackbar_text_max_lines">1</integer>
+    <item name="intercom_messenger_activity_layout" type="layout">
+        @layout/intercom_activity_messenger
+    </item>
     <style name="Widget.Design.TabLayout" parent="Base.Widget.Design.TabLayout">
-        <item name="tabGravity">center</item>
-        <item name="tabMode">fixed</item>
-    </style>
+    <item name="tabGravity">center</item>
+    <item name="tabMode">fixed</item>
+  </style>
 </resources>

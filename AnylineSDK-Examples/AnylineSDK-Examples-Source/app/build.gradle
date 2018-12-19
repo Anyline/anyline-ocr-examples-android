@@ -9,8 +9,8 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 217
-        versionName "6"
+        versionCode 220
+        versionName "6.1"
 
         ndk {
             abiFilters "armeabi-v7a", "x86"
@@ -27,6 +27,7 @@ repositories {
     maven {
         url 'https://anylinesdk.blob.core.windows.net/maven/'
     }
+    maven { url 'https://dl.bintray.com/intercom/intercom-maven' }
 }
 
 dependencies {
@@ -40,8 +41,9 @@ dependencies {
     //compile(name:'anylinesdk-release-6-RC1', ext:'aar')
 
     //include AnylineSDK from maven
-    compile 'io.anyline:anylinesdk:6@aar'
+    compile 'io.anyline:anylinesdk:6.1@aar'
 
+    // after all - we now use sdk 3 (does not interfere with the barcode stuff), with push notifications
     implementation 'io.intercom.android:intercom-sdk:5.1.6'
 
     // include the vision-version we need for barcode scanning
@@ -49,4 +51,3 @@ dependencies {
         force = true
     }
 }
-

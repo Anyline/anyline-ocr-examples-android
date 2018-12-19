@@ -1,402 +1,824 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-261:12
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-261:12
+INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-261:12
+INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-261:12
+MERGED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:2:1-22:12
+MERGED from [com.android.support:multidex:1.0.2] /home/lorena/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/65826d1f930af3b92a6afb4c08f73595/AndroidManifest.xml:17:1-22:12
+MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:2:1-13:12
+MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:2:1-52:12
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:2:1-85:12
+MERGED from [com.android.support:design:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/07caa43170fa0c6a25249ac87c6adc6b/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:preference-v14:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/preference-v14-28.0.0.aar/a832455737fc802ac4d96ba0b87c3267/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:preference-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/preference-v7-28.0.0.aar/48cf8eec899b6a67bbd18e02ddc1b451/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6cf7c862a7e216ce9f29d17da84310a4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-12.0.1.aar/cfca3b51694a2cf1b61352f140cc225f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/4072de5429c161b64f9237dd605213f4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/ee1f9d997c5f192643d9ce67082a45af/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/b591a50afd43b5a19026af0856e575fc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/cb126668cdea776fc06e630680249807/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/33083fb638d83cd8670755af4c4f8941/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/95fbf5af1b5125d2bb5339b629a135fa/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/68e81fcd7ae354be9094fb744fa9ae6e/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/84f8d4d5afe59aadd9e350fdaa50f5d6/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7602ac8dd6260c0336093974dbf4e54c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/a141dd39732518ca9c04f579fc801e3d/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/6fd32af807549574121f5029a9b81f7a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/aaeccb98d2534da09c1a746b8416177f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/c41e9af408ff70a80ff66b287b883df8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/cd0a2c2357feb912e5b17d82fde87469/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/6b9c533a5c41b86c212266e06f4987b9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/4589ad98acb74bcd1bcc351aa09d28ab/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/ce6d4da86ec34a4338a1cda8dd30857d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/74301f66c1707f94b7fa0a27720c1a38/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/cc7e127ab3197519d8e6ae40e419cd82/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bedf3a03bf3baf021771f72ffc2d8ed0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/69e532dd62009d9753c5d4409f822a7a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/436e13ea2a35c1612ec5fb2fcc0f4c9d/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d990fbd0035992e3eea9ebd2861778ca/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/d623596166ee67859ad2e1c9297e4634/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/4eb813800c614df577490839d1ea0bc2/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/5bcf79ae716d1bab00737df32922152b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/91e17ed397cde37330cf60c4581c5d37/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5daafff8f6ed796f54ea82ddc33cdd25/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/abf4146786050169e420ca927e884048/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/11a8ed5119bb2d848de6d8d800f7ce3e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/bb06ad1395bf226d954a2ec347692fe3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/985c9b54561a8b02e70870220bbb21be/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/3bfc1ad73abd92e1f8b1334ec69e4532/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ed8a4a2259199950672818a10d116a2b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/7201338cd601ff641fd80921c546d868/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/78e82f9853be84ca5b1190dd52fa497c/AndroidManifest.xml:2:1-11:12
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-2.0.0.aar/532e32cc5a50afd79117fe8923222329/AndroidManifest.xml:2:1-12:12
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:2:1-19:12
+MERGED from [com.google.android:flexbox:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/flexbox-1.0.0.aar/6b9abc8992072ce0bee9868dcec18776/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/03694bf70c9e2adb47d7c8ddb76e9b3a/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/eb3f71fb75b726bc6139cd85451ca3bc/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/1432a8e92e4dfbe98e9c5ecc2dbee548/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-license-12.0.1.aar/ba4e3370dced24bb13dc3c5bf04f8493/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/cf5a6ebc5af088c3cfa58ca3c9371312/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-license-12.0.1.aar/0fcb386ac7da728d1042291152699a55/AndroidManifest.xml:17:1-24:12
+INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-261:12
+INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-261:12
 	package
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:3:5-34
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:3:5-34
 	android:versionName
-		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-	xmlns:android
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:11-69
+		INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-261:12
+		INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-261:12
+		INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.CAMERA
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:5-65
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:5-65
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:22-62
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:22-62
 uses-permission#android.permission.VIBRATE
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:5-66
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:5-66
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:22-63
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:22-63
 uses-permission#android.permission.INTERNET
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:5-67
-MERGED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:12:5-67
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:5-67
+MERGED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:12:5-67
+MERGED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:12:5-67
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:10:5-67
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/95fbf5af1b5125d2bb5339b629a135fa/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/95fbf5af1b5125d2bb5339b629a135fa/AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:22-64
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:22-64
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:5-80
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:5-80
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:22-77
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:22-77
 uses-permission#android.permission.MANAGE_DOCUMENTS
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:5-75
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:5-75
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:22-72
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:22-72
 application
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:11:5-259:19
-MERGED from [com.android.support:preference-v14:24.2.1] /home/lorena/.android/build-cache/bd19a070634b28d6ba446c14b0e4fd6739fabfcc/output/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:preference-v7:24.2.1] /home/lorena/.android/build-cache/3a7dded0632f4659653c339c89fed01b70bfe6fc/output/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:24.2.1] /home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:24.2.1] /home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:24.2.1] /home/lorena/.android/build-cache/8820fb56f7b172efa970e6c0d0519ded8cbc538e/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:24.2.1] /home/lorena/.android/build-cache/ad48c02f3d20699de6944ec516911add51fe0e79/output/AndroidManifest.xml:23:5-20
-MERGED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:14:5-20:19
-MERGED from [com.google.android.gms:play-services-vision:10.0.1] /home/lorena/.android/build-cache/79a1027e1ac38ec331d23a77d11aa29215fa68d7/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /home/lorena/.android/build-cache/206bd2d47a42ebcfc7e2987bfc68d1140896324c/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:24.2.1] /home/lorena/.android/build-cache/62ca660484b50d329123a175541ac16e547ae82d/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:24.2.1] /home/lorena/.android/build-cache/d717e36d4a437ce149d9d05ced22ef868540e582/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:24.2.1] /home/lorena/.android/build-cache/d72c1b4dbfa14044b33a193972d2e3f6e68abcdc/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:24.2.1] /home/lorena/.android/build-cache/51b383f9cd3fdaebee4fa57fe98136b5ab3fbd93/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:24.2.1] /home/lorena/.android/build-cache/13cc6f7b4429fc3e0f9a7da604f50f60f442b149/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:24.2.1] /home/lorena/.android/build-cache/3c6355d6aa04d6d21fb426f33534b27c08297230/output/AndroidManifest.xml:25:5-20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:11:5-259:19
+MERGED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:14:5-20:19
+MERGED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:14:5-20:19
+MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:10:5-11:19
+MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:10:5-11:19
+MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:14:5-50:19
+MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:14:5-50:19
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:12:5-83:19
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:12:5-83:19
+MERGED from [com.android.support:design:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/07caa43170fa0c6a25249ac87c6adc6b/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/07caa43170fa0c6a25249ac87c6adc6b/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-12.0.1.aar/cfca3b51694a2cf1b61352f140cc225f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-12.0.1.aar/cfca3b51694a2cf1b61352f140cc225f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/33083fb638d83cd8670755af4c4f8941/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/33083fb638d83cd8670755af4c4f8941/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/95fbf5af1b5125d2bb5339b629a135fa/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/95fbf5af1b5125d2bb5339b629a135fa/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/68e81fcd7ae354be9094fb744fa9ae6e/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/68e81fcd7ae354be9094fb744fa9ae6e/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/84f8d4d5afe59aadd9e350fdaa50f5d6/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/84f8d4d5afe59aadd9e350fdaa50f5d6/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7602ac8dd6260c0336093974dbf4e54c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7602ac8dd6260c0336093974dbf4e54c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/a141dd39732518ca9c04f579fc801e3d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/a141dd39732518ca9c04f579fc801e3d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/436e13ea2a35c1612ec5fb2fcc0f4c9d/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/436e13ea2a35c1612ec5fb2fcc0f4c9d/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d990fbd0035992e3eea9ebd2861778ca/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d990fbd0035992e3eea9ebd2861778ca/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/7201338cd601ff641fd80921c546d868/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/7201338cd601ff641fd80921c546d868/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/78e82f9853be84ca5b1190dd52fa497c/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/78e82f9853be84ca5b1190dd52fa497c/AndroidManifest.xml:9:5-20
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-2.0.0.aar/532e32cc5a50afd79117fe8923222329/AndroidManifest.xml:10:5-20
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-2.0.0.aar/532e32cc5a50afd79117fe8923222329/AndroidManifest.xml:10:5-20
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:9:5-17:19
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:9:5-17:19
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/03694bf70c9e2adb47d7c8ddb76e9b3a/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/03694bf70c9e2adb47d7c8ddb76e9b3a/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/eb3f71fb75b726bc6139cd85451ca3bc/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/eb3f71fb75b726bc6139cd85451ca3bc/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/1432a8e92e4dfbe98e9c5ecc2dbee548/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/1432a8e92e4dfbe98e9c5ecc2dbee548/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-license-12.0.1.aar/ba4e3370dced24bb13dc3c5bf04f8493/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-license-12.0.1.aar/ba4e3370dced24bb13dc3c5bf04f8493/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/cf5a6ebc5af088c3cfa58ca3c9371312/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/cf5a6ebc5af088c3cfa58ca3c9371312/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-license-12.0.1.aar/0fcb386ac7da728d1042291152699a55/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-license-12.0.1.aar/0fcb386ac7da728d1042291152699a55/AndroidManifest.xml:22:5-20
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/436e13ea2a35c1612ec5fb2fcc0f4c9d/AndroidManifest.xml:22:18-91
 	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:15:9-41
-	android:allowBackup
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:12:9-35
-	android:icon
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:15:9-41
 	android:largeHeap
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:13:9-33
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:13:9-33
+	android:icon
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:16:9-40
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:16:9-40
 activity#io.anyline.examples.MainActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:18:9-27:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:18:9-27:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:21:13-49
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:21:13-49
 	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:20:13-45
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:20:13-45
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:19:13-41
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:22:13-26:29
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:19:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:23:17-69
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:23:25-66
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:25:17-77
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:25:27-74
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:25:27-74
 activity#io.anyline.examples.meterreadingprocesses.activities.ResultActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:28:9-30:51
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:28:9-30:51
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:30:13-49
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:30:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:29:13-76
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:29:13-76
 activity#io.anyline.examples.meterreadingprocesses.activities.WorkOrdersActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:31:9-34:15
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:31:9-34:15
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:33:13-49
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:33:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:32:13-80
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:32:13-80
 activity#io.anyline.examples.meterreadingprocesses.activities.SelfReadingScannerActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:35:9-37:52
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:35:9-37:52
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:37:13-49
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:37:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:36:13-88
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:36:13-88
 activity#io.anyline.examples.meterreadingprocesses.activities.CustomerActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:38:9-40:52
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:38:9-40:52
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:40:13-49
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:40:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:39:13-78
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:39:13-78
 activity#io.anyline.examples.meterreadingprocesses.activities.CustomerIdentifyScannerActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:41:9-43:51
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:41:9-43:51
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:43:13-49
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:43:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:42:13-93
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:42:13-93
 activity#io.anyline.examples.meter.ScanDigitalEnergyMeterActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:45:9-53:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:45:9-53:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:49:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:47:13-56
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:49:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:48:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:48:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:47:13-56
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:46:13-65
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:46:13-65
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:50:13-52:68
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:50:13-52:68
 	android:value
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:52:17-65
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:52:17-65
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:51:17-63
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:51:17-63
 activity#io.anyline.examples.meter.ScanAutoAnalogDigitalMeterActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:54:9-62:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:54:9-62:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:58:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:56:13-68
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:58:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:57:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:57:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:56:13-68
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:55:13-69
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:55:13-69
 activity#io.anyline.examples.meter.ScanDialMeterActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:63:9-71:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:63:9-71:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:67:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:65:13-53
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:67:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:66:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:66:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:65:13-53
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:64:13-56
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:64:13-56
 activity#io.anyline.examples.meter.ScanEnergySerialNumberActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:72:9-80:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:72:9-80:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:76:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:74:13-63
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:76:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:75:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:75:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:74:13-63
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:73:13-65
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:73:13-65
 activity#io.anyline.examples.ocr.ScanSerialNumberActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:81:9-89:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:81:9-89:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:85:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:83:13-56
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:85:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:84:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:84:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:83:13-56
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:82:13-57
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:82:13-57
 activity#io.anyline.examples.ocr.ScanShippingContainerActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:90:9-98:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:90:9-98:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:94:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:92:13-61
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:94:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:93:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:93:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:92:13-61
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:91:13-62
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:91:13-62
 activity#io.anyline.examples.mrz.ScanMrzActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:99:9-107:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:99:9-107:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:103:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:101:13-46
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:103:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:102:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:102:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:101:13-46
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:100:13-48
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:100:13-48
 activity#io.anyline.examples.barcode.ScanBarcodeActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:108:9-116:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:108:9-116:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:112:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:110:13-50
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:112:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:111:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:111:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:110:13-50
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:109:13-56
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:109:13-56
 activity#io.anyline.examples.document.ScanDocumentActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:117:9-125:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:117:9-125:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:121:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:119:13-51
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:121:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:120:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:120:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:119:13-51
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:118:13-58
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:118:13-58
 activity#io.anyline.examples.ocr.ScanScrabbleActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:126:9-134:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:126:9-134:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:130:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:128:13-51
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:130:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:129:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:129:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:128:13-51
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:127:13-53
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:127:13-53
 activity#io.anyline.examples.licenseplate.ScanLicensePlateActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:135:9-143:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:135:9-143:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:139:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:137:13-56
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:139:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:138:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:138:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:137:13-56
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:136:13-66
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:136:13-66
 activity#io.anyline.examples.ocr.ScanBottlecapActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:144:9-152:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:144:9-152:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:148:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:146:13-52
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:148:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:147:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:147:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:146:13-52
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:145:13-54
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:145:13-54
 activity#io.anyline.examples.ocr.ScanRedBullCodeActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:153:9-161:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:153:9-161:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:157:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:155:13-50
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:157:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:156:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:156:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:155:13-50
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:154:13-56
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:154:13-56
 activity#io.anyline.examples.ocr.ScanIsbnActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:162:9-170:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:162:9-170:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:166:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:164:13-47
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:166:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:165:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:165:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:164:13-47
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:163:13-49
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:163:13-49
 activity#io.anyline.examples.ocr.ScanRecordActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:171:9-179:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:171:9-179:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:175:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:173:13-49
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:175:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:174:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:174:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:173:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:172:13-51
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:172:13-51
 activity#io.anyline.examples.ocr.ScanVoucherCodeActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:180:9-188:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:180:9-188:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:184:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:182:13-50
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:184:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:183:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:183:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:182:13-50
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:181:13-56
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:181:13-56
 activity#io.anyline.examples.ocr.ScanIbanActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:189:9-197:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:189:9-197:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:193:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:191:13-47
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:193:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:192:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:192:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:191:13-47
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:190:13-49
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:190:13-49
 activity#io.anyline.examples.mrz.ScanDrivingLicenseActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:198:9-206:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:198:9-206:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:202:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:200:13-58
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:202:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:201:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:201:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:200:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:199:13-59
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:199:13-59
 activity#io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:207:9-215:20
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:209:13-40
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:207:9-215:20
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:210:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:210:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:209:13-40
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:208:13-72
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:208:13-72
 activity#io.anyline.examples.scanviewresult.ScanViewResultActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:216:9-225:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:216:9-225:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:220:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:218:13-40
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:220:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:219:13-55
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:219:13-55
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:218:13-40
 	android:theme
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:221:13-58
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:221:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:217:13-66
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:217:13-66
 activity#io.anyline.examples.ocr.apis.AnagramActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:226:9-235:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:226:9-235:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:230:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:228:13-58
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:230:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:229:13-67
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:229:13-67
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:228:13-58
 	android:theme
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:231:13-58
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:231:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:227:13-53
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:227:13-53
 activity#io.anyline.examples.ocr.apis.IsbnActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:236:9-245:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:236:9-245:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:240:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:238:13-54
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:240:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:239:13-63
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:239:13-63
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:238:13-54
 	android:theme
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:241:13-58
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:241:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:237:13-50
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:237:13-50
 activity#io.anyline.examples.ocr.apis.RecordSearchActivity
-ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:246:9-255:20
+ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:246:9-255:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:250:13-49
-	android:label
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:248:13-56
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:250:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:249:13-65
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:249:13-65
+	android:label
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:248:13-56
 	android:theme
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:251:13-58
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:251:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:247:13-58
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:247:13-58
 uses-sdk
-INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:multidex:1.0.1] /home/lorena/.android/build-cache/9c8e150db8718b6e4a9a2084ef7dbb1e817dcf6d/output/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:preference-v14:24.2.1] /home/lorena/.android/build-cache/bd19a070634b28d6ba446c14b0e4fd6739fabfcc/output/AndroidManifest.xml:7:5-44
-MERGED from [com.android.support:preference-v7:24.2.1] /home/lorena/.android/build-cache/3a7dded0632f4659653c339c89fed01b70bfe6fc/output/AndroidManifest.xml:7:5-43
-MERGED from [com.android.support:design:24.2.1] /home/lorena/.android/build-cache/8a8bd4e8f82b79f9c60ec0681b146a90bd2f225d/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:24.2.1] /home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:24.2.1] /home/lorena/.android/build-cache/8820fb56f7b172efa970e6c0d0519ded8cbc538e/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.2.1] /home/lorena/.android/build-cache/ad48c02f3d20699de6944ec516911add51fe0e79/output/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:24.2.1] /home/lorena/.android/build-cache/d0301cb867921cbdb0751f9a7a8a2965cc60c2c6/output/AndroidManifest.xml:20:5-43
-MERGED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:8:5-10:41
-MERGED from [com.google.android.gms:play-services-vision:10.0.1] /home/lorena/.android/build-cache/79a1027e1ac38ec331d23a77d11aa29215fa68d7/output/AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:17:5-42
-MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /home/lorena/.android/build-cache/206bd2d47a42ebcfc7e2987bfc68d1140896324c/output/AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:17:5-42
-MERGED from [com.android.support:support-v4:24.2.1] /home/lorena/.android/build-cache/62ca660484b50d329123a175541ac16e547ae82d/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:24.2.1] /home/lorena/.android/build-cache/d717e36d4a437ce149d9d05ced22ef868540e582/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:24.2.1] /home/lorena/.android/build-cache/d72c1b4dbfa14044b33a193972d2e3f6e68abcdc/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:24.2.1] /home/lorena/.android/build-cache/51b383f9cd3fdaebee4fa57fe98136b5ab3fbd93/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:24.2.1] /home/lorena/.android/build-cache/13cc6f7b4429fc3e0f9a7da604f50f60f442b149/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:24.2.1] /home/lorena/.android/build-cache/3c6355d6aa04d6d21fb426f33534b27c08297230/output/AndroidManifest.xml:21:5-23:58
+INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+MERGED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:8:5-10:41
+MERGED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:multidex:1.0.2] /home/lorena/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/65826d1f930af3b92a6afb4c08f73595/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] /home/lorena/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/65826d1f930af3b92a6afb4c08f73595/AndroidManifest.xml:20:5-43
+MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:6:5-8:41
+MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:6:5-8:41
+MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:6:5-8:41
+MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:6:5-8:41
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:6:5-8:41
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:design:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/07caa43170fa0c6a25249ac87c6adc6b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/07caa43170fa0c6a25249ac87c6adc6b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v14:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/preference-v14-28.0.0.aar/a832455737fc802ac4d96ba0b87c3267/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v14:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/preference-v14-28.0.0.aar/a832455737fc802ac4d96ba0b87c3267/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/preference-v7-28.0.0.aar/48cf8eec899b6a67bbd18e02ddc1b451/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/preference-v7-28.0.0.aar/48cf8eec899b6a67bbd18e02ddc1b451/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6cf7c862a7e216ce9f29d17da84310a4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6cf7c862a7e216ce9f29d17da84310a4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-12.0.1.aar/cfca3b51694a2cf1b61352f140cc225f/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-12.0.1.aar/cfca3b51694a2cf1b61352f140cc225f/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/4072de5429c161b64f9237dd605213f4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/4072de5429c161b64f9237dd605213f4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/ee1f9d997c5f192643d9ce67082a45af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/ee1f9d997c5f192643d9ce67082a45af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/b591a50afd43b5a19026af0856e575fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/b591a50afd43b5a19026af0856e575fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/cb126668cdea776fc06e630680249807/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/cb126668cdea776fc06e630680249807/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/33083fb638d83cd8670755af4c4f8941/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-12.0.1.aar/33083fb638d83cd8670755af4c4f8941/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/95fbf5af1b5125d2bb5339b629a135fa/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/95fbf5af1b5125d2bb5339b629a135fa/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/68e81fcd7ae354be9094fb744fa9ae6e/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-12.0.1.aar/68e81fcd7ae354be9094fb744fa9ae6e/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/84f8d4d5afe59aadd9e350fdaa50f5d6/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/84f8d4d5afe59aadd9e350fdaa50f5d6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7602ac8dd6260c0336093974dbf4e54c/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7602ac8dd6260c0336093974dbf4e54c/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/a141dd39732518ca9c04f579fc801e3d/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/a141dd39732518ca9c04f579fc801e3d/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/6fd32af807549574121f5029a9b81f7a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/6fd32af807549574121f5029a9b81f7a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/aaeccb98d2534da09c1a746b8416177f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/aaeccb98d2534da09c1a746b8416177f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/c41e9af408ff70a80ff66b287b883df8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/c41e9af408ff70a80ff66b287b883df8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/cd0a2c2357feb912e5b17d82fde87469/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/cd0a2c2357feb912e5b17d82fde87469/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/6b9c533a5c41b86c212266e06f4987b9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/6b9c533a5c41b86c212266e06f4987b9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/4589ad98acb74bcd1bcc351aa09d28ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/4589ad98acb74bcd1bcc351aa09d28ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/ce6d4da86ec34a4338a1cda8dd30857d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/ce6d4da86ec34a4338a1cda8dd30857d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/74301f66c1707f94b7fa0a27720c1a38/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/74301f66c1707f94b7fa0a27720c1a38/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/cc7e127ab3197519d8e6ae40e419cd82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/cc7e127ab3197519d8e6ae40e419cd82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bedf3a03bf3baf021771f72ffc2d8ed0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bedf3a03bf3baf021771f72ffc2d8ed0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/69e532dd62009d9753c5d4409f822a7a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/69e532dd62009d9753c5d4409f822a7a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/436e13ea2a35c1612ec5fb2fcc0f4c9d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/436e13ea2a35c1612ec5fb2fcc0f4c9d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d990fbd0035992e3eea9ebd2861778ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d990fbd0035992e3eea9ebd2861778ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/d623596166ee67859ad2e1c9297e4634/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/d623596166ee67859ad2e1c9297e4634/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/4eb813800c614df577490839d1ea0bc2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/4eb813800c614df577490839d1ea0bc2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/5bcf79ae716d1bab00737df32922152b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/5bcf79ae716d1bab00737df32922152b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/91e17ed397cde37330cf60c4581c5d37/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/91e17ed397cde37330cf60c4581c5d37/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5daafff8f6ed796f54ea82ddc33cdd25/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5daafff8f6ed796f54ea82ddc33cdd25/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/abf4146786050169e420ca927e884048/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/abf4146786050169e420ca927e884048/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/11a8ed5119bb2d848de6d8d800f7ce3e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/11a8ed5119bb2d848de6d8d800f7ce3e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/bb06ad1395bf226d954a2ec347692fe3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/bb06ad1395bf226d954a2ec347692fe3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/985c9b54561a8b02e70870220bbb21be/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/985c9b54561a8b02e70870220bbb21be/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/3bfc1ad73abd92e1f8b1334ec69e4532/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/3bfc1ad73abd92e1f8b1334ec69e4532/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ed8a4a2259199950672818a10d116a2b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ed8a4a2259199950672818a10d116a2b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/7201338cd601ff641fd80921c546d868/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-license-12.0.1.aar/7201338cd601ff641fd80921c546d868/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/78e82f9853be84ca5b1190dd52fa497c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/78e82f9853be84ca5b1190dd52fa497c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-2.0.0.aar/532e32cc5a50afd79117fe8923222329/AndroidManifest.xml:8:5-44
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-2.0.0.aar/532e32cc5a50afd79117fe8923222329/AndroidManifest.xml:8:5-44
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:7:5-44
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:7:5-44
+MERGED from [com.google.android:flexbox:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/flexbox-1.0.0.aar/6b9abc8992072ce0bee9868dcec18776/AndroidManifest.xml:23:5-25:41
+MERGED from [com.google.android:flexbox:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/flexbox-1.0.0.aar/6b9abc8992072ce0bee9868dcec18776/AndroidManifest.xml:23:5-25:41
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/03694bf70c9e2adb47d7c8ddb76e9b3a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-license-12.0.1.aar/03694bf70c9e2adb47d7c8ddb76e9b3a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/eb3f71fb75b726bc6139cd85451ca3bc/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-12.0.1.aar/eb3f71fb75b726bc6139cd85451ca3bc/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/1432a8e92e4dfbe98e9c5ecc2dbee548/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/1432a8e92e4dfbe98e9c5ecc2dbee548/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-license-12.0.1.aar/ba4e3370dced24bb13dc3c5bf04f8493/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-license-12.0.1.aar/ba4e3370dced24bb13dc3c5bf04f8493/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/cf5a6ebc5af088c3cfa58ca3c9371312/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/cf5a6ebc5af088c3cfa58ca3c9371312/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-license-12.0.1.aar/0fcb386ac7da728d1042291152699a55/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-license-12.0.1.aar/0fcb386ac7da728d1042291152699a55/AndroidManifest.xml:20:5-44
+INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:24.2.1] /home/lorena/.android/build-cache/2ebef16512e0e1576834b3b5449b9d885c67312a/output/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:support-v4:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7602ac8dd6260c0336093974dbf4e54c/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		INJECTED from /home/lorena/Desktop/release5/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
 meta-data#com.google.android.gms.vision.DEPENDENCIES
-ADDED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:17:9-19:39
+ADDED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:17:9-19:39
 	android:value
-		ADDED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:19:13-36
+		ADDED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from [io.anyline:anylinesdk:5] /home/lorena/.android/build-cache/73d339480a672ef7642c2307ff224d7cb1ad2d0f/output/AndroidManifest.xml:18:13-70
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:19:9-172
+		ADDED from [io.anyline:anylinesdk:6.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/anylinesdk-6.1.aar/d56987b62b21283c5aac1effd9ce35fd/AndroidManifest.xml:18:13-70
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:11:22-65
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:12:5-82
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/95fbf5af1b5125d2bb5339b629a135fa/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-iid-12.0.1.aar/95fbf5af1b5125d2bb5339b629a135fa/AndroidManifest.xml:23:5-82
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:12:22-79
+receiver#com.google.android.gms.gcm.GcmReceiver
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:17:9-27:20
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:19:146-170
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:19:86-145
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:19:13-36
+	android:permission
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:20:13-73
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/lorena/.android/build-cache/f53c4b7947f05904cfc012738fb6fb49a0d3c20b/output/AndroidManifest.xml:19:19-85
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:18:13-66
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+action:name:com.google.android.c2dm.intent.REGISTRATION+category:name:io.intercom.intercomsdk.gcm
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:21:13-26:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:22:17-81
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:22:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:23:17-86
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:23:25-83
+category#io.intercom.intercomsdk.gcm
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:25:17-72
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:25:27-69
+service#io.intercom.android.sdk.gcm.IntercomGcmListenerService
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:30:9-36:19
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:31:13-82
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:33:13-35:29
+	android:priority
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:33:28-51
+service#io.intercom.android.sdk.gcm.IntercomGcmRefreshService
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:39:9-45:19
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:40:13-81
+intent-filter#action:name:com.google.android.gms.iid.InstanceID
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:42:13-44:29
+action#com.google.android.gms.iid.InstanceID
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:43:17-80
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:43:25-77
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:20:9-121
+ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:47:9-49:69
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/84f8d4d5afe59aadd9e350fdaa50f5d6/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/84f8d4d5afe59aadd9e350fdaa50f5d6/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:20:66-119
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:49:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:10.0.1] /home/lorena/.android/build-cache/310756310fcf870f75fa7ca5e89051fcbcaeca83/output/AndroidManifest.xml:20:20-65
+		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:48:13-58
+activity#io.intercom.android.sdk.activities.IntercomMessengerActivity
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:13:9-19:73
+	android:launchMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:17:13-43
+	android:windowSoftInputMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:19:13-70
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:16:13-37
+	android:configChanges
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:15:13-59
+	android:theme
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:18:13-55
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:14:13-88
+activity#io.intercom.android.sdk.lightbox.LightBoxActivity
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:20:9-25:73
+	android:windowSoftInputMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:25:13-70
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:23:13-37
+	android:configChanges
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:22:13-59
+	android:theme
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:24:13-58
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:21:13-77
+activity#io.intercom.android.sdk.activities.IntercomArticleActivity
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:26:9-31:57
+	android:launchMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:29:13-43
+	android:windowSoftInputMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:31:13-54
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:28:13-37
+	android:theme
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:30:13-63
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:27:13-86
+activity#io.intercom.android.sdk.activities.IntercomHelpCenterActivity
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:32:9-38:57
+	android:launchMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:36:13-43
+	android:windowSoftInputMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:38:13-54
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:35:13-37
+	android:configChanges
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:34:13-59
+	android:theme
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:37:13-63
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:33:13-89
+activity#io.intercom.android.sdk.activities.IntercomPostActivity
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:39:9-45:57
+	android:launchMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:43:13-44
+	android:windowSoftInputMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:45:13-54
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:42:13-37
+	android:configChanges
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:41:13-59
+	android:theme
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:44:13-54
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:40:13-83
+activity#io.intercom.android.sdk.activities.IntercomNoteActivity
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:46:9-52:73
+	android:launchMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:50:13-44
+	android:windowSoftInputMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:52:13-70
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:49:13-37
+	android:configChanges
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:48:13-59
+	android:theme
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:51:13-54
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:47:13-83
+activity#io.intercom.android.sdk.activities.IntercomSheetActivity
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:53:9-59:57
+	android:launchMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:57:13-43
+	android:windowSoftInputMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:59:13-54
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:56:13-37
+	android:configChanges
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:55:13-59
+	android:theme
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:58:13-63
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:54:13-84
+activity#io.intercom.android.sdk.activities.IntercomVideoActivity
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:60:9-66:57
+	android:launchMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:64:13-43
+	android:windowSoftInputMode
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:66:13-54
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:63:13-37
+	android:configChanges
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:62:13-59
+	android:theme
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:65:13-55
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:61:13-84
+receiver#io.intercom.android.sdk.push.IntercomPushBroadcastReceiver
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:68:9-77:20
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:70:13-37
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:69:13-86
+intent-filter#action:name:io.intercom.android.sdk.INTERCOM_PUSH_OPENED
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:71:13-73:29
+action#io.intercom.android.sdk.INTERCOM_PUSH_OPENED
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:72:17-87
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:72:25-84
+intent-filter#action:name:io.intercom.android.sdk.INTERCOM_PUSH_DISMISSED
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:74:13-76:29
+action#io.intercom.android.sdk.INTERCOM_PUSH_DISMISSED
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:75:17-90
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:75:25-87
+provider#io.intercom.android.sdk.IntercomInitializeContentProvider
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:79:9-82:40
+	android:authorities
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:81:13-85
+	android:exported
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:82:13-37
+	android:name
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/AndroidManifest.xml:80:13-85
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:12.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/AndroidManifest.xml:24:13-79
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7602ac8dd6260c0336093974dbf4e54c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/a141dd39732518ca9c04f579fc801e3d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/a141dd39732518ca9c04f579fc801e3d/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v4:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7602ac8dd6260c0336093974dbf4e54c/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v4:26.1.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7602ac8dd6260c0336093974dbf4e54c/AndroidManifest.xml:27:13-51
+activity#com.intercom.input.gallery.GalleryInputFullScreenActivity
+ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:10:9-12:74
+	android:theme
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:12:13-71
+	android:name
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:11:13-85
+activity#com.intercom.input.gallery.GalleryLightBoxActivity
+ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:13:9-16:74
+	android:configChanges
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:15:13-80
+	android:theme
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:16:13-71
+	android:name
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/AndroidManifest.xml:14:13-78

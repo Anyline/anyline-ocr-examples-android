@@ -1,0 +1,74 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,105",
+                        "endLines": "2,5",
+                        "endColumns": "49,11",
+                        "endOffsets": "100,223"
+                    },
+                    "to": {
+                        "startLines": "3,22",
+                        "startColumns": "4,4",
+                        "startOffsets": "143,1374",
+                        "endLines": "3,24",
+                        "endColumns": "49,11",
+                        "endOffsets": "188,1492"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/07caa43170fa0c6a25249ac87c6adc6b/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,115,185,256,328,386,444,553,617,680",
+                        "endLines": "2,3,4,5,6,7,9,10,11,15",
+                        "endColumns": "59,69,70,71,57,57,10,63,62,10",
+                        "endOffsets": "110,180,251,323,381,439,548,612,675,847"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,15,16,17,18,20,21,25",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "749,809,879,950,1022,1080,1138,1247,1311,1497",
+                        "endLines": "12,13,14,15,16,17,19,20,21,28",
+                        "endColumns": "59,69,70,71,57,57,10,63,62,10",
+                        "endOffsets": "804,874,945,1017,1075,1133,1242,1306,1369,1664"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/android-composer-2.0.0.aar/532e32cc5a50afd79117fe8923222329/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "87",
+                        "endOffsets": "138"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6cf7c862a7e216ce9f29d17da84310a4/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "193,262,331,401,475,551,610,681",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "257,326,396,470,546,605,676,744"
+                    }
+                }
+            ]
+        }
+    ]
+}

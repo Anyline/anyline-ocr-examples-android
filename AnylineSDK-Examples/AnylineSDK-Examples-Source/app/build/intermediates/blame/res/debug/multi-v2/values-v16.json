@@ -1,0 +1,57 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6cf7c862a7e216ce9f29d17da84310a4/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "563",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "731"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/436e13ea2a35c1612ec5fb2fcc0f4c9d/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res/values-v16/styles.xml",
+                    "from": {
+                        "startLines": "12",
+                        "startColumns": "8",
+                        "startOffsets": "178",
+                        "endLines": "19",
+                        "endColumns": "16",
+                        "endOffsets": "615"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "10",
+                        "endColumns": "16",
+                        "endOffsets": "558"
+                    }
+                }
+            ]
+        }
+    ]
+}

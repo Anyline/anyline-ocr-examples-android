@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"瀏覽首頁"</string>
-    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s：%2$s"</string>
-    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s - %2$s：%3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"向上瀏覽"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"更多選項"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"完成"</string>
@@ -10,6 +8,16 @@
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"選擇應用程式"</string>
     <string msgid="121134116657445385" name="abc_capital_off">"關閉"</string>
     <string msgid="3405795526292276155" name="abc_capital_on">"開啟"</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"Delete 鍵"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"Enter 鍵"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Fn +"</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Shift +"</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"空格鍵"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Menu +"</string>
     <string msgid="7723749260725869598" name="abc_search_hint">"搜尋…"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"清除查詢"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"搜尋查詢"</string>
@@ -17,25 +25,134 @@
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"提交查詢"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"語音搜尋"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"選擇分享對象"</string>
-    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"與「%s」分享"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"與「<ns1:g id="APPLICATION_NAME">%s</ns1:g>」分享"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"收合"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"啟用"</string>
-    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"您必須啟用 Google Play 服務，才能執行「<ns1:g id="APP_NAME">%1$s</ns1:g>」。"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"你必須啟用 Google Play 服務，才能執行「<ns1:g id="APP_NAME">%1$s</ns1:g>」。"</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"啟用 Google Play 服務"</string>
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"安裝"</string>
-    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"您的裝置並未安裝 Google Play 服務，因此無法執行「<ns1:g id="APP_NAME">%1$s</ns1:g>」。"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"你的裝置並未安裝 Google Play 服務，因此無法執行「<ns1:g id="APP_NAME">%1$s</ns1:g>」。"</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"取得 Google Play 服務"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play 服務可用性"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play 服務發生錯誤"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"「<ns1:g id="APP_NAME">%1$s</ns1:g>」無法存取 Google Play 服務，請再試一次。"</string>
-    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"您的裝置不支援 Google Play 服務，因此無法執行「<ns1:g id="APP_NAME">%1$s</ns1:g>」。"</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"你的裝置不支援 Google Play 服務，因此無法執行「<ns1:g id="APP_NAME">%1$s</ns1:g>」。"</string>
     <string msgid="8172070149091615356" name="common_google_play_services_update_button">"更新"</string>
-    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"您必須更新 Google Play 服務，才能執行「<ns1:g id="APP_NAME">%1$s</ns1:g>」。"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"你必須更新 Google Play 服務，才能執行「<ns1:g id="APP_NAME">%1$s</ns1:g>」。"</string>
     <string msgid="8706675115216073244" name="common_google_play_services_update_title">"更新 Google Play 服務"</string>
     <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"執行「<ns1:g id="APP_NAME">%1$s</ns1:g>」所需的 Google Play 服務正在更新。"</string>
     <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"必須使用新版 Google Play 服務。該服務稍後就會自動更新。"</string>
     <string msgid="5201977337835724196" name="common_open_on_phone">"在手機上開啟"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"登入"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"使用 Google 帳戶登入"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"進階"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"其他"</string>
+    <string name="intercom_access_photos">存取您的相片</string>
+    <string name="intercom_active_15m_ago">過去 {minutes} 分鐘內在線</string>
+    <string name="intercom_active_day_ago">{days} 天以前在線</string>
+    <string name="intercom_active_hour_ago">{hours} 小時以前在線</string>
+    <string name="intercom_active_minute_ago">{minutes} 分鐘以前在線</string>
+    <string name="intercom_active_state">活動中</string>
+    <string name="intercom_active_week_ago">超過一週以前在線</string>
+    <string name="intercom_allow_access">允許存取</string>
+    <string name="intercom_allow_storage_access">請允許存取儲存空間以檢視您的相片</string>
+    <string name="intercom_also_in_this_conversation">亦在此對話中</string>
+    <string name="intercom_android_activated_message">您的 Android 應用程式目前已與 Intercom 平台整合</string>
+    <string name="intercom_app_settings">應用程式設定</string>
+    <string name="intercom_article_load_error">無法載入文章</string>
+    <string name="intercom_article_question">是否回答了您的問題？</string>
+    <string name="intercom_article_response">您使用此回應：</string>
+    <string name="intercom_asked_about">詢問關於</string>
+    <string name="intercom_away_state">離開</string>
+    <string name="intercom_bot">Bot</string>
+    <string name="intercom_cancel">取消</string>
+    <string name="intercom_close">關閉</string>
+    <string name="intercom_congratulations">恭喜您</string>
+    <string name="intercom_connected">您已連線</string>
+    <string name="intercom_conversations">對話</string>
+    <string name="intercom_conversations_with_app">與 {name} 的對話</string>
+    <string name="intercom_copied_to_clipboard">已複製至剪貼簿</string>
+    <string name="intercom_couldnt_complete_action">無法完成此動作</string>
+    <string name="intercom_couldnt_load_apps">Couldn\'t load apps.</string>
+    <string name="intercom_couldnt_load_content">無法載入內容</string>
+    <string name="intercom_couldnt_load_messenger">Couldn\'t load the Messenger.</string>
+    <string name="intercom_delivered">已傳送</string>
+    <string name="intercom_dismiss">離開</string>
+    <string name="intercom_empty_conversations">尚無與 {name} 的對話</string>
+    <string name="intercom_error_loading_conversation">無法載入對話</string>
+    <string name="intercom_facebook_like">在 Facebook 上按讚</string>
+    <string name="intercom_failed_delivery">無法傳送訊息</string>
+    <string name="intercom_failed_to_load_conversation">無法載入您的對話</string>
+    <string name="intercom_failed_to_send">無法傳送</string>
+    <string name="intercom_file_access_failed">無法存取該檔案</string>
+    <string name="intercom_file_too_big">無法傳送大小超過 40MB 的檔案</string>
+    <string name="intercom_gif_attribution">透過 {providername}</string>
+    <string name="intercom_gifs_load_error">無法載入 GIF</string>
+    <string name="intercom_give_it_another_try">再試一次</string>
+    <string name="intercom_go_to_device_settings">若要允許存取，請前往您裝置應用程式設定的權限功能表</string>
+    <string name="intercom_help_center">說明中心</string>
+    <string name="intercom_image_attached">(附圖)</string>
+    <string name="intercom_inbox_error_state_title">發生問題</string>
+    <string name="intercom_message_failed_try_again">無法傳送，請點選以重試</string>
+    <string name="intercom_message_seen">已讀取</string>
+    <string name="intercom_message_state_sending">傳送中…</string>
+    <string name="intercom_message_unseen">尚未讀取</string>
+    <string name="intercom_name_and_1_other">{name} 和另外 1 人</string>
+    <string name="intercom_name_and_x_others">{name} 和另外 {count} 人</string>
+    <string name="intercom_new_conversation">新對話</string>
+    <string name="intercom_new_message">新訊息</string>
+    <string name="intercom_new_messages">您有 {n} 則新訊息</string>
+    <string name="intercom_new_notifications">新通知</string>
+    <string name="intercom_no_conversations">沒有對話</string>
+    <string name="intercom_no_gifs_found">未找到GIF</string>
+    <string name="intercom_no_gifs_matching_query">我們找不到任何 GIF 符合您的查詢</string>
+    <string name="intercom_no_messages_from_the_team">No messages from the team</string>
+    <string name="intercom_no_network_connection">沒有網路連線</string>
+    <string name="intercom_no_photos">沒有相片</string>
+    <string name="intercom_no_photos_on_device">此裝置上沒有相片</string>
+    <string name="intercom_not_now">現在不要</string>
+    <string name="intercom_nothing_to_see_here_yet">Nothing to see here yet</string>
+    <string name="intercom_notification_channel_actions_description">包含在此應用程式中執行動作的連結</string>
+    <string name="intercom_notification_channel_actions_title">動作</string>
+    <string name="intercom_notification_channel_chat_replies_description">來自此應用程式中的交談回覆通知</string>
+    <string name="intercom_notification_channel_chat_replies_title">交談回覆</string>
+    <string name="intercom_notification_channel_new_chats_description">從此應用程式傳送的新交談訊息</string>
+    <string name="intercom_notification_channel_new_chats_title">新交談</string>
+    <string name="intercom_one_new_message">您有一則新訊息</string>
+    <string name="intercom_photo_access_denied">您已拒絕存取您的相片</string>
+    <string name="intercom_plus_x_more">+{n} 則</string>
+    <string name="intercom_profile_location">{time} 於 {location}</string>
+    <string name="intercom_rate_your_conversation">為您的對話評分</string>
+    <string name="intercom_reload">重新載入</string>
+    <string name="intercom_reply_from_admin">回覆來自 {name}</string>
+    <string name="intercom_reply_to_conversation">撰寫回覆</string>
+    <string name="intercom_retry">重試</string>
+    <string name="intercom_search_gif">搜尋 GIF…</string>
+    <string name="intercom_see_all">檢視全部</string>
+    <string name="intercom_see_past_conversations">檢視過去的對話</string>
+    <string name="intercom_send">傳送</string>
+    <string name="intercom_start_a_conversation">開始對話</string>
+    <string name="intercom_start_conversation">開始對話</string>
+    <string name="intercom_storage_access_request">若要檢視您的相片，您必須允許存取儲存空間</string>
+    <string name="intercom_tap_to_send_image">點選以傳送影像</string>
+    <string name="intercom_teammate_from_company">{name} 來自 {company}</string>
+    <string name="intercom_tell_us_more">請告訴我們更多…</string>
+    <string name="intercom_thanks_for_letting_us_know">感謝您的回饋</string>
+    <string name="intercom_time_day_ago">{delta} 天前</string>
+    <string name="intercom_time_hour_ago">{delta} 小時前</string>
+    <string name="intercom_time_just_now">剛剛</string>
+    <string name="intercom_time_minute_ago">{delta} 分鐘前</string>
+    <string name="intercom_time_week_ago">{delta} 週前</string>
+    <string name="intercom_try_again">再試一次</string>
+    <string name="intercom_try_again_minute">請稍後再試一次。</string>
+    <string name="intercom_twitter_follow">在 Twitter 上關注我們</string>
+    <string name="intercom_we_run_on_intercom">我們在 Intercom 上運行</string>
+    <string name="intercom_you">您</string>
+    <string name="intercom_you_rated_the_conversation">您已為對話評分</string>
+    <string name="intercom_your_conversations">您的對話</string>
     <string msgid="146198913615257606" name="search_menu_title">"搜尋"</string>
-    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>，<ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"關閉"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"開啟"</string>
 </resources>

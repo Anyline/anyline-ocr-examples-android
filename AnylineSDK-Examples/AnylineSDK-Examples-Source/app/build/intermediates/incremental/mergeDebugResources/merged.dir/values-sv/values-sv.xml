@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Visa startsidan"</string>
-    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
-    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Navigera uppåt"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Fler alternativ"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"Klart"</string>
@@ -10,6 +8,16 @@
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Välj en app"</string>
     <string msgid="121134116657445385" name="abc_capital_off">"AV"</string>
     <string msgid="3405795526292276155" name="abc_capital_on">"PÅ"</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt + "</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Ctrl + "</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"retur"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Funktion + "</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Meta + "</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Skift + "</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"blanksteg"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Symbol + "</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Meny + "</string>
     <string msgid="7723749260725869598" name="abc_search_hint">"Sök …"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Ta bort frågan"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Sökfråga"</string>
@@ -17,7 +25,7 @@
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Skicka fråga"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Röstsökning"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Dela med"</string>
-    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Dela med %s"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Dela med <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Komprimera"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Aktivera"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> fungerar inte om du inte aktiverar Google Play-tjänster."</string>
@@ -25,6 +33,7 @@
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installera"</string>
     <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan inte köras utan Google Play-tjänsterna, som saknas på enheten."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Hämta Google Play-tjänster"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Tillgänglighet för Google Plays tjänster"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Fel på Google Play-tjänster"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Det har uppstått ett fel mellan <ns1:g id="APP_NAME">%1$s</ns1:g> och Google Play-tjänsterna. Försök igen."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> fungerar inte utan Google Play-tjänsterna, som inte stöds på enheten."</string>
@@ -36,6 +45,114 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Öppna på mobilen"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Logga in"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Logga in med Google"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Avancerat"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Diverse"</string>
+    <string name="intercom_access_photos">Åtkomst till dina bilder</string>
+    <string name="intercom_active_15m_ago">Aktiv de senaste {minutes} min</string>
+    <string name="intercom_active_day_ago">Aktiv för {days} dagar sedan</string>
+    <string name="intercom_active_hour_ago">Aktiv för {hours} tim sedan</string>
+    <string name="intercom_active_minute_ago">Aktiv för {minutes} min sedan</string>
+    <string name="intercom_active_state">Aktiv</string>
+    <string name="intercom_active_week_ago">Aktiv för över en vecka sedan</string>
+    <string name="intercom_allow_access">Tillåt åtkomst</string>
+    <string name="intercom_allow_storage_access">Tillåt åtkomst till lagring för att se dina bilder</string>
+    <string name="intercom_also_in_this_conversation">Även i denna konversation</string>
+    <string name="intercom_android_activated_message">Din Android-app är nu integrerad med Intercoms plattform</string>
+    <string name="intercom_app_settings">Appinställningar</string>
+    <string name="intercom_article_load_error">Det gick inte att läsa in artikeln</string>
+    <string name="intercom_article_question">Fick du svar på din fråga?</string>
+    <string name="intercom_article_response">Du reagerade på</string>
+    <string name="intercom_asked_about">Angående</string>
+    <string name="intercom_away_state">Borta</string>
+    <string name="intercom_bot">Bot</string>
+    <string name="intercom_cancel">Avbryt</string>
+    <string name="intercom_close">Stäng</string>
+    <string name="intercom_congratulations">Grattis</string>
+    <string name="intercom_connected">Du är ansluten</string>
+    <string name="intercom_conversations">Konversationer</string>
+    <string name="intercom_conversations_with_app">Konversationer med {name}</string>
+    <string name="intercom_copied_to_clipboard">Kopierad till urklipp</string>
+    <string name="intercom_couldnt_complete_action">Det gick inte att slutföra denna åtgärd</string>
+    <string name="intercom_couldnt_load_apps">Couldn\'t load apps.</string>
+    <string name="intercom_couldnt_load_content">Det gick inte att läsa in innehåll</string>
+    <string name="intercom_couldnt_load_messenger">Couldn\'t load the Messenger.</string>
+    <string name="intercom_delivered">Levererat</string>
+    <string name="intercom_dismiss">Avvisa</string>
+    <string name="intercom_empty_conversations">Inga samtal med {name} ännu</string>
+    <string name="intercom_error_loading_conversation">Kunde inte läsa in konversationer</string>
+    <string name="intercom_facebook_like">Gilla oss på Facebook</string>
+    <string name="intercom_failed_delivery">Kunde inte leverera meddelade</string>
+    <string name="intercom_failed_to_load_conversation">Kunde inte läsa in dina konversationer</string>
+    <string name="intercom_failed_to_send">Kunde inte skicka</string>
+    <string name="intercom_file_access_failed">Har inte åtkomst till filen</string>
+    <string name="intercom_file_too_big">Kan inte skicka filer större än 40 MB</string>
+    <string name="intercom_gif_attribution">via {providername}</string>
+    <string name="intercom_gifs_load_error">Kunde inte ladda GIF</string>
+    <string name="intercom_give_it_another_try">Försök en gång till</string>
+    <string name="intercom_go_to_device_settings">För att tillåta åtkomst, gå till din enhets tillståndsmeny för appinställningar</string>
+    <string name="intercom_help_center">Hjälpcenter</string>
+    <string name="intercom_image_attached">(bifogad bild)</string>
+    <string name="intercom_inbox_error_state_title">Något gick fel</string>
+    <string name="intercom_message_failed_try_again">Kunde inte skicka, klicka för att försöka igen</string>
+    <string name="intercom_message_seen">Sett</string>
+    <string name="intercom_message_state_sending">Skickar…</string>
+    <string name="intercom_message_unseen">Inte sett än</string>
+    <string name="intercom_name_and_1_other">{name} och 1 till</string>
+    <string name="intercom_name_and_x_others">{name} och {count} andra</string>
+    <string name="intercom_new_conversation">Ny konversation</string>
+    <string name="intercom_new_message">Nytt meddelande</string>
+    <string name="intercom_new_messages">Du har {n} nya meddelanden</string>
+    <string name="intercom_new_notifications">Nya notiser</string>
+    <string name="intercom_no_conversations">Inga konversationer</string>
+    <string name="intercom_no_gifs_found">Inga GIF hittades</string>
+    <string name="intercom_no_gifs_matching_query">Vi kunde inte hitta några GIF:ar som matchar din fråga</string>
+    <string name="intercom_no_messages_from_the_team">No messages from the team</string>
+    <string name="intercom_no_network_connection">Ingen nätverksanslutning</string>
+    <string name="intercom_no_photos">Inga bilder</string>
+    <string name="intercom_no_photos_on_device">Det finns inga bilder på denna enhet</string>
+    <string name="intercom_not_now">Inte nu</string>
+    <string name="intercom_nothing_to_see_here_yet">Nothing to see here yet</string>
+    <string name="intercom_notification_channel_actions_description">Innehåller länkar för åtgärder i denna app</string>
+    <string name="intercom_notification_channel_actions_title">Åtgärder</string>
+    <string name="intercom_notification_channel_chat_replies_description">Svarsnotiser från chattar i denna app</string>
+    <string name="intercom_notification_channel_chat_replies_title">Chattsvar</string>
+    <string name="intercom_notification_channel_new_chats_description">Nya chattmeddelanden som skickats från denna app</string>
+    <string name="intercom_notification_channel_new_chats_title">Nya chattar</string>
+    <string name="intercom_one_new_message">Du har ett nytt meddelande</string>
+    <string name="intercom_photo_access_denied">Du nekade åtkomst till dina bilder</string>
+    <string name="intercom_plus_x_more">+{n}mer</string>
+    <string name="intercom_profile_location">{time} i {location}</string>
+    <string name="intercom_rate_your_conversation">Betygsätt ditt samtal</string>
+    <string name="intercom_reload">Ladda om</string>
+    <string name="intercom_reply_from_admin">Svar från {name}</string>
+    <string name="intercom_reply_to_conversation">Skriv ett svar</string>
+    <string name="intercom_retry">Försök igen</string>
+    <string name="intercom_search_gif">Sök GIF…</string>
+    <string name="intercom_see_all">Visa alla</string>
+    <string name="intercom_see_past_conversations">Visa tidigare konversationer</string>
+    <string name="intercom_send">Skicka</string>
+    <string name="intercom_start_a_conversation">Starta en konversation</string>
+    <string name="intercom_start_conversation">Börja en konversation</string>
+    <string name="intercom_storage_access_request">För att se bilder behöver du tillåta åtkomst till lagring</string>
+    <string name="intercom_tap_to_send_image">Knacka för att skicka en bild</string>
+    <string name="intercom_teammate_from_company">{name} från {company}</string>
+    <string name="intercom_tell_us_more">Berätta mer för oss…</string>
+    <string name="intercom_thanks_for_letting_us_know">Tack för dina synpunkter</string>
+    <string name="intercom_time_day_ago">{delta} dagar sedan</string>
+    <string name="intercom_time_hour_ago">{delta} tim sedan</string>
+    <string name="intercom_time_just_now">Nyss</string>
+    <string name="intercom_time_minute_ago">{delta} min sedan</string>
+    <string name="intercom_time_week_ago">{delta} vecka sedan</string>
+    <string name="intercom_try_again">Försök igen</string>
+    <string name="intercom_try_again_minute">Försök igen om en minut.</string>
+    <string name="intercom_twitter_follow">Följ oss på Twitter</string>
+    <string name="intercom_we_run_on_intercom">Vi använder Intercom</string>
+    <string name="intercom_you">Du</string>
+    <string name="intercom_you_rated_the_conversation">Du betygsatte ditt samtal</string>
+    <string name="intercom_your_conversations">Dina konversationer</string>
     <string msgid="146198913615257606" name="search_menu_title">"Sök"</string>
-    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"AV"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"PÅ"</string>
 </resources>

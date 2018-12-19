@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android:flexbox-1.0.0">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/flexbox-1.0.0.aar/6b9abc8992072ce0bee9868dcec18776/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/flexbox-1.0.0.aar/6b9abc8992072ce0bee9868dcec18776/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/flexbox-1.0.0.aar/6b9abc8992072ce0bee9868dcec18776/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android/flexbox/1.0.0/c4c7f74d77a222833719306af2c4003bdacccc38/flexbox-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

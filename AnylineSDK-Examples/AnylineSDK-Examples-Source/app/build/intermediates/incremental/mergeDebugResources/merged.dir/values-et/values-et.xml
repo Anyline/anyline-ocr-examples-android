@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Navigeerimine avaekraanile"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Navigeerimine üles"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Rohkem valikuid"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Valmis"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Kuva kõik"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Valige rakendus"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"VÄLJAS"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"SEES"</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"kustutamisklahv"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"sisestusklahv"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Funktsiooniklahv +"</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Tõstuklahv +"</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"tühik"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Menüü +"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Otsige …"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Päringu tühistamine"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Otsingupäring"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Otsing"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Päringu esitamine"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Häälotsing"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Jagamine:"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Jagamine rakendusega <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Ahendamine"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Luba"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Rakendus <ns1:g id="APP_NAME">%1$s</ns1:g> töötab ainult siis, kui lubate Google Play teenused."</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play teenuste lubamine"</string>
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installi"</string>
     <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Rakendus <ns1:g id="APP_NAME">%1$s</ns1:g> töötab ainult koos Google Play teenustega, mida teie seadmes pole."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play teenuste hankimine"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play teenuste saadavalolek"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Viga Google Play teenustes"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Rakendusel <ns1:g id="APP_NAME">%1$s</ns1:g> on probleeme Google Play teenustega. Proovige uuesti."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Rakendus <ns1:g id="APP_NAME">%1$s</ns1:g> töötab ainult koos Google Play teenustega, mida teie seadmes ei toetata."</string>
@@ -17,4 +45,114 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Ava telefonis"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Logi sisse"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Logi sisse Google\'i kontoga"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Täpsem"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Muu"</string>
+    <string name="intercom_access_photos">Juurdepääs fotodele</string>
+    <string name="intercom_active_15m_ago">Aktiivne viimase {minutes} min jooksul</string>
+    <string name="intercom_active_day_ago">Aktiivne {days} p tagasi</string>
+    <string name="intercom_active_hour_ago">Aktiivne {hours} h tagasi</string>
+    <string name="intercom_active_minute_ago">Aktiivne {minutes} min tagasi</string>
+    <string name="intercom_active_state">Aktiivne</string>
+    <string name="intercom_active_week_ago">Aktiivne rohkem kui 1 nädal tagasi</string>
+    <string name="intercom_allow_access">Luba juurdepääs</string>
+    <string name="intercom_allow_storage_access">Oma fotode nägemiseks lubage juurdepääs mälule</string>
+    <string name="intercom_also_in_this_conversation">Ka selles vestluses</string>
+    <string name="intercom_android_activated_message">Teie Androidi rakendus on nüüd Intercomi platvormi integreeritud</string>
+    <string name="intercom_app_settings">Rakenduse sätted</string>
+    <string name="intercom_article_load_error">Ei saanud artiklit laadida</string>
+    <string name="intercom_article_question">Kas see vastas sinu küsimusele?</string>
+    <string name="intercom_article_response">Sinu reaktsioon</string>
+    <string name="intercom_asked_about">Seoses teemaga</string>
+    <string name="intercom_away_state">Eemal</string>
+    <string name="intercom_bot">Bot</string>
+    <string name="intercom_cancel">Tühista</string>
+    <string name="intercom_close">Sule</string>
+    <string name="intercom_congratulations">Õnnitleme</string>
+    <string name="intercom_connected">Olete ühendatud</string>
+    <string name="intercom_conversations">Vestlused</string>
+    <string name="intercom_conversations_with_app">Vestlused kasutajaga {name}</string>
+    <string name="intercom_copied_to_clipboard">Kopeeritud lõikelauale</string>
+    <string name="intercom_couldnt_complete_action">Ei saanud toimingut lõpetada</string>
+    <string name="intercom_couldnt_load_apps">Couldn\'t load apps.</string>
+    <string name="intercom_couldnt_load_content">Ei saanud sisu laadida</string>
+    <string name="intercom_couldnt_load_messenger">Couldn\'t load the Messenger.</string>
+    <string name="intercom_delivered">Tarnitud</string>
+    <string name="intercom_dismiss">Loobu</string>
+    <string name="intercom_empty_conversations">Ei ole veel vestlusi kasutajaga {name}</string>
+    <string name="intercom_error_loading_conversation">Vestlust ei saanud laadida</string>
+    <string name="intercom_facebook_like">Märkige meid Facebookis meeldivaks</string>
+    <string name="intercom_failed_delivery">Teate edastamine ebaõnnestus</string>
+    <string name="intercom_failed_to_load_conversation">Teie vestlusi ei saanud laadida</string>
+    <string name="intercom_failed_to_send">Saatmine ebaõnnestus</string>
+    <string name="intercom_file_access_failed">Sellele failile ei saa juurdepääsu</string>
+    <string name="intercom_file_too_big">Ei saa saata faile, mis on suuremad kui 40 MB</string>
+    <string name="intercom_gif_attribution">{providername} kaudu</string>
+    <string name="intercom_gifs_load_error">Ei saanud GIF-e laadida</string>
+    <string name="intercom_give_it_another_try">Proovi veel</string>
+    <string name="intercom_go_to_device_settings">Juurdepääsu lubamiseks minge seadme rakenduse sätete lubade menüüsse</string>
+    <string name="intercom_help_center">Abikeskus</string>
+    <string name="intercom_image_attached">(pilt manustatud)</string>
+    <string name="intercom_inbox_error_state_title">Midagi läks valesti</string>
+    <string name="intercom_message_failed_try_again">Saatmine ebaõnnestus, koputage uuesti proovimiseks</string>
+    <string name="intercom_message_seen">Nähtud</string>
+    <string name="intercom_message_state_sending">Saatmine…</string>
+    <string name="intercom_message_unseen">Pole veel nähtud</string>
+    <string name="intercom_name_and_1_other">{name} ja veel 1</string>
+    <string name="intercom_name_and_x_others">{name} ja veel {count}</string>
+    <string name="intercom_new_conversation">Uus vestlus</string>
+    <string name="intercom_new_message">Uus sõnum</string>
+    <string name="intercom_new_messages">Teile on {n} uut sõnumit</string>
+    <string name="intercom_new_notifications">Uued teated</string>
+    <string name="intercom_no_conversations">Vestlusi pole</string>
+    <string name="intercom_no_gifs_found">Ühtegi GIF-i ei leitud</string>
+    <string name="intercom_no_gifs_matching_query">Ei leidnud ühtegi GIF-i teie märksõnaga</string>
+    <string name="intercom_no_messages_from_the_team">No messages from the team</string>
+    <string name="intercom_no_network_connection">Võrguühendus puudub</string>
+    <string name="intercom_no_photos">Fotosid pole</string>
+    <string name="intercom_no_photos_on_device">Selles seadmes ei ole ühtegi fotot</string>
+    <string name="intercom_not_now">Mitte praegu</string>
+    <string name="intercom_nothing_to_see_here_yet">Nothing to see here yet</string>
+    <string name="intercom_notification_channel_actions_description">Sisaldab linke, et tegutseda selle rakenduse abil</string>
+    <string name="intercom_notification_channel_actions_title">Tegevused</string>
+    <string name="intercom_notification_channel_chat_replies_description">Vasta vestluste teavitustele selles rakenduses</string>
+    <string name="intercom_notification_channel_chat_replies_title">Vestluse vastused</string>
+    <string name="intercom_notification_channel_new_chats_description">Uute vestluste teavitused, mis on saadetud sellest rakendusest</string>
+    <string name="intercom_notification_channel_new_chats_title">Uued vestlused</string>
+    <string name="intercom_one_new_message">Teile on uus sõnum</string>
+    <string name="intercom_photo_access_denied">Keelasite juurdepääsu oma fotodele</string>
+    <string name="intercom_plus_x_more">+{n}</string>
+    <string name="intercom_profile_location">{time} kohas {location}</string>
+    <string name="intercom_rate_your_conversation">Hinda vestlust</string>
+    <string name="intercom_reload">Uuesti laadimine</string>
+    <string name="intercom_reply_from_admin">Vastus kasutajalt {name}</string>
+    <string name="intercom_reply_to_conversation">Kirjuta vastus</string>
+    <string name="intercom_retry">Proovi uuesti</string>
+    <string name="intercom_search_gif">Otsi GIF-e…</string>
+    <string name="intercom_see_all">Vaata kõiki</string>
+    <string name="intercom_see_past_conversations">Vaata eelmisi vestlusi</string>
+    <string name="intercom_send">Saada</string>
+    <string name="intercom_start_a_conversation">Alusta vestlust</string>
+    <string name="intercom_start_conversation">Alusta vestlust</string>
+    <string name="intercom_storage_access_request">Piltide nägemiseks peate lubama juurdepääsu mälule</string>
+    <string name="intercom_tap_to_send_image">Saada pilt</string>
+    <string name="intercom_teammate_from_company">{name} ettevõttest {company}</string>
+    <string name="intercom_tell_us_more">Räägi rohkem…</string>
+    <string name="intercom_thanks_for_letting_us_know">Täname, et andsid meile teada</string>
+    <string name="intercom_time_day_ago">{delta} p tagasi</string>
+    <string name="intercom_time_hour_ago">{delta} h tagasi</string>
+    <string name="intercom_time_just_now">Praegu</string>
+    <string name="intercom_time_minute_ago">{delta} min tagasi</string>
+    <string name="intercom_time_week_ago">{delta} n tagasi</string>
+    <string name="intercom_try_again">Proovi uuesti</string>
+    <string name="intercom_try_again_minute">Proovi mõne hetke pärast uuesti.</string>
+    <string name="intercom_twitter_follow">Jälgige meid Twitteris</string>
+    <string name="intercom_we_run_on_intercom">Töötame platvormil Intercom</string>
+    <string name="intercom_you">Teie</string>
+    <string name="intercom_you_rated_the_conversation">Hindasid vestlust</string>
+    <string name="intercom_your_conversations">Sinu vestlused</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Otsing"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"VÄLJAS"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"SEES"</string>
 </resources>

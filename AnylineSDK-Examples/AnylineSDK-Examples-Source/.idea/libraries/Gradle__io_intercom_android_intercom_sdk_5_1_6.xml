@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.intercom.android:intercom-sdk-5.1.6">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

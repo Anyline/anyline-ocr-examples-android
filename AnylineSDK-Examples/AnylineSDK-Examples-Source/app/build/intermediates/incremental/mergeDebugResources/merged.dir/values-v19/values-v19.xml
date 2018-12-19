@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <dimen name="intercom_composer_toolbar_content_offset">24dp</dimen>
+    <dimen name="intercom_composer_toolbar_with_status_bar_height">81dp</dimen>
+    <style name="Intercom_PanelTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@color/intercom_full_transparent_full_black</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionModeOverlay" ns1:ignore="NewApi">true
+        </item>
+    </style>
+</resources>

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Idi na početnu"</string>
-    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
-    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Idi gore"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Dodatne opcije"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"Gotovo"</string>
@@ -10,6 +8,16 @@
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Odabir aplikacije"</string>
     <string msgid="121134116657445385" name="abc_capital_off">"ISKLJUČENO"</string>
     <string msgid="3405795526292276155" name="abc_capital_on">"UKLJUČENO"</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"razmaknica"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Menu+"</string>
     <string msgid="7723749260725869598" name="abc_search_hint">"Pretražite…"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Izbriši upit"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Upit za pretraživanje"</string>
@@ -17,7 +25,7 @@
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Pošalji upit"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Glasovno pretraživanje"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Dijeljenje sa"</string>
-    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Dijeljenje sa: %s"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Dijeli putem aplikacije <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Sažmi"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Omogući"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> neće funkcionirati ako ne omogućite usluge Google Playa."</string>
@@ -25,6 +33,7 @@
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Instaliraj"</string>
     <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> neće funkcionirati bez usluga Google Playa koje nisu instalirane na vašem uređaju."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Preuzimanje usluga Google Playa"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Dostupnost usluga za Google Play"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Pogreška Usluga za Google Play"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> ima poteškoća s uslugama Google Playa. Pokušajte ponovo."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> neće funkcionirati bez usluga Google Playa koje vaš uređaj ne podržava."</string>
@@ -36,6 +45,114 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Otvori na telefonu"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Prijava"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Prijava putem Googlea"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Napredno"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Razno"</string>
+    <string name="intercom_access_photos">Pristupite svojim fotografijama</string>
+    <string name="intercom_active_15m_ago">Korisnik je bio aktivan unutar zadnje(ih) {minutes}minute(a)</string>
+    <string name="intercom_active_day_ago">Korisnik je bio aktivan {days}dan(a)</string>
+    <string name="intercom_active_hour_ago">Korisnik je bio aktivan {hours}sat(a/i)</string>
+    <string name="intercom_active_minute_ago">Korisnik je bio aktivan {minutes}minute(a)</string>
+    <string name="intercom_active_state">Aktivan/na</string>
+    <string name="intercom_active_week_ago">Korisnik je bio aktivan prije tjedan dana</string>
+    <string name="intercom_allow_access">Dopustite pristup</string>
+    <string name="intercom_allow_storage_access">Dopustite pristup pohrani da biste vidjeli svoje fotografije</string>
+    <string name="intercom_also_in_this_conversation">Također u ovom razgovoru</string>
+    <string name="intercom_android_activated_message">Vaša Android aplikacija je integrirana Intercom</string>
+    <string name="intercom_app_settings">Postavke aplikacija</string>
+    <string name="intercom_article_load_error">Nije bilo moguće učitati članak</string>
+    <string name="intercom_article_question">Je li to odgovor na Vaše pitanje?</string>
+    <string name="intercom_article_response">Reagirali ste s</string>
+    <string name="intercom_asked_about">Upitali ste o</string>
+    <string name="intercom_away_state">Odsutan/na</string>
+    <string name="intercom_bot">Bot</string>
+    <string name="intercom_cancel">Odustani</string>
+    <string name="intercom_close">Zatvori</string>
+    <string name="intercom_congratulations">Čestitke</string>
+    <string name="intercom_connected">Povezani ste</string>
+    <string name="intercom_conversations">Razgovori</string>
+    <string name="intercom_conversations_with_app">Razgovori s {name}</string>
+    <string name="intercom_copied_to_clipboard">Kopirano u međuspremnik</string>
+    <string name="intercom_couldnt_complete_action">Nije bilo moguće dovršiti radnju</string>
+    <string name="intercom_couldnt_load_apps">Couldn\'t load apps.</string>
+    <string name="intercom_couldnt_load_content">Nije bilo moguće učitati sadržaj</string>
+    <string name="intercom_couldnt_load_messenger">Couldn\'t load the Messenger.</string>
+    <string name="intercom_delivered">Isporučeno</string>
+    <string name="intercom_dismiss">Odbaci</string>
+    <string name="intercom_empty_conversations">Još nemate razgovora s {name}</string>
+    <string name="intercom_error_loading_conversation">Nije moguće učitati razgovor</string>
+    <string name="intercom_facebook_like">Sviđa mi se!</string>
+    <string name="intercom_failed_delivery">Nije moguće isporučiti vašu poruku</string>
+    <string name="intercom_failed_to_load_conversation">Nije bilo moguće učitati vaše razgovore</string>
+    <string name="intercom_failed_to_send">Nije moguće poslati</string>
+    <string name="intercom_file_access_failed">Nije moguće pristupiti navedenoj datoteci</string>
+    <string name="intercom_file_too_big">Nije moguće slati datoteke veće od 40 MB</string>
+    <string name="intercom_gif_attribution">putem {providername}</string>
+    <string name="intercom_gifs_load_error">Nije moguće učitati GIF-ove</string>
+    <string name="intercom_give_it_another_try">Pokušajte ponovno</string>
+    <string name="intercom_go_to_device_settings">Da biste dopustili pristup, idite u izbornik za dozvole u postavkama aplikacija na svojem uređaju</string>
+    <string name="intercom_help_center">Centar za pomoć</string>
+    <string name="intercom_image_attached">(priložena slika)</string>
+    <string name="intercom_inbox_error_state_title">Ups, došlo je do greške</string>
+    <string name="intercom_message_failed_try_again">Nije poslano. Dodirnite kako biste pokušali ponovno.</string>
+    <string name="intercom_message_seen">Pročitano</string>
+    <string name="intercom_message_state_sending">Slanje…</string>
+    <string name="intercom_message_unseen">Nije pročitano</string>
+    <string name="intercom_name_and_1_other">{name} i još 1 osoba</string>
+    <string name="intercom_name_and_x_others">{name} i {count} drugih</string>
+    <string name="intercom_new_conversation">Novi razgovor</string>
+    <string name="intercom_new_message">Nova poruka</string>
+    <string name="intercom_new_messages">Imate {n} nove(ih) poruke(a)</string>
+    <string name="intercom_new_notifications">Nove obavijesti</string>
+    <string name="intercom_no_conversations">Ne postoji nijedan razgovor</string>
+    <string name="intercom_no_gifs_found">Nije pronađen nijedan GIF</string>
+    <string name="intercom_no_gifs_matching_query">Nije pronađen nijedan GIF koji odgovara Vašem upitu</string>
+    <string name="intercom_no_messages_from_the_team">No messages from the team</string>
+    <string name="intercom_no_network_connection">Nema mreže</string>
+    <string name="intercom_no_photos">Nema fotografija</string>
+    <string name="intercom_no_photos_on_device">Na ovom uređaju nema fotografija</string>
+    <string name="intercom_not_now">Ne sada</string>
+    <string name="intercom_nothing_to_see_here_yet">Nothing to see here yet</string>
+    <string name="intercom_notification_channel_actions_description">Sadrži poveznice za poduzimanje radnje u ovoj aplikaciji</string>
+    <string name="intercom_notification_channel_actions_title">Radnje</string>
+    <string name="intercom_notification_channel_chat_replies_description">Obavijesti o razgovorima u ovoj aplikaciji</string>
+    <string name="intercom_notification_channel_chat_replies_title">Odgovori</string>
+    <string name="intercom_notification_channel_new_chats_description">Nove poruke poslane putem ove aplikacije</string>
+    <string name="intercom_notification_channel_new_chats_title">Novi razgovori</string>
+    <string name="intercom_one_new_message">Imate novu poruku</string>
+    <string name="intercom_photo_access_denied">Uskratili ste pristup svojim fotografijama</string>
+    <string name="intercom_plus_x_more">+više od {n}</string>
+    <string name="intercom_profile_location">{time} u {location}</string>
+    <string name="intercom_rate_your_conversation">Ocijenite razgovor</string>
+    <string name="intercom_reload">Ponovno učitaj</string>
+    <string name="intercom_reply_from_admin">Odgovor od korisnika {name}</string>
+    <string name="intercom_reply_to_conversation">Odgovori</string>
+    <string name="intercom_retry">Pokušaj ponovo</string>
+    <string name="intercom_search_gif">Pretraži GIF-ove…</string>
+    <string name="intercom_see_all">Pogledaj sve</string>
+    <string name="intercom_see_past_conversations">Pogledaj prošle razgovore</string>
+    <string name="intercom_send">Pošalji</string>
+    <string name="intercom_start_a_conversation">Započni razgovor</string>
+    <string name="intercom_start_conversation">Započni razgovor</string>
+    <string name="intercom_storage_access_request">Da biste vidjeli svoje fotografije, morate dopustiti pristup pohrani</string>
+    <string name="intercom_tap_to_send_image">Dodirnite za slanje slike</string>
+    <string name="intercom_teammate_from_company">{name} iz {company}</string>
+    <string name="intercom_tell_us_more">Recite nam više…</string>
+    <string name="intercom_thanks_for_letting_us_know">Hvala Vam što ste nas obavijestili</string>
+    <string name="intercom_time_day_ago">prije {delta} dan(a)</string>
+    <string name="intercom_time_hour_ago">prije {delta} sat(a/i)</string>
+    <string name="intercom_time_just_now">Upravo sada</string>
+    <string name="intercom_time_minute_ago">prije {delta} minutu(e/a)</string>
+    <string name="intercom_time_week_ago">prije {delta} tjedan(a)</string>
+    <string name="intercom_try_again">Pokušaj ponovno</string>
+    <string name="intercom_try_again_minute">Pokušajte ponovno za minutu.</string>
+    <string name="intercom_twitter_follow">Pratite nas na Twitteru</string>
+    <string name="intercom_we_run_on_intercom">Mi koristimo Intercom</string>
+    <string name="intercom_you">Ti</string>
+    <string name="intercom_you_rated_the_conversation">Ocijenili ste razgovor</string>
+    <string name="intercom_your_conversations">Vaši razgovori</string>
     <string msgid="146198913615257606" name="search_menu_title">"Pretraživanje"</string>
-    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ISKLJUČENO"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"UKLJUČENO"</string>
 </resources>

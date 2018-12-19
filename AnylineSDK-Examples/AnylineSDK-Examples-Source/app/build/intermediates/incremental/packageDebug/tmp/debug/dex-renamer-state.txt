@@ -1,0 +1,7 @@
+#Wed Dec 19 18:30:17 CET 2018
+base.0=/home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dexMerger/debug/0
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dexMerger/debug/1

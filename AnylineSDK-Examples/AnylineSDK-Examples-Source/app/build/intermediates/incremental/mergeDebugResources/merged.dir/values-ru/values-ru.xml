@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Перейти на главный экран"</string>
-    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
-    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Перейти вверх"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Другие параметры"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"Готово"</string>
@@ -10,6 +8,16 @@
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Выбрать приложение"</string>
     <string msgid="121134116657445385" name="abc_capital_off">"ОТКЛ."</string>
     <string msgid="3405795526292276155" name="abc_capital_on">"ВКЛ."</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"Ввод"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Fn +"</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Shift +"</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"Пробел"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Меню +"</string>
     <string msgid="7723749260725869598" name="abc_search_hint">"Поиск"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Удалить запрос"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Поисковый запрос"</string>
@@ -17,7 +25,7 @@
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Отправить запрос"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Голосовой поиск"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Открыть доступ"</string>
-    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Открыть доступ пользователю %s"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Открыть доступ приложению \"<ns1:g id="APPLICATION_NAME">%s</ns1:g>\""</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Свернуть"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Включить"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Для работы приложения \"<ns1:g id="APP_NAME">%1$s</ns1:g>\" требуется включить сервисы Google Play."</string>
@@ -25,6 +33,7 @@
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Установить"</string>
     <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Для работы приложения \"<ns1:g id="APP_NAME">%1$s</ns1:g>\" требуется установить сервисы Google Play."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Установите сервисы Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Доступность сервисов Google Play"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Ошибка сервисов Google Play"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Приложению \"<ns1:g id="APP_NAME">%1$s</ns1:g>\" не удается подключиться к сервисам Google Play. Повторите попытку."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Для работы с приложением \"<ns1:g id="APP_NAME">%1$s</ns1:g>\" требуются сервисы Google Play. Они не поддерживаются на вашем устройстве."</string>
@@ -36,6 +45,114 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Открыть на телефоне"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Войти"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Войти через аккаунт Google"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Дополнительно"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Другое"</string>
+    <string name="intercom_access_photos">Доступ к вашим фотографиям</string>
+    <string name="intercom_active_15m_ago">В сети последние {minutes} мин</string>
+    <string name="intercom_active_day_ago">Был в сети {days} дн. назад</string>
+    <string name="intercom_active_hour_ago">Был в сети {hours} ч назад</string>
+    <string name="intercom_active_minute_ago">Был в сети {minutes} мин назад</string>
+    <string name="intercom_active_state">Активен</string>
+    <string name="intercom_active_week_ago">Был в сети более 1 недели назад</string>
+    <string name="intercom_allow_access">Разрешить доступ</string>
+    <string name="intercom_allow_storage_access">Пожалуйста, разрешите доступ к хранилищу, чтобы видеть свои фотографии</string>
+    <string name="intercom_also_in_this_conversation">Также в этом разговоре</string>
+    <string name="intercom_android_activated_message">Ваше приложение Android интегрировано с платформой Intercom</string>
+    <string name="intercom_app_settings">Параметры приложения</string>
+    <string name="intercom_article_load_error">Не удалось загрузить статью</string>
+    <string name="intercom_article_question">Вы получили ответ на свой вопрос?</string>
+    <string name="intercom_article_response">Вы отреагировали</string>
+    <string name="intercom_asked_about">Спросили о</string>
+    <string name="intercom_away_state">Нет на месте</string>
+    <string name="intercom_bot">Bot</string>
+    <string name="intercom_cancel">Отменить</string>
+    <string name="intercom_close">Закрыть</string>
+    <string name="intercom_congratulations">Поздравляем!</string>
+    <string name="intercom_connected">Вы подключились</string>
+    <string name="intercom_conversations">Разговоры</string>
+    <string name="intercom_conversations_with_app">Разговоры с {name}</string>
+    <string name="intercom_copied_to_clipboard">Скопировано в буфер</string>
+    <string name="intercom_couldnt_complete_action">Не удалось выполнить это действие</string>
+    <string name="intercom_couldnt_load_apps">Couldn\'t load apps.</string>
+    <string name="intercom_couldnt_load_content">Не удалось загрузить содержимое</string>
+    <string name="intercom_couldnt_load_messenger">Couldn\'t load the Messenger.</string>
+    <string name="intercom_delivered">Доставлено</string>
+    <string name="intercom_dismiss">Отклонить</string>
+    <string name="intercom_empty_conversations">Вы еще не беседовали с участником {name}</string>
+    <string name="intercom_error_loading_conversation">Не удалось загрузить разговор</string>
+    <string name="intercom_facebook_like">Нажмите Нравится на Facebook</string>
+    <string name="intercom_failed_delivery">Не удалось доставить сообщение</string>
+    <string name="intercom_failed_to_load_conversation">Не удалось загрузить разговоры</string>
+    <string name="intercom_failed_to_send">Не удалось отправить</string>
+    <string name="intercom_file_access_failed">Не удается получить доступ к файлу</string>
+    <string name="intercom_file_too_big">Файлы размером более 40 МБ не могут быть оправлены</string>
+    <string name="intercom_gif_attribution">с помощью {providername}</string>
+    <string name="intercom_gifs_load_error">Не удалось загрузить GIF-файлы</string>
+    <string name="intercom_give_it_another_try">Попробуйте ещё раз</string>
+    <string name="intercom_go_to_device_settings">Чтобы разрешить доступ, перейдите в меню разрешений в параметрах приложения на своем устройстве</string>
+    <string name="intercom_help_center">Справочный центр</string>
+    <string name="intercom_image_attached">(прикреплено изображение)</string>
+    <string name="intercom_inbox_error_state_title">Произошла ошибка</string>
+    <string name="intercom_message_failed_try_again">Не удалось отправить. Нажмите, чтобы повторить попытку.</string>
+    <string name="intercom_message_seen">Просмотрено</string>
+    <string name="intercom_message_state_sending">Идет отправка…</string>
+    <string name="intercom_message_unseen">Не просмотрено</string>
+    <string name="intercom_name_and_1_other">{name} и ещё 1</string>
+    <string name="intercom_name_and_x_others">{name} и {count} других</string>
+    <string name="intercom_new_conversation">Новый разговор</string>
+    <string name="intercom_new_message">Новое сообщение</string>
+    <string name="intercom_new_messages">У Вас есть новые сообщения: {n}</string>
+    <string name="intercom_new_notifications">Новые уведомления</string>
+    <string name="intercom_no_conversations">Нет разговоров</string>
+    <string name="intercom_no_gifs_found">GIF-файлы не найдены</string>
+    <string name="intercom_no_gifs_matching_query">Мы не смогли найти ни одного GIF-файла, отвечающего Вашему критерию</string>
+    <string name="intercom_no_messages_from_the_team">No messages from the team</string>
+    <string name="intercom_no_network_connection">Сетевое подключение отсутствует</string>
+    <string name="intercom_no_photos">Нет фотографий</string>
+    <string name="intercom_no_photos_on_device">На этом устройстве нет фотографий</string>
+    <string name="intercom_not_now">Не сейчас</string>
+    <string name="intercom_nothing_to_see_here_yet">Nothing to see here yet</string>
+    <string name="intercom_notification_channel_actions_description">Содержит ссылки на действия в этом приложении</string>
+    <string name="intercom_notification_channel_actions_title">Действия</string>
+    <string name="intercom_notification_channel_chat_replies_description">Уведомления об ответах в разговорах этого приложения</string>
+    <string name="intercom_notification_channel_chat_replies_title">Ответы в разговорах</string>
+    <string name="intercom_notification_channel_new_chats_description">Новые сообщения отправлены из этого приложения</string>
+    <string name="intercom_notification_channel_new_chats_title">Новые разговоры</string>
+    <string name="intercom_one_new_message">У Вас новое сообщение</string>
+    <string name="intercom_photo_access_denied">Вы запретили доступ к своим фотографиям</string>
+    <string name="intercom_plus_x_more">+ еще {n}</string>
+    <string name="intercom_profile_location">{time} в {location}</string>
+    <string name="intercom_rate_your_conversation">Как прошел разговор с вами?</string>
+    <string name="intercom_reload">Перезагрузить</string>
+    <string name="intercom_reply_from_admin">Ответ от {name}</string>
+    <string name="intercom_reply_to_conversation">Написать ответ</string>
+    <string name="intercom_retry">Повторите попытку</string>
+    <string name="intercom_search_gif">Поиск GIF-файлов…</string>
+    <string name="intercom_see_all">Просмотреть все</string>
+    <string name="intercom_see_past_conversations">Просмотреть прошлые разговоры</string>
+    <string name="intercom_send">Отправить</string>
+    <string name="intercom_start_a_conversation">Начать разговор</string>
+    <string name="intercom_start_conversation">Начать разговор</string>
+    <string name="intercom_storage_access_request">Разрешите доступ к хранилищу, чтобы увидеть свои фотографии</string>
+    <string name="intercom_tap_to_send_image">Коснитесь, чтобы отправить изображение</string>
+    <string name="intercom_teammate_from_company">{name} из {company}</string>
+    <string name="intercom_tell_us_more">Расскажите подробнее</string>
+    <string name="intercom_thanks_for_letting_us_know">Спасибо, что поделились с нами</string>
+    <string name="intercom_time_day_ago">{delta} дн. назад</string>
+    <string name="intercom_time_hour_ago">{delta} ч назад</string>
+    <string name="intercom_time_just_now">Только что</string>
+    <string name="intercom_time_minute_ago">{delta} мин назад</string>
+    <string name="intercom_time_week_ago">{delta} нед. назад</string>
+    <string name="intercom_try_again">Повторить попытку</string>
+    <string name="intercom_try_again_minute">Попробуйте ещё раз через минуту.</string>
+    <string name="intercom_twitter_follow">Следите за нашими новостями в Twitter</string>
+    <string name="intercom_we_run_on_intercom">Мы используем Intercom</string>
+    <string name="intercom_you">Вы</string>
+    <string name="intercom_you_rated_the_conversation">Вы поставили оценку</string>
+    <string name="intercom_your_conversations">Ваши разговоры</string>
     <string msgid="146198913615257606" name="search_menu_title">"Поиск"</string>
-    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ВЫКЛ."</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ВКЛ."</string>
 </resources>

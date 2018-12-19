@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Navega a la pàgina d\'inici"</string>
-    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
-    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Navega cap a dalt"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Més opcions"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"Fet"</string>
@@ -10,6 +8,16 @@
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Selecciona una aplicació"</string>
     <string msgid="121134116657445385" name="abc_capital_off">"DESACTIVAT"</string>
     <string msgid="3405795526292276155" name="abc_capital_on">"ACTIVAT"</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"Supr"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"Retorn"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Funció+"</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Maj+"</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"Espai"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Menú+"</string>
     <string msgid="7723749260725869598" name="abc_search_hint">"Cerca..."</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Esborra la consulta"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Consulta de cerca"</string>
@@ -17,25 +25,134 @@
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Envia la consulta"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Cerca per veu"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Comparteix amb"</string>
-    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Comparteix amb %s"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Comparteix amb <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Replega"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Activa"</string>
-    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no funcionarà si no actives els Serveis de Google Play."</string>
-    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Activa els Serveis de Google Play"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no funcionarà si no actives Serveis de Google Play."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Activa Serveis de Google Play"</string>
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Instal·la"</string>
-    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no s\'executarà si el dispositiu no té instal·lats els serveis de Google Play."</string>
-    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Obtén els Serveis de Google Play"</string>
-    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Error dels Serveis de Google Play"</string>
-    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> té problemes amb els serveis de Google Play. Torna-ho a provar."</string>
-    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no es pot executar sense els serveis de Google Play, però no són compatibles amb el teu dispositiu."</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no s\'executarà si Serveis de Google Play no està instal·lat al dispositiu."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Obtén Serveis de Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Disponibilitat de serveis de Google Play"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Error de Serveis de Google Play"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> té problemes amb Serveis de Google Play. Torna-ho a provar."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no es pot executar sense Serveis de Google Play, que no és compatible amb el teu dispositiu."</string>
     <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Actualitza"</string>
-    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no s\'executarà si no actualitzes els Serveis de Google Play."</string>
-    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Actualitza els Serveis de Google Play"</string>
-    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no s\'executarà sense els Serveis de Google Play, que s\'estan actualitzant en aquest moment."</string>
-    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Cal una nova versió dels Serveis de Google Play. S\'actualitzaran automàticament aviat."</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no s\'executarà si no actualitzes Serveis de Google Play."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Actualitza Serveis de Google Play"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no s\'executarà sense Serveis de Google Play, que s\'està actualitzant en aquest moment."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Cal una nova versió de Serveis de Google Play. S\'actualitzarà automàticament aviat."</string>
     <string msgid="5201977337835724196" name="common_open_on_phone">"Obre al telèfon"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Inicia sessió"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Inicia la sessió amb Google"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Opcions avançades"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Altres"</string>
+    <string name="intercom_access_photos">Accedir a les seves fotos</string>
+    <string name="intercom_active_15m_ago">Actiu en els darrers {minutes} min</string>
+    <string name="intercom_active_day_ago">Actiu fa {days} dia(es)</string>
+    <string name="intercom_active_hour_ago">Actiu fa {hours} h</string>
+    <string name="intercom_active_minute_ago">Actiu fa {minutes} min</string>
+    <string name="intercom_active_state">Actiu</string>
+    <string name="intercom_active_week_ago">Actiu fa més d’1 setmana</string>
+    <string name="intercom_allow_access">Permetre l\'accés</string>
+    <string name="intercom_allow_storage_access">Permeti l\'accés a l\'emmagatzematge per veure les fotos</string>
+    <string name="intercom_also_in_this_conversation">També a aquesta conversa</string>
+    <string name="intercom_android_activated_message">La teva app d’Android ja està integrada amb la plataforma d’Intercom</string>
+    <string name="intercom_app_settings">Configuració de l\'aplicació</string>
+    <string name="intercom_article_load_error">No ha estat possible carregar l\'article</string>
+    <string name="intercom_article_question">¿Va respondre això a la seva pregunta?</string>
+    <string name="intercom_article_response">Ha reaccionat amb</string>
+    <string name="intercom_asked_about">Va preguntar sobre</string>
+    <string name="intercom_away_state">Absent</string>
+    <string name="intercom_bot">Bot</string>
+    <string name="intercom_cancel">Cancel·la</string>
+    <string name="intercom_close">Tanca</string>
+    <string name="intercom_congratulations">Felicitats</string>
+    <string name="intercom_connected">Estàs connectat</string>
+    <string name="intercom_conversations">Converses</string>
+    <string name="intercom_conversations_with_app">Converses amb {name}</string>
+    <string name="intercom_copied_to_clipboard">S’ha copiat al porta-retalls</string>
+    <string name="intercom_couldnt_complete_action">No s”ha pogut completar aquesta acció</string>
+    <string name="intercom_couldnt_load_apps">Couldn\'t load apps.</string>
+    <string name="intercom_couldnt_load_content">No s”ha pogut carregar el contingut</string>
+    <string name="intercom_couldnt_load_messenger">Couldn\'t load the Messenger.</string>
+    <string name="intercom_delivered">Lliurat</string>
+    <string name="intercom_dismiss">Descarta</string>
+    <string name="intercom_empty_conversations">Encara no hi ha cap conversa amb {name}.</string>
+    <string name="intercom_error_loading_conversation">No s’ha pogut carregar la conversa</string>
+    <string name="intercom_facebook_like">Fes clic a M’agrada al Facebook</string>
+    <string name="intercom_failed_delivery">No s’ha pogut lliurar el missatge</string>
+    <string name="intercom_failed_to_load_conversation">No s’han pogut carregar les converses</string>
+    <string name="intercom_failed_to_send">No s’ha pogut enviar</string>
+    <string name="intercom_file_access_failed">No es pot accedir a aquest fitxer</string>
+    <string name="intercom_file_too_big">No es poden enviar fitxers de més de 40 MB</string>
+    <string name="intercom_gif_attribution">mitjançant {providername}</string>
+    <string name="intercom_gifs_load_error">No s\'han pogut carregar GIFs</string>
+    <string name="intercom_give_it_another_try">Torna a provar-ho</string>
+    <string name="intercom_go_to_device_settings">Per permetre l\'accés, vagi al menu de configuració de permisos de l\'aplicació del dispositiu</string>
+    <string name="intercom_help_center">Centre d’ajuda</string>
+    <string name="intercom_image_attached">(imatge adjunta)</string>
+    <string name="intercom_inbox_error_state_title">S’ha produït un error</string>
+    <string name="intercom_message_failed_try_again">No s’ha pogut enviar, toca per tornar-ho a provar</string>
+    <string name="intercom_message_seen">Vist</string>
+    <string name="intercom_message_state_sending">S’està enviant…</string>
+    <string name="intercom_message_unseen">No s’ha vist encara</string>
+    <string name="intercom_name_and_1_other">{name} i 1 més</string>
+    <string name="intercom_name_and_x_others">{name} i {count} més</string>
+    <string name="intercom_new_conversation">Nova conversa</string>
+    <string name="intercom_new_message">Missatge nou</string>
+    <string name="intercom_new_messages">Tens {n} missatges nous</string>
+    <string name="intercom_new_notifications">Notificacions noves</string>
+    <string name="intercom_no_conversations">Cap conversa</string>
+    <string name="intercom_no_gifs_found">No s\'ha trobat cap GIF</string>
+    <string name="intercom_no_gifs_matching_query">No hem pogut trobar cap GIF que coincideixi amb la seva consulta</string>
+    <string name="intercom_no_messages_from_the_team">No messages from the team</string>
+    <string name="intercom_no_network_connection">Cap connexió de xarxa</string>
+    <string name="intercom_no_photos">No hi ha cap foto</string>
+    <string name="intercom_no_photos_on_device">No hi ha cap foto en aquest dispositiu</string>
+    <string name="intercom_not_now">Ara no</string>
+    <string name="intercom_nothing_to_see_here_yet">Nothing to see here yet</string>
+    <string name="intercom_notification_channel_actions_description">Conté enllaços per realitzar una acció en aquesta aplicació</string>
+    <string name="intercom_notification_channel_actions_title">Accions</string>
+    <string name="intercom_notification_channel_chat_replies_description">Notificacions de respostes dels xats en aquesta aplicació</string>
+    <string name="intercom_notification_channel_chat_replies_title">Respostes del xat</string>
+    <string name="intercom_notification_channel_new_chats_description">Missatges de xat nous enviats des d”aquesta aplicació</string>
+    <string name="intercom_notification_channel_new_chats_title">Xats nous</string>
+    <string name="intercom_one_new_message">Tens un missatge nou</string>
+    <string name="intercom_photo_access_denied">Vostè ha denegat l\'accés a les fotos</string>
+    <string name="intercom_plus_x_more">+{n} més</string>
+    <string name="intercom_profile_location">{time} a {location}</string>
+    <string name="intercom_rate_your_conversation">Valorar la conversa</string>
+    <string name="intercom_reload">Torna a carregar-la</string>
+    <string name="intercom_reply_from_admin">Resposta de {name}</string>
+    <string name="intercom_reply_to_conversation">Escriu una resposta</string>
+    <string name="intercom_retry">Torna-ho a provar</string>
+    <string name="intercom_search_gif">Cercar GIFs…</string>
+    <string name="intercom_see_all">Veu totes</string>
+    <string name="intercom_see_past_conversations">Mostra les converses anteriors</string>
+    <string name="intercom_send">Envia</string>
+    <string name="intercom_start_a_conversation">Inicia una conversa</string>
+    <string name="intercom_start_conversation">Inicia una conversa</string>
+    <string name="intercom_storage_access_request">Per poder veure les fotos ha de permetre l\'accés a l\'emmagatzematge</string>
+    <string name="intercom_tap_to_send_image">Toqui per enviar una imatge</string>
+    <string name="intercom_teammate_from_company">{name} de {company}</string>
+    <string name="intercom_tell_us_more">Digui’ns més…</string>
+    <string name="intercom_thanks_for_letting_us_know">Gràcies per informar-nos</string>
+    <string name="intercom_time_day_ago">Fa {delta} dia(es)</string>
+    <string name="intercom_time_hour_ago">Fa {delta} h</string>
+    <string name="intercom_time_just_now">Just ara</string>
+    <string name="intercom_time_minute_ago">Fa {delta} min</string>
+    <string name="intercom_time_week_ago">Fa {delta} setmana(es)</string>
+    <string name="intercom_try_again">Torna-ho a provar</string>
+    <string name="intercom_try_again_minute">Provi una altra vegada d\'aquí a un minut.</string>
+    <string name="intercom_twitter_follow">Segueix-nos al Twitter</string>
+    <string name="intercom_we_run_on_intercom">Utilitzem Intercom</string>
+    <string name="intercom_you">Tu</string>
+    <string name="intercom_you_rated_the_conversation">Va valorar la conversa</string>
+    <string name="intercom_your_conversations">Les teves converses</string>
     <string msgid="146198913615257606" name="search_menu_title">"Cerca"</string>
-    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"DESACTIVAT"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ACTIVAT"</string>
 </resources>

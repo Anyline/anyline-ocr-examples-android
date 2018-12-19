@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Przejdź do strony głównej"</string>
-    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
-    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Przejdź wyżej"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Więcej opcji"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"Gotowe"</string>
@@ -10,6 +8,16 @@
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Wybierz aplikację"</string>
     <string msgid="121134116657445385" name="abc_capital_off">"WYŁ."</string>
     <string msgid="3405795526292276155" name="abc_capital_on">"WŁ."</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Funkcyjny+"</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"spacja"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Menu+"</string>
     <string msgid="7723749260725869598" name="abc_search_hint">"Szukaj…"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Wyczyść zapytanie"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Wyszukiwane hasło"</string>
@@ -17,7 +25,7 @@
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Wyślij zapytanie"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Wyszukiwanie głosowe"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Udostępnij dla"</string>
-    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Udostępnij dla %s"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Udostępnij przez: <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Zwiń"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Włącz"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Aplikacja <ns1:g id="APP_NAME">%1$s</ns1:g> nie będzie działać, jeśli nie włączysz Usług Google Play."</string>
@@ -25,6 +33,7 @@
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Zainstaluj"</string>
     <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nie będzie działać, jeśli nie zainstalujesz na urządzeniu Usług Google Play."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Pobierz Usługi Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Dostępność Usług Google Play"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Błąd Usług Google Play"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> ma problem z dostępem do Usług Google Play. Spróbuj jeszcze raz."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nie będzie działać bez Usług Google Play, które nie są obecnie obsługiwane przez urządzenie."</string>
@@ -36,6 +45,116 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Otwórz na telefonie"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Zaloguj się"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Zaloguj się przez Google"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Zaawansowane"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Inne"</string>
+    <string name="intercom_access_photos">Uzyskaj dostęp do swoich zdjęć</string>
+    <string name="intercom_active_15m_ago">Aktywny w ciągu ostatnich {minutes} min</string>
+    <string name="intercom_active_day_ago">Aktywny {days} dni temu</string>
+    <string name="intercom_active_hour_ago">Aktywny {hours} godz. temu</string>
+    <string name="intercom_active_minute_ago">Aktywny {minutes} min temu</string>
+    <string name="intercom_active_state">Aktywny</string>
+    <string name="intercom_active_week_ago">Aktywny ponad tydzień temu</string>
+    <string name="intercom_allow_access">Zezwól na dostęp</string>
+    <string name="intercom_allow_storage_access">Proszę zezwolić na dostęp do pamięci, aby można było zobaczyć Twoje zdjęcia</string>
+    <string name="intercom_also_in_this_conversation">Także w tej rozmowie</string>
+    <string name="intercom_android_activated_message">Twoja aplikacja na Androida jest teraz zintegrowana z platformą
+        Intercom
+    </string>
+    <string name="intercom_app_settings">Ustawienia aplikacji</string>
+    <string name="intercom_article_load_error">Nie można wczytać artykułu</string>
+    <string name="intercom_article_question">Czy odpowiedź na Twoje pytanie została przesłana?</string>
+    <string name="intercom_article_response">Twoje pytanie było skierowane do użytkownika</string>
+    <string name="intercom_asked_about">Temat pytania</string>
+    <string name="intercom_away_state">Zaraz wracam</string>
+    <string name="intercom_bot">Bot</string>
+    <string name="intercom_cancel">Anuluj</string>
+    <string name="intercom_close">Zamknij</string>
+    <string name="intercom_congratulations">Gratulacje</string>
+    <string name="intercom_connected">Masz połączenie</string>
+    <string name="intercom_conversations">Rozmowy</string>
+    <string name="intercom_conversations_with_app">Rozmowy z {name}</string>
+    <string name="intercom_copied_to_clipboard">Skopiowano do schowka</string>
+    <string name="intercom_couldnt_complete_action">Nie można ukończyć tego działania</string>
+    <string name="intercom_couldnt_load_apps">Nie udało się załadować aplikacje.</string>
+    <string name="intercom_couldnt_load_content">Nie można wczytać zawartości</string>
+    <string name="intercom_couldnt_load_messenger">Couldn\'t load the Messenger.</string>
+    <string name="intercom_delivered">Dostarczono</string>
+    <string name="intercom_dismiss">Odrzuć</string>
+    <string name="intercom_empty_conversations">Nie ma jeszcze żadnych rozmów z użytkownikiem {name}</string>
+    <string name="intercom_error_loading_conversation">Nie udało się wczytać rozmowy</string>
+    <string name="intercom_facebook_like">Polub nas na Facebooku</string>
+    <string name="intercom_failed_delivery">Nie udało się dostarczyć wiadomości</string>
+    <string name="intercom_failed_to_load_conversation">Nie udało się wczytać Twoich rozmów</string>
+    <string name="intercom_failed_to_send">Nie udało się wysłać</string>
+    <string name="intercom_file_access_failed">Brak dostępu do tego pliku</string>
+    <string name="intercom_file_too_big">Nie można wysyłać plików większych niż 40 MB</string>
+    <string name="intercom_gif_attribution">za pośrednictwem {providername}</string>
+    <string name="intercom_gifs_load_error">Nie udało się wczytać plików GIF</string>
+    <string name="intercom_give_it_another_try">Spróbuj jeszcze raz</string>
+    <string name="intercom_go_to_device_settings">Aby zezwolić na dostęp, przejdź do menu uprawnień w ustawieniach aplikacji urządzenia</string>
+    <string name="intercom_help_center">Centrum pomocy</string>
+    <string name="intercom_image_attached">(dołączony obraz)</string>
+    <string name="intercom_inbox_error_state_title">Coś poszło nie tak</string>
+    <string name="intercom_message_failed_try_again">Nie udało się wysłać. Kliknij, aby spróbować ponownie</string>
+    <string name="intercom_message_seen">Wyświetlono</string>
+    <string name="intercom_message_state_sending">Wysyłanie…</string>
+    <string name="intercom_message_unseen">Jeszcze nie wyświetlono</string>
+    <string name="intercom_name_and_1_other">{name} i jeszcze 1 osoba</string>
+    <string name="intercom_name_and_x_others">{name} i jeszcze {count} osoby/osób</string>
+    <string name="intercom_new_conversation">Nowa rozmowa</string>
+    <string name="intercom_new_message">Nowa wiadomość</string>
+    <string name="intercom_new_messages">Masz nowe wiadomości: {n}</string>
+    <string name="intercom_new_notifications">Nowe powiadomienia</string>
+    <string name="intercom_no_conversations">Brak rozmów</string>
+    <string name="intercom_no_gifs_found">Nie znaleziono żadnych plików GIF</string>
+    <string name="intercom_no_gifs_matching_query">Nie udało nam się znaleźć żadnych plików GIF spełniających Twój warunek wyszukiwania</string>
+    <string name="intercom_no_messages_from_the_team">No messages from the team</string>
+    <string name="intercom_no_network_connection">Brak połączenia z siecią</string>
+    <string name="intercom_no_photos">Brak zdjęć</string>
+    <string name="intercom_no_photos_on_device">Na tym urządzeniu nie ma żadnych zdjęć</string>
+    <string name="intercom_not_now">Nie teraz</string>
+    <string name="intercom_nothing_to_see_here_yet">Nothing to see here yet</string>
+    <string name="intercom_notification_channel_actions_description">Zawiera łącza do działań w aplikacji</string>
+    <string name="intercom_notification_channel_actions_title">Działania</string>
+    <string name="intercom_notification_channel_chat_replies_description">Powiadomienia o odpowiedziach z czata w aplikacji</string>
+    <string name="intercom_notification_channel_chat_replies_title">Odpowiedzi z czata</string>
+    <string name="intercom_notification_channel_new_chats_description">Nowe wiadomości czata wysłane z aplikacji</string>
+    <string name="intercom_notification_channel_new_chats_title">Nowe czaty</string>
+    <string name="intercom_one_new_message">Masz nową wiadomość</string>
+    <string name="intercom_photo_access_denied">Zabroniłeś/-aś dostępu do swoich zdjęć</string>
+    <string name="intercom_plus_x_more">+{n} więcej</string>
+    <string name="intercom_profile_location">{time} w {location}</string>
+    <string name="intercom_rate_your_conversation">Ocen swoją rozmowę</string>
+    <string name="intercom_reload">Wczytaj ponownie</string>
+    <string name="intercom_reply_from_admin">Odpowiedź od {name}</string>
+    <string name="intercom_reply_to_conversation">Napisz odpowiedź</string>
+    <string name="intercom_retry">Spróbuj ponownie</string>
+    <string name="intercom_search_gif">Szukaj plików GIF…</string>
+    <string name="intercom_see_all">Wyświetl wszystkie</string>
+    <string name="intercom_see_past_conversations">Wyświetl stare rozmowy</string>
+    <string name="intercom_send">Wyślij</string>
+    <string name="intercom_start_a_conversation">Rozpocznij rozmowę</string>
+    <string name="intercom_start_conversation">Rozpocznij rozmowę</string>
+    <string name="intercom_storage_access_request">Aby móc zobaczyć zdjęcia, musisz zezwolić na dostęp do pamięci</string>
+    <string name="intercom_tap_to_send_image">Dotknij, aby wysłać zdjęcie</string>
+    <string name="intercom_teammate_from_company">{name} z {company}</string>
+    <string name="intercom_tell_us_more">Podaj więcej szczegółów…</string>
+    <string name="intercom_thanks_for_letting_us_know">Dziękujemy za kontakt</string>
+    <string name="intercom_time_day_ago">{delta} dni temu</string>
+    <string name="intercom_time_hour_ago">{delta} godz. temu</string>
+    <string name="intercom_time_just_now">Teraz</string>
+    <string name="intercom_time_minute_ago">{delta} min temu</string>
+    <string name="intercom_time_week_ago">{delta} tyg. temu</string>
+    <string name="intercom_try_again">Spróbuj ponownie</string>
+    <string name="intercom_try_again_minute">Spróbuj ponownie za chwilę.</string>
+    <string name="intercom_twitter_follow">Obserwuj nas na Twitterze</string>
+    <string name="intercom_we_run_on_intercom">Używamy Intercomu</string>
+    <string name="intercom_you">Ty</string>
+    <string name="intercom_you_rated_the_conversation">Oceniłeś/-aś rozmowę</string>
+    <string name="intercom_your_conversations">Twoje rozmowy</string>
     <string msgid="146198913615257606" name="search_menu_title">"Szukaj"</string>
-    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"WYŁ."</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"WŁ."</string>
 </resources>

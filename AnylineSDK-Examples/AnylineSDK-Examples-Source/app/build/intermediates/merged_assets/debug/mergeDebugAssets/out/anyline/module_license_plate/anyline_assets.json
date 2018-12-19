@@ -1,0 +1,19 @@
+{
+    "comment": "Auto generated file. Manual changes will be overwritten.",
+    "immediateAssets": {
+        "anyline/module_license_plate/license_plates_combined.ale": "f92055cf0204fbfd61b44018a1ff622e"
+    },
+    "lazyAssets": {
+        "anyline/module_license_plate/tessdata/aut_nice.traineddata": "fdc7dea82be2f0612c8c7fc0ab612659",
+        "anyline/module_license_plate/tessdata/ch_nice.traineddata": "4a34607c167bd7af693e2c49ef97ba6d",
+        "anyline/module_license_plate/tessdata/cz_nice.traineddata": "eadd3a8aea3464810efd24aa65a769f8",
+        "anyline/module_license_plate/tessdata/de_umlaut.traineddata": "8ea050e8f22ba7471df7e18c310430d8",
+        "anyline/module_license_plate/tessdata/deu.traineddata": "2d5190b9b62e28fa6d17b728ca195776",
+        "anyline/module_license_plate/tessdata/hr_nice.traineddata": "bab07b37e9a200c671d369bc6d105065",
+        "anyline/module_license_plate/tessdata/italy_nice.traineddata": "d8e88a5575bb56e1ef9201d89f578f63",
+        "anyline/module_license_plate/tessdata/old.traineddata": "f52e3822cdd5423758ba19ed75b0cc32",
+        "anyline/module_license_plate/tessdata/polish_nice.traineddata": "4a04f94e5735b8f05ce6c35f5723529c",
+        "anyline/module_license_plate/tessdata/sk_nice.traineddata": "9d695485905de59d654b4d3c2b37d59e",
+        "anyline/module_license_plate/tessdata/standard.traineddata": "9a5555eb6ac51c83cbb76d238028c485"
+    }
+}

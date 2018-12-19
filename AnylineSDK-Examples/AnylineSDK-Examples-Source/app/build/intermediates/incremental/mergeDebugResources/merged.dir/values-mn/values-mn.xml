@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Нүүр хуудас руу шилжих"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Дээш шилжих"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Нэмэлт сонголтууд"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Дууссан"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Бүгдийг харах"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Апп сонгох"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"ИДЭВХГҮЙ"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ИДЭВХТЭЙ"</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"устгах"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"оруулах"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Функц+"</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Мета+"</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"зай"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Цэс+"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Хайх..."</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Асуулгыг цэвэрлэх"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Хайх асуулга"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Хайх"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Асуулгыг илгээх"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Дуут хайлт"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Хуваалцах"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>-тай хуваалцах"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Хумих"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Идэвхжүүлэх"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> нь Google Play үйлчилгээг идэвхжүүлэх хүртэл ажиллахгүй."</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play үйлчилгээг идэвхжүүлэх"</string>
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Суулгах"</string>
     <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Таны төхөөрөмжид Google Play үйлчилгээ байхгүй тул <ns1:g id="APP_NAME">%1$s</ns1:g> ажиллахгүй."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play үйлчилгээг авах"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play-н үйлчилгээнүүдийн боломжит байдал"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Наадаан үйлчилгээний алдаа"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g>-г Google Play-н үйлчилгээгээр ашиглахад асуудал гарлаа. Дахин оролдоно уу."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Таны төхөөрөмж Google Play үйлчилгээг дэмждэггүй учир <ns1:g id="APP_NAME">%1$s</ns1:g> ажиллахгүй."</string>
@@ -17,4 +45,114 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Утсаар нээх"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Нэвтрэх"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Google-р нэвтрэх:"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Дэлгэрэнгүй"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Бусад"</string>
+    <string name="intercom_access_photos">Зургууд руугаа нэвтрэх</string>
+    <string name="intercom_active_15m_ago">Сүүлийн {minutes}мин идэвхтэй байсан</string>
+    <string name="intercom_active_day_ago">{days} өдрийн өмнө идэвхтэй байсан</string>
+    <string name="intercom_active_hour_ago">{hours} цагийн өмнө идэвхтэй байсан</string>
+    <string name="intercom_active_minute_ago">{minutes} минутын өмнө идэвхтэй байсан</string>
+    <string name="intercom_active_state">Идэвхтэй</string>
+    <string name="intercom_active_week_ago">1 долоо хоногийн өмнө идэвхтэй байсан</string>
+    <string name="intercom_allow_access">Нэвтрэх эрх олгох</string>
+    <string name="intercom_allow_storage_access">Зургуудаа харахын тулд хадгалах төхөөрөмж рүү нэвтрэх эрх олгоно уу</string>
+    <string name="intercom_also_in_this_conversation">Энэ ярианд бас байна</string>
+    <string name="intercom_android_activated_message">Таны Андройд апп одоо Intercom платформтой холбогдсон</string>
+    <string name="intercom_app_settings">Програмын тохиргоо</string>
+    <string name="intercom_article_load_error">Өгүүллийг эхлүүлж чадахгүй байна</string>
+    <string name="intercom_article_question">Энэ таны асуултад хариулсан уу?</string>
+    <string name="intercom_article_response">Та ингэж хариуллаа</string>
+    <string name="intercom_asked_about">тухай асууж байна</string>
+    <string name="intercom_away_state">Эзгүй</string>
+    <string name="intercom_bot">Bot</string>
+    <string name="intercom_cancel">Цуцлах</string>
+    <string name="intercom_close">Хаах</string>
+    <string name="intercom_congratulations">Баяр хүргэе</string>
+    <string name="intercom_connected">Та холбогдлоо</string>
+    <string name="intercom_conversations">Чат</string>
+    <string name="intercom_conversations_with_app">{name}-тай хийсэн чат</string>
+    <string name="intercom_copied_to_clipboard">Хуулав</string>
+    <string name="intercom_couldnt_complete_action">Энэ үйлдлийг дуусгахгүй</string>
+    <string name="intercom_couldnt_load_apps">Couldn\'t load apps.</string>
+    <string name="intercom_couldnt_load_content">Агуулгыг ачаалж чадахгүй байна</string>
+    <string name="intercom_couldnt_load_messenger">Couldn\'t load the Messenger.</string>
+    <string name="intercom_delivered">Илгээв</string>
+    <string name="intercom_dismiss">Хаах</string>
+    <string name="intercom_empty_conversations">{name}-тай хараахан яриагүй</string>
+    <string name="intercom_error_loading_conversation">Чатыг ачаалж чадсангүй</string>
+    <string name="intercom_facebook_like">Facebook дээр бидэнд лайк өгнө үү</string>
+    <string name="intercom_failed_delivery">Зурвасыг илгээж чадсангүй</string>
+    <string name="intercom_failed_to_load_conversation">Таны чатыг ачаалж чадсангүй</string>
+    <string name="intercom_failed_to_send">Илгээж чадсангүй</string>
+    <string name="intercom_file_access_failed">Энэ файлд хандаж чадсангүй</string>
+    <string name="intercom_file_too_big">40МБ дээш хэмжээтэй файлыг илгээж чадахгүй</string>
+    <string name="intercom_gif_attribution">{providername}-р</string>
+    <string name="intercom_gifs_load_error">GIF файлуудыг ачаалж чадсангүй</string>
+    <string name="intercom_give_it_another_try">Дахин нэг туршаад үзээрэй</string>
+    <string name="intercom_go_to_device_settings">Нэвтрэх эрх олгохын тулд, төхөөрөмжийнхөө програмын тохиргооны зөвшөөрлийн цэс рүү ор</string>
+    <string name="intercom_help_center">Тусламжийн төв</string>
+    <string name="intercom_image_attached">(зураг хавсаргав)</string>
+    <string name="intercom_inbox_error_state_title">Алдаа гарав</string>
+    <string name="intercom_message_failed_try_again">Илгээж чадсангүй, товшин дахин оролдоно уу</string>
+    <string name="intercom_message_seen">Уншсан</string>
+    <string name="intercom_message_state_sending">Илгээж байна…</string>
+    <string name="intercom_message_unseen">Хараахан уншаагүй</string>
+    <string name="intercom_name_and_1_other">{name} ба 1 өөр</string>
+    <string name="intercom_name_and_x_others">{name} ба {count} өөр</string>
+    <string name="intercom_new_conversation">Шинэ чат</string>
+    <string name="intercom_new_message">Шинэ зурвас</string>
+    <string name="intercom_new_messages">Танд {n} шинэ зурвас ирлээ</string>
+    <string name="intercom_new_notifications">Шинэ мэдэгдэл</string>
+    <string name="intercom_no_conversations">Чат байхгүй</string>
+    <string name="intercom_no_gifs_found">Ямар ч GIF олдсонгүй</string>
+    <string name="intercom_no_gifs_matching_query">Бид таны асуулгад тохирох ямар ч GIF файл олж чадсангүй</string>
+    <string name="intercom_no_messages_from_the_team">No messages from the team</string>
+    <string name="intercom_no_network_connection">Сүлжээний холболт байхгүй</string>
+    <string name="intercom_no_photos">Зураг алга</string>
+    <string name="intercom_no_photos_on_device">Энэ төхөөрөмж дээр ямар ч зураг алга</string>
+    <string name="intercom_not_now">Одоо биш</string>
+    <string name="intercom_nothing_to_see_here_yet">Nothing to see here yet</string>
+    <string name="intercom_notification_channel_actions_description">Энэ програмд үйлдэл хийх холбоос агуул</string>
+    <string name="intercom_notification_channel_actions_title">Үйлдэл</string>
+    <string name="intercom_notification_channel_chat_replies_description">Энэ програмын чатад хариу өгсөн мэдэгдэл</string>
+    <string name="intercom_notification_channel_chat_replies_title">Чатын хариу</string>
+    <string name="intercom_notification_channel_new_chats_description">Энэ програмаас шинээр илгээсэн чат мессеж</string>
+    <string name="intercom_notification_channel_new_chats_title">Шинэ чат</string>
+    <string name="intercom_one_new_message">Танд шинэ зурвас ирлээ</string>
+    <string name="intercom_photo_access_denied">Та зургууд руугаа нэвтрэх эрх олгохоос татгалзлаа</string>
+    <string name="intercom_plus_x_more">+{n}</string>
+    <string name="intercom_profile_location">{time} in {location}</string>
+    <string name="intercom_rate_your_conversation">Харилцан яриагаа үнэлнэ үү</string>
+    <string name="intercom_reload">Дахин ачаалах</string>
+    <string name="intercom_reply_from_admin">Ирсэн хариу {name}</string>
+    <string name="intercom_reply_to_conversation">Хариу бичих</string>
+    <string name="intercom_retry">Дахин оролдох</string>
+    <string name="intercom_search_gif">GIF хайх…</string>
+    <string name="intercom_see_all">Бүгдийг харах</string>
+    <string name="intercom_see_past_conversations">Өнгөрсөн харилцан яриануудыг харах</string>
+    <string name="intercom_send">Илгээх</string>
+    <string name="intercom_start_a_conversation">Харилцан яриаг эхлүүлэх</string>
+    <string name="intercom_start_conversation">Чат эхлүүлэх</string>
+    <string name="intercom_storage_access_request">Зургуудаа харахын тулд та хадгалах төхөөрөмж рүү нэвтрэх эрх олгох шаардлагатай</string>
+    <string name="intercom_tap_to_send_image">Зураг илгээх бол товш</string>
+    <string name="intercom_teammate_from_company">{name}-ын {company}</string>
+    <string name="intercom_tell_us_more">Бидэнд илүү ихийг хэлнэ үү...</string>
+    <string name="intercom_thanks_for_letting_us_know">Бидэнд мэдэгдсэн баярлалаа</string>
+    <string name="intercom_time_day_ago">{delta} өдрийн өмнө</string>
+    <string name="intercom_time_hour_ago">{delta} цагийн өмнө</string>
+    <string name="intercom_time_just_now">Яг одоо</string>
+    <string name="intercom_time_minute_ago">{delta} минутын өмнө</string>
+    <string name="intercom_time_week_ago">{delta} долоо хоногийн өмнө</string>
+    <string name="intercom_try_again">Дахин оролдох</string>
+    <string name="intercom_try_again_minute">Минутын дараа дахин оролдоно уу.</string>
+    <string name="intercom_twitter_follow">Twitter дээр биднийг дагана уу</string>
+    <string name="intercom_we_run_on_intercom">Бид одоо Intercom ашиглаж байна</string>
+    <string name="intercom_you">Та</string>
+    <string name="intercom_you_rated_the_conversation">Та яриагаа үнэллээ</string>
+    <string name="intercom_your_conversations">Таны харилцан яриа</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Хайлт"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ИДЭВХГҮЙ"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ИДЭВХТЭЙ"</string>
 </resources>

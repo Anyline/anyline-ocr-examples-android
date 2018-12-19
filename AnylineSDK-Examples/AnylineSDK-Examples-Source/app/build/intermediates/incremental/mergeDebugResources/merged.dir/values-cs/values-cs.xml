@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Přejít na plochu"</string>
-    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s – %2$s"</string>
-    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s – %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Přejít nahoru"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Více možností"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"Hotovo"</string>
@@ -10,6 +8,16 @@
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Vybrat aplikaci"</string>
     <string msgid="121134116657445385" name="abc_capital_off">"VYPNUTO"</string>
     <string msgid="3405795526292276155" name="abc_capital_on">"ZAPNUTO"</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Fn+"</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"mezerník"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Menu+"</string>
     <string msgid="7723749260725869598" name="abc_search_hint">"Vyhledat…"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Smazat dotaz"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Vyhledávací dotaz"</string>
@@ -17,7 +25,7 @@
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Odeslat dotaz"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Hlasové vyhledávání"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Sdílet pomocí"</string>
-    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Sdílet pomocí %s"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Sdílet s aplikací <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Sbalit"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Povolit"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Ke spuštění aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> je třeba aktivovat služby Google Play."</string>
@@ -25,6 +33,7 @@
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Instalovat"</string>
     <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Ke spuštění aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> jsou potřeba služby Google Play, které v zařízení nemáte."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Instalace služeb Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Dostupnost služeb Google Play"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Chyba služeb Google Play"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> má potíže se službami Google Play. Zkuste to prosím znovu."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Ke spuštění aplikace <ns1:g id="APP_NAME">%1$s</ns1:g> jsou potřeba služby Google Play, které v tomto zařízení nejsou podporovány."</string>
@@ -36,6 +45,114 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Otevřít v telefonu"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Přihlásit se"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Přihlásit se k účtu Google"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Rozšířená nastavení"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Různé"</string>
+    <string name="intercom_access_photos">Přístup k vašim fotografiím</string>
+    <string name="intercom_active_15m_ago">Aktivní posledních {minutes} min.</string>
+    <string name="intercom_active_day_ago">Aktivní před {days} dny</string>
+    <string name="intercom_active_hour_ago">Aktivní před {hours} hod.</string>
+    <string name="intercom_active_minute_ago">Aktivní před {minutes} min.</string>
+    <string name="intercom_active_state">Aktivní</string>
+    <string name="intercom_active_week_ago">Aktivní před více než 1 týdnem</string>
+    <string name="intercom_allow_access">Povolit přístup</string>
+    <string name="intercom_allow_storage_access">Povolte úložišti zobrazení vašich fotografií, prosím</string>
+    <string name="intercom_also_in_this_conversation">Také v této konverzaci</string>
+    <string name="intercom_android_activated_message">Vaše aplikace pro Android je nyní integrována s platformou Intercom</string>
+    <string name="intercom_app_settings">Nastavení aplikace</string>
+    <string name="intercom_article_load_error">Článek nelze načíst</string>
+    <string name="intercom_article_question">Dostali jste odpověď na svou otázku?</string>
+    <string name="intercom_article_response">Reagovali jste pomocí</string>
+    <string name="intercom_asked_about">Dotaz</string>
+    <string name="intercom_away_state">Nepřítomen</string>
+    <string name="intercom_bot">Bot</string>
+    <string name="intercom_cancel">Zrušit</string>
+    <string name="intercom_close">Zavřít</string>
+    <string name="intercom_congratulations">Blahopřejeme</string>
+    <string name="intercom_connected">Jste připojeni</string>
+    <string name="intercom_conversations">Konverzace</string>
+    <string name="intercom_conversations_with_app">Konverzace s {name}</string>
+    <string name="intercom_copied_to_clipboard">Zkopírováno do schránky</string>
+    <string name="intercom_couldnt_complete_action">Tuto akci nelze dokončit</string>
+    <string name="intercom_couldnt_load_apps">Aplikace nebylo možné nahrát.</string>
+    <string name="intercom_couldnt_load_content">Obsah nelze načíst</string>
+    <string name="intercom_couldnt_load_messenger">Couldn\'t load the Messenger.</string>
+    <string name="intercom_delivered">Doručeno</string>
+    <string name="intercom_dismiss">Odmítnuto</string>
+    <string name="intercom_empty_conversations">S uživatelem {name} ještě nemáte žádnou konverzaci</string>
+    <string name="intercom_error_loading_conversation">Nelze načíst konverzaci</string>
+    <string name="intercom_facebook_like">Lajkněte nás na Facebooku</string>
+    <string name="intercom_failed_delivery">Nepodařilo se doručit vaši zprávu</string>
+    <string name="intercom_failed_to_load_conversation">Nelze načíst vaše konverzace</string>
+    <string name="intercom_failed_to_send">Nelze odeslat</string>
+    <string name="intercom_file_access_failed">Nelze získat přístup k tomuto souboru</string>
+    <string name="intercom_file_too_big">Nelze odeslat soubory nad 40 MB</string>
+    <string name="intercom_gif_attribution">prostřednictvím {providername}</string>
+    <string name="intercom_gifs_load_error">Nelze nahrát žádné soubory GIF</string>
+    <string name="intercom_give_it_another_try">Zkuste to znovu</string>
+    <string name="intercom_go_to_device_settings">Abyste povolili přístup, přejděte do nastavení menu vaší aplikace</string>
+    <string name="intercom_help_center">Centrum nápovědy</string>
+    <string name="intercom_image_attached">(obrázek v příloze)</string>
+    <string name="intercom_inbox_error_state_title">Došlo k chybě</string>
+    <string name="intercom_message_failed_try_again">Nelze odeslat, klepnutím opakujte</string>
+    <string name="intercom_message_seen">Je viditelné</string>
+    <string name="intercom_message_state_sending">Odesíláno…</string>
+    <string name="intercom_message_unseen">Zatím není viditelné</string>
+    <string name="intercom_name_and_1_other">{name} a 1 další</string>
+    <string name="intercom_name_and_x_others">{name} a {count} dalších</string>
+    <string name="intercom_new_conversation">Nová konverzace</string>
+    <string name="intercom_new_message">Nová zpráva</string>
+    <string name="intercom_new_messages">Máte {n} nových zpráv</string>
+    <string name="intercom_new_notifications">Nová oznámení</string>
+    <string name="intercom_no_conversations">Žádné konverzace</string>
+    <string name="intercom_no_gifs_found">Nebyly nalezeny žádné soubory GIF</string>
+    <string name="intercom_no_gifs_matching_query">Nepodařilo se nám najít žádné soubory GIF odpovídající vašemu dotazu</string>
+    <string name="intercom_no_messages_from_the_team">No messages from the team</string>
+    <string name="intercom_no_network_connection">Žádné připojení k síti</string>
+    <string name="intercom_no_photos">Žádné fotografie</string>
+    <string name="intercom_no_photos_on_device">Na tomto zařízení nejsou žádné fotografie</string>
+    <string name="intercom_not_now">Teď ne</string>
+    <string name="intercom_nothing_to_see_here_yet">Nothing to see here yet</string>
+    <string name="intercom_notification_channel_actions_description">Zahrnout odkazy na provedení akce v této aplikaci</string>
+    <string name="intercom_notification_channel_actions_title">Akce</string>
+    <string name="intercom_notification_channel_chat_replies_description">Odpovědět na oznámení z chatů v této aplikaci</string>
+    <string name="intercom_notification_channel_chat_replies_title">Odpovědi na chaty</string>
+    <string name="intercom_notification_channel_new_chats_description">Nové zprávy z chatů odeslané z této aplikace</string>
+    <string name="intercom_notification_channel_new_chats_title">Nové chaty</string>
+    <string name="intercom_one_new_message">Máte novou zprávu</string>
+    <string name="intercom_photo_access_denied">Odmítli jste přístup k vašim fotografiím</string>
+    <string name="intercom_plus_x_more">+{n} více</string>
+    <string name="intercom_profile_location">{time} v {location}</string>
+    <string name="intercom_rate_your_conversation">Ohodnoťte konverzaci</string>
+    <string name="intercom_reload">Načíst znovu</string>
+    <string name="intercom_reply_from_admin">Odpověď od {name}</string>
+    <string name="intercom_reply_to_conversation">Napsat odpověď</string>
+    <string name="intercom_retry">Zkusit znovu</string>
+    <string name="intercom_search_gif">Vyhledat soubory GIF…</string>
+    <string name="intercom_see_all">Zobrazit vše</string>
+    <string name="intercom_see_past_conversations">Zobrazit dřívější konverzace</string>
+    <string name="intercom_send">Odeslat</string>
+    <string name="intercom_start_a_conversation">Zahájit konverzaci</string>
+    <string name="intercom_start_conversation">Zahájit konverzaci</string>
+    <string name="intercom_storage_access_request">Chcete-li zobrazit své fotografie, musíte povolit přístup k úložišti</string>
+    <string name="intercom_tap_to_send_image">Klepnutím odešlete fotografii</string>
+    <string name="intercom_teammate_from_company">{name} od {company}</string>
+    <string name="intercom_tell_us_more">Řekněte nám více…</string>
+    <string name="intercom_thanks_for_letting_us_know">Děkujeme za Váš názor</string>
+    <string name="intercom_time_day_ago">Před {delta} dny</string>
+    <string name="intercom_time_hour_ago">Před {delta} hod.</string>
+    <string name="intercom_time_just_now">Právě teď</string>
+    <string name="intercom_time_minute_ago">Před {delta} min.</string>
+    <string name="intercom_time_week_ago">Před {delta} týd.</string>
+    <string name="intercom_try_again">Zkuste to znovu</string>
+    <string name="intercom_try_again_minute">Za chvíli to zkuste znovu.</string>
+    <string name="intercom_twitter_follow">Sledujte nás na Twitteru</string>
+    <string name="intercom_we_run_on_intercom">Pracujeme s platformou Intercom</string>
+    <string name="intercom_you">Vy</string>
+    <string name="intercom_you_rated_the_conversation">Konverzaci jste ohodnotili</string>
+    <string name="intercom_your_conversations">Vaše konverzace</string>
     <string msgid="146198913615257606" name="search_menu_title">"Hledat"</string>
-    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"VYP"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ZAP"</string>
 </resources>
