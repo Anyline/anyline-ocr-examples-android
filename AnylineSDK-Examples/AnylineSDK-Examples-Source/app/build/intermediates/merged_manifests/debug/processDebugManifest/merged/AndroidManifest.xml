@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.anyline.examples"
-    android:versionCode="220"
-    android:versionName="6.1" >
+    android:versionCode="225"
+    android:versionName="7" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
 
     <!-- GCM REQUIRED PERMISSIONS -->
@@ -19,9 +20,9 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <application
-        android:name="android.support.multidex.MultiDexApplication"
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
-        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -373,11 +374,6 @@
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.1.0" />
-
         <activity
             android:name="com.intercom.input.gallery.GalleryInputFullScreenActivity"
             android:theme="@style/intercom_composer_full_screen_theme" />

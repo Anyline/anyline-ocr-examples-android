@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,132,206,265",
-                        "endColumns": "76,73,58,59",
-                        "endOffsets": "127,201,260,320"
-                    },
-                    "to": {
-                        "startLines": "5,6,7,8",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "264,341,415,474",
-                        "endColumns": "76,73,58,59",
-                        "endOffsets": "336,410,469,529"
-                    }
-                },
-                {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6cf7c862a7e216ce9f29d17da84310a4/res/values-land/values-land.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0-alpha01.aar/5d375ebbb5b59819d2e0a19909efa343/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -31,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/07caa43170fa0c6a25249ac87c6adc6b/res/values-land/values-land.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/material-1.1.0-alpha02.aar/11acfe4d5e6e24dbf03bde08935209a4/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -47,6 +30,23 @@
                         "endLines": "12",
                         "endColumns": "10",
                         "endOffsets": "701"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,132,206,265",
+                        "endColumns": "76,73,58,59",
+                        "endOffsets": "127,201,260,320"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "264,341,415,474",
+                        "endColumns": "76,73,58,59",
+                        "endOffsets": "336,410,469,529"
                     }
                 }
             ]

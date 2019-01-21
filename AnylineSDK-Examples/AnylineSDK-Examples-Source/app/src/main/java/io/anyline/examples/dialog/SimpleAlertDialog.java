@@ -1,6 +1,5 @@
 package io.anyline.examples.dialog;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -15,7 +14,7 @@ import io.anyline.examples.R;
  * A simple alert dialog that uses a custom view-style
  * Consists of a title, message, header, positive and negative button
  */
-public class SimpleAlertDialog extends android.support.v7.app.AlertDialog.Builder {
+public class SimpleAlertDialog extends androidx.appcompat.app.AlertDialog.Builder {
     private Context context;
     private ImageView icon;
     private TextView title;

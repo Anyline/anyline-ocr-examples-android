@@ -1,2 +1,2 @@
-# Referenced at /home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:21
--keep class android.support.multidex.MultiDexApplication { <init>(...); }
+# Referenced at /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:22
+-keep class androidx.multidex.MultiDexApplication { <init>(...); }

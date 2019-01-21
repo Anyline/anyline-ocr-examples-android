@@ -1,61 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
+            "outputFile": "/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
             "map": [
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6cf7c862a7e216ce9f29d17da84310a4/res/values-kn/values-kn.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,223,335,448,536,643,770,847,924,1015,1108,1204,1298,1399,1492,1587,1681,1772,1863,1945,2061,2172,2271,2384,2488,2602,2766,2866",
-                        "endColumns": "117,111,112,87,106,126,76,76,90,92,95,93,100,92,94,93,90,90,81,115,110,98,112,103,113,163,99,81",
-                        "endOffsets": "218,330,443,531,638,765,842,919,1010,1103,1199,1293,1394,1487,1582,1676,1767,1858,1940,2056,2167,2266,2379,2483,2597,2761,2861,2943"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,49",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,223,335,448,536,643,770,847,924,1015,1108,1204,1298,1399,1492,1587,1681,1772,1863,1945,2061,2172,2271,2384,2488,2602,2766,5772",
-                        "endColumns": "117,111,112,87,106,126,76,76,90,92,95,93,100,92,94,93,90,90,81,115,110,98,112,103,113,163,99,81",
-                        "endOffsets": "218,330,443,531,638,765,842,919,1010,1103,1199,1293,1394,1487,1582,1676,1767,1858,1940,2056,2167,2266,2379,2483,2597,2761,2861,5849"
-                    }
-                },
-                {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/cc28d2db3c1e348c4d944f41f3818fc3/res/values-kn/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,354,556,687,800,1002,1129,1263,1387,1596,1707,1898,2031,2235,2418,2513,2602",
-                        "endColumns": "108,201,130,112,201,126,133,123,208,110,190,132,203,182,94,88,109",
-                        "endOffsets": "353,555,686,799,1001,1128,1262,1386,1595,1706,1897,2030,2234,2417,2512,2601,2711"
-                    },
-                    "to": {
-                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2866,2979,3181,3316,3433,3635,3766,3904,4237,4446,4561,4752,4889,5093,5280,5379,5472",
-                        "endColumns": "112,201,134,116,201,130,137,127,208,114,190,136,203,186,98,92,113",
-                        "endOffsets": "2974,3176,3311,3428,3630,3761,3899,4027,4441,4556,4747,4884,5088,5275,5374,5467,5581"
-                    }
-                },
-                {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/preference-v7-28.0.0.aar/48cf8eec899b6a67bbd18e02ddc1b451/res/values-kn/values-kn.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "105,191,360,440",
-                        "endColumns": "85,168,79,76",
-                        "endOffsets": "186,355,435,512"
-                    },
-                    "to": {
-                        "startLines": "47,51,52,53",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "5586,5955,6124,6204",
-                        "endColumns": "85,168,79,76",
-                        "endOffsets": "5667,6119,6199,6276"
-                    }
-                },
-                {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/436e13ea2a35c1612ec5fb2fcc0f4c9d/res/values-kn/values-kn.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/core-1.1.0-alpha01.aar/6430132892807ee0b7a518d2f66e7155/res/values-kn/values-kn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -66,13 +15,30 @@
                     "to": {
                         "startLines": "50",
                         "startColumns": "4",
-                        "startOffsets": "5854",
+                        "startOffsets": "5847",
                         "endColumns": "100",
-                        "endOffsets": "5950"
+                        "endOffsets": "5943"
                     }
                 },
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/84f8d4d5afe59aadd9e350fdaa50f5d6/res/values-kn/values.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0-alpha01.aar/5d375ebbb5b59819d2e0a19909efa343/res/values-kn/values-kn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,331,444,532,639,765,843,920,1011,1103,1198,1292,1393,1486,1581,1675,1766,1857,1938,2054,2164,2263,2376,2481,2595,2759,2859",
+                        "endColumns": "113,111,112,87,106,125,77,76,90,91,94,93,100,92,94,93,90,90,80,115,109,98,112,104,113,163,99,81",
+                        "endOffsets": "214,326,439,527,634,760,838,915,1006,1098,1193,1287,1388,1481,1576,1670,1761,1852,1933,2049,2159,2258,2371,2476,2590,2754,2854,2936"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,49",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,331,444,532,639,765,843,920,1011,1103,1198,1292,1393,1486,1581,1675,1766,1857,1938,2054,2164,2263,2376,2481,2595,2759,5765",
+                        "endColumns": "113,111,112,87,106,125,77,76,90,91,94,93,100,92,94,93,90,90,80,115,109,98,112,104,113,163,99,81",
+                        "endOffsets": "214,326,439,527,634,760,838,915,1006,1098,1193,1287,1388,1481,1576,1670,1761,1852,1933,2049,2159,2258,2371,2476,2590,2754,2854,5842"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/461cd59b15979c780d531e905c6aea70/res/values-kn/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -83,26 +49,60 @@
                     "to": {
                         "startLines": "37",
                         "startColumns": "4",
-                        "startOffsets": "4032",
+                        "startOffsets": "4025",
                         "endColumns": "204",
-                        "endOffsets": "4232"
+                        "endOffsets": "4225"
                     }
                 },
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-gcm-12.0.1.aar/faca66b371cb5d7f00d86ce98a0969fe/res/values-kn/values.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/res/values-kn/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "192",
+                        "startOffsets": "190",
                         "endColumns": "95",
-                        "endOffsets": "287"
+                        "endOffsets": "285"
                     },
                     "to": {
                         "startLines": "48",
                         "startColumns": "4",
-                        "startOffsets": "5672",
+                        "startOffsets": "5665",
                         "endColumns": "99",
-                        "endOffsets": "5767"
+                        "endOffsets": "5760"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/res/values-kn/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,354,556,687,800,1002,1129,1263,1387,1596,1707,1898,2031,2235,2418,2513,2602",
+                        "endColumns": "108,201,130,112,201,126,133,123,208,110,190,132,203,182,94,88,109",
+                        "endOffsets": "353,555,686,799,1001,1128,1262,1386,1595,1706,1897,2030,2234,2417,2512,2601,2711"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2859,2972,3174,3309,3426,3628,3759,3897,4230,4439,4554,4745,4882,5086,5273,5372,5465",
+                        "endColumns": "112,201,134,116,201,130,137,127,208,114,190,136,203,186,98,92,113",
+                        "endOffsets": "2967,3169,3304,3421,3623,3754,3892,4020,4434,4549,4740,4877,5081,5268,5367,5460,5574"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/preference-1.0.0.aar/067f17ec3bf674ca88a551053acc753b/res/values-kn/values-kn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "105,191,360,440",
+                        "endColumns": "85,168,79,76",
+                        "endOffsets": "186,355,435,512"
+                    },
+                    "to": {
+                        "startLines": "47,51,52,53",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "5579,5948,6117,6197",
+                        "endColumns": "85,168,79,76",
+                        "endOffsets": "5660,6112,6192,6269"
                     }
                 }
             ]

@@ -1,8 +1,8 @@
 package io.anyline.examples.ocr.apis;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
-import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ScanningConfigurationActivity;
 

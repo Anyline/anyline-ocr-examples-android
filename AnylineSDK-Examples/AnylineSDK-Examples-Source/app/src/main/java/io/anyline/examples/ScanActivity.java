@@ -1,10 +1,8 @@
 package io.anyline.examples;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,16 +14,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
-import at.nineyards.anyline.camera.AnylineView;
 import at.nineyards.anyline.models.AnylineImage;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.licenseplate.LicensePlateScanView;
-import io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity;
 import io.anyline.examples.ocr.feedback.FeedbackType;
 import io.anyline.examples.ocr.feedback.FeedbackView;
 import io.anyline.examples.scanviewresult.ScanViewResultActivity;
 import io.anyline.examples.util.Constant;
-import io.anyline.plugin.licenseplate.LicensePlateScanViewPlugin;
 import io.anyline.view.ScanView;
 
 

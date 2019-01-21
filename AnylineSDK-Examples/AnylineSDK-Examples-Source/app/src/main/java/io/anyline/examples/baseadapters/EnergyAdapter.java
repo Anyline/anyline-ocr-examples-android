@@ -1,12 +1,11 @@
 package io.anyline.examples.baseadapters;
 
 import android.content.Context;
-import android.support.v7.widget.GridLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import io.anyline.examples.R;
-import io.anyline.examples.baseadapters.BaseGridListAdapter;
 
 /**
  * Created by lorena on .12.17.

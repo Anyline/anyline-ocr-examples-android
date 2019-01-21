@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: io.intercom.android:intercom-sdk-base-5.1.6">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/jars/libs/repackaged_dependencies.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/intercom-sdk-base-5.1.6.aar/eaaa7a455e392ed4aeff2a89d4815ae9/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/jars/libs/repackaged_dependencies.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

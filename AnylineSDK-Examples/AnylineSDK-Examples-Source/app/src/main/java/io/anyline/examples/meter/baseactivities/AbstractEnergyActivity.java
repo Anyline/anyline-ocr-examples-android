@@ -1,23 +1,11 @@
 package io.anyline.examples.meter.baseactivities;
 
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Rect;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.Spanned;
-import android.text.style.AbsoluteSizeSpan;
-import android.text.style.BackgroundColorSpan;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.StyleSpan;
+import androidx.appcompat.app.AlertDialog;
+
 import android.util.Log;
 import android.util.SparseArray;
-import android.util.TypedValue;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -31,23 +19,12 @@ import java.util.HashMap;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.barcode.NativeBarcodeResultListener;
-import at.nineyards.anyline.modules.energy.EnergyResult;
-import at.nineyards.anyline.modules.energy.EnergyResultListener;
-import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
-import io.anyline.examples.dialog.SimpleAlertDialog;
-import io.anyline.examples.licenseplate.ScanLicensePlateActivity;
-import io.anyline.examples.ocr.ScanSerialNumberActivity;
-import io.anyline.examples.scanviewresult.ScanViewResultActivity;
-import io.anyline.examples.util.Constant;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.meter.MeterScanResult;
 import io.anyline.plugin.meter.MeterScanViewPlugin;
-import io.anyline.plugin.ocr.OcrScanResult;
-import io.anyline.plugin.ocr.OcrScanViewPlugin;
 import io.anyline.view.ScanView;
 
 /**

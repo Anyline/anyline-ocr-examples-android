@@ -1,16 +1,33 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lorena/Project/anyline-ocr-git/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6cf7c862a7e216ce9f29d17da84310a4/res/values-night-v8/values-night-v8.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0-alpha01.aar/5d375ebbb5b59819d2e0a19909efa343/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
                         "startOffsets": "55,125,209,293,389,491,593",
                         "endColumns": "69,83,83,95,101,101,93",
                         "endOffsets": "120,204,288,384,486,588,682"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/material-1.1.0-alpha02.aar/11acfe4d5e6e24dbf03bde08935209a4/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,143,245,347,461,581,701",
+                        "endColumns": "87,101,101,113,119,119,111",
+                        "endOffsets": "138,240,342,456,576,696,808"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "687,775,877,979,1093,1213,1333",
+                        "endColumns": "87,101,101,113,119,119,111",
+                        "endOffsets": "770,872,974,1088,1208,1328,1440"
                     }
                 }
             ]

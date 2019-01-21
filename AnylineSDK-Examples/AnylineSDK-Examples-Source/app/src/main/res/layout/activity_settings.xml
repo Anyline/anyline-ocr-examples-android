@@ -9,19 +9,19 @@
               tools:ignore="RtlHardcoded"
     >
 
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black_100"
         >
 
-        <android.support.design.widget.AppBarLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/contact.appbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
 
-            <android.support.design.widget.CollapsingToolbarLayout
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:id="@+id/toolbarLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -29,7 +29,7 @@
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
                 >
 
-                <android.support.v7.widget.Toolbar
+                <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
@@ -79,8 +79,8 @@
                     android:textSize="18sp"/>
 
 
-            </android.support.design.widget.CollapsingToolbarLayout>
-        </android.support.design.widget.AppBarLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
 
         <LinearLayout
@@ -99,5 +99,5 @@
                 tools:layout="@android:layout/preference_category"/>
         </LinearLayout>
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>

@@ -2,7 +2,7 @@ package io.anyline.examples.meterreadingprocesses.activities;
 
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.FragmentTransaction;
 
 import io.anyline.examples.R;
 import io.anyline.examples.baseactivities.BaseToolbarActivity;

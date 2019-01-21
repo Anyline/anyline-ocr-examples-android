@@ -4,8 +4,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
@@ -25,7 +25,6 @@ import java.io.InputStream;
 
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
-import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ScanningConfigurationActivity;
 

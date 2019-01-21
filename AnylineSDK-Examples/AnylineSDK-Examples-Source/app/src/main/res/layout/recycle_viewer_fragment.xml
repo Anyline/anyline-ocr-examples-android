@@ -6,7 +6,7 @@
                 android:background="@color/white"
                 android:gravity="center">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewer"
         android:layout_margin="2dp"
         android:layout_width="fill_parent"
@@ -15,6 +15,6 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
 
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

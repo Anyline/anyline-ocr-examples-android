@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.intercom:android-composer-gallery-2.0.0">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-composer-gallery-2.0.0.aar/7a506a3558d81b31c72b95ab1b6b9f75/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

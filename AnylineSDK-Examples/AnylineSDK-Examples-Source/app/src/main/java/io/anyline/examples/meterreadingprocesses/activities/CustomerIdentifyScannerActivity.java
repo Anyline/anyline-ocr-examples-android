@@ -4,8 +4,8 @@ package io.anyline.examples.meterreadingprocesses.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.AlertDialog;
 import android.view.View;
 
 import java.io.File;
@@ -15,8 +15,6 @@ import java.util.Date;
 import java.util.Locale;
 
 import at.nineyards.anyline.models.AnylineImage;
-import at.nineyards.anyline.modules.energy.EnergyResult;
-import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.database.DataBaseProcessesAdapter;
 import io.anyline.examples.meterreadingprocesses.fragments.CustomerFragment;
