@@ -1,7 +1,7 @@
-#Mon Jan 21 21:16:46 CET 2019
-base.0=/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dexMerger/debug/0
+#Mon Feb 25 21:33:52 CET 2019
+base.0=/home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dexMerger/debug/1
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dexMerger/debug/1
+base.1=/home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dexMerger/debug/0

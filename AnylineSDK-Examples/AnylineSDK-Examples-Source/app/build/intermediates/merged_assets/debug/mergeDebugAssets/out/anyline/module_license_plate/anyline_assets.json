@@ -1,7 +1,7 @@
 {
     "comment": "Auto generated file. Manual changes will be overwritten.",
     "immediateAssets": {
-        "anyline/module_license_plate/license_plates_combined.ale": "bd4a5c1a7fb6f2f1f596b42d209ee067"
+        "anyline/module_license_plate/license_plates_combined.ale": "6a8325369ee5608a661cad105ef15e56"
     },
     "lazyAssets": {
         "anyline/module_license_plate/tessdata/aut_nice.traineddata": "fdc7dea82be2f0612c8c7fc0ab612659",

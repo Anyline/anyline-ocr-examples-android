@@ -1,5 +1,5 @@
 Anyline, AnylineSDK
-Copyright (c) 2018 Anyline GmbH All rights reserved.
+Copyright (c) 2019 Anyline GmbH All rights reserved.
 
 Community Version User License Agreement
 
@@ -2118,3 +2118,4 @@ Except as set forth below: (i) the laws of California, U.S.A., excluding Califor
 If you are accepting the Terms on behalf of a United States federal government entity, then the following applies instead of the paragraph above: the laws of the United States of America, excluding its conflict of laws rules, will apply to any disputes arising out of or related to the Terms or the APIs. Solely to the extent permitted by United States Federal law: (i) the laws of the State of California (excluding California's conflict of laws rules) will apply in the absence of applicable federal law; and (ii) FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THE TERMS OR THE APIS, THE PARTIES CONSENT TO PERSONAL JURISDICTION IN, AND THE EXCLUSIVE VENUE OF, THE COURTS IN SANTA CLARA COUNTY, CALIFORNIA.
 
 If you are accepting the Terms on behalf of a United States city, county, or state government entity, then the following applies instead of the paragraph above: the parties agree to remain silent regarding governing law and venue.
+

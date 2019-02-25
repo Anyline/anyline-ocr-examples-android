@@ -1,28 +1,28 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
-INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
-INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
-MERGED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:2:1-22:12
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
+INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
+INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
+MERGED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:2:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/multidex-2.0.1.aar/9602b435d70afba890d50c5666fb9cf2/AndroidManifest.xml:17:1-22:12
 MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:2:1-13:12
 MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:2:1-52:12
-MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:2:1-85:12
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:2:1-85:12
 MERGED from [androidx.legacy:legacy-preference-v14:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/legacy-preference-v14-1.0.0.aar/745402f514a5e420bb0411348d7f0c3c/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.preference:preference:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/preference-1.0.0.aar/067f17ec3bf674ca88a551053acc753b/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.1.0-alpha02] /home/lorena/.gradle/caches/transforms-1/files-1.1/material-1.1.0-alpha02.aar/11acfe4d5e6e24dbf03bde08935209a4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0-alpha01] /home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0-alpha01.aar/5d375ebbb5b59819d2e0a19909efa343/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-vision:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-16.2.0.aar/882b2f110416f21903b219b3393b389a/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/d99ea9e7eef7b55c4a64ffa14accadc6/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/0456cc9f76110e1f78ea626225937054/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/81126d5ae914eeb68664f99d988e6528/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/98575d6226724d6086ab9f7c2872ae16/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/39f1c30660f45584d8340f44d7ede0aa/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/d58b906bf7ffb278984f9ffdf88ebf75/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/c4acd1e0dfc8d56f70bdbd613b58cee4/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/173958e22209479d1aa7c2ba016c012a/AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/a6dbfcd8d7319f86b20a6bd6ad7fbecd/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/8f9bcf0c94b6bfef2d212c866d6db9ce/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/461cd59b15979c780d531e905c6aea70/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/dd474cd86876fae702292f2065250a09/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/bcf6edc4489b4b5360a2e95bd39cbd08/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/c84c1b98748a5b502eb96df7d30fc1d8/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/e964d32a9097cbee58fe0f85aeb9e04f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/f419d6bd9392460dc30ba4de73d393d3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/3186b0a6d754cf1f5af7e1f2ad2e5b6e/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0-rc01] /home/lorena/.gradle/caches/transforms-1/files-1.1/legacy-support-v4-1.0.0-rc01.aar/885e129d2919320888c9d526f41f01ee/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media:media:1.0.0-rc01] /home/lorena/.gradle/caches/transforms-1/files-1.1/media-1.0.0-rc01.aar/f88ee6a58d19e5859598c7dd51567e4d/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0-alpha02] /home/lorena/.gradle/caches/transforms-1/files-1.1/fragment-1.1.0-alpha02.aar/d17eb86c94e377e7f7c0b0d2f045fe8a/AndroidManifest.xml:17:1-22:12
@@ -54,414 +54,414 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/lorena/.gradle/cach
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/76d36f377f9dae5925ef7410011731a4/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/7f5e95f3f70ae724171756bd179483d8/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/66337a13b8e312aede9d3a88411391b0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/d48bc20aa8c6db9ba52ecfb5acd8da6d/AndroidManifest.xml:2:1-12:12
-MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:2:1-19:12
-MERGED from [com.google.android:flexbox:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-flexbox-1.0.0.aar/ba5efe2e0ecf03518c8e075d762531ab/AndroidManifest.xml:17:1-27:12
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/565870a88290096fe060b9a105a0e318/AndroidManifest.xml:2:1-12:12
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:2:1-19:12
+MERGED from [com.google.android:flexbox:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-flexbox-1.0.0.aar/b6c03de17ea5b3ce58b4c4b8c76b3d22/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/15050583e18e7a58ad23f294011f7190/AndroidManifest.xml:2:1-11:12
-INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
-INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
+INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
+INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
 	package
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:3:5-34
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:3:5-34
 	android:versionName
-		INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
-		INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
+		INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
-		INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-262:12
+		INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.CAMERA
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:5-65
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:5-65
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:22-62
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:5:22-62
 uses-permission#android.permission.VIBRATE
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:5-66
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:5-66
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:22-63
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:22-63
 uses-permission#android.permission.INTERNET
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:5-67
-MERGED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:12:5-67
-MERGED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:12:5-67
-MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:10:5-67
-MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:10:5-67
-MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/173958e22209479d1aa7c2ba016c012a/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/173958e22209479d1aa7c2ba016c012a/AndroidManifest.xml:24:5-67
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:5-67
+MERGED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:12:5-67
+MERGED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:12:5-67
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:10:5-67
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/98575d6226724d6086ab9f7c2872ae16/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/98575d6226724d6086ab9f7c2872ae16/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/bcf6edc4489b4b5360a2e95bd39cbd08/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/bcf6edc4489b4b5360a2e95bd39cbd08/AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:22-64
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:22-64
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:5-80
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:5-80
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:22-77
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:22-77
 uses-permission#android.permission.SET_DEBUG_APP
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:5-88
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:5-88
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:22-69
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:22-69
 uses-permission#android.permission.MANAGE_DOCUMENTS
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:10:5-75
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:10:5-75
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:10:22-72
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:10:22-72
 application
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:12:5-260:19
-MERGED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:14:5-20:19
-MERGED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:14:5-20:19
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:12:5-260:19
+MERGED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:14:5-20:19
+MERGED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:14:5-20:19
 MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:10:5-11:19
 MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:10:5-11:19
 MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:14:5-50:19
 MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:14:5-50:19
-MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:12:5-83:19
-MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:12:5-83:19
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:12:5-83:19
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:12:5-83:19
 MERGED from [com.google.android.material:material:1.1.0-alpha02] /home/lorena/.gradle/caches/transforms-1/files-1.1/material-1.1.0-alpha02.aar/11acfe4d5e6e24dbf03bde08935209a4/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0-alpha02] /home/lorena/.gradle/caches/transforms-1/files-1.1/material-1.1.0-alpha02.aar/11acfe4d5e6e24dbf03bde08935209a4/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-vision:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-16.2.0.aar/882b2f110416f21903b219b3393b389a/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-vision:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-16.2.0.aar/882b2f110416f21903b219b3393b389a/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/d99ea9e7eef7b55c4a64ffa14accadc6/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/d99ea9e7eef7b55c4a64ffa14accadc6/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/0456cc9f76110e1f78ea626225937054/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/0456cc9f76110e1f78ea626225937054/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/c4acd1e0dfc8d56f70bdbd613b58cee4/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/c4acd1e0dfc8d56f70bdbd613b58cee4/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/173958e22209479d1aa7c2ba016c012a/AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/173958e22209479d1aa7c2ba016c012a/AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/a6dbfcd8d7319f86b20a6bd6ad7fbecd/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/a6dbfcd8d7319f86b20a6bd6ad7fbecd/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/8f9bcf0c94b6bfef2d212c866d6db9ce/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/8f9bcf0c94b6bfef2d212c866d6db9ce/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/461cd59b15979c780d531e905c6aea70/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/461cd59b15979c780d531e905c6aea70/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/81126d5ae914eeb68664f99d988e6528/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/81126d5ae914eeb68664f99d988e6528/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/98575d6226724d6086ab9f7c2872ae16/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/98575d6226724d6086ab9f7c2872ae16/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/39f1c30660f45584d8340f44d7ede0aa/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/39f1c30660f45584d8340f44d7ede0aa/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/dd474cd86876fae702292f2065250a09/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/dd474cd86876fae702292f2065250a09/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/bcf6edc4489b4b5360a2e95bd39cbd08/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/bcf6edc4489b4b5360a2e95bd39cbd08/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/c84c1b98748a5b502eb96df7d30fc1d8/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/c84c1b98748a5b502eb96df7d30fc1d8/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/e964d32a9097cbee58fe0f85aeb9e04f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/e964d32a9097cbee58fe0f85aeb9e04f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/f419d6bd9392460dc30ba4de73d393d3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/f419d6bd9392460dc30ba4de73d393d3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/3186b0a6d754cf1f5af7e1f2ad2e5b6e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/3186b0a6d754cf1f5af7e1f2ad2e5b6e/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0-alpha01] /home/lorena/.gradle/caches/transforms-1/files-1.1/core-1.1.0-alpha01.aar/6430132892807ee0b7a518d2f66e7155/AndroidManifest.xml:22:5-89
 MERGED from [androidx.core:core:1.1.0-alpha01] /home/lorena/.gradle/caches/transforms-1/files-1.1/core-1.1.0-alpha01.aar/6430132892807ee0b7a518d2f66e7155/AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] /home/lorena/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0-alpha01.aar/51ee41005f7e41f0db425c35f0eb4c6b/AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] /home/lorena/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0-alpha01.aar/51ee41005f7e41f0db425c35f0eb4c6b/AndroidManifest.xml:22:5-23:19
-MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/d48bc20aa8c6db9ba52ecfb5acd8da6d/AndroidManifest.xml:10:5-20
-MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/d48bc20aa8c6db9ba52ecfb5acd8da6d/AndroidManifest.xml:10:5-20
-MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:9:5-17:19
-MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:9:5-17:19
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/565870a88290096fe060b9a105a0e318/AndroidManifest.xml:10:5-20
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/565870a88290096fe060b9a105a0e318/AndroidManifest.xml:10:5-20
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:9:5-17:19
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:9:5-17:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/15050583e18e7a58ad23f294011f7190/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/15050583e18e7a58ad23f294011f7190/AndroidManifest.xml:9:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0-alpha01] /home/lorena/.gradle/caches/transforms-1/files-1.1/core-1.1.0-alpha01.aar/6430132892807ee0b7a518d2f66e7155/AndroidManifest.xml:22:18-86
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:16:9-41
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:16:9-41
 	android:largeHeap
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:14:9-33
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:14:9-33
 	android:icon
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:15:9-43
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:17:9-40
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:17:9-40
 activity#io.anyline.examples.MainActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:19:9-28:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:19:9-28:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:22:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:22:13-49
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:21:13-45
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:21:13-45
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:20:13-41
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:20:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:23:13-27:29
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:24:17-69
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:26:17-77
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:26:27-74
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:26:27-74
 activity#io.anyline.examples.meterreadingprocesses.activities.ResultActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:29:9-31:51
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:29:9-31:51
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:31:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:31:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:30:13-76
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:30:13-76
 activity#io.anyline.examples.meterreadingprocesses.activities.WorkOrdersActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:32:9-35:15
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:32:9-35:15
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:34:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:34:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:33:13-80
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:33:13-80
 activity#io.anyline.examples.meterreadingprocesses.activities.SelfReadingScannerActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:36:9-38:52
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:36:9-38:52
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:38:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:38:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:37:13-88
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:37:13-88
 activity#io.anyline.examples.meterreadingprocesses.activities.CustomerActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:39:9-41:52
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:39:9-41:52
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:41:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:41:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:40:13-78
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:40:13-78
 activity#io.anyline.examples.meterreadingprocesses.activities.CustomerIdentifyScannerActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:42:9-44:51
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:42:9-44:51
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:44:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:44:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:43:13-93
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:43:13-93
 activity#io.anyline.examples.meter.ScanDigitalEnergyMeterActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:46:9-54:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:46:9-54:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:50:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:50:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:49:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:49:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:48:13-56
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:48:13-56
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:47:13-65
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:47:13-65
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:51:13-53:68
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:51:13-53:68
 	android:value
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:53:17-65
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:53:17-65
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:52:17-63
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:52:17-63
 activity#io.anyline.examples.meter.ScanAutoAnalogDigitalMeterActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:55:9-63:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:55:9-63:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:59:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:59:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:58:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:58:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:57:13-68
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:57:13-68
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:56:13-69
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:56:13-69
 activity#io.anyline.examples.meter.ScanDialMeterActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:64:9-72:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:64:9-72:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:68:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:68:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:67:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:67:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:66:13-53
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:66:13-53
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:65:13-56
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:65:13-56
 activity#io.anyline.examples.meter.ScanEnergySerialNumberActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:73:9-81:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:73:9-81:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:77:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:77:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:76:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:76:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:75:13-63
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:75:13-63
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:74:13-65
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:74:13-65
 activity#io.anyline.examples.ocr.ScanSerialNumberActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:82:9-90:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:82:9-90:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:86:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:86:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:85:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:85:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:84:13-56
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:84:13-56
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:83:13-57
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:83:13-57
 activity#io.anyline.examples.ocr.ScanShippingContainerActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:91:9-99:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:91:9-99:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:95:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:95:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:94:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:94:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:93:13-61
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:93:13-61
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:92:13-62
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:92:13-62
 activity#io.anyline.examples.mrz.ScanMrzActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:100:9-108:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:100:9-108:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:104:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:104:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:103:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:103:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:102:13-46
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:102:13-46
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:101:13-48
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:101:13-48
 activity#io.anyline.examples.barcode.ScanBarcodeActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:109:9-117:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:109:9-117:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:113:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:113:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:112:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:112:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:111:13-50
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:111:13-50
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:110:13-56
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:110:13-56
 activity#io.anyline.examples.document.ScanDocumentActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:118:9-126:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:118:9-126:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:122:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:122:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:121:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:121:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:120:13-51
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:120:13-51
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:119:13-58
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:119:13-58
 activity#io.anyline.examples.ocr.ScanScrabbleActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:127:9-135:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:127:9-135:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:131:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:131:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:130:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:130:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:129:13-51
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:129:13-51
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:128:13-53
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:128:13-53
 activity#io.anyline.examples.licenseplate.ScanLicensePlateActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:136:9-144:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:136:9-144:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:140:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:140:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:139:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:139:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:138:13-56
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:138:13-56
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:137:13-66
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:137:13-66
 activity#io.anyline.examples.ocr.ScanBottlecapActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:145:9-153:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:145:9-153:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:149:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:149:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:148:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:148:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:147:13-52
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:147:13-52
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:146:13-54
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:146:13-54
 activity#io.anyline.examples.ocr.ScanRedBullCodeActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:154:9-162:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:154:9-162:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:158:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:158:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:157:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:157:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:156:13-50
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:156:13-50
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:155:13-56
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:155:13-56
 activity#io.anyline.examples.ocr.ScanIsbnActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:163:9-171:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:163:9-171:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:167:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:167:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:166:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:166:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:165:13-47
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:165:13-47
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:164:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:164:13-49
 activity#io.anyline.examples.ocr.ScanRecordActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:172:9-180:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:172:9-180:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:176:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:176:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:175:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:175:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:174:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:174:13-49
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:173:13-51
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:173:13-51
 activity#io.anyline.examples.ocr.ScanVoucherCodeActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:181:9-189:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:181:9-189:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:185:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:185:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:184:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:184:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:183:13-50
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:183:13-50
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:182:13-56
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:182:13-56
 activity#io.anyline.examples.ocr.ScanIbanActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:190:9-198:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:190:9-198:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:194:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:194:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:193:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:193:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:192:13-47
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:192:13-47
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:191:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:191:13-49
 activity#io.anyline.examples.mrz.ScanDrivingLicenseActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:199:9-207:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:199:9-207:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:203:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:203:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:202:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:202:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:201:13-58
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:201:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:200:13-59
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:200:13-59
 activity#io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:208:9-216:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:208:9-216:20
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:211:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:211:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:210:13-40
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:210:13-40
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:209:13-72
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:209:13-72
 activity#io.anyline.examples.scanviewresult.ScanViewResultActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:217:9-226:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:217:9-226:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:221:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:221:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:220:13-55
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:220:13-55
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:219:13-40
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:219:13-40
 	android:theme
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:222:13-58
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:222:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:218:13-66
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:218:13-66
 activity#io.anyline.examples.ocr.apis.AnagramActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:227:9-236:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:227:9-236:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:231:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:231:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:230:13-67
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:230:13-67
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:229:13-58
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:229:13-58
 	android:theme
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:232:13-58
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:232:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:228:13-53
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:228:13-53
 activity#io.anyline.examples.ocr.apis.IsbnActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:237:9-246:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:237:9-246:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:241:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:241:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:240:13-63
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:240:13-63
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:239:13-54
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:239:13-54
 	android:theme
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:242:13-58
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:242:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:238:13-50
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:238:13-50
 activity#io.anyline.examples.ocr.apis.RecordSearchActivity
-ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:247:9-256:20
+ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:247:9-256:20
 	android:screenOrientation
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:251:13-49
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:251:13-49
 	android:parentActivityName
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:250:13-65
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:250:13-65
 	android:label
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:249:13-56
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:249:13-56
 	android:theme
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:252:13-58
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:252:13-58
 	android:name
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:248:13-58
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:248:13-58
 uses-sdk
-INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-MERGED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:8:5-10:41
-MERGED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:8:5-10:41
+INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+MERGED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:8:5-10:41
+MERGED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:8:5-10:41
 MERGED from [androidx.multidex:multidex:2.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/multidex-2.0.1.aar/9602b435d70afba890d50c5666fb9cf2/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/multidex-2.0.1.aar/9602b435d70afba890d50c5666fb9cf2/AndroidManifest.xml:20:5-43
 MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:6:5-8:41
 MERGED from [io.intercom.android:intercom-sdk:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-5.1.6.aar/56a0b50c5a1927451e2f99cd62ed140b/AndroidManifest.xml:6:5-8:41
 MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:6:5-8:41
 MERGED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:6:5-8:41
-MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:6:5-8:41
-MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:6:5-8:41
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:6:5-8:41
+MERGED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.legacy:legacy-preference-v14:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/legacy-preference-v14-1.0.0.aar/745402f514a5e420bb0411348d7f0c3c/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-preference-v14:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/legacy-preference-v14-1.0.0.aar/745402f514a5e420bb0411348d7f0c3c/AndroidManifest.xml:20:5-44
 MERGED from [androidx.preference:preference:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/preference-1.0.0.aar/067f17ec3bf674ca88a551053acc753b/AndroidManifest.xml:20:5-44
@@ -472,26 +472,26 @@ MERGED from [androidx.appcompat:appcompat:1.1.0-alpha01] /home/lorena/.gradle/ca
 MERGED from [androidx.appcompat:appcompat:1.1.0-alpha01] /home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0-alpha01.aar/5d375ebbb5b59819d2e0a19909efa343/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-vision:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-16.2.0.aar/882b2f110416f21903b219b3393b389a/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-vision:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-vision-16.2.0.aar/882b2f110416f21903b219b3393b389a/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/d99ea9e7eef7b55c4a64ffa14accadc6/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/d99ea9e7eef7b55c4a64ffa14accadc6/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/0456cc9f76110e1f78ea626225937054/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/0456cc9f76110e1f78ea626225937054/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/81126d5ae914eeb68664f99d988e6528/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:16.2.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-vision-common-16.2.0.aar/81126d5ae914eeb68664f99d988e6528/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/98575d6226724d6086ab9f7c2872ae16/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/98575d6226724d6086ab9f7c2872ae16/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/39f1c30660f45584d8340f44d7ede0aa/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-clearcut-16.0.0.aar/39f1c30660f45584d8340f44d7ede0aa/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/d58b906bf7ffb278984f9ffdf88ebf75/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/d58b906bf7ffb278984f9ffdf88ebf75/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/c4acd1e0dfc8d56f70bdbd613b58cee4/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/c4acd1e0dfc8d56f70bdbd613b58cee4/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/173958e22209479d1aa7c2ba016c012a/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/173958e22209479d1aa7c2ba016c012a/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/a6dbfcd8d7319f86b20a6bd6ad7fbecd/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/a6dbfcd8d7319f86b20a6bd6ad7fbecd/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/8f9bcf0c94b6bfef2d212c866d6db9ce/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/8f9bcf0c94b6bfef2d212c866d6db9ce/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/461cd59b15979c780d531e905c6aea70/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/461cd59b15979c780d531e905c6aea70/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/dd474cd86876fae702292f2065250a09/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-phenotype-16.0.0.aar/dd474cd86876fae702292f2065250a09/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/bcf6edc4489b4b5360a2e95bd39cbd08/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/bcf6edc4489b4b5360a2e95bd39cbd08/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/c84c1b98748a5b502eb96df7d30fc1d8/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/c84c1b98748a5b502eb96df7d30fc1d8/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/e964d32a9097cbee58fe0f85aeb9e04f/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/e964d32a9097cbee58fe0f85aeb9e04f/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/f419d6bd9392460dc30ba4de73d393d3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-stats-16.0.1.aar/f419d6bd9392460dc30ba4de73d393d3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/3186b0a6d754cf1f5af7e1f2ad2e5b6e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/3186b0a6d754cf1f5af7e1f2ad2e5b6e/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0-rc01] /home/lorena/.gradle/caches/transforms-1/files-1.1/legacy-support-v4-1.0.0-rc01.aar/885e129d2919320888c9d526f41f01ee/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0-rc01] /home/lorena/.gradle/caches/transforms-1/files-1.1/legacy-support-v4-1.0.0-rc01.aar/885e129d2919320888c9d526f41f01ee/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0-rc01] /home/lorena/.gradle/caches/transforms-1/files-1.1/media-1.0.0-rc01.aar/f88ee6a58d19e5859598c7dd51567e4d/AndroidManifest.xml:20:5-44
@@ -554,40 +554,40 @@ MERGED from [androidx.print:print:1.0.0] /home/lorena/.gradle/caches/transforms-
 MERGED from [androidx.print:print:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/7f5e95f3f70ae724171756bd179483d8/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/66337a13b8e312aede9d3a88411391b0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/66337a13b8e312aede9d3a88411391b0/AndroidManifest.xml:20:5-44
-MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/d48bc20aa8c6db9ba52ecfb5acd8da6d/AndroidManifest.xml:8:5-44
-MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/d48bc20aa8c6db9ba52ecfb5acd8da6d/AndroidManifest.xml:8:5-44
-MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:7:5-44
-MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:7:5-44
-MERGED from [com.google.android:flexbox:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-flexbox-1.0.0.aar/ba5efe2e0ecf03518c8e075d762531ab/AndroidManifest.xml:23:5-25:41
-MERGED from [com.google.android:flexbox:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-flexbox-1.0.0.aar/ba5efe2e0ecf03518c8e075d762531ab/AndroidManifest.xml:23:5-25:41
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/565870a88290096fe060b9a105a0e318/AndroidManifest.xml:8:5-44
+MERGED from [com.intercom:android-composer:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/565870a88290096fe060b9a105a0e318/AndroidManifest.xml:8:5-44
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:7:5-44
+MERGED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:7:5-44
+MERGED from [com.google.android:flexbox:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-flexbox-1.0.0.aar/b6c03de17ea5b3ce58b4c4b8c76b3d22/AndroidManifest.xml:23:5-25:41
+MERGED from [com.google.android:flexbox:1.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-flexbox-1.0.0.aar/b6c03de17ea5b3ce58b4c4b8c76b3d22/AndroidManifest.xml:23:5-25:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/15050583e18e7a58ad23f294011f7190/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /home/lorena/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/15050583e18e7a58ad23f294011f7190/AndroidManifest.xml:5:5-7:41
-INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		ADDED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
-		INJECTED from /home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
 meta-data#com.google.android.gms.vision.DEPENDENCIES
-ADDED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:17:9-19:39
+ADDED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:17:9-19:39
 	android:value
-		ADDED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:19:13-36
+		ADDED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from [io.anyline:anylinesdk:7] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-7.aar/dabc63f0a5cf2843b8cf1f50d4d9d472/AndroidManifest.xml:18:13-70
+		ADDED from [io.anyline:anylinesdk:8] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-anylinesdk-8.aar/db084748a6de99ad4af05a63a7f927b7/AndroidManifest.xml:18:13-70
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:11:5-68
 	android:name
 		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:11:22-65
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:12:5-82
-MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/AndroidManifest.xml:23:5-82
-MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/8661f49e3179912da50de563f005702f/AndroidManifest.xml:23:5-82
-MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/173958e22209479d1aa7c2ba016c012a/AndroidManifest.xml:23:5-82
-MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/173958e22209479d1aa7c2ba016c012a/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/98575d6226724d6086ab9f7c2872ae16/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-gcm:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-gcm-16.0.0.aar/98575d6226724d6086ab9f7c2872ae16/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/bcf6edc4489b4b5360a2e95bd39cbd08/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:16.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-iid-16.0.0.aar/bcf6edc4489b4b5360a2e95bd39cbd08/AndroidManifest.xml:23:5-82
 	android:name
 		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:12:22-79
 receiver#com.google.android.gms.gcm.GcmReceiver
@@ -636,165 +636,165 @@ ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/cac
 		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:43:25-77
 meta-data#com.google.android.gms.version
 ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:47:9-49:69
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/461cd59b15979c780d531e905c6aea70/AndroidManifest.xml:23:9-25:69
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/461cd59b15979c780d531e905c6aea70/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/3186b0a6d754cf1f5af7e1f2ad2e5b6e/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/3186b0a6d754cf1f5af7e1f2ad2e5b6e/AndroidManifest.xml:23:9-25:69
 	android:value
 		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:49:13-66
 	android:name
 		ADDED from [io.intercom.android:intercom-sdk-gcm:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/intercom-sdk-gcm-5.1.6.aar/026240e4aa1a142a63102a8cf85ac771/AndroidManifest.xml:48:13-58
 activity#io.intercom.android.sdk.activities.IntercomMessengerActivity
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:13:9-19:73
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:13:9-19:73
 	android:launchMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:17:13-43
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:17:13-43
 	android:windowSoftInputMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:19:13-70
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:19:13-70
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:16:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:16:13-37
 	android:configChanges
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:15:13-59
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:15:13-59
 	android:theme
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:18:13-55
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:18:13-55
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:14:13-88
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:14:13-88
 activity#io.intercom.android.sdk.lightbox.LightBoxActivity
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:20:9-25:73
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:20:9-25:73
 	android:windowSoftInputMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:25:13-70
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:25:13-70
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:23:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:23:13-37
 	android:configChanges
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:22:13-59
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:22:13-59
 	android:theme
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:24:13-58
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:24:13-58
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:21:13-77
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:21:13-77
 activity#io.intercom.android.sdk.activities.IntercomArticleActivity
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:26:9-31:57
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:26:9-31:57
 	android:launchMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:29:13-43
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:29:13-43
 	android:windowSoftInputMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:31:13-54
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:31:13-54
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:28:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:28:13-37
 	android:theme
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:30:13-63
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:30:13-63
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:27:13-86
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:27:13-86
 activity#io.intercom.android.sdk.activities.IntercomHelpCenterActivity
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:32:9-38:57
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:32:9-38:57
 	android:launchMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:36:13-43
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:36:13-43
 	android:windowSoftInputMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:38:13-54
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:38:13-54
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:35:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:35:13-37
 	android:configChanges
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:34:13-59
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:34:13-59
 	android:theme
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:37:13-63
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:37:13-63
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:33:13-89
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:33:13-89
 activity#io.intercom.android.sdk.activities.IntercomPostActivity
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:39:9-45:57
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:39:9-45:57
 	android:launchMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:43:13-44
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:43:13-44
 	android:windowSoftInputMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:45:13-54
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:45:13-54
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:42:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:42:13-37
 	android:configChanges
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:41:13-59
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:41:13-59
 	android:theme
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:44:13-54
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:44:13-54
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:40:13-83
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:40:13-83
 activity#io.intercom.android.sdk.activities.IntercomNoteActivity
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:46:9-52:73
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:46:9-52:73
 	android:launchMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:50:13-44
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:50:13-44
 	android:windowSoftInputMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:52:13-70
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:52:13-70
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:49:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:49:13-37
 	android:configChanges
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:48:13-59
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:48:13-59
 	android:theme
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:51:13-54
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:51:13-54
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:47:13-83
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:47:13-83
 activity#io.intercom.android.sdk.activities.IntercomSheetActivity
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:53:9-59:57
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:53:9-59:57
 	android:launchMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:57:13-43
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:57:13-43
 	android:windowSoftInputMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:59:13-54
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:59:13-54
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:56:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:56:13-37
 	android:configChanges
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:55:13-59
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:55:13-59
 	android:theme
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:58:13-63
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:58:13-63
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:54:13-84
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:54:13-84
 activity#io.intercom.android.sdk.activities.IntercomVideoActivity
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:60:9-66:57
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:60:9-66:57
 	android:launchMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:64:13-43
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:64:13-43
 	android:windowSoftInputMode
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:66:13-54
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:66:13-54
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:63:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:63:13-37
 	android:configChanges
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:62:13-59
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:62:13-59
 	android:theme
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:65:13-55
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:65:13-55
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:61:13-84
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:61:13-84
 receiver#io.intercom.android.sdk.push.IntercomPushBroadcastReceiver
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:68:9-77:20
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:68:9-77:20
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:70:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:70:13-37
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:69:13-86
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:69:13-86
 intent-filter#action:name:io.intercom.android.sdk.INTERCOM_PUSH_OPENED
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:71:13-73:29
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:71:13-73:29
 action#io.intercom.android.sdk.INTERCOM_PUSH_OPENED
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:72:17-87
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:72:17-87
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:72:25-84
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:72:25-84
 intent-filter#action:name:io.intercom.android.sdk.INTERCOM_PUSH_DISMISSED
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:74:13-76:29
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:74:13-76:29
 action#io.intercom.android.sdk.INTERCOM_PUSH_DISMISSED
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:75:17-90
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:75:17-90
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:75:25-87
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:75:25-87
 provider#io.intercom.android.sdk.IntercomInitializeContentProvider
-ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:79:9-82:40
+ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:79:9-82:40
 	android:authorities
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:81:13-85
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:81:13-85
 	android:exported
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:82:13-37
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:82:13-37
 	android:name
-		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/AndroidManifest.xml:80:13-85
+		ADDED from [io.intercom.android:intercom-sdk-base:5.1.6] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/AndroidManifest.xml:80:13-85
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/c84c1b98748a5b502eb96df7d30fc1d8/AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/c84c1b98748a5b502eb96df7d30fc1d8/AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/c84c1b98748a5b502eb96df7d30fc1d8/AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/66df4760f0f795c9931aae7c764a07d6/AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/c84c1b98748a5b502eb96df7d30fc1d8/AndroidManifest.xml:24:13-79
 activity#com.intercom.input.gallery.GalleryInputFullScreenActivity
-ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:10:9-12:74
+ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:10:9-12:74
 	android:theme
-		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:12:13-71
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:12:13-71
 	android:name
-		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:11:13-85
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:11:13-85
 activity#com.intercom.input.gallery.GalleryLightBoxActivity
-ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:13:9-16:74
+ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:13:9-16:74
 	android:configChanges
-		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:15:13-80
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:15:13-80
 	android:theme
-		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:16:13-71
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:16:13-71
 	android:name
-		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/AndroidManifest.xml:14:13-78
+		ADDED from [com.intercom:android-composer-gallery:2.0.0] /home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/AndroidManifest.xml:14:13-78

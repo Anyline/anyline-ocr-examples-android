@@ -1,14 +1,14 @@
 {
     "comment": "Auto generated file. Manual changes will be overwritten.",
     "immediateAssets": {
-        "anyline/module_id/anyline_austrian_driving_license.ale": "0e2951b896117f53076c96c342dd6706",
-        "anyline/module_id/anyline_driving_license.ale": "8515f68ce603d8db3251bdce3118f2c8",
-        "anyline/module_id/mrz_scanning.ale": "ef3c20690251b0dc000e5dc78d3bf8dd",
-        "anyline/module_id/trained_models/DL.any": "76710f7479c3019ecaeaa81654681527",
+        "anyline/module_id/anyline_austrian_driving_license.ale": "03708aed6e410484991cbadc8388ccea",
+        "anyline/module_id/anyline_driving_license.ale": "0083e661d5e03d8219247b0536ff9323",
+        "anyline/module_id/mrz_scanning.ale": "1ea4788e46b137daa75d42f205769cfa",
+        "anyline/module_id/trained_models/DL.any": "113ba9958260ea423e3ae60b49a3f689",
         "anyline/module_id/trained_models/DL_2.any": "5bb32272a5865bbca0d1517f2a97bac9",
-        "anyline/module_id/trained_models/DL_AT.any": "1d90441c78d511242abbc60ae808e904",
-        "anyline/module_id/trained_models/USNr.any": "b0ea75132fb647f375ff0d5a05c60093",
-        "anyline/module_id/trained_models/mrz_retrain3_17500.enc": "29e09467e390405b48913d4a2397c971"
+        "anyline/module_id/trained_models/DL_AT.any": "809d973c22c304ca71a85a4572ad01bf",
+        "anyline/module_id/trained_models/USNr.any": "9b4ad56ea9eeb31efcbf82c5f3e0b69e",
+        "anyline/module_id/trained_models/mrz_retrain3_17500.any": "b763251c4d852e46ddaeee6bc2cf42fa"
     },
     "lazyAssets": {
         "anyline/module_id/tessdata/deu.traineddata": "2d5190b9b62e28fa6d17b728ca195776",

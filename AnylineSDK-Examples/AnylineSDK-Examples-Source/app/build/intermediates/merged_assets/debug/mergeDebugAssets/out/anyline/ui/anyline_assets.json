@@ -1,7 +1,8 @@
 {
     "comment": "Auto generated file. Manual changes will be overwritten.",
     "immediateAssets": {
-        
+        "anyline/ui/asset-manifest.json": "f07ffc952c5ba9e51c44533197146656",
+        "anyline/ui/manifest.json": "43b821924d90c54beab5751bbe2623d5"
     },
     "lazyAssets": {
         

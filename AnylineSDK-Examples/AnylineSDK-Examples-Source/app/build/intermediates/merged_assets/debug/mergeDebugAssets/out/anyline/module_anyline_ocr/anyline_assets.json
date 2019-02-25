@@ -1,16 +1,17 @@
 {
     "comment": "Auto generated file. Manual changes will be overwritten.",
     "immediateAssets": {
-        "anyline/module_anyline_ocr/anyline_ocr_auto.ale": "07ed1eb6d374ac10dbfd6674367df30c",
-        "anyline/module_anyline_ocr/anyline_ocr_auto_any.ale": "72e23b2496f56b0c7977557fb06f91ef",
-        "anyline/module_anyline_ocr/anyline_ocr_grid.ale": "dcd116dddbfa9e5997c29e549979a2f1",
-        "anyline/module_anyline_ocr/anyline_ocr_grid_any.ale": "5e7ca717cf6a5222a26bf95e55745913",
-        "anyline/module_anyline_ocr/anyline_ocr_line.ale": "abde0bc27863428e49042fdf017e8648",
-        "anyline/module_anyline_ocr/anyline_ocr_line_any.ale": "12592dfff253829fa5c88f3b9688a3a8",
-        "anyline/module_anyline_ocr/container_scanner.ale": "9dfe5c4d141c263edeb1fb9dcc366247",
-        "anyline/module_anyline_ocr/trained_models/USNr.any": "b0ea75132fb647f375ff0d5a05c60093",
-        "anyline/module_anyline_ocr/trained_models/VIN.any": "8bf4a9635068a90037ddd50df0af3a20",
-        "anyline/module_anyline_ocr/vin.ale": "7c9eb95bcbebf95f8caee8da408fbed7"
+        "anyline/module_anyline_ocr/anyline_ocr_auto.ale": "4d30b3c8226d2c648edc413dd15dfe8b",
+        "anyline/module_anyline_ocr/anyline_ocr_auto_any.ale": "4e8b3491dcd7d950b023a366571ba709",
+        "anyline/module_anyline_ocr/anyline_ocr_grid.ale": "e4427f4a2392da541caa5c3f57d03466",
+        "anyline/module_anyline_ocr/anyline_ocr_grid_any.ale": "d91402fd8f374b760dd143a24f29b0d8",
+        "anyline/module_anyline_ocr/anyline_ocr_line.ale": "08771b3425c603c3a1138d9a4a5dcd0e",
+        "anyline/module_anyline_ocr/anyline_ocr_line_any.ale": "e9de04a76a2b36e3d2e77d859041c80a",
+        "anyline/module_anyline_ocr/container_scanner.ale": "f7aace9c3b016bd356e7391fdd625ac8",
+        "anyline/module_anyline_ocr/cow_tag_scanner.ale": "3df3d4b87cb0a88a8880783bada03ea7",
+        "anyline/module_anyline_ocr/trained_models/USNr.any": "9b4ad56ea9eeb31efcbf82c5f3e0b69e",
+        "anyline/module_anyline_ocr/trained_models/VIN.any": "9aef3ed4ee9303f8da6eb1da69a041e4",
+        "anyline/module_anyline_ocr/vin.ale": "6c61839d6f9686720bf38c3d3be87646"
     },
     "lazyAssets": {
         

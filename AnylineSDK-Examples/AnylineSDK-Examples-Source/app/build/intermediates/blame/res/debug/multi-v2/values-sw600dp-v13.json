@@ -1,25 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/565870a88290096fe060b9a105a0e318/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,105",
-                        "endLines": "2,5",
-                        "endColumns": "49,11",
-                        "endOffsets": "100,223"
-                    },
-                    "to": {
-                        "startLines": "3,24",
-                        "startColumns": "4,4",
-                        "startOffsets": "143,1489",
-                        "endLines": "3,26",
-                        "endColumns": "49,11",
-                        "endOffsets": "188,1607"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "87",
+                        "endOffsets": "138"
                     }
                 },
                 {
@@ -42,6 +33,25 @@
                     }
                 },
                 {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,105",
+                        "endLines": "2,5",
+                        "endColumns": "49,11",
+                        "endOffsets": "100,223"
+                    },
+                    "to": {
+                        "startLines": "3,24",
+                        "startColumns": "4,4",
+                        "startOffsets": "143,1489",
+                        "endLines": "3,26",
+                        "endColumns": "49,11",
+                        "endOffsets": "188,1607"
+                    }
+                },
+                {
                     "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0-alpha01.aar/5d375ebbb5b59819d2e0a19909efa343/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -56,16 +66,6 @@
                         "startOffsets": "193,262,331,401,475,551,610,681",
                         "endColumns": "68,68,69,73,75,58,70,67",
                         "endOffsets": "257,326,396,470,546,605,676,744"
-                    }
-                },
-                {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-2.0.0.aar/d48bc20aa8c6db9ba52ecfb5acd8da6d/res/values-sw600dp-v13/values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "87",
-                        "endOffsets": "138"
                     }
                 }
             ]

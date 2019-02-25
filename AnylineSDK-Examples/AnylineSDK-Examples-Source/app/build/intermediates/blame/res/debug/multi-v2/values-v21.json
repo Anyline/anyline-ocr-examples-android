@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/res/values-v21/values-v21.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,22 +21,22 @@
                     }
                 },
                 {
-                    "source": "/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res/values-v21/attrs.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/res/values-v21/values-v21.xml",
                     "from": {
-                        "startLines": "17,6,55,11,50,19,45",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "639,277,2598,488,2426,696,2256",
-                        "endLines": "17,9,61,13,52,42,47",
-                        "endColumns": "55,24,24,24,24,24,24",
-                        "endOffsets": "690,482,2955,599,2551,2209,2383"
+                        "startLines": "2,16,21",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "100,947,1256",
+                        "endLines": "15,20,24",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "942,1251,1442"
                     },
                     "to": {
-                        "startLines": "2,5,9,16,19,22,46",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "100,326,534,896,1011,1141,2649",
-                        "endLines": "2,8,15,18,21,45,48",
-                        "endColumns": "54,24,24,24,24,24,24",
-                        "endOffsets": "150,529,891,1006,1136,2644,2776"
+                        "startLines": "273,375,380",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "19671,26103,26412",
+                        "endLines": "286,379,383",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "20513,26407,26598"
                     }
                 },
                 {
@@ -59,25 +59,6 @@
                     }
                 },
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/res/values-v21/values-v21.xml",
-                    "from": {
-                        "startLines": "2,16,21",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "100,947,1256",
-                        "endLines": "15,20,24",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "942,1251,1442"
-                    },
-                    "to": {
-                        "startLines": "273,375,380",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "19671,26103,26412",
-                        "endLines": "286,379,383",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "20513,26407,26598"
-                    }
-                },
-                {
                     "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/media-1.0.0-rc01.aar/f88ee6a58d19e5859598c7dd51567e4d/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
@@ -94,6 +75,25 @@
                         "endLines": "329,332,336,340",
                         "endColumns": "12,12,12,12",
                         "endOffsets": "23272,23435,23729,24024"
+                    }
+                },
+                {
+                    "source": "/home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res/values-v21/attrs.xml",
+                    "from": {
+                        "startLines": "17,6,55,11,50,19,45",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "639,277,2598,488,2426,696,2256",
+                        "endLines": "17,9,61,13,52,42,47",
+                        "endColumns": "55,24,24,24,24,24,24",
+                        "endOffsets": "690,482,2955,599,2551,2209,2383"
+                    },
+                    "to": {
+                        "startLines": "2,5,9,16,19,22,46",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "100,326,534,896,1011,1141,2649",
+                        "endLines": "2,8,15,18,21,45,48",
+                        "endColumns": "54,24,24,24,24,24,24",
+                        "endOffsets": "150,529,891,1006,1136,2644,2776"
                     }
                 },
                 {

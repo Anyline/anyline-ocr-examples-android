@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml",
+            "outputFile": "/home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml",
             "map": [
                 {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/7f3b49f9bb27e80e6e405f46ddffa0bc/res/values-v19/values-v19.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,127",
-                        "endColumns": "71,79",
-                        "endOffsets": "122,202"
-                    },
-                    "to": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,172",
-                        "endColumns": "71,79",
-                        "endOffsets": "167,247"
-                    }
-                },
-                {
-                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/223424b9a2589d79f892fd348e12b314/res/values-v19/values-v19.xml",
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-intercom-sdk-base-5.1.6.aar/892bcb68e2f22bdecc0c8551b0aadb95/res/values-v19/values-v19.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -37,6 +20,23 @@
                         "endLines": "16",
                         "endColumns": "12",
                         "endOffsets": "1009"
+                    }
+                },
+                {
+                    "source": "/home/lorena/.gradle/caches/transforms-1/files-1.1/jetified-android-composer-gallery-2.0.0.aar/b41807e520a550d15958504f2313da4a/res/values-v19/values-v19.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,127",
+                        "endColumns": "71,79",
+                        "endOffsets": "122,202"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,172",
+                        "endColumns": "71,79",
+                        "endOffsets": "167,247"
                     }
                 }
             ]

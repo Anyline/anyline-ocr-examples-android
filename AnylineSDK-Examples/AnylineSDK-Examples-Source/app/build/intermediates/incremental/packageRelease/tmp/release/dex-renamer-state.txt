@@ -1,4 +1,0 @@
-#Mon Jan 21 21:14:05 CET 2019
-base.0=/home/lorena/Desktop/RELEASE_7/bundle/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
