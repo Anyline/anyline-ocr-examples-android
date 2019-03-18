@@ -9,6 +9,7 @@
 
 package io.anyline.examples.mrz;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.core.exception_error_codes;
+import at.nineyards.anyline.models.AnylineImage;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import at.nineyards.anyline.modules.mrz.Identification;
 import io.anyline.examples.R;
@@ -56,6 +58,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 		mrzScanView = (ScanView) findViewById(R.id.scan_view);
 		MrzConfig mrzConfig = new MrzConfig();
 		mrzConfig.setStrictMode(false);
+		mrzConfig.enableFaceDetection(true);
 
 		mrzScanView.setScanConfig("mrz_view_config.json");
 		//init the scan view
@@ -65,14 +68,14 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 			@Override
 			public void onResult(ScanResult<ID> idScanResult) {
 				Identification identification = (Identification) idScanResult.getResult();
-				identification.toJSONObject();
-
+				Bitmap currentBitmap = identification.getFaceImage();
+				AnylineImage newImage = new AnylineImage(currentBitmap);
 				//set the path of the mrz Image
 				String path = setupImagePath(idScanResult.getCutoutImage());
+				String facePath = setupImagePath(newImage);
 
+				startScanResultIntent(getResources().getString(R.string.title_mrz), getIdentificationResult(identification), path, facePath);
 
-
-				startScanResultIntent(getResources().getString(R.string.title_mrz), getIdentificationResult(identification), path);
 				setupScanProcessView(ScanMrzActivity.this, idScanResult, getScanModule());
 			}
 

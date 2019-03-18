@@ -19,6 +19,7 @@
 
     <string-array name="example_others_names">
         <item>Others</item>
+        <item>@string/title_cowtag</item>
         <item>@string/iban</item>
         <item>@string/bottlecap</item>
         <item>@string/red_bull_code</item>
@@ -32,6 +33,7 @@
 
     <string-array name="example_others_classes" translatable="false">
         <item>HEADER</item>
+        <item>io.anyline.examples.ocr.ScanCowtagActivity</item>
         <item>io.anyline.examples.ocr.ScanIbanActivity</item>
         <item>io.anyline.examples.ocr.ScanBottlecapActivity</item>
         <item>io.anyline.examples.ocr.ScanRedBullCodeActivity</item>
@@ -41,6 +43,7 @@
         <item>io.anyline.examples.ocr.ScanIsbnActivity</item>
         <item>io.anyline.examples.barcode.ScanBarcodeActivity</item>
         <item>io.anyline.examples.document.ScanDocumentActivity</item>
+
     </string-array>
 
     <string-array name="example_energy_names">
@@ -84,12 +87,16 @@
         <item>@string/category_identity_documents</item>
         <item>@string/mrz</item>
         <item>@string/title_driving_license</item>
+        <item>@string/title_german_id_front</item>
+        <item>@string/title_barcode_PDF417</item>
     </string-array>
 
     <string-array name="example_identity_documents_classes" translatable="false">
         <item>HEADER</item>
         <item>io.anyline.examples.mrz.ScanMrzActivity</item>
         <item>io.anyline.examples.mrz.ScanDrivingLicenseActivity</item>
+        <item>io.anyline.examples.mrz.ScanGermanIdFrontActivity</item>
+        <item>io.anyline.examples.mrz.ScanBarcodePDF417Activity</item>
     </string-array>
 
 </resources>

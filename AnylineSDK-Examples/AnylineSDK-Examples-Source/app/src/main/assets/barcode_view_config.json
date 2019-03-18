@@ -18,9 +18,9 @@
         "width": 100,
         "height": 80
       },
-      "strokeWidth": 4,
+      "strokeWidth": 2,
       "cornerRadius": 10,
-      "strokeColor": "000000",
+      "strokeColor": "FFFFFF",
       "outerColor": "000000",
       "outerAlpha": 0.3,
       "feedbackStrokeColor": "0099FF"
@@ -28,13 +28,11 @@
     "cancelOnResult": false,
     "scanFeedback": {
       "style": "rect",
-      "strokeWidth": 2,
       "strokeColor": "0099FF",
-      "fillColor": "220099FF",
-      "cornerRadius": 10,
+      "fillColor" : "220099FF",
       "beepOnResult": true,
       "vibrateOnResult": true,
-      "blinkAnimationOnResult": true
+      "strokeWidth": 2
     }
   }
 }

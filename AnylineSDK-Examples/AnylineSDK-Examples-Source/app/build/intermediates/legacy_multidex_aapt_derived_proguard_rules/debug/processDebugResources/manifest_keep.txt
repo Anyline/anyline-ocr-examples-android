@@ -1,2 +1,0 @@
-# Referenced at /home/lorena/Desktop/RELEASES/release_8/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:22
--keep class androidx.multidex.MultiDexApplication { <init>(...); }

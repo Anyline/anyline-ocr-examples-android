@@ -164,18 +164,19 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
 
     protected String setupImagePath(AnylineImage image){
         String imagePath = "";
+        long time= System.currentTimeMillis();
         try {
             if(this.getExternalFilesDir(null) != null) {
 
                 imagePath = this
                         .getExternalFilesDir(null)
-                        .toString() + "/results/" + "mrz_image";
+                        .toString() + "/results/" + "mrz_image" + time;
 
             }else if(this.getFilesDir() != null){
 
                 imagePath = this
                         .getFilesDir()
-                        .toString() + "/results/" + "mrz_image";
+                        .toString() + "/results/" + "mrz_image" + time;
 
             }
             File fullFile = new File(imagePath);
@@ -190,13 +191,19 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
         return imagePath;
     }
 
-    protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String path){
-       // String path = setupImagePath(anylineOcrResult.getCutoutImage());
+    protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String... path){
+        // String path = setupImagePath(anylineOcrResult.getCutoutImage());
 
         Intent i = new Intent(getBaseContext(), ScanViewResultActivity.class);
         i.putExtra(Constant.SCAN_MODULE, scanMode);
         i.putExtra(Constant.SCAN_RESULT_DATA, scanResult);
-        i.putExtra(Constant.SCAN_FULL_PICTURE_PATH, path);
+        if(path.length == 2){
+            i.putExtra(Constant.SCAN_FULL_PICTURE_PATH, path[0]);
+            i.putExtra(Constant.SCAN_FACE_PICTURE_PATH, path[1]);
+        }else if(path.length == 1){
+            i.putExtra(Constant.SCAN_FULL_PICTURE_PATH, path[0]);
+        }
+
         overridePendingTransition(R.anim.activity_open_translate, R.anim.fade_out);
         startActivity(i);
     }

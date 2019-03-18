@@ -34,6 +34,7 @@ public class ScanModuleEnum {
         ENERGY_DIGITAL_METER,
         ENERGY_DIAL_METER,
         DRIVER_LICENSE,
+        GERMAN_ID_FRONT,
         VEHICLE_IDENTIFICATION_NUMBER,
         SHIPPING_CONTAINER
     }

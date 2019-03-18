@@ -21,6 +21,7 @@ import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.barcode.BarcodeScanPlugin;
 import io.anyline.plugin.barcode.BarcodeScanResult;
 import io.anyline.plugin.barcode.BarcodeScanViewPlugin;
 import io.anyline.view.ScanView;
@@ -51,9 +52,10 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
 
 
 		barcodeScanView.setScanConfig("barcode_view_config.json");
-		//init the scan view
-		BarcodeScanViewPlugin scanViewPlugin = new BarcodeScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), barcodeScanView.getScanViewPluginConfig(), "BARCODE");
-		scanViewPlugin.setReportingEnabled(true);
+
+		BarcodeScanPlugin scanPlugin = new BarcodeScanPlugin(getApplicationContext(), "barcode", getString(R.string.anyline_license_key));
+		BarcodeScanViewPlugin scanViewPlugin = new BarcodeScanViewPlugin(getApplicationContext(), scanPlugin, barcodeScanView.getScanViewPluginConfig());
+
 		barcodeScanView.setScanViewPlugin(scanViewPlugin);
 		scanViewPlugin.addScanResultListener(new ScanResultListener<BarcodeScanResult>() {
 			@Override

@@ -3,8 +3,10 @@ package io.anyline.examples.scanviewresult;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +35,8 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
     private RecyclerView recyclerView;
     private ImageView imageView;
     private TextView confirmationButton;
+    private TextView faceImageCaption;
+    private ImageView faceImageView;
 
 
     @Override
@@ -45,20 +49,28 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getApplicationContext()));
 
         imageView = (ImageView) findViewById(R.id.controll_image);
+        faceImageCaption = findViewById(R.id.textFaceImage);
+        faceImageView = findViewById(R.id.face_image);
         confirmationButton = (TextView) findViewById(R.id.confirmation_button);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if (savedInstanceState == null) {
             Intent intent = getIntent();
-            result= (HashMap<String, String>) intent.getSerializableExtra(Constant.SCAN_RESULT_DATA);
+            result = (HashMap<String, String>) intent.getSerializableExtra(Constant.SCAN_RESULT_DATA);
 
             Bundle extras = getIntent().getExtras();
             if (extras != null) {
                 scanModule = extras.getString(Constant.SCAN_MODULE, "").trim();
 
-                Bitmap bmp =  BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FULL_PICTURE_PATH));
+                Bitmap bmp = BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FULL_PICTURE_PATH));
                 imageView.setImageBitmap(bmp);
+                Bitmap faceBmp = BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FACE_PICTURE_PATH));
+                if (faceBmp != null) {
+                    faceImageCaption.setVisibility(View.VISIBLE);
+                    faceImageView.setVisibility(View.VISIBLE);
+                    faceImageView.setImageBitmap(faceBmp);
+                }
             }
         } else {
             scanModule = savedInstanceState.getString(Constant.SCAN_MODULE);
@@ -86,8 +98,8 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
         return null;
     }
 
-    private void setupScanResultView(){
-        if(scanModule.equals(getResources().getString(R.string.title_mrz))){
+    private void setupScanResultView() {
+        if (scanModule.equals(getResources().getString(R.string.title_mrz))) {
 
             //for the specific insertion order it is needed a linkedHashMap reconstruct here
             //android transform via bundle transfer the linkedHashMap into a Hashmap
@@ -101,18 +113,18 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMap.put(getResources().getString(R.string.mrz_document_number), result.get(getResources().getString(R.string.mrz_document_number)));
             orderedHashMap.put(getResources().getString(R.string.mrz_expiration_date), result.get(getResources().getString(R.string.mrz_expiration_date)));
             orderedHashMap.put(getResources().getString(R.string.mrz_country_code), result.get(getResources().getString(R.string.mrz_country_code)));
-            if(result.get(getResources().getString(R.string.mrz_address)) != null) {
+            if (result.get(getResources().getString(R.string.mrz_address)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.mrz_address), result.get(getResources().getString(R.string.mrz_address)));
             }
-            if(result.get(getResources().getString(R.string.issue_date)) != null){
+            if (result.get(getResources().getString(R.string.issue_date)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.issue_date), result.get(getResources().getString(R.string.issue_date)));
             }
-            if(result.get(getResources().getString(R.string.personal_number)) != null) {
+            if (result.get(getResources().getString(R.string.personal_number)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.personal_number), result.get(getResources().getString(R.string.personal_number)));
             }
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMap);
 
-        }else if(scanModule.equals(getResources().getString(R.string.title_driving_license))){
+        } else if (scanModule.equals(getResources().getString(R.string.title_driving_license))) {
             LinkedHashMap<String, String> orderedHashMapDrivingLicense = new LinkedHashMap();
 
             orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_sur_names), result.get(getResources().getString(R.string.driving_license_sur_names)));
@@ -127,15 +139,28 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapDrivingLicense);
 
-        }else if(scanModule.equals(getResources().getString(R.string.category_energy))){
+        } else if (scanModule.equals(getResources().getString(R.string.title_german_id_front))) {
+            LinkedHashMap<String, String> orderedHashMapGermanIdFront = new LinkedHashMap();
+
+            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_surnames), result.get(getResources().getString(R.string.german_id_front_surnames)));
+            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_given_names), result.get(getResources().getString(R.string.german_id_front_given_names)));
+            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_DOB), result.get(getResources().getString(R.string.german_id_front_DOB)));
+            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_document_nr), result.get(getResources().getString(R.string.german_id_front_document_nr)));
+            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_nationality), result.get(getResources().getString(R.string.german_id_front_nationality)));
+            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_expiring_date), result.get(getResources().getString(R.string.german_id_front_expiring_date)));
+            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_can), result.get(getResources().getString(R.string.german_id_front_can)));
+            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_POB), result.get(getResources().getString(R.string.german_id_front_POB)));
+
+            scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapGermanIdFront);
+
+        } else if (scanModule.equals(getResources().getString(R.string.category_energy))) {
             LinkedHashMap<String, String> orderedHashMapEnergy = new LinkedHashMap();
 
             orderedHashMapEnergy.put(getResources().getString(R.string.reading_result), result.get(getResources().getString(R.string.reading_result)));
             orderedHashMapEnergy.put(getResources().getString(R.string.barcode), result.get(getResources().getString(R.string.barcode)));
 
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapEnergy);
-        }
-        else{
+        }  else {
 
             scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), result);
         }

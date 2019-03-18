@@ -54,7 +54,6 @@ public class OthersFragment extends BaseFragment implements BaseGridListAdapter.
 
             classes = res.getStringArray(R.array.example_others_classes);
             names = res.getStringArray(R.array.example_others_names);
-
         }
 
         View view = inflateFragment(R.layout.recycler_viewer_toolbar_fragment, inflater, container, names, classes, this);

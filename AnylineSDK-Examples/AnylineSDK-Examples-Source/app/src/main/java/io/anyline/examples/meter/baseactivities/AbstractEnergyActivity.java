@@ -13,16 +13,20 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.vision.barcode.Barcode;
+import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode;
 
 import java.util.HashMap;
+import java.util.List;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.modules.barcode.NativeBarcodeResultListener;
+import at.nineyards.anyline.camera.CameraView;
+import at.nineyards.anyline.camera.NativeBarcodeResultListener;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.barcode.BarcodeFormat;
+import io.anyline.plugin.barcode.BarcodeScanResult;
 import io.anyline.plugin.meter.MeterScanResult;
 import io.anyline.plugin.meter.MeterScanViewPlugin;
 import io.anyline.view.ScanView;
@@ -123,15 +127,21 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
                     if (errorCode == ConnectionResult.SUCCESS) {
                         foundBarcodeString = "";
                         energyScanView.getCameraView().enableBarcodeDetection(new NativeBarcodeResultListener() {
-                                    @Override
-                                    public void onBarcodesReceived(SparseArray<Barcode> sparseArray) {
-                                        if (sparseArray != null && sparseArray.size() > 0) {
-                                            // for demonstration purpose, we only show the latest found barcode (and only this one)
-                                            foundBarcodeString = sparseArray.valueAt(0).displayValue;
-                                        }
-                                    }
+                            @Override
+                            public void onFailure(String e) {
+
+                            }
+
+                            @Override
+                            public void onSuccess(List<FirebaseVisionBarcode> barcodes) {
+                                if (barcodes != null && barcodes.size() > 0) {
+                                    // for demonstration purpose, we only show the latest found barcode (and only this one)
+                                    String barcode = barcodes.get(0).getDisplayValue();
+                                    foundBarcodeString = barcode;
+
                                 }
-                        );
+                            }
+                        }, null);
                     } else {
                         GoogleApiAvailability.getInstance().getErrorDialog(AbstractEnergyActivity.this, errorCode, 0, new DialogInterface.OnCancelListener() {
                             @Override

@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Anyline Bundle Example</string>
+
+    <string name="app_name">Anyline Bundle Examples</string>
     <string name="anyline">Anyline</string>
 
     <string name="anyline_email" translatable="false">hello@anyline.com</string>
@@ -121,6 +122,7 @@
     <string name="title_gas_meter">Gas Meter (analog)</string>
     <string name="title_water_meter">Water Meter (analog)</string>
     <string name="title_barcode">Barcode / QR-Code</string>
+    <string name="title_barcode_PDF417">PDF417</string>
     <string name="title_mrz">MRZ</string>
     <string name="title_digital_meter">Digital Meter</string>
     <string name="title_heat_meter">Heat Meter</string>
@@ -142,6 +144,7 @@
     <string name="title_scrabble_result">Scrabble Result</string>
     <string name="title_select_config">Select your configuration</string>
     <string name="title_shipping_container">Shipping Container</string>
+    <string name="title_cowtag">Cattle Tag</string>
 
     <string name="header_config">Configuration: %1$s</string>
 
@@ -249,6 +252,7 @@
     <string name="germany">Germany</string>
     <string name="auto">Auto</string>
     <string name="title_driving_license">AUT/GER Driving License</string>
+    <string name="title_german_id_front">GER ID Front</string>
 
     <string name="title_mileometer">Mileometer (PoC)</string>
     <string name="mileometer">Mileometer (PoC)</string>
@@ -266,7 +270,6 @@
 
     <string name="explanation_analog_meter">Scan all sorts of analog energy meters with this mode. It doesn’t matter how many digits or if there is a black or white background.</string>
     <string name="explanation_analog_digital_meter">Scan analog or digital meters with this mode. It doesn’t matter how many digits, or if the analog meter has a black or white background.</string>
-
 
 
     <!-- Intercom push notifications -->
@@ -355,6 +358,7 @@
     <string name="reading_result">Reading result</string>
     <string name="iban_reading_result">IBAN</string>
     <string name="vin_reading_result">Vehicle Identification Number</string>
+    <string name="pdf_417">PDF417</string>
     <string name="shipping_reading_result">Shipping Container Number</string>
     <string name="universal_reading_result">Universal Serial Number</string>
     <string name="bottlecap_reading_result">Bottlecap code</string>
@@ -371,6 +375,16 @@
     <string name="driving_license_categories">Categories</string>
     <string name="driving_license_issuing_date">Issuing Date</string>
     <string name="driving_license_expiring_date">Expiration Date</string>
+
+    <!-- German ID front result Screen Keys -->
+    <string name="german_id_front_given_names">First Name</string>
+    <string name="german_id_front_surnames">Last Name</string>
+    <string name="german_id_front_DOB">Date of Birth</string>
+    <string name="german_id_front_document_nr">Document Number</string>
+    <string name="german_id_front_nationality">Nationality</string>
+    <string name="german_id_front_POB">Place of Birth</string>
+    <string name="german_id_front_can">Card Access Number</string>
+    <string name="german_id_front_expiring_date">Expiration Date</string>
 
     <!-- Build Version Description -->
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
