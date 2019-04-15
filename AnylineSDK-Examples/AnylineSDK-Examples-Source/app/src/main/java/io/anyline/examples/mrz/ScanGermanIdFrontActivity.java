@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -22,8 +23,10 @@ import io.anyline.examples.util.Constant;
 import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.id.GermanIdFrontConfig;
-import io.anyline.plugin.id.GermanIdFrontResult;
+import io.anyline.plugin.id.GermanIdFrontFieldScanOptions;
+import io.anyline.plugin.id.GermanIdFrontIdentification;
 import io.anyline.plugin.id.ID;
+import io.anyline.plugin.id.IDFieldScanOptions;
 import io.anyline.plugin.id.IdScanPlugin;
 import io.anyline.plugin.id.IdScanViewPlugin;
 import io.anyline.view.ScanView;
@@ -64,7 +67,7 @@ public class ScanGermanIdFrontActivity extends ScanActivity implements CameraOpe
 			@Override
 			public void onResult(ScanResult<ID> idScanResult) {
 
-				GermanIdFrontResult resultString = (GermanIdFrontResult) idScanResult.getResult();
+				GermanIdFrontIdentification resultString = (GermanIdFrontIdentification) idScanResult.getResult();
 				String path = setupImagePath(idScanResult.getCutoutImage());
 				String facePath = setupImagePath(new AnylineImage(resultString.getFaceImage()));
 
@@ -125,38 +128,20 @@ public class ScanGermanIdFrontActivity extends ScanActivity implements CameraOpe
 		return ScanModuleEnum.ScanModule.GERMAN_ID_FRONT;
 	}
 
-	public HashMap<String, String> getGermanIdFrontResult(GermanIdFrontResult germanIdFrontResult) {
+	public HashMap<String, String> getGermanIdFrontResult(GermanIdFrontIdentification germanIdFrontResult) {
 
 		HashMap<String, String> germanIdFrontHashMap = new HashMap<>();
 
-		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_given_names) , (germanIdFrontResult.getGivenName() == null || germanIdFrontResult.getGivenName().isEmpty()) ?  getResources().getString(R.string.not_available) : germanIdFrontResult.getGivenName());
-		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_surnames) , (germanIdFrontResult.getSurName() == null || germanIdFrontResult.getSurName().isEmpty()) ?  getResources().getString(R.string.not_available) : germanIdFrontResult.getSurName());
-		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_DOB), (germanIdFrontResult.getDayOfBirth() == null || germanIdFrontResult.getDayOfBirth().isEmpty()) ? getResources().getString(R.string.not_available) : dayOfBirthFormat(germanIdFrontResult.getDayOfBirth()));
+		DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
+		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_given_names) , (germanIdFrontResult.getGivenNames() == null || germanIdFrontResult.getGivenNames().isEmpty()) ?  getResources().getString(R.string.not_available) : germanIdFrontResult.getGivenNames());
+		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_surnames) , (germanIdFrontResult.getSurname() == null || germanIdFrontResult.getSurname().isEmpty()) ?  getResources().getString(R.string.not_available) : germanIdFrontResult.getSurname());
+		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_DOB), (germanIdFrontResult.getDateOfBirthObject() == null) ? getResources().getString(R.string.not_available) :  dateFormat.format(germanIdFrontResult.getDateOfBirthObject()));
 		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_document_nr), (germanIdFrontResult.getDocumentNumber() == null || germanIdFrontResult.getDocumentNumber().isEmpty()) ? getResources().getString(R.string.not_available) : germanIdFrontResult.getDocumentNumber());
 		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_nationality) , (germanIdFrontResult.getNationality() == null || germanIdFrontResult.getNationality().isEmpty()) ?  getResources().getString(R.string.not_available) : germanIdFrontResult.getNationality());
-		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_expiring_date), (germanIdFrontResult.getExpirationDate() == null || germanIdFrontResult.getExpirationDate().isEmpty()) ? getResources().getString(R.string.not_available) : dayOfBirthFormat(germanIdFrontResult.getExpirationDate()));
+		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_expiring_date), (germanIdFrontResult.getDateOfExpiryObject() == null) ? getResources().getString(R.string.not_available) : dateFormat.format(germanIdFrontResult.getDateOfExpiryObject()));
 		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_can), (germanIdFrontResult.getCardAccessNumber() == null || germanIdFrontResult.getCardAccessNumber().isEmpty()) ? getResources().getString(R.string.not_available) : germanIdFrontResult.getCardAccessNumber());
 		germanIdFrontHashMap.put(getResources().getString(R.string.german_id_front_POB), (germanIdFrontResult.getPlaceOfBirth() == null || germanIdFrontResult.getPlaceOfBirth().isEmpty()) ? getResources().getString(R.string.not_available) : germanIdFrontResult.getPlaceOfBirth());
 
 		return germanIdFrontHashMap;
-	}
-
-	public String dayOfBirthFormat(String dayOfBirth){
-
-		String dateString = dayOfBirth;
-		String inputFormat = "ddMMyyyy";
-		String outputFormat = "yyyy-MM-dd";
-//		if(Integer.parseInt(dayOfBirth.substring(3,5)) > 12 || Integer.parseInt(dayOfBirth.substring(4,6)) <= 12){
-//			inputFormat = "yyyyMMdd";
-//		}
-		SimpleDateFormat inputDateFormat = new SimpleDateFormat(inputFormat);
-		SimpleDateFormat outputDateFormat = new SimpleDateFormat(outputFormat);
-		try {
-			dateString = outputDateFormat.format(inputDateFormat.parse(dayOfBirth));
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-
-		return dateString;
 	}
 }

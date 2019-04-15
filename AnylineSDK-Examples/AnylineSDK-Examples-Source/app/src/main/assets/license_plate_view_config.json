@@ -10,6 +10,7 @@
     "imageOff": "flash_off"
   },
   "viewPlugin": {
+    "delayStartScanTime":2000,
     "cutoutConfig": {
       "style": "rect",
       "maxWidthPercent": "80%",

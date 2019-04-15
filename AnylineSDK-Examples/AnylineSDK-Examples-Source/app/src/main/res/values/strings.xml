@@ -342,12 +342,12 @@
     <string name="mrz_sex">Sex</string>
     <string name="mrz_country_code">Nationality</string>
     <string name="mrz_document_number">Document Number</string>
-    <string name="mrz_expiration_date">Expiration Date</string>
+    <string name="mrz_expiration_date">Date of Expiry</string>
     <string name="mrz_date_of_birthday">Date of Birth</string>
     <string name="not_available">Not Available</string>
     <string name="not_valid">Not Valid</string>
     <string name="mrz_address">Address</string>
-    <string name="issue_date">Issuing Date</string>
+    <string name="issue_date">Date of Issue</string>
     <string name="personal_number">Personal Number</string>
 
     <!-- LicensePlate result Screen Keys -->
@@ -366,25 +366,25 @@
     <string name="voucher_reading_result">Voucher code</string>
 
     <!-- Driving License result Screen Keys -->
-    <string name="driving_license_given_names">First Name</string>
-    <string name="driving_license_sur_names">Last Name</string>
+    <string name="driving_license_given_names">Given Names</string>
+    <string name="driving_license_sur_names">Surname</string>
     <string name="driving_license_DOB">Date of Birth</string>
     <string name="driving_license_document_code">Document Number</string>
     <string name="driving_license_authority">Authority</string>
     <string name="driving_license_POB">Place of Birth</string>
     <string name="driving_license_categories">Categories</string>
-    <string name="driving_license_issuing_date">Issuing Date</string>
-    <string name="driving_license_expiring_date">Expiration Date</string>
+    <string name="driving_license_issuing_date">Date of Issue</string>
+    <string name="driving_license_expiring_date">Date of Expiry</string>
 
     <!-- German ID front result Screen Keys -->
-    <string name="german_id_front_given_names">First Name</string>
-    <string name="german_id_front_surnames">Last Name</string>
+    <string name="german_id_front_given_names">Given Names</string>
+    <string name="german_id_front_surnames">Surname</string>
     <string name="german_id_front_DOB">Date of Birth</string>
     <string name="german_id_front_document_nr">Document Number</string>
     <string name="german_id_front_nationality">Nationality</string>
     <string name="german_id_front_POB">Place of Birth</string>
     <string name="german_id_front_can">Card Access Number</string>
-    <string name="german_id_front_expiring_date">Expiration Date</string>
+    <string name="german_id_front_expiring_date">Date of Expiry</string>
 
     <!-- Build Version Description -->
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
