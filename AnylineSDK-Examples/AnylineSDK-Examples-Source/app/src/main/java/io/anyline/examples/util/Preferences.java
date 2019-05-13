@@ -15,12 +15,13 @@ import static at.nineyards.anyline.reporter.ReportingService.PREFS_NAME;
  */
 public class Preferences {
     private static final String PREF_SCAN_COUNTER = "scan_counter";
+    private static final String PREF_UUID = "uuid";
     private static final String PREF_REPORTING_ENABLED = "reporting_enabled";
     private static final String SHARED_PREFS_ANYLINE = "AnylinePreferences";
     private static final String PREF_EMAIL = "user_email";
+    private static final String PREFS_FIRST_START = "first_start";
     private static final String PREFS_ONBOARDING_INCOMPLETE = "onboarding_complete";
     private static final String PREFS_ONBOARDING_INCOMPLETE_a = "onboarding_completee";
-    private static final String PREF_UUID = "uuid";
     private static final String PREF_INTERCOM_USER_ID = "uuid_intercom_user_id";
 
     private static Preferences instance;
@@ -85,6 +86,17 @@ public class Preferences {
 
     public void setStoredEmailAddress(String storedEmailAddress) {
         editor.putString(PREF_EMAIL, storedEmailAddress);
+        editor.commit();
+    }
+
+    public boolean isFirstStart() {
+        return preferences.getBoolean(PREFS_FIRST_START, true);
+    }
+
+
+
+    public void setFirstStartFinished() {
+        editor.putBoolean(PREFS_FIRST_START, false);
         editor.commit();
     }
 

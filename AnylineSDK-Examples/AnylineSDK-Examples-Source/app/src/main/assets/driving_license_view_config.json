@@ -1,7 +1,8 @@
 {
   "camera" : {
     "captureResolution" : "720",
-    "defaultCamera" : "BACK"
+    "defaultCamera" : "BACK",
+    "zoomGesture": true
   },
   "flash" : {
     "mode": "manual",

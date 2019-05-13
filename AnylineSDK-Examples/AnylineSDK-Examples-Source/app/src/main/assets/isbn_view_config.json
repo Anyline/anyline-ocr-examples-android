@@ -1,6 +1,7 @@
 {
   "camera": {
-    "captureResolution": "1080"
+    "captureResolution": "1080",
+    "zoomGesture": true
   },
   "flash": {
     "mode": "manual",

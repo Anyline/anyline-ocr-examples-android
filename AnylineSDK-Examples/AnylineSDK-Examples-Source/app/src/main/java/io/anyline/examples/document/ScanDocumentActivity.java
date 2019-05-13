@@ -181,7 +181,7 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
 			public boolean onDocumentOutlineDetected(List rect, boolean documentShapeAndBrightnessValid) {
 
 				lastOutline = rect;
-				return true;
+				return false;
 
 			}
 

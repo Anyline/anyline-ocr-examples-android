@@ -1,6 +1,7 @@
 {
   "camera":{
-    "captureResolution" : "720p"
+    "captureResolution" : "720p",
+    "zoomGesture": true
   },
   "flash" : {
     "mode" : "auto",

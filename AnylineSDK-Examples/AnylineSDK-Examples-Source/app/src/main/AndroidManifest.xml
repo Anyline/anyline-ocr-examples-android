@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
@@ -89,6 +89,15 @@
         </activity>
         <activity
             android:name=".ocr.ScanShippingContainerActivity"
+            android:label="@string/title_shipping_container"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ocr.ScanVerticalShippingContainerActivity"
             android:label="@string/title_shipping_container"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">

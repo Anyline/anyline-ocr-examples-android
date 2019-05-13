@@ -24,6 +24,7 @@
     <string name="dial_meter">Dial (Alpha)</string>
     <string name="serial_number">Universal Serial Number</string>
     <string name="shipping_container">Shipping Container</string>
+    <string name="vertical_shipping_container">Vertical Shipping Container</string>
     <string name="serial_number_energy">Serial Number</string>
 
     <string name="heat_meter_4_3">4 pre-decimal places</string>
@@ -336,6 +337,7 @@
     <string name="processes_scan_screen_title">Barcode</string>
 
     <!-- MRZ result Screen Keys -->
+    <string name="mrz_header">Machine Readable Zone</string>
     <string name="mrz_given_names">Given Name</string>
     <string name="mrz_sur_names">Surname</string>
     <string name="mrz_document_type">Document Type</string>
@@ -346,9 +348,17 @@
     <string name="mrz_date_of_birthday">Date of Birth</string>
     <string name="not_available">Not Available</string>
     <string name="not_valid">Not Valid</string>
-    <string name="mrz_address">Address</string>
-    <string name="issue_date">Date of Issue</string>
     <string name="personal_number">Personal Number</string>
+
+    <!-- MRZ Visual Inspection Zone -->
+
+    <string name="mrz_VIZ_header">Visual Inspection Zone</string>
+    <string name="mrz_viz_given_names">viz Given Name</string>
+    <string name="mrz_viz_sur_names">viz Surname</string>
+    <string name="mrz_viz_address">viz Address</string>
+    <string name="mrz_viz_issue_date">viz Date of Issue</string>
+    <string name="mrz_viz_dob">viz Date of Birth</string>
+    <string name="mrz_viz_date_of_expiry">viz Date of Expiry</string>
 
     <!-- LicensePlate result Screen Keys -->
     <string name="license_plate_country">Country</string>

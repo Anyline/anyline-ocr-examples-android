@@ -20,6 +20,7 @@ import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ScanningConfigurationActivity;
+import io.anyline.examples.baseadapters.BaseGridAdapter;
 import io.anyline.examples.util.BitmapUtil;
 import io.anyline.examples.util.Constant;
 
@@ -31,7 +32,8 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
     private String scanModule;
     private HashMap<String, String> result;
-    private ScanViewResultAdapter scanResultAdapter;
+   // private ScanViewResultAdapter scanResultAdapter;
+    private BaseGridAdapter scanResultAdapter;
     private RecyclerView recyclerView;
     private ImageView imageView;
     private TextView confirmationButton;
@@ -78,6 +80,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
 
         setupScanResultView();
+
         recyclerView.setAdapter(scanResultAdapter);
         confirmationButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -105,6 +108,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             //android transform via bundle transfer the linkedHashMap into a Hashmap
             LinkedHashMap<String, String> orderedHashMap = new LinkedHashMap();
 
+            orderedHashMap.put("HEADER_MRZ", getResources().getString(R.string.mrz_header));
             orderedHashMap.put(getResources().getString(R.string.mrz_given_names), result.get(getResources().getString(R.string.mrz_given_names)));
             orderedHashMap.put(getResources().getString(R.string.mrz_sur_names), result.get(getResources().getString(R.string.mrz_sur_names)));
             orderedHashMap.put(getResources().getString(R.string.mrz_sex), result.get(getResources().getString(R.string.mrz_sex)));
@@ -113,16 +117,37 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMap.put(getResources().getString(R.string.mrz_document_number), result.get(getResources().getString(R.string.mrz_document_number)));
             orderedHashMap.put(getResources().getString(R.string.mrz_expiration_date), result.get(getResources().getString(R.string.mrz_expiration_date)));
             orderedHashMap.put(getResources().getString(R.string.mrz_country_code), result.get(getResources().getString(R.string.mrz_country_code)));
-            if (result.get(getResources().getString(R.string.mrz_address)) != null) {
-                orderedHashMap.put(getResources().getString(R.string.mrz_address), result.get(getResources().getString(R.string.mrz_address)));
-            }
-            if (result.get(getResources().getString(R.string.issue_date)) != null) {
-                orderedHashMap.put(getResources().getString(R.string.issue_date), result.get(getResources().getString(R.string.issue_date)));
-            }
             if (result.get(getResources().getString(R.string.personal_number)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.personal_number), result.get(getResources().getString(R.string.personal_number)));
             }
-            scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMap);
+            if(result.get(getResources().getString(R.string.mrz_viz_sur_names)) != null ||
+                    result.get(getResources().getString(R.string.mrz_viz_given_names)) != null ||
+                    result.get(getResources().getString(R.string.mrz_viz_dob)) != null ||
+                    result.get(getResources().getString(R.string.mrz_viz_date_of_expiry)) != null ||
+                    result.get(getResources().getString(R.string.mrz_viz_issue_date)) != null ||
+                    result.get(getResources().getString(R.string.mrz_viz_address)) != null)
+            orderedHashMap.put("HEADER", getResources().getString(R.string.mrz_VIZ_header));
+            if (result.get(getResources().getString(R.string.mrz_viz_sur_names)) != null) {
+                orderedHashMap.put(getResources().getString(R.string.mrz_viz_sur_names), result.get(getResources().getString(R.string.mrz_viz_sur_names)));
+            }
+            if (result.get(getResources().getString(R.string.mrz_viz_given_names)) != null) {
+                orderedHashMap.put(getResources().getString(R.string.mrz_viz_given_names), result.get(getResources().getString(R.string.mrz_viz_given_names)));
+            }
+            if (result.get(getResources().getString(R.string.mrz_viz_dob)) != null) {
+                orderedHashMap.put(getResources().getString(R.string.mrz_viz_dob), result.get(getResources().getString(R.string.mrz_viz_dob)));
+            }
+            if (result.get(getResources().getString(R.string.mrz_viz_date_of_expiry)) != null) {
+                orderedHashMap.put(getResources().getString(R.string.mrz_viz_date_of_expiry), result.get(getResources().getString(R.string.mrz_viz_date_of_expiry)));
+            }
+            if (result.get(getResources().getString(R.string.mrz_viz_issue_date)) != null) {
+                orderedHashMap.put(getResources().getString(R.string.mrz_viz_issue_date), result.get(getResources().getString(R.string.mrz_viz_issue_date)));
+            }
+            if (result.get(getResources().getString(R.string.mrz_viz_address)) != null) {
+                orderedHashMap.put(getResources().getString(R.string.mrz_viz_address), result.get(getResources().getString(R.string.mrz_viz_address)));
+            }
+
+			scanResultAdapter = new BaseGridAdapter(this.getApplicationContext(), orderedHashMap);
+            //scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMap);
 
         } else if (scanModule.equals(getResources().getString(R.string.title_driving_license))) {
             LinkedHashMap<String, String> orderedHashMapDrivingLicense = new LinkedHashMap();
@@ -137,7 +162,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_categories), result.get(getResources().getString(R.string.driving_license_categories)));
             orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_POB), result.get(getResources().getString(R.string.driving_license_POB)));
 
-            scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapDrivingLicense);
+			scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapDrivingLicense);
 
         } else if (scanModule.equals(getResources().getString(R.string.title_german_id_front))) {
             LinkedHashMap<String, String> orderedHashMapGermanIdFront = new LinkedHashMap();
@@ -151,7 +176,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_can), result.get(getResources().getString(R.string.german_id_front_can)));
             orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_POB), result.get(getResources().getString(R.string.german_id_front_POB)));
 
-            scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapGermanIdFront);
+            scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapGermanIdFront);
 
         } else if (scanModule.equals(getResources().getString(R.string.category_energy))) {
             LinkedHashMap<String, String> orderedHashMapEnergy = new LinkedHashMap();
@@ -159,10 +184,10 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMapEnergy.put(getResources().getString(R.string.reading_result), result.get(getResources().getString(R.string.reading_result)));
             orderedHashMapEnergy.put(getResources().getString(R.string.barcode), result.get(getResources().getString(R.string.barcode)));
 
-            scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMapEnergy);
+            scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapEnergy);
         }  else {
 
-            scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), result);
+            scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), result);
         }
     }
 

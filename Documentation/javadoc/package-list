@@ -15,7 +15,6 @@ io.anyline.plugin.document
 io.anyline.plugin.id
 io.anyline.plugin.licenseplate
 io.anyline.plugin.meter
-io.anyline.plugin.mrz
 io.anyline.plugin.ocr
 io.anyline.view
 org.opencv.core

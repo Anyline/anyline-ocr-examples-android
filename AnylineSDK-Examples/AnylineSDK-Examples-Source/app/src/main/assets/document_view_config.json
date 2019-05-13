@@ -2,7 +2,8 @@
   "camera":{
     "captureResolution":"720p",
     "pictureResolution":"1080p",
-    "pictureAspectRatios":["16:9"]
+    "pictureAspectRatios":["16:9"],
+    "zoomGesture": true
   },
   "flash": {
     "mode": "manual",

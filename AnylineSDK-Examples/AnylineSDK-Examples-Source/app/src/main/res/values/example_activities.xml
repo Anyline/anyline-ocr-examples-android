@@ -73,6 +73,7 @@
         <item>io.anyline.examples.ocr.ScanSerialNumberActivity</item>
         <item>io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity</item>
         <item>io.anyline.examples.ocr.ScanShippingContainerActivity</item>
+        <item>io.anyline.examples.ocr.ScanVerticalShippingContainerActivity</item>
     </string-array>
 
     <string-array name="example_mro_names">
@@ -80,6 +81,7 @@
         <item>@string/serial_number</item>
         <item>@string/vin</item>
         <item>@string/shipping_container</item>
+        <item>@string/vertical_shipping_container</item>
     </string-array>
 
 
