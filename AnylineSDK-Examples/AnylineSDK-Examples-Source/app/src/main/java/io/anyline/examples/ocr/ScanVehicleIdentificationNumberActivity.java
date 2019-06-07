@@ -7,11 +7,11 @@ import java.util.HashMap;
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.AnylineVINConfig;
 import io.anyline.plugin.ocr.OcrScanResult;
 import io.anyline.plugin.ocr.OcrScanViewPlugin;
 import io.anyline.view.ScanView;
@@ -47,18 +47,12 @@ public class ScanVehicleIdentificationNumberActivity extends ScanActivity implem
     void init() {
         scanView = (ScanView) findViewById(R.id.scan_view);
         // create new Anyline OCR config
-        AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-
-        // set languages to config
-        anylineOcrConfig.setLanguages("VIN.any");
-
-        // set command file to config
-        anylineOcrConfig.setCustomCmdFile("vin.ale");
+        AnylineVINConfig anylineVINConfig = new AnylineVINConfig();
 
         //init the scanViewPlugin config
         scanView.setScanConfig("vin_view_config.json");
         //init the scan view
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineVINConfig, scanView.getScanViewPluginConfig(), "OCR");
         scanView.setScanViewPlugin(scanViewPlugin);
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {

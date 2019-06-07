@@ -41,10 +41,7 @@ public class ScanSerialNumberActivity extends ScanActivity implements AnylineDeb
 		scanView = (ScanView) findViewById(R.id.scan_view);
 
 		// see ScanIbanActivity for a more detailed description
-		AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-		anylineOcrConfig.setLanguages("USNr.any");
-		// AUTO ScanMode automatically detects the correct text without any further parameters to be set
-		anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
+		io.anyline.plugin.ocr.AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
 		anylineOcrConfig.setValidationRegex("[A-Z0-9]{4,}");
 
 		scanView.setScanConfig("serial_number_view_config.json");

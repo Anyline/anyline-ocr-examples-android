@@ -11,6 +11,7 @@ import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.AnylineCattleTagConfig;
 import io.anyline.plugin.ocr.OcrScanResult;
 import io.anyline.plugin.ocr.OcrScanViewPlugin;
 import io.anyline.view.ScanView;
@@ -38,17 +39,12 @@ public class ScanCowtagActivity extends ScanActivity {
 
         scanView = (ScanView) findViewById(R.id.scan_view);
 
-        AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("USNr.any");
-        // AUTO ScanMode automatically detects the correct text without any further parameters to be set
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
-        anylineOcrConfig.setCustomCmdFile("cow_tag_scanner.ale");
-
+        AnylineCattleTagConfig cattleTagConfig = new AnylineCattleTagConfig();
         //init the scanViewPlugin config
         // scanView.setScanViewConfig(new BaseScanViewConfig(this, "scrabble_view_config_new.json"));
         scanView.setScanConfig("cow_tag_view_config.json");
         //init the scan view
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), cattleTagConfig, scanView.getScanViewPluginConfig(), "OCR");
 
         scanView.setScanViewPlugin(scanViewPlugin);
 

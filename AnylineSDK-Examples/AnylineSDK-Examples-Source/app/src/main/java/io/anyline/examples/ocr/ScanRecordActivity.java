@@ -53,7 +53,7 @@ public class ScanRecordActivity extends ScanActivity implements AnylineDebugList
         }
         OcrScanViewPlugin scanViewPlugin = (OcrScanViewPlugin) scanView.getScanViewPlugin();
 
-        scanViewPlugin.getAnylineOcrConfig().setValidationRegex("^([A-Z]+\\s*-*\\s*)?[0-9A-Z-\\s\\.]{3,}$");
+       // scanViewPlugin.getAnylineOcrConfig().setValidationRegex("^([A-Z]+\\s*-*\\s*)?[0-9A-Z-\\s\\.]{3,}$");
         scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
             @Override
             public void onResult(OcrScanResult anylineOcrResult) {

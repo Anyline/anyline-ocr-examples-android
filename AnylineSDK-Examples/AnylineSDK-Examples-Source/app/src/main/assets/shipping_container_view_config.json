@@ -10,6 +10,14 @@
     "imageOff": "flash_off"
   },
   "viewPlugin": {
+    "plugin" : {
+      "id" : "CONTAINER",
+      "ocrPlugin" : {
+        "containerConfig":{
+          "scanMode": "horizontal"
+        }
+      }
+    },
     "cutoutConfig": {
       "style": "rect",
       "maxWidthPercent": "80%",

@@ -21,6 +21,7 @@ import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.AnylineContainerConfig;
 import io.anyline.plugin.ocr.OcrScanResult;
 import io.anyline.plugin.ocr.OcrScanViewPlugin;
 import io.anyline.view.BaseScanViewConfig;
@@ -57,21 +58,13 @@ public class ScanShippingContainerActivity extends ScanActivity implements Anyli
     void init() {
         scanView = (ScanView) findViewById(R.id.scan_view);
 
-        // create new Anyline OCR config
-        AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        // set languages to config
-        anylineOcrConfig.setLanguages("USNr.any");
-        // set command file to config
-        anylineOcrConfig.setCustomCmdFile("container_scanner.ale");
-        // AUTO ScanMode automatically detects the correct text without any further parameters to be set
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.AUTO);
 
-        scanView.setScanConfig("shipping_container_view_config.json");
-
-        //init the scanViewPlugin config
-                //init the scan view
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
-
+        try {
+            scanView.init("shipping_container_view_config.json", getString(R.string.anyline_license_key));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        OcrScanViewPlugin scanViewPlugin = (OcrScanViewPlugin) scanView.getScanViewPlugin();
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
             @Override

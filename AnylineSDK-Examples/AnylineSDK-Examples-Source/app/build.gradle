@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
-        versionCode 250
-        versionName "10.1"
+        versionCode 255
+        versionName "10.2"
 
         ndk {
             abiFilters "armeabi-v7a", "x86", "arm64-v8a"
@@ -28,17 +28,6 @@ repositories {
     }
 }
 
-//configurations.all {
-//    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-//        def requested = details.requested
-//        if (requested.group == "com.android.support") {
-//            if (!requested.name.startsWith("multidex")) {
-//                details.useVersion "27.+"
-//            }
-//        }
-//    }
-//}
-
 configurations {
     customImplementation
 }
@@ -51,17 +40,17 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 
     //include AnylineSDK from locale libs folder
-    //api(name:'anylinesdk-release-10.1', ext:'aar')
+    //api(name:'anylinesdk-release-10.2', ext:'aar')
 
     //include AnylineSDK from maven
-    api 'io.anyline:anylinesdk:10.1@aar'
+    api 'io.anyline:anylinesdk:10.2@aar'
 
     implementation 'io.intercom.android:intercom-sdk:5.1.6'
 
-    // include the vision-version we need for barcode scanning
+    /// include the vision-version we need for barcode scanning
     implementation 'com.google.firebase:firebase-ml-vision:19.0.2'
     implementation 'com.google.firebase:firebase-ml-vision-face-model:17.0.2'
 
-    customImplementation('io.anyline:anylinesdk:10.1@aar')
+    customImplementation('io.anyline:anylinesdk:10.2@aar')
 }
 
