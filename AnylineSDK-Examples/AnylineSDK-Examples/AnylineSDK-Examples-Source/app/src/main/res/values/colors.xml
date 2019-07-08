@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="scrabble_green">#327466</color>
+
+
+    <!-- CI colors -->
+    <color name="black_100">#000000</color>
+    <color name="black_95">#0D0D0D</color>
+    <color name="black_90">#1A1A1A</color>
+    <color name="black_75">#404040</color>
+    <color name="black_50">#808080</color>
+    <color name="black_25">#C0C0C0</color>
+    <color name="black_10">#E5E5E5</color>
+    <color name="black_5">#F2F2F2</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="blue_shades">#007ACC</color>
+    <color name="blue">#0099FF</color>
+    <color name="blue_light">#32ADFF</color>
+
+
+    <!-- alpha values black - used for overlaying e.g. 'digit selection' -->
+    <color name="black_alpha_99">#99000000</color>
+    <color name="black_alpha_77">#77000000</color>
+    <color name="black_alpha_44">#44000000</color>
+
+    <!-- alpha values white - used for overlaying e.g. 'digit selection' -->
+    <color name="white_alpha_44">#44FFFFFF</color>
+    <color name="white_alpha_99">#99FFFFFF</color>
+    <color name="white_alpha_77">#77FFFFFF</color>
+    <color name="white_alpha_EE">#EEFFFFFF</color>
+    <color name="white_alpha_FA">#FAFFFFFF</color>
+
+    <!-- for digital digit selection background -->
+    <color name="green_alpha_77">#7700EE00</color>
+    <color name="green">#33cc33</color>
+    <color name="red">#FF3300</color>
+    <color name="red_shade">#E52D00</color>
+
+
+</resources>

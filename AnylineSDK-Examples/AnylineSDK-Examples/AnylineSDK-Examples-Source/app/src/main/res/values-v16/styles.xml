@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Anyline
+  ~ styles.xml
+  ~
+  ~ Copyright (c) 2015 9yards GmbH
+  ~
+  ~ Created by martin at 2015-07-24
+  -->
+
+<resources>
+
+        <style name="MrzResultMrzText">
+                <item name="android:layout_width">wrap_content</item>
+                <item name="android:layout_height">wrap_content</item>
+                <item name="android:textSize">10dp</item>
+                <item name="android:textColor">#333333</item>
+                <item name="android:typeface">monospace</item>
+                <item name="android:fontFamily">monospace</item>
+        </style>
+</resources>

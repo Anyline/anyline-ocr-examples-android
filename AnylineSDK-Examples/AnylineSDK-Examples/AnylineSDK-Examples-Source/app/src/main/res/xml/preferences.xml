@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fragment="io.anyline.examples.settings.SettingsFragment">
+
+    <Preference
+        android:key="@string/pref_reporting_key"
+        android:title="@string/pref_reporting"
+        android:summary="@string/pref_reporting_summary"
+        android:selectable="false"
+        />
+
+    <Preference
+        android:key="@string/pref_reset_key"
+        android:title="@string/pref_reset_title"
+        android:summary="@string/pref_reset_msg"
+        android:selectable="true"
+        android:defaultValue="false"/>
+
+    <Preference
+        android:key="@string/pref_version_key"
+        android:title="@string/version_info"
+        android:summary="xxx\nasda"
+        android:selectable="false"
+        />
+
+</PreferenceScreen>

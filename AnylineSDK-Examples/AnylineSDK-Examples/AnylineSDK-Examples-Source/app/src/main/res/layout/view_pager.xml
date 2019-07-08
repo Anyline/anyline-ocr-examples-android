@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/view_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/anyline_logo_container"
+        android:layout_alignParentTop="true">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/anyline_logo_intercom_header"/>
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            android:background="@color/white"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabTextColor="@color/black_100"
+            app:tabSelectedTextColor="@color/blue_light"
+            />
+    </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>

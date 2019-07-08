@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selection_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+
+    <LinearLayout
+        android:id="@+id/selection_area"
+        style="@style/GreenBackgroundDigitSelection"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+       >
+        <io.anyline.examples.customviews.DigitalDisplayTextView
+            style="@style/DigitOnGreenBackground"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="1" />
+
+        <io.anyline.examples.customviews.DigitalDisplayTextView
+            style="@style/DigitOnGreenBackground"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="2" />
+
+        <io.anyline.examples.customviews.DigitalDisplayTextView
+            style="@style/DigitOnGreenBackground"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="3" />
+
+        <io.anyline.examples.customviews.DigitalDisplayTextView
+            style="@style/DigitOnGreenBackground"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="4" />
+
+        <io.anyline.examples.customviews.DigitalDisplayTextView
+            style="@style/DigitOnGreenBackground"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="5" />
+
+        <io.anyline.examples.customviews.DigitalDisplayTextView
+            style="@style/DigitOnGreenBackground"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="6"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/remove_digit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:minHeight="0dp"
+        android:layout_centerVertical="true"
+        android:minWidth="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/button_digit_minus_selector"
+        android:onClick="removeDigit"/>
+    />
+
+
+    <Button
+        android:id="@+id/add_digit"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:layout_centerVertical="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_digit_plus_selector"
+        android:onClick="addDigit"/>
+
+</RelativeLayout>

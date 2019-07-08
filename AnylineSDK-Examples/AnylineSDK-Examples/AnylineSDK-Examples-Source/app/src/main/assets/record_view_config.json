@@ -1,0 +1,54 @@
+{
+  "camera": {
+    "captureResolution": "720",
+    "zoomGesture": true
+  },
+  "flash": {
+    "mode": "manual",
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off"
+  },
+  "viewPlugin": {
+    "plugin" : {
+      "id" : "OCR_RECORD",
+      "ocrPlugin" : {
+        "scanMode" : "LINE",
+        "languages" : ["eng_no_dict.traineddata", "deu.traineddata"],
+        "charWhitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.",
+        "minCharHeight":15,
+        "maxCharHeight":70,
+        "minConfidence": 75,
+        "removeSmallContours":false
+      }
+    },
+    "cutoutConfig": {
+      "style": "rect",
+      "maxWidthPercent": "80%",
+      "maxHeightPercent": "80%",
+      "alignment": "center",
+      "width": 340,
+      "ratioFromSize": {
+        "width": 4,
+        "height": 1
+      },
+      "strokeWidth": 2,
+      "cornerRadius": 10,
+      "strokeColor": "FFFFFF",
+      "outerColor": "000000",
+      "outerAlpha": 0.3,
+      "feedbackStrokeColor": "0099FF"
+    },
+    "scanFeedback": {
+      "animationDuration": 400,
+      "style": "contour_point",
+      "strokeWidth": 2,
+      "strokeColor": "0099FF",
+      "fillColor": "220099FF",
+      "beepOnResult": true,
+      "vibrateOnResult": true,
+      "blinkAnimationOnResult": true
+    },
+    "cancelOnResult": true
+  }
+}
