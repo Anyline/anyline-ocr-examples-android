@@ -109,8 +109,8 @@ public class WorkOrderFragment extends BaseFragment {
     private void startScanningProcess() {
         Intent intent = new Intent(getActivity(), CustomerIdentifyScannerActivity.class);
         cameraPermissionHelper = new CameraPermissionHelper(getActivity());
-        intent.putExtra(CustomerIdentifyScannerActivity.KEY_ORDER_ID, orderId);
-        intent.putExtra(CustomerIdentifyScannerActivity.IS_WORKFORCE_PROCESS, true);
+/*        intent.putExtra(CustomerIdentifyScannerActivity.KEY_ORDER_ID, orderId);
+        intent.putExtra(CustomerIdentifyScannerActivity.IS_WORKFORCE_PROCESS, true);*/
         checkedStartActivity(intent);
     }
 

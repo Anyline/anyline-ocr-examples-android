@@ -51,6 +51,7 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 
         DrivingLicenseConfig drivingLicenseConfig = new DrivingLicenseConfig();
         drivingLicenseConfig.enableFaceDetection(true);
+        drivingLicenseConfig.setScanMode(DrivingLicenseConfig.DrivingLicenseCountry.AUTO);
         drivingLicenseScanView = (ScanView) findViewById(R.id.scan_view);
 
         //init the scanViewPlugin config

@@ -84,13 +84,15 @@
         <item>@string/vertical_shipping_container</item>
     </string-array>
 
-
     <string-array name="example_identity_documents_names">
         <item>@string/category_identity_documents</item>
         <item>@string/mrz</item>
         <item>@string/title_driving_license</item>
         <item>@string/title_german_id_front</item>
         <item>@string/title_barcode_PDF417</item>
+        <item>@string/title_serial_scanning</item>
+        <item>Processes</item>
+        <item>@string/title_nfc_scanning</item>
     </string-array>
 
     <string-array name="example_identity_documents_classes" translatable="false">
@@ -99,6 +101,9 @@
         <item>io.anyline.examples.mrz.ScanDrivingLicenseActivity</item>
         <item>io.anyline.examples.mrz.ScanGermanIdFrontActivity</item>
         <item>io.anyline.examples.mrz.ScanBarcodePDF417Activity</item>
+        <item>io.anyline.examples.mrz.ScanSerialActivity</item>
+        <item>HEADER</item>
+        <item>io.anyline.examples.mrz.NFC.NFCScanMRZActivity</item>
     </string-array>
 
 </resources>

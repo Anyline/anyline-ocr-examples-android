@@ -72,7 +72,7 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
 
 		final DocumentScanViewPlugin scanViewPlugin = (DocumentScanViewPlugin) documentScanView.getScanViewPlugin();
 		scanViewPlugin.getScanViewPluginConfig().setCancelOnResult(true);
-		scanViewPlugin.cancelOnResult();
+		scanViewPlugin.setCancelOnResult(true);
 
 		scanViewPlugin.addScanResultListener(new DocumentScanResultListener() {
 
@@ -331,9 +331,9 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
 	private void resetScanning(){
 		if(imageViewResult.getVisibility() == View.VISIBLE){
 			imageViewResult.setVisibility(View.GONE);
-			if(documentScanView.getScanViewPlugin() != null && !documentScanView.getScanViewPlugin().isRunning() ){
+			//if(documentScanView.getScanViewPlugin() != null && !documentScanView.getScanViewPlugin().isRunning() ){
 				documentScanView.start();
-			}
+			//}
 		}
 	}
 }

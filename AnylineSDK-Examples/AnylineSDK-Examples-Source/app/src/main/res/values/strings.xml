@@ -124,6 +124,10 @@
     <string name="title_water_meter">Water Meter (analog)</string>
     <string name="title_barcode">Barcode / QR-Code</string>
     <string name="title_barcode_PDF417">PDF417</string>
+    <string name="title_belgian_driving_license">"BE Driving License"</string>
+    <string name="title_dutch_driving_license">"NL Driving License"</string>
+    <string name="title_nfc_scanning">NFC Scanner</string>
+    <string name="title_serial_scanning">Serial Scanning</string>
     <string name="title_mrz">MRZ</string>
     <string name="title_digital_meter">Digital Meter</string>
     <string name="title_heat_meter">Heat Meter</string>
@@ -252,7 +256,7 @@
     <string name="austria">Austria</string>
     <string name="germany">Germany</string>
     <string name="auto">Auto</string>
-    <string name="title_driving_license">AUT/GER Driving License</string>
+    <string name="title_driving_license">AT/DE/UK Driving License</string>
     <string name="title_german_id_front">GER ID Front</string>
 
     <string name="title_mileometer">Mileometer (PoC)</string>

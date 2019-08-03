@@ -86,7 +86,7 @@ public class SelfReadingScannerFragment extends BaseFragment {
 
     private void startScanningProcess() {
         Intent intent = new Intent(this.getActivity(), CustomerIdentifyScannerActivity.class);
-        intent.putExtra(CustomerIdentifyScannerActivity.IS_WORKFORCE_PROCESS, false);
+      //  intent.putExtra(CustomerIdentifyScannerActivity.IS_WORKFORCE_PROCESS, false);
         //check the rights for the camera access
         checkedStartActivity(intent);
     }

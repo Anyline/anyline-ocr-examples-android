@@ -39,15 +39,16 @@ public abstract class MeterReadingProcessActivity extends BaseToolbarActivity im
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_scanner);
 
-        mBottomContainer = (View) findViewById(R.id.bottom_container);
+        //mBottomContainer = (View) findViewById(R.id.bottom_container);
         mEnergyScanView = (ScanView) findViewById(R.id.energy_scan_view);
         mHandler = new Handler(Looper.getMainLooper());
 
         try {
-            mEnergyScanView.init("multi_scanner_energy_config.json", getString(R.string.anyline_license_key));
+         //  mEnergyScanView.init("multi_scanner_energy_config.json", getString(R.string.anyline_license_key));
         } catch (Exception e) {
             e.printStackTrace();
         }
+/*
 
         MeterScanViewPlugin scanViewPlugin = (MeterScanViewPlugin) mEnergyScanView.getScanViewPlugin();
 
@@ -57,6 +58,7 @@ public abstract class MeterReadingProcessActivity extends BaseToolbarActivity im
 
         scanViewPlugin.addScanResultListener(this);
       //  mEnergyScanView.initAnyline(getString(R.string.anyline_license_key), this);
+*/
 
         if (getIntent() != null) {
             mShowModeControls = getIntent().getBooleanExtra(KEY_SHOW_MODE_CONTROLS, false);
@@ -109,14 +111,15 @@ public abstract class MeterReadingProcessActivity extends BaseToolbarActivity im
     }
 
     protected void setMode(MeterScanMode mode) {
-        ((MeterScanViewPlugin)mEnergyScanView.getScanViewPlugin()).setScanMode(mode);
+      //  ((MeterScanViewPlugin)mEnergyScanView.getScanViewPlugin()).setScanMode(mode);
     }
 
     protected void setScanning(boolean scanning) {
         if (scanning) {
-            if (!mEnergyScanView.getScanViewPlugin().isRunning()) {
+            //if (!mEnergyScanView.getScanViewPlugin().isRunning()) {
                 mEnergyScanView.start();
-            }
+            //}
+
             mScanStartTime = System.currentTimeMillis();
 
         } else {

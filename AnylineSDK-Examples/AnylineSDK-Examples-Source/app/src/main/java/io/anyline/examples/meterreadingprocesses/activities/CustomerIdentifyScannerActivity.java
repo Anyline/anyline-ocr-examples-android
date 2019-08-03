@@ -2,11 +2,14 @@ package io.anyline.examples.meterreadingprocesses.activities;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.AlertDialog;
 import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,124 +23,162 @@ import io.anyline.examples.database.DataBaseProcessesAdapter;
 import io.anyline.examples.meterreadingprocesses.fragments.CustomerFragment;
 import io.anyline.examples.model.Customer;
 import io.anyline.examples.model.Reading;
+import io.anyline.plugin.ScanResult;
+import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.barcode.BarcodeScanPlugin;
+import io.anyline.plugin.barcode.BarcodeScanViewPlugin;
 import io.anyline.plugin.meter.MeterScanMode;
-import io.anyline.plugin.meter.MeterScanResult;
+import io.anyline.plugin.meter.MeterScanPlugin;
+import io.anyline.plugin.meter.MeterScanViewPlugin;
+import io.anyline.view.ScanView;
+import io.anyline.view.ScanViewPluginConfig;
+import io.anyline.view.SerialScanViewComposite;
 
-public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity {
+public class CustomerIdentifyScannerActivity extends AppCompatActivity {
 
-    public static final String KEY_ORDER_ID = "key_order_id";
-    public static final String IS_WORKFORCE_PROCESS = "is_workforce_process";
-
-    private static final int mustSync = 0;
-    private static final int completed = 1;
-
-    private boolean isWorkforceProcess;
     private int mOrderId;
+
+    protected View mBottomContainer;
+    protected ScanView mEnergyScanView;
+    private androidx.appcompat.widget.Toolbar toolbar;
 
     private Customer mCurrentCustomer;
     private Reading mCurrentReading;
+    private boolean isWorkforceProcess;
+    private SerialScanViewComposite composite;
+    private BarcodeScanViewPlugin barcodeSVP;
+    private MeterScanViewPlugin meterSVP;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_multi_scanner);
 
-        if (getIntent() != null) {
-            mOrderId = getIntent().getIntExtra(KEY_ORDER_ID, -1);
-            isWorkforceProcess = getIntent().getBooleanExtra(IS_WORKFORCE_PROCESS, false);
-        }
+        toolbar = findViewById(R.id.toolbar);
+        //toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_light));
+        toolbar.setTitle("Barcode");
+        toolbar.setTitleTextColor(Color.WHITE);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //if workforceProcess and orderId is not received stop the activity
-        //nothing to do as no result was found out in the database
-        if (mOrderId < 0 && isWorkforceProcess) {
-            finish();
-            return;
-        }
+        mBottomContainer = (View) findViewById(R.id.fragment_container);
+        mEnergyScanView = (ScanView) findViewById(R.id.energy_scan_view);
 
-        setMode(MeterScanMode.BARCODE);
-        setShowModeControls(false);
-    }
+        composite = (SerialScanViewComposite) new SerialScanViewComposite("SERIAL");
 
-    @Override
-    public void onResult(MeterScanResult energyResult) {
-        super.onResult(energyResult);
-        try {
-            String result = energyResult.getResult();
+        ScanViewPluginConfig barcodeScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "barcode_view_config.json");
+        BarcodeScanPlugin barcodeScanPlugin = new BarcodeScanPlugin(this, "barcodePlugin", getString(R.string.anyline_license_key));
+        barcodeSVP = new BarcodeScanViewPlugin(this, barcodeScanPlugin, barcodeScanViewPluginConfig);
 
-            if (mCurrentReading != null) {
+
+
+        ScanViewPluginConfig meterScanViewConfig = new ScanViewPluginConfig(getApplicationContext(), "energy_view_config.json");
+        MeterScanPlugin meterScanPlugin = new MeterScanPlugin(this, "meterPlugin", getString(R.string.anyline_license_key));
+        meterSVP = new MeterScanViewPlugin(this,  meterScanPlugin, meterScanViewConfig);
+        meterSVP.setScanMode(MeterScanMode.AUTO_ANALOG_DIGITAL_METER);
+
+        barcodeSVP.addScanResultListener(new ScanResultListener() {
+            @Override
+            public void onResult(ScanResult energyResult) {
+
+                toolbar.setTitle("Meter Reading");
                 try {
-                    handleMeterScan(result, energyResult.getFullImage(), energyResult.getCutoutImage());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                return;
-            }
+                    String result = energyResult.getResult().toString();
 
-            if (mCurrentCustomer == null) {
-                DataBaseProcessesAdapter dataBase = new DataBaseProcessesAdapter(this.getApplicationContext());
-                if (isWorkforceProcess) {
+                    if (mCurrentReading != null) {
+                        try {
+                            handleMeterScan(result, energyResult.getFullImage(), energyResult.getCutoutImage());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        return;
+                    }
 
-                    if(dataBase.getCustomerMeterIdListByOrderId(mOrderId) != null){
-                        for (String meterId : dataBase.getCustomerMeterIdListByOrderId(mOrderId)) {
-                            if(result.contains(meterId)){
-                                mCurrentCustomer = dataBase.getCustomersByOrderIdAndMeterId(meterId, mOrderId);
-                                break;
+                    if (mCurrentCustomer == null) {
+                        DataBaseProcessesAdapter dataBase = new DataBaseProcessesAdapter(CustomerIdentifyScannerActivity.this);
+                        if (isWorkforceProcess) {
+
+                            if (dataBase.getCustomerMeterIdListByOrderId(mOrderId) != null) {
+                                for (String meterId : dataBase.getCustomerMeterIdListByOrderId(mOrderId)) {
+                                    if (result.contains(meterId)) {
+                                        mCurrentCustomer = dataBase.getCustomersByOrderIdAndMeterId(meterId, mOrderId);
+                                        break;
+                                    }
+                                }
+                            }
+
+                        } else {
+
+                            if (dataBase.getCustomerMeterIdList() != null) {
+                                for (String meterId : dataBase.getCustomerMeterIdList()) {
+                                    if (result.contains(meterId)) {
+                                        mCurrentCustomer = dataBase.getCustomersByMeterId(meterId);
+                                        break;
+                                    }
+                                }
+                            }
+
+                            if (mCurrentCustomer != null) {
+                                mCurrentReading = dataBase.getLastReadingByCustomerId(mCurrentCustomer.getId());
                             }
                         }
-                    }
 
-                } else {
+                        if (mCurrentCustomer == null) {
+                            new AlertDialog.Builder(CustomerIdentifyScannerActivity.this)
+                                    .setMessage(getString(R.string.customer_not_found))
+                                    .setCancelable(false)
+                                    .setPositiveButton(R.string.ok, null)
+                                    .show();
 
-                    if(dataBase.getCustomerMeterIdList() != null){
-                        for (String meterId : dataBase.getCustomerMeterIdList()) {
-                            if(result.contains(meterId)){
-                                mCurrentCustomer = dataBase.getCustomersByMeterId(meterId);
-                                break;
-                            }
+                            new Handler().postDelayed(new Runnable() {
+
+                                @Override
+                                public void run() {
+                                    //if (!mEnergyScanView.getScanViewPlugin().isRunning()) {
+                                    mEnergyScanView.start();
+                                    //}
+                                }
+                            }, 3000);
                         }
+
+                        processReading();
                     }
-                }
-                if (mCurrentCustomer != null) {
-                    mCurrentReading = dataBase.getLastReadingByCustomerId(mCurrentCustomer.getId());
+                }catch (Exception ex) {
                 }
             }
+        });
 
-            if (mCurrentCustomer == null) {
-                new AlertDialog.Builder(this)
-                        .setMessage(getString(R.string.customer_not_found))
-                        .setCancelable(false)
-                        .setPositiveButton(R.string.ok, null)
-                        .show();
 
-                new Handler().postDelayed(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        if (!mEnergyScanView.getScanViewPlugin().isRunning()) {
-                            mEnergyScanView.start();
-                        }
-                    }
-                }, 3000);
+        meterSVP.addScanResultListener(new ScanResultListener() {
+            @Override
+            public void onResult(ScanResult energyResult) {
+                handleMeterScan(energyResult.getResult().toString() , energyResult.getFullImage(), energyResult.getCutoutImage());
             }
+        });
 
-            processReading();
-        }catch (Exception ex){}
+        composite.add(barcodeSVP);
+        composite.add(meterSVP);
+
+        mEnergyScanView.setScanViewPlugin(composite);
     }
+
 
     //method used for insert data in a specific format in the database
-    private String convertDateToString(Date date)
-    {
+    private String convertDateToString(Date date) {
         String dateString = null;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
-        try{
-            dateString = simpleDateFormat.format( date );
-        }catch (Exception ex ){
+        try {
+            dateString = simpleDateFormat.format(date);
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return dateString;
     }
 
-    private void handleMeterScan(String readingResult, AnylineImage fullImage, AnylineImage cutoutImage){
+    private void handleMeterScan(String readingResult, AnylineImage fullImage, AnylineImage cutoutImage) {
 
 
         try {
@@ -145,15 +186,12 @@ public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity
             mCurrentReading.setCutoutImageLocalPath(setupImagePath(cutoutImage, true));
             mCurrentReading.setNewReading(readingResult);
             mCurrentReading.setNewReadingDate(convertDateToString(new Date()));
-            mCurrentCustomer.setIsSynced(mustSync);
-            mCurrentCustomer.setIsCompleted(completed);
             mCurrentCustomer.setReading(mCurrentReading);
-
             mBottomContainer.setVisibility(View.GONE);
 
             startResultActivityIntent();
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
@@ -163,54 +201,11 @@ public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity
         if (mCurrentReading == null) {
             return;
         }
-
-        setMode(MeterScanMode.AUTO_ANALOG_DIGITAL_METER);
         setTitle(R.string.category_energy);
-        setScanning(true);
 
         //make visible the customer detail container and setup data
         mBottomContainer.setVisibility(View.VISIBLE);
         setupCustomerDetails();
-    }
-
-    private String setupImagePath(AnylineImage image, boolean isCutout){
-        Date date = new Date();
-        String imagePath = "";
-        try {
-            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(date);
-            if(this.getExternalFilesDir(null) != null) {
-
-                if(isCutout) {
-                    imagePath = this.getExternalFilesDir(null)
-                                                  .toString() + "/cutouts/" + "CUTOUT_IMAGE_" + mCurrentCustomer
-                                                  .getMeterId() + "_" + timeStamp;
-                }else{
-
-                    imagePath = this
-                                        .getExternalFilesDir(null)
-                                        .toString() + "/readings/" + "READING_IMAGE_" + mCurrentCustomer.getMeterId() + "_" + timeStamp;
-                }
-            }else if(this.getFilesDir() != null){
-
-                if(isCutout) {
-                    imagePath = this.getFilesDir()
-                                    .toString() + "/cutouts/" + "CUTOUT_IMAGE_" + mCurrentCustomer
-                                        .getMeterId() + "_" + timeStamp;
-                }else{
-
-                    imagePath = this.getFilesDir().toString() + "/readings/" + "READING_IMAGE_" + mCurrentCustomer.getMeterId() + "_" + timeStamp;
-                }
-            }
-            File fullFile = new File(imagePath);
-            //create the directory
-            fullFile.mkdirs();
-            image.save(fullFile, 100);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
-        return imagePath;
     }
 
     private void startResultActivityIntent(){
@@ -226,7 +221,48 @@ public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity
         overridePendingTransition(R.anim.activity_open_translate, R.anim.fade_out);
     }
 
-    private void setupCustomerDetails(){
+    private String setupImagePath(AnylineImage image, boolean isCutout) {
+        Date date = new Date();
+        String imagePath = "";
+        try {
+            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(date);
+            if (this.getExternalFilesDir(null) != null) {
+
+                if (isCutout) {
+                    imagePath = this.getExternalFilesDir(null)
+                            .toString() + "/cutouts/" + "CUTOUT_IMAGE_" + mCurrentCustomer
+                            .getMeterId() + "_" + timeStamp;
+                } else {
+
+                    imagePath = this
+                            .getExternalFilesDir(null)
+                            .toString() + "/readings/" + "READING_IMAGE_" + mCurrentCustomer.getMeterId() + "_" + timeStamp;
+                }
+            } else if (this.getFilesDir() != null) {
+
+                if (isCutout) {
+                    imagePath = this.getFilesDir()
+                            .toString() + "/cutouts/" + "CUTOUT_IMAGE_" + mCurrentCustomer
+                            .getMeterId() + "_" + timeStamp;
+                } else {
+
+                    imagePath = this.getFilesDir().toString() + "/readings/" + "READING_IMAGE_" + mCurrentCustomer.getMeterId() + "_" + timeStamp;
+                }
+            }
+            File fullFile = new File(imagePath);
+            //create the directory
+            fullFile.mkdirs();
+            image.save(fullFile, 100);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return imagePath;
+    }
+
+
+    private void setupCustomerDetails() {
         CustomerFragment customerFragment = new CustomerFragment();
         Bundle args = new Bundle();
         args.putBoolean(CustomerFragment.KEY_PARTIAL, true);
@@ -242,11 +278,11 @@ public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity
     }
 
     protected void reScanScreen(){
+        setTitle(R.string.intercom_barcode);
         mCurrentReading = null;
         mCurrentCustomer = null;
-        setMode(MeterScanMode.BARCODE);
-        setTitle(R.string.intercom_barcode);
-        setShowModeControls(false);
+        composite.startWithId(barcodeSVP.getId());
+        mBottomContainer.setVisibility(View.GONE);
     }
 
     @Override
@@ -258,16 +294,40 @@ public class CustomerIdentifyScannerActivity extends MeterReadingProcessActivity
 
         }else if (requestCode == ResultActivity.ACTION_SEND_RESULT && resultCode == RESULT_OK) {
             mCurrentReading = null;
+            reScanScreen();
             finish();
         }else if (requestCode == ResultActivity.ACTION_SEND_RESULT && resultCode == ResultActivity.ACTION_RESCAN_RESULT) {
             mCurrentReading = null;
             reScanScreen();
         }
         else {
+            reScanScreen();
             //processReading();
-            mBottomContainer.setVisibility(View.VISIBLE);
+            //mBottomContainer.setVisibility(View.VISIBLE);
         }
     }
 
+    @Override
+    protected void onPause() {
+        mEnergyScanView.stop();
+        mEnergyScanView.releaseCameraInBackground();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mEnergyScanView.start();
+        if(composite.getId().equals(barcodeSVP.getId())){
+            toolbar.setTitle("Barcode");
+        }
+
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
 }

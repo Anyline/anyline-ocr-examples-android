@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/black_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ProgressBar
+                android:id="@+id/pb_scan_waiting"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="110dp"
+                android:layout_height="106dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hint" />
+
+            <TextView
+                android:id="@+id/tv_instruction2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Step 2: Read NFC"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Passport Number"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_instruction2" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Date of Birth"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Date of Expiry"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/tv_mrz_document_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginLeft="64dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/tv_mrz_date_of_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="@+id/tv_mrz_document_number"
+                app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/tv_mrz_date_of_expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="@+id/tv_mrz_date_of_birth"
+                app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="Please make sure you have enabled NFC and then place the phone on top of your passport."
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_hint"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hint"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_issuing_authority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Issuing Authority"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_document_number"
+                app:layout_constraintTop_toBottomOf="@+id/tv_document_number"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_nationality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/german_id_front_nationality"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_gender"
+                app:layout_constraintStart_toStartOf="@+id/tv_issuing_country_code"
+                app:layout_constraintTop_toBottomOf="@+id/tv_issuing_country_code"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Gender"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_nationality"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nationality"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_nfc_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+                app:layout_constraintEnd_toEndOf="@+id/tv_hint"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+            <TextView
+                android:id="@+id/tv_nfc_issuing_authority"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_issuing_authority"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_name"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_issuing_authority" />
+
+            <TextView
+                android:id="@+id/tv_nfc_nationality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_nationality"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_issuing_authority"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_nationality" />
+
+            <TextView
+                android:id="@+id/tv_nfc_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_gender"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_nationality"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_gender" />
+
+            <TextView
+                android:id="@+id/tv_date_of_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Date of Birth"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_document_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/mrz_document_number"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_date_of_birth"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date_of_birth"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_issuing_country_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Issuing Country Code"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_issuing_authority"
+                app:layout_constraintTop_toBottomOf="@+id/tv_issuing_authority"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_nfc_date_of_birth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_date_of_birth"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_name"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_date_of_birth" />
+
+            <TextView
+                android:id="@+id/tv_nfc_document_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_document_number"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_date_of_birth"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_document_number" />
+
+            <TextView
+                android:id="@+id/tv_nfc_issuing_country_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_issuing_country_code"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_issuing_authority"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_issuing_country_code" />
+
+            <TextView
+                android:id="@+id/tv_valid_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Valid from"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_gender"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gender"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_valid_until"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Valid until"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_valid_from"
+                app:layout_constraintTop_toBottomOf="@+id/tv_valid_from"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_issuer_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Issuer Country"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_valid_until"
+                app:layout_constraintTop_toBottomOf="@+id/tv_valid_until"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_organizational_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Organizational Unit"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_issuer_country"
+                app:layout_constraintTop_toBottomOf="@+id/tv_issuer_country"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_certification_authority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="128dp"
+                android:text="Certification Authority"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_organizational_unit"
+                app:layout_constraintTop_toBottomOf="@+id/tv_organizational_unit"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_nfc_certification_authority"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_certification_authority"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_gender"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_certification_authority" />
+
+            <TextView
+                android:id="@+id/tv_nfc_organizational_unit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_organizational_unit"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_gender"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_organizational_unit" />
+
+            <TextView
+                android:id="@+id/tv_nfc_issuer_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_issuer_country"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_gender"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_issuer_country" />
+
+            <TextView
+                android:id="@+id/tv_nfc_valid_until"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_valid_until"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_nationality"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_valid_until" />
+
+            <TextView
+                android:id="@+id/tv_nfc_valid_from"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_valid_from"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nfc_issuing_country_code"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/tv_valid_from" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_begin="182dp"
+                app:layout_constraintStart_toEndOf="@id/tv_issuing_country_code"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_loading_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Ready for reading..."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pb_scan_waiting" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/confirmation_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/blue_light"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:minHeight="60dp"
+        android:text="@string/confirm"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

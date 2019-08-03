@@ -72,7 +72,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
 
         // initialize Anyline with the license key and a Listener that is called if a result is found
         try {
-            energyScanView.init("energy_view_config.json", getString(R.string.anyline_license_key));
+            energyScanView.init("abstract_energy_view_config.json", getString(R.string.anyline_license_key));
         } catch (Exception e) {
             e.printStackTrace();
         }
