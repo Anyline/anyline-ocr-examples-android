@@ -19,6 +19,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.camera.CameraController;
@@ -149,7 +150,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 		LinkedHashMap<String, String> identificationResult = new LinkedHashMap<>();
 
 		//DateFormat dateFormat =  java.text.DateFormat.getDateInstance(DateFormat.FULL);
-		DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.US);
 		identificationResult.put("HEADER_MRZ", getResources().getString(R.string.mrz_header));
 		identificationResult.put(getResources().getString(R.string.mrz_document_type) , (identification.getDocumentType() == null || identification.getDocumentType().isEmpty()) ?  getResources().getString(R.string.not_available) : identification.getDocumentType());
 		identificationResult.put(getResources().getString(R.string.mrz_country_code), (identification.getNationalityCountryCode() == null || identification.getNationalityCountryCode().isEmpty()) ? getResources().getString(R.string.not_available) : identification.getNationalityCountryCode());
