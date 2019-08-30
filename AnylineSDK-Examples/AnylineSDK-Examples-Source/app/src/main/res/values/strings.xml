@@ -25,6 +25,7 @@
     <string name="serial_number">Universal Serial Number</string>
     <string name="shipping_container">Shipping Container</string>
     <string name="vertical_shipping_container">Vertical Shipping Container</string>
+    <string name="tin">TIN</string>
     <string name="serial_number_energy">Serial Number</string>
 
     <string name="heat_meter_4_3">4 pre-decimal places</string>

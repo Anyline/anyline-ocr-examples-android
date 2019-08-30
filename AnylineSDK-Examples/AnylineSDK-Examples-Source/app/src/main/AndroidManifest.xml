@@ -304,6 +304,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".mrz.ScanSerialActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ocr.ScanTINActivity" />
 
         
 

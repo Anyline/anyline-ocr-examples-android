@@ -1,7 +1,6 @@
 package io.anyline.examples.mrz;
 
 import android.os.Bundle;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -12,8 +11,8 @@ import java.util.Collection;
 import io.anyline.examples.R;
 import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.view.AbstractScanViewPluginComposite;
 import io.anyline.view.ScanView;
-import io.anyline.view.ScanViewPluginComposite;
 import io.anyline.view.SerialScanViewComposite;
 
 public class ScanSerialActivity extends AppCompatActivity {
@@ -32,7 +31,7 @@ public class ScanSerialActivity extends AppCompatActivity {
         scanView.init("serial_scan_view_config.json", lic);
 
 
-        ScanViewPluginComposite composite = (SerialScanViewComposite) scanView.getScanViewPlugin();
+        AbstractScanViewPluginComposite composite = (SerialScanViewComposite) scanView.getScanViewPlugin();
 
 
         composite.addScanResultListener(new ScanResultListener() {

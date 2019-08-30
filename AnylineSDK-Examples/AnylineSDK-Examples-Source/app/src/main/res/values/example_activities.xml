@@ -74,6 +74,7 @@
         <item>io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity</item>
         <item>io.anyline.examples.ocr.ScanShippingContainerActivity</item>
         <item>io.anyline.examples.ocr.ScanVerticalShippingContainerActivity</item>
+        <item>io.anyline.examples.ocr.ScanTINActivity</item>
     </string-array>
 
     <string-array name="example_mro_names">
@@ -82,6 +83,7 @@
         <item>@string/vin</item>
         <item>@string/shipping_container</item>
         <item>@string/vertical_shipping_container</item>
+        <item>@string/tin</item>
     </string-array>
 
     <string-array name="example_identity_documents_names">
