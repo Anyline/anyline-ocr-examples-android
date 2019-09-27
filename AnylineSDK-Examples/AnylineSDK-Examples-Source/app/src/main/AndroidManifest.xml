@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.anyline.examples">
+          package="io.anyline.examples">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SET_DEBUG_APP"></uses-permission>
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
 
     <uses-feature
         android:name="android.hardware.nfc"
-        android:required="true"/>
+        android:required="false"/>
 
 
     <application
@@ -295,16 +296,29 @@
                 android:value=".ocr.ScanRecordActivity" />
         </activity>
         <activity android:name=".mrz.ScanBelgianDrivingLicenseActivity"
-            android:screenOrientation="portrait" />
+                  android:screenOrientation="portrait" />
         <activity android:name=".mrz.ScanDutchDrivingLicenseActivity"
-            android:screenOrientation="portrait" />
+                  android:screenOrientation="portrait" />
         <activity android:name=".mrz.NFC.NFCScanMRZActivity"
-            android:screenOrientation="portrait"/>
+                  android:screenOrientation="portrait"/>
         <activity android:name=".mrz.NFC.NFCScanActivity"
-            android:screenOrientation="portrait"/>
+                  android:screenOrientation="portrait"/>
         <activity android:name=".mrz.ScanSerialActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ocr.ScanTINActivity" />
+                  android:label="Serial Scanning"
+                  android:parentActivityName=".MainActivity"
+                  android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity" />
+        </activity>
+        <activity android:name=".ocr.ScanTINActivity"
+                  android:label="@string/tin"
+                  android:parentActivityName=".MainActivity"
+                  android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity" />
+        </activity>
 
         
 

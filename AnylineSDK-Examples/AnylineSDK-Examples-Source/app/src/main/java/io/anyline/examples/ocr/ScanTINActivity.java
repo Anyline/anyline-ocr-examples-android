@@ -1,6 +1,7 @@
 package io.anyline.examples.ocr;
 
 import android.os.Bundle;
+import android.view.ViewGroup;
 
 import java.util.HashMap;
 
@@ -31,7 +32,8 @@ public class ScanTINActivity extends ScanActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anyline_scan_view);
+        getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id
+                .scan_view_placeholder));
 
         scanView = (ScanView) findViewById(R.id.scan_view);
 

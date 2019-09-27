@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat;
 
 import java.util.Arrays;
 
+import at.nineyards.anyline.core.LicenseException;
 import io.anyline.examples.R;
 import io.anyline.nfc.NFC.DataGroup1;
 import io.anyline.nfc.NFC.DataGroup2;
@@ -162,8 +163,12 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
 
         if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
             if (Arrays.asList(tag.getTechList()).contains("android.nfc.tech.IsoDep")) {
-                NfcDetector nfcDetector = new NfcDetector(this);
-                nfcDetector.startNfcDetection(passportNumber, dateOfBirth, dateOfExpiry);
+                try {
+                    NfcDetector nfcDetector = new NfcDetector(this, getString(R.string.anyline_license_key));
+                    nfcDetector.startNfcDetection(passportNumber, dateOfBirth, dateOfExpiry);
+                } catch (LicenseException e){
+                    e.printStackTrace();
+                }
             }
         }
     }

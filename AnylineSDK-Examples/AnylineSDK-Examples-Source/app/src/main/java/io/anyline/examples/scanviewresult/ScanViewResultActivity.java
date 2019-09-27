@@ -120,6 +120,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             if (result.get(getResources().getString(R.string.personal_number)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.personal_number), result.get(getResources().getString(R.string.personal_number)));
             }
+
             if(result.get(getResources().getString(R.string.mrz_viz_sur_names)) != null ||
                     result.get(getResources().getString(R.string.mrz_viz_given_names)) != null ||
                     result.get(getResources().getString(R.string.mrz_viz_dob)) != null ||
