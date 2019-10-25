@@ -8,21 +8,9 @@
  */
 package io.anyline.examples.meter;
 
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.Spanned;
-import android.text.style.AbsoluteSizeSpan;
-import android.text.style.BackgroundColorSpan;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.StyleSpan;
-import android.view.ViewGroup;
 
 import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.energy.EnergyScanView;
-import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.meter.baseactivities.AbstractEnergyActivity;
 import io.anyline.plugin.meter.MeterScanMode;

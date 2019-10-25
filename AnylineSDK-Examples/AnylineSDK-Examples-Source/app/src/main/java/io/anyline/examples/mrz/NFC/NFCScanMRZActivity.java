@@ -1,14 +1,22 @@
 package io.anyline.examples.mrz.NFC;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.nfc.NfcAdapter;
+import android.nfc.NfcManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.dialog.MaterialDialogs;
 
 import io.anyline.examples.R;
 import io.anyline.plugin.ScanResult;
@@ -31,14 +39,13 @@ public class NFCScanMRZActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nfc_mrz_scan);
         androidx.appcompat.widget.Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("NFC SCANNER");
-        toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_light));
+        toolbar.setTitle("NFC");
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         scanView = findViewById(R.id.scan_view);
-        init();
+
     }
 
     private void init() {
@@ -75,18 +82,66 @@ public class NFCScanMRZActivity extends AppCompatActivity {
         scanView.setScanViewPlugin(scanViewPlugin);
 
     }
-
-
+    
     @Override
     protected void onResume() {
         super.onResume();
-        scanView.start();
+
+        NfcManager manager = (NfcManager) getSystemService(Context.NFC_SERVICE);
+        NfcAdapter adapter = manager.getDefaultAdapter();
+        if(adapter == null ){
+            new MaterialAlertDialogBuilder(this, R.style.Theme_MyApp_Dialog_Alert)
+                    .setTitle("NFC error")
+                    .setMessage("NFC passport reading is not supported on this device.")
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                        @Override
+                        public void onDismiss(DialogInterface dialog) {
+                            finish();
+                        }
+                    }).show();
+        } else if(!adapter.isEnabled()){
+            new MaterialAlertDialogBuilder(this, R.style.Theme_MyApp_Dialog_Alert)
+                    .setTitle("NFC error")
+                    .setMessage("You first have to enable NFC in your options!")
+                    .setPositiveButton("NFC SETTINGS", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(android.provider.Settings.ACTION_NFC_SETTINGS));
+                        }
+                    })
+                    .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                        @Override
+                        public void onDismiss(DialogInterface dialog) {
+                            finish();
+                        }
+                    }).show();
+        } else {
+            init();
+        }
+
+        if(scanView.getScanViewPlugin() != null){
+            scanView.start();
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        scanView.stop();
+        if(scanView.getScanViewPlugin() != null){
+            scanView.stop();
+        }
     }
 
     @Override
@@ -96,5 +151,12 @@ public class NFCScanMRZActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
     }
 }

@@ -11,7 +11,10 @@
     "offset": {
       "x": 10,
       "y": 0
-    }
+    },
+    "imageOn": "flash_on",
+    "imageOff": "flash_off",
+    "imageAuto": "flash_auto"
   },
 
   "viewPlugin" : {

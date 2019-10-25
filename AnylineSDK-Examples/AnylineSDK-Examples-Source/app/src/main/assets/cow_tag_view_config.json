@@ -3,9 +3,12 @@
     "captureResolution": "720",
     "zoomGesture": true
   },
-  "flash": {
-    "mode": "manual",
-    "alignment": "bottom_right"
+  "flash" : {
+    "mode": "auto",
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off",
+    "imageAuto": "flash_auto"
   },
   "viewPlugin": {
     "cutoutConfig": {

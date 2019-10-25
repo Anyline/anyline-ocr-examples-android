@@ -3,11 +3,12 @@
     "captureResolution": "720",
     "zoomGesture": true
   },
-  "flash": {
-    "mode": "manual",
+  "flash" : {
+    "mode": "auto",
     "alignment": "bottom_right",
     "imageOn": "flash_on",
-    "imageOff": "flash_off"
+    "imageOff": "flash_off",
+    "imageAuto": "flash_auto"
   },
   "viewPlugin": {
     "delayStartScanTime":2000,

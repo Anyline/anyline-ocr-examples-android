@@ -26,7 +26,7 @@
       }
     },
     "scanFeedback" : {
-      "style" : "RECT",
+      "style" : "CONTOUR_RECT",
       "strokeColor" : "0099FF",
       "fillColor" : "220099FF",
       "blinkOnResult": true,

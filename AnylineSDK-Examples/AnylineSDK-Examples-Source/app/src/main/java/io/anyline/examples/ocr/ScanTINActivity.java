@@ -35,7 +35,7 @@ public class ScanTINActivity extends ScanActivity {
         getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id
                 .scan_view_placeholder));
 
-        scanView = (ScanView) findViewById(R.id.scan_view);
+        scanView = findViewById(R.id.scan_view);
 
         AnylineTINConfig tinConfig = new AnylineTINConfig();
         tinConfig.setScanMode(AnylineTINConfig.TINScanMode.FLEXIBLE);
@@ -71,7 +71,7 @@ public class ScanTINActivity extends ScanActivity {
 
         HashMap<String, String> tinResult = new HashMap();
 
-        tinResult.put(getResources().getString(R.string.tin), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
+        tinResult.put(getResources().getString(R.string.tin), result.isEmpty() ? getResources().getString(R.string.not_available) : result);
 
         return tinResult;
     }

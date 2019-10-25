@@ -10,6 +10,9 @@
     <string name="anyline_website_download_link_https" translatable="false"><u>https://www.anyline.com/free-demos/</u></string>
     <string name="anyline_portal_link" translatable="false"><u>https://portal.anyline.com/HW0HPL0MmPKVDvDIKXfHEt6Vuy5fg2Eo5FZ7kxzCyupEO,22</u></string>
 
+    <string name="scan_mrz">Scan MRZ</string>
+    <string name="read_nfc">Read NFC</string>
+
     <string name="gas_meter">Gas Meter</string>
     <string name="water_meter">Water Meter</string>
     <string name="digital_meter">Digital Meter</string>
@@ -35,6 +38,7 @@
     <string name="camera_permission_required">Permissions</string>
     <string name="camera_permission_required_details">Anyline needs the permission to access the camera in
         order to scan.</string>
+    <string name="camera_permission_denied">"Permission denied to use the Camera"</string>
 
     <string name="mrz_result_details">
         Name: %1$s %2$s\nNo.: %3$s\nCountry Code: %4$s\nDay of Birth: %5$s\nExpiration Date: %6$s
@@ -63,6 +67,8 @@
     <string name="settings">Settings</string>
     <string name="action_settings">Settings</string>
     <string name="document">Document</string>
+    <string name="document_ui">Document UI</string>
+    <string name="scan_document">Scan Document</string>
     <string name="document_advanced_outline_detection">Advanced Outline Detection</string>
     <string name="document_fast_outline_detection">Fast Outline Detection</string>
     <string name="document_error_not_sharp">Document is not sharp. Please hold the camera steadily and ensure the document is in focus</string>
@@ -302,13 +308,14 @@
     <string name="customer_not_found">Customer not found!</string>
 
     <!-- Confirmation messages -->
-    <string name="screen_scan_result_confirm_msg">Please confirm you data before sending.</string>
+    <string name="screen_scan_result_confirm_msg">Please confirm your data before sending.</string>
     <string name="screen_scan_result_confirm_text">I, %1$s, hereby declare that the data above is complete and correct.</string>
     <string name="screen_scan_result_confirm_title">Confirmation</string>
     <string name="screen_scan_result_range_confirm_back">Back</string>
     <string name="screen_scan_result_range_confirm_msg">Your reading is outside the expected range. Please confirm that this value is correct:  %1$s kWh</string>
     <string name="screen_scan_result_range_confirm_ok">Confirm</string>
     <string name="self_reading_screen_received_msg">We have received your meter reading. Thank you!</string>
+    <string name="existing_scans_will_be_overwritten_msg">If you perform new scans existing scans will be overwritten</string>
 
 
     <!--Industries name-->

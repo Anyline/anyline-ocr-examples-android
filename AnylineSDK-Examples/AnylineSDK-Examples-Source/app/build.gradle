@@ -8,8 +8,8 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 277
-        versionName "14"
+        versionCode 281
+        versionName "15"
 
         ndk {
             abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
@@ -43,8 +43,8 @@ dependencies {
     //include AnylineSDK from locale libs folder
     //api(name:'anylinesdk-release-14-RC1', ext:'aar')
 
-    //include AnylineSDK from maven
-    api 'io.anyline:anylinesdk:14@aar'
+    //include AnylineSDK from mave
+    api 'io.anyline:anylinesdk:15@aar'
 
     implementation 'io.intercom.android:intercom-sdk:5.1.6'
 
@@ -53,7 +53,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-vision-face-model:17.0.2'
     implementation 'com.madgag.spongycastle:core:1.54.0.0'
     implementation 'com.madgag.spongycastle:pkix:1.54.0.0'
+    implementation 'com.google.android.gms:play-services-analytics:17.0.0'
 
-    customImplementation('io.anyline:anylinesdk:14@aar')
+
+    customImplementation('io.anyline:anylinesdk:15@aar')
 }
 

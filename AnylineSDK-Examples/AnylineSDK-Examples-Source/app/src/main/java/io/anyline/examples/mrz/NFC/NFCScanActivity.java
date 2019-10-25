@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -73,6 +74,8 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
 
     private TextView tvLoadingHint;
     private ProgressBar progressBar;
+    private TextView tvProgressNumber;
+    private ImageView ivCheck;
 
 
     Handler handler = new Handler(Looper.getMainLooper());
@@ -85,9 +88,8 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
         setContentView(R.layout.activity_nfc);
 
         androidx.appcompat.widget.Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("NFC SCANNER");
-        toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_light));
-        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitle("NFC");
+        toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -132,6 +134,9 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
         progressBar = findViewById(R.id.pb_scan_waiting);
         tvLoadingHint = findViewById(R.id.tv_loading_hint);
 
+        tvProgressNumber = findViewById(R.id.tv_progress_number);
+        ivCheck = findViewById(R.id.check_mark);
+        ivCheck.animate().alpha(0.0f).setDuration(0);
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
         //already checked in starting activity if nfc exists and is switched on
@@ -164,7 +169,7 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
         if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
             if (Arrays.asList(tag.getTechList()).contains("android.nfc.tech.IsoDep")) {
                 try {
-                    NfcDetector nfcDetector = new NfcDetector(this, getString(R.string.anyline_license_key));
+                    NfcDetector nfcDetector = new NfcDetector(getApplicationContext(), this, getString(R.string.anyline_license_key));
                     nfcDetector.startNfcDetection(passportNumber, dateOfBirth, dateOfExpiry);
                 } catch (LicenseException e){
                     e.printStackTrace();
@@ -180,9 +185,6 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
 
     @Override
     public void onDg1Success(DataGroup1 dataGroup1) {
-
-
-
         final String firstName = dataGroup1.getFirstName();
         final String lastName = dataGroup1.getLastName();
         final String birthday = dataGroup1.getDateOfBirth();
@@ -191,7 +193,6 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
         final String gender = dataGroup1.getGender();
         final String  issuingStateCode= dataGroup1.getIssuingStateCode();
         final String nationality = dataGroup1.getNationality();
-
         final String name = firstName + " " + lastName;
 
 
@@ -232,6 +233,8 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
 
     @Override
     public void onSODSuccess(final SOD sod) {
+        View[] animatedViews = new View[]{tvProgressNumber, ivCheck};
+        long delayBetweenAnimations = 100L;
         handler.post(new Runnable() {
             @Override
             public void run() {
@@ -241,8 +244,29 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
                 tvNFCOrganizationalUnit.setText(sod.getIssuerOrganizationalUnit());
                 tvNFCCertificationAuthority.setText(sod.getIssuerCertificationAuthority());
                 tvNFCIssuingAuthority.setText(sod.getIssuerOrganization());
+                tvProgressNumber.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        tvProgressNumber.animate().alpha(0.0f);
+                    }
+                }, 0);
+                ivCheck.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ivCheck.animate().alpha(1.0f);
+                    }
+                }, 1000);
+
             }
         });
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ivCheck.setVisibility(View.VISIBLE);
+                ivCheck.animate().alpha(1.0f);
+            }
+        }, 1000);
     }
 
     @Override
@@ -265,7 +289,9 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
     @Override
     protected void onPause() {
         super.onPause();
-        mNfcAdapter.disableForegroundDispatch(this);
+        if(mNfcAdapter != null){
+            mNfcAdapter.disableForegroundDispatch(this);
+        }
     }
 
     @Override
@@ -275,5 +301,11 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
     }
 }

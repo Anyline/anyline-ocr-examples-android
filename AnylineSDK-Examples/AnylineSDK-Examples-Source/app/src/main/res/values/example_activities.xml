@@ -29,6 +29,7 @@
         <item>@string/isbn</item>
         <item>@string/barcode</item>
         <item>@string/document</item>
+        <item>@string/document_ui</item>
     </string-array>
 
     <string-array name="example_others_classes" translatable="false">
@@ -43,6 +44,7 @@
         <item>io.anyline.examples.ocr.ScanIsbnActivity</item>
         <item>io.anyline.examples.barcode.ScanBarcodeActivity</item>
         <item>io.anyline.examples.document.ScanDocumentActivity</item>
+        <item>io.anyline.examples.document.DocScanUIMainActivity</item>
 
     </string-array>
 
@@ -92,7 +94,6 @@
         <item>@string/title_driving_license</item>
         <item>@string/title_german_id_front</item>
         <item>@string/title_barcode_PDF417</item>
-        <item>@string/title_serial_scanning</item>
         <item>Processes</item>
         <item>@string/title_nfc_scanning</item>
     </string-array>
@@ -103,7 +104,6 @@
         <item>io.anyline.examples.mrz.ScanDrivingLicenseActivity</item>
         <item>io.anyline.examples.mrz.ScanGermanIdFrontActivity</item>
         <item>io.anyline.examples.mrz.ScanBarcodePDF417Activity</item>
-        <item>io.anyline.examples.mrz.ScanSerialActivity</item>
         <item>HEADER</item>
         <item>io.anyline.examples.mrz.NFC.NFCScanMRZActivity</item>
     </string-array>
