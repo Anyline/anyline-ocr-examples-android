@@ -17,7 +17,6 @@ import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 
@@ -27,8 +26,6 @@ import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.core.exception_error_codes;
 import at.nineyards.anyline.models.AnylineImage;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.mrz.Identification;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
@@ -83,7 +80,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 		scanViewPlugin.addScanResultListener(new ScanResultListener<ScanResult<ID>>() {
 			@Override
 			public void onResult(ScanResult<ID> idScanResult) {
-				Identification identification = (Identification) idScanResult.getResult();
+				MrzIdentification identification = (MrzIdentification) idScanResult.getResult();
 				Bitmap currentBitmap = identification.getFaceImage();
 				AnylineImage newImage = new AnylineImage(currentBitmap);
 				//set the path of the mrz Image
@@ -99,10 +96,11 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 		});
 	}
 
-	@Override
-	protected AnylineBaseModuleView getScanView() {
-		return null;
-	}
+	   @Override
+    protected ScanView getScanView() {
+        return null;
+    }
+
 
 	@Override
 	protected void onResume() {

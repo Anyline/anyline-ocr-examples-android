@@ -4,7 +4,7 @@
     "zoomGesture": true
   },
   "flash" : {
-    "mode": "auto",
+    "mode": "manual",
     "alignment": "bottom_right",
     "imageOn": "flash_on",
     "imageOff": "flash_off",

@@ -325,6 +325,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
+        <activity android:name=".meter.ParallelResultActivity" />
+        <activity android:name=".meter.ScanParallelAutoAnalogDigitalMeterActivity" />
 
         
 

@@ -14,7 +14,6 @@ import java.util.HashMap;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
@@ -82,10 +81,11 @@ public class ScanGermanIdFrontActivity extends ScanActivity implements CameraOpe
 		germanIdFrontScanView.setScanViewPlugin(scanViewPlugin);
 	}
 
-	@Override
-	protected AnylineBaseModuleView getScanView() {
-		return null;
-	}
+	   @Override
+    protected ScanView getScanView() {
+        return null;
+    }
+
 
 	@Override
 	protected void onResume() {

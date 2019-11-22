@@ -23,10 +23,10 @@ import org.json.JSONObject;
 
 import java.io.InputStream;
 
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ScanningConfigurationActivity;
+import io.anyline.view.ScanView;
 
 
 public class IsbnActivity extends ScanningConfigurationActivity implements RequestListener {
@@ -188,11 +188,10 @@ public class IsbnActivity extends ScanningConfigurationActivity implements Reque
     }
 
     @Override
-    protected AnylineBaseModuleView getScanView() {
+    protected ScanView getScanView() {
         return null;
     }
-
-    @Override
+@Override
     protected ScanModuleEnum.ScanModule getScanModule() {
         return null;
     }

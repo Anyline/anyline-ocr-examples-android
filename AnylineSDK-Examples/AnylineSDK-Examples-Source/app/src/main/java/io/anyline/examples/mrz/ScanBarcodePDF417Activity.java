@@ -18,7 +18,6 @@ import java.util.HashMap;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
@@ -74,10 +73,11 @@ public class ScanBarcodePDF417Activity extends ScanActivity implements CameraOpe
 		});
 	}
 
-	@Override
-	protected AnylineBaseModuleView getScanView() {
-		return null;
-	}
+	   @Override
+    protected ScanView getScanView() {
+        return null;
+    }
+
 
 	@Override
 	protected ScanModuleEnum.ScanModule getScanModule() {

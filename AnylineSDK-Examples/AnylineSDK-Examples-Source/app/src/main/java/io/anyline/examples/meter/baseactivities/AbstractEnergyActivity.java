@@ -87,7 +87,6 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
                 String path = setupImagePath(result.getCutoutImage());
                 startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResul(energyResult), path);
 
-
                 setupScanProcessView(AbstractEnergyActivity.this, result, getScanModule());
                 foundBarcodeString = "";
             }

@@ -6,7 +6,6 @@ import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
@@ -24,11 +23,10 @@ public class ScanVehicleIdentificationNumberActivity extends ScanActivity implem
     private io.anyline.view.AnylineViewConfig anylineViewConfig;
 
     @Override
-    protected AnylineBaseModuleView getScanView() {
+    protected ScanView getScanView() {
         return null;
     }
-
-    @Override
+@Override
     protected ScanModuleEnum.ScanModule getScanModule() {
         return ScanModuleEnum.ScanModule.VEHICLE_IDENTIFICATION_NUMBER;
     }

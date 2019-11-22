@@ -9,10 +9,6 @@
 package io.anyline.examples.meter;
 
 import android.os.Bundle;
-import android.view.ViewGroup;
-
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.meter.baseactivities.AbstractEnergyActivity;
@@ -20,6 +16,7 @@ import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.meter.MeterScanMode;
 import io.anyline.plugin.meter.MeterScanResult;
 import io.anyline.plugin.meter.MeterScanViewPlugin;
+import io.anyline.view.ScanView;
 
 
 /**
@@ -58,7 +55,7 @@ public class ScanDialMeterActivity extends AbstractEnergyActivity {
 
 
     @Override
-    protected AnylineBaseModuleView getScanView() {
+    protected ScanView getScanView() {
         return null;
     }
 

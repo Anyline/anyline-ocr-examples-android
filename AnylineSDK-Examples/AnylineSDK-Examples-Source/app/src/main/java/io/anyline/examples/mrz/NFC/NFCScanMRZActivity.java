@@ -82,7 +82,7 @@ public class NFCScanMRZActivity extends AppCompatActivity {
         scanView.setScanViewPlugin(scanViewPlugin);
 
     }
-    
+
     @Override
     protected void onResume() {
         super.onResume();

@@ -13,7 +13,6 @@ import java.util.HashMap;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
@@ -83,11 +82,10 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
     }
 
     @Override
-    protected AnylineBaseModuleView getScanView() {
+    protected ScanView getScanView() {
         return null;
     }
-
-    @Override
+@Override
     protected void onResume() {
         super.onResume();
         drivingLicenseScanView.start();

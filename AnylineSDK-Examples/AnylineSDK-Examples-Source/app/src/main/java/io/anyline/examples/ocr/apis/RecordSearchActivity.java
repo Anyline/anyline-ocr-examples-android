@@ -10,10 +10,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ScanningConfigurationActivity;
+import io.anyline.view.ScanView;
 
 public class RecordSearchActivity extends ScanningConfigurationActivity {
 
@@ -82,11 +82,10 @@ public class RecordSearchActivity extends ScanningConfigurationActivity {
 
 
     @Override
-    protected AnylineBaseModuleView getScanView() {
+    protected ScanView getScanView() {
         return null;
     }
-
-    @Override
+@Override
     protected ScanModuleEnum.ScanModule getScanModule() {
         return null;
     }

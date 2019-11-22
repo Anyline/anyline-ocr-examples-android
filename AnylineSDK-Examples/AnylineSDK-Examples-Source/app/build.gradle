@@ -7,9 +7,9 @@ android {
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 16
-        targetSdkVersion 28
-        versionCode 281
-        versionName "15"
+        targetSdkVersion 29
+        versionCode 283
+        versionName "16"
 
         ndk {
             abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
@@ -41,10 +41,10 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 
     //include AnylineSDK from locale libs folder
-    //api(name:'anylinesdk-release-14-RC1', ext:'aar')
+    //api(name:'anylinesdk-release-16-RC3', ext:'aar')
 
     //include AnylineSDK from mave
-    api 'io.anyline:anylinesdk:15@aar'
+    api 'io.anyline:anylinesdk:16@aar'
 
     implementation 'io.intercom.android:intercom-sdk:5.1.6'
 
@@ -56,6 +56,6 @@ dependencies {
     implementation 'com.google.android.gms:play-services-analytics:17.0.0'
 
 
-    customImplementation('io.anyline:anylinesdk:15@aar')
+    customImplementation('io.anyline:anylinesdk:16@aar')
 }
 

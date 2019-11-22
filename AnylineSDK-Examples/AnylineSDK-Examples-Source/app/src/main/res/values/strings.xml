@@ -12,7 +12,7 @@
 
     <string name="scan_mrz">Scan MRZ</string>
     <string name="read_nfc">Read NFC</string>
-
+    
     <string name="gas_meter">Gas Meter</string>
     <string name="water_meter">Water Meter</string>
     <string name="digital_meter">Digital Meter</string>

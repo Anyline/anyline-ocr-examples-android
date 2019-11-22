@@ -6,10 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import at.nineyards.anyline.models.AnylineScanResult;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
+import io.anyline.view.ScanView;
+
 public abstract class ScanningConfigurationActivity extends AppCompatActivity{
 
-    protected abstract AnylineBaseModuleView getScanView();
+    protected abstract ScanView getScanView();
 
     /**
      * @return the module type view {@link io.anyline.examples.ScanModuleEnum.ScanModule}

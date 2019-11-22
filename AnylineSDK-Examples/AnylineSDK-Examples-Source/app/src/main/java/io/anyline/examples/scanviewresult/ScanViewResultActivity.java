@@ -16,13 +16,13 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ScanningConfigurationActivity;
 import io.anyline.examples.baseadapters.BaseGridAdapter;
 import io.anyline.examples.util.BitmapUtil;
 import io.anyline.examples.util.Constant;
+import io.anyline.view.ScanView;
 
 /**
  * Scan Vew Result Activity for the Result Screen
@@ -32,7 +32,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
     private String scanModule;
     private HashMap<String, String> result;
-   // private ScanViewResultAdapter scanResultAdapter;
+    // private ScanViewResultAdapter scanResultAdapter;
     private BaseGridAdapter scanResultAdapter;
     private RecyclerView recyclerView;
     private ImageView imageView;
@@ -92,7 +92,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
     }
 
     @Override
-    protected AnylineBaseModuleView getScanView() {
+    protected ScanView getScanView() {
         return null;
     }
 
@@ -127,7 +127,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
                     result.get(getResources().getString(R.string.mrz_viz_date_of_expiry)) != null ||
                     result.get(getResources().getString(R.string.mrz_viz_issue_date)) != null ||
                     result.get(getResources().getString(R.string.mrz_viz_address)) != null)
-            orderedHashMap.put("HEADER", getResources().getString(R.string.mrz_VIZ_header));
+                orderedHashMap.put("HEADER", getResources().getString(R.string.mrz_VIZ_header));
             if (result.get(getResources().getString(R.string.mrz_viz_sur_names)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.mrz_viz_sur_names), result.get(getResources().getString(R.string.mrz_viz_sur_names)));
             }
@@ -147,7 +147,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
                 orderedHashMap.put(getResources().getString(R.string.mrz_viz_address), result.get(getResources().getString(R.string.mrz_viz_address)));
             }
 
-			scanResultAdapter = new BaseGridAdapter(this.getApplicationContext(), orderedHashMap);
+            scanResultAdapter = new BaseGridAdapter(this.getApplicationContext(), orderedHashMap);
             //scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMap);
 
         } else if (scanModule.equals(getResources().getString(R.string.title_driving_license))) {
@@ -163,7 +163,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_categories), result.get(getResources().getString(R.string.driving_license_categories)));
             orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_POB), result.get(getResources().getString(R.string.driving_license_POB)));
 
-			scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapDrivingLicense);
+            scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapDrivingLicense);
 
         } else if (scanModule.equals(getResources().getString(R.string.title_german_id_front))) {
             LinkedHashMap<String, String> orderedHashMapGermanIdFront = new LinkedHashMap();

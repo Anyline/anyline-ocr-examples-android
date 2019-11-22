@@ -16,7 +16,6 @@ import android.widget.TextView;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
@@ -73,10 +72,11 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
 		});
 	}
 
-	@Override
-	protected AnylineBaseModuleView getScanView() {
-		return null;
-	}
+	   @Override
+    protected ScanView getScanView() {
+        return null;
+    }
+
 
 	@Override
 	protected ScanModuleEnum.ScanModule getScanModule() {

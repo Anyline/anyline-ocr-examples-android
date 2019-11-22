@@ -6,13 +6,12 @@ import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ocr.feedback.FeedbackType;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.ocr.AnylineOcrConfig;
 import io.anyline.plugin.ocr.OcrScanResult;
 import io.anyline.plugin.ocr.OcrScanViewPlugin;
 import io.anyline.view.BaseScanViewConfig;
@@ -26,11 +25,10 @@ public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugL
     private ScanView scanView;
 
     @Override
-    protected AnylineBaseModuleView getScanView() {
+    protected ScanView getScanView() {
         return null;
     }
-
-    @Override
+@Override
     protected ScanModuleEnum.ScanModule getScanModule() {
         return ScanModuleEnum.ScanModule.BOTTLECAP;
     }

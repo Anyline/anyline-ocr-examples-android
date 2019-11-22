@@ -15,16 +15,12 @@ import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
-import at.nineyards.anyline.modules.ocr.AnylineOcrConfig;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.plugin.ScanResultListener;
-import io.anyline.plugin.ocr.AnylineContainerConfig;
 import io.anyline.plugin.ocr.OcrScanResult;
 import io.anyline.plugin.ocr.OcrScanViewPlugin;
-import io.anyline.view.BaseScanViewConfig;
 import io.anyline.view.ScanView;
 
 
@@ -34,8 +30,9 @@ public class ScanShippingContainerActivity extends ScanActivity implements Anyli
     private ScanView scanView;
     private io.anyline.view.AnylineViewConfig anylineViewConfig;
 
+
     @Override
-    protected AnylineBaseModuleView getScanView() {
+    protected ScanView getScanView() {
         return null;
     }
 

@@ -6,7 +6,6 @@ import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
@@ -21,10 +20,11 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
 	private static final String TAG = ScanIsbnActivity.class.getSimpleName();
 	private ScanView scanView;
 
-	@Override
-	protected AnylineBaseModuleView getScanView() {
-		return null;
-	}
+	   @Override
+    protected ScanView getScanView() {
+        return null;
+    }
+
 
 	@Override
 	protected ScanModuleEnum.ScanModule getScanModule() {

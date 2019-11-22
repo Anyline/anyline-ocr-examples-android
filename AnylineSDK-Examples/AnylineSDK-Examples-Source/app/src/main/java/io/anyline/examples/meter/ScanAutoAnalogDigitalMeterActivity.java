@@ -10,11 +10,11 @@ package io.anyline.examples.meter;
 
 import android.os.Bundle;
 
-import at.nineyards.anyline.modules.AnylineBaseModuleView;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.meter.baseactivities.AbstractEnergyActivity;
 import io.anyline.plugin.meter.MeterScanMode;
 import io.anyline.plugin.meter.MeterScanViewPlugin;
+import io.anyline.view.ScanView;
 
 
 /**
@@ -34,7 +34,7 @@ public class ScanAutoAnalogDigitalMeterActivity extends AbstractEnergyActivity {
 
 
     @Override
-    protected AnylineBaseModuleView getScanView() {
+    protected ScanView getScanView() {
         return null;
     }
 
@@ -49,5 +49,4 @@ public class ScanAutoAnalogDigitalMeterActivity extends AbstractEnergyActivity {
         return ""; // we do not need this, as for the new analog, we do not have to select a special mode (e.g. digits before and after the decimal)
     }
 }
-
 

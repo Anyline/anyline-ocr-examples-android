@@ -10,9 +10,6 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.CompoundButton;
 
-import at.nineyards.anyline.modules.energy.EnergyResult;
-import at.nineyards.anyline.modules.energy.EnergyResultListener;
-import at.nineyards.anyline.modules.energy.EnergyScanView;
 import io.anyline.examples.R;
 import io.anyline.examples.baseactivities.BaseToolbarActivity;
 import io.anyline.plugin.ScanResultListener;
@@ -39,26 +36,13 @@ public abstract class MeterReadingProcessActivity extends BaseToolbarActivity im
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_scanner);
 
-        //mBottomContainer = (View) findViewById(R.id.bottom_container);
         mEnergyScanView = (ScanView) findViewById(R.id.energy_scan_view);
         mHandler = new Handler(Looper.getMainLooper());
 
         try {
-         //  mEnergyScanView.init("multi_scanner_energy_config.json", getString(R.string.anyline_license_key));
         } catch (Exception e) {
             e.printStackTrace();
         }
-/*
-
-        MeterScanViewPlugin scanViewPlugin = (MeterScanViewPlugin) mEnergyScanView.getScanViewPlugin();
-
-        mEnergyScanView.setScanViewPlugin(scanViewPlugin);
-       // scanViewPlugin.addScanResultListener(ScanResultListener<MeterScanResult>)
-        setMode(MeterScanMode.BARCODE);
-
-        scanViewPlugin.addScanResultListener(this);
-      //  mEnergyScanView.initAnyline(getString(R.string.anyline_license_key), this);
-*/
 
         if (getIntent() != null) {
             mShowModeControls = getIntent().getBooleanExtra(KEY_SHOW_MODE_CONTROLS, false);
