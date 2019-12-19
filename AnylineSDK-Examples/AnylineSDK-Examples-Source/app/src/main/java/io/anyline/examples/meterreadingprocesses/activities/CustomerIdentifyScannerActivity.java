@@ -50,7 +50,6 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
     private MeterScanViewPlugin meterSVP;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,20 +62,19 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mBottomContainer = (View) findViewById(R.id.fragment_container);
-        mEnergyScanView = (ScanView) findViewById(R.id.energy_scan_view);
+        mBottomContainer = findViewById(R.id.fragment_container);
+        mEnergyScanView = findViewById(R.id.energy_scan_view);
 
-        composite = (SerialScanViewComposite) new SerialScanViewComposite("SERIAL");
+        composite = new SerialScanViewComposite("SERIAL");
 
         ScanViewPluginConfig barcodeScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "barcode_view_config.json");
         BarcodeScanPlugin barcodeScanPlugin = new BarcodeScanPlugin(this, "barcodePlugin", getString(R.string.anyline_license_key));
         barcodeSVP = new BarcodeScanViewPlugin(this, barcodeScanPlugin, barcodeScanViewPluginConfig);
 
 
-
         ScanViewPluginConfig meterScanViewConfig = new ScanViewPluginConfig(getApplicationContext(), "energy_view_config.json");
         MeterScanPlugin meterScanPlugin = new MeterScanPlugin(this, "meterPlugin", getString(R.string.anyline_license_key));
-        meterSVP = new MeterScanViewPlugin(this,  meterScanPlugin, meterScanViewConfig);
+        meterSVP = new MeterScanViewPlugin(this, meterScanPlugin, meterScanViewConfig);
         meterSVP.setScanMode(MeterScanMode.AUTO_ANALOG_DIGITAL_METER);
 
         barcodeSVP.addScanResultListener(new ScanResultListener() {
@@ -145,7 +143,7 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
 
                         processReading();
                     }
-                }catch (Exception ex) {
+                } catch (Exception ex) {
                 }
             }
         });
@@ -154,7 +152,7 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
         meterSVP.addScanResultListener(new ScanResultListener() {
             @Override
             public void onResult(ScanResult energyResult) {
-                handleMeterScan(energyResult.getResult().toString() , energyResult.getFullImage(), energyResult.getCutoutImage());
+                handleMeterScan(energyResult.getResult().toString(), energyResult.getFullImage(), energyResult.getCutoutImage());
             }
         });
 
@@ -208,13 +206,13 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
         setupCustomerDetails();
     }
 
-    private void startResultActivityIntent(){
+    private void startResultActivityIntent() {
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra(ResultActivity.KEY_CUSTOMER, mCurrentCustomer);
-        if(isWorkforceProcess){
+        if (isWorkforceProcess) {
             intent.putExtra(ResultActivity.KEY_MODE_SAVE, true);
             startActivityForResult(intent, ResultActivity.ACTION_SAVE_RESULT);
-        }else {
+        } else {
             intent.putExtra(ResultActivity.KEY_MODE_SEND, true);
             startActivityForResult(intent, ResultActivity.ACTION_SEND_RESULT);
         }
@@ -277,40 +275,30 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-    protected void reScanScreen(){
+    protected void reScanScreen() {
         setTitle(R.string.intercom_barcode);
         mCurrentReading = null;
         mCurrentCustomer = null;
-        composite.startWithId(barcodeSVP.getId());
         mBottomContainer.setVisibility(View.GONE);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == ResultActivity.ACTION_SAVE_RESULT && resultCode == RESULT_OK) {
-            reScanScreen();
-
-        }else if (requestCode == ResultActivity.ACTION_SEND_RESULT && resultCode == RESULT_OK) {
+        if (requestCode == ResultActivity.ACTION_SEND_RESULT && resultCode == RESULT_OK) {
             mCurrentReading = null;
-            reScanScreen();
             finish();
-        }else if (requestCode == ResultActivity.ACTION_SEND_RESULT && resultCode == ResultActivity.ACTION_RESCAN_RESULT) {
+        } else if (requestCode == ResultActivity.ACTION_SEND_RESULT && resultCode == ResultActivity.ACTION_RESCAN_RESULT) {
             mCurrentReading = null;
-            reScanScreen();
         }
-        else {
-            reScanScreen();
-            //processReading();
-            //mBottomContainer.setVisibility(View.VISIBLE);
-        }
+        reScanScreen();
     }
 
     @Override
     protected void onPause() {
         mEnergyScanView.stop();
         mEnergyScanView.releaseCameraInBackground();
+        reScanScreen();
         super.onPause();
     }
 
@@ -318,7 +306,7 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         mEnergyScanView.start();
-        if(composite.getId().equals(barcodeSVP.getId())){
+        if (composite.getId().equals(barcodeSVP.getId())) {
             toolbar.setTitle("Barcode");
         }
 
