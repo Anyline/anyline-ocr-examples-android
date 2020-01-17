@@ -148,7 +148,9 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
 			public void onTakePictureSuccess() {
 				progressDialog = ProgressDialog.show(ScanDocumentActivity.this, "Processing", "Processing the picture" +
 						". Please wait", true);
-
+				if (progressDialog != null && progressDialog.isShowing()) {
+					progressDialog.dismiss();
+				}
 				if (notificationToast != null) {
 					notificationToast.cancel();
 				}
