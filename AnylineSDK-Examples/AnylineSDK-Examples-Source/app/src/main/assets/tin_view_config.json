@@ -1,6 +1,6 @@
 {
     "camera": {
-        "captureResolution": "1080p"
+        "captureResolution": "720p"
     },
     "flash": {
         "mode": "manual",
@@ -11,12 +11,12 @@
     "viewPlugin" : {
         "cutoutConfig" : {
             "style": "rect",
-            "maxWidthPercent": "90%",
-            "maxHeightPercent": "70%",
-            "alignment": "top_half",
+            "width": 720,
+            "alignment": "center",
+            "maxWidthPercent": "80%",
             "ratioFromSize": {
-                "width": 62,
-                "height": 12
+                "width": 720,
+                "height": 144
             },
             "outerColor": "000000",
             "outerAlpha": 0.3,
