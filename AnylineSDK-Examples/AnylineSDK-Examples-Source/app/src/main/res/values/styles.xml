@@ -16,6 +16,13 @@
         <item name="buttonBarNegativeButtonStyle">@style/PositiveButtonStyle</item>
     </style>
 
+    <style name="MyAppAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:textColor">@color/blue</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialogText</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
     <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
         <item name="android:textColor">@color/blue</item>
         <item name="android:textAllCaps">true</item>

@@ -1,42 +1,43 @@
 package io.anyline.examples.baseadapters;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import io.anyline.examples.R;
-import io.anyline.examples.scanviewresult.ScanViewResultAdapter;
 
 public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder> {
 
-	public static final int TYPE_HEADER = 0;
-	public static final int TYPE_ITEM = 1;
+	private static final int TYPE_HEADER = 0;
+	private static final int TYPE_ITEM = 1;
 
 	private Context context;
-	protected HashMap<String,String> scanResultHashMap;
+	private LinkedHashMap<String,String> scanResultHashMap;
 
-	public BaseGridAdapter(Context context, HashMap<String, String> scanResultHashMap) {
+	public BaseGridAdapter(Context context, LinkedHashMap<String, String> scanResultHashMap) {
 
 		this.context = context;
 		this.scanResultHashMap = scanResultHashMap;
 
 	}
 
+	@NonNull
 	@Override
-	public Holder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-
+	public Holder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
 		View view;
-
 		if(viewType == TYPE_HEADER) {
 			view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.header_type_usecase_layout, viewGroup, false);
 		} else {
@@ -47,12 +48,24 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 	}
 
 	@Override
-	public void onBindViewHolder(Holder holder, int position) {
+	public void onBindViewHolder(Holder holder, final int position) {
 		if(getItemViewType(position) == TYPE_HEADER) {
 			bindHeaderItem(holder, position);
 		} else {
 			bindGridItem(holder, position);
 		}
+		holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+
+			@Override
+			public boolean onLongClick(View v) {
+				String result = scanResultHashMap.values().toArray()[position].toString();
+				ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+				ClipData clip = ClipData.newPlainText("label", result );
+				clipboard.setPrimaryClip(clip);
+				Toast.makeText(context, "Copied: " +   result , Toast.LENGTH_LONG ).show();
+				return true;
+			}
+		});
 	}
 
 	/**
@@ -61,16 +74,16 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 	 * @param holder
 	 * @param position
 	 */
-	public void bindGridItem(Holder holder, final int position) {
+	private void bindGridItem(Holder holder, final int position) {
 
 		View container = holder.itemView;
 
 		Object dataFieldTitleResult = scanResultHashMap.keySet().toArray()[position];
 		Object scanDataResult = scanResultHashMap.get(dataFieldTitleResult);
 
-		TextView dataFieldTitleResultTextView = (TextView) container.findViewById(R.id.dataFieldTitleResult);
-		TextView resultScanDataTextView = (TextView) container.findViewById(R.id.resultScanData);
-		ImageView receivedDataImageView = (ImageView) container.findViewById(R.id.result_ok_image);
+		TextView dataFieldTitleResultTextView = container.findViewById(R.id.dataFieldTitleResult);
+		TextView resultScanDataTextView = container.findViewById(R.id.resultScanData);
+		ImageView receivedDataImageView = container.findViewById(R.id.result_ok_image);
 
 		if(String.valueOf(dataFieldTitleResult).equals(context.getResources().getString(R.string.mrz_viz_date_of_expiry))){
 			dataFieldTitleResult = context.getResources().getString(R.string.mrz_viz_date_of_expiry).replace("viz ", "");
@@ -109,7 +122,7 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 	 * @param holder
 	 * @param position
 	 */
-	protected void bindHeaderItem(Holder holder, final int position) {
+	private void bindHeaderItem(Holder holder, final int position) {
 
 		List<String> indexes = new ArrayList<String>(scanResultHashMap.values());
 
@@ -135,9 +148,9 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 	}
 
 
-	public class Holder extends RecyclerView.ViewHolder {
+	class Holder extends RecyclerView.ViewHolder {
 
-		public Holder(View itemView) {
+		Holder(View itemView) {
 			super(itemView);
 		}
 	}

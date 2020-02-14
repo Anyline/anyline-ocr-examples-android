@@ -17,12 +17,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import at.nineyards.anyline.models.AnylineImage;
 import io.anyline.examples.R;
 import io.anyline.examples.baseadapters.BaseGridAdapter;
 import io.anyline.examples.util.BitmapUtil;
 import io.anyline.examples.util.Constant;
+import io.intercom.android.sdk.models.Link;
 
 public class ParallelResultActivity extends Activity {
     private RecyclerView recyclerView;
@@ -65,7 +67,7 @@ public class ParallelResultActivity extends Activity {
             }
         }
 
-        scanResultAdapter = new BaseGridAdapter(this.getApplicationContext(), result);
+        scanResultAdapter = new BaseGridAdapter(this.getApplicationContext(), new LinkedHashMap<>(result));
         recyclerView.setAdapter(scanResultAdapter);
     }
 

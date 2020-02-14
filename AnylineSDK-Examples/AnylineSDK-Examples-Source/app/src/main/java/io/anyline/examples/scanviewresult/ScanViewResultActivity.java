@@ -188,7 +188,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapEnergy);
         }  else {
 
-            scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), result);
+            scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), new LinkedHashMap<>(result));
         }
     }
 

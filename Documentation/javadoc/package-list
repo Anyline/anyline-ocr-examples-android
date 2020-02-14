@@ -11,4 +11,3 @@ io.anyline.plugin.licenseplate
 io.anyline.plugin.meter
 io.anyline.plugin.ocr
 io.anyline.view
-org.opencv.core
