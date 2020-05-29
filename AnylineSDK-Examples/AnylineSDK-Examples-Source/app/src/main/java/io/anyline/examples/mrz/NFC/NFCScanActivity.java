@@ -2,6 +2,7 @@ package io.anyline.examples.mrz.NFC;
 
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
@@ -227,9 +228,19 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
         });
     }
 
-    @Override
-    public void onDg2Success(DataGroup2 dataGroup2) {
+
+    public void onDg2Success(final Bitmap faceImage) {
+        //
+        //        if(faceImage != null){
+        //            NFCScanActivity.this.runOnUiThread(new Runnable() {
+        //                @Override
+        //                public void run() {
+        //                    imageView.setImageBitmap(faceImage);
+        //                }
+        //            });
+        //        }
     }
+
 
     @Override
     public void onSODSuccess(final SOD sod) {

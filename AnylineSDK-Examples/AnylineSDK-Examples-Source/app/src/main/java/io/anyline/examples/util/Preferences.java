@@ -23,6 +23,15 @@ public class Preferences {
     private static final String PREFS_ONBOARDING_INCOMPLETE = "onboarding_complete";
     private static final String PREFS_ONBOARDING_INCOMPLETE_a = "onboarding_completee";
     private static final String PREF_INTERCOM_USER_ID = "uuid_intercom_user_id";
+    public static final String PREFS_PROJECT_NAME = "projectName";
+    public static final String PREFS_API_KEY = "apiKey";
+    public static final String SHARED_PREFS_ANYLINE_EXAMPLES = "prefs_examples_app";
+    public static final String PREFS_LOGIN_STATUS = "is_logged_in";
+    public static final String PREFS_ACCESS_TOKEN = "accessToken";
+    public static final String PREFS_PROJECT_TITLE= "projectTitle";
+    public static final String PREFS_CUTOUT_CONFIG = "cutoutConfig";
+    public static final String PREFS_CUSTOMER_ID = "customerId";
+
 
     private static Preferences instance;
 

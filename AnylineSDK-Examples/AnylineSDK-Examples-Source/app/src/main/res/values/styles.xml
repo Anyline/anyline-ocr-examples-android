@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/black_100</item>
+        <item name="colorPrimary">@color/blue_light</item>
         <item name="colorPrimaryDark">@color/blue</item>
         <item name="colorAccent">@color/blue</item>
         <item name="android:textColorSecondary">@color/black_50</item>
@@ -32,7 +32,7 @@
         <item name="android:textColor">@color/blue</item>
     </style>
 
-    <style name="AppTheme.DarkActionBar" parent="Theme.AppCompat.Light">
+    <style name="AppTheme.DarkActionBar" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/black_100</item>
         <item name="android:textColorPrimaryInverse">@color/black_100</item>
@@ -154,8 +154,6 @@
         <item name="android:textSize">18sp</item>
         <item name="android:paddingLeft">15dp</item>
         <item name="android:paddingRight">15dp</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
 
 
     </style>
@@ -232,8 +230,6 @@
         <item name="android:drawablePadding">2dp</item>
         <item name="android:gravity">center</item>
         <item name="android:clickable">true</item>
-        <item name="android:paddingBottom">10dp</item>
-        <item name="android:paddingTop">10dp</item>
         <item name="android:textColor">@color/blue</item>
         <item name="android:background">?selectableItemBackground</item>
     </style>
@@ -319,8 +315,6 @@
         <item name="android:layout_marginTop">@dimen/screen_contact_button_margin</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:paddingTop">@dimen/screen_contact_button_padding_top</item>
-        <item name="android:paddingBottom">@dimen/screen_contact_button_padding_bottom</item>
         <item name="android:paddingLeft">@dimen/screen_contact_button_padding_left</item>
         <item name="android:paddingRight">@dimen/screen_contact_button_padding_right</item>
         <!--<item name="android:background">@drawable/button_contact_us_normal</item>-->

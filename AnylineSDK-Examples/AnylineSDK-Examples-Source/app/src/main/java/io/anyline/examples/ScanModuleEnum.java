@@ -27,6 +27,7 @@ public class ScanModuleEnum {
         VEHICLE_IDENTIFICATION_NUMBER,
         SHIPPING_CONTAINER,
         TIN,
+        OCR,
 
         /**
          * @deprecated As the background-selection does not exist anymore, the mode should not be used anymore
@@ -37,7 +38,7 @@ public class ScanModuleEnum {
         ENERGY_WATER_METER,
         ENERGY_HEAT_METER,
         ENERGY_DIGITAL_METER,
-        ENERGY_DIAL_METER
+        ENERGY_DIAL_METER;
     }
 
     public ScanModuleEnum getScanModule() {

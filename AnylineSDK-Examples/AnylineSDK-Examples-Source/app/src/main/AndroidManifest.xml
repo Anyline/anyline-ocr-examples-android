@@ -328,9 +328,11 @@
         </activity>
         <activity android:name=".meter.ParallelResultActivity" />
         <activity android:name=".meter.ScanParallelAutoAnalogDigitalMeterActivity" />
+        <activity android:name=".trainer.TrainerLoginActivity"
+            android:parentActivityName=".MainActivity"
+            android:noHistory="true" />
 
         
-
     </application>
 
 </manifest>

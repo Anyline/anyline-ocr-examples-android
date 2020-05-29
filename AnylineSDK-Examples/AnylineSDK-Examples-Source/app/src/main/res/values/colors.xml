@@ -37,6 +37,7 @@
     <color name="green">#33cc33</color>
     <color name="red">#FF3300</color>
     <color name="red_shade">#E52D00</color>
+    <color name="semi_transparent">#00000000</color>
 
 
 </resources>

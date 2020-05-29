@@ -131,11 +131,11 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
                         if (scanView == null || scanView.getMeasuredHeight() == 0 || scanView.getMeasuredWidth() == 0) {
                             setFeedbackViewActive(false);
                         } else {
-                            int yPos = feedbackView.calculateYPosition(/**scanView.getScanViewPlugin().getCutoutImageOnSurface()**/scanView.getWatermarkRect(), scanView.getWatermarkRect(),
-                                    scanView
-                                            .getMeasuredHeight());
-                            feedbackView.setY(yPos);
-                            setFeedbackViewActive(true);
+                            //int yPos = feedbackView.calculateYPosition(/**scanView.getScanViewPlugin().getCutoutImageOnSurface()**/scanView.getWatermarkRect(), scanView.getWatermarkRect(),
+                            //        scanView
+                            //                .getMeasuredHeight());
+                            //feedbackView.setY(yPos);
+                            //setFeedbackViewActive(true);
                         }
                     }
                 });

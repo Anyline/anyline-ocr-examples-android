@@ -31,7 +31,6 @@ import io.anyline.view.ScanViewPluginConfig;
 
 public class NFCScanMRZActivity extends AppCompatActivity {
 
-
     private ScanView scanView;
 
     @Override
@@ -45,7 +44,8 @@ public class NFCScanMRZActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         scanView = findViewById(R.id.scan_view);
-
+        init();
+        isNfcEnabled();
     }
 
     private void init() {
@@ -77,19 +77,15 @@ public class NFCScanMRZActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
         scanView.setScanViewPlugin(scanViewPlugin);
-
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
 
+    private void isNfcEnabled(){
         NfcManager manager = (NfcManager) getSystemService(Context.NFC_SERVICE);
         NfcAdapter adapter = manager.getDefaultAdapter();
         if(adapter == null ){
+
             new MaterialAlertDialogBuilder(this, R.style.Theme_MyApp_Dialog_Alert)
                     .setTitle("NFC error")
                     .setMessage("NFC passport reading is not supported on this device.")
@@ -127,10 +123,14 @@ public class NFCScanMRZActivity extends AppCompatActivity {
                             finish();
                         }
                     }).show();
-        } else {
-            init();
         }
+    }
 
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         if(scanView.getScanViewPlugin() != null){
             scanView.start();
         }
