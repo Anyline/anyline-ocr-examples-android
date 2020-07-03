@@ -1,0 +1,984 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-346:12
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-346:12
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-346:12
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-346:12
+MERGED from [com.google.android.material:material:1.3.0-alpha01] /home/igor/.gradle/caches/transforms-2/files-2.1/a911cebac0543136925e483780531233/material-1.3.0-alpha01/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-preference-v14:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/cac3bfae18a36c3332ca4397f8dbb794/legacy-preference-v14-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.preference:preference:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/08c270a7f6e5ca6ddfee4836ce52903b/preference-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0d0db0efc7c45e00abe34460edfcdea3/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/igor/.gradle/caches/transforms-2/files-2.1/3bfaae1463ebed16e539d7690605ae14/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.multidex:multidex:2.0.1] /home/igor/.gradle/caches/transforms-2/files-2.1/9d6954ad2fae2574679f73bf15c09901/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:2:1-22:12
+MERGED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-ml-vision-face-model:20.0.1] /home/igor/.gradle/caches/transforms-2/files-2.1/15d081955bee5e3676e68afa2fe72e7c/jetified-firebase-ml-vision-face-model-20.0.1/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-analytics:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/db3e9aadb6bb48cd418bd0913a6825a5/jetified-firebase-analytics-17.4.3/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.core:core-ktx:1.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/eae7b6856a9d34064cda284a4f3779ff/jetified-core-ktx-1.3.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0d6740b991663266b66c2e17a8c56953/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/05c4e319b48575b43df1fdf222d85dbb/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/429a4859eb163f2292e97a12cb93d01e/lifecycle-extensions-2.2.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/29af608684fb8f04c6568d6f7864a8e2/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/da2a27b6fc44afbf3c2216cb304c07e5/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/482b2825f9064dbbf33b9e6881f4cf57/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/efc77f038e2ca3a7c4aa33d8989295bd/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0fc0a0cd30e24fab256e689ef12f9266/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3c971dcbd9c6aea672b213e38215ff37/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e80fd9851ac559bfdbb6670e360b1a46/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d7de500c5b4a87cf48833fd926e3d854/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7542ed1ec45f941f22b5845beed5334e/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7fabe1a3f58d17702cb124df0d468368/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d8b380ce19b106cb4baa0365b8aeec9c/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7848e198e6457169495608a37b2649b0/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/df473c3a82af77ed0881de10e5468e91/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-vision-face-contour-internal:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3fbc4b742e9fa1b3120e3f078746af02/jetified-play-services-vision-face-contour-internal-16.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-vision:20.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/6e5846bf42aa5bb683cade9285772c0e/jetified-play-services-vision-20.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-vision-image-label:18.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/217a8440fee57afa3a233d4af085fea2/jetified-play-services-vision-image-label-18.0.3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-vision-common:19.0.2] /home/igor/.gradle/caches/transforms-2/files-2.1/c8c287487b1c0935738e271948e01d58/jetified-play-services-vision-common-19.0.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/dfbb0c0f20180ba6eaade2a1674c3c08/jetified-play-services-clearcut-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-flags:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/2fe13fc155f73b11823f0f4f6f5d2e0b/jetified-play-services-flags-17.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/aa206996f220d1884aab546ee2360a8a/jetified-play-services-phenotype-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/8b9bb7727a40c1669a26a6a612674ee6/jetified-firebase-iid-interop-17.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d6e85bc36e47a37558f3b1e6aa72815c/jetified-play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-installations-interop:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/fd4a595cb54440cd777834d698168fa3/jetified-firebase-installations-interop-16.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/1c11892d58e94cb60e6145ac19981b41/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/e7a8366d99496de75d09dac501e83b34/jetified-play-services-measurement-sdk-17.4.3/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/bb8f670bea294a686424eb96f812a4ad/jetified-play-services-measurement-sdk-api-17.4.3/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/beaa771483bd2e8341c5587ea645955c/jetified-play-services-measurement-base-17.4.3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/57fd416609a5aac267cd8be9937b0afb/jetified-play-services-stats-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/348804c6b589220e2974c8fca185f901/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5463e7fae3b31e75be3c90c5b06c5b09/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/b9855693ac13e88e7ce49b2079bb6dcf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e6b66dd7f085ec91a797d80b1af09136/fragment-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/27f1fff080f28ac3de7dbe6d61983a07/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/86e0408031165b1518ab60dc1ec360a8/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/dec8c5ccf1d75d91d750f5a80db5c608/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/bac9187a7b438f8cd823cfe4bd582d9f/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/bbf014bc09709ee8ea448be558080511/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/22b3b64994b15c84cd38de438d5ce7bf/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5808c10d6375d5e95bba1a6255703a22/core-1.3.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:17:1-32:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/72be6d16ca8f4abf6616e3f81380b470/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0c0796cf236fc5eed6187ab0885c34bb/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/eaa5a36e63ae2af3e6b6fa0dacb83a3a/lifecycle-livedata-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3b1bf7250ddb4b4a688589172d370e21/jetified-lifecycle-viewmodel-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/80fcbff0d70606fdf7fe30e1c7037806/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/df930122234e1221f1680e337029c710/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/ab9df2645b7328fbb1e90e8ecdfe655a/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7d4e231df9de7b549f1df881ebb08d9c/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e25ae8e99833f578752898609dc09d5e/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3a0bc0728b48f38a9845bd75af8c459a/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/2b8d2d8c815d066c4c8365093e3c6111/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/fd79c33445f70a238408b5566e6ff76d/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7d1e04a3a38c9397af1fdac270471564/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/8db2949391ea8ff2a6504074314c4e87/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-346:12
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-346:12
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-346:12
+	package
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:4:5-34
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-346:12
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:1-346:12
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:5-65
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:6:22-62
+uses-permission#android.permission.VIBRATE
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:5-66
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:7:22-63
+uses-permission#android.permission.INTERNET
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:5-67
+MERGED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:12:5-67
+MERGED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:12:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/bb8f670bea294a686424eb96f812a4ad/jetified-play-services-measurement-sdk-api-17.4.3/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/bb8f670bea294a686424eb96f812a4ad/jetified-play-services-measurement-sdk-api-17.4.3/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:8:22-64
+uses-permission#android.permission.NFC
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:5-61
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:9:22-59
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/bb8f670bea294a686424eb96f812a4ad/jetified-play-services-measurement-sdk-api-17.4.3/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/bb8f670bea294a686424eb96f812a4ad/jetified-play-services-measurement-sdk-api-17.4.3/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:10:22-65
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:11:22-77
+uses-permission#android.permission.WRITE_INTERNAL_STORAGE
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:12:22-78
+uses-permission#android.permission.SET_DEBUG_APP
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:13:5-88
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:13:22-69
+uses-permission#android.permission.MANAGE_DOCUMENTS
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:14:5-75
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:14:22-72
+uses-feature#android.hardware.nfc
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:16:5-18:35
+	android:required
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:18:9-33
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:17:9-44
+application
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:21:5-344:19
+MERGED from [com.google.android.material:material:1.3.0-alpha01] /home/igor/.gradle/caches/transforms-2/files-2.1/a911cebac0543136925e483780531233/material-1.3.0-alpha01/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0-alpha01] /home/igor/.gradle/caches/transforms-2/files-2.1/a911cebac0543136925e483780531233/material-1.3.0-alpha01/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/igor/.gradle/caches/transforms-2/files-2.1/3bfaae1463ebed16e539d7690605ae14/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/igor/.gradle/caches/transforms-2/files-2.1/3bfaae1463ebed16e539d7690605ae14/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:14:5-20:19
+MERGED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:14:5-20:19
+MERGED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-analytics:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/db3e9aadb6bb48cd418bd0913a6825a5/jetified-firebase-analytics-17.4.3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/db3e9aadb6bb48cd418bd0913a6825a5/jetified-firebase-analytics-17.4.3/AndroidManifest.xml:7:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/429a4859eb163f2292e97a12cb93d01e/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/429a4859eb163f2292e97a12cb93d01e/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.android.gms:play-services-vision-face-contour-internal:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3fbc4b742e9fa1b3120e3f078746af02/jetified-play-services-vision-face-contour-internal-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-face-contour-internal:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3fbc4b742e9fa1b3120e3f078746af02/jetified-play-services-vision-face-contour-internal-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:20.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/6e5846bf42aa5bb683cade9285772c0e/jetified-play-services-vision-20.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:20.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/6e5846bf42aa5bb683cade9285772c0e/jetified-play-services-vision-20.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-image-label:18.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/217a8440fee57afa3a233d4af085fea2/jetified-play-services-vision-image-label-18.0.3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-image-label:18.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/217a8440fee57afa3a233d4af085fea2/jetified-play-services-vision-image-label-18.0.3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:19.0.2] /home/igor/.gradle/caches/transforms-2/files-2.1/c8c287487b1c0935738e271948e01d58/jetified-play-services-vision-common-19.0.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:19.0.2] /home/igor/.gradle/caches/transforms-2/files-2.1/c8c287487b1c0935738e271948e01d58/jetified-play-services-vision-common-19.0.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/dfbb0c0f20180ba6eaade2a1674c3c08/jetified-play-services-clearcut-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/dfbb0c0f20180ba6eaade2a1674c3c08/jetified-play-services-clearcut-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/aa206996f220d1884aab546ee2360a8a/jetified-play-services-phenotype-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/aa206996f220d1884aab546ee2360a8a/jetified-play-services-phenotype-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/8b9bb7727a40c1669a26a6a612674ee6/jetified-firebase-iid-interop-17.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/8b9bb7727a40c1669a26a6a612674ee6/jetified-firebase-iid-interop-17.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d6e85bc36e47a37558f3b1e6aa72815c/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d6e85bc36e47a37558f3b1e6aa72815c/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/1c11892d58e94cb60e6145ac19981b41/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/1c11892d58e94cb60e6145ac19981b41/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/e7a8366d99496de75d09dac501e83b34/jetified-play-services-measurement-sdk-17.4.3/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/e7a8366d99496de75d09dac501e83b34/jetified-play-services-measurement-sdk-17.4.3/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/beaa771483bd2e8341c5587ea645955c/jetified-play-services-measurement-base-17.4.3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/beaa771483bd2e8341c5587ea645955c/jetified-play-services-measurement-base-17.4.3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/57fd416609a5aac267cd8be9937b0afb/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/57fd416609a5aac267cd8be9937b0afb/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/348804c6b589220e2974c8fca185f901/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/348804c6b589220e2974c8fca185f901/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5463e7fae3b31e75be3c90c5b06c5b09/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5463e7fae3b31e75be3c90c5b06c5b09/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/b9855693ac13e88e7ce49b2079bb6dcf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/b9855693ac13e88e7ce49b2079bb6dcf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5808c10d6375d5e95bba1a6255703a22/core-1.3.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5808c10d6375d5e95bba1a6255703a22/core-1.3.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e25ae8e99833f578752898609dc09d5e/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e25ae8e99833f578752898609dc09d5e/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5808c10d6375d5e95bba1a6255703a22/core-1.3.0/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:24:9-41
+	tools:ignore
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:27:9-48
+	android:largeHeap
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:25:9-33
+	android:icon
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:23:9-43
+	android:allowBackup
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:22:9-36
+	android:theme
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:26:9-40
+activity#io.anyline.examples.MainActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:29:9-38:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:32:13-49
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:31:13-45
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:30:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:33:13-37:29
+action#android.intent.action.MAIN
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:34:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:36:17-77
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:36:27-74
+activity#io.anyline.examples.meterreadingprocesses.activities.ResultActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:39:9-41:52
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:41:13-49
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:40:13-76
+activity#io.anyline.examples.meterreadingprocesses.activities.WorkOrdersActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:42:9-44:52
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:44:13-49
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:43:13-80
+activity#io.anyline.examples.meterreadingprocesses.activities.SelfReadingScannerActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:45:9-47:52
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:47:13-49
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:46:13-88
+activity#io.anyline.examples.meterreadingprocesses.activities.CustomerActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:48:9-50:52
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:50:13-49
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:49:13-78
+activity#io.anyline.examples.meterreadingprocesses.activities.CustomerIdentifyScannerActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:51:9-53:52
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:53:13-49
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:52:13-93
+activity#io.anyline.examples.meter.ScanDigitalEnergyMeterActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:55:9-63:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:59:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:58:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:57:13-56
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:56:13-65
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:60:13-62:68
+	android:value
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:62:17-65
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:61:17-63
+activity#io.anyline.examples.meter.ScanAutoAnalogDigitalMeterActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:64:9-72:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:68:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:67:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:66:13-68
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:65:13-69
+activity#io.anyline.examples.meter.ScanDialMeterActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:73:9-81:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:77:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:76:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:75:13-53
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:74:13-56
+activity#io.anyline.examples.meter.ScanEnergySerialNumberActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:82:9-90:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:86:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:85:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:84:13-63
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:83:13-65
+activity#io.anyline.examples.ocr.ScanSerialNumberActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:91:9-99:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:95:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:94:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:93:13-56
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:92:13-57
+activity#io.anyline.examples.ocr.ScanShippingContainerActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:100:9-108:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:104:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:103:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:102:13-61
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:101:13-62
+activity#io.anyline.examples.ocr.ScanVerticalShippingContainerActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:109:9-117:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:113:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:112:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:111:13-61
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:110:13-70
+activity#io.anyline.examples.id.ScanMrzActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:118:9-126:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:122:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:121:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:120:13-46
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:119:13-47
+activity#io.anyline.examples.barcode.ScanBarcodeActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:127:9-135:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:131:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:130:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:129:13-50
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:128:13-56
+activity#io.anyline.examples.id.ScanBarcodePDF417Activity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:136:9-144:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:140:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:139:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:138:13-44
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:137:13-57
+activity#io.anyline.examples.document.ScanDocumentActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:145:9-150:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:149:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:148:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:147:13-51
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:146:13-58
+activity#io.anyline.examples.document.DocScanUIMainActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:151:9-155:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:154:13-49
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:153:13-51
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:152:13-59
+activity#io.anyline.examples.document.DocumentScanViewUIActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:156:9-160:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:159:13-49
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:158:13-51
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:157:13-64
+activity#io.anyline.examples.document.CropViewUIActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:161:9-165:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:164:13-49
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:163:13-51
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:162:13-56
+activity#io.anyline.examples.ocr.ScanScrabbleActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:166:9-174:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:170:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:169:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:168:13-51
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:167:13-53
+activity#io.anyline.examples.licenseplate.ScanLicensePlateActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:175:9-183:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:179:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:178:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:177:13-56
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:176:13-66
+activity#io.anyline.examples.ocr.ScanBottlecapActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:184:9-192:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:188:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:187:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:186:13-52
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:185:13-54
+activity#io.anyline.examples.ocr.ScanRedBullCodeActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:193:9-201:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:197:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:196:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:195:13-50
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:194:13-56
+activity#io.anyline.examples.ocr.ScanIsbnActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:202:9-210:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:206:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:205:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:204:13-47
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:203:13-49
+activity#io.anyline.examples.ocr.ScanRecordActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:211:9-219:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:215:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:214:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:213:13-49
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:212:13-51
+activity#io.anyline.examples.ocr.ScanVoucherCodeActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:220:9-228:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:224:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:223:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:222:13-50
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:221:13-56
+activity#io.anyline.examples.ocr.ScanIbanActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:229:9-237:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:233:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:232:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:231:13-47
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:230:13-49
+activity#io.anyline.examples.id.ScanDrivingLicenseActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:238:9-246:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:242:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:241:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:240:13-58
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:239:13-58
+activity#io.anyline.examples.id.ScanGermanIdFrontActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:247:9-255:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:251:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:250:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:249:13-58
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:248:13-57
+activity#io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:256:9-263:20
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:259:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:258:13-40
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:257:13-72
+activity#io.anyline.examples.ocr.ScanCowtagActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:264:9-272:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:268:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:267:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:266:13-49
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:265:13-51
+activity#io.anyline.examples.scanviewresult.ScanViewResultActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:273:9-282:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:277:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:276:13-55
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:275:13-40
+	android:theme
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:278:13-58
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:274:13-66
+activity#io.anyline.examples.ocr.apis.AnagramActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:283:9-292:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:287:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:286:13-67
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:285:13-58
+	android:theme
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:288:13-58
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:284:13-53
+activity#io.anyline.examples.ocr.apis.IsbnActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:293:9-302:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:297:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:296:13-63
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:295:13-54
+	android:theme
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:298:13-58
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:294:13-50
+activity#io.anyline.examples.ocr.apis.RecordSearchActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:303:9-312:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:307:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:306:13-65
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:305:13-56
+	android:theme
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:308:13-58
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:304:13-58
+activity#io.anyline.examples.id.ScanBelgianDrivingLicenseActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:313:9-314:58
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:314:19-55
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:313:19-71
+activity#io.anyline.examples.id.ScanDutchDrivingLicenseActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:315:9-316:58
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:316:19-55
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:315:19-69
+activity#io.anyline.examples.id.NFC.NFCScanMRZActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:317:9-318:57
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:318:19-55
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:317:19-60
+activity#io.anyline.examples.id.NFC.NFCScanActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:319:9-320:57
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:320:19-55
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:319:19-57
+activity#io.anyline.examples.ocr.ScanTINActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:321:9-328:20
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:324:19-55
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:323:19-61
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:322:19-46
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:321:19-54
+activity#io.anyline.examples.meter.ParallelResultActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:329:9-66
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:329:19-63
+activity#io.anyline.examples.meter.ScanParallelAutoAnalogDigitalMeterActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:330:9-86
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:330:19-83
+activity#io.anyline.examples.trainer.TrainerLoginActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:331:9-333:40
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:332:13-55
+	android:noHistory
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:333:13-37
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:331:19-63
+activity#io.anyline.examples.id.ScanUniversalIdActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:334:9-336:15
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:335:13-55
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:334:19-61
+activity#io.anyline.examples.id.ScanUniversalIdResultActivity
+ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:337:9-341:60
+	android:screenOrientation
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:339:13-49
+	android:parentActivityName
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:340:13-69
+	android:label
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:338:13-40
+	android:theme
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:341:13-58
+	android:name
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml:337:19-67
+uses-sdk
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.3.0-alpha01] /home/igor/.gradle/caches/transforms-2/files-2.1/a911cebac0543136925e483780531233/material-1.3.0-alpha01/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0-alpha01] /home/igor/.gradle/caches/transforms-2/files-2.1/a911cebac0543136925e483780531233/material-1.3.0-alpha01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-preference-v14:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/cac3bfae18a36c3332ca4397f8dbb794/legacy-preference-v14-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-preference-v14:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/cac3bfae18a36c3332ca4397f8dbb794/legacy-preference-v14-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/08c270a7f6e5ca6ddfee4836ce52903b/preference-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/08c270a7f6e5ca6ddfee4836ce52903b/preference-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0d0db0efc7c45e00abe34460edfcdea3/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0d0db0efc7c45e00abe34460edfcdea3/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/igor/.gradle/caches/transforms-2/files-2.1/3bfaae1463ebed16e539d7690605ae14/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/igor/.gradle/caches/transforms-2/files-2.1/3bfaae1463ebed16e539d7690605ae14/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.multidex:multidex:2.0.1] /home/igor/.gradle/caches/transforms-2/files-2.1/9d6954ad2fae2574679f73bf15c09901/multidex-2.0.1/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] /home/igor/.gradle/caches/transforms-2/files-2.1/9d6954ad2fae2574679f73bf15c09901/multidex-2.0.1/AndroidManifest.xml:20:5-43
+MERGED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:8:5-10:41
+MERGED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-ml-vision-face-model:20.0.1] /home/igor/.gradle/caches/transforms-2/files-2.1/15d081955bee5e3676e68afa2fe72e7c/jetified-firebase-ml-vision-face-model-20.0.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-ml-vision-face-model:20.0.1] /home/igor/.gradle/caches/transforms-2/files-2.1/15d081955bee5e3676e68afa2fe72e7c/jetified-firebase-ml-vision-face-model-20.0.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-analytics:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/db3e9aadb6bb48cd418bd0913a6825a5/jetified-firebase-analytics-17.4.3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/db3e9aadb6bb48cd418bd0913a6825a5/jetified-firebase-analytics-17.4.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/eae7b6856a9d34064cda284a4f3779ff/jetified-core-ktx-1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/eae7b6856a9d34064cda284a4f3779ff/jetified-core-ktx-1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0d6740b991663266b66c2e17a8c56953/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0d6740b991663266b66c2e17a8c56953/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/05c4e319b48575b43df1fdf222d85dbb/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/05c4e319b48575b43df1fdf222d85dbb/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/429a4859eb163f2292e97a12cb93d01e/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/429a4859eb163f2292e97a12cb93d01e/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/29af608684fb8f04c6568d6f7864a8e2/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/29af608684fb8f04c6568d6f7864a8e2/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/da2a27b6fc44afbf3c2216cb304c07e5/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/da2a27b6fc44afbf3c2216cb304c07e5/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/482b2825f9064dbbf33b9e6881f4cf57/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/482b2825f9064dbbf33b9e6881f4cf57/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/efc77f038e2ca3a7c4aa33d8989295bd/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/efc77f038e2ca3a7c4aa33d8989295bd/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0fc0a0cd30e24fab256e689ef12f9266/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0fc0a0cd30e24fab256e689ef12f9266/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3c971dcbd9c6aea672b213e38215ff37/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3c971dcbd9c6aea672b213e38215ff37/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e80fd9851ac559bfdbb6670e360b1a46/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e80fd9851ac559bfdbb6670e360b1a46/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d7de500c5b4a87cf48833fd926e3d854/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d7de500c5b4a87cf48833fd926e3d854/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7542ed1ec45f941f22b5845beed5334e/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7542ed1ec45f941f22b5845beed5334e/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7fabe1a3f58d17702cb124df0d468368/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7fabe1a3f58d17702cb124df0d468368/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d8b380ce19b106cb4baa0365b8aeec9c/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d8b380ce19b106cb4baa0365b8aeec9c/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7848e198e6457169495608a37b2649b0/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7848e198e6457169495608a37b2649b0/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/df473c3a82af77ed0881de10e5468e91/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/df473c3a82af77ed0881de10e5468e91/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-face-contour-internal:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3fbc4b742e9fa1b3120e3f078746af02/jetified-play-services-vision-face-contour-internal-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-face-contour-internal:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3fbc4b742e9fa1b3120e3f078746af02/jetified-play-services-vision-face-contour-internal-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:20.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/6e5846bf42aa5bb683cade9285772c0e/jetified-play-services-vision-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:20.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/6e5846bf42aa5bb683cade9285772c0e/jetified-play-services-vision-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-image-label:18.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/217a8440fee57afa3a233d4af085fea2/jetified-play-services-vision-image-label-18.0.3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-image-label:18.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/217a8440fee57afa3a233d4af085fea2/jetified-play-services-vision-image-label-18.0.3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:19.0.2] /home/igor/.gradle/caches/transforms-2/files-2.1/c8c287487b1c0935738e271948e01d58/jetified-play-services-vision-common-19.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:19.0.2] /home/igor/.gradle/caches/transforms-2/files-2.1/c8c287487b1c0935738e271948e01d58/jetified-play-services-vision-common-19.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/dfbb0c0f20180ba6eaade2a1674c3c08/jetified-play-services-clearcut-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/dfbb0c0f20180ba6eaade2a1674c3c08/jetified-play-services-clearcut-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/2fe13fc155f73b11823f0f4f6f5d2e0b/jetified-play-services-flags-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/2fe13fc155f73b11823f0f4f6f5d2e0b/jetified-play-services-flags-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/aa206996f220d1884aab546ee2360a8a/jetified-play-services-phenotype-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/aa206996f220d1884aab546ee2360a8a/jetified-play-services-phenotype-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/8b9bb7727a40c1669a26a6a612674ee6/jetified-firebase-iid-interop-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/8b9bb7727a40c1669a26a6a612674ee6/jetified-firebase-iid-interop-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d6e85bc36e47a37558f3b1e6aa72815c/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d6e85bc36e47a37558f3b1e6aa72815c/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/fd4a595cb54440cd777834d698168fa3/jetified-firebase-installations-interop-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-installations-interop:16.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/fd4a595cb54440cd777834d698168fa3/jetified-firebase-installations-interop-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/1c11892d58e94cb60e6145ac19981b41/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/1c11892d58e94cb60e6145ac19981b41/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/e7a8366d99496de75d09dac501e83b34/jetified-play-services-measurement-sdk-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/e7a8366d99496de75d09dac501e83b34/jetified-play-services-measurement-sdk-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/bb8f670bea294a686424eb96f812a4ad/jetified-play-services-measurement-sdk-api-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/bb8f670bea294a686424eb96f812a4ad/jetified-play-services-measurement-sdk-api-17.4.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/beaa771483bd2e8341c5587ea645955c/jetified-play-services-measurement-base-17.4.3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/beaa771483bd2e8341c5587ea645955c/jetified-play-services-measurement-base-17.4.3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/57fd416609a5aac267cd8be9937b0afb/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/57fd416609a5aac267cd8be9937b0afb/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/348804c6b589220e2974c8fca185f901/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/348804c6b589220e2974c8fca185f901/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5463e7fae3b31e75be3c90c5b06c5b09/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5463e7fae3b31e75be3c90c5b06c5b09/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/b9855693ac13e88e7ce49b2079bb6dcf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/b9855693ac13e88e7ce49b2079bb6dcf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e6b66dd7f085ec91a797d80b1af09136/fragment-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e6b66dd7f085ec91a797d80b1af09136/fragment-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/27f1fff080f28ac3de7dbe6d61983a07/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/27f1fff080f28ac3de7dbe6d61983a07/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/86e0408031165b1518ab60dc1ec360a8/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/86e0408031165b1518ab60dc1ec360a8/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/dec8c5ccf1d75d91d750f5a80db5c608/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/dec8c5ccf1d75d91d750f5a80db5c608/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/bac9187a7b438f8cd823cfe4bd582d9f/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/bac9187a7b438f8cd823cfe4bd582d9f/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/bbf014bc09709ee8ea448be558080511/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/bbf014bc09709ee8ea448be558080511/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/22b3b64994b15c84cd38de438d5ce7bf/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/22b3b64994b15c84cd38de438d5ce7bf/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5808c10d6375d5e95bba1a6255703a22/core-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/5808c10d6375d5e95bba1a6255703a22/core-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/72be6d16ca8f4abf6616e3f81380b470/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/72be6d16ca8f4abf6616e3f81380b470/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0c0796cf236fc5eed6187ab0885c34bb/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/0c0796cf236fc5eed6187ab0885c34bb/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/eaa5a36e63ae2af3e6b6fa0dacb83a3a/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/eaa5a36e63ae2af3e6b6fa0dacb83a3a/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3b1bf7250ddb4b4a688589172d370e21/jetified-lifecycle-viewmodel-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3b1bf7250ddb4b4a688589172d370e21/jetified-lifecycle-viewmodel-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/80fcbff0d70606fdf7fe30e1c7037806/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/80fcbff0d70606fdf7fe30e1c7037806/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/df930122234e1221f1680e337029c710/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/df930122234e1221f1680e337029c710/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/ab9df2645b7328fbb1e90e8ecdfe655a/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/ab9df2645b7328fbb1e90e8ecdfe655a/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7d4e231df9de7b549f1df881ebb08d9c/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7d4e231df9de7b549f1df881ebb08d9c/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e25ae8e99833f578752898609dc09d5e/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/igor/.gradle/caches/transforms-2/files-2.1/e25ae8e99833f578752898609dc09d5e/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3a0bc0728b48f38a9845bd75af8c459a/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/3a0bc0728b48f38a9845bd75af8c459a/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/2b8d2d8c815d066c4c8365093e3c6111/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/2b8d2d8c815d066c4c8365093e3c6111/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/fd79c33445f70a238408b5566e6ff76d/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/fd79c33445f70a238408b5566e6ff76d/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7d1e04a3a38c9397af1fdac270471564/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/7d1e04a3a38c9397af1fdac270471564/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/8db2949391ea8ff2a6504074314c4e87/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/8db2949391ea8ff2a6504074314c4e87/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		ADDED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+		INJECTED from /home/igor/Projects/anyline-ocr-examples-android/AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/AndroidManifest.xml
+meta-data#com.google.android.gms.vision.DEPENDENCIES
+ADDED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:17:9-19:39
+	android:value
+		ADDED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:19:13-36
+	android:name
+		ADDED from [io.anyline:anylinesdk:22] /home/igor/.gradle/caches/transforms-2/files-2.1/2d0d1325afd32456b4fa01749b6ca6e0/jetified-anylinesdk-22/AndroidManifest.xml:18:13-70
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:11:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:10:13-84
+meta-data#com.google.firebase.components:com.google.firebase.ml.vision.VisionRegistrar
+ADDED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-ml-vision:24.0.3] /home/igor/.gradle/caches/transforms-2/files-2.1/ba16b3a19f4c50ea389a45719be03831/jetified-firebase-ml-vision-24.0.3/AndroidManifest.xml:13:17-108
+meta-data#com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar
+ADDED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-ml-common:22.1.1] /home/igor/.gradle/caches/transforms-2/files-2.1/edc8527bc16e4a8961920db5147ffb86/jetified-firebase-ml-common-22.1.1/AndroidManifest.xml:12:17-117
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/bb8f670bea294a686424eb96f812a4ad/jetified-play-services-measurement-sdk-api-17.4.3/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/bb8f670bea294a686424eb96f812a4ad/jetified-play-services-measurement-sdk-api-17.4.3/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:23:22-76
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/a5de7259378ec4433a45a8583d829132/jetified-play-services-measurement-api-17.4.3/AndroidManifest.xml:31:17-139
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:26:22-79
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.1.5] /home/igor/.gradle/caches/transforms-2/files-2.1/b08fc62289dfc365e48b5c8bb0561a7d/jetified-firebase-iid-20.1.5/AndroidManifest.xml:42:25-78
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:16.2.1] /home/igor/.gradle/caches/transforms-2/files-2.1/588b1654e89796e1604048404c7c58a5/jetified-firebase-installations-16.2.1/AndroidManifest.xml:18:17-127
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/igor/.gradle/caches/transforms-2/files-2.1/a1251a80ce3ae0736ace37d33266d98f/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d6e85bc36e47a37558f3b1e6aa72815c/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d6e85bc36e47a37558f3b1e6aa72815c/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d6e85bc36e47a37558f3b1e6aa72815c/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/d6e85bc36e47a37558f3b1e6aa72815c/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/b8cf1a23f4df924cc224ec574bea051b/jetified-play-services-measurement-impl-17.4.3/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:30:13-85
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:35:9-38:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:36:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:39:9-43:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:41:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:42:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:43:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.3] /home/igor/.gradle/caches/transforms-2/files-2.1/d5dbe91a91315653867b31c3366a9661/jetified-play-services-measurement-17.4.3/AndroidManifest.xml:40:13-87
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/b9855693ac13e88e7ce49b2079bb6dcf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/b9855693ac13e88e7ce49b2079bb6dcf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/igor/.gradle/caches/transforms-2/files-2.1/b9855693ac13e88e7ce49b2079bb6dcf/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/igor/.gradle/caches/transforms-2/files-2.1/56f3aad52684a37526741fb9dc10586b/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79

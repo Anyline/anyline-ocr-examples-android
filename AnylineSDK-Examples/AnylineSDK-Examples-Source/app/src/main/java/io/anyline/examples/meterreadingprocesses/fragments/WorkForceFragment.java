@@ -48,7 +48,7 @@ public class WorkForceFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.work_orders_fragment, container, false);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewer);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
         syncStatusTextView = (TextView) view.findViewById(R.id.status);
         syncButtonTextView = (TextView) view.findViewById(R.id.sync_button);

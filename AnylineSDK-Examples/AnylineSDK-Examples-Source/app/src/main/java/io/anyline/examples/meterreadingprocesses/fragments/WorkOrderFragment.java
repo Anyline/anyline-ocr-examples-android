@@ -67,7 +67,7 @@ public class WorkOrderFragment extends BaseFragment {
         mainOrderNameTextView = (TextView) view.findViewById(R.id.order_name);
         processName = (TextView) view.findViewById(R.id.process_name);
         startScanningButton = (Button) view.findViewById(R.id.button_start);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewer);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
 
         setupCustomerDetails();

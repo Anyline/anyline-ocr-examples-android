@@ -28,6 +28,7 @@ public class ScanModuleEnum {
         SHIPPING_CONTAINER,
         TIN,
         OCR,
+        UID,
 
         /**
          * @deprecated As the background-selection does not exist anymore, the mode should not be used anymore

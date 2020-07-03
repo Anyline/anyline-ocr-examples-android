@@ -3,16 +3,12 @@ package io.anyline.examples.meter;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,8 +19,7 @@ import at.nineyards.anyline.models.AnylineImage;
 import io.anyline.examples.R;
 import io.anyline.examples.baseadapters.BaseGridAdapter;
 import io.anyline.examples.util.BitmapUtil;
-import io.anyline.examples.util.Constant;
-import io.intercom.android.sdk.models.Link;
+
 
 public class ParallelResultActivity extends Activity {
     private RecyclerView recyclerView;
@@ -41,7 +36,7 @@ public class ParallelResultActivity extends Activity {
         meterIV = findViewById(R.id.meter_image);
         //barcodeIV = findViewById(R.id.barcode_image);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerViewer);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getApplicationContext()));
 
         TextView btnConfirm = findViewById(R.id.confirmation_button);

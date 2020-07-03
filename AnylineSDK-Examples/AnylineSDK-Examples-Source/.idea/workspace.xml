@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="339e1878-d5be-4083-83f7-a9db4a59fc9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/fonts/DisplayFree_tfb.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/fonts/DisplayFree_tfb.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/ScanModuleEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/ScanModuleEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/basefragments/BaseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/basefragments/BaseFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/meter/ParallelResultActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/meter/ParallelResultActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/meterreadingprocesses/fragments/SelfReadingScannerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/meterreadingprocesses/fragments/SelfReadingScannerFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/meterreadingprocesses/fragments/WorkForceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/meterreadingprocesses/fragments/WorkForceFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/meterreadingprocesses/fragments/WorkOrderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/meterreadingprocesses/fragments/WorkOrderFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/mrz/NFC/NFCScanActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/mrz/NFC/NFCScanMRZActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/mrz/ScanBarcodePDF417Activity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/mrz/ScanBelgianDrivingLicenseActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/mrz/ScanDrivingLicenseActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/mrz/ScanDutchDrivingLicenseActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/mrz/ScanGermanIdFrontActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/mrz/ScanMrzActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/scanviewresult/ScanViewResultActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/scanviewresult/ScanViewResultActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/util/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/util/JsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/util/Preferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/anyline/examples/util/Preferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_base_no_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_base_no_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_base_no_menu_bundle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_base_no_menu_bundle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_result_id_scan_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_result_id_scan_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_result_scan_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_result_scan_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_view_result_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_view_result_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recycle_viewer_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/recycle_viewer_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recycler_viewer_toolbar_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/recycler_viewer_toolbar_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/example_activities.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/example_activities.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/version.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/version.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AnylineSDK/anylinesdk-21.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/AnylineController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/AnylineDebugListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/AnylineListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/ImageProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/SimpleImageProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/AbstractZoomHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/ActiveArrayZoomHandler.IZoomHandlerListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/ActiveArrayZoomHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/ActiveArrayZoomHandlerBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraController.CameraControllerListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraController.CameraOrientation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraController1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraController2.State.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraController2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraFeatures.FocusMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraFeatures.FpsRange.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraFeatures.LensFacing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraFeatures.OutputFormat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraFeatures.SceneMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraFeatures.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraFeatures1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraFeatures2.AutoExposureMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraFeatures2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraOpenListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraPermissionHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraSize.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraUtil.AspectRatio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CameraView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/CutoutUpdateListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/FaceDetector.FaceDetectionResultHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/FaceDetector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/FlashControl.Mode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/FlashControl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/FocusConfig.Builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/FocusConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/HighResolutionImageListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/HighResolutionImageProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/ImageListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/ImageReceiver.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/NativeBarcodeDetectionThread.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/NativeBarcodeDetector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/NativeBarcodeResultListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/SimpleZoomHandler.IZoomHandlerListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/SimpleZoomHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/SimpleZoomHandlerBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/VisualFeedbackConfig.AnimationStyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/VisualFeedbackConfig.FeedbackStyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/VisualFeedbackConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/ZoomEventHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/camera/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/models/AnylineImage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/models/AnylineRawResult.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/models/AnylineScanResult.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/models/AnylineYuvImage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/models/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/models/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/models/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/modules/AnylineModule.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/modules/AnylineModuleResultListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/modules/LicenseExpirationHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/modules/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/modules/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/modules/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/ArrayUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/AssetUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/ColorUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/ConstantUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/DimensUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/NumUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/SoundUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/TempFileUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/VersionUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/at/nineyards/anyline/util/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/AbstractScanPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ScanInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ScanInfoListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ScanPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ScanResult.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ScanResultListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ScanRunSkippedListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ScanRunSkippedReason.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/barcode/BarcodeFormat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/barcode/BarcodeScanPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/barcode/BarcodeScanResult.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/barcode/BarcodeScanViewPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/barcode/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/barcode/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/barcode/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/DocumentNotifierListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/DocumentScanPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/DocumentScanResultListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/DocumentScanState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/DocumentScanViewPlugin.DocumentError.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/DocumentScanViewPlugin.DocumentRatio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/DocumentScanViewPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/document/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/DrivingLicenseConfig.DrivingLicenseCountry.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/DrivingLicenseConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/DrivingLicenseFieldConfidences.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/DrivingLicenseFieldScanOptions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/DrivingLicenseIdentification.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/GermanIDFrontFieldConfidences.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/GermanIdFrontConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/GermanIdFrontFieldScanOptions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/GermanIdFrontIdentification.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/ID.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/IDFieldConfidences.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/IDFieldScanOptions.FieldScanOption.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/IDFieldScanOptions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/IdConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/IdScanPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/IdScanViewPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/MrzConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/MrzFieldConfidences.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/MrzFieldScanOptions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/MrzIdentification.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/NFCConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/id/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/licenseplate/LicensePlateScanMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/licenseplate/LicensePlateScanResult.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/licenseplate/LicensePlateScanViewPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/licenseplate/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/licenseplate/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/licenseplate/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/meter/MeterScanMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/meter/MeterScanPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/meter/MeterScanResult.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/meter/MeterScanViewPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/meter/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/meter/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/meter/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineCattleTagConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineContainerConfig.ContainerScanMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineContainerConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineOcrBaseConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineOcrConfig.AnylineOcrRegex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineOcrConfig.ScanMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineOcrConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineTINConfig.TINScanMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineTINConfig.TINUpsideDownMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineTINConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/AnylineVINConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/OcrScanPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/OcrScanResult.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/OcrScanViewPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/ocr/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/plugin/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/AbstractBaseScanViewPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/AbstractScanViewPlugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/AbstractScanViewPluginComposite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/AbstractWebView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/AnylineViewConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/AnylineWebView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/BaseScanViewConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/BrightnessHelper.BrightnessFeedback.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/BrightnessHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/CropViewUI.CropViewUIListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/CropViewUI.InvalidParameterExceptionCropUI.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/CropViewUI.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/CutoutConfig.AnimationStyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/CutoutConfig.CutoutAlignment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/CutoutConfig.CutoutStyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/CutoutConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/CutoutConfigChangedListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/CutoutRect.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DebugUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewConfig.InvalidConfigException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewEnums.BottomBarControl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewEnums.ReducePictureSizeOption.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewEnums.ScanMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewEnums.ScanRatio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewEnums.SelectScanFormat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewEnums.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewUI.DocumentScanViewListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/DocumentScanViewUI.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/FlashView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/FlashViewConfig.FlashAlignment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/FlashViewConfig.FlashMode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/FlashViewConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/IAnylineViewConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/JsonParser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/LicenseKeyExceptionListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/LightLevelHelper.AmbientLightLevel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/LightLevelHelper.BrightnessLevel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/LightLevelHelper.LightLevelListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/LightLevelHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/ParallelScanViewComposite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/ScanPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/ScanView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/ScanViewCameraConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/ScanViewPluginConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/ScanViewRefactor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/ScanViewUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/SerialScanViewComposite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/UIChangeListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/io/anyline/view/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/overview-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Documentation/Documentation/javadoc/stylesheet.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="74a564fa" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1eBGLlGbSnPQo9U2mNa6Y0kwwFD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="339e1878-d5be-4083-83f7-a9db4a59fc9d" name="Default Changelist" comment="" />
+      <created>1593787518145</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593787518145</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="782" y="343" width="346" height="360" key="AndroidCreateXmlResourceDialog" timestamp="1593787561753">
+      <screen x="0" y="27" width="1920" height="986" />
+    </state>
+    <state x="782" y="343" width="346" height="360" key="AndroidCreateXmlResourceDialog/0.27.1920.986@0.27.1920.986" timestamp="1593787561753" />
+  </component>
+</project>

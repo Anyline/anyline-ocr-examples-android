@@ -19,7 +19,6 @@
 
    <FrameLayout
        android:id="@+id/placeholder"
-       android:layout_below="@+id/toolbar"
        android:background="@color/white"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>

@@ -3,15 +3,14 @@ package io.anyline.examples.scanviewresult;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -45,17 +44,19 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base_no_menu);
-        getLayoutInflater().inflate(R.layout.activity_result_scan_view, (ViewGroup) findViewById(R.id.placeholder));
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerViewer);
+        setContentView(R.layout.activity_result_scan_view);
+        recyclerView = (RecyclerView) findViewById(R.id.rv_results);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getApplicationContext()));
 
-        imageView = (ImageView) findViewById(R.id.controll_image);
+        imageView = (ImageView) findViewById(R.id.control_image);
         faceImageCaption = findViewById(R.id.textFaceImage);
         faceImageView = findViewById(R.id.face_image);
         confirmationButton = (TextView) findViewById(R.id.confirmation_button);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+          actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         if (savedInstanceState == null) {
             Intent intent = getIntent();

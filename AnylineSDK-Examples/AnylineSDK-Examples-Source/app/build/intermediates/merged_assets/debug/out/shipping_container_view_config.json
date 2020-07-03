@@ -1,0 +1,53 @@
+{
+  "camera": {
+    "captureResolution": "1080",
+    "zoomGesture": true
+  },
+  "flash" : {
+    "mode": "auto",
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off",
+    "imageAuto": "flash_auto"
+  },
+  "viewPlugin": {
+    "plugin" : {
+      "id" : "CONTAINER",
+      "ocrPlugin" : {
+        "containerConfig":{
+          "scanMode": "horizontal"
+        }
+      }
+    },
+    "cutoutConfig": {
+      "style": "rect",
+      "maxWidthPercent": "80%",
+      "alignment": "top_half",
+      "width": 720,
+      "ratioFromSize": {
+        "width": 720,
+        "height": 144
+      },
+      "strokeWidth": 2,
+      "cornerRadius": 4,
+      "strokeColor": "FFFFFF",
+      "outerColor": "000000",
+      "outerAlpha": 0.3,
+      "feedbackStrokeColor": "0099FF",
+      "offset": {
+        "x": 0,
+        "y": -15
+      }
+    },
+    "scanFeedback": {
+      "style": "CONTOUR_RECT",
+      "strokeWidth": 2,
+      "strokeColor": "0099FF",
+      "fillColor" : "220099FF",
+      "beepOnResult": true,
+      "vibrateOnResult": true,
+      "blinkAnimationOnResult": true
+    },
+    "cancelOnResult": true
+  }
+}

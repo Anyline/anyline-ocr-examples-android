@@ -1,0 +1,44 @@
+{
+  "camera": {
+    "captureResolution": "720",
+    "zoomGesture": true
+  },
+  "flash" : {
+    "mode": "manual",
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off",
+    "imageAuto": "flash_auto"
+  },
+  "viewPlugin": {
+    "delayStartScanTime":2000,
+    "cutoutConfig": {
+      "style": "rect",
+      "maxWidthPercent": "80%",
+      "maxHeightPercent": "80%",
+      "alignment": "top_half",
+      "width": 550,
+      "ratioFromSize": {
+        "width": 2,
+        "height": 1
+      },
+      "strokeWidth": 2,
+      "cornerRadius": 10,
+      "strokeColor": "FFFFFF",
+      "outerColor": "000000",
+      "outerAlpha": 0.3,
+      "feedbackStrokeColor": "0099FF"
+    },
+    "cancelOnResult": true,
+    "scanFeedback": {
+      "style": "rect",
+      "strokeWidth": 2,
+      "strokeColor": "0099FF",
+      "fillColor": "330099FF",
+      "cornerRadius": 0,
+      "beepOnResult": true,
+      "vibrateOnResult": true,
+      "blinkAnimationOnResult": true
+    }
+  }
+}

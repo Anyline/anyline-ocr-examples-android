@@ -96,16 +96,18 @@
         <item>@string/title_barcode_PDF417</item>
         <item>Processes</item>
         <item>@string/title_nfc_scanning</item>
+        <item>@string/universal_id_scanning</item>
     </string-array>
 
     <string-array name="example_identity_documents_classes" translatable="false">
         <item>HEADER</item>
-        <item>io.anyline.examples.mrz.ScanMrzActivity</item>
-        <item>io.anyline.examples.mrz.ScanDrivingLicenseActivity</item>
-        <item>io.anyline.examples.mrz.ScanGermanIdFrontActivity</item>
-        <item>io.anyline.examples.mrz.ScanBarcodePDF417Activity</item>
+        <item>io.anyline.examples.id.ScanMrzActivity</item>
+        <item>io.anyline.examples.id.ScanDrivingLicenseActivity</item>
+        <item>io.anyline.examples.id.ScanGermanIdFrontActivity</item>
+        <item>io.anyline.examples.id.ScanBarcodePDF417Activity</item>
         <item>HEADER</item>
-        <item>io.anyline.examples.mrz.NFC.NFCScanMRZActivity</item>
+        <item>io.anyline.examples.id.NFC.NFCScanMRZActivity</item>
+        <item>io.anyline.examples.id.ScanUniversalIdActivity</item>
     </string-array>
 
 </resources>

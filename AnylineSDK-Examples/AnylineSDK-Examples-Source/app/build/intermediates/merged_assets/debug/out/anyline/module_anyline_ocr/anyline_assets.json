@@ -1,0 +1,32 @@
+{
+    "comment": "Auto generated file. Manual changes will be overwritten.",
+    "immediateAssets": {
+        "anyline/module_anyline_ocr/anyline_ocr_auto.ale": "e3f054fe37ecf1adbc0c0d13d2416a95",
+        "anyline/module_anyline_ocr/anyline_ocr_auto_any.ale": "e383041378a496318da96a34dd6e9045",
+        "anyline/module_anyline_ocr/anyline_ocr_grid.ale": "77e218b35c6631238c136a46f2167509",
+        "anyline/module_anyline_ocr/anyline_ocr_grid_any.ale": "14cac38e18a88da6149f722009caec3b",
+        "anyline/module_anyline_ocr/anyline_ocr_line.ale": "190566722a51cdbee0d807744e99aca7",
+        "anyline/module_anyline_ocr/anyline_ocr_line_any.ale": "814fde96c53e94c67e36e99cf87707c8",
+        "anyline/module_anyline_ocr/config_files/continental.txt": "166b7838ebc5ad492c102cd9fa277472",
+        "anyline/module_anyline_ocr/config_files/cooper.txt": "dfca7a2d6f906b4b768243ea893f12e5",
+        "anyline/module_anyline_ocr/config_files/giti.txt": "f65c82c221d692edca6582a3cbbe35c1",
+        "anyline/module_anyline_ocr/config_files/goodyear.txt": "2d629c788f358d91e572183a6e632135",
+        "anyline/module_anyline_ocr/config_files/michelin.txt": "df146de0c57f6ed182b7a14a31b29cd1",
+        "anyline/module_anyline_ocr/container_scanner.ale": "8de245c6e4478cf0a5f546bcbe18625f",
+        "anyline/module_anyline_ocr/container_scanner_vertical.ale": "06652e9e2b97d27fe95778f2df52876c",
+        "anyline/module_anyline_ocr/cow_tag_scanner.ale": "da30b71097ba58282c211e10c7a51dae",
+        "anyline/module_anyline_ocr/tin.ale": "fa5d5ad4fdecfbbe0954041f77baa560",
+        "anyline/module_anyline_ocr/trained_models/TINclass81000UnifiedLite.any": "e45bc31f77c9bae6ff8cc16154bf7d68",
+        "anyline/module_anyline_ocr/trained_models/USNr.any": "9b4ad56ea9eeb31efcbf82c5f3e0b69e",
+        "anyline/module_anyline_ocr/trained_models/VIN.any": "237776de848dd057078ed7e1f3ecff4d",
+        "anyline/module_anyline_ocr/trained_models/classificationUpsideDown.any": "78ea8573b04b447aed56d60c8248bd9d",
+        "anyline/module_anyline_ocr/trained_models/classification_80kUpDownWITHVALID.any": "4a2c70a57fb92bfd1bf33800e4d7b6e9",
+        "anyline/module_anyline_ocr/trained_models/classification_840000_android.any": "6213e21c4915c9266ce910b92baa153a",
+        "anyline/module_anyline_ocr/trained_models/classification_84k.any": "bc068e370cb0ff4f07203c29bbf05d20",
+        "anyline/module_anyline_ocr/trained_models/comb_rw_10Lite.any": "782d579706fd3cec4884c25f9e8d17b7",
+        "anyline/module_anyline_ocr/vin.ale": "f4b14ad5441075a5456f9582200bd103"
+    },
+    "lazyAssets": {
+        
+    }
+}

@@ -45,7 +45,7 @@ public class BaseFragment extends Fragment{
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), DEFAULT_SPAN_COUNT);
         setupToolbar(view);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewer);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         mRecyclerView.setRecycledViewPool(new RecyclerView.RecycledViewPool());
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(gridLayoutManager);
@@ -60,7 +60,7 @@ public class BaseFragment extends Fragment{
         View view = inflater.inflate(resId, container, false);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), DEFAULT_SPAN_COUNT);
         setupToolbar(view);
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewer);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         mRecyclerView.setRecycledViewPool(new RecyclerView.RecycledViewPool());
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(gridLayoutManager);

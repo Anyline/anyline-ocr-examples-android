@@ -23,7 +23,6 @@ public class JsonUtil {
             json.put("vendorUUID", preferences.getUuid());
             json.put("appBundleId", context.getApplicationContext().getPackageName());
             json.put("platform", "Android");
-            json.put("intercomUserId", preferences.getUuid()); // Intercom: user_id
             json.put("locale", Locale.getDefault().getLanguage());
 
             return json.toString();

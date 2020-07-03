@@ -1,0 +1,39 @@
+{
+  "camera":{
+    "captureResolution":"1080",
+    "zoomGesture": true
+  },
+  "previewAlignment":"top",
+  "flash": {
+    "mode": "manual",
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off"
+  },
+  "viewPlugin" : {
+    "cutoutConfig": {
+      "style": "rect",
+      "maxWidthPercent": "90%",
+      "alignment": "top_half",
+      "ratioFromSize": {
+        "width": 250,
+        "height": 90
+      },
+      "strokeWidth": 2,
+      "cornerRadius": 10,
+      "strokeColor": "FFFFFF",
+      "outerColor": "000000",
+      "outerAlpha": 0.3,
+      "feedbackStrokeColor": "0099FF"
+    },
+    "cancelOnResult": false,
+    "scanFeedback": {
+      "style": "rect",
+      "strokeColor": "0099FF",
+      "fillColor" : "220099FF",
+      "beepOnResult": true,
+      "vibrateOnResult": true,
+      "strokeWidth": 2
+    }
+  }
+}

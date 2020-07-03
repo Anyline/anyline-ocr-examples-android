@@ -48,7 +48,7 @@ public class SelfReadingScannerFragment extends BaseFragment {
         processNameTextView = (TextView) view.findViewById(R.id.process_name);
         startScanningButton = (Button) view.findViewById(R.id.button_start);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewer);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
 
         setupSelfReadingHistory();

@@ -47,11 +47,6 @@
         <attr name="overlay_this_view" format="reference"/>
     </declare-styleable>
 
-    <!-- attributes for Intercom -->
-    <declare-styleable name="MessageState">
-        <attr name="state_message_unread" format="boolean"/>
-    </declare-styleable>
-
     <!-- attributes for Contact Page -->
     <declare-styleable name="ContactImageBehavior">
         <attr name="finalYPosition" format="dimension"/>

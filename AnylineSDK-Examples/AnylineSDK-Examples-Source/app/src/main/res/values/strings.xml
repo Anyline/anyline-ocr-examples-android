@@ -21,6 +21,7 @@
     <string name="mrz">MRZ / Passport</string>
     <string name="mrz_main">Passport MRZ</string>
     <string name="heat_meter">Heat Meter</string>
+    <string name="universal_id_scanning">Universal ID Scanner</string>
 
     <string name="electric_meter">Electric Meter</string>
     <string name="auto_analog_digital_meter">Analog/Digital Meter</string>
@@ -283,12 +284,6 @@
     <string name="explanation_analog_meter">Scan all sorts of analog energy meters with this mode. It doesn’t matter how many digits or if there is a black or white background.</string>
     <string name="explanation_analog_digital_meter">Scan analog or digital meters with this mode. It doesn’t matter how many digits, or if the analog meter has a black or white background.</string>
 
-
-    <!-- Intercom push notifications -->
-    <string name="intercom_gcm_sender_id" translatable="false">872077656705</string>
-    <string name="explanation_barcode_detection">Hint: The \"Barcode Detection\" allows to simultaneously scan the meter identifier.</string>
-
-
     <!-- WorkForce Orders -->
     <string name="screen_workorders_synced">Orders synchronised</string>
     <string name="screen_workorders_unsynced_reports_plural">%1$d unsynchronised meter readings</string>
@@ -411,6 +406,7 @@
     <!-- Build Version Description -->
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
     <string name="sdk_build_version" formatted="false">SDK Build Version %s</string>
+    <string name="control_image">Control Image</string>
 
 
 </resources>

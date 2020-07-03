@@ -116,7 +116,7 @@
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
         <activity
-            android:name=".mrz.ScanMrzActivity"
+            android:name=".id.ScanMrzActivity"
             android:label="@string/title_mrz"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
@@ -134,7 +134,7 @@
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
         <activity
-            android:name=".mrz.ScanBarcodePDF417Activity"
+            android:name=".id.ScanBarcodePDF417Activity"
             android:label="@string/pdf_417"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
@@ -236,7 +236,7 @@
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
         <activity
-            android:name=".mrz.ScanDrivingLicenseActivity"
+            android:name=".id.ScanDrivingLicenseActivity"
             android:label="@string/title_driving_license"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
@@ -245,7 +245,7 @@
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
         <activity
-            android:name=".mrz.ScanGermanIdFrontActivity"
+            android:name=".id.ScanGermanIdFrontActivity"
             android:label="@string/title_german_id_front"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
@@ -310,13 +310,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ocr.ScanRecordActivity" />
         </activity>
-        <activity android:name=".mrz.ScanBelgianDrivingLicenseActivity"
+        <activity android:name=".id.ScanBelgianDrivingLicenseActivity"
                   android:screenOrientation="portrait" />
-        <activity android:name=".mrz.ScanDutchDrivingLicenseActivity"
+        <activity android:name=".id.ScanDutchDrivingLicenseActivity"
                   android:screenOrientation="portrait" />
-        <activity android:name=".mrz.NFC.NFCScanMRZActivity"
+        <activity android:name=".id.NFC.NFCScanMRZActivity"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".mrz.NFC.NFCScanActivity"
+        <activity android:name=".id.NFC.NFCScanActivity"
                   android:screenOrientation="portrait"/>
         <activity android:name=".ocr.ScanTINActivity"
                   android:label="@string/tin"
@@ -331,6 +331,14 @@
         <activity android:name=".trainer.TrainerLoginActivity"
             android:parentActivityName=".MainActivity"
             android:noHistory="true" />
+        <activity android:name=".id.ScanUniversalIdActivity"
+            android:parentActivityName=".MainActivity"
+            />
+        <activity android:name=".id.ScanUniversalIdResultActivity"
+            android:label="Result Data"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".id.ScanUniversalIdActivity"
+            android:theme="@style/AppTheme.DarkActionBar"/>
 
         
     </application>

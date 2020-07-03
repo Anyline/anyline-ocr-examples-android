@@ -119,14 +119,14 @@ public class Preferences {
     }
 
 
-    public String getIntercomUserId() {
-        return preferences.getString(PREF_INTERCOM_USER_ID, null);
-    }
+//    public String getIntercomUserId() {
+//        return preferences.getString(PREF_INTERCOM_USER_ID, null);
+//    }
 
-    public void setIntercomUserId(String user) {
-        editor.putString(PREF_INTERCOM_USER_ID, user);
-        editor.commit();
-    }
+//    public void setIntercomUserId(String user) {
+//        editor.putString(PREF_INTERCOM_USER_ID, user);
+//        editor.commit();
+//    }
 
     public String getUuid() {
         String uuidPrefs = reportingPreferences.getString(PREF_UUID, "");
