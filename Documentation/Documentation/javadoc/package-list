@@ -1,0 +1,13 @@
+at.nineyards.anyline
+at.nineyards.anyline.camera
+at.nineyards.anyline.models
+at.nineyards.anyline.modules
+at.nineyards.anyline.util
+io.anyline.plugin
+io.anyline.plugin.barcode
+io.anyline.plugin.document
+io.anyline.plugin.id
+io.anyline.plugin.licenseplate
+io.anyline.plugin.meter
+io.anyline.plugin.ocr
+io.anyline.view
