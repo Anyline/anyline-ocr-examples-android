@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStartEndMainLayout"
+            android:layout_marginTop="@dimen/marginTopMainLayout"
+            android:layout_marginEnd="@dimen/marginStartEndMainLayout"
+            android:layout_marginBottom="@dimen/marginBottomMainLayout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llRatio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartEndSubLayout"
+                android:layout_marginEnd="@dimen/marginStartEndSubLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aspectRatio"
+                    android:textSize="@dimen/textSizeHeader" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/height"
+                            android:textSize="@dimen/textSizeHeader" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/one"
+                            android:textColor="@color/black_50"
+                            android:textSize="@dimen/textSizeHeader" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/colon"
+                        android:textSize="@dimen/textSizeHeader" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/width"
+                            android:textSize="@dimen/textSizeHeader" />
+                        <Spinner
+                            android:id="@+id/spWidth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@android:color/white"
+                            android:scrollbars="none"
+                            android:spinnerMode="dropdown" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/marginTopBottomDivider"
+                android:layout_marginBottom="@dimen/marginTopBottomDivider"
+                android:background="@color/black_25" />
+
+            <LinearLayout
+                android:id="@+id/llMaxWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartEndSubLayout"
+                android:layout_marginEnd="@dimen/marginStartEndSubLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCutoutMaxWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cutoutMaxWidth"
+                    android:textSize="@dimen/textSizeHeader" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slCutoutMaxWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginTopSlider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvWidthMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="@dimen/textSizeHint" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvWidthMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:textSize="@dimen/textSizeHint" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/marginTopBottomDivider"
+                android:layout_marginBottom="@dimen/marginTopBottomDivider"
+                android:background="@color/black_25" />
+
+
+            <LinearLayout
+                android:id="@+id/llCutoutCornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartEndSubLayout"
+                android:layout_marginEnd="@dimen/marginStartEndSubLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCutoutCornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cutoutCornerRadius"
+                    android:textSize="@dimen/textSizeHeader" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slCutoutCornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginTopSlider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_corner_square"
+                        tools:ignore="ContentDescription" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_corner_round"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/marginTopBottomDivider"
+                android:layout_marginBottom="@dimen/marginTopBottomDivider"
+                android:background="@color/black_25" />
+
+            <LinearLayout
+                android:id="@+id/llCutoutAlign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartEndSubLayout"
+                android:layout_marginEnd="@dimen/marginStartEndSubLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCutoutAlign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alignCutout"
+                    android:textSize="@dimen/textSizeHeader" />
+
+                <RadioGroup
+                    android:id="@+id/rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alignTop" />
+
+                    <RadioButton
+                        android:id="@+id/rbCenter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alignCenter" />
+
+                    <RadioButton
+                        android:id="@+id/rbBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alignBottom" />
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

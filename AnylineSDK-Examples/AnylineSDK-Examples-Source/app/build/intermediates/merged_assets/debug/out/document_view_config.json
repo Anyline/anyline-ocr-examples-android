@@ -1,0 +1,48 @@
+{
+  "camera":{
+    "captureResolution":"720p",
+    "pictureResolution":"1080p",
+    "pictureAspectRatios":["16:9"],
+    "zoomGesture": true
+  },
+  "flash": {
+    "mode": "manual",
+    "alignment": "bottom_left",
+    "offset": {
+      "x": 10,
+      "y": 0
+    },
+    "imageOn": "flash_on",
+    "imageOff": "flash_off",
+    "imageAuto": "flash_auto"
+  },
+
+  "viewPlugin" : {
+    "plugin" : {
+      "id" : "DOCUMENT",
+      "documentPlugin" : {
+      }
+    },
+    "cutoutConfig" : {
+      "style": "rect",
+      "maxWidthPercent": "100%",
+      "maxHeightPercent": "100%",
+      "width": 720,
+      "ratioFromSize": {
+        "width": 10,
+        "height": 15
+      },
+      "alignment": "center",
+      "strokeWidth": 2,
+      "cornerRadius": 0,
+      "strokeColor": "00000000"
+    },
+    "scanFeedback" : {
+      "beepOnResult": true,
+      "vibrateOnResult": true,
+      "blinkAnimationOnResult": true
+    },
+    "cancelOnResult" : true
+  }
+}
+

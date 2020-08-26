@@ -1,0 +1,52 @@
+{
+  "camera":{
+    "captureResolution":"1080",
+    "zoomGesture": true
+  },
+  "flash": {
+    "mode": "manual",
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off"
+  },
+  "viewPlugin" : {
+    "plugin" : {
+      "id" : "OCR_IBAN",
+      "ocrPlugin" : {
+        "scanMode" : "LINE",
+        "languages" : ["USNr.any"],
+        "charWhitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+        "minCharHeight" : 25,
+        "maxCharHeight" : 65,
+        "minConfidence" : 70
+      }
+    },
+    "cutoutConfig": {
+      "style": "rect",
+      "maxWidthPercent": "80%",
+      "maxHeightPercent": "80%",
+      "alignment": "top_half",
+      "width": 900,
+      "ratioFromSize": {
+        "width": 10,
+        "height": 1
+      },
+      "strokeWidth": 2,
+      "cornerRadius": 10,
+      "strokeColor": "FFFFFF",
+      "outerColor": "000000",
+      "outerAlpha": 0.3,
+      "feedbackStrokeColor": "0099FF"
+    },
+    "cancelOnResult": true,
+    "scanFeedback": {
+      "animationDuration": 200,
+      "style": "contour_underline",
+      "strokeColor": "0099FF",
+      "strokeWidth": 2,
+      "beepOnResult": true,
+      "vibrateOnResult": true,
+      "blinkAnimationOnResult": true
+    }
+  }
+}

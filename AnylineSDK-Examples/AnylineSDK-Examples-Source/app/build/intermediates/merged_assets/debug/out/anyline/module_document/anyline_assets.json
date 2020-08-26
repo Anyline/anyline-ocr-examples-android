@@ -1,0 +1,11 @@
+{
+    "comment": "Auto generated file. Manual changes will be overwritten.",
+    "immediateAssets": {
+        "anyline/module_document/document.ale": "9694abdf4f6b4407f7f2575b289e7756",
+        "anyline/module_document/trained_models/doc_model_3_25.any": "0db845b785b6d511b4727d60ce097378",
+        "anyline/module_document/trained_models/doc_model_3_27.any": "4b9f8ed55a9993ea83fdcf7c3ccf00e2"
+    },
+    "lazyAssets": {
+        
+    }
+}

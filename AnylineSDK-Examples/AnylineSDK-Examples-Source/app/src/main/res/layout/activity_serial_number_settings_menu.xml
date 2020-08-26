@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTopMainLayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padingTopBottomHeaderMenu"
+                android:paddingBottom="@dimen/padingTopBottomHeaderMenu"
+                android:paddingStart="@dimen/padingStartEndHeaderMenu"
+                android:paddingEnd="@dimen/padingStartEndHeaderMenu"
+                android:text = "@string/scanAreaSettings"
+                android:background="@color/black_10"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/textSizeLarge" />
+
+            <LinearLayout
+                android:id="@+id/llScanAreaH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartMenu"
+                android:layout_marginTop="@dimen/marginTopBottomMenuSubLayout"
+                android:layout_marginBottom="@dimen/marginTopBottomMenuSubLayout"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llScanArea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_weight="8"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCutoutRatio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/textSizeHint" />
+
+                    <TextView
+                        android:id="@+id/tvCutoutWidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/textSizeHint" />
+
+                    <TextView
+                        android:id="@+id/tvCutoutCornerRadius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/textSizeHint" />
+
+                    <TextView
+                        android:id="@+id/tvCutoutAlign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/textSizeHint" />
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivScanArea"
+                    android:layout_width="@dimen/widthImageViewMenu"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/marginEndImageViewMenu"
+                    android:layout_gravity="start|center_vertical"
+                    android:src="@drawable/ic_arrow_right"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    tools:ignore="ContentDescription"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="@dimen/padingTopBottomHeaderMenu"
+                android:paddingBottom="@dimen/padingTopBottomHeaderMenu"
+                android:paddingStart="@dimen/padingStartEndHeaderMenu"
+                android:paddingEnd="@dimen/padingStartEndHeaderMenu"
+                android:text = "@string/characterSettings"
+                android:background="@color/black_10"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/textSizeLarge" />
+
+            <LinearLayout
+                android:id="@+id/llBasicCharacterH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartMenu"
+                android:layout_marginTop="@dimen/marginTopBottomMenuSubLayout"
+                android:layout_marginBottom="@dimen/marginTopBottomMenuSubLayout"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbBasic"
+                    android:layout_width="@dimen/widthRadioButtonMenu"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:id="@+id/llBasicCharacter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginStartMenu"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBasic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/basicCharacterSettings"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/textSizeLarge" />
+
+                    <TextView
+                        android:id="@+id/tvBasicLength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/textSizeHint" />
+
+                    <TextView
+                        android:id="@+id/tvBasicType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/textSizeHint" />
+
+                    <TextView
+                        android:id="@+id/tvBasicExclude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/textSizeHint" />
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivBasicCharacter"
+                    android:layout_width="@dimen/widthImageViewMenu"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/marginEndImageViewMenu"
+                    android:layout_gravity="start|center_vertical"
+                    android:src="@drawable/ic_arrow_right"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    tools:ignore="ContentDescription"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black_25" />
+
+
+            <LinearLayout
+                android:id="@+id/llAdvancedCharacterH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartMenu"
+                android:layout_marginTop="@dimen/marginTopBottomMenuSubLayout"
+                android:layout_marginBottom="@dimen/marginTopBottomMenuSubLayout"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAdvanced"
+                    android:layout_width="@dimen/widthRadioButtonMenu"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:id="@+id/llAdvancedCharacter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginStartMenu"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAdvanced"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/advancedCharacterSettings"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/textSizeLarge" />
+
+                    <TextView
+                        android:id="@+id/tvAdvancedRegex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textSizeHint" />
+
+                    <TextView
+                        android:id="@+id/tvInvalidRegex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/invalidRegex"
+                        android:textSize="@dimen/textSizeHint"
+                        android:textColor="@color/red"
+                        android:visibility="gone"
+                        />
+
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivAdvancedCharacter"
+                    android:layout_width="@dimen/widthImageViewMenu"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/marginEndImageViewMenu"
+                    android:layout_gravity="start|center_vertical"
+                    android:src="@drawable/ic_arrow_right"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    tools:ignore="ContentDescription"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

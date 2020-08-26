@@ -6,17 +6,16 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.NFC"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.SET_DEBUG_APP"></uses-permission>
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
 
     <uses-feature
         android:name="android.hardware.nfc"
-        android:required="false"/>
-
+        android:required="false" />
 
     <application
         android:allowBackup="false"
@@ -26,6 +25,26 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
+        <activity
+            android:name=".ocr.SerialNumberSettingsMenuActivity"
+            android:label="@string/title_activity_serial_number_settings"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ocr.SerialNumberSettingsScanAreaActivity"
+            android:label="@string/title_activity_serial_number_settings"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ocr.SerialNumberSettingsBasicActivity"
+            android:label="@string/title_activity_serial_number_settings"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ocr.SerialNumberSettingsAdvancedActivity"
+            android:label="@string/title_activity_serial_number_settings"
+            android:screenOrientation="portrait">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -51,7 +70,6 @@
         <activity
             android:name=".meterreadingprocesses.activities.CustomerIdentifyScannerActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".meter.ScanDigitalEnergyMeterActivity"
             android:label="@string/title_digital_meter"
@@ -146,23 +164,19 @@
             android:name=".document.ScanDocumentActivity"
             android:label="@string/title_document"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".document.DocScanUIMainActivity"
             android:label="@string/title_document"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".document.DocumentScanViewUIActivity"
             android:label="@string/title_document"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".document.CropViewUIActivity"
             android:label="@string/title_document"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".ocr.ScanScrabbleActivity"
             android:label="@string/title_scrabble"
@@ -310,35 +324,42 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ocr.ScanRecordActivity" />
         </activity>
-        <activity android:name=".id.ScanBelgianDrivingLicenseActivity"
-                  android:screenOrientation="portrait" />
-        <activity android:name=".id.ScanDutchDrivingLicenseActivity"
-                  android:screenOrientation="portrait" />
-        <activity android:name=".id.NFC.NFCScanMRZActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name=".id.NFC.NFCScanActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name=".ocr.ScanTINActivity"
-                  android:label="@string/tin"
-                  android:parentActivityName=".MainActivity"
-                  android:screenOrientation="portrait">
+        <activity
+            android:name=".id.ScanBelgianDrivingLicenseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".id.ScanDutchDrivingLicenseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".id.NFC.NFCScanMRZActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".id.NFC.NFCScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ocr.ScanTINActivity"
+            android:label="@string/tin"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
         <activity android:name=".meter.ParallelResultActivity" />
         <activity android:name=".meter.ScanParallelAutoAnalogDigitalMeterActivity" />
-        <activity android:name=".trainer.TrainerLoginActivity"
-            android:parentActivityName=".MainActivity"
-            android:noHistory="true" />
-        <activity android:name=".id.ScanUniversalIdActivity"
-            android:parentActivityName=".MainActivity"
-            />
-        <activity android:name=".id.ScanUniversalIdResultActivity"
+        <activity
+            android:name=".trainer.TrainerLoginActivity"
+            android:noHistory="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".id.ScanUniversalIdActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".id.ScanUniversalIdResultActivity"
             android:label="Result Data"
-            android:screenOrientation="portrait"
             android:parentActivityName=".id.ScanUniversalIdActivity"
-            android:theme="@style/AppTheme.DarkActionBar"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DarkActionBar" />
 
         
     </application>

@@ -3,6 +3,8 @@ package io.anyline.examples.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.UUID;
 
 import static at.nineyards.anyline.reporter.ReportingService.PREFS_NAME;
@@ -31,6 +33,7 @@ public class Preferences {
     public static final String PREFS_PROJECT_TITLE= "projectTitle";
     public static final String PREFS_CUTOUT_CONFIG = "cutoutConfig";
     public static final String PREFS_CUSTOMER_ID = "customerId";
+    public static final String PREFS_API_URL = "apiUrl";
 
 
     private static Preferences instance;

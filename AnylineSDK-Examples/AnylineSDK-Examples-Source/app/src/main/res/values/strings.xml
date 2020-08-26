@@ -406,6 +406,7 @@
     <!-- Build Version Description -->
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
     <string name="sdk_build_version" formatted="false">SDK Build Version %s</string>
+    <string name="title_activity_serial_number_settings">SerialNumberSettingsActivity</string>
     <string name="control_image">Control Image</string>
 
 

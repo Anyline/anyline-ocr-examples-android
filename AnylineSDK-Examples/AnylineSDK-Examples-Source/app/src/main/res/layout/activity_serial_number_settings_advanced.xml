@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStartEndMainLayout"
+            android:layout_marginTop="@dimen/marginTopMainLayout"
+            android:layout_marginEnd="@dimen/marginStartEndMainLayout"
+            android:layout_marginBottom="@dimen/marginBottomMainLayout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llRegex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartEndSubLayout"
+                android:layout_marginEnd="@dimen/marginStartEndSubLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRegex"
+                    android:labelFor="@id/etRegex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/regex"
+                    android:textSize="@dimen/textSizeHeader" />
+
+                <EditText
+                    android:id="@+id/etRegex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:maxLines="3"
+                    android:inputType="textCapCharacters|textMultiLine"
+                    android:importantForAutofill="no"
+                    />
+
+                <TextView
+                    android:id="@+id/tvInvalidRegex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/invalidRegex"
+                    android:textSize="@dimen/textSizeHint"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tvRegexExample"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/regexExample"
+                    android:textSize="@dimen/textSizeHint"
+                    android:textColor="@color/black_50"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

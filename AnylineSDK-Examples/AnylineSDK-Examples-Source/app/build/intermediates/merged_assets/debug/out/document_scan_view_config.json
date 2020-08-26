@@ -1,0 +1,65 @@
+{
+  "scanMode": "multiple_pages",
+  "enablePostProcessing": true,
+  "showCancelOnCropView": true,
+
+  "reducePictureSize": {
+    "allowChangeCustomSize": "true",
+    "option": "Small",
+    "maxSizeSmall": 300,
+    "maxSizeMedium": 600,
+    "maxSizeLarge": 1200,
+    "maxSizeCustom": 900
+  },
+
+  "scanFormat": {
+    "selectFormats": "All",
+    "formatTolerance": "0.1",
+    "a4": true,
+    "complimentSlip": false,
+    "businessCard": false,
+    "letter": true,
+    "customRatio": true,
+    "customRatioValueShortSide": 3,
+    "customRatioValueLongSide": 4,
+    "allformatsminratio": {
+      "width": 1,
+      "height": 6
+    },
+    "allformatsmaxratio": {
+      "width": 1,
+      "height": 1
+    }
+  },
+
+  "bottomBar": {
+    "position0": {
+      "control": "flash",
+      "width": 2
+    },
+    "position1": {
+      "control": "scan_mode",
+      "width": 2
+    },
+    "position2": {
+      "control": "manual_picture",
+      "width": 3
+    },
+    "position3": {
+      "control": "cancel",
+      "width": 2
+    },
+    "position4": {
+      "control": "ok",
+      "width": 2
+    }
+  },
+
+  "bottomBarExtension": {
+    "line0": "format",
+    "line1": "picture_resize",
+    "line2": "empty",
+    "line3": "empty"
+  }
+
+}

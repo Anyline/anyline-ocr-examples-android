@@ -38,6 +38,16 @@ public abstract class ScanningConfigurationActivity extends AppCompatActivity{
         }
     }
 
+    public  static void setupScanProcessView(Context context, String result, ScanModuleEnum.ScanModule scanModule, String barcode, Bitmap bmp) {
+
+
+        try {
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     protected void setupScanResult(){
 
     }
