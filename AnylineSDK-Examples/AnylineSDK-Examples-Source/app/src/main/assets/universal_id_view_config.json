@@ -13,7 +13,12 @@
     "plugin":{
       "id":"ID",
       "idPlugin": {
-        "templateConfig": {
+        "universalIdConfig": {
+          "allowedLayouts": {
+            "mrz": [],
+            "drivingLicense": [],
+            "idFront": []
+          },
           "drivingLicense": {
             "surname": {"scanOption": 0, "minConfidence": 40},
             "givenNames": {"scanOption": 0, "minConfidence": 40},
@@ -40,12 +45,12 @@
       }
     },
     "cutoutConfig" : {
-      "style": "rect",
+      "style": "animated_rect",
       "maxWidthPercent": "90%",
       "maxHeightPercent": "90%",
       "alignment": "center",
-      "strokeWidth": 2,
-      "cornerRadius": 4,
+      "strokeWidth": 8,
+      "cornerRadius": 8,
       "strokeColor": "FFFFFF",
       "outerColor": "000000",
       "outerAlpha": 0.3,
@@ -64,7 +69,7 @@
       "feedbackStrokeColor": "0099FF"
     },
     "scanFeedback" : {
-      "style": "CONTOUR_POINT",
+      "style": "CONTOUR_RECT",
       "visualFeedbackRedrawTimeout": 100,
       "strokeColor": "0099FF",
       "fillColor" : "220099FF",

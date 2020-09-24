@@ -1,6 +1,6 @@
 {
   "camera":{
-  "captureResolution":"720",
+    "captureResolution":"720",
     "zoomGesture": true
   },
   "flash": {

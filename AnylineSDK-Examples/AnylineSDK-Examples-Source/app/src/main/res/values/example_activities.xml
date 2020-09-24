@@ -108,6 +108,7 @@
         <item>HEADER</item>
         <item>io.anyline.examples.id.NFC.NFCScanMRZActivity</item>
         <item>io.anyline.examples.id.ScanUniversalIdActivity</item>
+
     </string-array>
 
 </resources>

@@ -1,0 +1,54 @@
+{
+  "viewPlugin": {
+    "cancelOnResult": true,
+    "delayStartScanTime": 5,
+    "cutout": {
+      "style": "rect",
+      "maxWidthPercent": "90%",
+      "maxHeightPercent": "90%",
+      "alignment": "center",
+      "width": 1080,
+      "ratioFromSize" : {
+        "width": 50,
+        "height": 31
+      },
+      "cropPadding": {
+        "x": -50,
+        "y": -50
+      },
+      "cropOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "strokeWidth": 8,
+      "cornerRadius": 8,
+      "strokeColor": "FFFFFF",
+      "outerColor": "000000",
+      "outerAlpha": 0.3,
+      "feedbackStrokeColor": "0099FF"
+    },
+    "scanFeedback": {
+      "beepOnResult": true,
+      "style": "contour_rect",
+      "strokeWidth": 2,
+      "blinkAnimationOnResult": true,
+      "fillColor": "220099FF",
+      "strokeColor": "0099FF",
+      "vibrateOnResult": true
+    },
+    "plugin": {
+      "id": "ID_PLUGIN",
+      "idPlugin": {
+        "templateConfig": {
+        }
+      }
+    }
+  },
+  "flash": {
+    "mode": "manual",
+    "alignment": "bottom_right"
+  },
+  "camera": {
+    "captureResolution": "1080p"
+  }
+}

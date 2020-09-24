@@ -350,10 +350,12 @@
         <activity
             android:name=".trainer.TrainerLoginActivity"
             android:noHistory="true"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".id.ScanUniversalIdActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".id.ScanUniversalIdResultActivity"
             android:label="Result Data"

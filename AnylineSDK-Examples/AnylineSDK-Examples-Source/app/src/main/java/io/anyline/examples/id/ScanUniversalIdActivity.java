@@ -51,6 +51,9 @@ public class ScanUniversalIdActivity extends ScanActivity implements ScanRunSkip
             intent.putExtra("resultData", data);
             intent.putExtra("scan_full_picture_path", imagePath);
             startActivity(intent);
+
+            setupScanProcessView(ScanUniversalIdActivity.this, idScanResult, getScanModule());
+
         });
     }
 

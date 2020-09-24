@@ -11,7 +11,7 @@
   },
   "viewPlugin": {
     "cutoutConfig": {
-      "style": "rect",
+      "style": "animated_rect",
       "width": 720,
       "alignment": "top_half",
       "maxWidthPercent": "80%",
@@ -20,9 +20,9 @@
         "width": 10,
         "height": 5
       },
-      "strokeWidth": 2,
+      "strokeWidth": 8,
       "strokeColor": "FFFFFF",
-      "cornerRadius": 4,
+      "cornerRadius": 8,
       "outerColor": "000000",
       "outerAlpha": 0.5,
       "feedbackStrokeColor": "0099FF",
