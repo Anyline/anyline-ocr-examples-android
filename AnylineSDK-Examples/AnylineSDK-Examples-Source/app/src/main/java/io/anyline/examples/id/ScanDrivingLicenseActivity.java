@@ -2,6 +2,7 @@
 
 package io.anyline.examples.id;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ import io.anyline.plugin.id.DrivingLicenseConfig;
 import io.anyline.plugin.id.ID;
 import io.anyline.plugin.id.IdScanPlugin;
 import io.anyline.plugin.id.IdScanViewPlugin;
+import io.anyline.plugin.id.Identification;
 import io.anyline.view.ScanView;
 
 
@@ -46,29 +48,22 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 
     void init() {
 
-        DrivingLicenseConfig drivingLicenseConfig = new DrivingLicenseConfig();
-        drivingLicenseConfig.enableFaceDetection(true);
-        drivingLicenseConfig.setScanMode(DrivingLicenseConfig.DrivingLicenseCountry.AUTO);
-        drivingLicenseScanView = (ScanView) findViewById(R.id.scan_view);
-
-        //init the scanViewPlugin config
-        drivingLicenseScanView.setScanConfig("driving_license_view_config.json");
-        //ScanViewPluginConfig config = new ScanViewPluginConfig(getApplicationContext(), "driving_license_view_config_new.json");
-        //init the scan view
-        IdScanPlugin scanPlugin = new IdScanPlugin(getApplicationContext(), "driving_license", getString(R.string.anyline_license_key), drivingLicenseConfig);
-        IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(getApplicationContext(), scanPlugin, drivingLicenseScanView.getScanViewPluginConfig());
+        drivingLicenseScanView = findViewById(R.id.scan_view);
+        drivingLicenseScanView.init("universal_id_view_config.json", getString(R.string.anyline_license_key));
+        IdScanViewPlugin scanViewPlugin = (IdScanViewPlugin) drivingLicenseScanView.getScanViewPlugin();
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<ScanResult<ID>>() {
             @Override
             public void onResult(ScanResult<ID> idScanResult) {
-                DrivingLicenseIdentification resultString = (DrivingLicenseIdentification) idScanResult.getResult();
+                Identification identification = (Identification) idScanResult.getResult();
+                HashMap<String, String> data = (HashMap<String, String>) identification.getResultData();
+                String imagePath = setupImagePath(idScanResult.getCutoutImage());
+                String facePath = setupImagePath(new AnylineImage(identification.getFaceImage()));
 
-
-                String path = setupImagePath(idScanResult.getCutoutImage());
-                String facePath = setupImagePath(new AnylineImage(resultString.getFaceImage()));
-
-
-                startScanResultIntent(getResources().getString(R.string.title_driving_license), getDrivingLicenseResult(resultString), path, facePath);
+                Intent intent = new Intent(ScanDrivingLicenseActivity.this, ScanUniversalIdResultActivity.class);
+                intent.putExtra("resultData", data);
+                intent.putExtra("scan_full_picture_path", imagePath);
+                startActivity(intent);
 
                 setupScanProcessView(ScanDrivingLicenseActivity.this, idScanResult, getScanModule());
             }
