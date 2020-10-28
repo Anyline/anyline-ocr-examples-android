@@ -426,4 +426,8 @@
     <string name="barcode_result">Barcode Result</string>
 
 
+    <string name="control_image">Control Image</string>
+    <string name="title_activity_serial_number_settings">SerialNumberSettingsActivity</string>
+
+
 </resources>

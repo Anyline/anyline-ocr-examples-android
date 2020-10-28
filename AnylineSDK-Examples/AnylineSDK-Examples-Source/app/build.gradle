@@ -13,7 +13,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 337
+        versionCode 338
         versionName "25"
 
         ndk {
@@ -64,7 +64,7 @@ dependencies {
 
     //uncomment if you want to import the AnylineSdk project
     //implementation project(':AnylineSdk')
-    //implementation(name:'anylinesdk-release-25', ext:'aar')
+   //implementation(name:'anylinesdk-release-25', ext:'aar')
 
     //include AnylineSDK from maven
     implementation 'io.anyline:anylinesdk:25'
@@ -102,8 +102,6 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.1'
 
     customImplementation('io.anyline:anylinesdk:25')
-
-    //implementation("com.google.guava:guava:29.0-android")
 
 }
 
