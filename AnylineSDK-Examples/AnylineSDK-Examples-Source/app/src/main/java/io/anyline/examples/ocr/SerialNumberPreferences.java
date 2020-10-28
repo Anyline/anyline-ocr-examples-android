@@ -17,6 +17,8 @@ import java.util.regex.PatternSyntaxException;
 
 import androidx.annotation.NonNull;
 
+import com.google.gson.Gson;
+
 
 public class SerialNumberPreferences {
     private static final String TAG = SerialNumberPreferences.class.getSimpleName();

@@ -7,6 +7,7 @@
 
     <!-- Common -->
     <dimen name="primary_text">16sp</dimen>
+    <dimen name="primary_text_small">14sp</dimen>
     <dimen name="secondary_text">12sp</dimen>
 
     <!-- Contact Screen -->
@@ -31,6 +32,7 @@
     <dimen name="margin_dim">20dp</dimen>
     <dimen name="margin_top_onBoarding">5dp</dimen>
     <dimen name="margin_right_onBoarding">15dip</dimen>
+    <dimen name="margin_bottom_onBoarding">30dip</dimen>
 
     <!-- Document Scanner UI -->
     <dimen name="divider_height">16dp</dimen>
@@ -40,5 +42,15 @@
     <dimen name="btnPaddingTopBottom">12dp</dimen>
     <dimen name="btnLayoutMargin">8dp</dimen>
     <dimen name="listItemSpace">8dp</dimen>
+
+    <!-- dimensions for tooltip -->
+    <dimen name="ttlm_default_padding">20dip</dimen>
+    <dimen name="ttlm_default_corner_radius">8dip</dimen>
+    <dimen name="ttlm_default_stroke_weight">0dip</dimen>
+    <dimen name="ttlm_default_elevation">4dp</dimen>
+    <dimen name="cutout_stroke_width">4dp</dimen>
+    <dimen name="cutout_corner_radius">8dp</dimen>
+    <dimen name="ripple_size_offset">40dp</dimen>
+    <dimen name="ripple_stroke_width">4dp</dimen>
 
 </resources>

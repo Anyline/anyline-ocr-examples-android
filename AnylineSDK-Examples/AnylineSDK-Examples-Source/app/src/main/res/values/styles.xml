@@ -39,6 +39,7 @@
         <item name="titleTextColor">@color/black_100</item>
         <item name="android:textColorPrimary">@color/black_100</item>
         <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/blue</item>
         <item name="colorAccent">@color/blue</item>
         <item name="android:textColorSecondary">@color/black_100</item>
         <item name="android:textColorTertiary">@color/black_100</item>
@@ -139,6 +140,11 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="BigHeader">
+        <item name="android:textColor">@color/black_90</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
     <style name="IntroFeedbackText">
         <item name="android:textColor">@color/blue</item>
         <item name="android:textSize">14sp</item>
@@ -219,7 +225,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@drawable/button_text_color_selector</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:background">@drawable/button_color_selector_transparent</item>
     </style>
 

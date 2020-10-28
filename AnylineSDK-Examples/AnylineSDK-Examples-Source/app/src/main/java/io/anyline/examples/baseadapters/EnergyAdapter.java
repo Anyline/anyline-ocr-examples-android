@@ -1,6 +1,8 @@
 package io.anyline.examples.baseadapters;
 
 import android.content.Context;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -15,7 +17,7 @@ public class EnergyAdapter extends BaseGridListAdapter {
     Context ctx;
     public EnergyAdapter(Context context, String[] names, String[] classes, GridLayoutManager gridLayoutManager,
                          int defaultSpanCount, OnItemClickListener listener) {
-        super(context, names, classes, gridLayoutManager, defaultSpanCount, listener);
+        super(context, names, classes, gridLayoutManager, defaultSpanCount, listener, false);
         this.ctx = context;
     }
 
@@ -24,7 +26,8 @@ public class EnergyAdapter extends BaseGridListAdapter {
 
         View container = holder.itemView;
         TextView itemText = (TextView) container.findViewById(R.id.item_overview_description);
-        RelativeLayout itemOverView = (RelativeLayout) container.findViewById(R.id.item_overview);
+        //RelativeLayout itemOverView = (RelativeLayout) container.findViewById(R.id.item_overview);
+        ConstraintLayout itemOverView = container.findViewById(R.id.item_overview);
 
         itemText.setText(names[position]);
         itemOverView.setVisibility(View.VISIBLE);

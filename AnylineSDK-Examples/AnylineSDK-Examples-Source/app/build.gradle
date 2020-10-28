@@ -13,11 +13,11 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 333
-        versionName "24.1"
+        versionCode 337
+        versionName "25"
 
         ndk {
-            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+            abiFilters "armeabi-v7a","arm64-v8a"
         }
         multiDexEnabled true
     }
@@ -59,14 +59,15 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC2'
 
 
     //uncomment if you want to import the AnylineSdk project
     //implementation project(':AnylineSdk')
-
+    //implementation(name:'anylinesdk-release-25', ext:'aar')
 
     //include AnylineSDK from maven
-    implementation 'io.anyline:anylinesdk:24.1'
+    implementation 'io.anyline:anylinesdk:25'
 
 
     /// include the vision-version we need for barcode scanning
@@ -77,14 +78,13 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:17.5.0'
 
     //Kotlin
-    implementation "androidx.core:core-ktx:1.3.1"
+    implementation "androidx.core:core-ktx:1.3.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 
     //Kotlin coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0'
-    implementation 'androidx.core:core-ktx:1.3.1'
 
 
     //Retrofit
@@ -101,7 +101,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
     implementation 'androidx.preference:preference:1.1.1'
 
-    customImplementation('io.anyline:anylinesdk:24.1')
+    customImplementation('io.anyline:anylinesdk:25')
+
+    //implementation("com.google.guava:guava:29.0-android")
 
 }
 

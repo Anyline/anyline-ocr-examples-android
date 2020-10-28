@@ -66,7 +66,7 @@ public class ScanBarcodePDF417Activity extends ScanActivity implements CameraOpe
 			public void onResult(BarcodeScanResult result) {
 				String path = setupImagePath(result.getCutoutImage());
 
-				startScanResultIntent(getResources().getString(R.string.pdf_417), getBarcodeResult(result.getResult().toString()), path);
+				startScanResultIntent(getResources().getString(R.string.pdf_417), getBarcodeResult(result.getResult().get(0).getValue()), path);
 				setupScanProcessView(ScanBarcodePDF417Activity.this, result, getScanModule());
 			}
 

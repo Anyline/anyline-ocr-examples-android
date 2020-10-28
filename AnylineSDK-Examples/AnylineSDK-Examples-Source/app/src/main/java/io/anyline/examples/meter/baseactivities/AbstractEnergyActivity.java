@@ -184,7 +184,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
         energyScanView.stop();
         //release the camera (must be called in onPause, because there are situations where
         // it cannot be auto-detected that the camera should be released)
-        energyScanView.releaseCameraInBackground();
+        //energyScanView.releaseCameraInBackground();
     }
 
     @Override

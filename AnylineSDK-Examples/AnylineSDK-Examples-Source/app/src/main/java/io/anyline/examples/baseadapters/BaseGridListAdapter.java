@@ -1,38 +1,45 @@
 package io.anyline.examples.baseadapters;
 
 import android.content.Context;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import io.anyline.examples.R;
 
 public class BaseGridListAdapter extends RecyclerView.Adapter<BaseGridListAdapter.Holder> {
 
     public static final int TYPE_HEADER = 0;
     public static final int TYPE_ITEM = 1;
+    public static final int TYPE_LIST_ITEM = 2;
     private final int mDefaultSpanCount;
 
     protected OnItemClickListener listener;
     private Context context;
     protected String[] names;
     protected String[] classes;
+    private Boolean isListView;
 
-    public BaseGridListAdapter(Context context, String[] names, String[] classes, GridLayoutManager gridLayoutManager, int defaultSpanCount, OnItemClickListener listener) {
+    public BaseGridListAdapter(Context context, String[] names, String[] classes, GridLayoutManager gridLayoutManager, int defaultSpanCount,
+                               OnItemClickListener listener, Boolean isListView) {
 
         this.context = context;
         this.names = names;
         this.classes = classes;
         this.listener = listener;
+        this.isListView = isListView;
 
         mDefaultSpanCount = defaultSpanCount;
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
-                return (getItemViewType(position) == 0 ) ? mDefaultSpanCount : 1;
+                return (getItemViewType(position) == 0) ? mDefaultSpanCount : 1;
             }
         });
     }
@@ -42,8 +49,10 @@ public class BaseGridListAdapter extends RecyclerView.Adapter<BaseGridListAdapte
 
         View view;
 
-        if(viewType == TYPE_HEADER) {
+        if (viewType == TYPE_HEADER) {
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.header_type_layout, viewGroup, false);
+        } else if (isListView) {
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list_overview, viewGroup, false);
         } else {
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_overview, viewGroup, false);
         }
@@ -53,7 +62,7 @@ public class BaseGridListAdapter extends RecyclerView.Adapter<BaseGridListAdapte
 
     @Override
     public void onBindViewHolder(Holder holder, int position) {
-        if(getItemViewType(position) == TYPE_HEADER) {
+        if (getItemViewType(position) == TYPE_HEADER) {
             bindHeaderItem(holder, position);
         } else {
             bindGridItem(holder, position);
@@ -69,9 +78,8 @@ public class BaseGridListAdapter extends RecyclerView.Adapter<BaseGridListAdapte
     public void bindGridItem(Holder holder, final int position) {
 
         View container = holder.itemView;
-
         TextView itemText = (TextView) container.findViewById(R.id.item_overview_description);
-        RelativeLayout itemOverView = (RelativeLayout) container.findViewById(R.id.item_overview);
+        ConstraintLayout itemOverView = container.findViewById(R.id.item_overview);
 
         itemText.setText(names[position]);
         itemOverView.setVisibility(View.VISIBLE);
@@ -79,12 +87,13 @@ public class BaseGridListAdapter extends RecyclerView.Adapter<BaseGridListAdapte
         container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(listener != null) {
+                if (listener != null) {
                     listener.onItemClick(position);
                 }
             }
         });
     }
+
     public String getClassName(int position) {
         return classes[position];
     }
@@ -126,7 +135,7 @@ public class BaseGridListAdapter extends RecyclerView.Adapter<BaseGridListAdapte
         }
     }
 
-    public interface OnItemClickListener{
+    public interface OnItemClickListener {
         void onItemClick(int position);
     }
 }

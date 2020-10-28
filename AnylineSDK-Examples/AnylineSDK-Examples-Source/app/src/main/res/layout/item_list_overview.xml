@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_overview"
+    android:layout_margin="4dp"
+    android:layout_height="48dp"
+    android:background="@color/black_3">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="48dp"
+        android:background="@drawable/trial"
+        android:layout_marginStart="10dp"
+        android:padding="14dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/item_overview_description"
+        android:layout_toRightOf="@+id/item_image"
+        android:text="@string/skip"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingTop="0dp"
+        style="@style/ListItemOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/item_image"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

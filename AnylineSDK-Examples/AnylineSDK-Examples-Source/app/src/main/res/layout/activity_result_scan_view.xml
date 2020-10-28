@@ -51,9 +51,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text"
                 android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
                 android:padding="10dp"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text" />
@@ -82,10 +82,10 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:visibility="gone"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,21 +96,23 @@
     </ScrollView>
 
 
-    <TextView
+    <Button
+
         android:id="@+id/confirmation_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:background="@color/blue_light"
-        android:minHeight="60dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_round_corner"
+        app:backgroundTint="@null"
+        android:enabled="true"
         android:text="@string/confirm"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sv_result"
         app:layout_constraintStart_toStartOf="parent" />

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import io.anyline.examples.R;
 
@@ -77,6 +78,8 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 	private void bindGridItem(Holder holder, final int position) {
 
 		View container = holder.itemView;
+		String regex = "(.)*(\\d)(.)*";
+		Pattern pattern = Pattern.compile(regex);
 
 		Object dataFieldTitleResult = scanResultHashMap.keySet().toArray()[position];
 		Object scanDataResult = scanResultHashMap.get(dataFieldTitleResult);
@@ -84,6 +87,20 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 		TextView dataFieldTitleResultTextView = container.findViewById(R.id.dataFieldTitleResult);
 		TextView resultScanDataTextView = container.findViewById(R.id.resultScanData);
 		ImageView receivedDataImageView = container.findViewById(R.id.result_ok_image);
+
+		if(String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_format))){
+			if(pattern.matcher(String.valueOf(dataFieldTitleResult)).matches()) {
+				dataFieldTitleResult = context.getResources().getString(R.string.barcode_format);
+			}
+		}
+
+		if(String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_result))){
+			if(pattern.matcher(String.valueOf(dataFieldTitleResult)).matches()) {
+
+				dataFieldTitleResult = context.getResources().getString(R.string.barcode_result);
+			}
+
+		}
 
 		if(String.valueOf(dataFieldTitleResult).equals(context.getResources().getString(R.string.mrz_viz_date_of_expiry))){
 			dataFieldTitleResult = context.getResources().getString(R.string.mrz_viz_date_of_expiry).replace("viz ", "");
@@ -139,7 +156,7 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 		//String x = scanResultHashMap.get("HEADER");
 		List<String> indexes = new ArrayList<String>(scanResultHashMap.keySet());
 
-		return ("HEADER".equals(indexes.get(position)) || "HEADER_MRZ".equals(indexes.get(position))) ? TYPE_HEADER : TYPE_ITEM;
+		return ("HEADER".equals(indexes.get(position)) || "HEADER_MRZ".equals(indexes.get(position)) || ("HEADER" + ((position/3))).equals(indexes.get(position))) ? TYPE_HEADER : TYPE_ITEM;
 	}
 
 	@Override

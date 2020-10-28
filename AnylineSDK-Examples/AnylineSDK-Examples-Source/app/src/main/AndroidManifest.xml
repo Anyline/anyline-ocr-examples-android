@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     package="io.anyline.examples">
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -9,7 +10,11 @@
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INPUT_STATE" />
+
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.SET_DEBUG_APP" />
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
 
@@ -314,6 +319,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ocr.ScanIsbnActivity" />
         </activity>
+        <activity
+            android:name=".barcode.BarcodeListViewActivity"
+            android:screenOrientation="portrait"
+            android:label="Barcode Types"/>
+
         <activity
             android:name=".ocr.apis.RecordSearchActivity"
             android:label="@string/title_record_result"

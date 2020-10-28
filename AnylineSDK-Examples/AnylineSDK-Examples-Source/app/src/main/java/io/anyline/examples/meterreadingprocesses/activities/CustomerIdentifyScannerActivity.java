@@ -1,6 +1,7 @@
 package io.anyline.examples.meterreadingprocesses.activities;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
@@ -25,6 +27,7 @@ import io.anyline.examples.model.Customer;
 import io.anyline.examples.model.Reading;
 import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.barcode.Barcode;
 import io.anyline.plugin.barcode.BarcodeScanPlugin;
 import io.anyline.plugin.barcode.BarcodeScanViewPlugin;
 import io.anyline.plugin.meter.MeterScanMode;
@@ -67,8 +70,8 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
 
         composite = new SerialScanViewComposite("SERIAL");
 
-        ScanViewPluginConfig barcodeScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "barcode_view_config.json");
-        BarcodeScanPlugin barcodeScanPlugin = new BarcodeScanPlugin(this, "barcodePlugin", getString(R.string.anyline_license_key));
+        ScanViewPluginConfig barcodeScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "barcode_trainer_login_view_config.json");
+        BarcodeScanPlugin barcodeScanPlugin = new BarcodeScanPlugin(this, "barcodePlugin", getString(R.string.anyline_license_key_old));
         barcodeSVP = new BarcodeScanViewPlugin(this, barcodeScanPlugin, barcodeScanViewPluginConfig);
 
 
@@ -83,7 +86,7 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
 
                 toolbar.setTitle("Meter Reading");
                 try {
-                    String result = energyResult.getResult().toString();
+                    String result = ((Barcode) ((ArrayList) energyResult.getResult()).get(0)).getValue();
 
                     if (mCurrentReading != null) {
                         try {
@@ -128,17 +131,14 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
                                     .setMessage(getString(R.string.customer_not_found))
                                     .setCancelable(false)
                                     .setPositiveButton(R.string.ok, null)
+                                    .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                                        @Override
+                                        public void onDismiss(DialogInterface dialogInterface) {
+                                            mEnergyScanView.stop();
+                                            mEnergyScanView.start();
+                                        }
+                                    })
                                     .show();
-
-                            new Handler().postDelayed(new Runnable() {
-
-                                @Override
-                                public void run() {
-                                    //if (!mEnergyScanView.getScanViewPlugin().isRunning()) {
-                                    mEnergyScanView.start();
-                                    //}
-                                }
-                            }, 3000);
                         }
 
                         processReading();

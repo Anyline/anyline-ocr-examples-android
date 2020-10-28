@@ -77,15 +77,11 @@ public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugL
             @Override
             public void onResult(OcrScanResult result) {
                 String path = setupImagePath(result.getCutoutImage());
-
                 startScanResultIntent(getResources().getString(R.string.title_bottlecap), getSerialNumberResult(result.getResult().toString()), path);
                 setupScanProcessView(ScanBottlecapActivity.this, result, getScanModule());
-
             }
 
         });
-
-
         //set the debug listener
         scanViewPlugin.setDebugListener(this);
 

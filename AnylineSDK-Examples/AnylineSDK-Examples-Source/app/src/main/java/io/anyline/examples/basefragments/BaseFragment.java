@@ -50,7 +50,7 @@ public class BaseFragment extends Fragment{
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(gridLayoutManager);
 
-        mAdapter = new BaseGridListAdapter(this.getContext(), names, classes, gridLayoutManager, DEFAULT_SPAN_COUNT, onClickListener);
+        mAdapter = new BaseGridListAdapter(this.getContext(), names, classes, gridLayoutManager, DEFAULT_SPAN_COUNT, onClickListener, false);
         mRecyclerView.setAdapter(mAdapter);
         cameraPermissionHelper = new CameraPermissionHelper(getActivity());
         return view;

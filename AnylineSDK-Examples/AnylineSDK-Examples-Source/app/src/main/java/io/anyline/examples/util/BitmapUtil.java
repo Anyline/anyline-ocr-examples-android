@@ -50,7 +50,9 @@ public class BitmapUtil {
 
         // Decode bitmap with inSampleSize set
         options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeResource(res, resId, options);
+        Bitmap bm = BitmapFactory.decodeResource(res, resId, options);
+        return bm;
+        //return BitmapFactory.decodeResource(res, resId, options);
     }
 
     public static Bitmap getBitmap (String path){

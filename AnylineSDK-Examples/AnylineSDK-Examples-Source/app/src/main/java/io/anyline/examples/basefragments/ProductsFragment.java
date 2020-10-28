@@ -52,7 +52,7 @@ public class ProductsFragment extends BaseFragment implements BaseGridListAdapte
                         replaceFragment(fragment, "ENERGY_FRAGMENT");
                         break;
 
-                    case "Others":
+                    case "Other":
 
                         fragment = new OthersFragment();
                         replaceFragment(fragment, "OTHERS_FRAGMENT");

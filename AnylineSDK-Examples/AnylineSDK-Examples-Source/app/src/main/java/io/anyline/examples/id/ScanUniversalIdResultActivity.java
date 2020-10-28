@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,7 +39,7 @@ public class ScanUniversalIdResultActivity extends ScanningConfigurationActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_scan_view);
         RecyclerView recyclerView = findViewById(R.id.rv_results);
-        TextView confirmButton = findViewById(R.id.confirmation_button);
+        Button confirmButton = findViewById(R.id.confirmation_button);
         ImageView controlImage = findViewById(R.id.control_image);
         ImageView faceImageView = findViewById(R.id.face_image);
         TextView frontSideTextView = findViewById(R.id.text);

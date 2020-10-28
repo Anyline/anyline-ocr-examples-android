@@ -16,7 +16,7 @@
     <string name="gas_meter">Gas Meter</string>
     <string name="water_meter">Water Meter</string>
     <string name="digital_meter">Digital Meter</string>
-    <string name="barcode">Barcode / QR-Code</string>
+    <string name="barcode">Barcode</string>
     <string name="vin">Vehicle Identification Number</string>
     <string name="mrz">MRZ / Passport</string>
     <string name="mrz_main">Passport MRZ</string>
@@ -113,10 +113,10 @@
 
     <string name="category_identification">Identification</string>
     <string name="category_fintech">Fintech</string>
-    <string name="category_barcodes">Barcodes</string>
+    <string name="category_barcodes">Barcode</string>
     <string name="category_documents">Documents</string>
     <string name="category_loyality">Loyality</string>
-    <string name="category_others">Others</string>
+    <string name="category_others">Other</string>
     <string name="category_mro">MRO</string>
     <string name="category_identity_documents">Identity Documents</string>
     <string name="samples">Samples</string>
@@ -129,7 +129,7 @@
     <string name="title_auto_analog_digital_meter">Analog/Digital</string>
     <string name="title_gas_meter">Gas Meter (analog)</string>
     <string name="title_water_meter">Water Meter (analog)</string>
-    <string name="title_barcode">Barcode / QR-Code</string>
+    <string name="title_barcode">Barcode</string>
     <string name="title_barcode_PDF417">PDF417</string>
     <string name="title_belgian_driving_license">"BE Driving License"</string>
     <string name="title_dutch_driving_license">"NL Driving License"</string>
@@ -278,6 +278,8 @@
     <string name="switch_on">ON</string>
     <string name="switch_off">OFF</string>
     <string name="enable_barcode_detection">Barcode Detection</string>
+    <string name="enable_multi_barcode">Multi Barcode</string>
+
     <string name="barcode_not_operational">The required barcode API is not available.\nSimultaneous barcode scanning will not work.</string>
 
     <string name="explanation_analog_meter">Scan all sorts of analog energy meters with this mode. It doesn’t matter how many digits or if there is a black or white background.</string>
@@ -416,6 +418,12 @@
     <!-- Build Version Description -->
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
     <string name="sdk_build_version" formatted="false">SDK Build Version %s</string>
+
+
+    <string name="go_back">Go back?</string>
+    <string name="barcode_back_message">Are you sure you want to leave this screen? Changes will not be saved!</string>
+    <string name="barcode_format">Barcode Format</string>
+    <string name="barcode_result">Barcode Result</string>
 
 
 </resources>

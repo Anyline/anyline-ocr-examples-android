@@ -32,8 +32,9 @@
             android:background="@color/white"
             app:tabGravity="fill"
             app:tabMaxWidth="0dp"
-            app:tabTextColor="@color/black_100"
+            app:tabTextColor="@color/black_50"
             app:tabSelectedTextColor="@color/blue_light"
+            app:tabPaddingBottom="-15dp"
             />
     </androidx.viewpager.widget.ViewPager>
 

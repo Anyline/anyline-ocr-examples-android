@@ -49,7 +49,7 @@ public class ScanGermanIdFrontActivity extends ScanActivity implements CameraOpe
 		config.enableFaceDetection(true);
 
 		//init the scanViewPlugin config
-		germanIdFrontScanView.setScanConfig("driving_license_view_config.json");
+		germanIdFrontScanView.setScanConfig("german_id_view_config.json");
 		//ScanViewPluginConfig config = new ScanViewPluginConfig(getApplicationContext(), "driving_license_view_config_new.json");
 		//init the scan view
 		IdScanPlugin scanPlugin = new IdScanPlugin(getApplicationContext(), "german_id_front", getString(R.string.anyline_license_key), config);

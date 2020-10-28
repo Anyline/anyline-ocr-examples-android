@@ -11,11 +11,11 @@
 
         <ImageView
             android:id="@+id/anyline_logo"
-            android:layout_width="200dp"
-            android:layout_height="45dp"
+            android:layout_width="128dp"
+            android:layout_height="36dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="60dp"
             android:src="@drawable/logo"
             />
 

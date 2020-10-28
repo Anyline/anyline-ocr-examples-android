@@ -12,7 +12,7 @@
   },
   "viewPlugin" : {
     "cutoutConfig": {
-      "style": "rect",
+      "style": "animated_rect",
       "maxWidthPercent": "80%",
       "alignment": "center",
       "ratioFromSize": {

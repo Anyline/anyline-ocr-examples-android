@@ -95,7 +95,7 @@ public class ScanTINActivity extends ScanActivity {
     protected void onPause() {
         super.onPause();
         scanView.stop();
-        scanView.releaseCameraInBackground();
+        //scanView.releaseCameraInBackground();
     }
 
     @Override
