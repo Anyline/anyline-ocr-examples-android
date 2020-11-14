@@ -6,8 +6,8 @@
     <string name="anyline_email" translatable="false">hello@anyline.com</string>
     <string name="anyline_website_link" translatable="false"><u>www.anyline.com</u></string>
     <string name="anyline_website_samples_link" translatable="false"><u>www.anyline.com/samples</u></string>
-    <string name="anyline_website_samples_link_https" translatable="false"><u>https://www.anyline.com/samples/</u></string>
-    <string name="anyline_website_download_link_https" translatable="false"><u>https://www.anyline.com/free-demos/</u></string>
+    <string name="anyline_website_samples_link_https" translatable="false"><u>https://anyline.com/example-sheets/</u></string>
+    <string name="anyline_website_download_link_https" translatable="false"><u>https://anyline.com/request/sdk/</u></string>
     <string name="anyline_portal_link" translatable="false"><u>https://portal.anyline.com/HW0HPL0MmPKVDvDIKXfHEt6Vuy5fg2Eo5FZ7kxzCyupEO,22</u></string>
 
     <string name="scan_mrz">Scan MRZ</string>
@@ -151,12 +151,58 @@
     <string name="title_isbn">ISBN</string>
     <string name="title_record">Record Number</string>
 
+    <string name="go_back">Go back?</string>
+    <string name="barcode_back_message">Are you sure you want to leave this screen? Changes will not be saved!</string>
+    <string name="barcode_format">Barcode Format</string>
+    <string name="barcode_result">Barcode Result</string>
+    <string name="channel_name">ANYLINE_OCR</string>
+    <string name="channel_description">Anyline OCR</string>
+    <string-array name="scan_module_labels" translatable="false">
+        <item>Barcode:</item>
+        <item>MRZ:</item>
+        <item>IBAN:</item>
+        <item>Red Bull Mobile Collect:</item>
+        <item>ISBN:</item>
+        <item>Document:</item>
+        <item>Record:</item>
+        <item>Scrabble:</item>
+        <item>Voucher:</item>
+        <item>Electric Digits:</item>
+        <item>Analog/Digital:</item>
+        <item>Energy Serial Number:</item>
+        <item>License Plate:</item>
+        <item>Driver\'s License:</item>
+        <item>German ID Front:</item>
+        <item>Vehicle Identification Number:</item>
+        <item>Shipping Container:</item>
+        <item>Vertical Shipping Container:</item>
+        <item>Tire Identification Number:</item>
+        <item>OCR:</item>
+        <item>Universal ID:</item>
+        <item>Serial Number:</item>
+        <item>Cattle Tag:</item>
+        <item>Electric Background:</item>
+        <item>Gas:</item>
+        <item>Water Meter:</item>
+        <item>Heat Meter:</item>
+        <item>Digital Meter:</item>
+        <item>Dial Meter:</item>
+    </string-array>
+
+
+    <string name="error">Error</string>
+    <string name="error_internet_connection">Something went wrong. Please make sure you are connected to the internet and try again.</string>
+    <string name="close">Close</string>
+
     <string name="title_record_result">Record Result</string>
     <string name="title_isbn_result">ISBN Result</string>
     <string name="title_scrabble_result">Scrabble Result</string>
     <string name="title_select_config">Select your configuration</string>
     <string name="title_shipping_container">Shipping Container</string>
     <string name="title_cowtag">Cattle Tag</string>
+    <string name="title_activity_serial_number_settings">SerialNumberSettingsActivity</string>
+
+    <string name="control_image">Control Image</string>
 
     <string name="header_config">Configuration: %1$s</string>
 
@@ -418,16 +464,6 @@
     <!-- Build Version Description -->
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
     <string name="sdk_build_version" formatted="false">SDK Build Version %s</string>
-
-
-    <string name="go_back">Go back?</string>
-    <string name="barcode_back_message">Are you sure you want to leave this screen? Changes will not be saved!</string>
-    <string name="barcode_format">Barcode Format</string>
-    <string name="barcode_result">Barcode Result</string>
-
-
-    <string name="control_image">Control Image</string>
-    <string name="title_activity_serial_number_settings">SerialNumberSettingsActivity</string>
 
 
 </resources>

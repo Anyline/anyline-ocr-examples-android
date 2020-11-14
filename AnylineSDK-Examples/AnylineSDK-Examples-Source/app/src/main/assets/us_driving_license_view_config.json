@@ -1,0 +1,135 @@
+{
+  "camera" : {
+    "captureResolution" : "1080p",
+    "zoomGesture": true
+  },
+  "flash" : {
+    "mode": "manual",
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off"
+  },
+  "viewPlugin" : {
+    "plugin":{
+      "id":"ID",
+      "idPlugin": {
+        "universalIdConfig": {
+          "allowedLayouts": {
+            "drivingLicense": ["USA-FO-AL19",
+              "USA-FO-AK19",
+              "USA-FO-AZ19",
+              "USA-FO-AR19",
+              "USA-FO-CA19",
+              "USA-FO-CO19",
+              "USA-FO-CT19",
+              "USA-FO-CT19_v2",
+              "USA-FO-DE19",
+              "USA-FO-DC19",
+              "USA-FO-FL19",
+              "USA-FO-FL19_v2",
+              "USA-FO-GA19",
+              "USA-FO-HI19",
+              "USA-FO-ID19",
+              "USA-FO-IL19",
+              "USA-FO-IN19",
+              "USA-FO-IA19",
+              "USA-FO-KS19",
+              "USA-FO-KY19",
+              "USA-FO-LA19",
+              "USA-FO-ME19",
+              "USA-FO-MD19",
+              "USA-FO-MA19",
+              "USA-FO-MI19",
+              "USA-FO-MI19_v2",
+              "USA-FO-MN19",
+              "USA-FO-MS19",
+              "USA-FO-MO19",
+              "USA-FO-MT19",
+              "USA-FO-NE19",
+              "USA-FO-NV19",
+              "USA-FO-NH19",
+              "USA-FO-NJ19",
+              "USA-FO-NM19",
+              "USA-FO-NY19",
+              "USA-FO-NC19",
+              "USA-FO-ND19",
+              "USA-FO-OH19",
+              "USA-FO-OK19",
+              "USA-FO-OR19",
+              "USA-FO-PA19",
+              "USA-FO-PA19_v2",
+              "USA-FO-RI19",
+              "USA-FO-RI19_v2",
+              "USA-FO-SC19",
+              "USA-FO-SD19",
+              "USA-FO-TN19",
+              "USA-FO-TX19",
+              "USA-FO-UT19",
+              "USA-FO-VT19",
+              "USA-FO-VA19",
+              "USA-FO-WA19",
+              "USA-FO-WV19",
+              "USA-FO-WI19",
+              "USA-FO-WY19"]
+          },
+          "drivingLicense": {
+            "surname": {"scanOption": 0, "minConfidence": 40},
+            "givenNames": {"scanOption": 0, "minConfidence": 40},
+            "dateOfBirth": {"scanOption": 0, "minConfidence": 50},
+            "placeOfBirth": {"scanOption": 1, "minConfidence": 50},
+            "dateOfIssue": {"scanOption": 0, "minConfidence": 50},
+            "dateOfExpiry": {"scanOption": 1, "minConfidence": 50},
+            "authority": {"scanOption": 1, "minConfidence": 30},
+            "documentNumber": {"scanOption": 0, "minConfidence": 40},
+            "categories": {"scanOption": 1, "minConfidence": 30},
+            "address": {"scanOption": 1}
+          },
+          "idFront": {
+            "surname": {"scanOption": 0, "minConfidence": 60},
+            "givenNames": {"scanOption": 0, "minConfidence": 60},
+            "dateOfBirth": {"scanOption": 0, "minConfidence": 60},
+            "placeOfBirth": {"scanOption": 1, "minConfidence": 60},
+            "dateOfExpiry": {"scanOption": 1, "minConfidence": 60},
+            "cardAccessNumber": {"scanOption": 1, "minConfidence": 60},
+            "documentNumber": {"scanOption": 0, "minConfidence": 60},
+            "nationality": {"scanOption": 1, "minConfidence": 60}
+          }
+        }
+      }
+    },
+    "cutoutConfig" : {
+      "style": "animated_rect",
+      "maxWidthPercent": "90%",
+      "maxHeightPercent": "90%",
+      "alignment": "center",
+      "strokeWidth": 8,
+      "cornerRadius": 8,
+      "strokeColor": "FFFFFF",
+      "outerColor": "000000",
+      "outerAlpha": 0.3,
+      "ratioFromSize" : {
+        "width": 50,
+        "height": 31
+      },
+      "cropPadding": {
+        "x": -50,
+        "y": -50
+      },
+      "cropOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "feedbackStrokeColor": "0099FF"
+    },
+    "scanFeedback" : {
+      "style": "CONTOUR_RECT",
+      "visualFeedbackRedrawTimeout": 100,
+      "strokeColor": "0099FF",
+      "fillColor" : "220099FF",
+      "beepOnResult": true,
+      "vibrateOnResult": true,
+      "strokeWidth": 2
+    },
+    "cancelOnResult" : true
+  }
+}

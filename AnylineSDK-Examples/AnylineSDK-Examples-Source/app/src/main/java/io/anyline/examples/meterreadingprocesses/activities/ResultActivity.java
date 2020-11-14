@@ -175,7 +175,7 @@ public class ResultActivity extends BaseToolbarActivity {
             //need a transaction
             db.insertReading(mReading);
             db.updateCustomer(customer);
-            ScanActivity.setupScanProcessView(ResultActivity.this, mReading.getNewReading().toString() ,ScanModuleEnum.ScanModule.BARCODE, BitmapUtil.getBitmap(mReading.getCutoutImageLocalPath()));
+            ScanActivity.setupScanProcessView(ResultActivity.this, mReading.getNewReading().toString() ,ScanModuleEnum.ScanModule.BARCODE, BitmapUtil.getBitmap(mReading.getCutoutImageLocalPath()), null);
 
 
             dialog = new SingleMessageDialog(this, R.string.saved, R.drawable.blue_round_checkmark);
@@ -287,7 +287,7 @@ public class ResultActivity extends BaseToolbarActivity {
                 db.insertReading(mReading);
                 db.updateCustomer(customer);
 
-                ScanActivity.setupScanProcessView(ResultActivity.this, mReading.getNewReading().toString() ,ScanModuleEnum.ScanModule.BARCODE, BitmapUtil.getBitmap(mReading.getCutoutImageLocalPath()));
+                ScanActivity.setupScanProcessView(ResultActivity.this, mReading.getNewReading().toString() ,ScanModuleEnum.ScanModule.BARCODE, BitmapUtil.getBitmap(mReading.getCutoutImageLocalPath()), null);
 
                 dialog = new SingleMessageDialog(ResultActivity.this, R.string.self_reading_screen_received_msg,
                                                  R.drawable.blue_round_checkmark);

@@ -14,7 +14,7 @@
       "id" : "OCR_IBAN",
       "ocrPlugin" : {
         "scanMode" : "LINE",
-        "languages" : ["USNr.any"],
+        "model" : "USNr.any",
         "charWhitelist": "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
         "minCharHeight" : 25,
         "maxCharHeight" : 65,

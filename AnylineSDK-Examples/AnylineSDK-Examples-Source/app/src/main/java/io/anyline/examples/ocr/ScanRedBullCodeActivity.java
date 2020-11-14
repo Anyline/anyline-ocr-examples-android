@@ -45,7 +45,8 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
 
 		// see ScanScrabbleActivity for a more detailed description
 		AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-		anylineOcrConfig.setLanguages("rbf_jan2015_v2.traineddata");
+		//TODO check what to use here
+		//anylineOcrConfig.setModel("rbf_jan2015_v2.traineddata");
 		anylineOcrConfig.setCharWhitelist("2346789ABCDEFGHKLMNPQRTUVWXYZ");
 		anylineOcrConfig.setMinCharHeight(15);
 		anylineOcrConfig.setMaxCharHeight(30);
@@ -56,12 +57,12 @@ public class ScanRedBullCodeActivity extends ScanActivity implements AnylineDebu
 		anylineOcrConfig.setCharCountY(2);
 		anylineOcrConfig.setCharPaddingXFactor(0.3);
 		anylineOcrConfig.setCharPaddingYFactor(0.5);
-		anylineOcrConfig.setIsBrightTextOnDark(true);
+
 
 		//init the scanViewPlugin config
 		scanView.setScanConfig("rb_view_config.json");
 		//init the scan vie plugin
-		OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
+		OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
 
 		scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
 			@Override

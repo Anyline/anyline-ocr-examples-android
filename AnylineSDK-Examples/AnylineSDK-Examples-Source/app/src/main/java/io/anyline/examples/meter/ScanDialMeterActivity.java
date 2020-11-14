@@ -33,7 +33,7 @@ public class ScanDialMeterActivity extends AbstractEnergyActivity {
         energyScanView.setScanConfig("dial_meter_view_config_new.json");
         //init the scanViewPlugin config
         //init the scan view
-        MeterScanViewPlugin scanViewPlugin = new MeterScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), energyScanView.getScanViewPluginConfig(), "ENERGY");
+        MeterScanViewPlugin scanViewPlugin = new MeterScanViewPlugin(getApplicationContext(), energyScanView.getScanViewPluginConfig(), "ENERGY");
         energyScanView.setScanViewPlugin(scanViewPlugin);
         ((MeterScanViewPlugin)energyScanView.getScanViewPlugin()).setScanMode(MeterScanMode.DIAL_METER);
 

@@ -56,7 +56,7 @@ public class ScanBarcodePDF417Activity extends ScanActivity implements CameraOpe
 
 		barcodeScanView.setScanConfig("barcode_pdf417_view_config.json");
 
-		BarcodeScanPlugin scanPlugin = new BarcodeScanPlugin(getApplicationContext(), "barcode", getString(R.string.anyline_license_key));
+		BarcodeScanPlugin scanPlugin = new BarcodeScanPlugin(getApplicationContext(), "barcode");
 		scanPlugin.setBarcodeFormats(BarcodeFormat.PDF_417);
 		BarcodeScanViewPlugin scanViewPlugin = new BarcodeScanViewPlugin(getApplicationContext(), scanPlugin, barcodeScanView.getScanViewPluginConfig());
 

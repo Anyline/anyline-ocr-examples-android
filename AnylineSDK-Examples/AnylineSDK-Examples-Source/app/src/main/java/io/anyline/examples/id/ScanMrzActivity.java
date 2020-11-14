@@ -75,7 +75,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 
 		mrzScanView.setScanConfig("mrz_view_config.json");
 		//init the scan view
-		IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), mrzScanView.getScanViewPluginConfig(), mrzConfig);
+		IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(getApplicationContext(), mrzScanView.getScanViewPluginConfig(), mrzConfig);
 		mrzScanView.setScanViewPlugin(scanViewPlugin);
 		scanViewPlugin.addScanResultListener(new ScanResultListener<ScanResult<ID>>() {
 			@Override

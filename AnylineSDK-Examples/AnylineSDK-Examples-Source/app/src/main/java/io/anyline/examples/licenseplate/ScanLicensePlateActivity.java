@@ -59,7 +59,7 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
 
 
         //init the scan view
-        final LicensePlateScanViewPlugin scanViewPlugin = new LicensePlateScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), scanView.getScanViewPluginConfig(), "OCR");
+        final LicensePlateScanViewPlugin scanViewPlugin = new LicensePlateScanViewPlugin(getApplicationContext(), scanView.getScanViewPluginConfig(), "OCR");
 
         scanView.getCameraView().getCameraController().setZoomGestureEnabled(true);
 

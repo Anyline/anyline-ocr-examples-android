@@ -46,7 +46,7 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
 		scanView = (ScanView) findViewById(R.id.scan_view);
 
 		try {
-			scanView.init("iban_view_config.json", getString(R.string.anyline_license_key));
+			scanView.init("iban_view_config.json");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

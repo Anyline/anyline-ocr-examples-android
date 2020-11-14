@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
 
+import org.json.JSONObject;
+
 import java.text.DateFormat;
 import java.util.HashMap;
 
@@ -52,7 +54,7 @@ public class ScanGermanIdFrontActivity extends ScanActivity implements CameraOpe
 		germanIdFrontScanView.setScanConfig("german_id_view_config.json");
 		//ScanViewPluginConfig config = new ScanViewPluginConfig(getApplicationContext(), "driving_license_view_config_new.json");
 		//init the scan view
-		IdScanPlugin scanPlugin = new IdScanPlugin(getApplicationContext(), "german_id_front", getString(R.string.anyline_license_key), config);
+		IdScanPlugin scanPlugin = new IdScanPlugin(getApplicationContext(), "german_id_front", config);
 		IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(getApplicationContext(), scanPlugin, germanIdFrontScanView.getScanViewPluginConfig());
 
 		scanViewPlugin.addScanResultListener(new ScanResultListener<ScanResult<ID>>() {
@@ -65,9 +67,10 @@ public class ScanGermanIdFrontActivity extends ScanActivity implements CameraOpe
 
 				startScanResultIntent(getResources().getString(R.string.title_german_id_front), getGermanIdFrontResult(resultString), path, facePath);
 
-				setupScanProcessView(ScanGermanIdFrontActivity.this, idScanResult, getScanModule());
+				setupScanProcessView(ScanGermanIdFrontActivity.this,
+									 new JSONObject(getGermanIdFrontResult(resultString)).toString(), getScanModule(),
+									 idScanResult.getCutoutImage().getBitmap(), null);
 			}
-
 
 		});
 

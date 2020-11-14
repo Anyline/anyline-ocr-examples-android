@@ -70,7 +70,7 @@ public class ScanUniversalIdResultActivity extends ScanningConfigurationActivity
                 Arrays.fill(values, "");
 
                 // put surname, givenNames, ... at the top of the list:
-                // 1. detect keys, fill values-array and remove pait from hashmap:
+                // 1. detect keys, fill values-array and remove pair from hashmap:
                 Iterator it = orderedHashMap.entrySet().iterator();
                 while (it.hasNext()) {
                     Map.Entry pair = (Map.Entry) it.next();

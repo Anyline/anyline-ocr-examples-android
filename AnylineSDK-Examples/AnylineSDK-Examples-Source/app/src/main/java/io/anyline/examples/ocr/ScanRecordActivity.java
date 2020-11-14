@@ -45,7 +45,7 @@ public class ScanRecordActivity extends ScanActivity implements AnylineDebugList
         scanView = (ScanView) findViewById(R.id.scan_view);
 
         try {
-            scanView.init("record_view_config.json", getString(R.string.anyline_license_key));
+            scanView.init("record_view_config.json");
         } catch (Exception e) {
             e.printStackTrace();
         }

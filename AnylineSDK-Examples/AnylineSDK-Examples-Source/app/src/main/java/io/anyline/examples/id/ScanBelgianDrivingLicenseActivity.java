@@ -53,7 +53,7 @@ public class ScanBelgianDrivingLicenseActivity extends ScanActivity implements C
         drivingLicenseScanView.setScanConfig("driving_license_view_config.json");
         //ScanViewPluginConfig config = new ScanViewPluginConfig(getApplicationContext(), "driving_license_view_config_new.json");
         //init the scan view
-        IdScanPlugin scanPlugin = new IdScanPlugin(getApplicationContext(), "driving_license", getString(R.string.anyline_license_key), drivingLicenseConfig);
+        IdScanPlugin scanPlugin = new IdScanPlugin(getApplicationContext(), "driving_license", drivingLicenseConfig);
         IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(getApplicationContext(), scanPlugin, drivingLicenseScanView.getScanViewPluginConfig());
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<ScanResult<ID>>() {

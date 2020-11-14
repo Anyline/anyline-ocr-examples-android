@@ -11,17 +11,53 @@
         >
 
         <LinearLayout
+            android:id="@+id/ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/activity_horizontal_margin">
+            android:orientation="vertical">
 
-            <io.anyline.examples.customviews.AnylineTextView
-                android:id="@+id/text"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/black_10"
+                >
+                <io.anyline.examples.customviews.AnylineTextView
+                    android:id="@+id/date"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top_bottom"
+                    android:layout_marginBottom="@dimen/margin_top_bottom"
+                    android:layout_marginStart="@dimen/margin_start_end"
+                    android:layout_marginEnd="@dimen/margin_start_end"
+                    android:gravity="start"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_50"
+                    />
+                <io.anyline.examples.customviews.AnylineTextView
+                    android:id="@+id/time"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top_bottom"
+                    android:layout_marginBottom="@dimen/margin_top_bottom"
+                    android:layout_marginStart="@dimen/margin_start_end"
+                    android:layout_marginEnd="@dimen/margin_start_end"
+                    android:gravity="end"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_50"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/scantype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textSize="18sp"
                 />
 
             <io.anyline.examples.customviews.AnylineTextView
@@ -30,6 +66,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black_50"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:visibility="gone"
                 />
 
             <io.anyline.examples.customviews.AnylineTextView
@@ -39,6 +76,7 @@
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
                 android:textColor="@color/blue"
+                android:visibility="gone"
                 />
 
             <ImageView
@@ -46,8 +84,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginEnd="@dimen/margin_start_end"
                 android:adjustViewBounds="true"
                 />
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                />
+
 
         </LinearLayout>
     </ScrollView>

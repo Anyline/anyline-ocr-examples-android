@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
 
+import org.json.JSONObject;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -49,7 +51,7 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
     void init() {
 
         drivingLicenseScanView = findViewById(R.id.scan_view);
-        drivingLicenseScanView.init("universal_id_view_config.json", getString(R.string.anyline_license_key));
+        drivingLicenseScanView.init("universal_id_view_config.json");
         IdScanViewPlugin scanViewPlugin = (IdScanViewPlugin) drivingLicenseScanView.getScanViewPlugin();
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<ScanResult<ID>>() {
@@ -65,10 +67,10 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
                 intent.putExtra("scan_full_picture_path", imagePath);
                 startActivity(intent);
 
-                setupScanProcessView(ScanDrivingLicenseActivity.this, idScanResult, getScanModule());
+                String s = new JSONObject(data).toString();
+                setupScanProcessView(ScanDrivingLicenseActivity.this, s,
+                                     getScanModule(), idScanResult.getCutoutImage().getBitmap(), null);
             }
-
-
         });
 
         drivingLicenseScanView.setScanViewPlugin(scanViewPlugin);

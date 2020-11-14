@@ -25,6 +25,7 @@ import java.util.List;
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.models.AnylineImage;
+import io.anyline.AnylineSDK;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
@@ -61,8 +62,9 @@ public class ScanDocumentActivity extends ScanActivity implements CameraOpenList
 		documentScanView.setCameraOpenListener(this);
 		// the view can be configured via a json file in the assets, and this config is set here
 		// (alternatively it can be configured via xml, see the Energy Example for that)
+//		AnylineSDK.init(getString(R.string.anyline_license_key), this);
 		try {
-			documentScanView.init("document_view_config.json", getString(R.string.anyline_license_key));
+			documentScanView.init("document_view_config.json");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

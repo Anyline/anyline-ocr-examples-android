@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -273,15 +273,13 @@ implements <a href="../../../io/anyline/view/UIChangeListener.html" title="inter
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#init-org.json.JSONObject-java.lang.String-">init</a></span>(org.json.JSONObject&nbsp;configJsonObject,
-    java.lang.String&nbsp;licenseKey)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#init-org.json.JSONObject-">init</a></span>(org.json.JSONObject&nbsp;configJsonObject)</code>
 <div class="block">Initializes the ScanView with the file path to a JSON config file and a license key.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#init-java.lang.String-java.lang.String-">init</a></span>(java.lang.String&nbsp;configFileName,
-    java.lang.String&nbsp;licenseKey)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#init-java.lang.String-">init</a></span>(java.lang.String&nbsp;configFileName)</code>
 <div class="block">Initializes the ScanView with the file path to a JSON config file and a license key.</div>
 </td>
 </tr>
@@ -292,8 +290,7 @@ implements <a href="../../../io/anyline/view/UIChangeListener.html" title="inter
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#initComposite-org.json.JSONObject-java.lang.String-">initComposite</a></span>(org.json.JSONObject&nbsp;jsonObject,
-             java.lang.String&nbsp;licenseKey)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#initComposite-org.json.JSONObject-">initComposite</a></span>(org.json.JSONObject&nbsp;jsonObject)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -331,46 +328,39 @@ implements <a href="../../../io/anyline/view/UIChangeListener.html" title="inter
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#setLicenseKey-java.lang.String-">setLicenseKey</a></span>(java.lang.String&nbsp;licenseKey)</code>
-<div class="block">Set the license key.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#setScanConfig-org.json.JSONObject-">setScanConfig</a></span>(org.json.JSONObject&nbsp;jsonObject)</code>&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#setScanConfig-org.json.JSONObject-java.lang.String-">setScanConfig</a></span>(org.json.JSONObject&nbsp;jsonObject,
-             java.lang.String&nbsp;licenseKey)</code>&nbsp;</td>
-</tr>
-<tr id="i22" class="altColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#setScanConfig-java.lang.String-">setScanConfig</a></span>(java.lang.String&nbsp;pathFile)</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#setScanViewConfig-io.anyline.view.BaseScanViewConfig-">setScanViewConfig</a></span>(<a href="../../../io/anyline/view/BaseScanViewConfig.html" title="class in io.anyline.view">BaseScanViewConfig</a>&nbsp;scanViewConfig)</code>
 <div class="block">Sets the ScanView with the base config <a href="../../../io/anyline/view/BaseScanViewConfig.html" title="class in io.anyline.view"><code>BaseScanViewConfig</code></a> for cameraView and the flashView configurations</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#setScanViewPlugin-io.anyline.view.AbstractBaseScanViewPlugin-">setScanViewPlugin</a></span>(<a href="../../../io/anyline/view/AbstractBaseScanViewPlugin.html" title="class in io.anyline.view">AbstractBaseScanViewPlugin</a>&lt;?&gt;&nbsp;scanViewPlugin)</code>
 <div class="block">Sets the ScanView with the specific <a href="../../../io/anyline/view/AbstractScanViewPlugin.html" title="class in io.anyline.view"><code>AbstractScanViewPlugin</code></a></div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#start--">start</a></span>()</code>
 <div class="block">Starts the worker thread.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#startBlinkAnimation--">startBlinkAnimation</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#stop--">stop</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/view/ScanView.html#updateCutoutView--">updateCutoutView</a></span>()</code>&nbsp;</td>
 </tr>
@@ -611,20 +601,6 @@ implements <a href="../../../io/anyline/view/UIChangeListener.html" title="inter
 <pre>public&nbsp;void&nbsp;calculateBrightnessCount(double&nbsp;brightness)</pre>
 </li>
 </ul>
-<a name="setLicenseKey-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setLicenseKey</h4>
-<pre>public&nbsp;void&nbsp;setLicenseKey(java.lang.String&nbsp;licenseKey)</pre>
-<div class="block">Set the license key. This is usually done automatically.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>licenseKey</code> - your anyline license key</dd>
-</dl>
-</li>
-</ul>
 <a name="setCropRect-Rect-">
 <!--   -->
 </a>
@@ -634,14 +610,13 @@ implements <a href="../../../io/anyline/view/UIChangeListener.html" title="inter
 <pre>public&nbsp;void&nbsp;setCropRect(Rect&nbsp;cropRect)</pre>
 </li>
 </ul>
-<a name="initComposite-org.json.JSONObject-java.lang.String-">
+<a name="initComposite-org.json.JSONObject-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>initComposite</h4>
-<pre>public&nbsp;void&nbsp;initComposite(org.json.JSONObject&nbsp;jsonObject,
-                          java.lang.String&nbsp;licenseKey)</pre>
+<pre>public&nbsp;void&nbsp;initComposite(org.json.JSONObject&nbsp;jsonObject)</pre>
 </li>
 </ul>
 <a name="initAsync-TrainerContext-TrainerUtils.ViewConfigResultHandler-">
@@ -654,6 +629,21 @@ implements <a href="../../../io/anyline/view/UIChangeListener.html" title="inter
                       TrainerUtils.ViewConfigResultHandler&nbsp;resultHandler)</pre>
 </li>
 </ul>
+<a name="init-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;void&nbsp;init(@NonNull
+                 java.lang.String&nbsp;configFileName)</pre>
+<div class="block">Initializes the ScanView with the file path to a JSON config file and a license key.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>configFileName</code> - the file path</dd>
+</dl>
+</li>
+</ul>
 <a name="getScanViewPluginConfig--">
 <!--   -->
 </a>
@@ -663,37 +653,18 @@ implements <a href="../../../io/anyline/view/UIChangeListener.html" title="inter
 <pre>public&nbsp;<a href="../../../io/anyline/view/ScanViewPluginConfig.html" title="class in io.anyline.view">ScanViewPluginConfig</a>&nbsp;getScanViewPluginConfig()</pre>
 </li>
 </ul>
-<a name="init-java.lang.String-java.lang.String-">
+<a name="init-org.json.JSONObject-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
 <pre>public&nbsp;void&nbsp;init(@NonNull
-                 java.lang.String&nbsp;configFileName,
-                 java.lang.String&nbsp;licenseKey)</pre>
-<div class="block">Initializes the ScanView with the file path to a JSON config file and a license key.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>configFileName</code> - the file path</dd>
-<dd><code>licenseKey</code> - The license key</dd>
-</dl>
-</li>
-</ul>
-<a name="init-org.json.JSONObject-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>init</h4>
-<pre>public&nbsp;void&nbsp;init(@NonNull
-                 org.json.JSONObject&nbsp;configJsonObject,
-                 java.lang.String&nbsp;licenseKey)</pre>
+                 org.json.JSONObject&nbsp;configJsonObject)</pre>
 <div class="block">Initializes the ScanView with the file path to a JSON config file and a license key.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>configJsonObject</code> - the config json Object</dd>
-<dd><code>licenseKey</code> - The license key</dd>
 </dl>
 </li>
 </ul>
@@ -720,14 +691,13 @@ implements <a href="../../../io/anyline/view/UIChangeListener.html" title="inter
 <pre>public&nbsp;void&nbsp;setScanConfig(java.lang.String&nbsp;pathFile)</pre>
 </li>
 </ul>
-<a name="setScanConfig-org.json.JSONObject-java.lang.String-">
+<a name="setScanConfig-org.json.JSONObject-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setScanConfig</h4>
-<pre>public&nbsp;void&nbsp;setScanConfig(org.json.JSONObject&nbsp;jsonObject,
-                          java.lang.String&nbsp;licenseKey)</pre>
+<pre>public&nbsp;void&nbsp;setScanConfig(org.json.JSONObject&nbsp;jsonObject)</pre>
 </li>
 </ul>
 <a name="onCutoutChanged-io.anyline.view.CutoutRect-">

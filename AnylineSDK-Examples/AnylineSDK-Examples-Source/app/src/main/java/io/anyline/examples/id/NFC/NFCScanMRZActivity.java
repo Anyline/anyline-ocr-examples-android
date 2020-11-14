@@ -55,7 +55,7 @@ public class NFCScanMRZActivity extends AppCompatActivity {
 
         ScanViewPluginConfig mrzScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "mrz_view_config.json");
 
-        IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), mrzScanViewPluginConfig, mrzConfig);
+        IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(getApplicationContext(), mrzScanViewPluginConfig, mrzConfig);
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<ScanResult<ID>>() {
             @Override

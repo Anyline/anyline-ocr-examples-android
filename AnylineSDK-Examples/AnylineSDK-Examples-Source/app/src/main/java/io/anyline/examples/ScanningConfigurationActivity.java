@@ -28,7 +28,7 @@ public abstract class ScanningConfigurationActivity extends AppCompatActivity{
         }
     }
 
-    public  static void setupScanProcessView(Context context, String result, ScanModuleEnum.ScanModule scanModule, Bitmap bmp) {
+    public  static void setupScanProcessView(Context context, String result, ScanModuleEnum.ScanModule scanModule, Bitmap bmp, Bitmap bmp2) {
 
 
         try {

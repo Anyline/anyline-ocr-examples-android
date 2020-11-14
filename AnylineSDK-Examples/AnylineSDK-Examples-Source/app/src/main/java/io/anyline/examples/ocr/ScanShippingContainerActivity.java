@@ -57,7 +57,7 @@ public class ScanShippingContainerActivity extends ScanActivity implements Anyli
 
 
         try {
-            scanView.init("shipping_container_view_config.json", getString(R.string.anyline_license_key));
+            scanView.init("shipping_container_view_config.json");
         } catch (Exception e) {
             e.printStackTrace();
         }

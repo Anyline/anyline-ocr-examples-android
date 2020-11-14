@@ -53,4 +53,8 @@
     <dimen name="ripple_size_offset">40dp</dimen>
     <dimen name="ripple_stroke_width">4dp</dimen>
 
+    <!-- History -->
+    <dimen name="margin_top_bottom">8dp</dimen>
+    <dimen name="margin_start_end">20dp</dimen>
+
 </resources>

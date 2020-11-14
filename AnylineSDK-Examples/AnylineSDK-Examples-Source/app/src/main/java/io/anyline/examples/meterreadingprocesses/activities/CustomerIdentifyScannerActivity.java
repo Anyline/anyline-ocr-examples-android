@@ -71,12 +71,12 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
         composite = new SerialScanViewComposite("SERIAL");
 
         ScanViewPluginConfig barcodeScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "barcode_trainer_login_view_config.json");
-        BarcodeScanPlugin barcodeScanPlugin = new BarcodeScanPlugin(this, "barcodePlugin", getString(R.string.anyline_license_key_old));
+        BarcodeScanPlugin barcodeScanPlugin = new BarcodeScanPlugin(this, "barcodePlugin");
         barcodeSVP = new BarcodeScanViewPlugin(this, barcodeScanPlugin, barcodeScanViewPluginConfig);
 
 
         ScanViewPluginConfig meterScanViewConfig = new ScanViewPluginConfig(getApplicationContext(), "energy_view_config.json");
-        MeterScanPlugin meterScanPlugin = new MeterScanPlugin(this, "meterPlugin", getString(R.string.anyline_license_key));
+        MeterScanPlugin meterScanPlugin = new MeterScanPlugin(this, "meterPlugin");
         meterSVP = new MeterScanViewPlugin(this, meterScanPlugin, meterScanViewConfig);
         meterSVP.setScanMode(MeterScanMode.AUTO_ANALOG_DIGITAL_METER);
 
@@ -297,7 +297,6 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         mEnergyScanView.stop();
-        mEnergyScanView.releaseCameraInBackground();
         reScanScreen();
         super.onPause();
     }

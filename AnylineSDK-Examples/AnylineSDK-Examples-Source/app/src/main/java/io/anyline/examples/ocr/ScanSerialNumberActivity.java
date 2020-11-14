@@ -93,11 +93,11 @@ public class ScanSerialNumberActivity extends ScanActivity implements AnylineDeb
         anylineOcrConfig.setCharWhitelist(allowedChars);
 
         Log.i(TAG, "Regex, allowed chars: init: " + snPrefs.getRegex() + "   " + snPrefs.getAllowedChars());
-        scanView.setScanConfig(jsonObject, getString(R.string.anyline_license_key));
+        scanView.setScanConfig(jsonObject);
 
         //init the scanViewPlugin config
         //init the scan view
-        scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig,
+        scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), anylineOcrConfig,
                                                scanView.getScanViewPluginConfig(), "OCR");
 
         scanView.setScanViewPlugin(scanViewPlugin);
@@ -122,7 +122,7 @@ public class ScanSerialNumberActivity extends ScanActivity implements AnylineDeb
 
     @Override
     protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.VOUCHER;
+        return ScanModuleEnum.ScanModule.SERIAL_NUMBER;
     }
 
     @Override
