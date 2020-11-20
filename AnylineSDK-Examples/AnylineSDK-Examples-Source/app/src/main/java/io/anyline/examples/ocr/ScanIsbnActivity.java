@@ -50,7 +50,7 @@ public class ScanIsbnActivity extends ScanActivity implements AnylineDebugListen
 
         //anyline Ocr Config setup
         final AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
-        anylineOcrConfig.setLanguages("eng_no_dict.traineddata", "deu.traineddata");
+        anylineOcrConfig.setModel("USNr.any");
         anylineOcrConfig.setCharWhitelist("ISBN0123456789<>-X");
         anylineOcrConfig.setValidationRegex("^ISBN((-)?\\s*(13|10))?:?\\s*((978|979){1}-?\\s*)*[0-9]{1," +
                 "5}-?\\s*[0-9]{2,7}-?\\s*[0-9]{2," +
@@ -62,7 +62,7 @@ public class ScanIsbnActivity extends ScanActivity implements AnylineDebugListen
         //init the scanViewPlugin config
         ScanViewPluginConfig ocrScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "isbn_view_config.json");
         //init the scan view
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, ocrScanViewPluginConfig, "OCR");
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), anylineOcrConfig, ocrScanViewPluginConfig, "OCR");
         //init the base config used for camera and flash
         BaseScanViewConfig ocrBaseScanViewConfig = new BaseScanViewConfig(getApplicationContext(), "isbn_view_config.json");
         //set the scan Base config

@@ -1,5 +1,6 @@
 package io.anyline.examples.meter.baseactivities;
 
+import android.animation.ObjectAnimator;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
@@ -27,6 +28,7 @@ import io.anyline.examples.ScanActivity;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.barcode.BarcodeFormat;
 import io.anyline.plugin.barcode.BarcodeScanResult;
+import io.anyline.plugin.meter.MeterScanMode;
 import io.anyline.plugin.meter.MeterScanResult;
 import io.anyline.plugin.meter.MeterScanViewPlugin;
 import io.anyline.view.ScanView;
@@ -72,12 +74,13 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
 
         // initialize Anyline with the license key and a Listener that is called if a result is found
         try {
-            energyScanView.init("abstract_energy_view_config.json", getString(R.string.anyline_license_key));
+            energyScanView.init("abstract_energy_view_config.json");
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         MeterScanViewPlugin scanViewPlugin = (MeterScanViewPlugin) energyScanView.getScanViewPlugin();
+
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<MeterScanResult>() {
             @Override
@@ -90,8 +93,11 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
                 setupScanProcessView(AbstractEnergyActivity.this, result.getResult(), getScanModule(), foundBarcodeString, result.getCutoutImage().getBitmap());
                 foundBarcodeString = "";
             }
-
         });
+
+        ObjectAnimator.ofFloat();
+
+
 
        // energyScanView.addScanViewPlugin(scanViewPlugin);
 //        energyScanView.initAnyline(getString(R.string.anyline_license_key), new EnergyResultListener() {

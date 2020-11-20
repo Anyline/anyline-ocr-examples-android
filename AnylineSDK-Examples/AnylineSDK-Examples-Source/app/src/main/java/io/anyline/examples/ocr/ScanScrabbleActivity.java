@@ -50,8 +50,6 @@ public class ScanScrabbleActivity extends ScanActivity implements AnylineDebugLi
         final AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
         // Use the grid mode, since it's a one line grid with up to 7 characters
         anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.GRID);
-        // set the languages used for OCR
-        anylineOcrConfig.setLanguages("scrabble.traineddata");
         // allow only capital letters plus some german Umlaute
         anylineOcrConfig.setCharWhitelist("ABCDEFGHIJKLMNOPQRSTUVWXYZÄÜÖ");
         // set the height range the text can have
@@ -72,14 +70,12 @@ public class ScanScrabbleActivity extends ScanActivity implements AnylineDebugLi
         // the characters may be up to 0.5 times their width (vertically) apart from each other in this example
         // setting the charPaddingYFactor is not necessary in this example, since there is only one row
         anylineOcrConfig.setCharPaddingYFactor(0.5);
-        // the text is dark on brither background
-        anylineOcrConfig.setIsBrightTextOnDark(false);
 
         //init the scanViewPlugin config
         scanView.setScanConfig("scrabble_view_config_new.json");
 
         //init the scan view
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), anylineOcrConfig, scanView.getScanViewPluginConfig(), "OCR");
 
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {

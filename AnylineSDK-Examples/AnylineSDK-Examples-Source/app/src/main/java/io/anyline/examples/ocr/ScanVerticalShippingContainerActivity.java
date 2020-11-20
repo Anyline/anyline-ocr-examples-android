@@ -37,7 +37,7 @@ public class ScanVerticalShippingContainerActivity extends ScanActivity implemen
     }
 @Override
     protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.SHIPPING_CONTAINER;
+        return ScanModuleEnum.ScanModule.SHIPPING_CONTAINER_VERTICAL;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class ScanVerticalShippingContainerActivity extends ScanActivity implemen
 
         //init the scanViewPlugin config
                 //init the scan view
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), containerConfig, scanView.getScanViewPluginConfig(), "OCR");
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), containerConfig, scanView.getScanViewPluginConfig(), "OCR");
 
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {

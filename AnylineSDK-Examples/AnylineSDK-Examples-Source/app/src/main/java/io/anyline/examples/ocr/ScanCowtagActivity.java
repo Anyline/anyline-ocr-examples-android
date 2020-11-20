@@ -24,7 +24,7 @@ public class ScanCowtagActivity extends ScanActivity {
     }
 @Override
     protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.VOUCHER;
+        return ScanModuleEnum.ScanModule.CATTLE_TAG;
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class ScanCowtagActivity extends ScanActivity {
         // scanView.setScanViewConfig(new BaseScanViewConfig(this, "scrabble_view_config_new.json"));
         scanView.setScanConfig("cow_tag_view_config.json");
         //init the scan view
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), cattleTagConfig, scanView.getScanViewPluginConfig(), "OCR");
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), cattleTagConfig, scanView.getScanViewPluginConfig(), "OCR");
 
         scanView.setScanViewPlugin(scanViewPlugin);
 

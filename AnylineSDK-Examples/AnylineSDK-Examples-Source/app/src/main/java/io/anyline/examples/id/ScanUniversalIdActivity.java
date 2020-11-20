@@ -38,7 +38,7 @@ public class ScanUniversalIdActivity extends ScanActivity implements ScanRunSkip
 
     void init(){
         scanView = findViewById(R.id.scan_view);
-        scanView.init("universal_id_view_config.json", getString(R.string.anyline_license_key));
+        scanView.init("universal_id_view_config.json");
         IdScanViewPlugin idScanViewPlugin = (IdScanViewPlugin) scanView.getScanViewPlugin();
         scanView.getScanViewPlugin().addScanRunSkippedListener(this);
 
@@ -77,7 +77,7 @@ public class ScanUniversalIdActivity extends ScanActivity implements ScanRunSkip
 
     @Override
     protected ScanModuleEnum.ScanModule getScanModule() {
-        return ScanModuleEnum.ScanModule.UID;
+        return ScanModuleEnum.ScanModule.UNIVERSAL_ID;
     }
 
     @Override

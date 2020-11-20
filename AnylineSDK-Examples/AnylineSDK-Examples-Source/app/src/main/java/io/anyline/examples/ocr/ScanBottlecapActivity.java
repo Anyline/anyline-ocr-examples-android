@@ -1,7 +1,11 @@
 
 package io.anyline.examples.ocr;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ViewGroup;
+
+import androidx.appcompat.widget.Toolbar;
+
 import java.util.HashMap;
 
 import at.nineyards.anyline.AnylineDebugListener;
@@ -40,6 +44,11 @@ public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugL
         getLayoutInflater().inflate(R.layout.activity_anyline_scan_view, (ViewGroup) findViewById(R.id
                 .scan_view_placeholder));
 
+        androidx.appcompat.widget.Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Pepsi code");
+        toolbar.setTitleTextColor(Color.WHITE);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         init();
     }
     // see ScanIbanActivity for a more detailed description
@@ -47,25 +56,13 @@ public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugL
     void init() {
         scanView = (ScanView) findViewById(R.id.scan_view);
 
-        final AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig();
+        final AnylineOcrConfig anylineOcrConfig = new AnylineOcrConfig(this, "bottlecap_view_config.json");
 
-        anylineOcrConfig.setLanguages("bottlecap.traineddata");
-        anylineOcrConfig.setCharWhitelist("123456789ABCDEFGHJKLMNPRSTUVWXYZ");
-        anylineOcrConfig.setMinCharHeight(14);
-        anylineOcrConfig.setMaxCharHeight(65);
-        anylineOcrConfig.setMinConfidence(75);
-        anylineOcrConfig.setValidationRegex("^[0-9A-Z]{3}\n[0-9A-Z]{3}\n[0-9A-Z]{3}");
-        anylineOcrConfig.setScanMode(AnylineOcrConfig.ScanMode.GRID);
-        anylineOcrConfig.setCharCountX(3);
-        anylineOcrConfig.setCharCountY(3);
-        anylineOcrConfig.setCharPaddingXFactor(0.3);
-        anylineOcrConfig.setCharPaddingYFactor(0.5);
-        anylineOcrConfig.setIsBrightTextOnDark(true);
 
         //init the scanViewPlugin config
         ScanViewPluginConfig ocrScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "bottlecap_view_config.json");
         //init the scan view
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineOcrConfig, ocrScanViewPluginConfig, "OCR");
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), anylineOcrConfig, ocrScanViewPluginConfig, "OCR");
         //init the base config used for camera and flash
         BaseScanViewConfig ocrBaseScanViewConfig = new BaseScanViewConfig(getApplicationContext(), "bottlecap_view_config.json");
         //set the scan Base config

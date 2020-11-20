@@ -56,7 +56,7 @@ public class ScanTINActivity extends ScanActivity {
         AnylineTINConfig tinConfig = new AnylineTINConfig();
         tinConfig.setScanMode(AnylineTINConfig.TINScanMode.FLEXIBLE);
         scanView.setScanConfig("tin_view_config.json");
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(this, getString(R.string.anyline_license_key), tinConfig, scanView.getScanViewPluginConfig(), "TIN");
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(this, tinConfig, scanView.getScanViewPluginConfig(), "TIN");
 
         scanView.setScanViewPlugin(scanViewPlugin);
 

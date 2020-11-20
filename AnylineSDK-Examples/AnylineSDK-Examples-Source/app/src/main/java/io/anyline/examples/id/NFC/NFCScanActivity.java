@@ -168,7 +168,7 @@ public class NFCScanActivity extends AppCompatActivity implements NfcDetector.Nf
         if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
             if (Arrays.asList(tag.getTechList()).contains("android.nfc.tech.IsoDep")) {
                 try {
-                    NfcDetector nfcDetector = new NfcDetector(getApplicationContext(), this, getString(R.string.anyline_license_key));
+                    NfcDetector nfcDetector = new NfcDetector(getApplicationContext(), this);
                     nfcDetector.startNfcDetection(passportNumber, dateOfBirth, dateOfExpiry);
                 } catch (LicenseException e){
                     e.printStackTrace();

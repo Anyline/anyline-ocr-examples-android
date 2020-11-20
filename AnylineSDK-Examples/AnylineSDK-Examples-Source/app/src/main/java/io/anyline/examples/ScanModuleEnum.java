@@ -1,5 +1,8 @@
 package io.anyline.examples;
 
+import android.content.Context;
+import android.util.Log;
+
 /**
  * Created by lorena on 06.02.18.
  */
@@ -26,9 +29,12 @@ public class ScanModuleEnum {
         GERMAN_ID_FRONT,
         VEHICLE_IDENTIFICATION_NUMBER,
         SHIPPING_CONTAINER,
+        SHIPPING_CONTAINER_VERTICAL,
         TIN,
         OCR,
-        UID,
+        UNIVERSAL_ID,
+        SERIAL_NUMBER,
+        CATTLE_TAG,
 
         /**
          * @deprecated As the background-selection does not exist anymore, the mode should not be used anymore
@@ -42,6 +48,7 @@ public class ScanModuleEnum {
         ENERGY_DIAL_METER;
     }
 
+
     public ScanModuleEnum getScanModule() {
         return scanModule;
     }
@@ -50,5 +57,16 @@ public class ScanModuleEnum {
         this.scanModule = scanModule;
     }
 
+    public static String getLabelFrom(Context context, ScanModule scanmodule) {
+        String[] labels = context.getResources().getStringArray(R.array.scan_module_labels);
+        String result = "";
+        try {
+            result = labels[ScanModule.valueOf(scanmodule.toString()).ordinal()];
+        } catch (Exception e) {
+            Log.e ("ScanModule", "error get Label: " + e);
+            result = scanmodule.toString();
+        }
+        return result;
+    }
 }
 

@@ -91,7 +91,7 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
 
 		barcodeScanView.setScanConfig("barcode_view_config.json");
 
-		scanPlugin = new BarcodeScanPlugin(getApplicationContext(), "barcode", getString(R.string.anyline_license_key));
+		scanPlugin = new BarcodeScanPlugin(getApplicationContext(), "barcode");
 		BarcodeScanViewPlugin scanViewPlugin = new BarcodeScanViewPlugin(getApplicationContext(), scanPlugin, barcodeScanView.getScanViewPluginConfig());
 		scanPlugin.setCancelOnResult(false);
 		if(preselectedItems.size() == 0){

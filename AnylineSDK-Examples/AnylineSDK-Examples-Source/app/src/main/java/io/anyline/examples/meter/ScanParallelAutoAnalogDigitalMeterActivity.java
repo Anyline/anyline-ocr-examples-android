@@ -49,6 +49,7 @@ import io.anyline.examples.scanviewresult.ScanViewResultActivity;
 import io.anyline.examples.util.Constant;
 import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.barcode.BarcodeFormat;
 import io.anyline.plugin.barcode.BarcodeScanPlugin;
 import io.anyline.plugin.barcode.BarcodeScanResult;
 import io.anyline.plugin.barcode.BarcodeScanViewPlugin;
@@ -104,13 +105,15 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
 
 
         ScanViewPluginConfig meterScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "meter_parallel_view_config.json");
-        MeterScanPlugin meterScanPlugin = new MeterScanPlugin(this, "METER_PARALLEL", getString(R.string.anyline_license_key));
+        MeterScanPlugin meterScanPlugin = new MeterScanPlugin(this, "METER_PARALLEL");
         MeterScanViewPlugin meterSVP = new MeterScanViewPlugin(this, meterScanPlugin, meterScanViewPluginConfig);
         meterSVP.setScanMode(MeterScanMode.AUTO_ANALOG_DIGITAL_METER);
 
         ScanViewPluginConfig barcodeScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "barcode_parallel_view_config.json");
-        final BarcodeScanPlugin barcodeScanPlugin = new BarcodeScanPlugin(this, "barcodePlugin", getString(R.string.anyline_license_key));
+        final BarcodeScanPlugin barcodeScanPlugin = new BarcodeScanPlugin(this, "barcodePlugin");
         final BarcodeScanViewPlugin barcodeSVP = new BarcodeScanViewPlugin(this, barcodeScanPlugin, barcodeScanViewPluginConfig);
+
+
 
 
         meterSVP.addScanResultListener(new ScanResultListener<MeterScanResult>() {
@@ -157,7 +160,7 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
                     if(subResult instanceof MeterScanResult){
                         intent.putExtra("result0", subResult.getResult().toString());
                     } else if(subResult instanceof BarcodeScanResult){
-                        intent.putExtra("result1", subResult.getResult().toString());
+                        intent.putExtra("result1", ((BarcodeScanResult) subResult).getResult().toString());
                     }
                 }
                 intent.putExtra("0", cutoutImagePaths.get("meter"));
@@ -238,11 +241,6 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
         super.onPause();
         onStop();
     }
-
-    public static Instrumentation callLifeCycleMethod() {
-        return new Instrumentation();
-    }
-
 }
 
 

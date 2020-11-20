@@ -50,7 +50,7 @@ public class ScanVehicleIdentificationNumberActivity extends ScanActivity implem
         //init the scanViewPlugin config
         scanView.setScanConfig("vin_view_config.json");
         //init the scan view
-        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), getString(R.string.anyline_license_key), anylineVINConfig, scanView.getScanViewPluginConfig(), "OCR");
+        OcrScanViewPlugin scanViewPlugin = new OcrScanViewPlugin(getApplicationContext(), anylineVINConfig, scanView.getScanViewPluginConfig(), "OCR");
         scanView.setScanViewPlugin(scanViewPlugin);
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<OcrScanResult>() {
