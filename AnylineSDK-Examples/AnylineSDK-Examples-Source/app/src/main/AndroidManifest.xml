@@ -196,15 +196,6 @@
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
         <activity
-            android:name=".ocr.ScanBottlecapActivity"
-            android:label="@string/title_bottlecap"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.anyline.examples.MainActivity" />
-        </activity>
-        <activity
             android:name=".ocr.ScanRedBullCodeActivity"
             android:label="@string/title_redbull"
             android:parentActivityName=".MainActivity"
