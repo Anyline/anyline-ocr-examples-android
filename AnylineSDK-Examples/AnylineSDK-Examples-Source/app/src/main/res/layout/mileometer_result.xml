@@ -8,6 +8,7 @@
     android:paddingBottom="16dp"
     android:paddingLeft="4dp"
     android:paddingRight="4dp"
+    tools:viewBindingIgnore="true"
     android:paddingTop="16dp"
     tools:context="io.anyline.examples.ocr.result.MileometerResultView">
 

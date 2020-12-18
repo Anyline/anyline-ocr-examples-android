@@ -35,6 +35,8 @@ public class ScanModuleEnum {
         UNIVERSAL_ID,
         SERIAL_NUMBER,
         CATTLE_TAG,
+        ID_CARD,
+        PASSPORT_VISA,
 
         /**
          * @deprecated As the background-selection does not exist anymore, the mode should not be used anymore
@@ -67,6 +69,16 @@ public class ScanModuleEnum {
             result = scanmodule.toString();
         }
         return result;
+    }
+
+    public static Boolean isIDScanModule (ScanModule scanModule) {
+        return
+                scanModule == ScanModule.MRZ ||
+                scanModule == ScanModule.DRIVER_LICENSE ||
+                scanModule == ScanModule.GERMAN_ID_FRONT ||
+                scanModule == ScanModule.UNIVERSAL_ID ||
+                scanModule == ScanModule.ID_CARD ||
+                scanModule == ScanModule.PASSPORT_VISA;
     }
 }
 

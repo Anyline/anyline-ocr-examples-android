@@ -4,19 +4,18 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <CheckedTextView
+    <RadioButton
         android:id="@+id/list_item_text_child"
-        android:layout_width="0dip"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
         android:checked="false"
         android:gravity="center_vertical"
         android:textColor="#A8A8A8"
         android:layout_weight="1"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:divider="@null"
-        android:layout_marginLeft="35dp" />
+        android:layout_marginStart="35dp" />
 
 
 </LinearLayout>

@@ -9,7 +9,6 @@
 
 package io.anyline.examples.barcode;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,17 +16,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
-
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,14 +28,9 @@ import java.util.List;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.camera.NativeBarcodeResultListener;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
-//import io.anyline.examples.baseactivities.BarcodeListView;
-import io.anyline.examples.meter.baseactivities.AbstractEnergyActivity;
-import io.anyline.examples.ocr.ScanSerialNumberActivity;
-import io.anyline.examples.ocr.SerialNumberSettingsMenuActivity;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.barcode.Barcode;
 import io.anyline.plugin.barcode.BarcodeFormat;
@@ -51,6 +38,8 @@ import io.anyline.plugin.barcode.BarcodeScanPlugin;
 import io.anyline.plugin.barcode.BarcodeScanResult;
 import io.anyline.plugin.barcode.BarcodeScanViewPlugin;
 import io.anyline.view.ScanView;
+
+//import io.anyline.examples.baseactivities.BarcodeListView;
 
 /**
  * Example activity for the Anyline-Barcode-Module

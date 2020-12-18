@@ -6,7 +6,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Set;
 
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
@@ -48,7 +50,17 @@ public class ScanUniversalIdActivity extends ScanActivity implements ScanRunSkip
             HashMap<String, String> data = (HashMap<String, String>) identification.getResultData();
             String imagePath = setupImagePath(idScanResult.getCutoutImage());
             Intent intent = new Intent(ScanUniversalIdActivity.this, ScanUniversalIdResultActivity.class);
-            intent.putExtra("resultData", data);
+
+            // convert linkedHashmap into two arrays as LinkedHashMap cannot pe passed from one activity to the other:
+            Set<String> setKeys = data.keySet();
+            String[] arrayKeys = setKeys.toArray(new String[setKeys.size()]);
+            Collection<String> values = data.values();
+            String[] arrayValues = values.toArray(new String[values.size()]);
+
+            intent.putExtra("resultDataKeys", arrayKeys);
+            intent.putExtra("resultDataValues", arrayValues);
+
+//            intent.putExtra("resultData", data);
             intent.putExtra("scan_full_picture_path", imagePath);
             startActivity(intent);
 

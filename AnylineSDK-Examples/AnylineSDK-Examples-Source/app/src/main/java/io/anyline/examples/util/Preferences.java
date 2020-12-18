@@ -3,8 +3,8 @@ package io.anyline.examples.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import org.jetbrains.annotations.Nullable;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.UUID;
 
 import static at.nineyards.anyline.reporter.ReportingService.PREFS_NAME;
@@ -27,14 +27,17 @@ public class Preferences {
     private static final String PREF_INTERCOM_USER_ID = "uuid_intercom_user_id";
     public static final String PREFS_PROJECT_NAME = "projectName";
     public static final String PREFS_API_KEY = "apiKey";
+    public static final String PREFS_STAGE = "staging";
     public static final String SHARED_PREFS_ANYLINE_EXAMPLES = "prefs_examples_app";
     public static final String PREFS_LOGIN_STATUS = "is_logged_in";
     public static final String PREFS_ACCESS_TOKEN = "accessToken";
-    public static final String PREFS_PROJECT_TITLE= "projectTitle";
+    public static final String PREFS_PROJECT_TITLE = "projectTitle";
     public static final String PREFS_CUTOUT_CONFIG = "cutoutConfig";
     public static final String PREFS_CUSTOMER_ID = "customerId";
     public static final String PREFS_API_URL = "apiUrl";
+    public static final String PREFS_LOCK_UPDATE_CHECK_UNTIL = "lockUpdateCheckUntil";
 
+    private static final int LOCK_DAYS = 2;
 
     private static Preferences instance;
 
@@ -85,6 +88,25 @@ public class Preferences {
         editor.commit();
     }
 
+    public boolean isLockedUpdate() {
+        String lockedUntil = preferences.getString(PREFS_LOCK_UPDATE_CHECK_UNTIL, "");
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+        String getCurrentDateTime = sdf.format(c.getTime());
+        return getCurrentDateTime.compareTo(lockedUntil) <= 0;
+    }
+
+    public void setLockedUpdate() {
+        Calendar c = Calendar.getInstance();
+        // ask user after xx days to update app
+        c.add(Calendar.DATE, LOCK_DAYS);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+        String getLockedUntilDateTime = sdf.format(c.getTime());
+
+        editor.putString(PREFS_LOCK_UPDATE_CHECK_UNTIL, getLockedUntilDateTime);
+        editor.commit();
+    }
+
     public boolean hasEmailAddressStored() {
         if (!preferences.getString(PREF_EMAIL, "").isEmpty()) {
             return true;
@@ -106,7 +128,6 @@ public class Preferences {
     }
 
 
-
     public void setFirstStartFinished() {
         editor.putBoolean(PREFS_FIRST_START, false);
         editor.commit();
@@ -122,14 +143,14 @@ public class Preferences {
     }
 
 
-//    public String getIntercomUserId() {
-//        return preferences.getString(PREF_INTERCOM_USER_ID, null);
-//    }
+    //    public String getIntercomUserId() {
+    //        return preferences.getString(PREF_INTERCOM_USER_ID, null);
+    //    }
 
-//    public void setIntercomUserId(String user) {
-//        editor.putString(PREF_INTERCOM_USER_ID, user);
-//        editor.commit();
-//    }
+    //    public void setIntercomUserId(String user) {
+    //        editor.putString(PREF_INTERCOM_USER_ID, user);
+    //        editor.commit();
+    //    }
 
     public String getUuid() {
         String uuidPrefs = reportingPreferences.getString(PREF_UUID, "");

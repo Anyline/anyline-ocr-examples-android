@@ -11,7 +11,9 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
@@ -22,11 +24,12 @@ import io.anyline.examples.ScanModuleEnum;
 import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.id.DrivingLicenseIdentification;
-import io.anyline.plugin.id.DrivingLicenseConfig;
 import io.anyline.plugin.id.ID;
 import io.anyline.plugin.id.IdScanPlugin;
 import io.anyline.plugin.id.IdScanViewPlugin;
 import io.anyline.plugin.id.Identification;
+import io.anyline.plugin.id.UniversalIdConfig;
+import io.anyline.plugin.id.UniversalIdLayoutType;
 import io.anyline.view.ScanView;
 
 
@@ -51,8 +54,19 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
     void init() {
 
         drivingLicenseScanView = findViewById(R.id.scan_view);
-        drivingLicenseScanView.init("universal_id_view_config.json");
+        //drivingLicenseScanView.init("universal_id_view_config.json"); // was until 26.2
+        drivingLicenseScanView.init("universal_id_driver_view_config.json");
+
         IdScanViewPlugin scanViewPlugin = (IdScanViewPlugin) drivingLicenseScanView.getScanViewPlugin();
+
+//        final List<String> layouts = new ArrayList<>();
+//        UniversalIdConfig universalIdConfig;
+//        universalIdConfig = (UniversalIdConfig) ((IdScanPlugin) scanViewPlugin.getScanPlugin()).getIdConfig();
+//        layouts.add("AUT-FO-04001");
+//        layouts.add("AUT-FO-05002_05001");
+//        layouts.add("AUT-BO-02003_02002_02001");
+//        UniversalIdLayoutType layoutType = new UniversalIdLayoutType(UniversalIdLayoutType.LAYOUT_TYPE_DRIVING_LICENSE);
+//        universalIdConfig.setScanConfiguration(layoutType, layouts);
 
         scanViewPlugin.addScanResultListener(new ScanResultListener<ScanResult<ID>>() {
             @Override
@@ -80,7 +94,8 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
     protected ScanView getScanView() {
         return null;
     }
-@Override
+
+    @Override
     protected void onResume() {
         super.onResume();
         drivingLicenseScanView.start();
@@ -124,15 +139,44 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
 
         HashMap<String, String> drivingLicenseHashMap = new HashMap<>();
 
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_given_names), (drivingLicenseResult.getGivenNames() == null || drivingLicenseResult.getGivenNames().isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getGivenNames());
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_sur_names), (drivingLicenseResult.getSurname() == null || drivingLicenseResult.getSurname().isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getSurname());
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_DOB), (drivingLicenseResult.getDateOfBirth() == null || drivingLicenseResult.getDateOfBirth().isEmpty()) ? getResources().getString(R.string.not_available) : dayOfBirthFormat(drivingLicenseResult.getDateOfBirth()));
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_document_code), (drivingLicenseResult.getDocumentNumber() == null || drivingLicenseResult.getDocumentNumber().isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getDocumentNumber());
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_authority), (drivingLicenseResult.getAuthority() == null || drivingLicenseResult.getAuthority().isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getAuthority());
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_issuing_date), (drivingLicenseResult.getDateOfIssue() == null || drivingLicenseResult.getDateOfIssue().isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getDateOfIssue());
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_expiring_date), (drivingLicenseResult.getDateOfExpiry() == null || drivingLicenseResult.getDateOfExpiry().isEmpty()) ? getResources().getString(R.string.not_available) : dayOfBirthFormat(drivingLicenseResult.getDateOfExpiry()));
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_categories), (drivingLicenseResult.getCategories() == null || drivingLicenseResult.getCategories().isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getCategories());
-        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_POB), (drivingLicenseResult.getPlaceOfBirth() == null || drivingLicenseResult.getPlaceOfBirth().isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getPlaceOfBirth());
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_given_names),
+                                  (drivingLicenseResult.getGivenNames() == null || drivingLicenseResult
+                                          .getGivenNames()
+                                          .isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getGivenNames());
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_sur_names),
+                                  (drivingLicenseResult.getSurname() == null || drivingLicenseResult
+                                          .getSurname()
+                                          .isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getSurname());
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_DOB),
+                                  (drivingLicenseResult.getDateOfBirth() == null || drivingLicenseResult
+                                          .getDateOfBirth()
+                                          .isEmpty()) ? getResources().getString(R.string.not_available) : dayOfBirthFormat(
+                                          drivingLicenseResult.getDateOfBirth()));
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_document_code),
+                                  (drivingLicenseResult.getDocumentNumber() == null || drivingLicenseResult
+                                          .getDocumentNumber()
+                                          .isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getDocumentNumber());
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_authority),
+                                  (drivingLicenseResult.getAuthority() == null || drivingLicenseResult
+                                          .getAuthority()
+                                          .isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getAuthority());
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_issuing_date),
+                                  (drivingLicenseResult.getDateOfIssue() == null || drivingLicenseResult
+                                          .getDateOfIssue()
+                                          .isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getDateOfIssue());
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_expiring_date),
+                                  (drivingLicenseResult.getDateOfExpiry() == null || drivingLicenseResult
+                                          .getDateOfExpiry()
+                                          .isEmpty()) ? getResources().getString(R.string.not_available) : dayOfBirthFormat(
+                                          drivingLicenseResult.getDateOfExpiry()));
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_categories),
+                                  (drivingLicenseResult.getCategories() == null || drivingLicenseResult
+                                          .getCategories()
+                                          .isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getCategories());
+        drivingLicenseHashMap.put(getResources().getString(R.string.driving_license_POB),
+                                  (drivingLicenseResult.getPlaceOfBirth() == null || drivingLicenseResult
+                                          .getPlaceOfBirth()
+                                          .isEmpty()) ? getResources().getString(R.string.not_available) : drivingLicenseResult.getPlaceOfBirth());
 
         return drivingLicenseHashMap;
     }
@@ -142,9 +186,9 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
         String dateString = dayOfBirth;
         String inputFormat = "ddMMyyyy";
         String outputFormat = "yyyy-MM-dd";
-//		if(Integer.parseInt(dayOfBirth.substring(3,5)) > 12 || Integer.parseInt(dayOfBirth.substring(4,6)) <= 12){
-//			inputFormat = "yyyyMMdd";
-//		}
+        //		if(Integer.parseInt(dayOfBirth.substring(3,5)) > 12 || Integer.parseInt(dayOfBirth.substring(4,6)) <= 12){
+        //			inputFormat = "yyyyMMdd";
+        //		}
         SimpleDateFormat inputDateFormat = new SimpleDateFormat(inputFormat);
         SimpleDateFormat outputDateFormat = new SimpleDateFormat(outputFormat);
         try {

@@ -88,7 +88,6 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         foundBarcodeString = "";
 
         // get the view from the layout (check out the xml for the configuration of the view)

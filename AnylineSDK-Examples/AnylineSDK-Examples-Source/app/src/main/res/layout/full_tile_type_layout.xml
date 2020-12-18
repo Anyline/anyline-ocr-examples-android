@@ -18,7 +18,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintDimensionRatio="H,175:128"
+        app:layout_constraintDimensionRatio="H,350:128"
+        />
+
+
+    <View
+        android:id="@+id/item_gradient"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="H,350:128"
+        android:visibility="gone"
         />
 
 
@@ -26,13 +39,12 @@
         android:id="@+id/item_overview_description"
         android:text="@string/skip"
         android:gravity="start"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         style="@style/ListItemOverview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         />
 
 

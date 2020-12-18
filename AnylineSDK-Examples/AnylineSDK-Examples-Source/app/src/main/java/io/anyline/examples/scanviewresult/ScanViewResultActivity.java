@@ -71,7 +71,6 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
                 imageView.setImageBitmap(bmp);
                 Bitmap faceBmp = BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FACE_PICTURE_PATH));
                 if (faceBmp != null) {
-                    faceImageCaption.setVisibility(View.VISIBLE);
                     faceImageView.setVisibility(View.VISIBLE);
                     faceImageView.setImageBitmap(faceBmp);
                 }
@@ -111,17 +110,17 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             LinkedHashMap<String, String> orderedHashMap = new LinkedHashMap();
 
             orderedHashMap.put("HEADER_MRZ", getResources().getString(R.string.mrz_header));
-            orderedHashMap.put(getResources().getString(R.string.mrz_given_names), result.get(getResources().getString(R.string.mrz_given_names)));
             orderedHashMap.put(getResources().getString(R.string.mrz_sur_names), result.get(getResources().getString(R.string.mrz_sur_names)));
-            orderedHashMap.put(getResources().getString(R.string.mrz_sex), result.get(getResources().getString(R.string.mrz_sex)));
+            orderedHashMap.put(getResources().getString(R.string.mrz_given_names), result.get(getResources().getString(R.string.mrz_given_names)));
             orderedHashMap.put(getResources().getString(R.string.mrz_date_of_birthday), result.get(getResources().getString(R.string.mrz_date_of_birthday)));
-            orderedHashMap.put(getResources().getString(R.string.mrz_document_type), result.get(getResources().getString(R.string.mrz_document_type)));
             orderedHashMap.put(getResources().getString(R.string.mrz_document_number), result.get(getResources().getString(R.string.mrz_document_number)));
-            orderedHashMap.put(getResources().getString(R.string.mrz_expiration_date), result.get(getResources().getString(R.string.mrz_expiration_date)));
+            orderedHashMap.put(getResources().getString(R.string.mrz_document_type), result.get(getResources().getString(R.string.mrz_document_type)));
             orderedHashMap.put(getResources().getString(R.string.mrz_country_code), result.get(getResources().getString(R.string.mrz_country_code)));
+            orderedHashMap.put(getResources().getString(R.string.mrz_expiration_date), result.get(getResources().getString(R.string.mrz_expiration_date)));
             if (result.get(getResources().getString(R.string.personal_number)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.personal_number), result.get(getResources().getString(R.string.personal_number)));
             }
+            orderedHashMap.put(getResources().getString(R.string.mrz_sex), result.get(getResources().getString(R.string.mrz_sex)));
 
             if(result.get(getResources().getString(R.string.mrz_viz_sur_names)) != null ||
                     result.get(getResources().getString(R.string.mrz_viz_given_names)) != null ||

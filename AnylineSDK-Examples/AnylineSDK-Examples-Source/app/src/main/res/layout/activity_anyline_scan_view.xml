@@ -4,7 +4,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 xmlns:tools="http://schemas.android.com/tools"
-                tools:context="io.anyline.examples.barcode.ScanBarcodeActivity"
+    tools:viewBindingIgnore="true"
+
+    tools:context="io.anyline.examples.barcode.ScanBarcodeActivity"
                 android:id="@+id/main_layout">
 
 

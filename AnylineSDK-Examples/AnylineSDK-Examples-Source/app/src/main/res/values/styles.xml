@@ -16,6 +16,7 @@
         <item name="buttonBarNegativeButtonStyle">@style/PositiveButtonStyle</item>
     </style>
 
+
     <style name="MyAppAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="android:textColor">@color/blue</item>
         <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialogText</item>
@@ -43,6 +44,27 @@
         <item name="colorAccent">@color/blue</item>
         <item name="android:textColorSecondary">@color/black_100</item>
         <item name="android:textColorTertiary">@color/black_100</item>
+        <item name="android:textColorHint">@color/blue</item>
+
+    </style>
+
+
+    <style name="AppTheme.LightActionBar" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:textColor">@color/black_100</item>
+        <item name="actionBarTheme">@style/AlActionActionbar</item>
+        <item name="snackbarButtonStyle">@style/AlSnackbar</item>
+    </style>
+
+    <style name="AlSnackbar" parent="@style/Widget.MaterialComponents.Button.TextButton.Snackbar">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AlActionActionbar" parent="@style/ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black_100</item>
     </style>
 
     <style name="PreferencesTheme" parent="AppTheme">
@@ -174,10 +196,12 @@
 
 
     <style name="CustomEditText" parent="Base.V7.Widget.AppCompat.EditText">
-        <item name="colorControlNormal">@color/black_100</item>
+        <item name="colorControlNormal">@color/black_50</item>
         <item name="colorControlActivated">@color/blue</item>
         <item name="colorControlHighlight">@color/blue_shades</item>
         <item name="android:colorActivatedHighlight">@color/blue</item>
+        <item name="android:textColorHint">@color/black_50</item>
+        <item name="colorAccent">@color/black_50</item>
     </style>
 
     <style name="Title">

@@ -45,7 +45,7 @@
 
     <!-- dimensions for tooltip -->
     <dimen name="ttlm_default_padding">20dip</dimen>
-    <dimen name="ttlm_default_corner_radius">8dip</dimen>
+    <dimen name="ttlm_default_corner_radius">4dip</dimen>
     <dimen name="ttlm_default_stroke_weight">0dip</dimen>
     <dimen name="ttlm_default_elevation">4dp</dimen>
     <dimen name="cutout_stroke_width">4dp</dimen>
