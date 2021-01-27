@@ -175,7 +175,7 @@ There are module specific options - take a look at the description of the desire
 
 ## Sample Codes & Documentation 
 
-Have look at some of our code examples: [Sample Code](https://www.anyline.com/demos-sample-code)
+Have look at some of our code examples: [Sample Code](https://documentation.anyline.com/toc/platforms/android/demos.html)
 
 Detailed information about how to configure and implement Anyline: [Documentation](https://documentation.anyline.com)
 
