@@ -103,11 +103,10 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 
                 startScanResultIntent(getResources().getString(R.string.title_mrz), getIdentificationResult(identification), path, facePath);
 
-                //setupScanProcessView(ScanMrzActivity.this, idScanResult, getScanModule());
                 Gson gson = new Gson();
                 String json = gson.toJson(getIdentificationResult(identification), LinkedHashMap.class);
                 setupScanProcessView(ScanMrzActivity.this, json, getScanModule(),
-                                     BitmapUtil.getBitmap(path), currentBitmap);
+                                     BitmapUtil.getBitmap(path), null, currentBitmap);
             }
         });
     }
@@ -168,49 +167,57 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 
         LinkedHashMap<String, String> identificationResult = new LinkedHashMap<>();
 
-        Log.i(TAG, "date of issue object viz: " + identification.getVizDateOfIssueObject());
-        Log.i(TAG, "date of issue viz: " + identification.getVizDateOfIssue());
         //DateFormat dateFormat =  java.text.DateFormat.getDateInstance(DateFormat.FULL);
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.US);
-        identificationResult.put("HEADER_MRZ", getResources().getString(R.string.mrz_header));
 
         if (identification.getSurname() != null && !identification.getSurname().trim().isEmpty()) {
             identificationResult.put(getResources().getString(R.string.mrz_sur_names), identification.getSurname().trim());
+        } else if (identification.getVizSurname() != null && !identification.getVizSurname().trim().isEmpty()) {
+            identificationResult.put(getResources().getString(R.string.mrz_sur_names), identification.getVizSurname().trim());
         }
 
         if (identification.getGivenNames() != null && !identification.getGivenNames().trim().isEmpty()) {
             identificationResult.put(getResources().getString(R.string.mrz_given_names), identification.getGivenNames().trim());
+        } else if (identification.getVizGivenNames() != null && !identification.getVizGivenNames().trim().isEmpty()) {
+            identificationResult.put(getResources().getString(R.string.mrz_given_names), identification.getVizGivenNames().trim());
         }
 
         if (identification.getDateOfBirthObject() == null) {
             if (identification.getDateOfBirth() != null && (!identification.getDateOfBirth().trim().isEmpty())) {
                 identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday), getResources().getString(R.string.not_valid));
-            } else {
+            } else if (identification.getVizDateOfBirth() != null && !identification.getVizDateOfBirth().trim().isEmpty()) {
+                identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday), dateFormat.format(identification.getVizDateOfBirth().trim()));
             }
         } else {
             identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday),
                                      dateFormat.format(identification.getDateOfBirthObject()));
         }
 
-        if (identification.getDocumentNumber() != null && !identification.getDocumentNumber().trim().isEmpty()) {
-            identificationResult.put(getResources().getString(R.string.mrz_document_number), identification.getDocumentNumber().trim());
+        if (identification.getVizDateOfIssue() != null && !identification.getVizDateOfIssue().isEmpty()) {
+            identificationResult.put(getResources().getString(R.string.mrz_viz_issue_date), dateFormat.format(identification.getVizDateOfIssueObject()));
         }
 
-        if (identification.getDocumentType() != null && !identification.getDocumentType().trim().isEmpty()) {
-            identificationResult.put(getResources().getString(R.string.mrz_document_type), identification.getDocumentType().trim());
+        if (identification.getDateOfExpiryObject() == null) {
+            if (identification.getDateOfExpiry() != null && (!identification.getDateOfExpiry().isEmpty())) {
+                identificationResult.put(getResources().getString(R.string.mrz_expiration_date), getResources().getString(R.string.not_valid));
+            } else if (identification.getVizDateOfExpiry() != null && !identification.getVizDateOfExpiry().trim().isEmpty()) {
+                identificationResult.put(getResources().getString(R.string.mrz_expiration_date), dateFormat.format(identification.getVizDateOfExpiry().trim()));
+            }
+        } else {
+            identificationResult.put(getResources().getString(R.string.mrz_expiration_date),
+                                     dateFormat.format(identification.getDateOfExpiryObject()));
+        }
+
+        if (identification.getDocumentNumber() != null && !identification.getDocumentNumber().trim().isEmpty()) {
+            identificationResult.put(getResources().getString(R.string.mrz_document_number), identification.getDocumentNumber().trim());
         }
 
         if (identification.getNationalityCountryCode() != null && !identification.getNationalityCountryCode().trim().isEmpty()) {
             identificationResult.put(getResources().getString(R.string.mrz_country_code), identification.getNationalityCountryCode().trim());
         }
 
-        if (identification.getDateOfExpiryObject() == null) {
-            if (identification.getDateOfExpiry() != null && (!identification.getDateOfExpiry().isEmpty())) {
-                identificationResult.put(getResources().getString(R.string.mrz_expiration_date), getResources().getString(R.string.not_valid));
-            } else {
-            }
-        } else {
-            identificationResult.put(getResources().getString(R.string.mrz_expiration_date), dateFormat.format(identification.getDateOfExpiryObject()));
+        if (identification.getDocumentType() != null && !identification.getDocumentType().trim().isEmpty()) {
+            identificationResult.put(getResources().getString(R.string.mrz_document_type), identification.getDocumentType().trim());
         }
 
         if (identification.getPersonalNumber() != null && !identification.getPersonalNumber().trim().isEmpty()) {
@@ -221,41 +228,6 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
             identificationResult.put(getResources().getString(R.string.mrz_sex), identification.getSex().trim());
         }
 
-
-//        if (identification.getVizSurname() != null && !identification.getVizSurname().trim().isEmpty() ||
-//            identification.getGivenNames() != null && !identification.getGivenNames().trim().isEmpty() ||
-//            identification.getVizDateOfBirth() != null && !identification.getVizDateOfBirth().trim().isEmpty() ||
-//            identification.getVizDateOfExpiryObject() != null && !identification.getVizDateOfExpiry().trim().isEmpty() ||
-//            identification.getVizDateOfIssue() != null && !identification.getVizDateOfIssue().trim().isEmpty() ||
-//            //identification.getVizAddress() != null && !identification.getVizAddress().isEmpty())
-//            (identification.getNationalityCountryCode() != null && identification.getDocumentType() != null &&
-//             identification.getDocumentType().equals("ID") && identification.getNationalityCountryCode().equals("D"))) {
-//            identificationResult.put("HEADER", getResources().getString(R.string.mrz_VIZ_header));
-//        }
-
-        String vizSurname = "";
-        String vizGivenNames = "";
-        String vizDateOfBirth = "";
-        String vizDateOfExpiry = "";
-        String vizDateOfIssue = "";
-        String vizAddress = "";
-
-
-        if (identification.getVizSurname() != null && !identification.getVizSurname().trim().isEmpty()) {
-            vizSurname = identification.getVizSurname().trim();
-        }
-        if (identification.getVizGivenNames() != null && !identification.getVizGivenNames().trim().isEmpty()) {
-            vizGivenNames = identification.getGivenNames().trim();
-        }
-        if (identification.getVizDateOfBirth() != null && !identification.getVizDateOfBirth().trim().isEmpty()) {
-            vizDateOfBirth = dateFormat.format(identification.getVizDateOfBirthObject());
-        }
-        if (identification.getVizDateOfExpiry() != null && !identification.getVizDateOfExpiry().trim().isEmpty()) {
-            vizDateOfExpiry = dateFormat.format(identification.getVizDateOfExpiryObject());
-        }
-        if (identification.getVizDateOfIssue() != null && !identification.getVizDateOfIssue().isEmpty()) {
-            vizDateOfIssue = dateFormat.format(identification.getVizDateOfIssueObject());
-        }
         if (identification.getNationalityCountryCode() != null && identification.getDocumentType() != null &&
             identification.getDocumentType().equals("ID") && identification.getNationalityCountryCode().equals("D")) {
             String address = null;
@@ -263,31 +235,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
                 address = identification.getVizAddress().replace("\\n", "\n");
             }
             if (address != null && !address.isEmpty()) {
-                vizAddress = address.trim();
-            }
-        }
-
-        if (vizSurname.length()>0 || vizGivenNames.length()>0 || vizDateOfBirth.length()>0 ||
-            vizDateOfExpiry.length()>0 || vizDateOfIssue.length()>0 || vizAddress.length()>0) {
-            identificationResult.put("HEADER", getResources().getString(R.string.mrz_VIZ_header));
-
-            if (vizSurname.length()>0) {
-                identificationResult.put(getResources().getString(R.string.mrz_viz_sur_names), vizSurname);
-            }
-            if (vizGivenNames.length()>0) {
-                identificationResult.put(getResources().getString(R.string.mrz_viz_given_names), vizGivenNames);
-            }
-            if (vizDateOfBirth.length()>0) {
-                identificationResult.put(getResources().getString(R.string.mrz_viz_dob), vizDateOfBirth);
-            }
-            if (vizDateOfExpiry.length()>0) {
-                identificationResult.put(getResources().getString(R.string.mrz_viz_date_of_expiry), vizDateOfExpiry);
-            }
-            if (vizDateOfIssue.length()>0) {
-                identificationResult.put(getResources().getString(R.string.mrz_viz_issue_date), vizDateOfIssue);
-            }
-            if (vizAddress.length()>0) {
-                identificationResult.put(getResources().getString(R.string.mrz_viz_address), vizAddress);
+                identificationResult.put(getResources().getString(R.string.mrz_viz_address), address.trim());
             }
         }
 

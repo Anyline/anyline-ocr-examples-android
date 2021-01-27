@@ -12,8 +12,10 @@ import org.json.JSONObject;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 import at.nineyards.anyline.camera.CameraController;
 import at.nineyards.anyline.camera.CameraOpenListener;
@@ -77,13 +79,22 @@ public class ScanDrivingLicenseActivity extends ScanActivity implements CameraOp
                 String facePath = setupImagePath(new AnylineImage(identification.getFaceImage()));
 
                 Intent intent = new Intent(ScanDrivingLicenseActivity.this, ScanUniversalIdResultActivity.class);
-                intent.putExtra("resultData", data);
+
+                // convert linkedHashmap into two arrays as LinkedHashMap cannot pe passed from one activity to the other:
+                Set<String> setKeys = data.keySet();
+                String[] arrayKeys = setKeys.toArray(new String[setKeys.size()]);
+                Collection<String> values = data.values();
+                String[] arrayValues = values.toArray(new String[values.size()]);
+
+                intent.putExtra("resultDataKeys", arrayKeys);
+                intent.putExtra("resultDataValues", arrayValues);
+
                 intent.putExtra("scan_full_picture_path", imagePath);
                 startActivity(intent);
 
                 String s = new JSONObject(data).toString();
                 setupScanProcessView(ScanDrivingLicenseActivity.this, s,
-                                     getScanModule(), idScanResult.getCutoutImage().getBitmap(), null);
+                                     getScanModule(), idScanResult.getCutoutImage().getBitmap(), null, null);
             }
         });
 

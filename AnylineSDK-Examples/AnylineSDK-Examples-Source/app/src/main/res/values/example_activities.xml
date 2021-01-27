@@ -29,7 +29,6 @@
         <item>@string/isbn</item>
         <item>@string/barcode</item>
         <item>@string/document</item>
-        <item>@string/document_ui</item>
     </string-array>
 
     <string-array name="example_others_classes" translatable="false">
@@ -44,8 +43,6 @@
         <item>io.anyline.examples.ocr.ScanIsbnActivity</item>
         <item>io.anyline.examples.barcode.ScanBarcodeActivity</item>
         <item>io.anyline.examples.document.ScanDocumentActivity</item>
-        <item>io.anyline.examples.document.DocScanUIMainActivity</item>
-
     </string-array>
 
     <string-array name="example_energy_names">

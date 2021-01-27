@@ -62,22 +62,22 @@
                 android:textSize="18sp"
                 />
 
+            <ImageView
+                android:id="@+id/face_image"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:adjustViewBounds="true"
+                />
+
             <io.anyline.examples.customviews.AnylineTextView
                 android:id="@+id/barcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black_50"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:visibility="gone"
-                />
-
-            <io.anyline.examples.customviews.AnylineTextView
-                android:id="@+id/datetime"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:textColor="@color/blue"
                 android:visibility="gone"
                 />
 

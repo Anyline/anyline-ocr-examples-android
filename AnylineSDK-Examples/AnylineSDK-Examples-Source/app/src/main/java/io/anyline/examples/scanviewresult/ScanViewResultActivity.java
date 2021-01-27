@@ -39,6 +39,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
     private Button confirmationButton;
     private TextView faceImageCaption;
     private ImageView faceImageView;
+    private ImageView controlImage2;
 
 
     @Override
@@ -50,6 +51,8 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getApplicationContext()));
 
         imageView = (ImageView) findViewById(R.id.control_image);
+        controlImage2 = (ImageView) findViewById(R.id.control_image2);
+
         faceImageCaption = findViewById(R.id.textFaceImage);
         faceImageView = findViewById(R.id.face_image);
         confirmationButton = findViewById(R.id.confirmation_button);
@@ -108,48 +111,25 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             //for the specific insertion order it is needed a linkedHashMap reconstruct here
             //android transform via bundle transfer the linkedHashMap into a Hashmap
             LinkedHashMap<String, String> orderedHashMap = new LinkedHashMap();
-
-            orderedHashMap.put("HEADER_MRZ", getResources().getString(R.string.mrz_header));
             orderedHashMap.put(getResources().getString(R.string.mrz_sur_names), result.get(getResources().getString(R.string.mrz_sur_names)));
             orderedHashMap.put(getResources().getString(R.string.mrz_given_names), result.get(getResources().getString(R.string.mrz_given_names)));
             orderedHashMap.put(getResources().getString(R.string.mrz_date_of_birthday), result.get(getResources().getString(R.string.mrz_date_of_birthday)));
-            orderedHashMap.put(getResources().getString(R.string.mrz_document_number), result.get(getResources().getString(R.string.mrz_document_number)));
-            orderedHashMap.put(getResources().getString(R.string.mrz_document_type), result.get(getResources().getString(R.string.mrz_document_type)));
-            orderedHashMap.put(getResources().getString(R.string.mrz_country_code), result.get(getResources().getString(R.string.mrz_country_code)));
+            if (result.get(getResources().getString(R.string.mrz_viz_issue_date)) != null) {
+                orderedHashMap.put(getResources().getString(R.string.mrz_viz_issue_date), result.get(getResources().getString(R.string.mrz_viz_issue_date)));
+            }
             orderedHashMap.put(getResources().getString(R.string.mrz_expiration_date), result.get(getResources().getString(R.string.mrz_expiration_date)));
+            orderedHashMap.put(getResources().getString(R.string.mrz_document_number), result.get(getResources().getString(R.string.mrz_document_number)));
+            orderedHashMap.put(getResources().getString(R.string.mrz_country_code), result.get(getResources().getString(R.string.mrz_country_code)));
+            orderedHashMap.put(getResources().getString(R.string.mrz_document_type), result.get(getResources().getString(R.string.mrz_document_type)));
             if (result.get(getResources().getString(R.string.personal_number)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.personal_number), result.get(getResources().getString(R.string.personal_number)));
             }
             orderedHashMap.put(getResources().getString(R.string.mrz_sex), result.get(getResources().getString(R.string.mrz_sex)));
-
-            if(result.get(getResources().getString(R.string.mrz_viz_sur_names)) != null ||
-                    result.get(getResources().getString(R.string.mrz_viz_given_names)) != null ||
-                    result.get(getResources().getString(R.string.mrz_viz_dob)) != null ||
-                    result.get(getResources().getString(R.string.mrz_viz_date_of_expiry)) != null ||
-                    result.get(getResources().getString(R.string.mrz_viz_issue_date)) != null ||
-                    result.get(getResources().getString(R.string.mrz_viz_address)) != null)
-                orderedHashMap.put("HEADER", getResources().getString(R.string.mrz_VIZ_header));
-            if (result.get(getResources().getString(R.string.mrz_viz_sur_names)) != null) {
-                orderedHashMap.put(getResources().getString(R.string.mrz_viz_sur_names), result.get(getResources().getString(R.string.mrz_viz_sur_names)));
-            }
-            if (result.get(getResources().getString(R.string.mrz_viz_given_names)) != null) {
-                orderedHashMap.put(getResources().getString(R.string.mrz_viz_given_names), result.get(getResources().getString(R.string.mrz_viz_given_names)));
-            }
-            if (result.get(getResources().getString(R.string.mrz_viz_dob)) != null) {
-                orderedHashMap.put(getResources().getString(R.string.mrz_viz_dob), result.get(getResources().getString(R.string.mrz_viz_dob)));
-            }
-            if (result.get(getResources().getString(R.string.mrz_viz_date_of_expiry)) != null) {
-                orderedHashMap.put(getResources().getString(R.string.mrz_viz_date_of_expiry), result.get(getResources().getString(R.string.mrz_viz_date_of_expiry)));
-            }
-            if (result.get(getResources().getString(R.string.mrz_viz_issue_date)) != null) {
-                orderedHashMap.put(getResources().getString(R.string.mrz_viz_issue_date), result.get(getResources().getString(R.string.mrz_viz_issue_date)));
-            }
             if (result.get(getResources().getString(R.string.mrz_viz_address)) != null) {
                 orderedHashMap.put(getResources().getString(R.string.mrz_viz_address), result.get(getResources().getString(R.string.mrz_viz_address)));
             }
 
             scanResultAdapter = new BaseGridAdapter(this.getApplicationContext(), orderedHashMap);
-            //scanResultAdapter = new ScanViewResultAdapter(this.getBaseContext(), orderedHashMap);
 
         } else if (scanModule.equals(getResources().getString(R.string.title_driving_license))) {
             LinkedHashMap<String, String> orderedHashMapDrivingLicense = new LinkedHashMap();

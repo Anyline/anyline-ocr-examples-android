@@ -88,7 +88,6 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 
         TextView dataFieldTitleResultTextView = container.findViewById(R.id.dataFieldTitleResult);
         TextView resultScanDataTextView = container.findViewById(R.id.resultScanData);
-        ImageView receivedDataImageView = container.findViewById(R.id.result_ok_image);
 
         if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_format))) {
             if (pattern.matcher(String.valueOf(dataFieldTitleResult)).matches()) {
@@ -131,13 +130,6 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
         }
         dataFieldTitleResultTextView.setText(String.valueOf(dataFieldTitleResult));
         resultScanDataTextView.setText(String.valueOf(scanDataResult));
-
-        if (scanDataResult != null && (scanDataResult.equals(context.getString(R.string.not_available)) || scanDataResult.equals(
-                context.getString(R.string.not_valid)))) {
-            receivedDataImageView.setVisibility(View.GONE);
-        } else {
-            receivedDataImageView.setVisibility(View.VISIBLE);
-        }
 
     }
 

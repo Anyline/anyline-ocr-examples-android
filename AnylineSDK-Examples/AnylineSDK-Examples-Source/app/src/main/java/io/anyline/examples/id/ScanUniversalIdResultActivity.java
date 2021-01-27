@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,12 +39,17 @@ public class ScanUniversalIdResultActivity extends ScanningConfigurationActivity
         RecyclerView recyclerView = findViewById(R.id.rv_results);
         Button confirmButton = findViewById(R.id.confirmation_button);
         ImageView controlImage = findViewById(R.id.control_image);
+        ImageView controlImage2 = findViewById(R.id.control_image2);
         ImageView faceImageView = findViewById(R.id.face_image);
         TextView frontSideTextView = findViewById(R.id.text);
         TextView backSideTextView = findViewById(R.id.textFaceImage);
+        TextView fieldsInformationTextView = findViewById(R.id.tvFieldsInformation);
         backSideTextView.setVisibility(View.VISIBLE);
         frontSideTextView.setTypeface(Typeface.DEFAULT);
         backSideTextView.setTypeface(Typeface.DEFAULT);
+        fieldsInformationTextView.setVisibility(View.VISIBLE);
+        fieldsInformationTextView.setText(Html.fromHtml(getString(R.string.fields_selection)));
+        fieldsInformationTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -74,14 +80,22 @@ public class ScanUniversalIdResultActivity extends ScanningConfigurationActivity
                 controlImage.setImageBitmap(bmp);
             }
 
-            Bitmap faceBmp = BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FACE_PICTURE_PATH));
-            if (faceBmp == null) {
+            Bitmap bmp2 = BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FULL_PICTURE_PATH2));
+            if (bmp2 == null) {
                 backSideTextView.setVisibility(View.VISIBLE);
                 backSideTextView.setText(Html.fromHtml(
                         String.format(getResources().getString(R.string.card_back), getString(R.string.not_available))));
-                faceImageView.setVisibility(View.GONE);
+                controlImage2.setVisibility(View.GONE);
             } else {
                 backSideTextView.setVisibility(View.GONE);
+                controlImage2.setVisibility(View.VISIBLE);
+                controlImage2.setImageBitmap(bmp2);
+            }
+
+            Bitmap faceBmp = BitmapUtil.getBitmap(extras.getString(Constant.SCAN_FACE_PICTURE_PATH));
+            if (faceBmp == null) {
+                faceImageView.setVisibility(View.GONE);
+            } else {
                 faceImageView.setVisibility(View.VISIBLE);
                 faceImageView.setImageBitmap(faceBmp);
             }

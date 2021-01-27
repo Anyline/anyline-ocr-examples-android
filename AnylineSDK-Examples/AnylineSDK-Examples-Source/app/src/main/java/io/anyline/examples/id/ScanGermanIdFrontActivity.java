@@ -69,7 +69,7 @@ public class ScanGermanIdFrontActivity extends ScanActivity implements CameraOpe
 
 				setupScanProcessView(ScanGermanIdFrontActivity.this,
 									 new JSONObject(getGermanIdFrontResult(resultString)).toString(), getScanModule(),
-									 idScanResult.getCutoutImage().getBitmap(), null);
+									 idScanResult.getCutoutImage().getBitmap(), null, null);
 			}
 
 		});

@@ -35,6 +35,9 @@
       "USA-FO-FL19",
       "USA-FO-FL19_v2"
     ],
+    "Georgia": [
+      "USA-FO-GA20"
+    ],
     "Idaho": [
       "USA-FO-ID19"
     ],
@@ -78,7 +81,8 @@
     ],
     "Missouri": [
       "USA-FO-MO19",
-      "USA-FO-MO19_v2"
+      "USA-FO-MO19_v2",
+      "USA-FO-MO19_v3"
     ],
     "Montana": [
       "USA-FO-MT19"
@@ -125,6 +129,9 @@
       "USA-FO-RI19",
       "USA-FO-RI19_v2"
     ],
+    "South Carolina": [
+      "USA-FO-SC19"
+    ],
     "South Dakota": [
       "USA-FO-SD19"
     ],
@@ -138,6 +145,9 @@
     "Utah": [
       "USA-FO-UT19",
       "USA-FO-UT19_v2"
+    ],
+    "Vermont": [
+      "USA-FO-VT19"
     ],
     "Virginia": [
       "USA-FO-VA19"
@@ -155,6 +165,20 @@
       "USA-FO-WY19"
     ]
   },
+  "Canada": {
+    "Alberta": [
+      "CAN-FO-AB19"
+    ],
+    "British Columbia": [
+      "CAN-FO-BC19"
+    ],
+    "Ontario": [
+      "CAN-FO-ON19"
+    ],
+    "Quebec": [
+      "CAN-FO-QC19"
+    ]
+  },
   "Europe": {
     "Austria": [
       "AUT-FO-04001",
@@ -164,15 +188,8 @@
       "BEL-FO-02003_02002_02001",
       "BEL-FO-05001_04003_04002_04001_03001"
     ],
-    "Bulgaria": [
-      "BGR-FO-02001",
-      "BGR-FO-02002"
-    ],
     "Croatia": [
       "HRV-FO-02001"
-    ],
-    "Cyprus": [
-      "CYP-FO-03001"
     ],
     "Czechia": [
       "CZE-FO-02003_02002_02001"
@@ -180,6 +197,10 @@
     "Denmark": [
       "DNK-FO-03001",
       "DNK-FO-04001"
+    ],
+    "Germany": [
+      "DEU-FO-02006_02003_02002_02001",
+      "DEU-FO-02007"
     ],
     "Estonia": [
       "EST-FO-02004"
@@ -191,19 +212,9 @@
     "France": [
       "FRA-FO-07001_06001"
     ],
-    "Germany": [
-      "DEU-FO-02006_02003_02002_02001",
-      "DEU-FO-02007"
-    ],
-    "Greece": [
-      "GRC-FO-03002"
-    ],
     "Hungary": [
       "HUN-FO-02001",
       "HUN-FO-04001_03001"
-    ],
-    "Iceland": [
-      "ISL-FO-06001"
     ],
     "Ireland": [
       "IRL-FO-04001"
@@ -223,9 +234,6 @@
     ],
     "Luxembourg": [
       "LUX-FO-01010"
-    ],
-    "Malta": [
-      "MLT-FO-03001"
     ],
     "Netherlands": [
       "NLD-FO-04001",
@@ -283,9 +291,6 @@
     ],
     "South Australia": [
       "AUS-FO-SA13"
-    ],
-    "Tasmania": [
-      "AUS-FO-TAS15"
     ],
     "Victoria": [
       "AUS-FO-VIC09"

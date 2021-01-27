@@ -274,7 +274,7 @@
     <string name="skip">Skip</string>
 
     <!-- override the error message in the dialog to install missing google play services components -->
-    <string name="common_google_play_services_update_text" msgid="9053896323427875356">Anyline OCR is able to scan barcodes simultaneously. This feature will only work if the newest Google Play services are installed.</string>
+    <string name="common_google_play_services_update_text" msgid="9053896323427875356">Anyline Scanner is able to scan barcodes simultaneously. This feature will only work if the newest Google Play services are installed.</string>
     <string name="common_google_play_services_update_title" msgid="8706675115216073244">Update Google Play Services</string>
     <string name="switch_on">ON</string>
     <string name="switch_off">OFF</string>
@@ -347,14 +347,14 @@
 
     <!-- MRZ result Screen Keys -->
     <string name="mrz_header">Machine Readable Zone</string>
-    <string name="mrz_given_names">Given Name</string>
+    <string name="mrz_given_names">Given Names</string>
     <string name="mrz_sur_names">Surname</string>
     <string name="mrz_document_type">Document Type</string>
     <string name="mrz_sex">Sex</string>
     <string name="mrz_country_code">Nationality</string>
     <string name="mrz_document_number">Document Number</string>
-    <string name="mrz_expiration_date">Date of Expiry</string>
-    <string name="mrz_date_of_birthday">Date of Birth</string>
+    <string name="mrz_expiration_date">Date Of Expiry</string>
+    <string name="mrz_date_of_birthday">Date Of Birth</string>
     <string name="not_available">Not Available</string>
     <string name="not_valid">Not Valid</string>
     <string name="personal_number">Personal Number</string>

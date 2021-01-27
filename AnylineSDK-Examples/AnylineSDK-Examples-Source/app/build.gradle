@@ -12,8 +12,8 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 351
-        versionName "27"
+        versionCode 356
+        versionName "28"
 
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
@@ -58,10 +58,11 @@ configurations {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.legacy:legacy-preference-v14:1.0.0'
-    implementation 'com.google.android.material:material:1.3.0-alpha04'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'com.google.android.material:material:1.3.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation "androidx.activity:activity-ktx:1.1.0"
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
@@ -70,16 +71,15 @@ dependencies {
     implementation 'com.google.android.play:core:1.9.0'
 
 
+    //include AnylineSDK from maven
+    implementation'io.anyline:anylinesdk:28'
+
     /// include the vision-version we need for barcode scanning
     implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
     implementation 'com.google.firebase:firebase-ml-vision-face-model:20.0.1'
     implementation 'com.madgag.spongycastle:core:1.54.0.0'
     implementation 'com.madgag.spongycastle:pkix:1.54.0.0'
     implementation 'com.google.firebase:firebase-analytics:17.5.0'
-
-
-    //include AnylineSDK from maven
-    implementation'io.anyline:anylinesdk:27'
 
     //Kotlin
     implementation "androidx.core:core-ktx:1.3.2"
@@ -106,6 +106,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
-    implementation 'androidx.preference:preference:1.1.1'
-    customImplementation('io.anyline:anylinesdk:27')
+    implementation 'androidx.preference:preference-ktx:1.1.1'
+    customImplementation('io.anyline:anylinesdk:28')
 }

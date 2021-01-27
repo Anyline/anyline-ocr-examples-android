@@ -37,11 +37,6 @@ public class ScanViewResultAdapter extends RecyclerView.Adapter<ScanViewResultAd
         itemHolder.dataFieldTitleResultTextView.setText(String.valueOf(dataFieldTitleResult));
         itemHolder.resultScanDataTextView.setText(String.valueOf(scanDataResult));
 
-        if(scanDataResult != null && (scanDataResult.equals(mContext.getString(R.string.not_available)) || scanDataResult.equals(mContext.getString(R.string.not_valid)))){
-            itemHolder.receivedDataImageView.setVisibility(View.GONE);
-        }else{
-            itemHolder.receivedDataImageView.setVisibility(View.VISIBLE);
-        }
     }
 
     @Override
@@ -57,14 +52,12 @@ public class ScanViewResultAdapter extends RecyclerView.Adapter<ScanViewResultAd
 
 
         protected TextView dataFieldTitleResultTextView, resultScanDataTextView ;
-        protected ImageView receivedDataImageView;
 
         public ItemHolder(View view) {
 
             super(view);
             this.dataFieldTitleResultTextView = (TextView) view.findViewById(R.id.dataFieldTitleResult);
             this.resultScanDataTextView = (TextView) view.findViewById(R.id.resultScanData);
-            this.receivedDataImageView = (ImageView) view.findViewById(R.id.result_ok_image);
 
         }
 
