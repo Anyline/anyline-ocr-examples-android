@@ -11,15 +11,24 @@ package io.anyline.examples.barcode;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
+
+import com.google.android.gms.vision.text.Line;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,6 +46,7 @@ import io.anyline.plugin.barcode.BarcodeFormat;
 import io.anyline.plugin.barcode.BarcodeScanPlugin;
 import io.anyline.plugin.barcode.BarcodeScanResult;
 import io.anyline.plugin.barcode.BarcodeScanViewPlugin;
+import io.anyline.view.FlashView;
 import io.anyline.view.ScanView;
 
 //import io.anyline.examples.baseactivities.BarcodeListView;
@@ -54,6 +64,9 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
 	private ArrayList<String> defaultItems;
 	private LinearLayout barcodeContiner;
 	private Switch barcodeSwitch;
+	private BarcodeScanViewPlugin scanViewPlugin;
+	private Button scanButton;
+	MutableLiveData<Long> listen = new MutableLiveData<>();
 
 
 	BarcodeScanPlugin scanPlugin = null;
@@ -70,18 +83,19 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
 		barcodeContiner = findViewById(R.id.barcode_switch_container);
 		barcodeSwitch = (Switch) findViewById(R.id.barcode_scanner_switch);
 		barcodeScanView = (ScanView) findViewById(R.id.scan_view);
+		scanButton = findViewById(R.id.stop_scanning_button);
 		// add a camera open listener that will be called when the camera is opened or an error occurred
 		//  this is optional (if not set a RuntimeException will be thrown if an error occurs)
 		barcodeScanView.setCameraOpenListener(this);
 		// the view can be configured via a json file in the assets, and this config is set here
 		// (alternatively it can be configured via xml, see the Energy Example for that)
 
-		barcodeContiner.setVisibility(View.VISIBLE);
+		//	barcodeContiner.setVisibility(View.VISIBLE);
 
 		barcodeScanView.setScanConfig("barcode_view_config.json");
 
 		scanPlugin = new BarcodeScanPlugin(getApplicationContext(), "barcode");
-		BarcodeScanViewPlugin scanViewPlugin = new BarcodeScanViewPlugin(getApplicationContext(), scanPlugin, barcodeScanView.getScanViewPluginConfig());
+		scanViewPlugin = new BarcodeScanViewPlugin(getApplicationContext(), scanPlugin, barcodeScanView.getScanViewPluginConfig());
 		scanPlugin.setCancelOnResult(false);
 		if(preselectedItems.size() == 0){
 			barcodePrefferences.setDefault();
@@ -90,22 +104,75 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
 		scanViewPlugin.setMultiBarcode(false);
 		setBarcodeTypes(preselectedItems);
 
+		FlashView flashView =  barcodeScanView.getFlashView();
+		((ViewGroup)flashView.getParent()).removeView(flashView);
+
+		//build a linear layout for making it possible to arrange the flash as we want to
+		LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_layout_linear);
+		mainLayout.setVisibility(View.VISIBLE);
+		//set all parameters for the flashview
+		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+		params.gravity = Gravity.CENTER_VERTICAL;
+		params.weight = 1.0f;
+		params.rightMargin = 100;
+		params.topMargin = 50;
+		flashView.setLayoutParams(params);
+
+		//add the flash view to the main layout of the buttons
+		mainLayout.addView(flashView);
+
 		barcodeScanView.setScanViewPlugin(scanViewPlugin);
 		scanViewPlugin.addScanResultListener(new ScanResultListener<BarcodeScanResult>() {
 			@Override
 			public void onResult(BarcodeScanResult result) {
+				long x =  System.currentTimeMillis();
+				listen.setValue(x);
 
 				String path = setupImagePath(result.getCutoutImage());
 				barcodeScanView.getScanViewPlugin().setCancelOnResult(false);
-				//setup the scan process
-				startScanResultIntent(getResources().getString(R.string.category_barcodes), getBarcodeResult(result.getResult()), path);
+				if(scanViewPlugin!= null && scanViewPlugin.isMultiBarcodeEnabled()) {
+					if (scanButton.getVisibility() == View.INVISIBLE) {
+						scanButton.setVisibility(View.VISIBLE);
+					}
+					if (scanButton.getVisibility() == View.VISIBLE) {
+						scanButton.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View view) {
+								//setup the scan process
+								startScanResultIntent(getResources().getString(R.string.category_barcodes), getBarcodeResult(result.getResult()), path);
+								setupScanProcessView(ScanBarcodeActivity.this, result, getScanModule());
+							}
+						});
+					}
+				}else{
+					startScanResultIntent(getResources().getString(R.string.category_barcodes), getBarcodeResult(result.getResult()), path);
+					setupScanProcessView(ScanBarcodeActivity.this, result, getScanModule());
+				}
 
-				setupScanProcessView(ScanBarcodeActivity.this, result, getScanModule());
 
-				//reset as the scanning will never stop (cancelOnResult = false)
-				resetTime();
 			}
 
+		});
+
+		//create a count down for visibility of the scan button
+		CountDownTimer countDown = new CountDownTimer(2000, 1000) {
+
+			public void onTick(long millisUntilFinished) {
+			}
+
+			public void onFinish() {
+				scanButton.setVisibility(View.INVISIBLE);
+			}
+
+		}.start();
+
+
+		listen.observe(this ,new Observer<Long>() {
+			@Override
+			public void onChanged(Long changedValue) {
+
+				countDown.start();
+			}
 		});
 
 		barcodeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -127,6 +194,8 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
 
 			}
 		});
+
+
 	}
 
 	@Override
@@ -219,6 +288,9 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
 		super.onPause();
 		//stop the scanning
 		barcodeScanView.stop();
+		//scan button should not be present when the device is on pause
+		scanButton.setVisibility(View.INVISIBLE);
+
 		//release the camera (must be called in onPause, because there are situations where
 		// it cannot be auto-detected that the camera should be released)
 		barcodeScanView.releaseCameraInBackground();
