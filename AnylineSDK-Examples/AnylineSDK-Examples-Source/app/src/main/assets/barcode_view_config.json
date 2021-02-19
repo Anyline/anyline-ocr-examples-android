@@ -12,7 +12,7 @@
   },
   "viewPlugin" : {
     "cutoutConfig": {
-      "style": "animated_rect",
+      "style": "rect",
       "maxWidthPercent": "80%",
       "alignment": "center",
       "ratioFromSize": {
@@ -32,7 +32,7 @@
       "strokeColor": "0099FF",
       "fillColor" : "220099FF",
       "beepOnResult": true,
-      "vibrateOnResult": true,
+      "vibrateOnResult": false,
       "strokeWidth": 2
     }
   }

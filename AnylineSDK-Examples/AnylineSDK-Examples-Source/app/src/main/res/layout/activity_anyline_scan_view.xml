@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:viewBindingIgnore="true"
 
     tools:context="io.anyline.examples.barcode.ScanBarcodeActivity"
-                android:id="@+id/main_layout">
+    android:id="@+id/main_layout">
 
 
     <io.anyline.view.ScanView
@@ -71,44 +71,73 @@
         android:paddingRight="@dimen/activity_horizontal_margin"/>
 
     <LinearLayout
-        android:id="@+id/barcode_switch_container"
+        android:id="@+id/main_layout_linear"
         android:visibility="gone"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:background="#88000000"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dp"
+        android:layout_above="@id/stop_scanning_button"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
         android:paddingLeft="25dp"
         android:paddingRight="25dp">
 
-        <TextView
-            android:id="@+id/enable_barcode_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/barcode_scanner_switch"
-            android:paddingBottom="12dp"
-            android:text="@string/enable_multi_barcode"
-            android:textColor="#E5E5E5"
-            android:textSize="14dp" />
+        <LinearLayout
+            android:id="@+id/barcode_switch_container"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical">
 
-        <Switch
-            android:id="@+id/barcode_scanner_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:checked="false"
-            android:showText="true"
-            android:switchTextAppearance="@style/switch_text_selector"
-            android:textOff="@string/switch_off"
-            android:textOn="@string/switch_on"
-            android:thumb="@drawable/switch_thumb_selector"
-            android:track="@drawable/switch_track_selector" />
+            <TextView
+                android:id="@+id/enable_barcode_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:layout_gravity="left"
+                android:textStyle="bold"
+                android:text="@string/enable_multi_barcode"
+                android:textColor="#E5E5E5"
+                android:textSize="14dp" />
 
+            <Switch
+                android:id="@+id/barcode_scanner_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:showText="true"
+                android:switchTextAppearance="@style/switch_text_selector"
+                android:textOff="@string/switch_off"
+                android:textOn="@string/switch_on"
+                android:thumb="@drawable/switch_thumb_selector"
+                android:track="@drawable/switch_track_selector" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+
+        android:id="@+id/stop_scanning_button"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_round_corner"
+        android:enabled="true"
+        android:text="@string/scan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        android:layout_alignParentBottom = "true"
+        />
 
 </RelativeLayout>
