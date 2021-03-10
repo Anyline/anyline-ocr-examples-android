@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import at.nineyards.anyline.models.AnylineScanResult;
+import io.anyline.models.AnylineScanResult;
 import io.anyline.view.ScanView;
 
 public abstract class ScanningConfigurationActivity extends AppCompatActivity{

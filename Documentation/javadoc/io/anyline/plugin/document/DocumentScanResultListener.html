@@ -133,7 +133,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResultListener.html" title="i
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPictureCornersDetected-at.nineyards.anyline.models.AnylineImage-java.util.List-">onPictureCornersDetected</a></span>(<a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullFrame,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPictureCornersDetected-AnylineImage-java.util.List-">onPictureCornersDetected</a></span>(AnylineImage&nbsp;fullFrame,
                         java.util.List&lt;android.graphics.PointF&gt;&nbsp;corners)</code>
 <div class="block">Called after <a href="../../../../io/anyline/plugin/document/DocumentScanViewPlugin.html#triggerPictureCornerDetection--"><code>DocumentScanViewPlugin.triggerPictureCornerDetection()</code></a> and after a picture was successfully
  taken from the camera.</div>
@@ -147,7 +147,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResultListener.html" title="i
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPictureTransformed-at.nineyards.anyline.models.AnylineImage-">onPictureTransformed</a></span>(<a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;transformedImage)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPictureTransformed-AnylineImage-">onPictureTransformed</a></span>(AnylineImage&nbsp;transformedImage)</code>
 <div class="block">Called after <code>DocumentScanViewPlugin#transformPicture(AnylineImage, List<PointF>)</code> is called.</div>
 </td>
 </tr>
@@ -166,7 +166,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResultListener.html" title="i
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPreviewProcessingSuccess-at.nineyards.anyline.models.AnylineImage-">onPreviewProcessingSuccess</a></span>(<a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;anylineImage)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPreviewProcessingSuccess-AnylineImage-">onPreviewProcessingSuccess</a></span>(AnylineImage&nbsp;anylineImage)</code>
 <div class="block">Called if the preview scan detected a sharp and correctly placed document.</div>
 </td>
 </tr>
@@ -179,7 +179,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResultListener.html" title="i
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onTakePictureSuccess--">onTakePictureSuccess</a></span>()</code>
-<div class="block">Called after <a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPreviewProcessingSuccess-at.nineyards.anyline.models.AnylineImage-"><code>onPreviewProcessingSuccess(AnylineImage)</code></a> and after a picture was successfully taken from
+<div class="block">Called after <a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPreviewProcessingSuccess-AnylineImage-"><code>onPreviewProcessingSuccess(AnylineImage)</code></a> and after a picture was successfully taken from
  the camera.</div>
 </td>
 </tr>
@@ -205,13 +205,13 @@ extends <a href="../../../../io/anyline/plugin/ScanResultListener.html" title="i
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="onPreviewProcessingSuccess-at.nineyards.anyline.models.AnylineImage-">
+<a name="onPreviewProcessingSuccess-AnylineImage-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>onPreviewProcessingSuccess</h4>
-<pre>void&nbsp;onPreviewProcessingSuccess(<a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;anylineImage)</pre>
+<pre>void&nbsp;onPreviewProcessingSuccess(AnylineImage&nbsp;anylineImage)</pre>
 <div class="block">Called if the preview scan detected a sharp and correctly placed document.
  After this callback, a full frame scan of the document starts automatically, and results either in a
  <a href="../../../../io/anyline/plugin/ScanResultListener.html#onResult-T-"><code>ScanResultListener.onResult(ScanResult)</code></a>,
@@ -290,7 +290,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResultListener.html" title="i
 <li class="blockList">
 <h4>onTakePictureSuccess</h4>
 <pre>void&nbsp;onTakePictureSuccess()</pre>
-<div class="block">Called after <a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPreviewProcessingSuccess-at.nineyards.anyline.models.AnylineImage-"><code>onPreviewProcessingSuccess(AnylineImage)</code></a> and after a picture was successfully taken from
+<div class="block">Called after <a href="../../../../io/anyline/plugin/document/DocumentScanResultListener.html#onPreviewProcessingSuccess-AnylineImage-"><code>onPreviewProcessingSuccess(AnylineImage)</code></a> and after a picture was successfully taken from
  the camera.
  The taken picture will be processed after this method call.</div>
 </li>
@@ -311,13 +311,13 @@ extends <a href="../../../../io/anyline/plugin/ScanResultListener.html" title="i
 </dl>
 </li>
 </ul>
-<a name="onPictureCornersDetected-at.nineyards.anyline.models.AnylineImage-java.util.List-">
+<a name="onPictureCornersDetected-AnylineImage-java.util.List-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>onPictureCornersDetected</h4>
-<pre>void&nbsp;onPictureCornersDetected(<a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullFrame,
+<pre>void&nbsp;onPictureCornersDetected(AnylineImage&nbsp;fullFrame,
                               java.util.List&lt;android.graphics.PointF&gt;&nbsp;corners)</pre>
 <div class="block">Called after <a href="../../../../io/anyline/plugin/document/DocumentScanViewPlugin.html#triggerPictureCornerDetection--"><code>DocumentScanViewPlugin.triggerPictureCornerDetection()</code></a> and after a picture was successfully
  taken from the camera. The picture is processed, and the (possible) document corners are detected and returned.
@@ -331,13 +331,13 @@ extends <a href="../../../../io/anyline/plugin/ScanResultListener.html" title="i
 </dl>
 </li>
 </ul>
-<a name="onPictureTransformed-at.nineyards.anyline.models.AnylineImage-">
+<a name="onPictureTransformed-AnylineImage-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>onPictureTransformed</h4>
-<pre>void&nbsp;onPictureTransformed(<a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;transformedImage)</pre>
+<pre>void&nbsp;onPictureTransformed(AnylineImage&nbsp;transformedImage)</pre>
 <div class="block">Called after <code>DocumentScanViewPlugin#transformPicture(AnylineImage, List<PointF>)</code> is called. Returns the
  perspectivelly transformed image.</div>
 <dl>

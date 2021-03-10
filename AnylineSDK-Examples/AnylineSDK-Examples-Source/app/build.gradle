@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-parcelize'
 apply plugin: 'com.google.firebase.appdistribution'
 
 android {
@@ -12,8 +12,8 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 361
-        versionName "28.1.1"
+        versionCode 365
+        versionName "29"
 
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
@@ -58,25 +58,26 @@ configurations {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.legacy:legacy-preference-v14:1.0.0'
-    implementation 'com.google.android.material:material:1.3.0-beta01'
+    implementation 'com.google.android.material:material:1.4.0-alpha01'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation "androidx.activity:activity-ktx:1.1.0"
+    implementation "androidx.activity:activity-ktx:1.2.0"
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 
     // for update manager
-    implementation 'com.google.android.play:core:1.9.0'
+    //implementation 'com.google.android.play:core:1.9.0'
 
+    //uncomment if you want to import the AnylineSdk project
+    //implementation project(':AnylineSdk')
 
     //include AnylineSDK from maven
-    implementation'io.anyline:anylinesdk:28.1.1'
+    implementation'io.anyline:anylinesdk:29'
 
-    /// include the vision-version we need for barcode scanning
-    implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
-    implementation 'com.google.firebase:firebase-ml-vision-face-model:20.0.1'
+    //Play core library
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+
     implementation 'com.madgag.spongycastle:core:1.54.0.0'
     implementation 'com.madgag.spongycastle:pkix:1.54.0.0'
     implementation 'com.google.firebase:firebase-analytics:17.5.0'
@@ -85,14 +86,13 @@ dependencies {
     implementation "androidx.core:core-ktx:1.3.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-
     //Kotlin coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
     //Desugaring
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.1'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -100,12 +100,22 @@ dependencies {
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.14.0'
 
+    // Nav Component
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.3"
 
     //ViewModel
     implementation 'android.arch.lifecycle:extensions:1.1.1'
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0"
     implementation 'androidx.preference:preference-ktx:1.1.1'
-    customImplementation('io.anyline:anylinesdk:28.1.1')
+    customImplementation('io.anyline:anylinesdk:29')
+
+    // Testing
+    testImplementation "junit:junit:4.13"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation "org.hamcrest:hamcrest-library:2.2"
+    testImplementation "io.mockk:mockk:1.10.6"
 }
+

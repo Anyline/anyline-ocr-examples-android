@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <string name="app_name">Anyline Bundle Examples</string>
     <string name="anyline">Anyline</string>
@@ -22,12 +22,8 @@
     <string name="mrz_main">Passport MRZ</string>
     <string name="heat_meter">Heat Meter</string>
     <string name="universal_id_scanning">Universal ID</string>
-    <string name="control_image">Control Image</string>
-    <string name="title_activity_serial_number_settings">SerialNumberSettingsActivity</string>
-    <string name="fields_selection"><![CDATA[
-        The result fields above display a selection of scannable ID information only.
-        Please review the <a href=\"https://documentation.anyline.com/toc/products/id/index.html\">documentation</a>" for a full list of scannable ID information.
-        ]]></string>
+
+
     <string name="electric_meter">Electric Meter</string>
     <string name="auto_analog_digital_meter">Analog/Digital Meter</string>
     <string name="dial_meter">Dial (Alpha)</string>
@@ -424,60 +420,6 @@
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
     <string name="sdk_build_version" formatted="false">SDK Build Version %s</string>
 
-    <string name="go_back">Go back?</string>
-    <string name="barcode_back_message">Are you sure you want to leave this screen? Changes will not be saved!</string>
-    <string name="barcode_format">Barcode Symbology</string>
-    <string name="barcode_result">Barcode Result</string>
-
-    <string name="error">Error</string>
     <string name="error_internet_connection">Something went wrong. Please make sure you are connected to the internet and try again.</string>
-    <string name="close">Close</string>
-    <string name="chooser_title">Choose browser</string>
-    <string name="developer_mode">Developer mode</string>
-    <string name="preference_file_key">shared_preferences</string>
-    <string name="shared_pref_developer_mode">developer_mode</string>
-    <string name="shared_pref_developer_mode_visibility">developer_mode_visibility</string>
-    <string name="pp_continue">Continue</string>
-    <string name="success">Thank you! We have received your message and get back to you within one business day.</string>
-    <string name="error_contact">There was a problem, please try again.</string>
-    <string name="no">Cancel</string>
-
-
-    <!-- please keep in sync with ScanModuleEnum.ScanModule: -->
-    <string-array name="scan_module_labels" translatable="false">
-        <item>Barcode:</item>
-        <item>MRZ:</item>
-        <item>IBAN:</item>
-        <item>Red Bull Mobile Collect:</item>
-        <item>ISBN:</item>
-        <item>Document:</item>
-        <item>Pepsi Code:</item>
-        <item>Record:</item>
-        <item>Scrabble:</item>
-        <item>Voucher:</item>
-        <item>Electric Digits:</item>
-        <item>Analog/Digital:</item>
-        <item>Energy Serial Number:</item>
-        <item>License Plate:</item>
-        <item>Driver\'s License:</item>
-        <item>German ID Front:</item>
-        <item>Vehicle Identification Number:</item>
-        <item>Shipping Container:</item>
-        <item>Vertical Shipping Container:</item>
-        <item>Tire Identification Number:</item>
-        <item>OCR:</item>
-        <item>Universal ID:</item>
-        <item>Serial Number:</item>
-        <item>Cattle Tag:</item>
-        <item>ID Card:</item>
-        <item>Passport / Visa:</item>
-        <item>Electric Background:</item>
-        <item>Gas:</item>
-        <item>Water Meter:</item>
-        <item>Heat Meter:</item>
-        <item>Digital Meter:</item>
-        <item>Dial Meter:</item>
-    </string-array>
-
 
 </resources>

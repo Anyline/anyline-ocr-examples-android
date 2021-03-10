@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":10,"i8":10,"i9":10};
+var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -192,35 +192,39 @@ extends <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="c
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#getProductName--">getProductName</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#getModuleIdentifier--">getModuleIdentifier</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#getProductName--">getProductName</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanMode.html" title="enum in io.anyline.plugin.licenseplate">LicensePlateScanMode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#getScanMode--">getScanMode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.util.Map&lt;<a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanMode.html" title="enum in io.anyline.plugin.licenseplate">LicensePlateScanMode</a>,java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#getValidationRegex--">getValidationRegex</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#mapToStartVariableString-java.util.Map-java.lang.String-java.lang.String-">mapToStartVariableString</a></span>(java.util.Map&lt;<a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanMode.html" title="enum in io.anyline.plugin.licenseplate">LicensePlateScanMode</a>,java.lang.String&gt;&nbsp;map,
                         java.lang.String&nbsp;separator,
                         java.lang.String&nbsp;delimiter)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#setCharWhiteList-java.util.Map-">setCharWhiteList</a></span>(java.util.Map&lt;<a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanMode.html" title="enum in io.anyline.plugin.licenseplate">LicensePlateScanMode</a>,java.lang.String&gt;&nbsp;charWhiteList)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#setScanMode-io.anyline.plugin.licenseplate.LicensePlateScanMode-">setScanMode</a></span>(<a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanMode.html" title="enum in io.anyline.plugin.licenseplate">LicensePlateScanMode</a>&nbsp;scanMode)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#setValidationRegex-java.util.Map-">setValidationRegex</a></span>(java.util.Map&lt;<a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanMode.html" title="enum in io.anyline.plugin.licenseplate">LicensePlateScanMode</a>,java.lang.String&gt;&nbsp;validationRegex)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#start--">start</a></span>()</code>
 <div class="block">Start the processing of the plugin</div>
@@ -232,7 +236,7 @@ extends <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="c
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.anyline.plugin.<a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a></h3>
-<code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanInfoListener-io.anyline.plugin.ScanInfoListener-">addScanInfoListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanResultListener-io.anyline.plugin.ScanResultListener-">addScanResultListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">addScanRunSkippedListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#cancelController--">cancelController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAnylineController--">getAnylineController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAssetController--">getAssetController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAssetPath--">getAssetPath</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getId--">getId</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getImageProvider--">getImageProvider</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#isRunning--">isRunning</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeArgumentExceptionListener--">removeArgumentExceptionListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanInfoListener-io.anyline.plugin.ScanInfoListener-">removeScanInfoListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanResultListener-io.anyline.plugin.ScanResultListener-">removeScanResultListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">removeScanRunSkippedListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setArgumentExceptionListener-WorkerRunnableExceptionListener-">setArgumentExceptionListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setAssetPath-java.lang.String-">setAssetPath</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCancelOnResult-boolean-">setCancelOnResult</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCmdFileName-java.lang.String-">setCmdFileName</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCropRect-android.graphics.RectF-">setCropRect</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setDebug-boolean-">setDebug</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setDelayScanTime-double-">setDelayScanTime</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setId-java.lang.String-">setId</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setImageProvider-at.nineyards.anyline.ImageProvider-">setImageProvider</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setReportingEnabled-boolean-">setReportingEnabled</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#stop--">stop</a></code></li>
+<code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanInfoListener-io.anyline.plugin.ScanInfoListener-">addScanInfoListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanResultListener-io.anyline.plugin.ScanResultListener-">addScanResultListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">addScanRunSkippedListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#cancelController--">cancelController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAnylineController--">getAnylineController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAssetController--">getAssetController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAssetPath--">getAssetPath</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getId--">getId</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getImageProvider--">getImageProvider</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#isRunning--">isRunning</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeArgumentExceptionListener--">removeArgumentExceptionListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanInfoListener-io.anyline.plugin.ScanInfoListener-">removeScanInfoListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanResultListener-io.anyline.plugin.ScanResultListener-">removeScanResultListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">removeScanRunSkippedListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setArgumentExceptionListener-WorkerRunnableExceptionListener-">setArgumentExceptionListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setAssetPath-java.lang.String-">setAssetPath</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCancelOnResult-boolean-">setCancelOnResult</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCmdFileName-java.lang.String-">setCmdFileName</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCropRect-android.graphics.RectF-">setCropRect</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setDebug-boolean-">setDebug</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setDelayScanTime-double-">setDelayScanTime</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setId-java.lang.String-">setId</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setImageProvider-ImageProvider-">setImageProvider</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setReportingEnabled-boolean-">setReportingEnabled</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#stop--">stop</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -340,6 +344,23 @@ extends <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="c
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getProductName--">getProductName</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a>&lt;<a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanResult.html" title="class in io.anyline.plugin.licenseplate">LicensePlateScanResult</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="getModuleIdentifier--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getModuleIdentifier</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getModuleIdentifier()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../io/anyline/plugin/ScanPlugin.html#getModuleIdentifier--">getModuleIdentifier</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/anyline/plugin/ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanResult.html" title="class in io.anyline.plugin.licenseplate">LicensePlateScanResult</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getModuleIdentifier--">getModuleIdentifier</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a>&lt;<a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanResult.html" title="class in io.anyline.plugin.licenseplate">LicensePlateScanResult</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the module identifier of the plugin</dd>
 </dl>
 </li>
 </ul>

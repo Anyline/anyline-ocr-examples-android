@@ -6,22 +6,29 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.LinkedHashMap;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import io.anyline.examples.R;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.ScanningConfigurationActivity;
 import io.anyline.examples.baseadapters.BaseGridAdapter;
+import io.anyline.examples.scanviewresult.ShareDataIntentCreator;
 import io.anyline.examples.util.BitmapUtil;
 import io.anyline.examples.util.Constant;
 import io.anyline.view.ScanView;
@@ -29,8 +36,6 @@ import io.anyline.view.ScanView;
 public class ScanUniversalIdResultActivity extends ScanningConfigurationActivity {
 
     private LinkedHashMap<String, String> resultMap = new LinkedHashMap<>();
-    LinkedHashMap<String, String> orderedHashMap = new LinkedHashMap<>();
-    LinkedHashMap<String, String> sortedData = new LinkedHashMap<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,7 +62,7 @@ public class ScanUniversalIdResultActivity extends ScanningConfigurationActivity
         }
 
         confirmButton.setOnClickListener(v ->
-                                                 finish());
+                finish());
         Intent intent = getIntent();
         if (intent != null) {
             Bundle extras = getIntent().getExtras();
@@ -115,5 +120,52 @@ public class ScanUniversalIdResultActivity extends ScanningConfigurationActivity
     @Override
     protected ScanModuleEnum.ScanModule getScanModule() {
         return null;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_result, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
+
+        if (itemId == android.R.id.home) {
+            onBackPressed();
+            return true;
+        } else if (itemId == R.id.share_scan) {
+            shareData();
+            return true;
+        }
+        return false;
+    }
+
+    private void shareData() {
+        Map<String, String> filesMap = new HashMap<>();
+        int i = 1;
+
+        if (getIntent().getStringExtra(Constant.SCAN_FACE_PICTURE_PATH) != null) {
+            filesMap.put(getString(R.string.native_share_image_name_prefix, String.valueOf(i)), getIntent().getStringExtra(Constant.SCAN_FACE_PICTURE_PATH));
+            i++;
+        }
+
+        if (getIntent().getStringExtra(Constant.SCAN_FULL_PICTURE_PATH) != null) {
+            filesMap.put(getString(R.string.native_share_image_name_prefix, String.valueOf(i)), getIntent().getStringExtra(Constant.SCAN_FULL_PICTURE_PATH));
+            i++;
+        }
+
+        if (getIntent().getStringExtra(Constant.SCAN_FULL_PICTURE_PATH2) != null) {
+            filesMap.put(getString(R.string.native_share_image_name_prefix, String.valueOf(i)), getIntent().getStringExtra(Constant.SCAN_FULL_PICTURE_PATH2));
+        }
+
+        try {
+            Intent shareIntent = ShareDataIntentCreator.INSTANCE.createIntent(resultMap, filesMap, this);
+            startActivity(shareIntent);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

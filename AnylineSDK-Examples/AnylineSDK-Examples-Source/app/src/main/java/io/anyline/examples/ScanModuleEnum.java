@@ -47,7 +47,9 @@ public class ScanModuleEnum {
         ENERGY_WATER_METER,
         ENERGY_HEAT_METER,
         ENERGY_DIGITAL_METER,
-        ENERGY_DIAL_METER;
+        ENERGY_DIAL_METER,
+
+        ENERGY_MULTI_METER
     }
 
 

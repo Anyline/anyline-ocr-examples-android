@@ -1,15 +1,10 @@
 package io.anyline.examples.meter.baseactivities;
 
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import at.nineyards.anyline.util.DimensUtil;
 import io.anyline.examples.R;
 
 /**
@@ -21,18 +16,18 @@ abstract public class AbstractEnergyDigitSelection extends AbstractEnergyActivit
     private LinearLayout digitLayout;
 
     /**
-     * @return the min amount of main digits the mode {@link at.nineyards.anyline.modules.energy.EnergyScanView.ScanMode} supports
+     * @return the min amount of main digits the mode {@link io.anyline.modules.energy.EnergyScanView.ScanMode} supports
      */
     protected abstract int getMinDigits();
 
 
     /**
-     * @return the max amount of main digits the mode {@link at.nineyards.anyline.modules.energy.EnergyScanView.ScanMode} supports
+     * @return the max amount of main digits the mode {@link io.anyline.modules.energy.EnergyScanView.ScanMode} supports
      */
     protected abstract int getMaxDigits();
 
     /**
-     * Chooses the correct mode {@link at.nineyards.anyline.modules.energy.EnergyScanView.ScanMode}
+     * Chooses the correct mode {@link io.anyline.modules.energy.EnergyScanView.ScanMode}
      * depending on the numVisible
      *
      * @param numVisible
@@ -41,7 +36,7 @@ abstract public class AbstractEnergyDigitSelection extends AbstractEnergyActivit
 
     /**
      * the value determines the starting scanmode; the value is linked to a
-     * {@link at.nineyards.anyline.modules.energy.EnergyScanView.ScanMode}
+     * {@link io.anyline.modules.energy.EnergyScanView.ScanMode}
      *
      * @return
      */
@@ -109,7 +104,7 @@ abstract public class AbstractEnergyDigitSelection extends AbstractEnergyActivit
     /**
      *
      * @return the number of currently visible digits (refers to currently selected scanmode
-     * {@link at.nineyards.anyline.modules.energy.EnergyScanView.ScanMode})
+     * {@link io.anyline.modules.energy.EnergyScanView.ScanMode})
      */
     protected int countVisibleDigits() {
         int childCount = digitLayout.getChildCount();
@@ -125,7 +120,7 @@ abstract public class AbstractEnergyDigitSelection extends AbstractEnergyActivit
 
     /**
      * Adds one digit to the currently selected visible digits and selects the corresponding mode
-     * {@link at.nineyards.anyline.modules.energy.EnergyScanView.ScanMode}
+     * {@link io.anyline.modules.energy.EnergyScanView.ScanMode}
      * @param view
      */
     public void addDigit(View view) {
@@ -147,7 +142,7 @@ abstract public class AbstractEnergyDigitSelection extends AbstractEnergyActivit
 
     /**
      * removes one digit to the currently selected visible digits and selects the corresponding mode
-     * {@link at.nineyards.anyline.modules.energy.EnergyScanView.ScanMode}
+     * {@link io.anyline.modules.energy.EnergyScanView.ScanMode}
      * @param view
      */
     public void removeDigit(View view) {

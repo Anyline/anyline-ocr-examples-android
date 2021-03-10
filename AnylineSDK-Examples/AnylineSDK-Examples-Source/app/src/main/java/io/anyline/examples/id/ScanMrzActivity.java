@@ -12,8 +12,14 @@ package io.anyline.examples.id;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 
 import com.google.gson.Gson;
 
@@ -22,17 +28,16 @@ import java.text.SimpleDateFormat;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 
-import androidx.appcompat.app.ActionBar;
-import at.nineyards.anyline.AnylineDebugListener;
-import at.nineyards.anyline.camera.CameraController;
-import at.nineyards.anyline.camera.CameraOpenListener;
 import at.nineyards.anyline.core.RunFailure;
 import at.nineyards.anyline.core.exception_error_codes;
-import at.nineyards.anyline.models.AnylineImage;
+import io.anyline.AnylineDebugListener;
+import io.anyline.camera.CameraController;
+import io.anyline.camera.CameraOpenListener;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.examples.util.BitmapUtil;
+import io.anyline.models.AnylineImage;
 import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.id.ID;
@@ -89,25 +94,22 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
 
         mrzScanView.setScanConfig("mrz_view_config.json");
         //init the scan view
-        IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(getApplicationContext(), mrzScanView.getScanViewPluginConfig(), mrzConfig);
+        IdScanViewPlugin scanViewPlugin = new IdScanViewPlugin(this, mrzScanView.getScanViewPluginConfig(), mrzConfig);
         mrzScanView.setScanViewPlugin(scanViewPlugin);
-        scanViewPlugin.addScanResultListener(new ScanResultListener<ScanResult<ID>>() {
-            @Override
-            public void onResult(ScanResult<ID> idScanResult) {
-                MrzIdentification identification = (MrzIdentification) idScanResult.getResult();
-                Bitmap currentBitmap = identification.getFaceImage();
-                AnylineImage newImage = new AnylineImage(currentBitmap);
-                //set the path of the mrz Image
-                String path = setupImagePath(idScanResult.getCutoutImage());
-                String facePath = setupImagePath(newImage);
+        scanViewPlugin.addScanResultListener((ScanResultListener<ScanResult<ID>>) idScanResult -> {
+            MrzIdentification identification = (MrzIdentification) idScanResult.getResult();
+            Bitmap currentBitmap = identification.getFaceImage();
+            AnylineImage newImage = new AnylineImage(currentBitmap);
+            //set the path of the mrz Image
+            String path = setupImagePath(idScanResult.getCutoutImage());
+            String facePath = setupImagePath(newImage);
 
-                startScanResultIntent(getResources().getString(R.string.title_mrz), getIdentificationResult(identification), path, facePath);
+            startScanResultIntent(getResources().getString(R.string.title_mrz), getIdentificationResult(identification), path, facePath);
 
-                Gson gson = new Gson();
-                String json = gson.toJson(getIdentificationResult(identification), LinkedHashMap.class);
-                setupScanProcessView(ScanMrzActivity.this, json, getScanModule(),
-                                     BitmapUtil.getBitmap(path), null, currentBitmap);
-            }
+            Gson gson = new Gson();
+            String json = gson.toJson(getIdentificationResult(identification), LinkedHashMap.class);
+            setupScanProcessView(ScanMrzActivity.this, json, getScanModule(),
+                    BitmapUtil.getBitmap(path), null, currentBitmap);
         });
     }
 
@@ -116,6 +118,35 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
         return null;
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_scan_default, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.info_tutorial) {
+            showTutorial();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void showTutorial() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.scanning_tutorial_dialog_title)
+                .setView(getLayoutInflater().inflate(R.layout.alert_dialog_scanning_tutorial, null))
+                .setPositiveButton(R.string.ok, (dialog, which) -> {
+                    dialog.dismiss();
+                })
+                .setOnDismissListener(dialog -> {
+                    onResume();
+                })
+                .create()
+                .show();
+    }
 
     @Override
     protected void onResume() {
@@ -190,7 +221,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
             }
         } else {
             identificationResult.put(getResources().getString(R.string.mrz_date_of_birthday),
-                                     dateFormat.format(identification.getDateOfBirthObject()));
+                    dateFormat.format(identification.getDateOfBirthObject()));
         }
 
         if (identification.getVizDateOfIssue() != null && !identification.getVizDateOfIssue().isEmpty()) {
@@ -205,7 +236,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
             }
         } else {
             identificationResult.put(getResources().getString(R.string.mrz_expiration_date),
-                                     dateFormat.format(identification.getDateOfExpiryObject()));
+                    dateFormat.format(identification.getDateOfExpiryObject()));
         }
 
         if (identification.getDocumentNumber() != null && !identification.getDocumentNumber().trim().isEmpty()) {
@@ -229,7 +260,7 @@ public class ScanMrzActivity extends ScanActivity implements CameraOpenListener,
         }
 
         if (identification.getNationalityCountryCode() != null && identification.getDocumentType() != null &&
-            identification.getDocumentType().equals("ID") && identification.getNationalityCountryCode().equals("D")) {
+                identification.getDocumentType().equals("ID") && identification.getNationalityCountryCode().equals("D")) {
             String address = null;
             if (identification.getVizAddress() != null) {
                 address = identification.getVizAddress().replace("\\n", "\n");

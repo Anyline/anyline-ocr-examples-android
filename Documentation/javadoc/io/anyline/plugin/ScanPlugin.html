@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -154,40 +154,44 @@ var activeTableTab = "activeTableTab";
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#getId--">getId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="../../../at/nineyards/anyline/ImageProvider.html" title="interface in at.nineyards.anyline">ImageProvider</a></code></td>
+<td class="colFirst"><code>ImageProvider</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#getImageProvider--">getImageProvider</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#getModuleIdentifier--">getModuleIdentifier</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#removeScanInfoListener-io.anyline.plugin.ScanInfoListener-">removeScanInfoListener</a></span>(<a href="../../../io/anyline/plugin/ScanInfoListener.html" title="interface in io.anyline.plugin">ScanInfoListener</a>&nbsp;listener)</code>
 <div class="block">Remove the given info listener.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#removeScanResultListener-io.anyline.plugin.ScanResultListener-">removeScanResultListener</a></span>(<a href="../../../io/anyline/plugin/ScanResultListener.html" title="interface in io.anyline.plugin">ScanResultListener</a>&lt;<a href="../../../io/anyline/plugin/ScanPlugin.html" title="type parameter in ScanPlugin">ResultType</a>&gt;&nbsp;listener)</code>
 <div class="block">Remove the given info listener.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#removeScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">removeScanRunSkippedListener</a></span>(<a href="../../../io/anyline/plugin/ScanRunSkippedListener.html" title="interface in io.anyline.plugin">ScanRunSkippedListener</a>&nbsp;listener)</code>
 <div class="block">Remove an info listener.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#setImageProvider-at.nineyards.anyline.ImageProvider-">setImageProvider</a></span>(<a href="../../../at/nineyards/anyline/ImageProvider.html" title="interface in at.nineyards.anyline">ImageProvider</a>&nbsp;imageProvider)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#setImageProvider-ImageProvider-">setImageProvider</a></span>(ImageProvider&nbsp;imageProvider)</code>
 <div class="block">Set the provider, where the plugin can get the images from.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#start--">start</a></span>()</code>
 <div class="block">Start the processing of the plugin</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanPlugin.html#stop--">stop</a></span>()</code>
 <div class="block">Stop the processing of the plugin</div>
@@ -305,13 +309,13 @@ var activeTableTab = "activeTableTab";
 </dl>
 </li>
 </ul>
-<a name="setImageProvider-at.nineyards.anyline.ImageProvider-">
+<a name="setImageProvider-ImageProvider-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setImageProvider</h4>
-<pre>void&nbsp;setImageProvider(<a href="../../../at/nineyards/anyline/ImageProvider.html" title="interface in at.nineyards.anyline">ImageProvider</a>&nbsp;imageProvider)</pre>
+<pre>void&nbsp;setImageProvider(ImageProvider&nbsp;imageProvider)</pre>
 <div class="block">Set the provider, where the plugin can get the images from.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -325,7 +329,20 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>getImageProvider</h4>
-<pre><a href="../../../at/nineyards/anyline/ImageProvider.html" title="interface in at.nineyards.anyline">ImageProvider</a>&nbsp;getImageProvider()</pre>
+<pre>ImageProvider&nbsp;getImageProvider()</pre>
+</li>
+</ul>
+<a name="getModuleIdentifier--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getModuleIdentifier</h4>
+<pre>java.lang.String&nbsp;getModuleIdentifier()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the module identifier of the plugin</dd>
+</dl>
 </li>
 </ul>
 <a name="start--">

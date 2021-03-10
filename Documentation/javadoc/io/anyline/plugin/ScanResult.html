@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../at/nineyards/anyline/models/AnylineScanResult.html" title="class in at.nineyards.anyline.models">at.nineyards.anyline.models.AnylineScanResult</a>&lt;T&gt;</li>
+<li>&lt;any&gt;</li>
 <li>
 <ul class="inheritance">
 <li>io.anyline.plugin.ScanResult&lt;T&gt;</li>
@@ -117,7 +117,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">ScanResult&lt;T&gt;</span>
-extends <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html" title="class in at.nineyards.anyline.models">AnylineScanResult</a>&lt;T&gt;</pre>
+extends &lt;any&gt;</pre>
 <div class="block"><p>
  This is the base class for all plugin result classes.
  </p><p>
@@ -144,20 +144,20 @@ extends <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html" ti
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanResult.html#ScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-T-">ScanResult</a></span>(java.lang.String&nbsp;pluginId,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanResult.html#ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-AnylineImage-T-">ScanResult</a></span>(java.lang.String&nbsp;pluginId,
           java.util.List&lt;android.graphics.PointF&gt;&nbsp;outline,
           java.lang.Integer&nbsp;confidence,
-          <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;cutoutImage,
-          <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullImage,
-          <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;faceImage,
+          AnylineImage&nbsp;cutoutImage,
+          AnylineImage&nbsp;fullImage,
+          AnylineImage&nbsp;faceImage,
           <a href="../../../io/anyline/plugin/ScanResult.html" title="type parameter in ScanResult">T</a>&nbsp;result)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanResult.html#ScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-T-">ScanResult</a></span>(java.lang.String&nbsp;pluginId,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/ScanResult.html#ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-T-">ScanResult</a></span>(java.lang.String&nbsp;pluginId,
           java.util.List&lt;android.graphics.PointF&gt;&nbsp;outline,
           java.lang.Integer&nbsp;confidence,
-          <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;cutoutImage,
-          <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullImage,
+          AnylineImage&nbsp;cutoutImage,
+          AnylineImage&nbsp;fullImage,
           <a href="../../../io/anyline/plugin/ScanResult.html" title="type parameter in ScanResult">T</a>&nbsp;result)</code>&nbsp;</td>
 </tr>
 </table>
@@ -181,13 +181,6 @@ extends <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html" ti
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.at.nineyards.anyline.models.AnylineScanResult">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;at.nineyards.anyline.models.<a href="../../../at/nineyards/anyline/models/AnylineScanResult.html" title="class in at.nineyards.anyline.models">AnylineScanResult</a></h3>
-<code><a href="../../../at/nineyards/anyline/models/AnylineScanResult.html#getConfidence--">getConfidence</a>, <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html#getCutoutImage--">getCutoutImage</a>, <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html#getFaceImage--">getFaceImage</a>, <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html#getFullImage--">getFullImage</a>, <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html#getOutline--">getOutline</a>, <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html#getResult--">getResult</a>, <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html#setOutline-java.util.List-">setOutline</a></code></li>
-</ul>
-<ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
@@ -208,9 +201,9 @@ extends <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html" ti
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="ScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-java.lang.Object-">
+<a name="ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.Object-">
 <!--   -->
-</a><a name="ScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-T-">
+</a><a name="ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-T-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -223,16 +216,16 @@ extends <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html" ti
                   @Nullable
                   java.lang.Integer&nbsp;confidence,
                   @Nullable
-                  <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;cutoutImage,
+                  AnylineImage&nbsp;cutoutImage,
                   @Nullable
-                  <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullImage,
+                  AnylineImage&nbsp;fullImage,
                   @NonNull
                   <a href="../../../io/anyline/plugin/ScanResult.html" title="type parameter in ScanResult">T</a>&nbsp;result)</pre>
 </li>
 </ul>
-<a name="ScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-java.lang.Object-">
+<a name="ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-AnylineImage-java.lang.Object-">
 <!--   -->
-</a><a name="ScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-T-">
+</a><a name="ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-AnylineImage-T-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -245,11 +238,11 @@ extends <a href="../../../at/nineyards/anyline/models/AnylineScanResult.html" ti
                   @Nullable
                   java.lang.Integer&nbsp;confidence,
                   @Nullable
-                  <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;cutoutImage,
+                  AnylineImage&nbsp;cutoutImage,
                   @Nullable
-                  <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullImage,
+                  AnylineImage&nbsp;fullImage,
                   @Nullable
-                  <a href="../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;faceImage,
+                  AnylineImage&nbsp;faceImage,
                   @NonNull
                   <a href="../../../io/anyline/plugin/ScanResult.html" title="type parameter in ScanResult">T</a>&nbsp;result)</pre>
 </li>

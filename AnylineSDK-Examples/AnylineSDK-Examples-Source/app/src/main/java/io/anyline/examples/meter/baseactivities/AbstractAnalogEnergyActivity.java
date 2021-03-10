@@ -13,7 +13,7 @@
 //import android.text.style.StyleSpan;
 //import android.view.ViewGroup;
 //
-//import at.nineyards.anyline.modules.energy.EnergyScanView;
+//import io.anyline.modules.energy.EnergyScanView;
 //import io.anyline.examples.R;
 //import io.anyline.examples.ScanModuleEnum;
 //

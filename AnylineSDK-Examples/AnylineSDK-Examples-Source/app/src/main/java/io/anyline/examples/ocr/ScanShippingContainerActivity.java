@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 import java.util.HashMap;
 
-import at.nineyards.anyline.AnylineDebugListener;
+import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;

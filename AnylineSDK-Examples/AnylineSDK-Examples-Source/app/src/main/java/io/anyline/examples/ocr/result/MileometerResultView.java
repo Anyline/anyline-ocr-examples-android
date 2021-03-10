@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import at.nineyards.anyline.util.DimensUtil;
+import io.anyline.util.DimensUtil;
 import io.anyline.examples.R;
 
 public class MileometerResultView extends RelativeLayout {

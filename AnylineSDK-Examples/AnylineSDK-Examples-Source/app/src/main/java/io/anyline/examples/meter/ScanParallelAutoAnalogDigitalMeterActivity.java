@@ -8,48 +8,26 @@
  */
 package io.anyline.examples.meter;
 
-import android.app.Instrumentation;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode;
-
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 
-import at.nineyards.anyline.camera.NativeBarcodeResultListener;
-import at.nineyards.anyline.models.AnylineImage;
-import at.nineyards.anyline.models.AnylineScanResult;
 import io.anyline.examples.R;
-import io.anyline.examples.ScanModuleEnum;
-import io.anyline.examples.meter.baseactivities.AbstractEnergyActivity;
 import io.anyline.examples.scanviewresult.ScanViewResultActivity;
 import io.anyline.examples.util.Constant;
+import io.anyline.models.AnylineImage;
 import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
-import io.anyline.plugin.barcode.BarcodeFormat;
 import io.anyline.plugin.barcode.BarcodeScanPlugin;
 import io.anyline.plugin.barcode.BarcodeScanResult;
 import io.anyline.plugin.barcode.BarcodeScanViewPlugin;
@@ -113,12 +91,10 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
         final BarcodeScanViewPlugin barcodeSVP = new BarcodeScanViewPlugin(this, barcodeScanPlugin, barcodeScanViewPluginConfig);
 
 
-
-
         meterSVP.addScanResultListener(new ScanResultListener<MeterScanResult>() {
             @Override
             public void onResult(MeterScanResult result) {
-                if(!barcodeSwitch.isChecked()){
+                if (!barcodeSwitch.isChecked()) {
                     cutoutImagePaths.put("meter", setupImagePath(result.getCutoutImage()));
                 }
             }
@@ -127,7 +103,7 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
         barcodeSVP.addScanResultListener(new ScanResultListener<BarcodeScanResult>() {
             @Override
             public void onResult(BarcodeScanResult barcodeScanResult) {
-                if(!barcodeSwitch.isChecked()){
+                if (!barcodeSwitch.isChecked()) {
                     cutoutImagePaths.put("barcode", setupImagePath(barcodeScanResult.getCutoutImage()));
                 }
             }
@@ -156,9 +132,9 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
             public void onResult(ScanResult result) {
                 Intent intent = new Intent(ScanParallelAutoAnalogDigitalMeterActivity.this, ParallelResultActivity.class);
                 for (ScanResult subResult : (Collection<ScanResult>) result.getResult()) {
-                    if(subResult instanceof MeterScanResult){
+                    if (subResult instanceof MeterScanResult) {
                         intent.putExtra("result0", subResult.getResult().toString());
-                    } else if(subResult instanceof BarcodeScanResult){
+                    } else if (subResult instanceof BarcodeScanResult) {
                         intent.putExtra("result1", ((BarcodeScanResult) subResult).getResult().toString());
                     }
                 }
@@ -174,23 +150,23 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
     }
 
 
-    protected HashMap<String, String> getMeterReadingResul (String result) {
+    protected HashMap<String, String> getMeterReadingResul(String result) {
         HashMap<String, String> meterReadingResult = new HashMap();
-        meterReadingResult.put(getResources().getString(R.string.reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
-        meterReadingResult.put(getResources().getString(R.string.barcode), (foundBarcodeString.isEmpty() || foundBarcodeString ==null) ? getResources().getString(R.string.not_available) : foundBarcodeString);
+        meterReadingResult.put(getResources().getString(R.string.reading_result), (result.isEmpty() || result == null) ? getResources().getString(R.string.not_available) : result);
+        meterReadingResult.put(getResources().getString(R.string.barcode), (foundBarcodeString.isEmpty() || foundBarcodeString == null) ? getResources().getString(R.string.not_available) : foundBarcodeString);
         return meterReadingResult;
     }
 
 
-    protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String... path){
+    protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String... path) {
         // String path = setupImagePath(anylineOcrResult.getCutoutImage());
         Intent i = new Intent(getBaseContext(), ScanViewResultActivity.class);
         i.putExtra(Constant.SCAN_MODULE, scanMode);
         i.putExtra(Constant.SCAN_RESULT_DATA, scanResult);
-        if(path.length == 2){
+        if (path.length == 2) {
             i.putExtra(Constant.SCAN_FULL_PICTURE_PATH, path[0]);
             i.putExtra(Constant.SCAN_FACE_PICTURE_PATH, path[1]);
-        }else if(path.length == 1){
+        } else if (path.length == 1) {
             i.putExtra(Constant.SCAN_FULL_PICTURE_PATH, path[0]);
         }
 
@@ -199,17 +175,17 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
     }
 
 
-    protected String setupImagePath(AnylineImage image){
+    protected String setupImagePath(AnylineImage image) {
         String imagePath = "";
-        long time= System.currentTimeMillis();
+        long time = System.currentTimeMillis();
         try {
-            if(this.getExternalFilesDir(null) != null) {
+            if (this.getExternalFilesDir(null) != null) {
 
                 imagePath = this
                         .getExternalFilesDir(null)
                         .toString() + "/results/" + "mrz_image" + time;
 
-            }else if(this.getFilesDir() != null){
+            } else if (this.getFilesDir() != null) {
 
                 imagePath = this
                         .getFilesDir()
@@ -222,7 +198,7 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
             image.save(fullFile, 100);
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return imagePath;

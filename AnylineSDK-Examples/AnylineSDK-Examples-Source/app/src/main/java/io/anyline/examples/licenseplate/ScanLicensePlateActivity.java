@@ -9,12 +9,11 @@
 package io.anyline.examples.licenseplate;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.ViewGroup;
 
 import java.util.HashMap;
 
-import at.nineyards.anyline.AnylineDebugListener;
+import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
@@ -22,10 +21,7 @@ import io.anyline.examples.ScanModuleEnum;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.licenseplate.LicensePlateScanResult;
 import io.anyline.plugin.licenseplate.LicensePlateScanViewPlugin;
-import io.anyline.view.AnylineViewConfig;
-import io.anyline.view.BaseScanViewConfig;
 import io.anyline.view.ScanView;
-import io.anyline.view.ScanViewPluginConfig;
 
 
 public class ScanLicensePlateActivity extends ScanActivity implements AnylineDebugListener {

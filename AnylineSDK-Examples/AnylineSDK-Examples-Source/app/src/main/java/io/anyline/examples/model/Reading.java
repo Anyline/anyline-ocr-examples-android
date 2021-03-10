@@ -1,13 +1,7 @@
 package io.anyline.examples.model;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import java.io.ByteArrayOutputStream;
-
-import at.nineyards.anyline.models.AnylineImage;
 
 public class Reading implements Parcelable {
 

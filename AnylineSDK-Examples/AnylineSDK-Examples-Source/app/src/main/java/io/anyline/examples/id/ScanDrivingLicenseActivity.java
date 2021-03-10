@@ -11,15 +11,13 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Set;
 
-import at.nineyards.anyline.camera.CameraController;
-import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.models.AnylineImage;
+import io.anyline.camera.CameraController;
+import io.anyline.camera.CameraOpenListener;
+import io.anyline.models.AnylineImage;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
@@ -27,11 +25,8 @@ import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.id.DrivingLicenseIdentification;
 import io.anyline.plugin.id.ID;
-import io.anyline.plugin.id.IdScanPlugin;
 import io.anyline.plugin.id.IdScanViewPlugin;
 import io.anyline.plugin.id.Identification;
-import io.anyline.plugin.id.UniversalIdConfig;
-import io.anyline.plugin.id.UniversalIdLayoutType;
 import io.anyline.view.ScanView;
 
 

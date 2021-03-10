@@ -19,8 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="vertical">
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/face_image"
@@ -112,6 +111,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textFaceImage" />
 
+            <!-- Only required for multi meter for now -->
+            <ImageView
+                android:id="@+id/control_image3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:layout_marginBottom="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/control_image2" />
 
             <TextView
                 android:id="@+id/tvFieldsInformation"
@@ -128,7 +142,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/control_image2" />
+                app:layout_constraintTop_toBottomOf="@+id/control_image3" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

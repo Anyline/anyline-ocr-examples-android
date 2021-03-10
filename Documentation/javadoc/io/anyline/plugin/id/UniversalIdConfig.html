@@ -17,6 +17,12 @@
     catch(err) {
     }
 //-->
+var methods = {"i0":10,"i1":10,"i2":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
 </script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -67,15 +73,15 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.io.anyline.plugin.id.IdConfig">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods.inherited.from.class.io.anyline.plugin.id.IdConfig">Method</a></li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <a name="skip.navbar.top">
@@ -124,17 +130,6 @@ extends <a href="../../../../io/anyline/plugin/id/IdConfig.html" title="class in
 <!--   -->
 </a>
 <h3>Field Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
-<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Field and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>java.util.Map&lt;java.lang.String,java.util.List&lt;java.lang.String&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/id/UniversalIdConfig.html#allowedLayouts">allowedLayouts</a></span></code>&nbsp;</td>
-</tr>
-</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.io.anyline.plugin.id.IdConfig">
 <!--   -->
@@ -170,6 +165,32 @@ extends <a href="../../../../io/anyline/plugin/id/IdConfig.html" title="class in
 <!--   -->
 </a>
 <h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>java.util.Map&lt;java.lang.String,java.util.List&lt;java.lang.String&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/id/UniversalIdConfig.html#getAllowedLayouts--">getAllowedLayouts</a></span>()</code>
+<div class="block">Get the Map of allowed layout types as keys and a list of allowed layouts for the specific key as value</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/id/UniversalIdConfig.html#getAllowedLayoutsForLayoutType-io.anyline.plugin.id.UniversalIdLayoutType-">getAllowedLayoutsForLayoutType</a></span>(<a href="../../../../io/anyline/plugin/id/UniversalIdLayoutType.html" title="class in io.anyline.plugin.id">UniversalIdLayoutType</a>&nbsp;universalIdLayoutType)</code>
+<div class="block">Returns a List of strings for a universalIdLayoutType</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/id/UniversalIdConfig.html#setScanConfiguration-io.anyline.plugin.id.UniversalIdLayoutType-java.util.List-">setScanConfiguration</a></span>(<a href="../../../../io/anyline/plugin/id/UniversalIdLayoutType.html" title="class in io.anyline.plugin.id">UniversalIdLayoutType</a>&nbsp;universalIdLayoutType,
+                    java.util.List&lt;java.lang.String&gt;&nbsp;layoutList)</code>
+<div class="block">Sets programatically the allowed layout types and the layouts to be scanned for the specific layout type</div>
+</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.io.anyline.plugin.id.IdConfig">
 <!--   -->
@@ -192,23 +213,6 @@ extends <a href="../../../../io/anyline/plugin/id/IdConfig.html" title="class in
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ============ FIELD DETAIL =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field.detail">
-<!--   -->
-</a>
-<h3>Field Detail</h3>
-<a name="allowedLayouts">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>allowedLayouts</h4>
-<pre>public&nbsp;java.util.Map&lt;java.lang.String,java.util.List&lt;java.lang.String&gt;&gt; allowedLayouts</pre>
-</li>
-</ul>
-</li>
-</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.detail">
@@ -231,6 +235,62 @@ extends <a href="../../../../io/anyline/plugin/id/IdConfig.html" title="class in
 <li class="blockList">
 <h4>UniversalIdConfig</h4>
 <pre>public&nbsp;UniversalIdConfig(org.json.JSONObject&nbsp;jsonObject)</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getAllowedLayouts--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAllowedLayouts</h4>
+<pre>public&nbsp;java.util.Map&lt;java.lang.String,java.util.List&lt;java.lang.String&gt;&gt;&nbsp;getAllowedLayouts()</pre>
+<div class="block">Get the Map of allowed layout types as keys and a list of allowed layouts for the specific key as value</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>- the Map of allowed layouts</dd>
+</dl>
+</li>
+</ul>
+<a name="setScanConfiguration-io.anyline.plugin.id.UniversalIdLayoutType-java.util.List-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setScanConfiguration</h4>
+<pre>public&nbsp;void&nbsp;setScanConfiguration(@NonNull
+                                 <a href="../../../../io/anyline/plugin/id/UniversalIdLayoutType.html" title="class in io.anyline.plugin.id">UniversalIdLayoutType</a>&nbsp;universalIdLayoutType,
+                                 @NonNull
+                                 java.util.List&lt;java.lang.String&gt;&nbsp;layoutList)</pre>
+<div class="block">Sets programatically the allowed layout types and the layouts to be scanned for the specific layout type</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>universalIdLayoutType</code> - - Layout type (e.g. MRZ, idFront, driving license)</dd>
+<dd><code>layoutList</code> - - list of allowed layouts for the layout type</dd>
+</dl>
+</li>
+</ul>
+<a name="getAllowedLayoutsForLayoutType-io.anyline.plugin.id.UniversalIdLayoutType-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getAllowedLayoutsForLayoutType</h4>
+<pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getAllowedLayoutsForLayoutType(<a href="../../../../io/anyline/plugin/id/UniversalIdLayoutType.html" title="class in io.anyline.plugin.id">UniversalIdLayoutType</a>&nbsp;universalIdLayoutType)</pre>
+<div class="block">Returns a List of strings for a universalIdLayoutType</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>universalIdLayoutType</code> - - Layout type (e.g. MRZ, idFront, driving license)</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>- list of allowed layouts for the layout type</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -286,15 +346,15 @@ extends <a href="../../../../io/anyline/plugin/id/IdConfig.html" title="class in
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.io.anyline.plugin.id.IdConfig">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#methods.inherited.from.class.io.anyline.plugin.id.IdConfig">Method</a></li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <a name="skip.navbar.bottom">

@@ -8,9 +8,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 
-import at.nineyards.anyline.camera.CameraController;
-import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.models.AnylineImage;
+import io.anyline.camera.CameraController;
+import io.anyline.camera.CameraOpenListener;
+import io.anyline.models.AnylineImage;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;

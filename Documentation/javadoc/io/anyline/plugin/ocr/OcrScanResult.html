@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html" title="class in at.nineyards.anyline.models">at.nineyards.anyline.models.AnylineScanResult</a>&lt;T&gt;</li>
+<li>&lt;any&gt;</li>
 <li>
 <ul class="inheritance">
 <li><a href="../../../../io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">io.anyline.plugin.ScanResult</a>&lt;java.lang.String&gt;</li>
@@ -115,6 +115,10 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../io/anyline/plugin/ocr/TINResult.html" title="class in io.anyline.plugin.ocr">TINResult</a></dd>
+</dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">OcrScanResult</span>
@@ -138,13 +142,13 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/ocr/OcrScanResult.html#OcrScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-java.lang.String-at.nineyards.anyline.models.AnylineImage-">OcrScanResult</a></span>(java.lang.String&nbsp;pluginId,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/ocr/OcrScanResult.html#OcrScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-">OcrScanResult</a></span>(java.lang.String&nbsp;pluginId,
              java.util.List&lt;android.graphics.PointF&gt;&nbsp;outline,
              java.lang.Integer&nbsp;confidence,
-             <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;cutoutImage,
-             <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullImage,
+             AnylineImage&nbsp;cutoutImage,
+             AnylineImage&nbsp;fullImage,
              java.lang.String&nbsp;result,
-             <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;thresholdedImage)</code>&nbsp;</td>
+             AnylineImage&nbsp;thresholdedImage)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -162,7 +166,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a></code></td>
+<td class="colFirst"><code>AnylineImage</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/ocr/OcrScanResult.html#getThresholdedImage--">getThresholdedImage</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
@@ -172,13 +176,6 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 </a>
 <h3>Methods inherited from class&nbsp;io.anyline.plugin.<a href="../../../../io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">ScanResult</a></h3>
 <code><a href="../../../../io/anyline/plugin/ScanResult.html#getPluginId--">getPluginId</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.at.nineyards.anyline.models.AnylineScanResult">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;at.nineyards.anyline.models.<a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html" title="class in at.nineyards.anyline.models">AnylineScanResult</a></h3>
-<code><a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getConfidence--">getConfidence</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getCutoutImage--">getCutoutImage</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getFaceImage--">getFaceImage</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getFullImage--">getFullImage</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getOutline--">getOutline</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getResult--">getResult</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#setOutline-java.util.List-">setOutline</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -201,7 +198,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="OcrScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-java.lang.String-at.nineyards.anyline.models.AnylineImage-">
+<a name="OcrScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -214,13 +211,13 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
                      @Nullable
                      java.lang.Integer&nbsp;confidence,
                      @Nullable
-                     <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;cutoutImage,
+                     AnylineImage&nbsp;cutoutImage,
                      @Nullable
-                     <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullImage,
+                     AnylineImage&nbsp;fullImage,
                      @NonNull
                      java.lang.String&nbsp;result,
                      @Nullable
-                     <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;thresholdedImage)</pre>
+                     AnylineImage&nbsp;thresholdedImage)</pre>
 </li>
 </ul>
 </li>
@@ -237,7 +234,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getThresholdedImage</h4>
-<pre>public&nbsp;<a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;getThresholdedImage()</pre>
+<pre>public&nbsp;AnylineImage&nbsp;getThresholdedImage()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the black and white image where the result was found (cropped to the cutout)</dd>

@@ -3,13 +3,12 @@ package io.anyline.examples.ocr.feedback;
 import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import at.nineyards.anyline.util.DimensUtil;
+import io.anyline.util.DimensUtil;
 import io.anyline.examples.R;
 
 /**

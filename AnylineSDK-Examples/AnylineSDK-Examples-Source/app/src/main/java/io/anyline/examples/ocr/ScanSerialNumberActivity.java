@@ -14,16 +14,15 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
 
-import at.nineyards.anyline.AnylineDebugListener;
+import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
-import at.nineyards.anyline.util.AssetUtil;
+import io.anyline.util.AssetUtil;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;

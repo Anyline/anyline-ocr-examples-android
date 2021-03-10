@@ -3,10 +3,7 @@ package io.anyline.examples.meter.baseactivities;
 import android.animation.ObjectAnimator;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import androidx.appcompat.app.AlertDialog;
-
 import android.util.Log;
-import android.util.SparseArray;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -14,21 +11,17 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode;
+import com.google.mlkit.vision.barcode.Barcode;
 
 import java.util.HashMap;
 import java.util.List;
 
-import at.nineyards.anyline.camera.CameraController;
-import at.nineyards.anyline.camera.CameraOpenListener;
-import at.nineyards.anyline.camera.CameraView;
-import at.nineyards.anyline.camera.NativeBarcodeResultListener;
+import io.anyline.camera.CameraController;
+import io.anyline.camera.CameraOpenListener;
+import io.anyline.camera.NativeBarcodeResultListener;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.plugin.ScanResultListener;
-import io.anyline.plugin.barcode.BarcodeFormat;
-import io.anyline.plugin.barcode.BarcodeScanResult;
-import io.anyline.plugin.meter.MeterScanMode;
 import io.anyline.plugin.meter.MeterScanResult;
 import io.anyline.plugin.meter.MeterScanViewPlugin;
 import io.anyline.view.ScanView;
@@ -43,14 +36,8 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
     protected String foundBarcodeString;
     private Switch barcodeSwitch;
 
-    /**
-     * inflates the required energy view to a placeholder
-     */
-//    protected abstract void inflateEnergyView();
-
     public abstract String getSelectedModeInformation();
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,30 +84,6 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
 
         ObjectAnimator.ofFloat();
 
-
-
-       // energyScanView.addScanViewPlugin(scanViewPlugin);
-//        energyScanView.initAnyline(getString(R.string.anyline_license_key), new EnergyResultListener() {
-//            @Override
-//            public void onResult(EnergyResult energyResult) {
-//                // This is called when a result is found.
-//                // The scanMode is the mode the result was found for. The result is the actual result.
-//                // If the a meter reading was scanned two images are provided as well, one shows the targeted area only
-//                // the other shows the full image. (Images are null in barcode mode)
-//                // The result for meter readings is a String with leading zeros (if any) and no decimals.
-//
-//
-//                String result = energyResult.getResult();
-//
-//                String path = setupImagePath(energyResult.getCutoutImage());
-//                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResul(result), path);
-//
-//                setupScanProcessView(AbstractEnergyActivity.this, energyResult, getScanModule());
-//
-//                foundBarcodeString = ""; // reset the information about the last found barcode
-//            }
-//        });
-
         barcodeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -134,11 +97,10 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
                         energyScanView.getCameraView().enableBarcodeDetection(new NativeBarcodeResultListener() {
                             @Override
                             public void onFailure(String e) {
-
                             }
 
                             @Override
-                            public void onSuccess(List<FirebaseVisionBarcode> barcodes) {
+                            public void onSuccess(List<Barcode> barcodes) {
                                 if (barcodes != null && barcodes.size() > 0) {
                                     // for demonstration purpose, we only show the latest found barcode (and only this one)
                                     String barcode = barcodes.get(0).getDisplayValue();

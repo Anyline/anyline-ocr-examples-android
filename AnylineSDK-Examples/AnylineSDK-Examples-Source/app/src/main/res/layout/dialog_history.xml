@@ -60,6 +60,7 @@
                 android:layout_marginStart="@dimen/margin_start_end"
                 android:layout_marginEnd="@dimen/margin_start_end"
                 android:textSize="18sp"
+                android:visibility="gone"
                 />
 
             <ImageView
@@ -70,6 +71,7 @@
                 android:layout_marginStart="@dimen/margin_start_end"
                 android:layout_marginEnd="@dimen/margin_start_end"
                 android:adjustViewBounds="true"
+                android:visibility="gone"
                 />
 
             <io.anyline.examples.customviews.AnylineTextView
@@ -92,6 +94,16 @@
                 />
             <ImageView
                 android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                />
+            <ImageView
+                android:id="@+id/image3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"

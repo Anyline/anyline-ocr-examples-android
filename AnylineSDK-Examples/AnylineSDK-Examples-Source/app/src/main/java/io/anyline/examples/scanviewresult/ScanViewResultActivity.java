@@ -30,6 +30,10 @@ import io.anyline.view.ScanView;
 
 public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
+    private static final String BARCODE_RESULT = "BARCODE_RESULT";
+    private static final String MULTI_METER_SCAN_RESULT = "MULTI_METER_SCAN_RESULT";
+    private static final String SCAN_MODULE_MULTI_METER = "MULTI_METER";
+
     private String scanModule;
     private HashMap<String, String> result;
     // private ScanViewResultAdapter scanResultAdapter;
@@ -40,6 +44,11 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
     private TextView faceImageCaption;
     private ImageView faceImageView;
     private ImageView controlImage2;
+    private ImageView controlImage3;
+
+    private String imagePath = null;
+    private String imagePath2 = null;
+    private String imagePath3 = null;
 
 
     @Override
@@ -47,18 +56,19 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_scan_view);
-        recyclerView = (RecyclerView) findViewById(R.id.rv_results);
+        recyclerView = findViewById(R.id.rv_results);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getApplicationContext()));
 
-        imageView = (ImageView) findViewById(R.id.control_image);
-        controlImage2 = (ImageView) findViewById(R.id.control_image2);
+        imageView = findViewById(R.id.control_image);
+        controlImage2 = findViewById(R.id.control_image2);
+        controlImage3 = findViewById(R.id.control_image3);
 
         faceImageCaption = findViewById(R.id.textFaceImage);
         faceImageView = findViewById(R.id.face_image);
         confirmationButton = findViewById(R.id.confirmation_button);
 
         ActionBar actionBar = getSupportActionBar();
-        if(actionBar != null){
+        if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
@@ -86,11 +96,8 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
         setupScanResultView();
 
         recyclerView.setAdapter(scanResultAdapter);
-        confirmationButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                onBackPressed();
-
-            }
+        confirmationButton.setOnClickListener(v -> {
+            onBackPressed();
         });
         setupScanResult();
     }
@@ -167,17 +174,16 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
             orderedHashMapEnergy.put(getResources().getString(R.string.barcode), result.get(getResources().getString(R.string.barcode)));
 
             scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapEnergy);
-        }
-        else if (scanModule.equals(getResources().getString(R.string.category_barcodes))) {
+        } else if (scanModule.equals(getResources().getString(R.string.category_barcodes))) {
             LinkedHashMap<String, String> orderedHashMapEnergy = new LinkedHashMap();
-            for(int i=0; i<result.size()/3;i++) {
-                orderedHashMapEnergy.put("HEADER" + i, getString(R.string.category_barcodes) + " " + (i+1));
+            for (int i = 0; i < result.size() / 3; i++) {
+                orderedHashMapEnergy.put("HEADER" + i, getString(R.string.category_barcodes) + " " + (i + 1));
 
-                orderedHashMapEnergy.put(getResources().getString(R.string.barcode_result) + (i+1), result.get(getResources().getString(R.string.barcode_result) + i));
-                orderedHashMapEnergy.put(getResources().getString(R.string.barcode_format) + (i+1), result.get(getResources().getString(R.string.barcode_format) + i));
+                orderedHashMapEnergy.put(getResources().getString(R.string.barcode_result) + (i + 1), result.get(getResources().getString(R.string.barcode_result) + i));
+                orderedHashMapEnergy.put(getResources().getString(R.string.barcode_format) + (i + 1), result.get(getResources().getString(R.string.barcode_format) + i));
             }
             scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapEnergy);
-        }else {
+        } else {
 
             scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), new LinkedHashMap<>(result));
         }
@@ -209,5 +215,4 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
         super.onBackPressed();
         overridePendingTransition(R.anim.fade_in, R.anim.activity_close_translate);
     }
-
 }

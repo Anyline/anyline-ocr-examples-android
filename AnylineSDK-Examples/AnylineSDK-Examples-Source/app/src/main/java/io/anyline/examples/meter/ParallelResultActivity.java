@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-import at.nineyards.anyline.models.AnylineImage;
+import io.anyline.models.AnylineImage;
 import io.anyline.examples.R;
 import io.anyline.examples.baseadapters.BaseGridAdapter;
 import io.anyline.examples.util.BitmapUtil;

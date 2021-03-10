@@ -1,7 +1,4 @@
 {
-  "All States/Countries": {
-    "All States/Countries": []
-  },
   "USA": {
     "Alabama": [
       "USA-FO-AL19"
@@ -81,8 +78,7 @@
     ],
     "Missouri": [
       "USA-FO-MO19",
-      "USA-FO-MO19_v2",
-      "USA-FO-MO19_v3"
+      "USA-FO-MO19_v2"
     ],
     "Montana": [
       "USA-FO-MT19"
@@ -206,30 +202,24 @@
       "EST-FO-02004"
     ],
     "Finland": [
-      "FIN-FO-04001",
-      "FIN-FO-05001"
+      "FIN-FO-04001"
     ],
     "France": [
       "FRA-FO-07001_06001"
     ],
     "Hungary": [
-      "HUN-FO-02001",
-      "HUN-FO-04001_03001"
+      "HUN-FO-02001"
     ],
     "Ireland": [
       "IRL-FO-04001"
     ],
     "Italy": [
-      "ITA-FO-05001",
       "ITA-FO-06001"
     ],
     "Latvia": [
-      "LVA-FO-01002",
       "LVA-FO-01003"
     ],
     "Lithuania": [
-      "LTU-FO-02004_02003",
-      "LTU-FO-03002_03001",
       "LTU-FO-04001"
     ],
     "Luxembourg": [
@@ -241,8 +231,6 @@
       "NLD-FO-06001"
     ],
     "Norway": [
-      "NOR-FO-05002_05001",
-      "NOR-FO-06001",
       "NOR-FO-07001"
     ],
     "Poland": [

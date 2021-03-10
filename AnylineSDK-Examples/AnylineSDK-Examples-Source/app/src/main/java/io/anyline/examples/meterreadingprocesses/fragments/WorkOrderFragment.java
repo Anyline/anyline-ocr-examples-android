@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import at.nineyards.anyline.camera.CameraPermissionHelper;
+import io.anyline.camera.CameraPermissionHelper;
 import io.anyline.examples.R;
 import io.anyline.examples.meterreadingprocesses.adapters.WorkOrderAdapter;
 import io.anyline.examples.basefragments.BaseFragment;

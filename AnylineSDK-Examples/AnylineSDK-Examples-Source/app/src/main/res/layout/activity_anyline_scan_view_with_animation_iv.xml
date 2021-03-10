@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                xmlns:tools="http://schemas.android.com/tools"
-                tools:context="io.anyline.examples.barcode.ScanBarcodeActivity"
-                android:id="@+id/main_layout">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.anyline.examples.barcode.ScanBarcodeActivity">
 
     <io.anyline.view.ScanView
         android:id="@+id/scan_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-
+        android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/imageViewGif"
@@ -21,35 +17,35 @@
         android:layout_height="240dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/image_result"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:adjustViewBounds="true"/>
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true" />
 
     <ImageView
         android:id="@+id/full_image"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:adjustViewBounds="true"/>
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true" />
 
     <TextView
         android:id="@+id/text_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="60dp"
-        android:textColor="@android:color/white"
-        tools:text="1234656479765"
-        android:textSize="24sp"
         android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"/>
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        tools:text="1234656479765" />
 
 </RelativeLayout>

@@ -4,8 +4,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
 
-import at.nineyards.anyline.models.AnylineImage;
-
 public class Meter implements Parcelable {
 
 

@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10};
+var methods = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html" title="class in at.nineyards.anyline.models">at.nineyards.anyline.models.AnylineScanResult</a>&lt;T&gt;</li>
+<li>&lt;any&gt;</li>
 <li>
 <ul class="inheritance">
 <li><a href="../../../../io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">io.anyline.plugin.ScanResult</a>&lt;java.lang.String&gt;</li>
@@ -138,13 +138,14 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanResult.html#LicensePlateScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-java.lang.String-java.lang.String-">LicensePlateScanResult</a></span>(java.lang.String&nbsp;pluginId,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanResult.html#LicensePlateScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-java.lang.String-java.lang.String-">LicensePlateScanResult</a></span>(java.lang.String&nbsp;pluginId,
                       java.util.List&lt;android.graphics.PointF&gt;&nbsp;outline,
                       java.lang.Integer&nbsp;confidence,
-                      <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;cutoutImage,
-                      <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullImage,
+                      AnylineImage&nbsp;cutoutImage,
+                      AnylineImage&nbsp;fullImage,
                       java.lang.String&nbsp;result,
-                      java.lang.String&nbsp;country)</code>&nbsp;</td>
+                      java.lang.String&nbsp;country,
+                      java.lang.String&nbsp;area)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -163,6 +164,12 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanResult.html#getArea--">getArea</a></span>()</code>
+<div class="block">Returns the detected License Plate area</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/licenseplate/LicensePlateScanResult.html#getCountry--">getCountry</a></span>()</code>
 <div class="block">Returns the detected License Plate country</div>
 </td>
@@ -174,13 +181,6 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 </a>
 <h3>Methods inherited from class&nbsp;io.anyline.plugin.<a href="../../../../io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">ScanResult</a></h3>
 <code><a href="../../../../io/anyline/plugin/ScanResult.html#getPluginId--">getPluginId</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.at.nineyards.anyline.models.AnylineScanResult">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;at.nineyards.anyline.models.<a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html" title="class in at.nineyards.anyline.models">AnylineScanResult</a></h3>
-<code><a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getConfidence--">getConfidence</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getCutoutImage--">getCutoutImage</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getFaceImage--">getFaceImage</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getFullImage--">getFullImage</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getOutline--">getOutline</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#getResult--">getResult</a>, <a href="../../../../at/nineyards/anyline/models/AnylineScanResult.html#setOutline-java.util.List-">setOutline</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -203,7 +203,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="LicensePlateScanResult-java.lang.String-java.util.List-java.lang.Integer-at.nineyards.anyline.models.AnylineImage-at.nineyards.anyline.models.AnylineImage-java.lang.String-java.lang.String-">
+<a name="LicensePlateScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-java.lang.String-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -216,13 +216,15 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
                               @Nullable
                               java.lang.Integer&nbsp;confidence,
                               @Nullable
-                              <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;cutoutImage,
+                              AnylineImage&nbsp;cutoutImage,
                               @Nullable
-                              <a href="../../../../at/nineyards/anyline/models/AnylineImage.html" title="class in at.nineyards.anyline.models">AnylineImage</a>&nbsp;fullImage,
+                              AnylineImage&nbsp;fullImage,
                               @NonNull
                               java.lang.String&nbsp;result,
                               @NonNull
-                              java.lang.String&nbsp;country)</pre>
+                              java.lang.String&nbsp;country,
+                              @Nullable
+                              java.lang.String&nbsp;area)</pre>
 </li>
 </ul>
 </li>
@@ -236,7 +238,7 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 <a name="getCountry--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getCountry</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getCountry()</pre>
@@ -244,6 +246,20 @@ extends <a href="../../../../io/anyline/plugin/ScanResult.html" title="class in 
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the country that was detected</dd>
+</dl>
+</li>
+</ul>
+<a name="getArea--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getArea</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getArea()</pre>
+<div class="block">Returns the detected License Plate area</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the area that was detected</dd>
 </dl>
 </li>
 </ul>

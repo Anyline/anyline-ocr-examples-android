@@ -2,7 +2,6 @@ package io.anyline.examples;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,19 +9,21 @@ import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.widget.Toolbar;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
-import at.nineyards.anyline.models.AnylineImage;
 import io.anyline.examples.ocr.feedback.FeedbackType;
 import io.anyline.examples.ocr.feedback.FeedbackView;
 import io.anyline.examples.scanviewresult.ScanViewResultActivity;
 import io.anyline.examples.util.Constant;
+import io.anyline.models.AnylineImage;
 import io.anyline.view.ScanView;
 
 
-abstract public class ScanActivity extends ScanningConfigurationActivity{
+abstract public class ScanActivity extends ScanningConfigurationActivity {
 
 
 //    /**
@@ -116,7 +117,7 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
 //        if (scanView.getScanViewPlugin() instanceof LicensePlateScanViewPlugin) {
 //            mainLayout = (RelativeLayout) findViewById(R.id.license_plate_main_layout);
 //        } else {
-            mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
+        mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
         //}
 
         mainLayout.addView(feedbackView, params);
@@ -162,17 +163,17 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
         }
     }
 
-    protected String setupImagePath(AnylineImage image){
+    protected String setupImagePath(AnylineImage image) {
         String imagePath = "";
-        long time= System.currentTimeMillis();
+        long time = System.currentTimeMillis();
         try {
-            if(this.getExternalFilesDir(null) != null) {
+            if (this.getExternalFilesDir(null) != null) {
 
                 imagePath = this
                         .getExternalFilesDir(null)
                         .toString() + "/results/" + "mrz_image" + time;
 
-            }else if(this.getFilesDir() != null){
+            } else if (this.getFilesDir() != null) {
 
                 imagePath = this
                         .getFilesDir()
@@ -185,22 +186,22 @@ abstract public class ScanActivity extends ScanningConfigurationActivity{
             image.save(fullFile, 100);
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return imagePath;
     }
 
-    protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String... path){
+    protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String... path) {
         // String path = setupImagePath(anylineOcrResult.getCutoutImage());
 
         Intent i = new Intent(getBaseContext(), ScanViewResultActivity.class);
         i.putExtra(Constant.SCAN_MODULE, scanMode);
         i.putExtra(Constant.SCAN_RESULT_DATA, scanResult);
-        if(path.length == 2){
+        if (path.length == 2) {
             i.putExtra(Constant.SCAN_FULL_PICTURE_PATH, path[0]);
             i.putExtra(Constant.SCAN_FACE_PICTURE_PATH, path[1]);
-        }else if(path.length == 1){
+        } else if (path.length == 1) {
             i.putExtra(Constant.SCAN_FULL_PICTURE_PATH, path[0]);
         }
 

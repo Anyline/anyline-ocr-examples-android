@@ -1,0 +1,2 @@
+include ':app', 'AnylineSdk'
+project(':AnylineSdk').projectDir = new File('../AnylineSdk')

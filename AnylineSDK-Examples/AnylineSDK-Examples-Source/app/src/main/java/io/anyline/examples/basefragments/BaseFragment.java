@@ -19,7 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import at.nineyards.anyline.camera.CameraPermissionHelper;
+import io.anyline.camera.CameraPermissionHelper;
 import io.anyline.examples.baseadapters.BaseGridListAdapter;
 import io.anyline.examples.baseadapters.EnergyAdapter;
 import io.anyline.examples.R;

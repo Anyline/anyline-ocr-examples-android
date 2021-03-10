@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
@@ -19,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
-import at.nineyards.anyline.models.AnylineImage;
+import io.anyline.models.AnylineImage;
 import io.anyline.examples.R;
 import io.anyline.examples.database.DataBaseProcessesAdapter;
 import io.anyline.examples.meterreadingprocesses.fragments.CustomerFragment;
@@ -28,6 +27,7 @@ import io.anyline.examples.model.Reading;
 import io.anyline.plugin.ScanResult;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.barcode.Barcode;
+import io.anyline.plugin.barcode.BarcodeFormat;
 import io.anyline.plugin.barcode.BarcodeScanPlugin;
 import io.anyline.plugin.barcode.BarcodeScanViewPlugin;
 import io.anyline.plugin.meter.MeterScanMode;
@@ -72,6 +72,7 @@ public class CustomerIdentifyScannerActivity extends AppCompatActivity {
 
         ScanViewPluginConfig barcodeScanViewPluginConfig = new ScanViewPluginConfig(getApplicationContext(), "barcode_trainer_login_view_config.json");
         BarcodeScanPlugin barcodeScanPlugin = new BarcodeScanPlugin(this, "barcodePlugin");
+        barcodeScanPlugin.setBarcodeFormats(BarcodeFormat.values());
         barcodeSVP = new BarcodeScanViewPlugin(this, barcodeScanPlugin, barcodeScanViewPluginConfig);
 
 

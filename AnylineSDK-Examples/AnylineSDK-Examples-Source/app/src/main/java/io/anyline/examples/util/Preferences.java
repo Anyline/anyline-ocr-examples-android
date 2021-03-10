@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.UUID;
 
-import static at.nineyards.anyline.reporter.ReportingService.PREFS_NAME;
+import static io.anyline.reporter.ReportingService.PREFS_NAME;
 
 /**
  * Simple {@link SharedPreferences} manager

@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 import java.util.HashMap;
 
-import at.nineyards.anyline.camera.CameraController;
-import at.nineyards.anyline.camera.CameraOpenListener;
+import io.anyline.camera.CameraController;
+import io.anyline.camera.CameraOpenListener;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
