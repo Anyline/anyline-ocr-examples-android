@@ -38,30 +38,21 @@ repositories {
 
 dependencies {
     //add the anyline sdk as dependency (maybe adapt version name)
-    compile 'io.anyline:anylinesdk:3.6.1@aar'
+    implementation 'io.anyline:anylinesdk:29.1'
     //... your other dependencies
 }
 ```
 
-__Or via local copy of the aar__
-
-Copy the .aar to the libs directory of your project (app/libs) and adapt build.gradle.
-
-Add Anyline SDK to the dependencies in build.gradle
+Be aware that the AnylineSDK per default ships trained models for all of our supported use cases. This can increase your app size significantly, but there is a simple way to remove the assets you do not need. If you want to remove the unnecessary assets, add this to your application build.gradle file, in the android section and just remove from the list which scan modes you would like to keep:
 
 ```java
-//root section of the file
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-}
-
-dependencies {
-    compile(name:'anylinesdk-3.6.1', ext:'aar')
-    //... your other dependencies
-}
+ packagingOptions {
+        aaptOptions {
+            ignoreAssetsPattern "module_energy:module_id:module_anyline_ocr:module_barcode:module_document:module_license_plate"
+        }
+ }
 ```
+
 
 ### 2. Provide a config file (json or xml)
 
@@ -72,7 +63,7 @@ Example barcode_view_config.json:
 
 ```json
 {
-    "captureResolution":"720p",
+    "captureResolution":"1080p",
     "cutout": {
         "style": "rect",
         "maxWidthPercent": "80%",
