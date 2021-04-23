@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -161,36 +161,40 @@ extends <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="c
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#addScannedBarcodesListener-io.anyline.plugin.barcode.ScannedBarcodesListener-">addScannedBarcodesListener</a></span>(<a href="../../../../io/anyline/plugin/barcode/ScannedBarcodesListener.html" title="interface in io.anyline.plugin.barcode">ScannedBarcodesListener</a>&nbsp;listener)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../io/anyline/plugin/barcode/BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#getBarcodeFormat--">getBarcodeFormat</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>ImageProvider</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#getImageProvider--">getImageProvider</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#getModuleIdentifier--">getModuleIdentifier</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#getProductName--">getProductName</a></span>()</code>&nbsp;</td>
-</tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code>Product</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#getProduct--">getProduct</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#setBarcodeFormats-io.anyline.plugin.barcode.BarcodeFormat...-">setBarcodeFormats</a></span>(<a href="../../../../io/anyline/plugin/barcode/BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a>...&nbsp;formats)</code>
 <div class="block">Set all the barcode formats that should be supported (or null to set back to all supported types).</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#setMultiBarcode-boolean-">setMultiBarcode</a></span>(boolean&nbsp;multiBarcode)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#setScanMode-io.anyline.plugin.barcode.BarcodeScanPlugin.ScanMode-">setScanMode</a></span>(io.anyline.plugin.barcode.BarcodeScanPlugin.ScanMode&nbsp;scanMode)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/BarcodeScanPlugin.html#start--">start</a></span>()</code>
 <div class="block">Start the processing of the plugin</div>
@@ -202,7 +206,7 @@ extends <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="c
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.anyline.plugin.<a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a></h3>
-<code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanInfoListener-io.anyline.plugin.ScanInfoListener-">addScanInfoListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanResultListener-io.anyline.plugin.ScanResultListener-">addScanResultListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">addScanRunSkippedListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#cancelController--">cancelController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAnylineController--">getAnylineController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAssetController--">getAssetController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAssetPath--">getAssetPath</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getId--">getId</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#isRunning--">isRunning</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeArgumentExceptionListener--">removeArgumentExceptionListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanInfoListener-io.anyline.plugin.ScanInfoListener-">removeScanInfoListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanResultListener-io.anyline.plugin.ScanResultListener-">removeScanResultListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">removeScanRunSkippedListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setArgumentExceptionListener-WorkerRunnableExceptionListener-">setArgumentExceptionListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setAssetPath-java.lang.String-">setAssetPath</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCancelOnResult-boolean-">setCancelOnResult</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCmdFileName-java.lang.String-">setCmdFileName</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCropRect-android.graphics.RectF-">setCropRect</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setDebug-boolean-">setDebug</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setDelayScanTime-double-">setDelayScanTime</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setId-java.lang.String-">setId</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setImageProvider-ImageProvider-">setImageProvider</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setReportingEnabled-boolean-">setReportingEnabled</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#stop--">stop</a></code></li>
+<code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanInfoListener-io.anyline.plugin.ScanInfoListener-">addScanInfoListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanResultListener-io.anyline.plugin.ScanResultListener-">addScanResultListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#addScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">addScanRunSkippedListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#cancelController--">cancelController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAnylineController--">getAnylineController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getAssetController--">getAssetController</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getId--">getId</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#isRunning--">isRunning</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeArgumentExceptionListener--">removeArgumentExceptionListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanInfoListener-io.anyline.plugin.ScanInfoListener-">removeScanInfoListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanResultListener-io.anyline.plugin.ScanResultListener-">removeScanResultListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">removeScanRunSkippedListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setArgumentExceptionListener-WorkerRunnableExceptionListener-">setArgumentExceptionListener</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setAssetPath-java.lang.String-">setAssetPath</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCancelOnResult-boolean-">setCancelOnResult</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCmdFileName-java.lang.String-">setCmdFileName</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setCropRect-android.graphics.RectF-">setCropRect</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setDebug-boolean-">setDebug</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setDelayScanTime-double-">setDelayScanTime</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setId-java.lang.String-">setId</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setImageProvider-ImageProvider-">setImageProvider</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#setReportingEnabled-boolean-">setReportingEnabled</a>, <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#stop--">stop</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -243,6 +247,19 @@ extends <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="c
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getProduct--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getProduct</h4>
+<pre>public&nbsp;Product&nbsp;getProduct()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getProduct--">getProduct</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a>&lt;<a href="../../../../io/anyline/plugin/barcode/BarcodeScanResult.html" title="class in io.anyline.plugin.barcode">BarcodeScanResult</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
 <a name="setBarcodeFormats-io.anyline.plugin.barcode.BarcodeFormat...-">
 <!--   -->
 </a>
@@ -264,19 +281,6 @@ extends <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="c
 <li class="blockList">
 <h4>getBarcodeFormat</h4>
 <pre>public&nbsp;java.util.List&lt;<a href="../../../../io/anyline/plugin/barcode/BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a>&gt;&nbsp;getBarcodeFormat()</pre>
-</li>
-</ul>
-<a name="getProductName--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getProductName</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getProductName()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#getProductName--">getProductName</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a>&lt;<a href="../../../../io/anyline/plugin/barcode/BarcodeScanResult.html" title="class in io.anyline.plugin.barcode">BarcodeScanResult</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 <a name="getImageProvider--">
@@ -332,7 +336,7 @@ extends <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="c
 <a name="start--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>start</h4>
 <pre>public&nbsp;void&nbsp;start()</pre>
@@ -344,6 +348,15 @@ extends <a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="c
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html#start--">start</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a>&lt;<a href="../../../../io/anyline/plugin/barcode/BarcodeScanResult.html" title="class in io.anyline.plugin.barcode">BarcodeScanResult</a>&gt;</code></dd>
 </dl>
+</li>
+</ul>
+<a name="addScannedBarcodesListener-io.anyline.plugin.barcode.ScannedBarcodesListener-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>addScannedBarcodesListener</h4>
+<pre>public&nbsp;void&nbsp;addScannedBarcodesListener(<a href="../../../../io/anyline/plugin/barcode/ScannedBarcodesListener.html" title="interface in io.anyline.plugin.barcode">ScannedBarcodesListener</a>&nbsp;listener)</pre>
 </li>
 </ul>
 </li>

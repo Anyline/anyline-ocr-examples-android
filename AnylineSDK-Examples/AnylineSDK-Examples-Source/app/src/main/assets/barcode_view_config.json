@@ -13,18 +13,12 @@
   "viewPlugin" : {
     "cutoutConfig": {
       "style": "rect",
-      "maxWidthPercent": "80%",
       "alignment": "center",
-      "ratioFromSize": {
-        "width": 100,
-        "height": 80
-      },
       "strokeWidth": 2,
-      "cornerRadius": 10,
-      "strokeColor": "FFFFFF",
-      "outerColor": "000000",
-      "outerAlpha": 0.3,
-      "feedbackStrokeColor": "0099FF"
+      "strokeColor": "00FFFFFF",
+      "outerColor": "FFFFFF",
+      "outerAlpha": 0,
+      "feedbackStrokeColor": "FF33FF"
     },
     "cancelOnResult": false,
     "scanFeedback": {

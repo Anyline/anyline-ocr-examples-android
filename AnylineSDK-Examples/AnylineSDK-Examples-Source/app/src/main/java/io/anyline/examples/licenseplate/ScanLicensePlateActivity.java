@@ -8,17 +8,21 @@
  */
 package io.anyline.examples.licenseplate;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
 import java.util.HashMap;
 
-import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
+import io.anyline.AnylineDebugListener;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.licenseplate.LicensePlateScanMode;
+import io.anyline.plugin.licenseplate.LicensePlateScanPlugin;
 import io.anyline.plugin.licenseplate.LicensePlateScanResult;
 import io.anyline.plugin.licenseplate.LicensePlateScanViewPlugin;
 import io.anyline.view.ScanView;
@@ -26,14 +30,16 @@ import io.anyline.view.ScanView;
 
 public class ScanLicensePlateActivity extends ScanActivity implements AnylineDebugListener {
 
-    private static final String TAG = ScanLicensePlateActivity.class.getSimpleName();
+    private static final String EXTRA_REGION = "EXTRA_REGION";
+
     private ScanView scanView;
 
     @Override
     protected ScanView getScanView() {
         return null;
     }
-@Override
+
+    @Override
     protected ScanModuleEnum.ScanModule getScanModule() {
         return ScanModuleEnum.ScanModule.LICENSE_PLATE;
     }
@@ -46,7 +52,6 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
                 .scan_view_placeholder));
 
         init();
-
     }
 
     void init() {
@@ -56,27 +61,35 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
 
         //init the scan view
         final LicensePlateScanViewPlugin scanViewPlugin = new LicensePlateScanViewPlugin(getApplicationContext(), scanView.getScanViewPluginConfig(), "OCR");
+        ((LicensePlateScanPlugin) scanViewPlugin.getScanPlugin()).setScanMode(getLicensePlateScanModeFromIntent());
 
         scanView.getCameraView().getCameraController().setZoomGestureEnabled(true);
 
-        scanViewPlugin.addScanResultListener(new ScanResultListener<LicensePlateScanResult>() {
-            @Override
-            public void onResult(LicensePlateScanResult result) {
+        scanViewPlugin.addScanResultListener((ScanResultListener<LicensePlateScanResult>) result -> {
 
-                setFeedbackViewActive(false);
+            setFeedbackViewActive(false);
 
-                String path = setupImagePath(result.getCutoutImage());
+            String path = setupImagePath(result.getCutoutImage());
 
-                startScanResultIntent(getResources().getString(R.string.title_license_plate), getLicensePlateResult(result), path);
+            startScanResultIntent(getResources().getString(R.string.title_license_plate), getLicensePlateResult(result), path);
 
-                setupScanProcessView(ScanLicensePlateActivity.this, result, getScanModule());
-            }
-
+            setupScanProcessView(ScanLicensePlateActivity.this, result, getScanModule());
         });
         scanViewPlugin.setDebugListener(this);
         scanView.setScanViewPlugin(scanViewPlugin);
 
 
+    }
+
+    private LicensePlateScanMode getLicensePlateScanModeFromIntent() {
+        Region region = (Region) getIntent().getSerializableExtra(EXTRA_REGION);
+
+        switch (region) {
+            case US:
+                return LicensePlateScanMode.UnitedStates;
+            default:
+                return LicensePlateScanMode.Auto;
+        }
     }
 
 
@@ -112,4 +125,9 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
     public void onRunSkipped(RunFailure runFailure) {
     }
 
+    public static Intent newIntent(Activity activity, Region region) {
+        Intent intent = new Intent(activity, ScanLicensePlateActivity.class);
+        intent.putExtra(EXTRA_REGION, region);
+        return intent;
+    }
 }

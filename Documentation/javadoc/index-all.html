@@ -80,7 +80,7 @@
  An abstract implementation of the <a href="io/anyline/plugin/ScanPlugin.html" title="interface in io.anyline.plugin"><code>ScanPlugin</code></a> interface,
  that provides useful stuff for Plugins that use the <code>AnylineController</code>.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/AbstractScanPlugin.html#AbstractScanPlugin-android.content.Context-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">AbstractScanPlugin(Context, String, String, String, String)</a></span> - Constructor for class io.anyline.plugin.<a href="io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/AbstractScanPlugin.html#AbstractScanPlugin-android.content.Context-java.lang.String-java.lang.String-java.lang.String-">AbstractScanPlugin(Context, String, String, String)</a></span> - Constructor for class io.anyline.plugin.<a href="io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/anyline/view/AbstractScanViewPlugin.html" title="class in io.anyline.view"><span class="typeNameLink">AbstractScanViewPlugin</span></a> - Class in <a href="io/anyline/view/package-summary.html">io.anyline.view</a></dt>
 <dd>&nbsp;</dd>
@@ -115,6 +115,10 @@
 <dt><span class="memberNameLink"><a href="io/anyline/view/AbstractScanViewPlugin.html#addScanInfoListener-io.anyline.plugin.ScanInfoListener-">addScanInfoListener(ScanInfoListener)</a></span> - Method in class io.anyline.view.<a href="io/anyline/view/AbstractScanViewPlugin.html" title="class in io.anyline.view">AbstractScanViewPlugin</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/view/AbstractScanViewPluginComposite.html#addScanInfoListener-io.anyline.plugin.ScanInfoListener-">addScanInfoListener(ScanInfoListener)</a></span> - Method in class io.anyline.view.<a href="io/anyline/view/AbstractScanViewPluginComposite.html" title="class in io.anyline.view">AbstractScanViewPluginComposite</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/barcode/BarcodeScanPlugin.html#addScannedBarcodesListener-io.anyline.plugin.barcode.ScannedBarcodesListener-">addScannedBarcodesListener(ScannedBarcodesListener)</a></span> - Method in class io.anyline.plugin.barcode.<a href="io/anyline/plugin/barcode/BarcodeScanPlugin.html" title="class in io.anyline.plugin.barcode">BarcodeScanPlugin</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/barcode/BarcodeScanViewPlugin.html#addScannedBarcodesListener-io.anyline.plugin.barcode.ScannedBarcodesListener-">addScannedBarcodesListener(ScannedBarcodesListener)</a></span> - Method in class io.anyline.plugin.barcode.<a href="io/anyline/plugin/barcode/BarcodeScanViewPlugin.html" title="class in io.anyline.plugin.barcode">BarcodeScanViewPlugin</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/plugin/AbstractScanPlugin.html#addScanResultListener-io.anyline.plugin.ScanResultListener-">addScanResultListener(ScanResultListener&lt;ResultType&gt;)</a></span> - Method in class io.anyline.plugin.<a href="io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a></dt>
 <dd>&nbsp;</dd>
@@ -249,7 +253,7 @@
 <dd>&nbsp;</dd>
 <dt><a href="io/anyline/plugin/barcode/BarcodeScanResult.html" title="class in io.anyline.plugin.barcode"><span class="typeNameLink">BarcodeScanResult</span></a> - Class in <a href="io/anyline/plugin/barcode/package-summary.html">io.anyline.plugin.barcode</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/barcode/BarcodeScanResult.html#BarcodeScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.util.List-">BarcodeScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, List&lt;Barcode&gt;)</a></span> - Constructor for class io.anyline.plugin.barcode.<a href="io/anyline/plugin/barcode/BarcodeScanResult.html" title="class in io.anyline.plugin.barcode">BarcodeScanResult</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/barcode/BarcodeScanResult.html#BarcodeScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.util.List-java.lang.String-">BarcodeScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, List&lt;Barcode&gt;, String)</a></span> - Constructor for class io.anyline.plugin.barcode.<a href="io/anyline/plugin/barcode/BarcodeScanResult.html" title="class in io.anyline.plugin.barcode">BarcodeScanResult</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/anyline/plugin/barcode/BarcodeScanViewPlugin.html" title="class in io.anyline.plugin.barcode"><span class="typeNameLink">BarcodeScanViewPlugin</span></a> - Class in <a href="io/anyline/plugin/barcode/package-summary.html">io.anyline.plugin.barcode</a></dt>
 <dd>
@@ -291,10 +295,6 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/plugin/document/DocumentScanViewPlugin.html#COLOR_GREEN">COLOR_GREEN</a></span> - Static variable in class io.anyline.plugin.document.<a href="io/anyline/plugin/document/DocumentScanViewPlugin.html" title="class in io.anyline.plugin.document">DocumentScanViewPlugin</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/ocr/OcrScanPlugin.html#copyTrainedData-java.lang.String-java.lang.String-">copyTrainedData(String, String)</a></span> - Method in class io.anyline.plugin.ocr.<a href="io/anyline/plugin/ocr/OcrScanPlugin.html" title="class in io.anyline.plugin.ocr">OcrScanPlugin</a></dt>
-<dd>
-<div class="block">Copies given traineddata-file to a place where the core can access it.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/plugin/ocr/OcrScanViewPlugin.html#copyTrainedData-java.lang.String-java.lang.String-">copyTrainedData(String, String)</a></span> - Method in class io.anyline.plugin.ocr.<a href="io/anyline/plugin/ocr/OcrScanViewPlugin.html" title="class in io.anyline.plugin.ocr">OcrScanViewPlugin</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/plugin/id/LayoutDefinition.html#country">country</a></span> - Variable in class io.anyline.plugin.id.<a href="io/anyline/plugin/id/LayoutDefinition.html" title="class in io.anyline.plugin.id">LayoutDefinition</a></dt>
@@ -563,8 +563,6 @@
 <div class="block">Returns the detected License Plate area</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/anyline/plugin/AbstractScanPlugin.html#getAssetController--">getAssetController()</a></span> - Method in class io.anyline.plugin.<a href="io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/AbstractScanPlugin.html#getAssetPath--">getAssetPath()</a></span> - Method in class io.anyline.plugin.<a href="io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/plugin/id/DrivingLicenseFieldConfidences.html#getAuthority--">getAuthority()</a></span> - Method in class io.anyline.plugin.id.<a href="io/anyline/plugin/id/DrivingLicenseFieldConfidences.html" title="class in io.anyline.plugin.id">DrivingLicenseFieldConfidences</a></dt>
 <dd>&nbsp;</dd>
@@ -1232,19 +1230,19 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/view/BaseScanViewConfig.html#getPreviewAlignment--">getPreviewAlignment()</a></span> - Method in class io.anyline.view.<a href="io/anyline/view/BaseScanViewConfig.html" title="class in io.anyline.view">BaseScanViewConfig</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/AbstractScanPlugin.html#getProductName--">getProductName()</a></span> - Method in class io.anyline.plugin.<a href="io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/AbstractScanPlugin.html#getProduct--">getProduct()</a></span> - Method in class io.anyline.plugin.<a href="io/anyline/plugin/AbstractScanPlugin.html" title="class in io.anyline.plugin">AbstractScanPlugin</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/barcode/BarcodeScanPlugin.html#getProductName--">getProductName()</a></span> - Method in class io.anyline.plugin.barcode.<a href="io/anyline/plugin/barcode/BarcodeScanPlugin.html" title="class in io.anyline.plugin.barcode">BarcodeScanPlugin</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/barcode/BarcodeScanPlugin.html#getProduct--">getProduct()</a></span> - Method in class io.anyline.plugin.barcode.<a href="io/anyline/plugin/barcode/BarcodeScanPlugin.html" title="class in io.anyline.plugin.barcode">BarcodeScanPlugin</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/document/DocumentScanPlugin.html#getProductName--">getProductName()</a></span> - Method in class io.anyline.plugin.document.<a href="io/anyline/plugin/document/DocumentScanPlugin.html" title="class in io.anyline.plugin.document">DocumentScanPlugin</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/document/DocumentScanPlugin.html#getProduct--">getProduct()</a></span> - Method in class io.anyline.plugin.document.<a href="io/anyline/plugin/document/DocumentScanPlugin.html" title="class in io.anyline.plugin.document">DocumentScanPlugin</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/id/IdScanPlugin.html#getProductName--">getProductName()</a></span> - Method in class io.anyline.plugin.id.<a href="io/anyline/plugin/id/IdScanPlugin.html" title="class in io.anyline.plugin.id">IdScanPlugin</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/id/IdScanPlugin.html#getProduct--">getProduct()</a></span> - Method in class io.anyline.plugin.id.<a href="io/anyline/plugin/id/IdScanPlugin.html" title="class in io.anyline.plugin.id">IdScanPlugin</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#getProductName--">getProductName()</a></span> - Method in class io.anyline.plugin.licenseplate.<a href="io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html" title="class in io.anyline.plugin.licenseplate">LicensePlateScanPlugin</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html#getProduct--">getProduct()</a></span> - Method in class io.anyline.plugin.licenseplate.<a href="io/anyline/plugin/licenseplate/LicensePlateScanPlugin.html" title="class in io.anyline.plugin.licenseplate">LicensePlateScanPlugin</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/meter/MeterScanPlugin.html#getProductName--">getProductName()</a></span> - Method in class io.anyline.plugin.meter.<a href="io/anyline/plugin/meter/MeterScanPlugin.html" title="class in io.anyline.plugin.meter">MeterScanPlugin</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/meter/MeterScanPlugin.html#getProduct--">getProduct()</a></span> - Method in class io.anyline.plugin.meter.<a href="io/anyline/plugin/meter/MeterScanPlugin.html" title="class in io.anyline.plugin.meter">MeterScanPlugin</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/ocr/OcrScanPlugin.html#getProductName--">getProductName()</a></span> - Method in class io.anyline.plugin.ocr.<a href="io/anyline/plugin/ocr/OcrScanPlugin.html" title="class in io.anyline.plugin.ocr">OcrScanPlugin</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/ocr/OcrScanPlugin.html#getProduct--">getProduct()</a></span> - Method in class io.anyline.plugin.ocr.<a href="io/anyline/plugin/ocr/OcrScanPlugin.html" title="class in io.anyline.plugin.ocr">OcrScanPlugin</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/plugin/document/DocumentScanViewPlugin.DocumentRatio.html#getRatio--">getRatio()</a></span> - Method in enum io.anyline.plugin.document.<a href="io/anyline/plugin/document/DocumentScanViewPlugin.DocumentRatio.html" title="enum in io.anyline.plugin.document">DocumentScanViewPlugin.DocumentRatio</a></dt>
 <dd>&nbsp;</dd>
@@ -1532,7 +1530,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/anyline/view/ScanViewPluginConfig.html#init-android.content.Context-org.json.JSONObject-">init(Context, JSONObject)</a></span> - Method in class io.anyline.view.<a href="io/anyline/view/ScanViewPluginConfig.html" title="class in io.anyline.view">ScanViewPluginConfig</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/view/ScanView.html#initAsync-TrainerContext-TrainerUtils.ViewConfigResultHandler-">initAsync(TrainerContext, TrainerUtils.ViewConfigResultHandler)</a></span> - Method in class io.anyline.view.<a href="io/anyline/view/ScanView.html" title="class in io.anyline.view">ScanView</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/view/ScanView.html#initAsync-ProjectContext-TrainerUtils.ViewConfigResultHandler-">initAsync(ProjectContext, TrainerUtils.ViewConfigResultHandler)</a></span> - Method in class io.anyline.view.<a href="io/anyline/view/ScanView.html" title="class in io.anyline.view">ScanView</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/view/ScanView.html#initComposite-org.json.JSONObject-">initComposite(JSONObject)</a></span> - Method in class io.anyline.view.<a href="io/anyline/view/ScanView.html" title="class in io.anyline.view">ScanView</a></dt>
 <dd>&nbsp;</dd>
@@ -1630,7 +1628,7 @@
 <dd>
 <div class="block">Created by clemens on 28/09/17.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/licenseplate/LicensePlateScanResult.html#LicensePlateScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-java.lang.String-java.lang.String-">LicensePlateScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, String, String)</a></span> - Constructor for class io.anyline.plugin.licenseplate.<a href="io/anyline/plugin/licenseplate/LicensePlateScanResult.html" title="class in io.anyline.plugin.licenseplate">LicensePlateScanResult</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/licenseplate/LicensePlateScanResult.html#LicensePlateScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">LicensePlateScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, String, String, String)</a></span> - Constructor for class io.anyline.plugin.licenseplate.<a href="io/anyline/plugin/licenseplate/LicensePlateScanResult.html" title="class in io.anyline.plugin.licenseplate">LicensePlateScanResult</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/anyline/plugin/licenseplate/LicensePlateScanViewPlugin.html" title="class in io.anyline.plugin.licenseplate"><span class="typeNameLink">LicensePlateScanViewPlugin</span></a> - Class in <a href="io/anyline/plugin/licenseplate/package-summary.html">io.anyline.plugin.licenseplate</a></dt>
 <dd>
@@ -1674,7 +1672,7 @@
 <dd>
 <div class="block">A result class for the <a href="io/anyline/plugin/meter/MeterScanPlugin.html" title="class in io.anyline.plugin.meter"><code>MeterScanPlugin</code></a></div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/meter/MeterScanResult.html#MeterScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-io.anyline.plugin.meter.MeterScanMode-">MeterScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, MeterScanMode)</a></span> - Constructor for class io.anyline.plugin.meter.<a href="io/anyline/plugin/meter/MeterScanResult.html" title="class in io.anyline.plugin.meter">MeterScanResult</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/meter/MeterScanResult.html#MeterScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-io.anyline.plugin.meter.MeterScanMode-java.lang.String-">MeterScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, MeterScanMode, String)</a></span> - Constructor for class io.anyline.plugin.meter.<a href="io/anyline/plugin/meter/MeterScanResult.html" title="class in io.anyline.plugin.meter">MeterScanResult</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/anyline/plugin/meter/MeterScanViewPlugin.html" title="class in io.anyline.plugin.meter"><span class="typeNameLink">MeterScanViewPlugin</span></a> - Class in <a href="io/anyline/plugin/meter/package-summary.html">io.anyline.plugin.meter</a></dt>
 <dd>
@@ -1708,7 +1706,7 @@
 <dd>
 <div class="block">A result class for the <a href="io/anyline/plugin/meter/MeterScanPlugin.html" title="class in io.anyline.plugin.meter"><code>MeterScanPlugin</code></a></div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/meter/MultiMeterScanResult.html#MultiMeterScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-io.anyline.plugin.meter.MeterScanMode-java.lang.String-">MultiMeterScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, MeterScanMode, String)</a></span> - Constructor for class io.anyline.plugin.meter.<a href="io/anyline/plugin/meter/MultiMeterScanResult.html" title="class in io.anyline.plugin.meter">MultiMeterScanResult</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/meter/MultiMeterScanResult.html#MultiMeterScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-io.anyline.plugin.meter.MeterScanMode-java.lang.String-java.lang.String-">MultiMeterScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, MeterScanMode, String, String)</a></span> - Constructor for class io.anyline.plugin.meter.<a href="io/anyline/plugin/meter/MultiMeterScanResult.html" title="class in io.anyline.plugin.meter">MultiMeterScanResult</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a name="I:N">
@@ -1749,7 +1747,7 @@
 <dd>
 <div class="block">A result class for the <a href="io/anyline/plugin/ocr/OcrScanPlugin.html" title="class in io.anyline.plugin.ocr"><code>OcrScanPlugin</code></a></div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/ocr/OcrScanResult.html#OcrScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-">OcrScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, AnylineImage)</a></span> - Constructor for class io.anyline.plugin.ocr.<a href="io/anyline/plugin/ocr/OcrScanResult.html" title="class in io.anyline.plugin.ocr">OcrScanResult</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/ocr/OcrScanResult.html#OcrScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-java.lang.String-">OcrScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, AnylineImage, String)</a></span> - Constructor for class io.anyline.plugin.ocr.<a href="io/anyline/plugin/ocr/OcrScanResult.html" title="class in io.anyline.plugin.ocr">OcrScanResult</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/anyline/plugin/ocr/OcrScanViewPlugin.html" title="class in io.anyline.plugin.ocr"><span class="typeNameLink">OcrScanViewPlugin</span></a> - Class in <a href="io/anyline/plugin/ocr/package-summary.html">io.anyline.plugin.ocr</a></dt>
 <dd>
@@ -1932,6 +1930,10 @@
 <div class="block">
  A listener that can be added to <a href="io/anyline/plugin/ScanPlugin.html" title="interface in io.anyline.plugin"><code>ScanPlugin</code></a>s, to receive intermediate information.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/barcode/ScannedBarcodesListener.html#scannedBarcodes-io.anyline.plugin.barcode.BarcodeScanResult-">scannedBarcodes(BarcodeScanResult)</a></span> - Method in interface io.anyline.plugin.barcode.<a href="io/anyline/plugin/barcode/ScannedBarcodesListener.html" title="interface in io.anyline.plugin.barcode">ScannedBarcodesListener</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io/anyline/plugin/barcode/ScannedBarcodesListener.html" title="interface in io.anyline.plugin.barcode"><span class="typeNameLink">ScannedBarcodesListener</span></a> - Interface in <a href="io/anyline/plugin/barcode/package-summary.html">io.anyline.plugin.barcode</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io/anyline/view/ScanPage.html" title="class in io.anyline.view"><span class="typeNameLink">ScanPage</span></a> - Class in <a href="io/anyline/view/package-summary.html">io.anyline.view</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/view/ScanPage.html#ScanPage-java.lang.String-java.lang.String-java.util.ArrayList-">ScanPage(String, String, ArrayList&lt;PointF&gt;)</a></span> - Constructor for class io.anyline.view.<a href="io/anyline/view/ScanPage.html" title="class in io.anyline.view">ScanPage</a></dt>
@@ -1952,9 +1954,9 @@
 <div class="block">
  This is the base class for all plugin result classes.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/ScanResult.html#ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-T-">ScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, T)</a></span> - Constructor for class io.anyline.plugin.<a href="io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">ScanResult</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/ScanResult.html#ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-T-java.lang.String-">ScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, T, String)</a></span> - Constructor for class io.anyline.plugin.<a href="io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">ScanResult</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/ScanResult.html#ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-AnylineImage-T-">ScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, AnylineImage, T)</a></span> - Constructor for class io.anyline.plugin.<a href="io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">ScanResult</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/ScanResult.html#ScanResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-AnylineImage-T-java.lang.String-">ScanResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, AnylineImage, T, String)</a></span> - Constructor for class io.anyline.plugin.<a href="io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">ScanResult</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io/anyline/plugin/ScanResultListener.html" title="interface in io.anyline.plugin"><span class="typeNameLink">ScanResultListener</span></a>&lt;<a href="io/anyline/plugin/ScanResultListener.html" title="type parameter in ScanResultListener">T</a> extends <a href="io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt; - Interface in <a href="io/anyline/plugin/package-summary.html">io.anyline.plugin</a></dt>
 <dd>
@@ -3061,7 +3063,7 @@
 &nbsp;</dd>
 <dt><a href="io/anyline/plugin/ocr/TINResult.html" title="class in io.anyline.plugin.ocr"><span class="typeNameLink">TINResult</span></a> - Class in <a href="io/anyline/plugin/ocr/package-summary.html">io.anyline.plugin.ocr</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/anyline/plugin/ocr/TINResult.html#TINResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-java.util.Map-">TINResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, AnylineImage, Map&lt;String, String&gt;)</a></span> - Constructor for class io.anyline.plugin.ocr.<a href="io/anyline/plugin/ocr/TINResult.html" title="class in io.anyline.plugin.ocr">TINResult</a></dt>
+<dt><span class="memberNameLink"><a href="io/anyline/plugin/ocr/TINResult.html#TINResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-java.util.Map-java.lang.String-">TINResult(String, List&lt;PointF&gt;, Integer, AnylineImage, AnylineImage, String, AnylineImage, Map&lt;String, String&gt;, String)</a></span> - Constructor for class io.anyline.plugin.ocr.<a href="io/anyline/plugin/ocr/TINResult.html" title="class in io.anyline.plugin.ocr">TINResult</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/anyline/plugin/barcode/BarcodeFormat.html#toBarcodeFormatInt-io.anyline.plugin.barcode.BarcodeFormat-">toBarcodeFormatInt(BarcodeFormat)</a></span> - Static method in enum io.anyline.plugin.barcode.<a href="io/anyline/plugin/barcode/BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a></dt>
 <dd>

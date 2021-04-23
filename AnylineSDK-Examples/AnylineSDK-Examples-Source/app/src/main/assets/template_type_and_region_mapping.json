@@ -1,4 +1,7 @@
 {
+  "All States/Countries": {
+    "All States/Countries": []
+  },
   "USA": {
     "Alabama": [
       "USA-FO-AL19"
@@ -178,24 +181,24 @@
   "Europe": {
     "Austria": [
       "AUT-FO-04001",
-      "AUT-FO-05002_05001"
+      "AUT-FO-05002"
     ],
     "Belgium": [
-      "BEL-FO-02003_02002_02001",
-      "BEL-FO-05001_04003_04002_04001_03001"
+      "BEL-FO-02003",
+      "BEL-FO-05001"
     ],
     "Croatia": [
       "HRV-FO-02001"
     ],
     "Czechia": [
-      "CZE-FO-02003_02002_02001"
+      "CZE-FO-02003"
     ],
     "Denmark": [
       "DNK-FO-03001",
       "DNK-FO-04001"
     ],
     "Germany": [
-      "DEU-FO-02006_02003_02002_02001",
+      "DEU-FO-02006",
       "DEU-FO-02007"
     ],
     "Estonia": [
@@ -205,7 +208,7 @@
       "FIN-FO-04001"
     ],
     "France": [
-      "FRA-FO-07001_06001"
+      "FRA-FO-07001"
     ],
     "Hungary": [
       "HUN-FO-02001"
@@ -240,10 +243,10 @@
       "PRT-FO-06001"
     ],
     "Romania": [
-      "ROU-FO-06001_05001"
+      "ROU-FO-06001"
     ],
     "Slovakia": [
-      "SVK-FO-04001_03001"
+      "SVK-FO-04001"
     ],
     "Slovenia": [
       "SVN-FO-04001"
@@ -252,7 +255,7 @@
       "ESP-FO-04002"
     ],
     "Sweden": [
-      "SWE-FO-05001_04001",
+      "SWE-FO-05001",
       "SWE-FO-06001",
       "SWE-FO-07001"
     ],
@@ -261,7 +264,7 @@
     ],
     "United Kingdom": [
       "GBR-FO-07001",
-      "GBR-FO-09002_09001_08002_08001"
+      "GBR-FO-09002"
     ]
   },
   "Australia": {

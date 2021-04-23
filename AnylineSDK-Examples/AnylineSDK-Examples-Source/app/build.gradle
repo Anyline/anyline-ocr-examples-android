@@ -12,8 +12,8 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 366
-        versionName "29.1"
+        versionCode 370
+        versionName "30"
 
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
@@ -32,6 +32,8 @@ android {
 
     packagingOptions {
         exclude 'META-INF/proguard/coroutines.pro'
+
+      
     }
 
     buildFeatures {
@@ -49,7 +51,6 @@ repositories {
     maven {
         url 'https://anylinesdk.blob.core.windows.net/maven/'
     }
-    mavenCentral()
 }
 
 configurations {
@@ -73,7 +74,7 @@ dependencies {
     //implementation project(':AnylineSdk')
 
     //include AnylineSDK from maven
-    implementation'io.anyline:anylinesdk:29.1'
+    implementation'io.anyline:anylinesdk:30'
 
     //Play core library
     implementation 'com.google.android.play:core-ktx:1.8.1'
@@ -90,6 +91,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
 
     //Desugaring
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
@@ -110,7 +112,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0"
     implementation 'androidx.preference:preference-ktx:1.1.1'
-    customImplementation('io.anyline:anylinesdk:29.1')
+    customImplementation('io.anyline:anylinesdk:30')
 
     // Testing
     testImplementation "junit:junit:4.13"

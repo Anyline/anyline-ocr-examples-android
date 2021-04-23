@@ -12,7 +12,7 @@
     <string-array name="example_products_classes" translatable="false">
         <item>@string/category_energy</item>
         <item>@string/category_identity_documents</item>
-        <item>io.anyline.examples.licenseplate.ScanLicensePlateActivity</item>
+        <item>io.anyline.examples.licenseplate.ChooseLicensePlateRegionActivity</item>
         <item>@string/category_mro</item>
         <item>@string/category_others</item>
     </string-array>

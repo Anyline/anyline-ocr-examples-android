@@ -82,7 +82,8 @@ public abstract class MeterReadingProcessActivity extends BaseToolbarActivity im
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        setMode(isChecked ? MeterScanMode.ANALOG_METER : MeterScanMode.BARCODE);
+        //TODO rewrite for removal of barcode scan mode in meter plugin
+        //setMode(isChecked ? MeterScanMode.ANALOG_METER : MeterScanMode.BARCODE);
     }
 
     @Override

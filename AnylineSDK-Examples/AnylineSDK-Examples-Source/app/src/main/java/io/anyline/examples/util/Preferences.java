@@ -35,6 +35,10 @@ public class Preferences {
     public static final String PREFS_CUTOUT_CONFIG = "cutoutConfig";
     public static final String PREFS_CUSTOMER_ID = "customerId";
     public static final String PREFS_API_URL = "apiUrl";
+    public static final String PREFS_ASSET_ID = "assetId";
+    public static final String PREFS_ANYLINE_VERSION = "anylineVersion";
+
+
     public static final String PREFS_LOCK_UPDATE_CHECK_UNTIL = "lockUpdateCheckUntil";
 
     private static final int LOCK_DAYS = 2;

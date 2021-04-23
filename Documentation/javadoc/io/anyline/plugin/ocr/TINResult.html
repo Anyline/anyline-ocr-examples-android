@@ -142,14 +142,15 @@ extends <a href="../../../../io/anyline/plugin/ocr/OcrScanResult.html" title="cl
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/ocr/TINResult.html#TINResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-java.util.Map-">TINResult</a></span>(java.lang.String&nbsp;pluginId,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/ocr/TINResult.html#TINResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-java.util.Map-java.lang.String-">TINResult</a></span>(java.lang.String&nbsp;pluginId,
          java.util.List&lt;android.graphics.PointF&gt;&nbsp;outline,
          java.lang.Integer&nbsp;confidence,
          AnylineImage&nbsp;cutoutImage,
          AnylineImage&nbsp;fullImage,
          java.lang.String&nbsp;result,
          AnylineImage&nbsp;thresholdedImage,
-         java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;topCandidates)</code>&nbsp;</td>
+         java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;topCandidates,
+         java.lang.String&nbsp;blobKey)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -206,7 +207,7 @@ extends <a href="../../../../io/anyline/plugin/ocr/OcrScanResult.html" title="cl
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="TINResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-java.util.Map-">
+<a name="TINResult-java.lang.String-java.util.List-java.lang.Integer-AnylineImage-AnylineImage-java.lang.String-AnylineImage-java.util.Map-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -226,7 +227,9 @@ extends <a href="../../../../io/anyline/plugin/ocr/OcrScanResult.html" title="cl
                  java.lang.String&nbsp;result,
                  @Nullable
                  AnylineImage&nbsp;thresholdedImage,
-                 java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;topCandidates)</pre>
+                 java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;topCandidates,
+                 @NonNull
+                 java.lang.String&nbsp;blobKey)</pre>
 </li>
 </ul>
 </li>
