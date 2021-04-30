@@ -18,19 +18,16 @@ import static io.anyline.reporter.ReportingService.PREFS_NAME;
 public class Preferences {
     private static final String PREF_SCAN_COUNTER = "scan_counter";
     private static final String PREF_UUID = "uuid";
-    private static final String PREF_REPORTING_ENABLED = "reporting_enabled";
     private static final String SHARED_PREFS_ANYLINE = "AnylinePreferences";
     private static final String PREF_EMAIL = "user_email";
     private static final String PREFS_FIRST_START = "first_start";
-    private static final String PREFS_ONBOARDING_INCOMPLETE = "onboarding_complete";
-    private static final String PREFS_ONBOARDING_INCOMPLETE_a = "onboarding_completee";
-    private static final String PREF_INTERCOM_USER_ID = "uuid_intercom_user_id";
+    private static final String SHARED_PREFS_EMAIL_FACE_AUTHENTICATION = "email_face_authentication_collected";
+
     public static final String PREFS_PROJECT_NAME = "projectName";
     public static final String PREFS_API_KEY = "apiKey";
     public static final String PREFS_STAGE = "staging";
     public static final String SHARED_PREFS_ANYLINE_EXAMPLES = "prefs_examples_app";
     public static final String PREFS_LOGIN_STATUS = "is_logged_in";
-    public static final String PREFS_ACCESS_TOKEN = "accessToken";
     public static final String PREFS_PROJECT_TITLE = "projectTitle";
     public static final String PREFS_CUTOUT_CONFIG = "cutoutConfig";
     public static final String PREFS_CUSTOMER_ID = "customerId";
@@ -42,12 +39,9 @@ public class Preferences {
     public static final String PREFS_LOCK_UPDATE_CHECK_UNTIL = "lockUpdateCheckUntil";
 
     private static final int LOCK_DAYS = 2;
-
     private static Preferences instance;
 
     private final SharedPreferences preferences;
-    private final SharedPreferences.Editor editor;
-
     private final SharedPreferences reportingPreferences;
 
     private Preferences(Context context) {
@@ -55,7 +49,6 @@ public class Preferences {
                 SHARED_PREFS_ANYLINE, Context.MODE_PRIVATE);
 
         reportingPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        editor = preferences.edit();
     }
 
     public static Preferences getInstance(Context context) {
@@ -70,26 +63,9 @@ public class Preferences {
     }
 
     public void setSharedPreferencesScanCounter(int count) {
-        editor.putInt(PREF_SCAN_COUNTER, count);
-        editor.commit();
-    }
-
-    public boolean isReportingEnabled() {
-        return preferences.getBoolean(PREF_REPORTING_ENABLED, true);
-    }
-
-    public void setReportingEnabled(boolean enabled) {
-        editor.putBoolean(PREF_REPORTING_ENABLED, enabled);
-        editor.commit();
-    }
-
-    public boolean isModuleOpenendFirstTime(String module) {
-        return preferences.getBoolean(module, true);
-    }
-
-    public void setModuleHasBeenExplained(String module) {
-        editor.putBoolean(module, false);
-        editor.commit();
+        preferences.edit()
+                .putInt(PREF_SCAN_COUNTER, count)
+                .apply();
     }
 
     public boolean isLockedUpdate() {
@@ -107,8 +83,9 @@ public class Preferences {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
         String getLockedUntilDateTime = sdf.format(c.getTime());
 
-        editor.putString(PREFS_LOCK_UPDATE_CHECK_UNTIL, getLockedUntilDateTime);
-        editor.commit();
+        preferences.edit()
+                .putString(PREFS_LOCK_UPDATE_CHECK_UNTIL, getLockedUntilDateTime)
+                .apply();
     }
 
     public boolean hasEmailAddressStored() {
@@ -123,8 +100,9 @@ public class Preferences {
     }
 
     public void setStoredEmailAddress(String storedEmailAddress) {
-        editor.putString(PREF_EMAIL, storedEmailAddress);
-        editor.commit();
+        preferences.edit()
+                .putString(PREF_EMAIL, storedEmailAddress)
+                .apply();
     }
 
     public boolean isFirstStart() {
@@ -133,28 +111,20 @@ public class Preferences {
 
 
     public void setFirstStartFinished() {
-        editor.putBoolean(PREFS_FIRST_START, false);
-        editor.commit();
+        preferences.edit()
+                .putBoolean(PREFS_FIRST_START, false)
+                .apply();
     }
 
-    public boolean isOpeningForFirstTime() {
-        return preferences.getBoolean(PREFS_ONBOARDING_INCOMPLETE_a, true);
+    public void setEmailForFaceAuthenticationCollected() {
+        preferences.edit()
+                .putBoolean(SHARED_PREFS_EMAIL_FACE_AUTHENTICATION, true)
+                .apply();
     }
 
-    public void setOnboardingCompleted() {
-        editor.putBoolean(PREFS_ONBOARDING_INCOMPLETE_a, false);
-        editor.commit();
+    public boolean wasEmailForFaceAuthenticationCollected() {
+        return preferences.contains(SHARED_PREFS_EMAIL_FACE_AUTHENTICATION);
     }
-
-
-    //    public String getIntercomUserId() {
-    //        return preferences.getString(PREF_INTERCOM_USER_ID, null);
-    //    }
-
-    //    public void setIntercomUserId(String user) {
-    //        editor.putString(PREF_INTERCOM_USER_ID, user);
-    //        editor.commit();
-    //    }
 
     public String getUuid() {
         String uuidPrefs = reportingPreferences.getString(PREF_UUID, "");
@@ -169,5 +139,4 @@ public class Preferences {
         }
         return uuidPrefs;
     }
-
 }

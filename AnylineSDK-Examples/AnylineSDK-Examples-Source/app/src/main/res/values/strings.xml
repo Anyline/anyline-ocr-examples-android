@@ -141,6 +141,8 @@
     <string name="title_dial_meter">Dial (Alpha)</string>
     <string name="title_serial_number_energy">Energy Serial Number</string>
     <string name="title_serial_number">Serial Number</string>
+    <string name="title_activity_serial_number_settings">SerialNumberSettingsActivity</string>
+
 
     <string name="title_document">Document</string>
     <string name="title_iban">IBAN</string>
@@ -421,5 +423,56 @@
     <string name="sdk_build_version" formatted="false">SDK Build Version %s</string>
 
     <string name="error_internet_connection">Something went wrong. Please make sure you are connected to the internet and try again.</string>
+    <string name="control_image">Control Image</string>
+    <string name="fields_selection"><![CDATA[
+        The result fields above display a selection of scannable ID information only.
+        Please review the <a href=\"https://documentation.anyline.com/toc/products/id/index.html\">documentation</a>" for a full list of scannable ID information.
+        ]]></string>
+    <string name="scanning_tutorial_dialog_title">How to scan</string>
+    <string name="scanning_tutorial_dialog_message">The Identity Documents scan modes allow you to digitize the ID data you need. \n\nMake sure the whole document is placed within the blue detection box that is displayed in your camera view.</string>
+
+    <string name="native_share_subject">Anyline Scanner Result</string>
+    <string name="native_share_image_name_prefix">AnylineScanner_ResultImage_%1$s.jpg</string>
+    <string name="barcode_format">Barcode Symbology</string>
+    <string name="barcode_result">Barcode Result</string>
+    <string-array name="scan_module_labels" translatable="false">
+        <item>Barcode:</item>
+        <item>MRZ:</item>
+        <item>IBAN:</item>
+        <item>Red Bull Mobile Collect:</item>
+        <item>ISBN:</item>
+        <item>Document:</item>
+        <item>Pepsi Code:</item>
+        <item>Record:</item>
+        <item>Scrabble:</item>
+        <item>Voucher:</item>
+        <item>Electric Digits:</item>
+        <item>Analog/Digital:</item>
+        <item>Energy Serial Number:</item>
+        <item>License Plate:</item>
+        <item>Driver\'s License:</item>
+        <item>German ID Front:</item>
+        <item>Vehicle Identification Number:</item>
+        <item>Shipping Container:</item>
+        <item>Vertical Shipping Container:</item>
+        <item>Tire Identification Number:</item>
+        <item>OCR:</item>
+        <item>Universal ID:</item>
+        <item>Serial Number:</item>
+        <item>Cattle Tag:</item>
+        <item>ID Card:</item>
+        <item>Passport / Visa:</item>
+        <item>Electric Background:</item>
+        <item>Gas:</item>
+        <item>Water Meter:</item>
+        <item>Heat Meter:</item>
+        <item>Digital Meter:</item>
+        <item>Dial Meter:</item>
+    </string-array>
+    <string name="no">Cancel</string>
+    <string name="error">Error</string>
+    <string name="close">Close</string>
+    <string name="barcode_back_message">Are you sure you want to leave this screen? Changes will not be saved!</string>
+    <string name="go_back">Go back?</string>
 
 </resources>
