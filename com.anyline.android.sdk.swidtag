@@ -24,6 +24,7 @@
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source" name="app">
       <File SHA256:hash="59c79dae08671da79497db76692f82d406bbbac625a2d0871f0b54c2141a0e13" name="build.gradle" size="3876" version="30.1"/>
+      <File SHA256:hash="35a9a509bfe959799167fef205d5082ec617781db46d1c6750190d86da589800" name="fabric.gradle" size="511" version="30.1"/>
       <File SHA256:hash="6b0517f10f0e7a99f60563133c41f65be1292b4498c073f009e025c3abf57c8b" name="version.properties" size="36" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app" name="src"/>
@@ -39,7 +40,6 @@
       <File SHA256:hash="4da3dee801fca2373724f219d1ec3733d10861a9f66c78b2cd616ab86265a3e9" name="barcode_pdf417_view_config.json" size="847" version="30.1"/>
       <File SHA256:hash="437e6779c73076d62bde80bf27fcce1f788362fee1b91b7ef06894a8f85d8b13" name="barcode_trainer_login_view_config.json" size="719" version="30.1"/>
       <File SHA256:hash="a7bd96c22b34a6f007460c94383bacb6ea445e2b1a2ccc7922fb98064b965fe0" name="barcode_view_config.json" size="711" version="30.1"/>
-      <File SHA256:hash="eebc8df6d2adf6a6bd9a051da6ef7344397431b8cfc3eeba6fbaff447acd3038" name="bottlecap_view_config.json" size="1148" version="30.1"/>
       <File SHA256:hash="96a9ba71afca0fa91341190948b5a9b90fe8dbca85e2176cc0e0bcbfacf4202c" name="cow_tag_view_config.json" size="1086" version="30.1"/>
       <File SHA256:hash="90de9436f07680ecbf6d9aa91ad7b5527a6170e7a382f72cc6abf5106c84d411" name="data_processing_consent.html" size="3730" version="30.1"/>
       <File SHA256:hash="6720ba7b5d8d8cb785d34b7788bc308077448a66405f97487669c88ad5531bb6" name="demo_database.db3" size="16384" version="30.1"/>
@@ -63,8 +63,6 @@
       <File SHA256:hash="56317364dad59b4baf62fa24e02690d50755906b7d058f23054d94b65131d78a" name="multi_meter_view_config.json" size="774" version="30.1"/>
       <File SHA256:hash="ad695a51b0f87959378a90ec65f7c32e6bd047b51f865dde11f5b1929e0f25e6" name="multi_scanner_energy_config.json" size="904" version="30.1"/>
       <File SHA256:hash="220b478af698d226943d6ce4caca7315e79e3bd70f94b8cbf3e54ca254e3088e" name="ota_fallback_view_config.json" size="994" version="30.1"/>
-      <File SHA256:hash="1bfa3d09a98175a85893d0a1c93a7262be288b09b68ba6d0a490a8565d72a06e" name="pepsi_code_scanner.ale" size="21280" version="30.1"/>
-      <File SHA256:hash="0fd53e6a1f862aa3ab6d6b4e939289096084f80b20f0aa55ac872940b1cd6f5e" name="PepsiCo.any" size="741816" version="30.1"/>
       <File SHA256:hash="87da7a72bbd50de52f1da133646c71495a7e87ba8e245e1892fbc44afadca974" name="privacy_policy.html" size="17796" version="30.1"/>
       <File SHA256:hash="7b7026c8999bb00aa36eb509affeba906914c6cc9cb2d8e21e6edf554a7ae42f" name="rb_view_config.json" size="931" version="30.1"/>
       <File SHA256:hash="40e2c1ca17fc16517082661d6ee7a5a0b3b96f41fab5fbff329ec46fc775afbb" name="record_view_config.json" size="1312" version="30.1"/>
@@ -631,7 +629,7 @@
       <File SHA256:hash="dd2f118d49599d2ea0faad8dfaaf8e3299da26761d2be378e365a8d533ab081d" name="dimens_serial_number_settings.xml" size="892" version="30.1"/>
       <File SHA256:hash="f615c3a821e1e6b0c1098f457dadfedfbec05b97409f149fd757e586e2eb5042" name="example_activities.xml" size="5039" version="30.1"/>
       <File SHA256:hash="c6780448dea4613400d021330089f18c8143bd78db307a9ce57685c7c950316c" name="ids.xml" size="634" version="30.1"/>
-      <File SHA256:hash="759886e45e641ceac80ddd2dc759f0425a6948f2fa22488980af07d795dcde6f" name="strings.xml" size="25669" version="30.1"/>
+      <File SHA256:hash="965855588abcc1ea990bebef185c5003aae14c0f8a261e011e705f3fd368c893" name="strings.xml" size="28251" version="30.1"/>
       <File SHA256:hash="803d0cadfaf222e7ab666238b1dd4624f55fc6a12033b7c2afaa54cca1186d40" name="strings_serial_number_settings.xml" size="2735" version="30.1"/>
       <File SHA256:hash="dbd7fd748aed35ee1661f64e269ca992bbc8fd90242cc2d4220f1288ef5647fb" name="strings_uid_ota.xml" size="410" version="30.1"/>
       <File SHA256:hash="5994746a518089c5a4235e9ee0c4ab2b67509a4418249fe34d8e6c10a689006a" name="styles.xml" size="16082" version="30.1"/>
@@ -650,13 +648,6 @@
       <File SHA256:hash="fb9fe394913e828995af1932f2ee21ba6d5aa75cce721159df80d00497f891b6" name="paths.xml" size="116" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main" name="TrainedModels">
-      <File SHA256:hash="a408e3eea862265d22c5b46df50d96708617477d0feeee2cd34b119d2aabed11" name="7seg.traineddata" size="147537" version="30.1"/>
-      <File SHA256:hash="99dd6099671b2a6f7e7083bdf56532c2dcf42d3bd48359adb08cdf926b61c36a" name="anyline_capitals.traineddata" size="315369" version="30.1"/>
-      <File SHA256:hash="fc377d86711a25ceba551828350e84a0bb9834fbbef6866b12c8e3f04623f3fe" name="bottlecap.traineddata" size="304819" version="30.1"/>
-      <File SHA256:hash="8261b95edf88f2e1e932c7287690610b42ff420eb66f5676cb7d705adc4a07c3" name="deu.traineddata" size="2438081" version="30.1"/>
-      <File SHA256:hash="b9be2d9584be42dabf7629823fb9203ee94764ae28cc9239dcef5de079fd9534" name="eng_no_dict.traineddata" size="1093124" version="30.1"/>
-      <File SHA256:hash="3440e6d02362b86fb0147ae1212f6c337a571618eb0d189ef2a022e0813a003d" name="rbf_jan2015_v2.traineddata" size="186444" version="30.1"/>
-      <File SHA256:hash="9f27b8a331fcb39b979a9c2fc12c8fd7f1c85bcb7862033d963fd1f9d969bb62" name="scrabble.traineddata" size="186452" version="30.1"/>
       <File SHA256:hash="f10fe68ccd41af2037fdac7b60b9750195ec5cef6403fbf934a1c04826a63415" name="USNr.any" size="913000" version="30.1"/>
     </Directory>
     <Directory location="" name="Documentation"/>
