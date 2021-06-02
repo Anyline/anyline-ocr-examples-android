@@ -48,7 +48,7 @@ public class ScanUniversalIdResultActivity extends ScanningConfigurationActivity
         ImageView controlImage2 = findViewById(R.id.control_image2);
         ImageView faceImageView = findViewById(R.id.face_image);
         TextView frontSideTextView = findViewById(R.id.text);
-        TextView backSideTextView = findViewById(R.id.textFaceImage);
+        TextView backSideTextView = findViewById(R.id.textBackImage);
         TextView fieldsInformationTextView = findViewById(R.id.tvFieldsInformation);
         backSideTextView.setVisibility(View.VISIBLE);
         frontSideTextView.setTypeface(Typeface.DEFAULT);

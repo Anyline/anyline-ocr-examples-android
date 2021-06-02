@@ -5,13 +5,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Layout;
 import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +22,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.content.ContextCompat;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,7 +37,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Objects;
 
-import androidx.appcompat.app.AlertDialog;
 import io.anyline.examples.R;
 import io.anyline.examples.barcode.BarcodeModel;
 import io.anyline.examples.baseactivities.BaseToolbarActivity;
@@ -125,7 +128,10 @@ public class RadioButtonListViewActivity extends BaseToolbarActivity {
         mToolbar.setTitle(s);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.clear);
+
+        Drawable backIcon = ContextCompat.getDrawable(this, R.drawable.ic_baseline_arrow_back_24).mutate();
+        backIcon.setColorFilter(ContextCompat.getColor(this, R.color.black_100), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(backIcon);
     }
 
 
@@ -208,16 +214,16 @@ public class RadioButtonListViewActivity extends BaseToolbarActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle(getString(R.string.go_back)).
                     setMessage(getString(R.string.barcode_back_message))
-                   .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                       public void onClick(DialogInterface dialog, int which) {
-                           finishActivity();
-                       }
-                   })
-                   .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                       public void onClick(DialogInterface dialog, int which) {
-                           dialog.dismiss();
-                       }
-                   });
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finishActivity();
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
             AlertDialog alert = builder.create();
             alert.show();
         } else {

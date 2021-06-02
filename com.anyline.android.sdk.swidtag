@@ -23,19 +23,20 @@
       <File SHA256:hash="9fd057cb92239bf68afef61669fb8c5fc8f7a387ebd0b65b334d23843fc03b30" name="settings.gradle" size="91" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source" name="app">
-      <File SHA256:hash="59c79dae08671da79497db76692f82d406bbbac625a2d0871f0b54c2141a0e13" name="build.gradle" size="3876" version="30.1"/>
+      <File SHA256:hash="4e12e3ec153c5cbbb024c2cccd78279ce6c2854cbd1ef767e502a22f3ac7a865" name="build.gradle" size="3880" version="30.1"/>
       <File SHA256:hash="35a9a509bfe959799167fef205d5082ec617781db46d1c6750190d86da589800" name="fabric.gradle" size="511" version="30.1"/>
       <File SHA256:hash="6b0517f10f0e7a99f60563133c41f65be1292b4498c073f009e025c3abf57c8b" name="version.properties" size="36" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app" name="src"/>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src" name="main">
-      <File SHA256:hash="b9e9fdb7cd0ef221d5c8e7be34f5e9e924ada2e6fedfa1072627efce33ed53ae" name="AndroidManifest.xml" size="17375" version="30.1"/>
+      <File SHA256:hash="0cc83f9afb7a23dbae8f1518ad0503ae210f84cf68528a1c297d3b4086a4de9f" name="AndroidManifest.xml" size="17532" version="30.1"/>
       <File SHA256:hash="259d7523148dfd94c3f918cec2861a026cbef48683642ab6f29a1a800b54cd2b" name="ic_launcher-playstore.png" size="37795" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main" name="assets">
       <File SHA256:hash="d4d26ee9670e5c8c73c4957492165103940fc4e7e0db1c6ffb3f231c87e9b578" name="abstract_energy_view_config.json" size="903" version="30.1"/>
       <File SHA256:hash="1892dc804e636711e6df6af1c3f9e4885271f154004df85c1af78f97ad296319" name="anyline4_example_config.json" size="915" version="30.1"/>
       <File SHA256:hash="b0916d411609571766931ac2e360f8fa1d72a947f5c54599163e98ec701d9890" name="anyline_austrian_driving_license.ale" size="53152" version="30.1"/>
+      <File SHA256:hash="e166e4a2c4ce7c5d37d6e1935d50f3c00ba06fa87b1593257242a335e4f24041" name="arabic_id_view_config.json" size="1714" version="30.1"/>
       <File SHA256:hash="fcf2e787a0ad72a61852a19fdb5358d1ab6e9fb07bd64d9aacdba968c9450b90" name="barcode_parallel_view_config.json" size="825" version="30.1"/>
       <File SHA256:hash="4da3dee801fca2373724f219d1ec3733d10861a9f66c78b2cd616ab86265a3e9" name="barcode_pdf417_view_config.json" size="847" version="30.1"/>
       <File SHA256:hash="437e6779c73076d62bde80bf27fcce1f788362fee1b91b7ef06894a8f85d8b13" name="barcode_trainer_login_view_config.json" size="719" version="30.1"/>
@@ -49,6 +50,7 @@
       <File SHA256:hash="9cccf5436c3f820d86802d36fdcb2642190682564472de2038a769cb6f55c8f5" name="drivers_license_view_config.json" size="1912" version="30.1"/>
       <File SHA256:hash="f44242e540156c293e7c374a3809163f53d01198cfe7591fedf190f1eaf80b66" name="driving_license_view_config.json" size="2006" version="30.1"/>
       <File SHA256:hash="b77a243b4f7cd373c8c1638c3ec59f8600b73d7f9b20b8bf6fdf070532bd5118" name="energy_view_config.json" size="823" version="30.1"/>
+      <File SHA256:hash="a408712803e73bc6fc45c8a4e9ce4d1419a2786cb2ea405d0c75f53ba30b24f4" name="face_authentication_arabic_id_view_config.json" size="1689" version="30.1"/>
       <File SHA256:hash="9a912117a758c18870e449b79be720eeafb295545333d958928a91b0d7dafcea" name="face_authentication_id_view_config.json" size="2546" version="30.1"/>
       <File SHA256:hash="e3c397b081ed3bac7527af8f3008fcbbb76f758bfc21e50b15415ca77a5c2dde" name="german_id_front_config.json" size="935" version="30.1"/>
       <File SHA256:hash="2d3dbce06624fcfc3cb7ad9e70c8c39b0499a249ce0962b989e97a867dde8d2b" name="german_id_view_config.json" size="938" version="30.1"/>
@@ -71,11 +73,10 @@
       <File SHA256:hash="5363b69005da4297beb85b85192462a1d5b68c90fe0fcca7846337d72dc24526" name="serial_number_view_config.json" size="959" version="30.1"/>
       <File SHA256:hash="bc747d90ea79cc9fd7aeb9f19d719f572506c81f82a3e6d9fc101676615956de" name="serial_scan_view_config.json" size="3543" version="30.1"/>
       <File SHA256:hash="e8273f541c81710aab6942462a206ec87af24e3a18db9cfc50532661d1914978" name="shipping_container_view_config.json" size="1128" version="30.1"/>
-      <File SHA256:hash="f9ac85dcc2cc3b1bcb81a9e56da14251ae4b62743b24f367870d46abdbcce36a" name="template_type_and_region_mapping.json" size="4675" version="30.1"/>
+      <File SHA256:hash="5d3d60f731952b2409de90bde39e2d21e7f8a4eac5b09e34aaaebed9bdc1b696" name="template_type_and_region_mapping.json" size="4700" version="30.1"/>
       <File SHA256:hash="57905b0410c095858506197e3a7be57c24b2a0a4fc76dd6ef775440573880944" name="tin_view_config.json" size="1090" version="30.1"/>
       <File SHA256:hash="b7b3827a02d3d297942f61b751765cbab095bcd5d0b73ed9944be7d9a6a05dc0" name="universal_id_driver_view_config.json" size="2488" version="30.1"/>
       <File SHA256:hash="6dfc2502408eb263b03f0c7a355e23e39828784ac3db6c8fa1b1361d7783a5d9" name="universal_id_id_card_view_config.json" size="2504" version="30.1"/>
-      <File SHA256:hash="3d4876f63472e1862a729eaeb07a94d78e87c29957352031ed658c468b1c97e0" name="universal_id_view_2_side_config.json" size="1101" version="30.1"/>
       <File SHA256:hash="3545f61f4d877b38135b2aab36318af0173e37e964e41f46831369613dd27f3a" name="universal_id_view_config.json" size="3182" version="30.1"/>
       <File SHA256:hash="0736be39516eedd7faee0c7be9a896b87e345ca35b06ef594a9996bb53ae31df" name="us_driving_license_view_config.json" size="4111" version="30.1"/>
       <File SHA256:hash="957f4586d4df0a69e816f8b8fa3c74c9a4be477cd3e8c023ad194561266a3886" name="vertical_shipping_container_view_config.json" size="975" version="30.1"/>
@@ -102,17 +103,17 @@
       <File SHA256:hash="f25eaa71e5e9543eb207bc8946c0d56b28c30c81e4e344bdb540f229f4114a72" name="SingleLiveEvent.kt" size="1045" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/java/io/anyline/examples" name="barcode">
-      <File SHA256:hash="c89544fb998f63a69d915b4b30d434b2829a719fbb62a8283c3c0066d6385e9e" name="BarcodeListViewActivity.java" size="15896" version="30.1"/>
+      <File SHA256:hash="a2cf813201ff0a1a335121ff7d8d3b931aae47a808a9d53a84e1ecc5d8696b60" name="BarcodeListViewActivity.java" size="16296" version="30.1"/>
       <File SHA256:hash="f75a0da426da4e8731998ecb55ca646038b2fb75dfa118a64e3bdc695c203491" name="BarcodeModel.java" size="1447" version="30.1"/>
       <File SHA256:hash="fef093c875b7cb839d898975dfe13ebac639e4d2e63cb578b60bf85e503c0138" name="BarcodePrefferences.java" size="3702" version="30.1"/>
       <File SHA256:hash="2ac0b186726a1c24a311f6f9e8342d3bd7c7e74210890083921236026cbfa332" name="CustomCheckbox.java" size="2200" version="30.1"/>
-      <File SHA256:hash="4d1dd2f4c8aec88c5c7fb2bc0ca057c28d242ad268600a286275259cbc68ec8a" name="ScanBarcodeActivity.java" size="16625" version="30.1"/>
+      <File SHA256:hash="dd7eda468c641d1148b4e75188d7b84f83669f30aad9976315611690854bbe24" name="ScanBarcodeActivity.java" size="16261" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/java/io/anyline/examples" name="baseactivities">
       <File SHA256:hash="b7e41d468367e5ec2f60556b880789756f095486f233b3465af7b2a89f72e433" name="BaseToolbarActivity.java" size="1555" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/java/io/anyline/examples" name="baseadapters">
-      <File SHA256:hash="8b30ded52f65dc1ba31e0422323adc4fe5c0892fb88a85ade2b428773016f24a" name="BaseGridAdapter.java" size="7201" version="30.1"/>
+      <File SHA256:hash="f8566b6ff43bb58d9e4d8c21149eb3385f4a05dcb777f846e0bf5e7013c1e9c2" name="BaseGridAdapter.java" size="7870" version="30.1"/>
       <File SHA256:hash="bddb55c79aa1eaaec515323b051fcb72217fbdb32030e3188e716aa59f36e765" name="BaseGridListAdapter.java" size="7747" version="30.1"/>
       <File SHA256:hash="c1996f56d23f5325d97ae4161e5625f89ffaedd8b6e91253e7acff27de2b17df" name="EnergyAdapter.java" size="2055" version="30.1"/>
       <File SHA256:hash="e9fc2b14a15601ec1203ac19a4006637e11d64061026114a248662b80d056256" name="ViewPagerAdapter.java" size="1050" version="30.1"/>
@@ -139,7 +140,7 @@
       <File SHA256:hash="69575f3f6d160b3caad4624ead468b26c52fa2fa1e5f893f7d6850ed847250d9" name="TextViewExtensions.kt" size="1322" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/java/io/anyline/examples" name="id">
-      <File SHA256:hash="7ccf6c7e5bb96ec094fd3424308f920cf53efc74fc25ab17fe1f4401ef5a4139" name="RadioButtonListViewActivity.java" size="9917" version="30.1"/>
+      <File SHA256:hash="340048062521447e5cb8fc1d3b6ce7cea52b9ea30fffd7899f9bebe9068e18b6" name="RadioButtonListViewActivity.java" size="10235" version="30.1"/>
       <File SHA256:hash="a10ffa7d79fc44767e5e8febc2957705226e01e0f475be145fe0a3bfb1e701d0" name="RadioButtonPreferences.java" size="2038" version="30.1"/>
       <File SHA256:hash="4997754feace393381dd2cc79eb01918f9704e70985602ab4f7a749d58ab9217" name="ScanBarcodePDF417Activity.java" size="4274" version="30.1"/>
       <File SHA256:hash="75b71f7e471249a4b408f9d7757da62f46a209ceb2d9087c885473542943f06a" name="ScanBelgianDrivingLicenseActivity.java" size="8486" version="30.1"/>
@@ -148,7 +149,7 @@
       <File SHA256:hash="5fe2841ea713e93a12665c6015a60f103540700c143ef6f224822ce65f5c79a6" name="ScanGermanIdFrontActivity.java" size="6945" version="30.1"/>
       <File SHA256:hash="80a6585fd126714cdbac416a19267ece16ffc1ca8b9f28144c7336788cfccaca" name="ScanMrzActivity.java" size="12815" version="30.1"/>
       <File SHA256:hash="43ff81c5b0bf2c6ac304837f2d96da142775a314f3260fe53fba69b86e47b174" name="ScanUniversalIdActivity.java" size="3429" version="30.1"/>
-      <File SHA256:hash="f017c848f8101576277b5b9cb673c35e2b386de9be4d5be295ce484685cc2d5b" name="ScanUniversalIdResultActivity.java" size="6889" version="30.1"/>
+      <File SHA256:hash="bdabb9e49e29428a839357e79e671772be5d8ad364657093bd660bd6f29676a9" name="ScanUniversalIdResultActivity.java" size="6889" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/java/io/anyline/examples/id" name="NFC">
       <File SHA256:hash="2f2138986cddfd1863424ef91a8e558afd5e7420e81267fc62d695f4ff80bcf9" name="NFCScanActivity.java" size="11807" version="30.1"/>
@@ -236,7 +237,7 @@
       <File SHA256:hash="8d103e06bcbe2c8abda72e47e1fbbd82553c3b7a03b3601c06100f4ef2b7710e" name="MileometerResultView.java" size="1250" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/java/io/anyline/examples" name="scanviewresult">
-      <File SHA256:hash="be1c07395dc6c2e5941cfcc3954e43503a95636018fd49714d0183889e4a0eda" name="ScanViewResultActivity.java" size="12092" version="30.1"/>
+      <File SHA256:hash="edd8831e1a308f6aaa10a87a8e9c05f9252118d66cdea3f42f4fc39f1975df5d" name="ScanViewResultActivity.java" size="12092" version="30.1"/>
       <File SHA256:hash="fc5c1d0562e10dcebdf6c2cff58d6dfcba9e967578fe49b01a6a577833fd860d" name="ScanViewResultAdapter.java" size="2145" version="30.1"/>
       <File SHA256:hash="aabd7123e8db9463d91246ac381c740dcdf2d548fc25b14bfd23326093eb195a" name="ShareDataIntentCreator.kt" size="2280" version="30.1"/>
     </Directory>
@@ -286,7 +287,6 @@
       <File SHA256:hash="246f2e4da719f5f697a8b7896354d0c1014710ce5fd0dd14291f9f2c578e8eb8" name="check_mark.xml" size="663" version="30.1"/>
       <File SHA256:hash="d6a818e3e907f8634587f14e50d2cf5050fa505507e1f601b145d973d859a41e" name="circle_blue.xml" size="265" version="30.1"/>
       <File SHA256:hash="82845a926b1ac066601e8111183b1b713ef5251fb22df84d49278efb57c00cd2" name="circle_gray.xml" size="280" version="30.1"/>
-      <File SHA256:hash="4b14a769866455180967028216ff5b7f96b5991e33aa9076bf1caa1a108a0958" name="clear.png" size="156" version="30.1"/>
       <File SHA256:hash="bc161258a16ebf549566e9c34d288bbae7fc721d88553f103a34c93ff25b2382" name="dialog_background_drawable.xml" size="417" version="30.1"/>
       <File SHA256:hash="f3953012081b2026771be5c6939dd2f060fe2919876c5418b5d69842bd13895b" name="edittext_selector.xml" size="603" version="30.1"/>
       <File SHA256:hash="5242574f6a07324f5726fb05e02ef120334c7a5196aa0fdc4b67062619df6f5c" name="gradient_background.xml" size="293" version="30.1"/>
@@ -299,6 +299,8 @@
       <File SHA256:hash="691bdc8b3f4259dd787ee220466224ef359d3b9a6071cc1ca445b6299ce3b647" name="ic_automotive.xml" size="697" version="30.1"/>
       <File SHA256:hash="72787e8f45c88670fb4655a012ed15f03f388e9b2dc91032abf36ee19f73ec7b" name="ic_baseline_arrow_back_24.xml" size="342" version="30.1"/>
       <File SHA256:hash="e5015fe0c865c555dcb71db91b2c7bef56ba4a0d2acda8b4ac197aa58175d251" name="ic_check.xml" size="323" version="30.1"/>
+      <File SHA256:hash="57b6c386088ccec203d09a371d4ab3e306698b68b26766705f9a5b15fbd566fc" name="ic_checkmark.xml" size="580" version="30.1"/>
+      <File SHA256:hash="dd88d29e3ea419ad26b8800dac8af707eeb71e3f24e965370bcb548bfbae28c6" name="ic_clear.xml" size="341" version="30.1"/>
       <File SHA256:hash="c59ade1e461cc640c08976ee89cc8bd4f8ebda18ac5bf2df8fd25713616c5c5c" name="ic_color_lens_24px.xml" size="795" version="30.1"/>
       <File SHA256:hash="644290f85e614bcf20b1d2f61bdd09f4aa3ad6c69976e19a0673fe55dbd0e015" name="ic_construction_24px.xml" size="800" version="30.1"/>
       <File SHA256:hash="3f8d50619158a74245b83137ed7c1291887e90a301e02422e3868da601a374f0" name="ic_contact_24px.xml" size="426" version="30.1"/>
@@ -428,7 +430,6 @@
       <File SHA256:hash="5a3c6f3c69ad7fdc297b80c3549dfc4b34fe3a11e3b01be1c86012644871fd18" name="icon_small_photo.png" size="457" version="30.1"/>
       <File SHA256:hash="57d0e07edf155818f04fec43706cace4e234a888d6adba76ed0380a9a81a521d" name="icon_small_pin.png" size="676" version="30.1"/>
       <File SHA256:hash="c41ed71d0874ed05b4cf95add83cf14fadd5d26afb862808f37e9280afd76443" name="logo_anyline_info.png" size="6864" version="30.1"/>
-      <File SHA256:hash="65ea719478604f6b2e71f2548fb58409c0cf451b9928b1dc3598e57d0fa733dc" name="scanning_tutorial_dialog_image.png" size="856874" version="30.1"/>
       <File SHA256:hash="d2bb43371972979b4056b8b0aba947322faf001fe3a31a19bfefdd8e2cfea483" name="shaky.png" size="2717" version="30.1"/>
       <File SHA256:hash="ce0eb2535437f1bee36e66f7283cfb4ed482f9194ad75112ec55937907c78da5" name="shaky_info.png" size="1802" version="30.1"/>
       <File SHA256:hash="68516e2a11b0d50cc41c587f95b0ee90ee9897b8f2e5d579a0793b432071340a" name="tin.png" size="178341" version="30.1"/>
@@ -466,6 +467,7 @@
       <File SHA256:hash="5f992eaa82be8b9ca2e16b98b0a9569723ae19acbe352c37f515f921be4ee478" name="passport_background.webp" size="87496" version="30.1"/>
       <File SHA256:hash="64ff215add026ed01a7a352cb0f7668b0a948af76c6b0e5f68dd6e263d13008d" name="redbull_background.png" size="38982" version="30.1"/>
       <File SHA256:hash="365310d3efc58a3718777bc0f2d758787ccdd9c3cde6f7b0db17a1ac62473f9e" name="rotate_screen_white.png" size="879" version="30.1"/>
+      <File SHA256:hash="0bd2f356d2178ad6f803ae573cab472b5c6af3017178a17a89b07112fc41955b" name="scanning_tutorial_dialog_image.png" size="123409" version="30.1"/>
       <File SHA256:hash="67e99d9b61af5ccf7b6222dcde412f70276033bd2545edf9af0a48826d24d759" name="shaky.png" size="4445" version="30.1"/>
       <File SHA256:hash="ae36e7fb8c6069a7d78489248391968ef0b18bf5f5073767b0d76b3ced4d0dbf" name="shaky_info.png" size="2667" version="30.1"/>
       <File SHA256:hash="25f6b38f475c7c12083beb2c5ada77c894743d0697dda4dd19db3d241e16f86b" name="tile_licenseplate_eu.png" size="17192" version="30.1"/>
@@ -525,9 +527,8 @@
       <File SHA256:hash="2029f0e42d571926941493583bb6b8a56c3588509350e9016161b138eae129f0" name="activity_nfc_mrz_scan.xml" size="5192" version="30.1"/>
       <File SHA256:hash="bb5986d8d8fbcf61e137b2abd0cdb88add632ca1f52f7d95e3fc662434b676f0" name="activity_record_search.xml" size="1348" version="30.1"/>
       <File SHA256:hash="d2fc664323ea8c73e22d7c4e9fb0b9ae2b3b8914b83b203e60124c0a040c3956" name="activity_result.xml" size="7611" version="30.1"/>
-      <File SHA256:hash="0ef470e83902d78ea40978a453593d2bb84790ee02b9bdc5c53a7d5f8edb614f" name="activity_result_id_scan_view.xml" size="4773" version="30.1"/>
       <File SHA256:hash="c9d3ec4185b0a5c730e11d8a2deed00099d6536a22131bbf9e1c9c7e57f4f47d" name="activity_result_parallel.xml" size="4687" version="30.1"/>
-      <File SHA256:hash="b1f5b476b3b4c72a4e1454b510cc92e58acb7f7ad8adef7c023fdb347f92bc1a" name="activity_result_scan_view.xml" size="7819" version="30.1"/>
+      <File SHA256:hash="1e5fc3e2e5f625077a7326cbdca61b6bcdfbb5c60187ccd8f97e1910c0d553cd" name="activity_result_scan_view.xml" size="7725" version="30.1"/>
       <File SHA256:hash="e7d59b4d8eb808d2cb61ace78517ad3094221ff5b153a0685543e813a121316f" name="activity_scan.xml" size="867" version="30.1"/>
       <File SHA256:hash="0af349a8e07a25bb4d1b7fe7bea76c40aa1fc2d40a655834f98d53a9d1c0e450" name="activity_scan_energy.xml" size="656" version="30.1"/>
       <File SHA256:hash="23be843ba08490d95c6adf493875e1d419ebffc6cd719b0990c73e1e08a86c53" name="activity_scan_energy_blank.xml" size="2472" version="30.1"/>
@@ -562,7 +563,7 @@
       <File SHA256:hash="250e5e53cf27c090c41470297347da5c6c67c9d09ce32b5ad18300d46b580250" name="list_item_header.xml" size="1189" version="30.1"/>
       <File SHA256:hash="5eb8a3c3bec76c8d4208eee82be2cb89de10b821cfe0d8129faae6e0ee0435f8" name="list_view.xml" size="1245" version="30.1"/>
       <File SHA256:hash="b257d64df407b40a09bf1e836d6674cd0d3519cd9cb9d00ea74cb55680935cba" name="list_view_item.xml" size="2713" version="30.1"/>
-      <File SHA256:hash="0146fd7d6601032ffc598a2552590e2aa57d6c50ad6eac29506f9d3f7894d0fb" name="list_view_result_screen.xml" size="1509" version="30.1"/>
+      <File SHA256:hash="b90e4fa77304e17c94b1245295b1b57355c39f2e5c87a9ad0b43a768993333ce" name="list_view_result_screen.xml" size="1469" version="30.1"/>
       <File SHA256:hash="229f18e5e333565dbc9372dc01bc7231e3e1c0a53b2b875179a5d5695f35a42f" name="logo_toolbar.xml" size="1449" version="30.1"/>
       <File SHA256:hash="a533f42d7ff33e6fd8bbdc5e82cb0868bab1340297f010c0b990ba6a5c95956a" name="mileometer_result.xml" size="924" version="30.1"/>
       <File SHA256:hash="827d3553de2685e2824f002080270b0a91776ada1612b8ffc96aefb589779fa6" name="number_picker.xml" size="742" version="30.1"/>
@@ -587,6 +588,8 @@
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res" name="menu">
       <File SHA256:hash="62d25b36f1015b7a7f4780ccc856038ac7dd2393d6f0184896ada32cface14a2" name="history.xml" size="435" version="30.1"/>
       <File SHA256:hash="1e6f82b5e1d825f3614016df0bec9aefc5dfc95617cc85b94698940921c8cfda" name="menu_result.xml" size="325" version="30.1"/>
+      <File SHA256:hash="a8f2ea84b32a5c28a7ed769f62c0f57b7657bcd6506f73b358e10911000175c5" name="menu_scan_change_script.xml" size="338" version="30.1"/>
+      <File SHA256:hash="a8f2ea84b32a5c28a7ed769f62c0f57b7657bcd6506f73b358e10911000175c5" name="menu_scan_change_script_face_auth.xml" size="338" version="30.1"/>
       <File SHA256:hash="a8f2ea84b32a5c28a7ed769f62c0f57b7657bcd6506f73b358e10911000175c5" name="menu_scan_default.xml" size="338" version="30.1"/>
       <File SHA256:hash="4a95b74f6522dcb9265a63f953255049adc9b1583e56f055c4ab704b90585c76" name="menu_scan_drivers_license.xml" size="504" version="30.1"/>
     </Directory>
@@ -632,7 +635,7 @@
       <File SHA256:hash="965855588abcc1ea990bebef185c5003aae14c0f8a261e011e705f3fd368c893" name="strings.xml" size="28251" version="30.1"/>
       <File SHA256:hash="803d0cadfaf222e7ab666238b1dd4624f55fc6a12033b7c2afaa54cca1186d40" name="strings_serial_number_settings.xml" size="2735" version="30.1"/>
       <File SHA256:hash="dbd7fd748aed35ee1661f64e269ca992bbc8fd90242cc2d4220f1288ef5647fb" name="strings_uid_ota.xml" size="410" version="30.1"/>
-      <File SHA256:hash="5994746a518089c5a4235e9ee0c4ab2b67509a4418249fe34d8e6c10a689006a" name="styles.xml" size="16082" version="30.1"/>
+      <File SHA256:hash="70c2f8b78be551199ee2f9537d5f9f8638a7e6313a0e5599d21bec9eba0979b4" name="styles.xml" size="16286" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res" name="values-v16">
       <File SHA256:hash="e5900d04d0771c2e4b7d3b5f1ce34b587d313b69b9b4d83bd3e792b760f0d1ff" name="styles.xml" size="628" version="30.1"/>

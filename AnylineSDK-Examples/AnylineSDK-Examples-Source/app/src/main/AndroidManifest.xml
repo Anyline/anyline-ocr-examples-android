@@ -43,7 +43,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/MainActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -316,13 +317,15 @@
         </activity>
         <activity
             android:name=".barcode.BarcodeListViewActivity"
+            android:screenOrientation="portrait"
             android:label="Barcode Types"
-            android:screenOrientation="portrait" />
+            android:theme="@style/MainActivityTheme"/>
 
         <activity
             android:name=".id.RadioButtonListViewActivity"
+            android:screenOrientation="portrait"
             android:label="Barcode Types"
-            android:screenOrientation="portrait" />
+            android:theme="@style/MainActivityTheme"/>
 
         <activity
             android:name=".ocr.apis.RecordSearchActivity"

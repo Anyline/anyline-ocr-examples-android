@@ -63,7 +63,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
         controlImage2 = findViewById(R.id.control_image2);
         controlImage3 = findViewById(R.id.control_image3);
 
-        faceImageCaption = findViewById(R.id.textFaceImage);
+        faceImageCaption = findViewById(R.id.textBackImage);
         faceImageView = findViewById(R.id.face_image);
         confirmationButton = findViewById(R.id.confirmation_button);
 
