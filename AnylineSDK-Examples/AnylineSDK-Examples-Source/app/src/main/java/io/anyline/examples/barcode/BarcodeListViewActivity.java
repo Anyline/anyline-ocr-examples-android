@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Layout;
 import android.text.SpannableString;
@@ -26,6 +28,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.content.ContextCompat;
+
 import io.anyline.examples.R;
 import io.anyline.examples.baseactivities.BaseToolbarActivity;
 
@@ -115,7 +119,10 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
         mToolbar.setTitle(s);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.clear);
+
+        Drawable backIcon = ContextCompat.getDrawable(this, R.drawable.ic_baseline_arrow_back_24).mutate();
+        backIcon.setColorFilter(ContextCompat.getColor(this, R.color.black_100), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(backIcon);
     }
 
 
@@ -390,6 +397,7 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
         items.add(new BarcodeModel("MicroQR", "2D Symbologies"));
         items.add(new BarcodeModel("GS1 QR Code", "2D Symbologies"));
         items.add(new BarcodeModel("Aztec", "2D Symbologies"));
+        items.add(new BarcodeModel("MaxiCode", "2D Symbologies"));
 
         return items;
     }

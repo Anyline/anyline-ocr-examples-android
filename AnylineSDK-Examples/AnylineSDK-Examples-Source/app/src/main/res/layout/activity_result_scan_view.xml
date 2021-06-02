@@ -45,12 +45,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/face_image" />
 
-
             <TextView
                 android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/a"
                 android:layout_marginStart="@dimen/margin_start_end"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="@dimen/margin_start_end"
@@ -76,17 +74,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text" />
 
-
             <TextView
-                android:id="@+id/textFaceImage"
+                android:id="@+id/textBackImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/a"
                 android:layout_marginStart="@dimen/margin_start_end"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="@dimen/margin_start_end"
                 android:padding="10dp"
-                android:text="Face Image"
+                android:text="Back Image"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="gone"
@@ -98,7 +94,7 @@
                 android:id="@+id/control_image2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textFaceImage"
+                android:layout_below="@+id/textBackImage"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="@dimen/margin_start_end"
                 android:layout_marginTop="16dp"
@@ -109,7 +105,7 @@
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textFaceImage" />
+                app:layout_constraintTop_toBottomOf="@+id/textBackImage" />
 
             <!-- Only required for multi meter for now -->
             <ImageView

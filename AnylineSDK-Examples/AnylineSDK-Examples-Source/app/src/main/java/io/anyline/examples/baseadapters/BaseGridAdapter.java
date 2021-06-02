@@ -4,20 +4,21 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import io.anyline.examples.R;
 
 public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder> {
@@ -27,12 +28,16 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 
     private Context context;
     private LinkedHashMap<String, String> scanResultHashMap;
+    private boolean rightAligned;
 
     public BaseGridAdapter(Context context, LinkedHashMap<String, String> scanResultHashMap) {
+        this(context, scanResultHashMap, false);
+    }
 
+    public BaseGridAdapter(Context context, LinkedHashMap<String, String> scanResultHashMap, boolean rightAligned) {
         this.context = context;
         this.scanResultHashMap = scanResultHashMap;
-
+        this.rightAligned = rightAligned;
     }
 
     @NonNull
@@ -55,17 +60,13 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
         } else {
             bindGridItem(holder, position);
         }
-        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-
-            @Override
-            public boolean onLongClick(View v) {
-                String result = scanResultHashMap.values().toArray()[position].toString();
-                ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("label", result);
-                clipboard.setPrimaryClip(clip);
-                Toast.makeText(context, "Copied: " + result, Toast.LENGTH_LONG).show();
-                return true;
-            }
+        holder.itemView.setOnLongClickListener(v -> {
+            String result = scanResultHashMap.values().toArray()[position].toString();
+            ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("label", result);
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(context, "Copied: " + result, Toast.LENGTH_LONG).show();
+            return true;
         });
     }
 
@@ -86,22 +87,13 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
 
         Log.i("BGA", "sorted Data: key, value: " + dataFieldTitleResult + " " + scanDataResult);
 
+        int alignment = rightAligned ? Gravity.RIGHT : Gravity.LEFT;
         TextView dataFieldTitleResultTextView = container.findViewById(R.id.dataFieldTitleResult);
+        dataFieldTitleResultTextView.setGravity(alignment);
         TextView resultScanDataTextView = container.findViewById(R.id.resultScanData);
+        resultScanDataTextView.setGravity(alignment);
 
-        if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_format))) {
-            if (pattern.matcher(String.valueOf(dataFieldTitleResult)).matches()) {
-                dataFieldTitleResult = context.getResources().getString(R.string.barcode_format);
-            }
-        }
-
-        if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_result))) {
-            if (pattern.matcher(String.valueOf(dataFieldTitleResult)).matches()) {
-
-                dataFieldTitleResult = context.getResources().getString(R.string.barcode_result);
-            }
-
-        }
+        dataFieldTitleResult = handleBarcodeField(pattern, dataFieldTitleResult);
 
         if (String.valueOf(dataFieldTitleResult).equals(context.getResources().getString(R.string.mrz_viz_date_of_expiry))) {
             dataFieldTitleResult = context.getResources().getString(R.string.mrz_viz_date_of_expiry).replace("viz ", "");
@@ -123,14 +115,34 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
         }
 
         // for front-/backside scanning the second side will have appended " Back" to the label to avoid duplicates.
-		// remove the appendix before displaying it:
+        // remove the appendix before displaying it:
         String s = String.valueOf(dataFieldTitleResult);
-            if (s.startsWith("side2 ")) {
-                dataFieldTitleResult = s.replace("side2 ", "");
+        if (s.startsWith("side2 ")) {
+            dataFieldTitleResult = s.replace("side2 ", "");
         }
-        dataFieldTitleResultTextView.setText(String.valueOf(dataFieldTitleResult));
-        resultScanDataTextView.setText(String.valueOf(scanDataResult));
 
+        dataFieldTitleResultTextView.setText(replaceArabicSuffix(String.valueOf(dataFieldTitleResult)));
+        resultScanDataTextView.setText(String.valueOf(scanDataResult));
+    }
+
+    private String replaceArabicSuffix(String field) {
+        if (field.contains("@ara")) {
+            return field.replace("@ara", " Arabic");
+        }
+        return field;
+    }
+
+    private Object handleBarcodeField(Pattern pattern, Object dataFieldTitleResult) {
+        if (pattern.matcher(String.valueOf(dataFieldTitleResult)).matches()) {
+            if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_format))) {
+                dataFieldTitleResult = context.getResources().getString(R.string.barcode_format);
+            } else if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_result_base64))) {
+                dataFieldTitleResult = context.getResources().getString(R.string.barcode_result_base64);
+            } else if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_result))) {
+                dataFieldTitleResult = context.getResources().getString(R.string.barcode_result);
+            }
+        }
+        return dataFieldTitleResult;
     }
 
 
@@ -142,9 +154,12 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
      */
     private void bindHeaderItem(Holder holder, final int position) {
 
-        List<String> indexes = new ArrayList<String>(scanResultHashMap.values());
+        List<String> indexes = new ArrayList<>(scanResultHashMap.values());
 
-        TextView title = (TextView) holder.itemView.findViewById(R.id.headerTitle);
+        TextView title = holder.itemView.findViewById(R.id.headerTitle);
+        if (rightAligned) {
+            title.setGravity(Gravity.RIGHT);
+        }
         title.setText(indexes.get(position));
 
     }
@@ -154,10 +169,7 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
         if (scanResultHashMap == null || scanResultHashMap.size() <= position) {
             return -1;
         }
-        //String x = scanResultHashMap.get("HEADER");
         List<String> indexes = new ArrayList<String>(scanResultHashMap.keySet());
-
-        //return ("HEADER".equals(indexes.get(position)) || "HEADER_MRZ".equals(indexes.get(position)) || ("HEADER" + ((position/3))).equals(indexes.get(position))) ? TYPE_HEADER : TYPE_ITEM;
         return indexes.get(position).startsWith("HEADER") ? TYPE_HEADER : TYPE_ITEM;
     }
 
@@ -165,7 +177,6 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
     public int getItemCount() {
         return scanResultHashMap.size();
     }
-
 
     class Holder extends RecyclerView.ViewHolder {
 
