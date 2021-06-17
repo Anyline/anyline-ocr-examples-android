@@ -12,7 +12,6 @@ package io.anyline.examples.barcode;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -279,7 +278,6 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
     @Override
     public void onCameraOpened(CameraController cameraController, int width, int height) {
         //the camera is opened async and this is called when the opening is finished
-        Log.d(TAG, "Camera opened successfully. Frame resolution " + width + " x " + height);
     }
 
     @Override
