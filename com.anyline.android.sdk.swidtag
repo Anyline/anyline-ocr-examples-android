@@ -4,7 +4,7 @@
   <Payload n8060:envVarPrefix="$" n8060:envVarSuffix="" n8060:pathSeparator="/">
     <Directory location="" name="">
       <File SHA256:hash="74fb8790cbb37b42f412065f69b16ebf47319a5c0be890e30e67c74231068727" name="INFO.html" size="2230" version="30.1"/>
-      <File SHA256:hash="b3a29af0da2eda22ed717aee6556609d3279668c0e4ef04ba3c1b1f5d82e94e0" name="LICENSE.md" size="122035" version="30.1"/>
+      <File SHA256:hash="eaea20c2cea178be2532820194199e4d810223edd67343f74889d0a61b160ed1" name="LICENSE.md" size="127489" version="30.1"/>
       <File SHA256:hash="196a68a55aa8802012507c9901655c1bec58e03420a5d130dd58ad712b29f7e1" name="README.md" size="6860" version="30.1"/>
     </Directory>
     <Directory location="" name="AnylineFont">
@@ -23,7 +23,7 @@
       <File SHA256:hash="9fd057cb92239bf68afef61669fb8c5fc8f7a387ebd0b65b334d23843fc03b30" name="settings.gradle" size="91" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source" name="app">
-      <File SHA256:hash="4e12e3ec153c5cbbb024c2cccd78279ce6c2854cbd1ef767e502a22f3ac7a865" name="build.gradle" size="3880" version="30.1"/>
+      <File SHA256:hash="f6ff324de1469474b72873ea8692cc52fecedb815201d808e34dda5fefdc1eb0" name="build.gradle" size="3880" version="30.1"/>
       <File SHA256:hash="35a9a509bfe959799167fef205d5082ec617781db46d1c6750190d86da589800" name="fabric.gradle" size="511" version="30.1"/>
       <File SHA256:hash="6b0517f10f0e7a99f60563133c41f65be1292b4498c073f009e025c3abf57c8b" name="version.properties" size="36" version="30.1"/>
     </Directory>
@@ -40,7 +40,7 @@
       <File SHA256:hash="fcf2e787a0ad72a61852a19fdb5358d1ab6e9fb07bd64d9aacdba968c9450b90" name="barcode_parallel_view_config.json" size="825" version="30.1"/>
       <File SHA256:hash="4da3dee801fca2373724f219d1ec3733d10861a9f66c78b2cd616ab86265a3e9" name="barcode_pdf417_view_config.json" size="847" version="30.1"/>
       <File SHA256:hash="437e6779c73076d62bde80bf27fcce1f788362fee1b91b7ef06894a8f85d8b13" name="barcode_trainer_login_view_config.json" size="719" version="30.1"/>
-      <File SHA256:hash="a7bd96c22b34a6f007460c94383bacb6ea445e2b1a2ccc7922fb98064b965fe0" name="barcode_view_config.json" size="711" version="30.1"/>
+      <File SHA256:hash="ed0417a0de983c3a6afafa7a5aa12481fad0c2750f88b654b17ab89df8adf8af" name="barcode_view_config.json" size="713" version="30.1"/>
       <File SHA256:hash="96a9ba71afca0fa91341190948b5a9b90fe8dbca85e2176cc0e0bcbfacf4202c" name="cow_tag_view_config.json" size="1086" version="30.1"/>
       <File SHA256:hash="90de9436f07680ecbf6d9aa91ad7b5527a6170e7a382f72cc6abf5106c84d411" name="data_processing_consent.html" size="3730" version="30.1"/>
       <File SHA256:hash="6720ba7b5d8d8cb785d34b7788bc308077448a66405f97487669c88ad5531bb6" name="demo_database.db3" size="16384" version="30.1"/>
@@ -107,7 +107,7 @@
       <File SHA256:hash="f75a0da426da4e8731998ecb55ca646038b2fb75dfa118a64e3bdc695c203491" name="BarcodeModel.java" size="1447" version="30.1"/>
       <File SHA256:hash="fef093c875b7cb839d898975dfe13ebac639e4d2e63cb578b60bf85e503c0138" name="BarcodePrefferences.java" size="3702" version="30.1"/>
       <File SHA256:hash="2ac0b186726a1c24a311f6f9e8342d3bd7c7e74210890083921236026cbfa332" name="CustomCheckbox.java" size="2200" version="30.1"/>
-      <File SHA256:hash="dd7eda468c641d1148b4e75188d7b84f83669f30aad9976315611690854bbe24" name="ScanBarcodeActivity.java" size="16261" version="30.1"/>
+      <File SHA256:hash="d3aa7ea1bff4ba934c7fd7e84dd1e89725fb81ec547a54611df7c6c6f6f22ea1" name="ScanBarcodeActivity.java" size="16311" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/java/io/anyline/examples" name="baseactivities">
       <File SHA256:hash="b7e41d468367e5ec2f60556b880789756f095486f233b3465af7b2a89f72e433" name="BaseToolbarActivity.java" size="1555" version="30.1"/>
@@ -626,7 +626,7 @@
       <File SHA256:hash="0e5a7519a6d73481c42946cd1dba14dcf31e366c07d96130b5bc4032cfb26458" name="nav_graph.xml" size="2377" version="30.1"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/res" name="values">
-      <File SHA256:hash="ad42d1818780893ba9ca9d3264845beab0a3734b80cfb0eb2b51ee8e4801f279" name="anyline_license_key.xml" size="3131" version="30.1"/>
+      <File SHA256:hash="f6d5d30e45721fb549ab34fde65d8c606192fa22ad264f81bf664b9e31331522" name="anyline_license_key.xml" size="3122" version="30.1"/>
       <File SHA256:hash="35033eb7a3952f9870ad786475b5cdb82294e723f23b535e01de4fab5051204c" name="colors.xml" size="1706" version="30.1"/>
       <File SHA256:hash="fa6448970ce89f3055bdc0fe2af76267d7a7fa7bdace24bfc984d245c4f47921" name="dimens.xml" size="2635" version="30.1"/>
       <File SHA256:hash="dd2f118d49599d2ea0faad8dfaaf8e3299da26761d2be378e365a8d533ab081d" name="dimens_serial_number_settings.xml" size="892" version="30.1"/>

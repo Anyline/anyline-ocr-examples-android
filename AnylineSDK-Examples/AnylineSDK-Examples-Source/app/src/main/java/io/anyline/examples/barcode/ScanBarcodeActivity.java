@@ -12,7 +12,6 @@ package io.anyline.examples.barcode;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -65,6 +64,7 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
     MutableLiveData<Boolean> listen = new MutableLiveData<>();
 
     BarcodeScanPlugin scanPlugin = null;
+    private boolean resultScreenShown = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,10 +133,13 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
                 });
             } else {
                 if (scanResult.getResult().size() != 1) return;
-                barcodeScanView.stop();
-                startScanResultIntent(getResources().getString(R.string.category_barcodes), getBarcodeResult(scanResult.getResult()), path);
-                setupScanProcessView(ScanBarcodeActivity.this, scanResult, getScanModule());
-                finish();
+                if (!resultScreenShown) {
+                    barcodeScanView.stop();
+                    resultScreenShown = true;
+                    startScanResultIntent(getResources().getString(R.string.category_barcodes), getBarcodeResult(scanResult.getResult()), path);
+                    setupScanProcessView(ScanBarcodeActivity.this, scanResult, getScanModule());
+                    finish();
+                }
             }
         });
 
@@ -279,7 +282,6 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
     @Override
     public void onCameraOpened(CameraController cameraController, int width, int height) {
         //the camera is opened async and this is called when the opening is finished
-        Log.d(TAG, "Camera opened successfully. Frame resolution " + width + " x " + height);
     }
 
     @Override
