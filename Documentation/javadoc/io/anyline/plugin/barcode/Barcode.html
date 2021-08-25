@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -132,26 +132,34 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#getBarcodeFormat--">getBarcodeFormat</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#getBase64--">getBase64</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;Point&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#getCoordinates--">getCoordinates</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#getValue--">getValue</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#setBarcodeFormat-io.anyline.plugin.barcode.BarcodeFormat-">setBarcodeFormat</a></span>(<a href="../../../../io/anyline/plugin/barcode/BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a>&nbsp;barcodeFormat)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#setBase64-java.lang.String-">setBase64</a></span>(java.lang.String&nbsp;base64)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#setCoordinates-java.util.List-">setCoordinates</a></span>(java.util.List&lt;Point&gt;&nbsp;coordinates)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#setValue-java.lang.String-">setValue</a></span>(java.lang.String&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>org.json.JSONObject</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#toJSONObject--">toJSONObject</a></span>()</code>&nbsp;</td>
 </tr>
@@ -237,10 +245,28 @@ public&nbsp;void&nbsp;setCoordinates(java.util.List&lt;Point&gt;&nbsp;coordinate
 <a name="toJSONObject--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>toJSONObject</h4>
 <pre>public&nbsp;org.json.JSONObject&nbsp;toJSONObject()</pre>
+</li>
+</ul>
+<a name="setBase64-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBase64</h4>
+<pre>public&nbsp;void&nbsp;setBase64(java.lang.String&nbsp;base64)</pre>
+</li>
+</ul>
+<a name="getBase64--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getBase64</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getBase64()</pre>
 </li>
 </ul>
 </li>

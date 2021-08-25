@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":6,"i9":6,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":6,"i10":6,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -207,95 +207,101 @@ implements <a href="../../../io/anyline/plugin/ScanPlugin.html" title="interface
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#getImageProvider--">getImageProvider</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code>AnylineImage</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#getLastImageWithFullSize--">getLastImageWithFullSize</a></span>()</code>
+<div class="block">Get the latest image with full size.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>abstract java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#getModuleIdentifier--">getModuleIdentifier</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>abstract Product</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#getProduct--">getProduct</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#isRunning--">isRunning</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#removeArgumentExceptionListener--">removeArgumentExceptionListener</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanInfoListener-io.anyline.plugin.ScanInfoListener-">removeScanInfoListener</a></span>(<a href="../../../io/anyline/plugin/ScanInfoListener.html" title="interface in io.anyline.plugin">ScanInfoListener</a>&nbsp;listener)</code>
 <div class="block">Remove the given info listener.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanResultListener-io.anyline.plugin.ScanResultListener-">removeScanResultListener</a></span>(<a href="../../../io/anyline/plugin/ScanResultListener.html" title="interface in io.anyline.plugin">ScanResultListener</a>&lt;<a href="../../../io/anyline/plugin/AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a>&gt;&nbsp;listener)</code>
 <div class="block">Remove the given info listener.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#removeScanRunSkippedListener-io.anyline.plugin.ScanRunSkippedListener-">removeScanRunSkippedListener</a></span>(<a href="../../../io/anyline/plugin/ScanRunSkippedListener.html" title="interface in io.anyline.plugin">ScanRunSkippedListener</a>&nbsp;listener)</code>
 <div class="block">Remove an info listener.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setArgumentExceptionListener-WorkerRunnableExceptionListener-">setArgumentExceptionListener</a></span>(WorkerRunnableExceptionListener&nbsp;workerRunnableExceptionListener)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setAssetPath-java.lang.String-">setAssetPath</a></span>(java.lang.String&nbsp;assetPath)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setCancelOnResult-boolean-">setCancelOnResult</a></span>(boolean&nbsp;isCancelOnResult)</code>
 <div class="block">
  If set to true (default) the scanning is stopped automatically when a result is found.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setCmdFileName-java.lang.String-">setCmdFileName</a></span>(java.lang.String&nbsp;cmdFileName)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setCropRect-android.graphics.RectF-">setCropRect</a></span>(android.graphics.RectF&nbsp;cutoutRect)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setDebug-boolean-">setDebug</a></span>(boolean&nbsp;isDebug)</code>
 <div class="block">Enable/Disables debug output.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setDelayScanTime-double-">setDelayScanTime</a></span>(double&nbsp;delayScanTime)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setImageProvider-ImageProvider-">setImageProvider</a></span>(ImageProvider&nbsp;imageProvider)</code>
 <div class="block">Set the provider, where the plugin can get the images from.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#setReportingEnabled-boolean-">setReportingEnabled</a></span>(boolean&nbsp;isReportingEnabled)</code>
 <div class="block">Enable the reporting of results, including the photo of a scanned item.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#start--">start</a></span>()</code>
 <div class="block">Start the processing of the plugin</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/anyline/plugin/AbstractScanPlugin.html#stop--">stop</a></span>()</code>
 <div class="block">Stop the processing of the plugin</div>
@@ -386,6 +392,21 @@ implements <a href="../../../io/anyline/plugin/ScanPlugin.html" title="interface
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../io/anyline/plugin/ScanPlugin.html#setImageProvider-ImageProvider-">setImageProvider</a></code>&nbsp;in interface&nbsp;<code><a href="../../../io/anyline/plugin/ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="../../../io/anyline/plugin/AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="../../../io/anyline/plugin/ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="getLastImageWithFullSize--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLastImageWithFullSize</h4>
+<pre>public&nbsp;AnylineImage&nbsp;getLastImageWithFullSize()</pre>
+<div class="block">Get the latest image with full size.
+ Use <a href="../../../io/anyline/plugin/AbstractScanPlugin.html#getLastImageWithFullSizeReceiver--"><code>getLastImageWithFullSizeReceiver()</code></a> if it is not certain that the image is actually required.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the latest image with full size</dd>
 </dl>
 </li>
 </ul>
