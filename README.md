@@ -38,7 +38,7 @@ repositories {
 
 dependencies {
     //add the anyline sdk as dependency (maybe adapt version name)
-    implementation 'io.anyline:anylinesdk:29.1'
+    implementation 'io.anyline:anylinesdk:33.0.0'
     //... your other dependencies
 }
 ```
