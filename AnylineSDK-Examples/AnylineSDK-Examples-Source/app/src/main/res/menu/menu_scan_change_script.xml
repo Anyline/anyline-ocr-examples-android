@@ -7,10 +7,4 @@
         android:icon="@drawable/ic_info_white_24dp"
         android:title="@null"
         app:showAsAction="always" />
-
-    <item
-        android:id="@+id/country_selector"
-        android:icon="@drawable/ic_settings"
-        android:title="@null"
-        app:showAsAction="always" />
 </menu>

@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BarcodePrefferences {
-
-
     private static final String SHARED_PREFS_ANYLINE = "AnylinePreferences";
 
     private static BarcodePrefferences instance;
@@ -35,7 +33,6 @@ public class BarcodePrefferences {
     }
 
     public ArrayList<BarcodeModel> getDefault() {
-
         ArrayList<BarcodeModel> items = new ArrayList<>();
         items.add(new BarcodeModel("UPC/EAN", "1D Symbologies - Retail Usages"));
         items.add(new BarcodeModel("Code 128", "1D Symbologies - Logistics / Inventory Usage"));
@@ -47,18 +44,8 @@ public class BarcodePrefferences {
         return items;
     }
 
-
     public void setDefault() {
-
-        ArrayList<BarcodeModel> items = getDefault(); //new ArrayList<>();
-//        items.add(new BarcodeModel("UPC/EAN", "1D Symbologies - Retail Usages"));
-//        items.add(new BarcodeModel("Code 128", "1D Symbologies - Logistics / Inventory Usage"));
-//        items.add(new BarcodeModel("Code 39", "1D Symbologies - Logistics / Inventory Usage"));
-//        items.add(new BarcodeModel("Interleaved 2 of 5", "1D Symbologies - Logistics / Inventory Usage"));
-//        items.add(new BarcodeModel("Data Matrix", "2D Symbologies"));
-//        items.add(new BarcodeModel("PDF417", "2D Symbologies"));
-//        items.add(new BarcodeModel("QR Code", "2D Symbologies"));
-
+        ArrayList<BarcodeModel> items = getDefault();
         Gson gson = new Gson();
         String json = gson.toJson(items);
         editor.putString("BarcodeList", json);

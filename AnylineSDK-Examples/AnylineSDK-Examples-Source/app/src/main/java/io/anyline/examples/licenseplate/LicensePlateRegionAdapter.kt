@@ -38,6 +38,7 @@ class LicensePlateRegionAdapter(
             val imageResource = when (region) {
                 Region.Europe -> R.drawable.tile_licenseplate_eu
                 Region.US -> R.drawable.tile_licenseplate_us
+                Region.Africa -> R.drawable.tile_licenseplate_af
             }
             binding.tileImage.setImageResource(imageResource)
             binding.root.setOnClickListener {

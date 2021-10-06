@@ -66,13 +66,9 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
         scanView.getCameraView().getCameraController().setZoomGestureEnabled(true);
 
         scanViewPlugin.addScanResultListener((ScanResultListener<LicensePlateScanResult>) result -> {
-
             setFeedbackViewActive(false);
-
             String path = setupImagePath(result.getCutoutImage());
-
             startScanResultIntent(getResources().getString(R.string.title_license_plate), getLicensePlateResult(result), path);
-
             setupScanProcessView(ScanLicensePlateActivity.this, result, getScanModule());
         });
         scanViewPlugin.setDebugListener(this);
@@ -87,6 +83,8 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
         switch (region) {
             case US:
                 return LicensePlateScanMode.UnitedStates;
+            case Africa:
+                return LicensePlateScanMode.Africa;
             default:
                 return LicensePlateScanMode.Auto;
         }
@@ -110,7 +108,9 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
 
         HashMap<String, String> licensePlateResultData = new HashMap<>();
 
-        licensePlateResultData.put(getResources().getString(R.string.license_plate_country), (licensePlateResult.getCountry() == null || licensePlateResult.getCountry().isEmpty()) ? getResources().getString(R.string.not_available) : licensePlateResult.getCountry());
+        if (getLicensePlateScanModeFromIntent() != LicensePlateScanMode.Africa) {
+            licensePlateResultData.put(getResources().getString(R.string.license_plate_country), (licensePlateResult.getCountry() == null || licensePlateResult.getCountry().isEmpty()) ? getResources().getString(R.string.not_available) : licensePlateResult.getCountry());
+        }
         licensePlateResultData.put(getResources().getString(R.string.license_plate_result), (licensePlateResult.getResult() == null || licensePlateResult.getResult().isEmpty()) ? getResources().getString(R.string.not_available) : licensePlateResult.getResult());
 
         return licensePlateResultData;

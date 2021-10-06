@@ -379,6 +379,7 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
         items.add(new BarcodeModel("Code 93", "1D Symbologies - Logistics & Inventory Usage"));
         items.add(new BarcodeModel("Interleaved 2 of 5", "1D Symbologies - Logistics & Inventory Usage"));
         items.add(new BarcodeModel("Matrix 2 of 5", "1D Symbologies - Logistics & Inventory Usage"));
+        items.add(new BarcodeModel("One D Inverse", "1D Symbologies - Logistics & Inventory Usage"));
 
         items.add(new BarcodeModel("Code 25", "1D Symbologies - Legacy"));
         items.add(new BarcodeModel("Codabar", "1D Symbologies - Legacy"));

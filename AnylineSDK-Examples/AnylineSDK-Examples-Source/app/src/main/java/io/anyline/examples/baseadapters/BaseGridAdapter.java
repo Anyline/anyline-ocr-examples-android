@@ -121,15 +121,14 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
             dataFieldTitleResult = s.replace("side2 ", "");
         }
 
-        dataFieldTitleResultTextView.setText(replaceArabicSuffix(String.valueOf(dataFieldTitleResult)));
+        dataFieldTitleResultTextView.setText(replaceSuffixes(String.valueOf(dataFieldTitleResult)));
         resultScanDataTextView.setText(String.valueOf(scanDataResult));
     }
 
-    private String replaceArabicSuffix(String field) {
-        if (field.contains("@ara")) {
-            return field.replace("@ara", " Arabic");
-        }
-        return field;
+    private String replaceSuffixes(String field) {
+        return field.replace("@ara", " Arabic")
+                .replace("@zho", " Chinese")
+                .replace("@cyr", " Cyrillic");
     }
 
     private Object handleBarcodeField(Pattern pattern, Object dataFieldTitleResult) {
