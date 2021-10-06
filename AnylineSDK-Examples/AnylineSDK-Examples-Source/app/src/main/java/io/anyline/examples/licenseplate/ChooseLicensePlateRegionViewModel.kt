@@ -12,11 +12,12 @@ class ChooseLicensePlateRegionViewModel : ViewModel() {
     init {
         regions.postValue(listOf(
                 Region.Europe,
-                Region.US
+                Region.US,
+                Region.Africa
         ))
     }
 }
 
 enum class Region {
-    Europe, US
+    Europe, US, Africa
 }

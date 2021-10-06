@@ -322,12 +322,6 @@
             android:theme="@style/MainActivityTheme"/>
 
         <activity
-            android:name=".id.RadioButtonListViewActivity"
-            android:screenOrientation="portrait"
-            android:label="Barcode Types"
-            android:theme="@style/MainActivityTheme"/>
-
-        <activity
             android:name=".ocr.apis.RecordSearchActivity"
             android:label="@string/title_record_result"
             android:parentActivityName=".ocr.ScanRecordActivity"

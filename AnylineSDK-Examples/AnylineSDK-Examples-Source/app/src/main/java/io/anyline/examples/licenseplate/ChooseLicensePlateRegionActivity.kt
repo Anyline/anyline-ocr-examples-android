@@ -58,7 +58,6 @@ class ChooseLicensePlateRegionActivity : AppCompatActivity() {
     inner class ChooseLicensePlateItemDecoration : RecyclerView.ItemDecoration() {
 
         override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-
             val position = parent.getChildAdapterPosition(view)
 
             if (position % 2 == 0) {
@@ -66,6 +65,7 @@ class ChooseLicensePlateRegionActivity : AppCompatActivity() {
             } else {
                 outRect.left = 2.px(parent.context)
             }
+            outRect.bottom = 4.px(parent.context)
         }
     }
 }

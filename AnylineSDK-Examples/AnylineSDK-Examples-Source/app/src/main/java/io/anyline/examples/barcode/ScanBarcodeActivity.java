@@ -221,7 +221,6 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
                 setBarcodeTypes(preselectedItems);
             }
             barcodeScanView.start();
-
         }
     }
 
@@ -261,9 +260,11 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
         BarcodeFormat barcodeFormatGS1 = preselectedItems.contains("GS1 QR Code") ? BarcodeFormat.GS1_QR_CODE : BarcodeFormat.UNKNOWN;
         BarcodeFormat barcodeFormatAZTEC = preselectedItems.contains("Aztec") ? BarcodeFormat.AZTEC : BarcodeFormat.UNKNOWN;
         BarcodeFormat barcodeFormatMaxiCode = preselectedItems.contains("MaxiCode") ? BarcodeFormat.MAXICODE : BarcodeFormat.UNKNOWN;
+        BarcodeFormat barcodeFormatOneDInversed = preselectedItems.contains("One D Inverse") ? BarcodeFormat.ONE_D_INVERSE : BarcodeFormat.UNKNOWN;
 
         scanPlugin.setBarcodeFormats(barcodeFormatDiscrete, barcodeFormatAZTEC, barcodeFormatPDF, barcodeFormatCodabar, barcodeFormatCode39, barcodeFormatCode93, barcodeFormatCode128, barcodeFormatDataMatrix, barcodeFormatEAN8, barcodeFormatEAN13, barcodeFormatQR, barcodeFormatUPCA, barcodeFormatUPCE, barcodeFormatGS1_128, barcodeFormatISTB_128, barcodeFormatTRIOPTIC, barcodeFormatCode32, barcodeFormatITF, barcodeFormatMatrix, barcodeFormatMSI, barcodeFormatCode11,
-                barcodeFormatUSPostnet, barcodeFormatUSPlanet, barcodeFormatUKPostal, barcodeFormatUSPS, barcodeFormatMicroPDF417, barcodeFormatMicroQR, barcodeFormatGS1, barcodeFormatGS1_Databar, barcodeFormatComposite, barcodeFormatMaxiCode);
+                barcodeFormatUSPostnet, barcodeFormatUSPlanet, barcodeFormatUKPostal, barcodeFormatUSPS, barcodeFormatMicroPDF417, barcodeFormatMicroQR, barcodeFormatGS1, barcodeFormatGS1_Databar, barcodeFormatComposite, barcodeFormatMaxiCode,
+                barcodeFormatOneDInversed);
     }
 
     @Override
