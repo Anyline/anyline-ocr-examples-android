@@ -111,6 +111,9 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
         if (getLicensePlateScanModeFromIntent() != LicensePlateScanMode.Africa) {
             licensePlateResultData.put(getResources().getString(R.string.license_plate_country), (licensePlateResult.getCountry() == null || licensePlateResult.getCountry().isEmpty()) ? getResources().getString(R.string.not_available) : licensePlateResult.getCountry());
         }
+        if (getLicensePlateScanModeFromIntent() == LicensePlateScanMode.UnitedStates) {
+            licensePlateResultData.put(getResources().getString(R.string.license_plate_state), (licensePlateResult.getArea() == null || licensePlateResult.getArea().isEmpty()) ? getResources().getString(R.string.not_available) : licensePlateResult.getArea());
+        }
         licensePlateResultData.put(getResources().getString(R.string.license_plate_result), (licensePlateResult.getResult() == null || licensePlateResult.getResult().isEmpty()) ? getResources().getString(R.string.not_available) : licensePlateResult.getResult());
 
         return licensePlateResultData;

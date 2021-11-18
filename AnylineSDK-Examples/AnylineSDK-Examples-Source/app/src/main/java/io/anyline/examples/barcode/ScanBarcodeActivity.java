@@ -97,6 +97,7 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
             preselectedItems = barcodePrefferences.getArrayString();
         }
         scanViewPlugin.setMultiBarcode(false);
+        scanPlugin.enablePDF417Parsing();
         setBarcodeTypes(preselectedItems);
 
         FlashView flashView = barcodeScanView.getFlashView();
@@ -298,11 +299,12 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
 
         for (int i = 0; i < result.size(); i++) {
             barcodeResult.put("HEADER" + (i + 1), getString(R.string.category_barcodes) + " " + (i + 1));
+            Barcode barcode = result.get(i);
 
-            barcodeResult.put(getString(R.string.barcode_result) + i, (result.get(i).getValue() == null || result.get(i).getValue().isEmpty()) ? getResources().getString(R.string.not_available) : result.get(i).getValue());
-            barcodeResult.put(getString(R.string.barcode_result_base64) + i, (result.get(i).getBase64() == null || result.get(i).getBase64().isEmpty()) ? getResources().getString(R.string.not_available) : result.get(i).getBase64());
-            barcodeResult.put(getString(R.string.barcode_format) + i, (result.get(i).getBarcodeFormat() == null) ? getResources().getString(R.string.not_available) : result.get(i).getBarcodeFormat().toString());
-
+            barcodeResult.put(getString(R.string.barcode_result) + i, (barcode.getValue() == null || barcode.getValue().isEmpty()) ? getResources().getString(R.string.not_available) : barcode.getValue());
+            barcodeResult.put(getString(R.string.barcode_result_base64) + i, (barcode.getBase64() == null || barcode.getBase64().isEmpty()) ? getResources().getString(R.string.not_available) : barcode.getBase64());
+            barcodeResult.put(getString(R.string.barcode_format) + i, (barcode.getBarcodeFormat() == null) ? getResources().getString(R.string.not_available) : barcode.getBarcodeFormat().toString());
+            barcodeResult.put(getString(R.string.barcode_result_pdf417) + i, (barcode.getParsedPDF417() == null || barcode.getParsedPDF417().getBody() == null) ? getResources().getString(R.string.not_available) : result.get(i).getParsedPDF417().getBody());
         }
         return barcodeResult;
     }

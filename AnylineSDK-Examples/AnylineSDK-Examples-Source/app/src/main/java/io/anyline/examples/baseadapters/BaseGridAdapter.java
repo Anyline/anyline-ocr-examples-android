@@ -135,6 +135,8 @@ public class BaseGridAdapter extends RecyclerView.Adapter<BaseGridAdapter.Holder
         if (pattern.matcher(String.valueOf(dataFieldTitleResult)).matches()) {
             if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_format))) {
                 dataFieldTitleResult = context.getResources().getString(R.string.barcode_format);
+            } else if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_result_pdf417))) {
+                dataFieldTitleResult = context.getResources().getString(R.string.barcode_result_pdf417);
             } else if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_result_base64))) {
                 dataFieldTitleResult = context.getResources().getString(R.string.barcode_result_base64);
             } else if (String.valueOf(dataFieldTitleResult).contains(context.getResources().getString(R.string.barcode_result))) {

@@ -197,6 +197,15 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.DarkActionBar" />
         <activity
+            android:name=".ocr.ScanBottlecapActivity"
+            android:label="@string/title_bottlecap"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity" />
+        </activity>
+        <activity
             android:name=".ocr.ScanRedBullCodeActivity"
             android:label="@string/title_redbull"
             android:parentActivityName=".MainActivity"
@@ -335,13 +344,18 @@
             android:name=".id.NFC.NFCScanActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ocr.ScanTINActivity"
+            android:name=".ocr.tin.ScanTINActivity"
             android:label="@string/tin"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.anyline.examples.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ContactActivity"
+            android:label="@string/contact"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".meter.ParallelResultActivity" />
         <activity android:name=".meter.ScanParallelAutoAnalogDigitalMeterActivity" />

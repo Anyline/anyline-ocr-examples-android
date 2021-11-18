@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -140,26 +140,34 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#getCoordinates--">getCoordinates</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../io/anyline/plugin/barcode/PDF417.html" title="class in io.anyline.plugin.barcode">PDF417</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#getParsedPDF417--">getParsedPDF417</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#getValue--">getValue</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#setBarcodeFormat-io.anyline.plugin.barcode.BarcodeFormat-">setBarcodeFormat</a></span>(<a href="../../../../io/anyline/plugin/barcode/BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a>&nbsp;barcodeFormat)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#setBase64-java.lang.String-">setBase64</a></span>(java.lang.String&nbsp;base64)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#setCoordinates-java.util.List-">setCoordinates</a></span>(java.util.List&lt;Point&gt;&nbsp;coordinates)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#setParsedPDF417-io.anyline.plugin.barcode.PDF417-">setParsedPDF417</a></span>(<a href="../../../../io/anyline/plugin/barcode/PDF417.html" title="class in io.anyline.plugin.barcode">PDF417</a>&nbsp;parsedPDF417)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#setValue-java.lang.String-">setValue</a></span>(java.lang.String&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>org.json.JSONObject</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/anyline/plugin/barcode/Barcode.html#toJSONObject--">toJSONObject</a></span>()</code>&nbsp;</td>
 </tr>
@@ -191,7 +199,8 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getValue</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getValue()</pre>
+<pre>@NonNull
+public&nbsp;java.lang.String&nbsp;getValue()</pre>
 </li>
 </ul>
 <a name="setValue-java.lang.String-">
@@ -200,7 +209,8 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setValue</h4>
-<pre>public&nbsp;void&nbsp;setValue(java.lang.String&nbsp;value)</pre>
+<pre>public&nbsp;void&nbsp;setValue(@NonNull
+                     java.lang.String&nbsp;value)</pre>
 </li>
 </ul>
 <a name="getBarcodeFormat--">
@@ -228,8 +238,8 @@ public&nbsp;<a href="../../../../io/anyline/plugin/barcode/BarcodeFormat.html" t
 <ul class="blockList">
 <li class="blockList">
 <h4>setBarcodeFormat</h4>
-<pre>@NonNull
-public&nbsp;void&nbsp;setBarcodeFormat(<a href="../../../../io/anyline/plugin/barcode/BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a>&nbsp;barcodeFormat)</pre>
+<pre>public&nbsp;void&nbsp;setBarcodeFormat(@NonNull
+                             <a href="../../../../io/anyline/plugin/barcode/BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a>&nbsp;barcodeFormat)</pre>
 </li>
 </ul>
 <a name="setCoordinates-java.util.List-">
@@ -238,8 +248,7 @@ public&nbsp;void&nbsp;setBarcodeFormat(<a href="../../../../io/anyline/plugin/ba
 <ul class="blockList">
 <li class="blockList">
 <h4>setCoordinates</h4>
-<pre>@NonNull
-public&nbsp;void&nbsp;setCoordinates(java.util.List&lt;Point&gt;&nbsp;coordinates)</pre>
+<pre>public&nbsp;void&nbsp;setCoordinates(java.util.List&lt;Point&gt;&nbsp;coordinates)</pre>
 </li>
 </ul>
 <a name="toJSONObject--">
@@ -263,10 +272,28 @@ public&nbsp;void&nbsp;setCoordinates(java.util.List&lt;Point&gt;&nbsp;coordinate
 <a name="getBase64--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getBase64</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getBase64()</pre>
+</li>
+</ul>
+<a name="setParsedPDF417-io.anyline.plugin.barcode.PDF417-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setParsedPDF417</h4>
+<pre>public&nbsp;void&nbsp;setParsedPDF417(<a href="../../../../io/anyline/plugin/barcode/PDF417.html" title="class in io.anyline.plugin.barcode">PDF417</a>&nbsp;parsedPDF417)</pre>
+</li>
+</ul>
+<a name="getParsedPDF417--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getParsedPDF417</h4>
+<pre>public&nbsp;<a href="../../../../io/anyline/plugin/barcode/PDF417.html" title="class in io.anyline.plugin.barcode">PDF417</a>&nbsp;getParsedPDF417()</pre>
 </li>
 </ul>
 </li>
