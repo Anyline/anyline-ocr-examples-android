@@ -21,6 +21,7 @@
         <item>Others</item>
         <item>@string/title_cowtag</item>
         <item>@string/iban</item>
+        <item>@string/bottlecap</item>
         <item>@string/red_bull_code</item>
         <item>@string/voucher_code</item>
         <item>@string/scrabble</item>
@@ -34,6 +35,7 @@
         <item>HEADER</item>
         <item>io.anyline.examples.ocr.ScanCowtagActivity</item>
         <item>io.anyline.examples.ocr.ScanIbanActivity</item>
+        <item>io.anyline.examples.ocr.ScanBottlecapActivity</item>
         <item>io.anyline.examples.ocr.ScanRedBullCodeActivity</item>
         <item>io.anyline.examples.ocr.ScanVoucherCodeActivity</item>
         <item>io.anyline.examples.ocr.ScanScrabbleActivity</item>
@@ -71,7 +73,7 @@
         <item>io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity</item>
         <item>io.anyline.examples.ocr.ScanShippingContainerActivity</item>
         <item>io.anyline.examples.ocr.ScanVerticalShippingContainerActivity</item>
-        <item>io.anyline.examples.ocr.ScanTINActivity</item>
+        <item>io.anyline.examples.ocr.tin.ScanTINActivity</item>
     </string-array>
 
     <string-array name="example_mro_names">
