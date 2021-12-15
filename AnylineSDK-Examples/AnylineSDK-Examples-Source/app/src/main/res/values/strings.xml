@@ -131,8 +131,6 @@
     <string name="title_water_meter">Water Meter (analog)</string>
     <string name="title_barcode">Barcode</string>
     <string name="title_barcode_PDF417">PDF417</string>
-    <string name="title_belgian_driving_license">"BE Driving License"</string>
-    <string name="title_dutch_driving_license">"NL Driving License"</string>
     <string name="title_nfc_scanning">NFC Scanner</string>
     <string name="title_serial_scanning">Serial Scanning</string>
     <string name="title_mrz">MRZ</string>
@@ -267,7 +265,6 @@
     <string name="germany">Germany</string>
     <string name="auto">Auto</string>
     <string name="title_driving_license">AT/DE/UK Driving License</string>
-    <string name="title_german_id_front">GER ID Front</string>
 
     <string name="title_mileometer">Mileometer (PoC)</string>
     <string name="mileometer">Mileometer (PoC)</string>
@@ -347,6 +344,8 @@
     <string name="screen_customer_title">Customer</string>
     <string name="processes_scan_screen_title">Barcode</string>
 
+    <string name="nationality">Nationality</string>
+
     <!-- MRZ result Screen Keys -->
     <string name="mrz_header">Machine Readable Zone</string>
     <string name="mrz_given_names">Given Names</string>
@@ -395,28 +394,6 @@
     ]]></string>
     <string name="id_type_not_supported">This id is either not supported yet or the scan wasn\'t captured properly. Please try again.</string>
     <string name="result_data">Result Data</string>
-
-
-    <!-- Driving License result Screen Keys -->
-    <string name="driving_license_given_names">Given Names</string>
-    <string name="driving_license_sur_names">Surname</string>
-    <string name="driving_license_DOB">Date of Birth</string>
-    <string name="driving_license_document_code">Document Number</string>
-    <string name="driving_license_authority">Authority</string>
-    <string name="driving_license_POB">Place of Birth</string>
-    <string name="driving_license_categories">Categories</string>
-    <string name="driving_license_issuing_date">Date of Issue</string>
-    <string name="driving_license_expiring_date">Date of Expiry</string>
-
-    <!-- German ID front result Screen Keys -->
-    <string name="german_id_front_given_names">Given Names</string>
-    <string name="german_id_front_surnames">Surname</string>
-    <string name="german_id_front_DOB">Date of Birth</string>
-    <string name="german_id_front_document_nr">Document Number</string>
-    <string name="german_id_front_nationality">Nationality</string>
-    <string name="german_id_front_POB">Place of Birth</string>
-    <string name="german_id_front_can">Card Access Number</string>
-    <string name="german_id_front_expiring_date">Date of Expiry</string>
 
     <!-- Build Version Description -->
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
@@ -474,9 +451,5 @@
     <string name="close">Close</string>
     <string name="barcode_back_message">Are you sure you want to leave this screen? Changes will not be saved!</string>
     <string name="go_back">Go back?</string>
-    <string name="barcode_result_base64">Barcode Result (Base64)</string>
-    <string name="barcode_result_pdf417">Barcode Result (PDF417)</string>
-    <string name="contact">Contact</string>
-    <string name="license_plate_state">State</string>
 
 </resources>

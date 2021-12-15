@@ -138,35 +138,6 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
             scanResultAdapter = new BaseGridAdapter(this.getApplicationContext(), orderedHashMap);
 
-        } else if (scanModule.equals(getResources().getString(R.string.title_driving_license))) {
-            LinkedHashMap<String, String> orderedHashMapDrivingLicense = new LinkedHashMap();
-
-            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_sur_names), result.get(getResources().getString(R.string.driving_license_sur_names)));
-            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_given_names), result.get(getResources().getString(R.string.driving_license_given_names)));
-            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_DOB), result.get(getResources().getString(R.string.driving_license_DOB)));
-            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_document_code), result.get(getResources().getString(R.string.driving_license_document_code)));
-            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_authority), result.get(getResources().getString(R.string.driving_license_authority)));
-            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_expiring_date), result.get(getResources().getString(R.string.driving_license_expiring_date)));
-            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_issuing_date), result.get(getResources().getString(R.string.driving_license_issuing_date)));
-            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_categories), result.get(getResources().getString(R.string.driving_license_categories)));
-            orderedHashMapDrivingLicense.put(getResources().getString(R.string.driving_license_POB), result.get(getResources().getString(R.string.driving_license_POB)));
-
-            scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapDrivingLicense);
-
-        } else if (scanModule.equals(getResources().getString(R.string.title_german_id_front))) {
-            LinkedHashMap<String, String> orderedHashMapGermanIdFront = new LinkedHashMap();
-
-            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_surnames), result.get(getResources().getString(R.string.german_id_front_surnames)));
-            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_given_names), result.get(getResources().getString(R.string.german_id_front_given_names)));
-            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_DOB), result.get(getResources().getString(R.string.german_id_front_DOB)));
-            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_document_nr), result.get(getResources().getString(R.string.german_id_front_document_nr)));
-            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_nationality), result.get(getResources().getString(R.string.german_id_front_nationality)));
-            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_expiring_date), result.get(getResources().getString(R.string.german_id_front_expiring_date)));
-            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_can), result.get(getResources().getString(R.string.german_id_front_can)));
-            orderedHashMapGermanIdFront.put(getResources().getString(R.string.german_id_front_POB), result.get(getResources().getString(R.string.german_id_front_POB)));
-
-            scanResultAdapter = new BaseGridAdapter(this.getBaseContext(), orderedHashMapGermanIdFront);
-
         } else if (scanModule.equals(getResources().getString(R.string.category_energy))) {
             LinkedHashMap<String, String> orderedHashMapEnergy = new LinkedHashMap();
 

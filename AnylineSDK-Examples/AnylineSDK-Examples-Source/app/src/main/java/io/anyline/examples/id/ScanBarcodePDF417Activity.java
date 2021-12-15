@@ -21,6 +21,7 @@ import io.anyline.camera.CameraOpenListener;
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
+import io.anyline.examples.barcode.PDF417ResultParser;
 import io.anyline.plugin.ScanResultListener;
 import io.anyline.plugin.barcode.Barcode;
 import io.anyline.plugin.barcode.BarcodeFormat;
@@ -121,12 +122,12 @@ public class ScanBarcodePDF417Activity extends ScanActivity implements CameraOpe
         HashMap<String, String> serialNumberResult = new HashMap<>();
 
         Barcode barcode = result.getResult().get(0);
-        String resultString = null;
+        String resultString = barcode.getValue();
 
         if (barcode.getParsedPDF417() != null && barcode.getParsedPDF417().getBody() != null) {
-            resultString = barcode.getParsedPDF417().getBody();
+            resultString = PDF417ResultParser.parsePDF417Result(barcode.getParsedPDF417().getBody());
         }
-        serialNumberResult.put(getResources().getString(R.string.pdf_417), (resultString == null) ? getResources().getString(R.string.not_available) : resultString);
+        serialNumberResult.put(getResources().getString(R.string.pdf_417), resultString);
 
         return serialNumberResult;
     }

@@ -55,8 +55,8 @@
           },
           "insuranceCard": {
             "nationality": {"scanOption": 0, "minConfidence": 50},
-            "surname": {"scanOption": 0, "minConfidence": 50},
-            "givenNames": {"scanOption": 0, "minConfidence": 50},
+            "lastName": {"scanOption": 0, "minConfidence": 50},
+            "firstName": {"scanOption": 0, "minConfidence": 50},
             "dateOfBirth": {"scanOption": 0, "minConfidence": 50},
             "personalNumber": {"scanOption": 0, "minConfidence": 50},
             "authority": {"scanOption": 0, "minConfidence": 50},

@@ -89,7 +89,6 @@
         <item>@string/category_identity_documents</item>
         <item>@string/mrz</item>
         <item>@string/title_driving_license</item>
-        <item>@string/title_german_id_front</item>
         <item>@string/title_barcode_PDF417</item>
         <item>Processes</item>
         <item>@string/title_nfc_scanning</item>
@@ -100,7 +99,6 @@
         <item>HEADER</item>
         <item>io.anyline.examples.id.ScanMrzActivity</item>
         <item>io.anyline.examples.id.ScanDrivingLicenseActivity</item>
-        <item>io.anyline.examples.id.ScanGermanIdFrontActivity</item>
         <item>io.anyline.examples.id.ScanBarcodePDF417Activity</item>
         <item>HEADER</item>
         <item>io.anyline.examples.id.NFC.NFCScanMRZActivity</item>
