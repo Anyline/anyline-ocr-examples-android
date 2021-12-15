@@ -260,15 +260,6 @@
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
         <activity
-            android:name=".id.ScanGermanIdFrontActivity"
-            android:label="@string/title_german_id_front"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.anyline.examples.MainActivity" />
-        </activity>
-        <activity
             android:name=".ocr.ScanVehicleIdentificationNumberActivity"
             android:label="@string/vin"
             android:parentActivityName=".MainActivity">
@@ -331,12 +322,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ocr.ScanRecordActivity" />
         </activity>
-        <activity
-            android:name=".id.ScanBelgianDrivingLicenseActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".id.ScanDutchDrivingLicenseActivity"
-            android:screenOrientation="portrait" />
         <activity
             android:name=".id.NFC.NFCScanMRZActivity"
             android:screenOrientation="portrait" />

@@ -19,7 +19,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -85,8 +84,6 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
         // the view can be configured via a json file in the assets, and this config is set here
         // (alternatively it can be configured via xml, see the Energy Example for that)
 
-        //	barcodeContiner.setVisibility(View.VISIBLE);
-
         barcodeScanView.setScanConfig("barcode_view_config.json");
 
         scanPlugin = new BarcodeScanPlugin(getApplicationContext(), "barcode");
@@ -126,7 +123,6 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
             if (scanViewPlugin != null && scanViewPlugin.isMultiBarcodeEnabled()) {
                 scanButton.setVisibility(View.VISIBLE);
                 scanButton.setOnClickListener(view -> {
-                    //setup the scan process
                     barcodeScanView.stop();
                     startScanResultIntent(getResources().getString(R.string.category_barcodes), getBarcodeResult(scanResult.getResult()), path);
                     setupScanProcessView(ScanBarcodeActivity.this, scanResult, getScanModule());
@@ -144,7 +140,6 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
             }
         });
 
-        //create a count down for visibility of the scan button
         CountDownTimer countDown = new CountDownTimer(2000, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -164,16 +159,11 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
             }
         });
 
-        barcodeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                barcodeScanView.stop();
-                scanViewPlugin.setMultiBarcode(isChecked);
-                barcodeScanView.start();
-            }
+        barcodeSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            barcodeScanView.stop();
+            scanViewPlugin.setMultiBarcode(isChecked);
+            barcodeScanView.start();
         });
-
-
     }
 
     @Override
@@ -206,7 +196,6 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
         });
 
         resultText.setText("");
-        //start the actual scanning
         barcodeScanView.start();
     }
 

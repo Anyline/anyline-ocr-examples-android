@@ -261,7 +261,7 @@
                 android:id="@+id/tv_nationality"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/german_id_front_nationality"
+                android:text="@string/nationality"
                 android:textStyle="bold"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_nfc_nationality"
