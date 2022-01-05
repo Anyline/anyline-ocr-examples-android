@@ -173,8 +173,6 @@ Detailed information about how to configure and implement Anyline: [Documentatio
 
 ## License 
 
-To claim a free developer / trial license, go to: [Anyline SDK Register Form](http://anyline.com/sdk-register?utm_source=githubandroid&utm_medium=readme&utm_campaign=examplesapp
-)
-The software underlies the MIT License. As Anyline is a paid software for Commerical Projects, the License Agreement of Anyline GmbH apply, when used commercially. Please have a look at [Anyline License Agreement](https://anylinewebsiteresource.blob.core.windows.net/wordpressmedia/2015/12/ULA-AnylineSDK-August2015.pdf)
+See LICENSE file.
 
-
+To claim a free developer / trial license key, go to: [Anyline SDK Register Form](https://ocr.anyline.com/request/sdk-trial).
