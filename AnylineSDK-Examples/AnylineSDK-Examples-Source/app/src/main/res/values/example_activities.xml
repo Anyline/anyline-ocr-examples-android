@@ -73,7 +73,9 @@
         <item>io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity</item>
         <item>io.anyline.examples.ocr.ScanShippingContainerActivity</item>
         <item>io.anyline.examples.ocr.ScanVerticalShippingContainerActivity</item>
-        <item>io.anyline.examples.ocr.tin.ScanTINActivity</item>
+        <item>io.anyline.examples.tire.tin.ScanTINActivity</item>
+        <item>io.anyline.examples.tire.ScanTireSizeActivity</item>
+        <item>io.anyline.examples.tire.ScanCommercialTireIdActivity</item>
     </string-array>
 
     <string-array name="example_mro_names">
@@ -83,6 +85,8 @@
         <item>@string/shipping_container</item>
         <item>@string/vertical_shipping_container</item>
         <item>@string/tin</item>
+        <item>@string/tire_size</item>
+        <item>@string/commercial_tire_id</item>
     </string-array>
 
     <string-array name="example_identity_documents_names">

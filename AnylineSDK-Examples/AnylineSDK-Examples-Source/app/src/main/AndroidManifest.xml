@@ -328,9 +328,38 @@
         <activity
             android:name=".id.NFC.NFCScanActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ocr.tin.ScanTINActivity"
             android:label="@string/tin"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".tire.tin.ScanTINActivity"
+            android:label="@string/tin"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity" />
+        </activity>
+        <activity
+            android:name=".tire.ScanTireSizeActivity"
+            android:label="@string/tire_size"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity" />
+        </activity>
+        <activity
+            android:name=".tire.ScanCommercialTireIdActivity"
+            android:label="@string/commercial_tire_id"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -368,6 +397,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".id.ScanUniversalIdResultActivity"
+            android:label="Result Data"
+            android:parentActivityName=".id.ScanUniversalIdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DarkActionBar" />
 
         
     </application>
