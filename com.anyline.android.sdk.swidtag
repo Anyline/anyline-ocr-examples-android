@@ -23,7 +23,7 @@
       <File SHA256:hash="9fd057cb92239bf68afef61669fb8c5fc8f7a387ebd0b65b334d23843fc03b30" name="settings.gradle" size="91" version="37.0.0"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source" name="app">
-      <File SHA256:hash="7b462184957cf062b9308d5be447f17a97234429d248fa61155ea6845d0df53d" name="build.gradle" size="4645" version="37.0.0"/>
+      <File SHA256:hash="c5213cbe89a44f10fdfbaa7ac6ba8e1ed28fc34bae541ffb5b07dbe273aab089" name="build.gradle" size="4639" version="37.0.0"/>
       <File SHA256:hash="35a9a509bfe959799167fef205d5082ec617781db46d1c6750190d86da589800" name="fabric.gradle" size="511" version="37.0.0"/>
       <File SHA256:hash="6b0517f10f0e7a99f60563133c41f65be1292b4498c073f009e025c3abf57c8b" name="version.properties" size="36" version="37.0.0"/>
     </Directory>
@@ -61,7 +61,7 @@
       <File SHA256:hash="5791195e07633f46d2fab95a35802c31f1bc585e1d6789a4938acc498c99a4d6" name="iban_view_config.json" size="1212" version="37.0.0"/>
       <File SHA256:hash="4c38d64c7452918d89d349f8704e8dfc111bdef87c670a8986852935557341e3" name="id_card_view_config.json" size="1820" version="37.0.0"/>
       <File SHA256:hash="3b13a0c3f506435fc4718c3681e26e01465d0bcab1d7099eca1b0edd1f45e878" name="isbn_view_config.json" size="945" version="37.0.0"/>
-      <File SHA256:hash="98e837561a2bd730f2241bbe5a97d6edccbd32eeb914ae1972cec8eaf8bb4b8e" name="license_plate_view_config.json" size="993" version="37.0.0"/>
+      <File SHA256:hash="35ec28d8facd2824e37f44b7bb374ba526ed868c0ed0d2106732f9d8ca768435" name="license_plate_view_config.json" size="962" version="37.0.0"/>
       <File SHA256:hash="feeec58101f3245221df466fd120c074908c36211ebb0c59b03e6681578d4d46" name="meter_parallel_view_config.json" size="822" version="37.0.0"/>
       <File SHA256:hash="1b6e1b0669cdd99f4fbca33cab54b1fe0c616f059982f8e5d78dd2be6a82e3d5" name="mileometer.ale" size="10856" version="37.0.0"/>
       <File SHA256:hash="d2df3cdc023dccec4d900d18f90ebd617d391267928e8d8cf972e36468add788" name="mileometer_view_config.json" size="818" version="37.0.0"/>
@@ -111,7 +111,7 @@
       <File SHA256:hash="9017aebe2ac5741703a7f784b32aa1f868624ddbe22a949db4051c4f06388f4d" name="BarcodePrefferences.java" size="3078" version="37.0.0"/>
       <File SHA256:hash="2ac0b186726a1c24a311f6f9e8342d3bd7c7e74210890083921236026cbfa332" name="CustomCheckbox.java" size="2200" version="37.0.0"/>
       <File SHA256:hash="44a360426fbe73d3e2af17c62e8f248d9027379aace1dffa9c632323c235823b" name="PDF417ResultParser.java" size="1383" version="37.0.0"/>
-      <File SHA256:hash="babc721da73758436124ce7780ba1a15a15a1b0f68cc6269029fb19e419c9dfe" name="ScanBarcodeActivity.java" size="16399" version="37.0.0"/>
+      <File SHA256:hash="e5ed696009b19ff6c5452ce53a7bffe38a0ca3ec405c5de96eebdca6e9d2b3f3" name="ScanBarcodeActivity.java" size="16486" version="37.0.0"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src/main/java/io/anyline/examples" name="baseactivities">
       <File SHA256:hash="b7e41d468367e5ec2f60556b880789756f095486f233b3465af7b2a89f72e433" name="BaseToolbarActivity.java" size="1555" version="37.0.0"/>

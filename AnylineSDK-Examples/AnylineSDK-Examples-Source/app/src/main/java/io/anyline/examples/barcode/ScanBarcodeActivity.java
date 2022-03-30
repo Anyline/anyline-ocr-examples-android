@@ -119,10 +119,10 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
         scanViewPlugin.addScannedBarcodesListener(scanResult -> {
             listen.postValue(true);
 
-            String path = setupImagePath(scanResult.getCutoutImage());
             if (scanViewPlugin != null && scanViewPlugin.isMultiBarcodeEnabled()) {
                 scanButton.setVisibility(View.VISIBLE);
                 scanButton.setOnClickListener(view -> {
+                    String path = setupImagePath(scanResult.getCutoutImage());
                     barcodeScanView.stop();
                     startScanResultIntent(getResources().getString(R.string.category_barcodes), getBarcodeResult(scanResult.getResult()), path);
                     setupScanProcessView(ScanBarcodeActivity.this, scanResult, getScanModule());
@@ -131,6 +131,7 @@ public class ScanBarcodeActivity extends ScanActivity implements CameraOpenListe
             } else {
                 if (scanResult.getResult().size() != 1) return;
                 if (!resultScreenShown) {
+                    String path = setupImagePath(scanResult.getCutoutImage());
                     barcodeScanView.stop();
                     resultScreenShown = true;
                     startScanResultIntent(getResources().getString(R.string.category_barcodes), getBarcodeResult(scanResult.getResult()), path);
