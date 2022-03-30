@@ -31,6 +31,8 @@
     <string name="shipping_container">Shipping Container</string>
     <string name="vertical_shipping_container">Vertical Shipping Container</string>
     <string name="tin">TIN</string>
+    <string name="tire_size">Tire Size Specification</string>
+    <string name="commercial_tire_id">Commercial Tire Id</string>
     <string name="serial_number_energy">Serial Number</string>
 
     <string name="heat_meter_4_3">4 pre-decimal places</string>
@@ -251,7 +253,7 @@
 
     <string name="live_chat">Live chat</string>
     <string name="contact_us">Contact us</string>
-
+    <string name="contact">Contact</string>
     <string name="welcome_to_anyline">Welcome to Anyline</string>
     <string name="onboarding_questions">Questions while scanning? </string>
     <string name="onboarding_chat_email_info">Don\'t hesitate to simply reach out via the live chat while scanning or - if you need additional support - simply share your email address with us, and we\'ll have a team member get back to you right away.</string>
@@ -260,6 +262,7 @@
 
     <string name="title_license_plate">License Plate</string>
     <string name="license_plates">License Plate</string>
+    <string name="license_plate_state">State</string>
     <string name="category_vehicles">Vehicles</string>
     <string name="austria">Austria</string>
     <string name="germany">Germany</string>
@@ -394,6 +397,8 @@
     ]]></string>
     <string name="id_type_not_supported">This id is either not supported yet or the scan wasn\'t captured properly. Please try again.</string>
     <string name="result_data">Result Data</string>
+    <string name="barcode_result_base64">Barcode Result (Base64)</string>
+    <string name="barcode_result_pdf417">Barcode Result (PDF417)</string>
 
     <!-- Build Version Description -->
     <string name="app_build_version" formatted="false">App Build Version %s (%d)</string>
@@ -451,9 +456,5 @@
     <string name="close">Close</string>
     <string name="barcode_back_message">Are you sure you want to leave this screen? Changes will not be saved!</string>
     <string name="go_back">Go back?</string>
-    <string name="contact">Contact</string>
-    <string name="barcode_result_base64">Barcode Result (Base64)</string>
-    <string name="barcode_result_pdf417">Barcode Result (PDF417)</string>
-    <string name="license_plate_state">State</string>
 
 </resources>
