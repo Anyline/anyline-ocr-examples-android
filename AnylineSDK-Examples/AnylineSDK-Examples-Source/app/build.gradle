@@ -8,7 +8,7 @@ apply plugin: 'kotlinx-serialization'
 apply plugin: 'dagger.hilt.android.plugin'
 
 buildscript {
-    ext.sdk_version = "37.0.0"
+    ext.sdk_version = "38.0.0"
     repositories {
         mavenCentral()
     }
@@ -86,8 +86,14 @@ dependencies {
     // for update manager
     //implementation 'com.google.android.play:core:1.9.0'
 
+    //uncomment if you want to import the AnylineSdk project
+//    implementation project(':AnylineSdk')
+
     //include AnylineSDK from maven
     implementation "io.anyline:anylinesdk:$sdk_version"
+
+    // Face authentication
+    implementation "io.anyline:facetec-sdk:9.4.5"
 
     //Play core library
     implementation 'com.google.android.play:core-ktx:1.8.1'

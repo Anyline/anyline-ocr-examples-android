@@ -22,6 +22,7 @@ public class Preferences {
     private static final String PREF_EMAIL = "user_email";
     private static final String PREFS_FIRST_START = "first_start";
     private static final String SHARED_PREFS_EMAIL_FACE_AUTHENTICATION = "email_face_authentication_collected";
+    private static final String PREFS_USER_REGISTERED = "user_registered";
 
     public static final String PREFS_PROJECT_NAME = "projectName";
     public static final String PREFS_API_KEY = "apiKey";
@@ -109,10 +110,19 @@ public class Preferences {
         return preferences.getBoolean(PREFS_FIRST_START, true);
     }
 
-
-    public void setFirstStartFinished() {
+    public void setFirstStart(boolean firstStart) {
         preferences.edit()
-                .putBoolean(PREFS_FIRST_START, false)
+                .putBoolean(PREFS_FIRST_START, firstStart)
+                .apply();
+    }
+
+    public boolean isUserRegistered() {
+        return preferences.getBoolean(PREFS_USER_REGISTERED, false);
+    }
+
+    public void setUserRegistered(boolean registered) {
+        preferences.edit()
+                .putBoolean(PREFS_USER_REGISTERED, registered)
                 .apply();
     }
 
