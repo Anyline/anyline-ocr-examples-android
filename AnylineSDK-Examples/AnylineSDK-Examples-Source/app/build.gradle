@@ -8,7 +8,8 @@ apply plugin: 'kotlinx-serialization'
 apply plugin: 'dagger.hilt.android.plugin'
 
 buildscript {
-    ext.sdk_version = "38.0.0"
+    ext.sdk_version = "38.0.1"
+    ext.version_code = 361
     repositories {
         mavenCentral()
     }
@@ -26,7 +27,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 409
+        versionCode version_code
         versionName sdk_version
 
         ndk {

@@ -456,9 +456,5 @@
     <string name="close">Close</string>
     <string name="barcode_back_message">Are you sure you want to leave this screen? Changes will not be saved!</string>
     <string name="go_back">Go back?</string>
-    <string name="contact">Contact</string>
-    <string name="barcode_result_pdf417">Barcode Result (PDF417)</string>
-    <string name="barcode_result_base64">Barcode Result (Base64)</string>
-    <string name="license_plate_state">State</string>
 
 </resources>
