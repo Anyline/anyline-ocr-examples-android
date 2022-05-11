@@ -14,6 +14,18 @@
         />
 
     <ImageView
+        android:id="@+id/draw_overlay_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <FrameLayout
+        android:id="@+id/overlay_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
         android:id="@+id/image_result"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -25,9 +37,9 @@
         android:id="@+id/full_image"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:adjustViewBounds="true"/>
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true" />
 
     <TextView
         android:id="@+id/text_result"
@@ -104,17 +116,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:checked="false"
+                android:checked="true"
                 android:showText="true"
                 android:switchTextAppearance="@style/switch_text_selector"
                 android:textOff="@string/switch_off"
                 android:textOn="@string/switch_on"
                 android:thumb="@drawable/switch_thumb_selector"
-                android:track="@drawable/switch_track_selector" />
+                android:track="@drawable/switch_track_selector"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/view_canvas_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/canvas_views_switch"
+        android:layout_above="@+id/stop_scanning_button"
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
 

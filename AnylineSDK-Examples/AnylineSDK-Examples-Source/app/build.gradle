@@ -8,8 +8,13 @@ apply plugin: 'kotlinx-serialization'
 apply plugin: 'dagger.hilt.android.plugin'
 
 buildscript {
-    ext.sdk_version = "38.0.1"
-    ext.version_code = 361
+    ext {
+        sdk_version = "39.0.0"
+        version_code = 365
+
+        timber_version = '5.0.1'
+        leakcanary_version = '2.8.1'
+    }
     repositories {
         mavenCentral()
     }
@@ -84,6 +89,11 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 
+    implementation "com.jakewharton.timber:timber:$timber_version"
+
+    // debugImplementation because LeakCanary should only run in debug builds.
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
+
     // for update manager
     //implementation 'com.google.android.play:core:1.9.0'
 
@@ -92,9 +102,6 @@ dependencies {
 
     //include AnylineSDK from maven
     implementation "io.anyline:anylinesdk:$sdk_version"
-
-    // Face authentication
-    implementation "io.anyline:facetec-sdk:9.4.5"
 
     //Play core library
     implementation 'com.google.android.play:core-ktx:1.8.1'
