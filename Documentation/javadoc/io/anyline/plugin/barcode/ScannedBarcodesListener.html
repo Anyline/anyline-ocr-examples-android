@@ -123,6 +123,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <hr>
 <pre>public interface <span class="typeNameLabel">ScannedBarcodesListener</span></pre>
+<div class="block">Provides the interface to receive a <a href="BarcodeScanResult.html" title="class in io.anyline.plugin.barcode"><code>BarcodeScanResult</code></a>, anytime a new one is available.
+
+ Pitfalls:
+ - <a href="#scannedBarcodes(io.anyline.plugin.barcode.BarcodeScanResult)"><code>scannedBarcodes(BarcodeScanResult)</code></a> will only be called if there are new results.
+   Therefore, make sure you don't rely on this to continuously update your UI, as in the case
+   where no barcode is present, it also won't deliver any new results.
+ - It is not guaranteed that the <a href="BarcodeScanResult.html" title="class in io.anyline.plugin.barcode"><code>BarcodeScanResult</code></a> contains all of the *visible* barcodes,
+   only the ones it recognized for this result. If you need to keep barcodes that were previously
+   recognized in your UI, you need to implement some kind of caching for the previously
+   recognized barcodes yourself.</div>
 </li>
 </ul>
 </div>

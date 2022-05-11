@@ -148,6 +148,15 @@
                 android:value="io.anyline.examples.MainActivity" />
         </activity>
         <activity
+            android:name=".barcode.ScanBarcodeWithOverlaysActivity"
+            android:label="Barcode with Overlays"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.anyline.examples.MainActivity" />
+        </activity>
+        <activity
             android:name=".id.ScanBarcodePDF417Activity"
             android:label="@string/pdf_417"
             android:parentActivityName=".MainActivity"

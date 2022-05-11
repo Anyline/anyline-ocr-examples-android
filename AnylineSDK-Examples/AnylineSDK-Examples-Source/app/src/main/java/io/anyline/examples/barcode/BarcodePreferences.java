@@ -11,23 +11,23 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BarcodePrefferences {
+public class BarcodePreferences {
     private static final String SHARED_PREFS_ANYLINE = "AnylinePreferences";
 
-    private static BarcodePrefferences instance;
+    private static BarcodePreferences instance;
 
     private final SharedPreferences prefs;
     private final SharedPreferences.Editor editor;
 
     @SuppressLint("CommitPrefEdits")
-    private BarcodePrefferences(Context context) {
+    private BarcodePreferences(Context context) {
         prefs = context.getSharedPreferences(SHARED_PREFS_ANYLINE, Context.MODE_PRIVATE);
         editor = prefs.edit();
     }
 
-    public static BarcodePrefferences getInstance(Context context) {
+    public static BarcodePreferences getInstance(Context context) {
         if (instance == null) {
-            instance = new BarcodePrefferences(context);
+            instance = new BarcodePreferences(context);
         }
         return instance;
     }
