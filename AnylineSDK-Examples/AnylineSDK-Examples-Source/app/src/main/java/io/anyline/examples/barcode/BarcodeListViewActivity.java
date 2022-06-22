@@ -23,7 +23,6 @@ import android.widget.Button;
 import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,7 +40,7 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
     private ListView list;
     private ListAdapter adapter;
     private CheckedTextView allBarcodeTypesCheckBox;
-    private BarcodePrefferences barcodePrefferences;
+    private BarcodePreferences barcodePreferences;
     ArrayList<BarcodeModel> preselectedItems;
     ArrayList<BarcodeModel> preselectedItemsUponStart; // save the selected barcodes at the beginning - to check if changes occured
     ArrayList<BarcodeModel> itemsList;
@@ -51,13 +50,13 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.barcode_list_view_activity);
 
-        barcodePrefferences = BarcodePrefferences.getInstance(this);
-        preselectedItems = barcodePrefferences.get();
+        barcodePreferences = BarcodePreferences.getInstance(this);
+        preselectedItems = barcodePreferences.get();
         if (preselectedItems == null || preselectedItems.size() == 0) {
-            barcodePrefferences.setDefault();
-            preselectedItems = barcodePrefferences.get();
+            barcodePreferences.setDefault();
+            preselectedItems = barcodePreferences.get();
         }
-        preselectedItemsUponStart = barcodePrefferences.get();
+        preselectedItemsUponStart = barcodePreferences.get();
         itemsList = new ArrayList<>();
 
         list = findViewById(R.id.listview);
@@ -100,7 +99,7 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 //barcodePrefferences.setDefault();
-                                preselectedItems = barcodePrefferences.getDefault();
+                                preselectedItems = barcodePreferences.getDefault();
                                 adapter.notifyDataSetChanged();
                             }
                         })
@@ -353,7 +352,7 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
                 showAlertNoBarcodeSelected();
                 return false;
             } else {
-                barcodePrefferences.setBarcodeTypes(preselectedItems);
+                barcodePreferences.setBarcodeTypes(preselectedItems);
                 //onBackPressed();
                 Intent intent = new Intent();
                 setResult(2, intent);

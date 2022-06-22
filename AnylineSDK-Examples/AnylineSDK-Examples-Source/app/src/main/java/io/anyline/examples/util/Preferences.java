@@ -1,13 +1,13 @@
 package io.anyline.examples.util;
 
+import static io.anyline.reporter.ReportingService.PREFS_NAME;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.UUID;
-
-import static io.anyline.reporter.ReportingService.PREFS_NAME;
 
 /**
  * Simple {@link SharedPreferences} manager
@@ -21,7 +21,6 @@ public class Preferences {
     private static final String SHARED_PREFS_ANYLINE = "AnylinePreferences";
     private static final String PREF_EMAIL = "user_email";
     private static final String PREFS_FIRST_START = "first_start";
-    private static final String SHARED_PREFS_EMAIL_FACE_AUTHENTICATION = "email_face_authentication_collected";
     private static final String PREFS_USER_REGISTERED = "user_registered";
 
     public static final String PREFS_PROJECT_NAME = "projectName";
@@ -124,16 +123,6 @@ public class Preferences {
         preferences.edit()
                 .putBoolean(PREFS_USER_REGISTERED, registered)
                 .apply();
-    }
-
-    public void setEmailForFaceAuthenticationCollected() {
-        preferences.edit()
-                .putBoolean(SHARED_PREFS_EMAIL_FACE_AUTHENTICATION, true)
-                .apply();
-    }
-
-    public boolean wasEmailForFaceAuthenticationCollected() {
-        return preferences.contains(SHARED_PREFS_EMAIL_FACE_AUTHENTICATION);
     }
 
     public String getUuid() {

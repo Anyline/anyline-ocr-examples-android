@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -168,41 +168,47 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>java.util.List&lt;<a href="../../opencv/core/Point.html" title="class in io.anyline.opencv.core">Point</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNormalizedCoordinates()">getNormalizedCoordinates</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="PDF417.html" title="class in io.anyline.plugin.barcode">PDF417</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getParsedPDF417()">getParsedPDF417</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getValue()">getValue</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBarcodeFormat(io.anyline.plugin.barcode.BarcodeFormat)">setBarcodeFormat</a></span>&#8203;(<a href="BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a>&nbsp;barcodeFormat)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBase64(java.lang.String)">setBase64</a></span>&#8203;(java.lang.String&nbsp;base64)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCoordinates(java.util.List)">setCoordinates</a></span>&#8203;(java.util.List&lt;<a href="../../opencv/core/Point.html" title="class in io.anyline.opencv.core">Point</a>&gt;&nbsp;coordinates)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setParsedPDF417(io.anyline.plugin.barcode.PDF417)">setParsedPDF417</a></span>&#8203;(<a href="PDF417.html" title="class in io.anyline.plugin.barcode">PDF417</a>&nbsp;parsedPDF417)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCoordinates(java.util.List,io.anyline.opencv.core.Point)">setCoordinates</a></span>&#8203;(java.util.List&lt;<a href="../../opencv/core/Point.html" title="class in io.anyline.opencv.core">Point</a>&gt;&nbsp;coordinates,
+              <a href="../../opencv/core/Point.html" title="class in io.anyline.opencv.core">Point</a>&nbsp;imageSize)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setValue(java.lang.String)">setValue</a></span>&#8203;(java.lang.String&nbsp;value)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setParsedPDF417(io.anyline.plugin.barcode.PDF417)">setParsedPDF417</a></span>&#8203;(<a href="PDF417.html" title="class in io.anyline.plugin.barcode">PDF417</a>&nbsp;parsedPDF417)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setValue(java.lang.String)">setValue</a></span>&#8203;(java.lang.String&nbsp;value)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>org.json.JSONObject</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toJSONObject()">toJSONObject</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -280,13 +286,14 @@ public&nbsp;<a href="BarcodeFormat.html" title="enum in io.anyline.plugin.barcod
                              <a href="BarcodeFormat.html" title="enum in io.anyline.plugin.barcode">BarcodeFormat</a>&nbsp;barcodeFormat)</pre>
 </li>
 </ul>
-<a id="setCoordinates(java.util.List)">
+<a id="setCoordinates(java.util.List,io.anyline.opencv.core.Point)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setCoordinates</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setCoordinates&#8203;(java.util.List&lt;<a href="../../opencv/core/Point.html" title="class in io.anyline.opencv.core">Point</a>&gt;&nbsp;coordinates)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;setCoordinates&#8203;(java.util.List&lt;<a href="../../opencv/core/Point.html" title="class in io.anyline.opencv.core">Point</a>&gt;&nbsp;coordinates,
+                           <a href="../../opencv/core/Point.html" title="class in io.anyline.opencv.core">Point</a>&nbsp;imageSize)</pre>
 </li>
 </ul>
 <a id="toJSONObject()">
@@ -328,10 +335,19 @@ public&nbsp;<a href="BarcodeFormat.html" title="enum in io.anyline.plugin.barcod
 <a id="getParsedPDF417()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getParsedPDF417</h4>
 <pre class="methodSignature">public&nbsp;<a href="PDF417.html" title="class in io.anyline.plugin.barcode">PDF417</a>&nbsp;getParsedPDF417()</pre>
+</li>
+</ul>
+<a id="getNormalizedCoordinates()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getNormalizedCoordinates</h4>
+<pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="../../opencv/core/Point.html" title="class in io.anyline.opencv.core">Point</a>&gt;&nbsp;getNormalizedCoordinates()</pre>
 </li>
 </ul>
 </li>
