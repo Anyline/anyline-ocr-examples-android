@@ -457,5 +457,6 @@
     <string name="barcode_result_pdf417">Barcode Result (PDF417)</string>
     <string name="barcode_result_base64">Barcode Result (Base64)</string>
     <string name="license_plate_state">State</string>
+    <string name="canvas_views_switch"><![CDATA[Canvas <-> Views]]></string>
 
 </resources>
