@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.TextView;
 
-
 import androidx.appcompat.app.AlertDialog;
 import at.nineyards.anyline.core.LicenseException;
 import io.anyline.AnylineSDK;
@@ -18,12 +17,8 @@ import io.anyline.examples.basefragments.ViewPagerFragment;
 
 public class MainActivity extends BaseToolbarActivity {
 
-    private TextView messageCounter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
 
         try {
@@ -50,8 +45,8 @@ public class MainActivity extends BaseToolbarActivity {
         //add the view pager
         if (getSupportFragmentManager().findFragmentById(R.id.fragment_container) == null) {
             getSupportFragmentManager().beginTransaction()
-                                       .add(R.id.fragment_container,
-                                            new ViewPagerFragment()).commit();
+                    .add(R.id.fragment_container,
+                            new ViewPagerFragment()).commit();
         }
     }
 

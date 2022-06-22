@@ -18,6 +18,7 @@
     <string name="digital_meter">Digital Meter</string>
     <string name="barcode">Barcode</string>
     <string name="vin">Vehicle Identification Number</string>
+    <string name="vehicle_registration_certificate">Vehicle Registration Certificate</string>
     <string name="mrz">MRZ / Passport</string>
     <string name="mrz_main">Passport MRZ</string>
     <string name="heat_meter">Heat Meter</string>
@@ -119,7 +120,7 @@
     <string name="category_documents">Documents</string>
     <string name="category_loyality">Loyality</string>
     <string name="category_others">Other</string>
-    <string name="category_mro">MRO</string>
+    <string name="category_vehicle">Vehicle</string>
     <string name="category_identity_documents">Identity Documents</string>
     <string name="samples">Samples</string>
     <string name="history">History</string>
@@ -262,7 +263,6 @@
 
     <string name="title_license_plate">License Plate</string>
     <string name="license_plates">License Plate</string>
-    <string name="category_vehicles">Vehicles</string>
     <string name="austria">Austria</string>
     <string name="germany">Germany</string>
     <string name="auto">Auto</string>

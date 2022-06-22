@@ -9,8 +9,9 @@ apply plugin: 'dagger.hilt.android.plugin'
 
 buildscript {
     ext {
-        sdk_version = "39.0.0"
-        version_code = 365
+        sdk_version = "40.0.0"
+        app_version = "40.0.0"
+        version_code = 367
 
         timber_version = '5.0.1'
         leakcanary_version = '2.8.1'
@@ -25,15 +26,15 @@ buildscript {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion versions.compileSdk
     buildToolsVersion '28.0.3'
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
         versionCode version_code
-        versionName sdk_version
+        versionName app_version
 
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
@@ -98,7 +99,7 @@ dependencies {
     //implementation 'com.google.android.play:core:1.9.0'
 
     //uncomment if you want to import the AnylineSdk project
-//    implementation project(':AnylineSdk')
+    //implementation project(':AnylineSdk')
 
     //include AnylineSDK from maven
     implementation "io.anyline:anylinesdk:$sdk_version"
@@ -110,7 +111,7 @@ dependencies {
 
     //Kotlin
     implementation "androidx.core:core-ktx:1.3.2"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
 
     //Kotlin coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'

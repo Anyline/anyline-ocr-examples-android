@@ -1,0 +1,69 @@
+{
+  "camera" : {
+    "captureResolution" : "1080p"
+  },
+  "flash" : {
+    "mode": "manual",
+    "alignment": "bottom_right",
+    "imageOn": "flash_on",
+    "imageOff": "flash_off"
+  },
+  "viewPlugin" : {
+    "plugin":{
+      "id":"ID",
+      "idPlugin": {
+        "vehicleRegistrationCertificateConfig": {
+          "layoutVehicleCertificate": {
+            "documentNumber": {"scanOption": 0, "minConfidence": 50},
+            "licensePlate": {"scanOption": 0, "minConfidence": 50},
+            "lastName": {"scanOption": 0, "minConfidence": 50},
+            "firstName": {"scanOption": 0, "minConfidence": 50},
+            "address": {"scanOption": 0, "minConfidence": 50},
+            "firstIssued": {"scanOption": 0, "minConfidence": 50},
+            "manufacturerCode": {"scanOption": 0, "minConfidence": 50},
+            "vehicleTypeCode": {"scanOption": 0, "minConfidence": 50},
+            "vehicleIdentificationNumber": {"scanOption": 0, "minConfidence": 50},
+            "brand": {"scanOption": 0, "minConfidence": 50},
+            "vehicleType": {"scanOption": 0, "minConfidence": 50},
+            "displacement": {"scanOption": 0, "minConfidence": 50},
+            "tire": {"scanOption": 0, "minConfidence": 50}
+          }
+        }
+      }
+    },
+    "cutoutConfig" : {
+      "style": "animated_rect",
+      "maxWidthPercent": "90%",
+      "maxHeightPercent": "80%",
+      "alignment": "center",
+      "strokeWidth": 3,
+      "cornerRadius": 8,
+      "strokeColor": "FFFFFF",
+      "outerColor": "000000",
+      "outerAlpha": 0.3,
+      "ratioFromSize": {
+        "width": 90,
+        "height": 46
+      },
+      "cropPadding": {
+        "x": -50,
+        "y": -50
+      },
+      "cropOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "feedbackStrokeColor": "0099FF"
+    },
+    "scanFeedback" : {
+      "style": "CONTOUR_RECT",
+      "visualFeedbackRedrawTimeout": 100,
+      "strokeColor": "0099FF",
+      "fillColor" : "220099FF",
+      "beepOnResult": true,
+      "vibrateOnResult": true,
+      "strokeWidth": 2
+    },
+    "cancelOnResult" : true
+  }
+}

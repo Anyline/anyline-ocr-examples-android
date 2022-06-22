@@ -37,6 +37,7 @@ public class ScanModuleEnum {
         CATTLE_TAG,
         ID_CARD,
         PASSPORT_VISA,
+        VEHICLE_REGISTRATION_CERTIFICATE,
 
         /**
          * @deprecated As the background-selection does not exist anymore, the mode should not be used anymore
@@ -80,7 +81,8 @@ public class ScanModuleEnum {
                 scanModule == ScanModule.GERMAN_ID_FRONT ||
                 scanModule == ScanModule.UNIVERSAL_ID ||
                 scanModule == ScanModule.ID_CARD ||
-                scanModule == ScanModule.PASSPORT_VISA;
+                scanModule == ScanModule.PASSPORT_VISA ||
+                scanModule == ScanModule.VEHICLE_REGISTRATION_CERTIFICATE;
     }
 }
 
