@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":6,"i10":6,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":6,"i12":6,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -222,86 +222,100 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#disableFullFrameScanning()">disableFullFrameScanning</a></span>()</code></th>
+<td class="colLast">
+<div class="block">When full frame scanning is disabled, the SDK only uses the area in the cutout for scanning.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enableFullFrameScanning()">enableFullFrameScanning</a></span>()</code></th>
+<td class="colLast">
+<div class="block">When full frame scanning is enabled, the SDK uses the whole image for scanning.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../AnylineController.html" title="class in io.anyline">AnylineController</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAnylineController()">getAnylineController</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get the anyline controller (the underlying entity that controls the image processing).</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>AssetController</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAssetController()">getAssetController</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId()">getId</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../ImageProvider.html" title="interface in io.anyline">ImageProvider</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getImageProvider()">getImageProvider</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../models/AnylineImage.html" title="class in io.anyline.models">AnylineImage</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLastImageWithFullSize()">getLastImageWithFullSize</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get the latest image with full size.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>abstract java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getModuleIdentifier()">getModuleIdentifier</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>abstract Product</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getProduct()">getProduct</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRunning()">isRunning</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeArgumentExceptionListener()">removeArgumentExceptionListener</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeScanInfoListener(io.anyline.plugin.ScanInfoListener)">removeScanInfoListener</a></span>&#8203;(<a href="ScanInfoListener.html" title="interface in io.anyline.plugin">ScanInfoListener</a>&nbsp;listener)</code></th>
 <td class="colLast">
 <div class="block">Remove the given info listener.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeScanResultListener(io.anyline.plugin.ScanResultListener)">removeScanResultListener</a></span>&#8203;(<a href="ScanResultListener.html" title="interface in io.anyline.plugin">ScanResultListener</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a>&gt;&nbsp;listener)</code></th>
 <td class="colLast">
 <div class="block">Remove the given info listener.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeScanRunSkippedListener(io.anyline.plugin.ScanRunSkippedListener)">removeScanRunSkippedListener</a></span>&#8203;(<a href="ScanRunSkippedListener.html" title="interface in io.anyline.plugin">ScanRunSkippedListener</a>&nbsp;listener)</code></th>
 <td class="colLast">
 <div class="block">Remove an info listener.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setArgumentExceptionListener(WorkerRunnableExceptionListener)">setArgumentExceptionListener</a></span>&#8203;(WorkerRunnableExceptionListener&nbsp;workerRunnableExceptionListener)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAssetPath(java.lang.String)">setAssetPath</a></span>&#8203;(java.lang.String&nbsp;assetPath)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCancelOnResult(boolean)">setCancelOnResult</a></span>&#8203;(boolean&nbsp;isCancelOnResult)</code></th>
 <td class="colLast">
@@ -309,48 +323,48 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
  If set to true (default) the scanning is stopped automatically when a result is found.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCmdFileName(java.lang.String)">setCmdFileName</a></span>&#8203;(java.lang.String&nbsp;cmdFileName)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCropRect(android.graphics.RectF)">setCropRect</a></span>&#8203;(android.graphics.RectF&nbsp;cutoutRect)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDebug(boolean)">setDebug</a></span>&#8203;(boolean&nbsp;isDebug)</code></th>
 <td class="colLast">
 <div class="block">Enable/Disables debug output.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDelayScanTime(double)">setDelayScanTime</a></span>&#8203;(double&nbsp;delayScanTime)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setId(java.lang.String)">setId</a></span>&#8203;(java.lang.String&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setImageProvider(io.anyline.ImageProvider)">setImageProvider</a></span>&#8203;(<a href="../ImageProvider.html" title="interface in io.anyline">ImageProvider</a>&nbsp;imageProvider)</code></th>
 <td class="colLast">
 <div class="block">Set the provider, where the plugin can get the images from.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#start()">start</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Start the processing of the plugin</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stop()">stop</a></span>()</code></th>
 <td class="colLast">
@@ -748,7 +762,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <a id="getModuleIdentifier()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getModuleIdentifier</h4>
 <pre class="methodSignature">public abstract&nbsp;java.lang.String&nbsp;getModuleIdentifier()</pre>
@@ -757,6 +771,36 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <dd><code><a href="ScanPlugin.html#getModuleIdentifier()">getModuleIdentifier</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the module identifier of the plugin</dd>
+</dl>
+</li>
+</ul>
+<a id="enableFullFrameScanning()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>enableFullFrameScanning</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;enableFullFrameScanning()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="ScanPlugin.html#enableFullFrameScanning()">ScanPlugin</a></code></span></div>
+<div class="block">When full frame scanning is enabled, the SDK uses the whole image for scanning.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ScanPlugin.html#enableFullFrameScanning()">enableFullFrameScanning</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a id="disableFullFrameScanning()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>disableFullFrameScanning</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;disableFullFrameScanning()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="ScanPlugin.html#disableFullFrameScanning()">ScanPlugin</a></code></span></div>
+<div class="block">When full frame scanning is disabled, the SDK only uses the area in the cutout for scanning.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ScanPlugin.html#disableFullFrameScanning()">disableFullFrameScanning</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>

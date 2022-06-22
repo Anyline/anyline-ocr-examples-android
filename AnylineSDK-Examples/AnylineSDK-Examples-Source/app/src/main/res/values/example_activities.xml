@@ -4,8 +4,8 @@
     <string-array name="example_products_names">
         <item>@string/category_energy</item>
         <item>@string/category_identity_documents</item>
-        <item>@string/license_plates</item>=
-        <item>@string/category_mro</item>
+        <item>@string/license_plates</item>
+        <item>@string/category_vehicle</item>
         <item>@string/category_others</item>
     </string-array>
 
@@ -13,12 +13,15 @@
         <item>@string/category_energy</item>
         <item>@string/category_identity_documents</item>
         <item>io.anyline.examples.licenseplate.ChooseLicensePlateRegionActivity</item>
-        <item>@string/category_mro</item>
+        <item>@string/category_vehicle</item>
         <item>@string/category_others</item>
     </string-array>
 
     <string-array name="example_others_names">
         <item>Others</item>
+        <item>@string/serial_number</item>
+        <item>@string/shipping_container</item>
+        <item>@string/vertical_shipping_container</item>
         <item>@string/title_cowtag</item>
         <item>@string/iban</item>
         <item>@string/bottlecap</item>
@@ -33,6 +36,9 @@
 
     <string-array name="example_others_classes" translatable="false">
         <item>HEADER</item>
+        <item>io.anyline.examples.ocr.ScanSerialNumberActivity</item>
+        <item>io.anyline.examples.ocr.ScanShippingContainerActivity</item>
+        <item>io.anyline.examples.ocr.ScanVerticalShippingContainerActivity</item>
         <item>io.anyline.examples.ocr.ScanCowtagActivity</item>
         <item>io.anyline.examples.ocr.ScanIbanActivity</item>
         <item>io.anyline.examples.ocr.ScanBottlecapActivity</item>
@@ -67,26 +73,22 @@
         <item>io.anyline.examples.meter.ScanEnergySerialNumberActivity</item>
     </string-array>
 
-    <string-array name="example_mro_classes" translatable="false">
+    <string-array name="example_vehicle_classes" translatable="false">
         <item>HEADER</item>
-        <item>io.anyline.examples.ocr.ScanSerialNumberActivity</item>
-        <item>io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity</item>
-        <item>io.anyline.examples.ocr.ScanShippingContainerActivity</item>
-        <item>io.anyline.examples.ocr.ScanVerticalShippingContainerActivity</item>
         <item>io.anyline.examples.tire.tin.ScanTINActivity</item>
         <item>io.anyline.examples.tire.ScanTireSizeActivity</item>
         <item>io.anyline.examples.tire.ScanCommercialTireIdActivity</item>
+        <item>io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity</item>
+<!--        <item>io.anyline.examples.id.ScanVehicleRegistrationCertificateActivity</item>-->
     </string-array>
 
-    <string-array name="example_mro_names">
-        <item>@string/category_mro</item>
-        <item>@string/serial_number</item>
-        <item>@string/vin</item>
-        <item>@string/shipping_container</item>
-        <item>@string/vertical_shipping_container</item>
+    <string-array name="example_vehicle_names">
+        <item>@string/category_vehicle</item>
         <item>@string/tin</item>
         <item>@string/tire_size</item>
         <item>@string/commercial_tire_id</item>
+        <item>@string/vin</item>
+<!--        <item>@string/vehicle_registration_certificate</item>-->
     </string-array>
 
     <string-array name="example_identity_documents_names">

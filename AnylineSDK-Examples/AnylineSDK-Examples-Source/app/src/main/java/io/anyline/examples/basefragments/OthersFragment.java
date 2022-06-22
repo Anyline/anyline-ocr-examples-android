@@ -3,7 +3,9 @@ package io.anyline.examples.basefragments;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,10 +16,10 @@ import io.anyline.examples.R;
 
 public class OthersFragment extends BaseFragment implements BaseGridListAdapter.OnItemClickListener {
 
-    public static final String MRO = "MRO_FRAGMENT";
+    public static final String VEHICLE = "VEHICLE_FRAGMENT";
     public static final String DOCUMENT_IDENTITY_FRAGMENT = "DOCUMENT_IDENTITY_FRAGMENT";
 
-    private boolean isMRO = false;
+    private boolean isVehicle = false;
     private boolean isIdentityDocument = false;
 
     private String[] classes;
@@ -31,7 +33,7 @@ public class OthersFragment extends BaseFragment implements BaseGridListAdapter.
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            isMRO = getArguments().getBoolean(MRO);
+            isVehicle = getArguments().getBoolean(VEHICLE);
             isIdentityDocument = getArguments().getBoolean(DOCUMENT_IDENTITY_FRAGMENT);
         }
     }
@@ -40,17 +42,17 @@ public class OthersFragment extends BaseFragment implements BaseGridListAdapter.
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         Resources res = getContext().getResources();
-        if(isIdentityDocument){
+        if (isIdentityDocument) {
 
             classes = res.getStringArray(R.array.example_identity_documents_classes);
             names = res.getStringArray(R.array.example_identity_documents_names);
 
-        }else if(isMRO){
+        } else if (isVehicle) {
 
-            classes = res.getStringArray(R.array.example_mro_classes);
-            names = res.getStringArray(R.array.example_mro_names);
+            classes = res.getStringArray(R.array.example_vehicle_classes);
+            names = res.getStringArray(R.array.example_vehicle_names);
 
-        }else {
+        } else {
 
             classes = res.getStringArray(R.array.example_others_classes);
             names = res.getStringArray(R.array.example_others_names);
@@ -67,7 +69,7 @@ public class OthersFragment extends BaseFragment implements BaseGridListAdapter.
     public void onItemClick(int position) {
 
         try {
-            if(mAdapter.getItemViewType(position) == 1) {
+            if (mAdapter.getItemViewType(position) == 1) {
                 Fragment fragment = null;
                 switch (mAdapter.getItemName(position)) {
 

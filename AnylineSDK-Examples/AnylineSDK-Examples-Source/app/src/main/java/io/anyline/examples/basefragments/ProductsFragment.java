@@ -58,12 +58,12 @@ public class ProductsFragment extends BaseFragment implements BaseGridListAdapte
                         replaceFragment(fragment, "OTHERS_FRAGMENT");
                         break;
 
-                    case "MRO":
+                    case "Vehicle":
 
                         fragment = new OthersFragment();
-                        Bundle mroArgs = new Bundle();
-                        mroArgs.putBoolean(OthersFragment.MRO, true);
-                        fragment.setArguments(mroArgs);
+                        Bundle vehicleArgs = new Bundle();
+                        vehicleArgs.putBoolean(OthersFragment.VEHICLE, true);
+                        fragment.setArguments(vehicleArgs);
                         replaceFragment(fragment, "OTHERS_FRAGMENT");
                         break;
 
