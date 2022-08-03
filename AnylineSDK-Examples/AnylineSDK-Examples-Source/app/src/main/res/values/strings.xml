@@ -298,6 +298,7 @@
     <string name="scan">Scan</string>
     <string name="save">Save</string>
     <string name="confirm">Confirm</string>
+    <string name="continue_scanning">Continue scanning</string>
     <string name="saved">Saved</string>
     <string name="finish">Finish</string>
     <string name="scan_again">Scan Again</string>
