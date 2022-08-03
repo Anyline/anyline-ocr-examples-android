@@ -100,7 +100,7 @@
         android:gravity="center"
         android:background="@color/blue_light"
         android:minHeight="60dp"
-        android:text="@string/confirm"
+        android:text="@string/continue_scanning"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="18sp"

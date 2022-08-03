@@ -9,10 +9,6 @@ apply plugin: 'dagger.hilt.android.plugin'
 
 buildscript {
     ext {
-        sdk_version = "40.0.0"
-        app_version = "40.0.0"
-        version_code = 367
-
         timber_version = '5.0.1'
         leakcanary_version = '2.8.1'
     }
@@ -33,8 +29,9 @@ android {
         vectorDrawables.useSupportLibrary = true
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
-        versionCode version_code
-        versionName app_version
+
+        versionCode versions.anyline_scanner_app_code
+        versionName versions.anyline_scanner_app_name
 
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
@@ -102,7 +99,7 @@ dependencies {
     //implementation project(':AnylineSdk')
 
     //include AnylineSDK from maven
-    implementation "io.anyline:anylinesdk:$sdk_version"
+    implementation "io.anyline:anylinesdk:${versions.anyline_android_sdk_name}"
 
     //Play core library
     implementation 'com.google.android.play:core-ktx:1.8.1'
@@ -142,7 +139,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0"
     implementation 'androidx.preference:preference-ktx:1.1.1'
-    customImplementation("io.anyline:anylinesdk:$sdk_version")
+    customImplementation("io.anyline:anylinesdk:${versions.anyline_android_sdk_name}")
 
     // Testing
     testImplementation "junit:junit:4.13"

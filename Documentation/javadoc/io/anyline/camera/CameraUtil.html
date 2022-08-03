@@ -217,9 +217,9 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="CameraSize.html" title="class in io.anyline.camera">CameraSize</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBiggestFittingPreviewSize(java.util.List,int,int)">getBiggestFittingPreviewSize</a></span>&#8203;(java.util.List&lt;<a href="CameraSize.html" title="class in io.anyline.camera">CameraSize</a>&gt;&nbsp;sizes,
-                            int&nbsp;maxWidth,
-                            int&nbsp;maxHeight)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBiggestFittingPreviewSize(java.util.List,int,int)">getBiggestFittingPreviewSize</a></span>&#8203;(java.util.List&lt;<a href="CameraSize.html" title="class in io.anyline.camera">CameraSize</a>&gt;&nbsp;availableCameraPreviewSizes,
+                            int&nbsp;maxRequestedCameraPreviewWidth,
+                            int&nbsp;maxRequestedCameraPreviewHeight)</code></th>
 <td class="colLast">
 <div class="block">This helper method can be called to select camera preview size.</div>
 </td>
@@ -422,17 +422,33 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getBiggestFittingPreviewSize</h4>
-<pre class="methodSignature">public static&nbsp;<a href="CameraSize.html" title="class in io.anyline.camera">CameraSize</a>&nbsp;getBiggestFittingPreviewSize&#8203;(java.util.List&lt;<a href="CameraSize.html" title="class in io.anyline.camera">CameraSize</a>&gt;&nbsp;sizes,
-                                                      int&nbsp;maxWidth,
-                                                      int&nbsp;maxHeight)</pre>
+<pre class="methodSignature">public static&nbsp;<a href="CameraSize.html" title="class in io.anyline.camera">CameraSize</a>&nbsp;getBiggestFittingPreviewSize&#8203;(java.util.List&lt;<a href="CameraSize.html" title="class in io.anyline.camera">CameraSize</a>&gt;&nbsp;availableCameraPreviewSizes,
+                                                      int&nbsp;maxRequestedCameraPreviewWidth,
+                                                      int&nbsp;maxRequestedCameraPreviewHeight)</pre>
 <div class="block">This helper method can be called to select camera preview size.
  It goes over the list of the supported preview sizes and selects the maximum one which
- fits.</div>
+ fits.
+
+ It was previously much simpler, but required a rework with [SDKY-122], because it didn't
+ account for availableCameraPreviewSizes containing a size (i.e. 1280x720) and its
+ sides-swapped counterpart size (i.e. 720x1280). For this case, the position within
+ availableCameraPreviewSizes would determine which size was returned (i.e. if 1280x720 was
+ return 720x1280, even though 1280x720 would have been correct).
+
+ Because we have no way of knowing the orientation the camera considers native, we're guessing
+ that the camera provides a greater number of sizes in its native resolution and then decide
+ based on this which CameraPreviewSize should be correct.
+
+ Potentially there are some special cases that are not considered, but also have not yet been
+ observed, i.e.:
+ - CameraPreviewSizes being natively only square (instead of portrait/landscape)
+ - Multiple results with the same resolution in the same format (i.e. 2x 1280x720)
+ - CameraPreviewSize absolutely being unable to return any size</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>sizes</code> - - the supported sizes</dd>
-<dd><code>maxWidth</code> - - the max width</dd>
-<dd><code>maxHeight</code> - - the max height</dd>
+<dd><code>availableCameraPreviewSizes</code> - - the supported sizes</dd>
+<dd><code>maxRequestedCameraPreviewWidth</code> - - the max width</dd>
+<dd><code>maxRequestedCameraPreviewHeight</code> - - the max height</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the biggest size that fits in the given max values</dd>
 </dl>
