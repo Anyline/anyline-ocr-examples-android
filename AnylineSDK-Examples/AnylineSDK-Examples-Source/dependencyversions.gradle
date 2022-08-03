@@ -8,11 +8,18 @@
  * Based on
  * - https://discuss.gradle.org/t/usage-of-apply-from-in-buildscript-scope/1844
  * - https://docs.gradle.org/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
+ *
+ * Make sure to keep this file in sync with ../sdkdependencyversions.gradle!
  */
 def versions = [
         'minSdk'                                : 21,
         'targetSdk'                             : 30, // TODO: update to 31
         'compileSdk'                            : 30, // TODO: update to 31
+
+        'anyline_android_sdk_name'              : '41.0.0',
+        'anyline_android_sdk_code'              : 'is defined someplace else',
+        'anyline_scanner_app_name'              : '41.0.0',
+        'anyline_scanner_app_code'              : 369,
 
         'kotlin'                                : '1.6.21',
         'gradle'                                : '4.1.3',

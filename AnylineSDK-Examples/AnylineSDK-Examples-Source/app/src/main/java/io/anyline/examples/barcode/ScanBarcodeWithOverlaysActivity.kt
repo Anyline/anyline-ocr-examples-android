@@ -83,7 +83,7 @@ class ScanBarcodeWithOverlaysActivity : ScanActivity(), CameraOpenListener {
         scanView.setCameraOpenListener(this)
         // the view can be configured via a json file in the assets, and this config is set here
         // (alternatively it can be configured via xml, see the Energy Example for that)
-        scanView.setScanConfig("barcode_view_config.json")
+        scanView.setScanConfig("barcode_overlay_view_config.json")
 
         scanPlugin = BarcodeScanPlugin(applicationContext, "barcode")
         scanPlugin.setCancelOnResult(false)
