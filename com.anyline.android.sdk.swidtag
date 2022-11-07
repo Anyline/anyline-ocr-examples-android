@@ -355,7 +355,7 @@
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source" name="app">
       <File SHA256:hash="6b0517f10f0e7a99f60563133c41f65be1292b4498c073f009e025c3abf57c8b" name="version.properties" size="36" version="42.0.0"/>
-      <File SHA256:hash="a6a755425b83065eb5bf2d4ea29e0782c0a3f6ed5fb3f9465d1f157ee86d2d88" name="build.gradle" size="7094" version="42.0.0"/>
+      <File SHA256:hash="a712dd79427b6b902b8aa3d15e9530f41f9e728e193b2c759dfa848853484d6d" name="build.gradle" size="7054" version="42.0.0"/>
     </Directory>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app" name="src"/>
     <Directory location="AnylineSDK-Examples/AnylineSDK-Examples-Source/app/src" name="main">
@@ -586,7 +586,7 @@
       <File SHA256:hash="60784428130d4d7d470458c3a02d4f67f3cd9253d954b753a67a39972252c538" name="example_activities.xml" size="5320" version="42.0.0"/>
       <File SHA256:hash="dd2f118d49599d2ea0faad8dfaaf8e3299da26761d2be378e365a8d533ab081d" name="dimens_serial_number_settings.xml" size="892" version="42.0.0"/>
       <File SHA256:hash="70c2f8b78be551199ee2f9537d5f9f8638a7e6313a0e5599d21bec9eba0979b4" name="styles.xml" size="16286" version="42.0.0"/>
-      <File SHA256:hash="e144232d88401237212472df95cc9adc33f9ce6aa0b1d4b61b60c7006644e371" name="strings.xml" size="27411" version="42.0.0"/>
+      <File SHA256:hash="f280062e4733af77c15a030e96b2a2053076092a8b1abed23fb0a8baf8fa7c69" name="strings.xml" size="28307" version="42.0.0"/>
       <File SHA256:hash="c6780448dea4613400d021330089f18c8143bd78db307a9ce57685c7c950316c" name="ids.xml" size="634" version="42.0.0"/>
       <File SHA256:hash="f652332546b78750f7dc0a59679d5b1b2a8fb9d676501334ca930b048b4e705a" name="anyline_license_key.xml" size="1647" version="42.0.0"/>
       <File SHA256:hash="803d0cadfaf222e7ab666238b1dd4624f55fc6a12033b7c2afaa54cca1186d40" name="strings_serial_number_settings.xml" size="2735" version="42.0.0"/>
