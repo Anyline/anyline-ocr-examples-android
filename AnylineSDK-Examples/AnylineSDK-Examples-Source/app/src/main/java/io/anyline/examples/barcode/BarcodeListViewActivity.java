@@ -60,7 +60,7 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
         itemsList = new ArrayList<>();
 
         list = findViewById(R.id.listview);
-        itemsList = sortAndAddSections(getItems());
+        itemsList = sortAndAddSections(BarcodePreferences.getAll());
         View footer = LayoutInflater.from(this).inflate(R.layout.list_item_foot, null);
         restoreButton = footer.findViewById(R.id.btnRestore);
         View header = LayoutInflater.from(this).inflate(R.layout.list_item_header, null);
@@ -113,7 +113,7 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        SpannableString s = new SpannableString("Barcode Types");
+        SpannableString s = new SpannableString("Symbologies");
         s.setSpan((new AlignmentSpan.Standard(Layout.Alignment.ALIGN_CENTER)), 0, s.length(), 0);
         mToolbar.setTitle(s);
 
@@ -355,50 +355,11 @@ public class BarcodeListViewActivity extends BaseToolbarActivity {
                 barcodePreferences.setBarcodeTypes(preselectedItems);
                 //onBackPressed();
                 Intent intent = new Intent();
-                setResult(2, intent);
+                setResult(RESULT_OK, intent);
                 finish();
             }
         }
         return super.onOptionsItemSelected(item);
     }
 
-
-    private ArrayList<BarcodeModel> getItems() {
-
-        ArrayList<BarcodeModel> items = new ArrayList<>();
-        items.add(new BarcodeModel("UPC/EAN", "1D Symbologies - Retail"));
-        items.add(new BarcodeModel("GS1 Databar & Composite Codes", "1D Symbologies - Retail"));
-
-        items.add(new BarcodeModel("Code 128", "1D Symbologies - Logistics & Inventory Usage"));
-        items.add(new BarcodeModel("GS1-128", "1D Symbologies - Logistics & Inventory Usage"));
-        items.add(new BarcodeModel("ISBT 128", "1D Symbologies - Logistics & Inventory Usage"));
-        items.add(new BarcodeModel("Code 39", "1D Symbologies - Logistics & Inventory Usage"));
-        items.add(new BarcodeModel("Trioptic Code 39", "1D Symbologies - Logistics & Inventory Usage"));
-        items.add(new BarcodeModel("Code 32", "1D Symbologies - Logistics & Inventory Usage"));
-        items.add(new BarcodeModel("Code 93", "1D Symbologies - Logistics & Inventory Usage"));
-        items.add(new BarcodeModel("Interleaved 2 of 5", "1D Symbologies - Logistics & Inventory Usage"));
-        items.add(new BarcodeModel("Matrix 2 of 5", "1D Symbologies - Logistics & Inventory Usage"));
-        items.add(new BarcodeModel("One D Inverse", "1D Symbologies - Logistics & Inventory Usage"));
-
-        items.add(new BarcodeModel("Code 25", "1D Symbologies - Legacy"));
-        items.add(new BarcodeModel("Codabar", "1D Symbologies - Legacy"));
-        items.add(new BarcodeModel("MSI", "1D Symbologies - Legacy"));
-        items.add(new BarcodeModel("Code 11", "1D Symbologies - Legacy"));
-
-        items.add(new BarcodeModel("US Postnet", "Postal Service"));
-        items.add(new BarcodeModel("US Planet", "Postal Service"));
-        items.add(new BarcodeModel("UK Postal", "Postal Service"));
-        items.add(new BarcodeModel("USPS 4CB / OneCode / Intelligent Mail", "Postal Service"));
-
-        items.add(new BarcodeModel("PDF417", "2D Symbologies"));
-        items.add(new BarcodeModel("MicroPDF417", "2D Symbologies"));
-        items.add(new BarcodeModel("Data Matrix", "2D Symbologies"));
-        items.add(new BarcodeModel("QR Code", "2D Symbologies"));
-        items.add(new BarcodeModel("MicroQR", "2D Symbologies"));
-        items.add(new BarcodeModel("GS1 QR Code", "2D Symbologies"));
-        items.add(new BarcodeModel("Aztec", "2D Symbologies"));
-        items.add(new BarcodeModel("MaxiCode", "2D Symbologies"));
-
-        return items;
-    }
 }

@@ -1,29 +1,33 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-parcelize'
-apply plugin: 'com.google.firebase.appdistribution'
-apply plugin: "de.mannodermaus.android-junit5"
-apply plugin: 'kotlinx-serialization'
-apply plugin: 'dagger.hilt.android.plugin'
-
 buildscript {
-    ext {
-        timber_version = '5.0.1'
-        leakcanary_version = '2.8.1'
-    }
     repositories {
         mavenCentral()
     }
 
     dependencies {
-        classpath "de.mannodermaus.gradle.plugins:android-junit5:1.8.0.0"
+        classpath "de.mannodermaus.gradle.plugins:android-junit5:1.8.2.0"
     }
+}
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+
+    // Make sure that you have the Google services Gradle plugin
+
+    // Add the Crashlytics Gradle plugin
+    id 'com.google.firebase.crashlytics'
+
+    id 'com.google.firebase.appdistribution'
+    id "de.mannodermaus.android-junit5" version "1.8.2.1"
+    id 'kotlinx-serialization'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
     compileSdkVersion versions.compileSdk
-    buildToolsVersion '28.0.3'
+    buildToolsVersion versions.buildTools
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
@@ -39,6 +43,8 @@ android {
         multiDexEnabled true
     }
 
+    /* More info about Java 8 library desugaring:
+     * https://developer.android.com/studio/releases/gradle-plugin#j8-library-desugaring */
     compileOptions {
         coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -50,6 +56,38 @@ android {
 
     packagingOptions {
         exclude 'META-INF/proguard/coroutines.pro'
+        /* Use the following method to reduce your app size by only including the modules you need.
+         * For more details see
+         * https://documentation.anyline.com/toc/platforms/android/getting_started.html */
+        aaptOptions {
+            // Enter any modules into "used_modules" you would like to keep and use
+            def used_modules = [
+                    "module_anyline_ocr",
+                    "module_barcode",
+                    "module_document",
+                    "module_energy",
+                    "module_id",
+                    "module_license_plate",
+                    "module_tire"
+            ].toList()
+
+            // Below is the full list of modules
+            def all_modules = [
+                    "module_anyline_ocr",
+                    "module_barcode",
+                    "module_document",
+                    "module_energy",
+                    "module_id",
+                    "module_license_plate",
+                    "module_tire"
+            ].toList()
+
+            // All used modules are kept, the rest are discarded (to shrink your app)
+            all_modules.removeAll(used_modules)
+
+            def all_removed_modules = all_modules.join(":")
+            ignoreAssetsPattern all_removed_modules
+        }
     }
 
     buildFeatures {
@@ -57,14 +95,17 @@ android {
         dataBinding true
     }
 
-
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/TrainedModels'] } }
+
+    flavorDimensions "sdkSource"
+    productFlavors {
+        maven {
+            dimension "sdkSource"
+        }
+    }
 }
 
 repositories {
-    flatDir {
-        dirs 'libs'
-    }
     maven {
         url 'https://anylinesdk.blob.core.windows.net/maven/'
     }
@@ -74,9 +115,19 @@ configurations {
     customImplementation
 }
 
+/* Lifecycle 2.5.0 needs to temporarily have the following added, see also:
+ * https://stackoverflow.com/questions/70992947/how-do-i-resolve-error-message-inheritance-from-an-interface-with-jvmdefault */
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        freeCompilerArgs += [
+                "-Xjvm-default=all",
+        ]
+    }
+}
+
 dependencies {
-    implementation "com.google.dagger:hilt-android:2.38.1"
-    kapt "com.google.dagger:hilt-compiler:2.38.1"
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -84,27 +135,23 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0-alpha01'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation "androidx.activity:activity-ktx:1.2.0"
+    implementation "androidx.preference:preference-ktx:1.1.1"
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 
-    implementation "com.jakewharton.timber:timber:$timber_version"
-
     // debugImplementation because LeakCanary should only run in debug builds.
-    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:${versions.leakcanary}"
 
     // for update manager
     //implementation 'com.google.android.play:core:1.9.0'
 
-    //uncomment if you want to import the AnylineSdk project
-    //implementation project(':AnylineSdk')
-
-    //include AnylineSDK from maven
-    implementation "io.anyline:anylinesdk:${versions.anyline_android_sdk_name}"
+    // include AnylineSDK from maven
+    mavenImplementation "io.anyline:anylinesdk:${versions.anyline_android_sdk_name}"
+    // When integrating without buildFlavors or externally defined versions, use and adapt like below:
+    // implementation "io.anyline:anylinesdk:MAJOR.MINOR.PATCH"
 
     //Play core library
     implementation 'com.google.android.play:core-ktx:1.8.1'
-
-    implementation 'com.google.firebase:firebase-analytics:17.5.0'
 
     //Kotlin
     implementation "androidx.core:core-ktx:1.3.2"
@@ -115,9 +162,9 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
-
-    //Desugaring
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    /* Desugaring, see https://github.com/google/desugar_jdk_libs/blob/master/CHANGELOG.md
+     * Version 2.0.0 requires AGP 7.4.0 */
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -130,14 +177,14 @@ dependencies {
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
 
     // Nav Component
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.3"
-    implementation "androidx.navigation:navigation-ui-ktx:2.3.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.2"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.2"
 
     //ViewModel
     implementation 'android.arch.lifecycle:extensions:1.1.1'
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0"
     implementation 'androidx.preference:preference-ktx:1.1.1'
     customImplementation("io.anyline:anylinesdk:${versions.anyline_android_sdk_name}")
 

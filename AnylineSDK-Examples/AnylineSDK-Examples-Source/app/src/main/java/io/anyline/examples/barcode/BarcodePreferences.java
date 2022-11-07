@@ -1,5 +1,9 @@
 package io.anyline.examples.barcode;
 
+import static io.anyline.examples.barcode.BarcodePreferences.BARCODE_CATEGORY.CATEGORY_1D;
+import static io.anyline.examples.barcode.BarcodePreferences.BARCODE_CATEGORY.CATEGORY_2D;
+import static io.anyline.examples.barcode.BarcodePreferences.BARCODE_CATEGORY.CATEGORY_POSTAL;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -12,12 +16,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BarcodePreferences {
-    private static final String SHARED_PREFS_ANYLINE = "AnylinePreferences";
+    static final String SHARED_PREFS_ANYLINE = "AnylinePreferences";
 
     private static BarcodePreferences instance;
 
     private final SharedPreferences prefs;
     private final SharedPreferences.Editor editor;
+
+    static final BarcodePreference<Boolean> SingleScanButtonPreference = new BarcodePreference("barcodesetting_singlescanbutton", false);
+    static final BarcodePreference<Boolean> MultiScanButtonPreference = new BarcodePreference("barcodesetting_multiscanbutton", true);
+
+    enum BARCODE_CATEGORY {
+        CATEGORY_1D("1D Symbologies"),
+        CATEGORY_2D("2D Symbologies"),
+        CATEGORY_POSTAL("Postal Codes");
+
+        final String categoryName;
+        BARCODE_CATEGORY(String categoryName) {
+            this.categoryName = categoryName;
+        }
+    }
 
     @SuppressLint("CommitPrefEdits")
     private BarcodePreferences(Context context) {
@@ -32,16 +50,47 @@ public class BarcodePreferences {
         return instance;
     }
 
-    public ArrayList<BarcodeModel> getDefault() {
+    static ArrayList<BarcodeModel> getAll() {
+
         ArrayList<BarcodeModel> items = new ArrayList<>();
-        items.add(new BarcodeModel("UPC/EAN", "1D Symbologies - Retail Usages"));
-        items.add(new BarcodeModel("Code 128", "1D Symbologies - Logistics / Inventory Usage"));
-        items.add(new BarcodeModel("Code 39", "1D Symbologies - Logistics / Inventory Usage"));
-        items.add(new BarcodeModel("Interleaved 2 of 5", "1D Symbologies - Logistics / Inventory Usage"));
-        items.add(new BarcodeModel("Data Matrix", "2D Symbologies"));
-        items.add(new BarcodeModel("PDF417", "2D Symbologies"));
-        items.add(new BarcodeModel("QR Code", "2D Symbologies"));
+        items.add(new BarcodeModel("UPC/EAN", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("GS1 Databar & Composite Codes", CATEGORY_1D.categoryName));
+
+        items.add(new BarcodeModel("Code 128", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("GS1-128", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("ISBT 128", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("Code 39", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("Trioptic Code 39", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("Code 32", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("Code 93", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("Interleaved 2 of 5", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("Matrix 2 of 5", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("One D Inverse", CATEGORY_1D.categoryName));
+
+        items.add(new BarcodeModel("Code 25", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("Codabar", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("MSI", CATEGORY_1D.categoryName));
+        items.add(new BarcodeModel("Code 11", CATEGORY_1D.categoryName));
+
+        items.add(new BarcodeModel("PDF417", CATEGORY_2D.categoryName));
+        items.add(new BarcodeModel("MicroPDF417", CATEGORY_2D.categoryName));
+        items.add(new BarcodeModel("Data Matrix", CATEGORY_2D.categoryName));
+        items.add(new BarcodeModel("QR Code", CATEGORY_2D.categoryName));
+        items.add(new BarcodeModel("MicroQR", CATEGORY_2D.categoryName));
+        items.add(new BarcodeModel("GS1 QR Code", CATEGORY_2D.categoryName));
+        items.add(new BarcodeModel("Aztec", CATEGORY_2D.categoryName));
+        items.add(new BarcodeModel("MaxiCode", CATEGORY_2D.categoryName));
+
+        items.add(new BarcodeModel("US Postnet", CATEGORY_POSTAL.categoryName));
+        items.add(new BarcodeModel("US Planet", CATEGORY_POSTAL.categoryName));
+        items.add(new BarcodeModel("UK Postal", CATEGORY_POSTAL.categoryName));
+        items.add(new BarcodeModel("USPS 4CB / OneCode / Intelligent Mail", CATEGORY_POSTAL.categoryName));
+
         return items;
+    }
+
+    public ArrayList<BarcodeModel> getDefault() {
+        return getAll();
     }
 
     public void setDefault() {
@@ -83,5 +132,19 @@ public class BarcodePreferences {
             }
         }
         return arrayList1;
+    }
+
+    public Object getPreferenceValue(BarcodePreference preference) {
+        if (preference.getDefaultValue() instanceof String)
+            return prefs.getString(preference.getKey(), (String) preference.getDefaultValue());
+        else if (preference.getDefaultValue() instanceof Boolean)
+            return prefs.getBoolean(preference.getKey(), (Boolean) preference.getDefaultValue());
+        else if (preference.getDefaultValue() instanceof Float)
+            return prefs.getFloat(preference.getKey(), (Float) preference.getDefaultValue());
+        else if (preference.getDefaultValue() instanceof Integer)
+            return prefs.getInt(preference.getKey(), (Integer) preference.getDefaultValue());
+        else if (preference.getDefaultValue() instanceof Long)
+            return prefs.getLong(preference.getKey(), (Long) preference.getDefaultValue());
+        return null;
     }
 }

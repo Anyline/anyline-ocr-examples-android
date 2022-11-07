@@ -79,7 +79,7 @@
         <item>io.anyline.examples.tire.ScanTireSizeActivity</item>
         <item>io.anyline.examples.tire.ScanCommercialTireIdActivity</item>
         <item>io.anyline.examples.ocr.ScanVehicleIdentificationNumberActivity</item>
-<!--        <item>io.anyline.examples.id.ScanVehicleRegistrationCertificateActivity</item>-->
+        <item>io.anyline.examples.id.ScanVehicleRegistrationCertificateActivity</item>
     </string-array>
 
     <string-array name="example_vehicle_names">
@@ -88,7 +88,7 @@
         <item>@string/tire_size</item>
         <item>@string/commercial_tire_id</item>
         <item>@string/vin</item>
-<!--        <item>@string/vehicle_registration_certificate</item>-->
+        <item>@string/vehicle_registration_certificate</item>
     </string-array>
 
     <string-array name="example_identity_documents_names">

@@ -460,4 +460,16 @@
     <string name="license_plate_state">State</string>
     <string name="canvas_views_switch"><![CDATA[Canvas <-> Views]]></string>
 
+    <string name="one_sided">ONE SIDED</string>
+    <string name="two_sided">TWO SIDED</string>
+
+    <string name="barcode_reset_settings_title">Restore default settings</string>
+    <string name="barcode_reset_settings_text">Are you sure you want to restore the default settings?</string>
+    <string name="barcode_settings_symbologiescategory_text">Symbologies Settings</string>
+    <string name="barcode_settings_symbologies_text">Symbologies</string>
+    <string name="barcode_settings_triggercategory_text">Trigger Button Settings</string>
+    <string name="barcode_settings_singlescanbutton_text">Single scan trigger button</string>
+    <string name="barcode_settings_multiscanbutton_text">Multi scan trigger button</string>
+    <string name="barcode_settings_resetcategory_text">Reset Settings</string>
+    <string name="barcode_settings_reset_text">Reset all settings to default</string>
 </resources>

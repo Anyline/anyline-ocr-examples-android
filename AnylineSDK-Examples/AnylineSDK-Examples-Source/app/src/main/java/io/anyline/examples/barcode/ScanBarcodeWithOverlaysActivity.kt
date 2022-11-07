@@ -27,7 +27,6 @@ import io.anyline.examples.dependencyinjection.IoDispatcher
 import io.anyline.plugin.barcode.*
 import io.anyline.view.ScanView
 import kotlinx.coroutines.*
-import timber.log.Timber
 import javax.inject.Inject
 
 
@@ -59,6 +58,10 @@ class ScanBarcodeWithOverlaysActivity : ScanActivity(), CameraOpenListener {
     private val currentlyVisibleBarcodeViewMap = mutableMapOf<String, BarcodeView>()
 
     private var lastResultTimeMillis = 0L
+
+    companion object {
+        const val ACTIVITYRESULT_CODE_BARCODE_LIST = 2
+    }
 
     /**
      *
@@ -536,8 +539,8 @@ class ScanBarcodeWithOverlaysActivity : ScanActivity(), CameraOpenListener {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        // check if the request code is same as what is passed  here it is 2
-        if (requestCode == 2) {
+        // check if the request code is same as what is passed  here it is ACTIVITYRESULT_CODE_BARCODE_LIST
+        if (requestCode == ACTIVITYRESULT_CODE_BARCODE_LIST) {
             scanView.stop()
             preselectedItems = barcodePreferences.arrayString
             if (preselectedItems.size > 0 && !preselectedItems.contains("ALL")) {
@@ -577,7 +580,7 @@ class ScanBarcodeWithOverlaysActivity : ScanActivity(), CameraOpenListener {
         val id = item.itemId
         if (id == 0) {
             val intent = Intent(this@ScanBarcodeWithOverlaysActivity, BarcodeListViewActivity::class.java)
-            startActivityForResult(intent, 2) // Activity is started with requestCode 2
+            startActivityForResult(intent, ACTIVITYRESULT_CODE_BARCODE_LIST) // Activity is started with requestCode ACTIVITYRESULT_CODE_BARCODE_LIST
         }
         return super.onOptionsItemSelected(item)
     }
@@ -691,8 +694,6 @@ class ScanBarcodeWithOverlaysActivity : ScanActivity(), CameraOpenListener {
             val barcode = result[i]
             barcodeResult[getString(R.string.barcode_result) + i] =
                 barcode.value.ifEmpty { resources.getString(R.string.not_available) }
-            barcodeResult[getString(R.string.barcode_result_base64) + i] =
-                if (barcode.base64 == null || barcode.base64.isEmpty()) resources.getString(R.string.not_available) else barcode.base64
             barcodeResult[getString(R.string.barcode_format) + i] =
                 barcode.barcodeFormat.toString()
             barcodeResult[getString(R.string.barcode_result_pdf417) + i] =

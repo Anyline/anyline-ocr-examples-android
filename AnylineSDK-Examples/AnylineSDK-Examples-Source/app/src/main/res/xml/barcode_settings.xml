@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="barcodesetting_symbologiescategory"
+        android:title="@string/barcode_settings_symbologiescategory_text"
+        initialExpandedChildrenCount="1">
+        <Preference
+            android:key="barcodesetting_symbologies"
+            android:title="@string/barcode_settings_symbologies_text"
+            android:summary=""/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="barcodesetting_triggercategory"
+        android:title="@string/barcode_settings_triggercategory_text">
+        <SwitchPreference
+            android:key="barcodesetting_singlescanbutton"
+            android:title="@string/barcode_settings_singlescanbutton_text"
+            android:summary=""/>
+        <SwitchPreference
+            android:key="barcodesetting_multiscanbutton"
+            android:title="@string/barcode_settings_multiscanbutton_text"
+            android:defaultValue="true"
+            android:summary=""/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="barcodesetting_resetcategory"
+        android:title="@string/barcode_settings_resetcategory_text">
+        <Preference
+            android:key="barcodesetting_reset"
+            android:title="@string/barcode_settings_reset_text"
+            android:summary=""/>
+    </PreferenceCategory>
+</PreferenceScreen>

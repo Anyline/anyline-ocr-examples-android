@@ -17,6 +17,7 @@
         android:background="@drawable/button_round_corner_gray_style"
         app:backgroundTint="@null"
         android:enabled="true"
+        android:visibility="gone"
         android:layout_gravity="center"
         android:stateListAnimator="@null"
         android:text="Reset to Default"

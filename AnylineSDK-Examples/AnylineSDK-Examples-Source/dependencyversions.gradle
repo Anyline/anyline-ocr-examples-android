@@ -13,20 +13,23 @@
  */
 def versions = [
         'minSdk'                                : 21,
-        'targetSdk'                             : 30, // TODO: update to 31
-        'compileSdk'                            : 30, // TODO: update to 31
+        'targetSdk'                             : 31,
+        'compileSdk'                            : 31,
+        'buildTools'                            : '33.0.0',
 
-        'anyline_android_sdk_name'              : '41.0.0',
+        'anyline_android_sdk_name'              : '42.0.0',
         'anyline_android_sdk_code'              : 'is defined someplace else',
-        'anyline_scanner_app_name'              : '41.0.0',
-        'anyline_scanner_app_code'              : 369,
+        'anyline_scanner_app_name'              : '42.0.0',
+        'anyline_scanner_app_code'              : 371,
 
-        'kotlin'                                : '1.6.21',
-        'gradle'                                : '4.1.3',
+        'kotlin'                                : '1.6.10',
+        'gradle'                                : '7.3.0',
 
-        'google_services'                       : '4.3.10',
+        'google_services'                       : '4.3.14',
 
         'firebase_appdistribution'              : '3.0.1',
+
+        'leakcanary'                            : '2.8.1',
 ]
 
 // Set the LinkedHashMap to the project's ExtraPropertiesExtension
