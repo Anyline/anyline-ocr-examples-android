@@ -44,7 +44,8 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/MainActivityTheme">
+            android:theme="@style/MainActivityTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -325,6 +326,11 @@
                 android:value=".ocr.ScanIsbnActivity" />
         </activity>
         <activity
+            android:name=".barcode.BarcodeSettingsActivity"
+            android:screenOrientation="portrait"
+            android:label="Settings"
+            android:theme="@style/MainActivityTheme"/>
+        <activity
             android:name=".barcode.BarcodeListViewActivity"
             android:screenOrientation="portrait"
             android:label="Barcode Types"
@@ -389,7 +395,8 @@
         <activity
             android:name=".id.ScanUniversalIdActivity"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="false">
 
             <intent-filter>
                 <action android:name="android.intent.action.SENDTO" />
@@ -397,7 +404,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".id.ScanUniversalIdFrontBackActivity">
+        <activity android:name=".id.ScanUniversalIdFrontBackActivity"
+            android:exported="false">
 
             <intent-filter>
                 <action android:name="android.intent.action.SENDTO" />

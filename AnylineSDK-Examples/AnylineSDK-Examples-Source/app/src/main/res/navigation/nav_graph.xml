@@ -18,7 +18,12 @@
     <fragment
         android:id="@+id/about_us"
         android:name="io.anyline.examples.about.AboutFragment"
-        android:label="AboutFragment" />
+        android:label="AboutFragment" >
+        <action
+            android:id="@+id/action_about_us_to_otaFragment"
+            app:destination="@id/otaFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/history"
         android:name="io.anyline.examples.history.HistoryFragment"
@@ -61,4 +66,8 @@
         android:id="@+id/energyFragment"
         android:name="io.anyline.examples.basefragments.EnergyFragment"
         android:label="EnergyFragment" />
+    <fragment
+        android:id="@+id/otaFragment"
+        android:name="io.anyline.examples.about.OtaFragment"
+        android:label="OtaFragment" />
 </navigation>

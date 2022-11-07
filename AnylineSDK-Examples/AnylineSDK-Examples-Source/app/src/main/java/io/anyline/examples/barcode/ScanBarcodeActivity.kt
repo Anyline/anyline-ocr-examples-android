@@ -12,19 +12,22 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
+import android.view.animation.*
 import android.widget.Button
-import android.widget.CompoundButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.lifecycle.lifecycleScope
+import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import io.anyline.camera.CameraController
 import io.anyline.camera.CameraOpenListener
+import io.anyline.camera.VisualFeedbackConfig
 import io.anyline.examples.R
 import io.anyline.examples.ScanActivity
 import io.anyline.examples.ScanModuleEnum.ScanModule
 import io.anyline.examples.databinding.ActivityAnylineBarcodeScanViewBinding
 import io.anyline.plugin.barcode.*
 import io.anyline.view.ScanView
-
 
 /**
  * Example activity for the Anyline-Barcode-Module
@@ -40,8 +43,23 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
     private lateinit var barcodePreferences: BarcodePreferences
     private lateinit var resultText: TextView
     private lateinit var preselectedItems: ArrayList<String>
+
+    private var barcodeMode = BarcodeMode.Single
+
+    private var singleScanButtonVisiblePreference: Boolean = false
+    private var multiScanButtonVisiblePreference: Boolean = false
     private lateinit var scanButton: Button
+
     private var resultScreenShown = false
+
+    private lateinit var themeWrapper: ContextThemeWrapper
+    private var batchOverlays: BarcodeOverlays? = null
+    private val batchDetectedBarcodeViewMap = mutableMapOf<String, BarcodeOverlayView>()
+    private val useCheckmarkOnBatchCount = false
+
+    companion object {
+        const val ACTIVITYRESULT_CODE_BARCODE_PREFS = 2
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,8 +68,13 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
             findViewById<View>(R.id.scan_view_placeholder) as ViewGroup,
             true
         )
+
+        themeWrapper = ContextThemeWrapper(this, R.style.AppTheme)
+
         barcodePreferences = BarcodePreferences.getInstance(this)
         preselectedItems = barcodePreferences.arrayString
+        singleScanButtonVisiblePreference = barcodePreferences.getPreferenceValue(BarcodePreferences.SingleScanButtonPreference) as Boolean
+        multiScanButtonVisiblePreference = barcodePreferences.getPreferenceValue(BarcodePreferences.MultiScanButtonPreference) as Boolean
         resultText = binding.textResult
 
         scanButton = binding.stopScanningButton
@@ -77,7 +100,7 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
             scanPlugin,
             scanView.scanViewPluginConfig
         )
-        scanViewPlugin.setMultiBarcode(false)
+        switchBarcodeMode(barcodeMode)
 
         setBarcodeTypes(preselectedItems)
         val flashView = scanView.flashView
@@ -102,48 +125,128 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
         scanView.scanViewPlugin = scanViewPlugin
 
         scanViewPlugin.addScannedBarcodesListener { scanResult: BarcodeScanResult ->
-            showScanButton(true)
+            autoShowScanButton(true)
 
-            if (scanViewPlugin.isMultiBarcodeEnabled) { // Continue scanning
-                scanButton.visibility = View.VISIBLE
-                scanButton.setOnClickListener { view: View? ->
-                    val path = setupImagePath(scanResult.cutoutImage)
-                    scanView.stop()
-                    startScanResultIntent(
-                        resources.getString(R.string.category_barcodes),
-                        getBarcodeResult(scanResult.result),
-                        path
-                    )
-                    setupScanProcessView(this@ScanBarcodeActivity, scanResult, scanModule)
-                    finish()
+            if (barcodeMode == BarcodeMode.BatchCount) {
+                binding.textLastscannedResultValue.text = scanResult.result.last().value
+                binding.textLastscannedSymbologyValue.text = scanResult.result.last().barcodeFormat.name
+
+                batchOverlays?.postResult(scanResult) { barcodeMap ->
+                    batchDetectedBarcodeViewMap.putAll(barcodeMap)
+                    binding.textTotalscannedCountValue.text = batchDetectedBarcodeViewMap.size.toString()
                 }
-            } else { // Stop after getting one result
-                if (scanResult.result.size != 1) return@addScannedBarcodesListener
-                if (!resultScreenShown) {
-                    val path = setupImagePath(scanResult.cutoutImage)
-                    scanView.stop()
-                    resultScreenShown = true
-                    startScanResultIntent(
-                        resources.getString(R.string.category_barcodes),
-                        getBarcodeResult(scanResult.result),
-                        path
-                    )
-                    setupScanProcessView(this@ScanBarcodeActivity, scanResult, scanModule)
-                    finish()
+            }
+            else {
+                if (scanButtonVisible()) {
+                    scanButton.setOnClickListener { view: View? ->
+                        val path = setupImagePath(scanResult.cutoutImage)
+                        scanView.stop()
+                        startScanResultIntent(
+                            resources.getString(R.string.category_barcodes),
+                            getBarcodeResult(scanResult.result),
+                            path
+                        )
+                        setupScanProcessView(this@ScanBarcodeActivity, scanResult, scanModule)
+                        finish()
+                    }
+                }
+                else {
+                    if (!scanViewPlugin.isMultiBarcodeEnabled) {
+                        // Stop after getting one result
+                        if (scanResult.result.size != 1) return@addScannedBarcodesListener
+                    }
+                    if (!resultScreenShown) {
+                        val path = setupImagePath(scanResult.cutoutImage)
+                        scanView.stop()
+                        resultScreenShown = true
+                        startScanResultIntent(
+                            resources.getString(R.string.category_barcodes),
+                            getBarcodeResult(scanResult.result),
+                            path
+                        )
+                        setupScanProcessView(this@ScanBarcodeActivity, scanResult, scanModule)
+                        finish()
+                    }
                 }
             }
         }
 
-        binding.barcodeScannerSwitch.setOnCheckedChangeListener { compoundButton: CompoundButton?, isChecked: Boolean ->
-            scanView.stop()
-            showScanButton(false)
-            scanViewPlugin.setMultiBarcode(isChecked)
-            scanView.start()
+        binding.barcodeScannerModeButton.setOnClickListener { v ->
+            val tButton = v as Button
+            tButton.isSelected = !tButton.isSelected
+            val customBottomSheet = CustomBottomSheet
+                .createBarcodeModeBottomSheet(
+                    barcodeMode
+                ) { barcodeModeBottomSheetSelection ->
+                    scanView.stop()
+                    switchBarcodeMode(barcodeModeBottomSheetSelection)
+                    autoShowScanButton(false)
+                    scanView.start()
+                }
+            customBottomSheet.show(supportFragmentManager, "bottom_sheet")
         }
     }
 
-    private fun showScanButton(show: Boolean) {
-        scanButton.visibility = if (show) View.VISIBLE else View.INVISIBLE
+    private fun switchBarcodeMode(newMode: BarcodeMode) {
+        this.barcodeMode = newMode
+        binding.barcodeScannerModeButton.text = newMode.text
+        scanViewPlugin.setMultiBarcode(newMode.multi)
+        scanViewPlugin.scanViewPluginConfig.visualFeedbackConfig.isBeepOnResult = !newMode.multi
+        scanViewPlugin.scanViewPluginConfig.visualFeedbackConfig.isVibrateOnResult = !newMode.multi
+        scanViewPlugin.scanViewPluginConfig.visualFeedbackConfig.feedbackStyle = newMode.feedbackStyle
+        when (newMode) {
+            BarcodeMode.BatchCount -> {
+                binding.batchcountLayoutLinear.visibility = View.VISIBLE
+                binding.textTotalscannedCountValue.text = ""
+                binding.textLastscannedResultValue.text = ""
+                binding.textLastscannedSymbologyValue.text = ""
+
+                batchDetectedBarcodeViewMap.clear()
+                batchOverlays = BarcodeOverlays(lifecycleScope,
+                    BarcodeOverlays.DrawMode.DrawView<ImageView>(this,
+                        binding.overlayFramelayout,
+                        onCreate = {
+                            val imageView = ImageView(this)
+                            imageView.scaleType = ImageView.ScaleType.CENTER_INSIDE
+                            if (useCheckmarkOnBatchCount) {
+                                imageView.animation = AnimationSet(false).also {
+                                    it.addAnimation(fadeInAnimation)
+                                    it.start()
+                                }
+
+                                val checkImageDrawable = VectorDrawableCompat.create(resources, R.drawable.ic_checkmark, themeWrapper.theme)
+                                imageView.setImageDrawable(checkImageDrawable)
+                            }
+                            imageView
+                        },
+                        onDraw = {imageView: ImageView, barcodeView: BarcodeOverlayView ->
+
+                        },
+                        onRemove = {imageView: ImageView, barcodeView: BarcodeOverlayView ->
+
+                        }
+                    )
+                ).apply {
+                    start()
+                }
+            }
+            else -> {
+                batchOverlays?.stop()
+                binding.batchcountLayoutLinear.visibility = View.GONE
+            }
+        }
+    }
+
+    private fun scanButtonVisible(): Boolean {
+        return when (barcodeMode) {
+            BarcodeMode.Single -> singleScanButtonVisiblePreference
+            BarcodeMode.Multi -> multiScanButtonVisiblePreference
+            else -> false
+        }
+    }
+    private fun autoShowScanButton(enabled: Boolean) {
+        scanButton.visibility = if (scanButtonVisible()) View.VISIBLE else View.INVISIBLE
+        scanButton.isEnabled = enabled
     }
 
     override fun onResume() {
@@ -160,6 +263,7 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
             }
         })
         resultText.text = ""
+        autoShowScanButton(false)
         scanView.start()
     }
 
@@ -177,14 +281,18 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        // check if the request code is same as what is passed  here it is 2
-        if (requestCode == 2) {
-            scanView.stop()
-            preselectedItems = barcodePreferences.arrayString
-            if (preselectedItems.size > 0 && !preselectedItems.contains("ALL")) {
-                setBarcodeTypes(preselectedItems)
+        if (requestCode == ACTIVITYRESULT_CODE_BARCODE_PREFS) {
+            if (resultCode == RESULT_OK) {
+                scanView.stop()
+                preselectedItems = barcodePreferences.arrayString
+                if (preselectedItems.size > 0 && !preselectedItems.contains("ALL")) {
+                    setBarcodeTypes(preselectedItems)
+                }
+                singleScanButtonVisiblePreference = barcodePreferences.getPreferenceValue(BarcodePreferences.SingleScanButtonPreference) as Boolean
+                multiScanButtonVisiblePreference = barcodePreferences.getPreferenceValue(BarcodePreferences.MultiScanButtonPreference) as Boolean
+                autoShowScanButton(false)
+                scanView.start()
             }
-            scanView.start()
         }
     }
 
@@ -217,8 +325,8 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == 0) {
-            val intent = Intent(this@ScanBarcodeActivity, BarcodeListViewActivity::class.java)
-            startActivityForResult(intent, 2) // Activity is started with requestCode 2
+            val intent = Intent(this@ScanBarcodeActivity, BarcodeSettingsActivity::class.java)
+            startActivityForResult(intent, ACTIVITYRESULT_CODE_BARCODE_PREFS)
         }
         return super.onOptionsItemSelected(item)
     }
@@ -332,8 +440,6 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
             val barcode = result[i]
             barcodeResult[getString(R.string.barcode_result) + i] =
                 barcode.value.ifEmpty { resources.getString(R.string.not_available) }
-            barcodeResult[getString(R.string.barcode_result_base64) + i] =
-                if (barcode.base64 == null || barcode.base64.isEmpty()) resources.getString(R.string.not_available) else barcode.base64
             barcodeResult[getString(R.string.barcode_format) + i] =
                 barcode.barcodeFormat.toString()
             barcodeResult[getString(R.string.barcode_result_pdf417) + i] =
@@ -343,4 +449,15 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
         }
         return barcodeResult
     }
+
+    private val fadeDurationMills = 800L
+    private val fadeInAnimation = AlphaAnimation(0f, 1f).apply {
+        interpolator = DecelerateInterpolator()
+        duration = fadeDurationMills
+    }
+    private val fadeOutAnimation = AlphaAnimation(1f, 0f).apply {
+        interpolator = AccelerateInterpolator()
+        duration = fadeDurationMills
+    }
+
 }

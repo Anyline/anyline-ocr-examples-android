@@ -9,7 +9,9 @@
     <io.anyline.view.ScanView
         android:id="@+id/scan_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+    </io.anyline.view.ScanView>
 
     <ImageView
         android:id="@+id/imageViewGif"
@@ -47,5 +49,18 @@
         android:textColor="@android:color/white"
         android:textSize="24sp"
         tools:text="1234656479765" />
+
+    <Button
+        android:id="@+id/toggle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/one_sided"
+        android:visibility="visible"
+        android:backgroundTint="@color/colorPrimary"
+        tools:layout_alignParentTop="true" />
 
 </RelativeLayout>
