@@ -24,7 +24,6 @@ import io.anyline.view.ScanView;
  */
 public class ScanAutoAnalogDigitalMeterActivity extends AbstractEnergyActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

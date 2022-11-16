@@ -68,15 +68,6 @@
             android:name=".meterreadingprocesses.activities.CustomerIdentifyScannerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".meter.ScanDigitalEnergyMeterActivity"
-            android:label="@string/title_digital_meter"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.anyline.examples.MainActivity" />
-        </activity>
-        <activity
             android:name=".meter.ScanAutoAnalogDigitalMeterActivity"
             android:label="@string/title_auto_analog_digital_meter"
             android:parentActivityName=".MainActivity"
