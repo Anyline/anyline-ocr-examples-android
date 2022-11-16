@@ -37,7 +37,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
     private Switch barcodeSwitch;
 
     public abstract String getSelectedModeInformation();
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +75,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
                 String energyResult = result.getResult();
 
                 String path = setupImagePath(result.getCutoutImage());
-                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResul(energyResult), path);
+                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResult(energyResult), path);
 
                 setupScanProcessView(AbstractEnergyActivity.this, result.getResult(), getScanModule(), foundBarcodeString, result.getCutoutImage().getBitmap());
                 foundBarcodeString = "";
@@ -170,7 +170,7 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
         throw new RuntimeException(e);
     }
 
-    protected HashMap<String, String> getMeterReadingResul (String result) {
+    protected HashMap<String, String> getMeterReadingResult(String result) {
 
         HashMap<String, String> meterReadingResult = new HashMap();
 

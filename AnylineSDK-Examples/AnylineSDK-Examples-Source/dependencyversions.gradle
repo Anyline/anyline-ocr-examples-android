@@ -17,9 +17,9 @@ def versions = [
         'compileSdk'                            : 31,
         'buildTools'                            : '33.0.0',
 
-        'anyline_android_sdk_name'              : '42.0.0',
+        'anyline_android_sdk_name'              : '42.1.0',
         'anyline_android_sdk_code'              : 'is defined someplace else',
-        'anyline_scanner_app_name'              : '42.0.0',
+        'anyline_scanner_app_name'              : '42.1.0',
         'anyline_scanner_app_code'              : 371,
 
         'kotlin'                                : '1.6.10',

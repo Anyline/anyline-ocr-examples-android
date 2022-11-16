@@ -26,7 +26,6 @@ import io.anyline.view.ScanView;
  */
 public class ScanDialMeterActivity extends AbstractEnergyActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +42,7 @@ public class ScanDialMeterActivity extends AbstractEnergyActivity {
                 String energyResult = result.getResult();
 
                 String path = setupImagePath(result.getCutoutImage());
-                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResul(energyResult), path);
+                startScanResultIntent(getResources().getString(R.string.category_energy), getMeterReadingResult(energyResult), path);
 
 
                 setupScanProcessView(ScanDialMeterActivity.this, result, getScanModule());

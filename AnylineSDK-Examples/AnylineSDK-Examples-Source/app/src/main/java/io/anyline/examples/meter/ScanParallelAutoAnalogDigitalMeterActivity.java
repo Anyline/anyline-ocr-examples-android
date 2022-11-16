@@ -150,7 +150,7 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
     }
 
 
-    protected HashMap<String, String> getMeterReadingResul(String result) {
+    protected HashMap<String, String> getMeterReadingResult(String result) {
         HashMap<String, String> meterReadingResult = new HashMap();
         meterReadingResult.put(getResources().getString(R.string.reading_result), (result.isEmpty() || result == null) ? getResources().getString(R.string.not_available) : result);
         meterReadingResult.put(getResources().getString(R.string.barcode), (foundBarcodeString.isEmpty() || foundBarcodeString == null) ? getResources().getString(R.string.not_available) : foundBarcodeString);
