@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
@@ -74,9 +75,9 @@ public class ScanCowtagActivity extends ScanActivity {
 
 
 
-    protected HashMap<String, String> getSerialNumberResult (String result) {
+    protected LinkedHashMap<String, String> getSerialNumberResult (String result) {
 
-        HashMap<String, String> serialNumberResult = new HashMap();
+        LinkedHashMap<String, String> serialNumberResult = new LinkedHashMap();
 
         serialNumberResult.put(getResources().getString(R.string.title_cowtag), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
 

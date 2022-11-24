@@ -432,7 +432,7 @@ class ScanBarcodeActivity : ScanActivity(), CameraOpenListener {
         )
     }
 
-    protected fun getBarcodeResult(result: List<Barcode>): HashMap<String, String> {
+    protected fun getBarcodeResult(result: List<Barcode>): LinkedHashMap<String, String> {
         val barcodeResult = LinkedHashMap<String, String>()
         for (i in result.indices) {
             barcodeResult["HEADER" + (i + 1)] =

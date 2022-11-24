@@ -711,7 +711,8 @@ public&nbsp;java.lang.String&nbsp;getValidationRegex()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setMinConfidence</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setMinConfidence&#8203;(int&nbsp;minConfidence)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;setMinConfidence&#8203;(@IntRange(from=0L,to=100L)
+                             int&nbsp;minConfidence)</pre>
 <div class="block">The minimum confidence required to return a result, a value between 0 and 100.
  (higher confidence means less likely to get a wrong result, but may be slower to get a result)</div>
 <dl>
@@ -883,7 +884,8 @@ public&nbsp;<a href="AnylineOcrConfig.ScanMode.html" title="enum in io.anyline.p
 <ul class="blockList">
 <li class="blockList">
 <h4>setMinSharpness</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setMinSharpness&#8203;(int&nbsp;minSharpness)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;setMinSharpness&#8203;(@IntRange(from=0L,to=100L)
+                            int&nbsp;minSharpness)</pre>
 <div class="block"><p>
  Experimental parameter to set the minimum sharpness (value between 0-100; 0 to turn sharpness detection off;
  only used in <a href="AnylineOcrConfig.ScanMode.html#LINE"><code>AnylineOcrConfig.ScanMode.LINE</code></a>).

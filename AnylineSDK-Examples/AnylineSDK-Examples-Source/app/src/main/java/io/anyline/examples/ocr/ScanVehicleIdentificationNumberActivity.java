@@ -3,6 +3,7 @@ package io.anyline.examples.ocr;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
@@ -78,9 +79,9 @@ public class ScanVehicleIdentificationNumberActivity extends ScanActivity implem
         scanView.stop();
     }
 
-    protected HashMap<String, String> getVINResult(String result) {
+    protected LinkedHashMap<String, String> getVINResult(String result) {
 
-        HashMap<String, String> serialNumberResult = new HashMap();
+        LinkedHashMap<String, String> serialNumberResult = new LinkedHashMap();
 
         serialNumberResult.put(getResources().getString(R.string.vin_reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
 

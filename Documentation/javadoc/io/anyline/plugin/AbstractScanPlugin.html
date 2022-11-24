@@ -115,7 +115,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <main role="main">
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">io.anyline.plugin</a></div>
-<h2 title="Class AbstractScanPlugin" class="title">Class AbstractScanPlugin&lt;ResultType extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</h2>
+<h2 title="Class AbstractScanPlugin" class="title">Class AbstractScanPlugin&lt;ResultType extends &lt;any&gt;&gt;</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
@@ -139,10 +139,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="barcode/BarcodeScanPlugin.html" title="class in io.anyline.plugin.barcode">BarcodeScanPlugin</a></code>, <code><a href="document/DocumentScanPlugin.html" title="class in io.anyline.plugin.document">DocumentScanPlugin</a></code>, <code><a href="id/IdScanPlugin.html" title="class in io.anyline.plugin.id">IdScanPlugin</a></code>, <code><a href="licenseplate/LicensePlateScanPlugin.html" title="class in io.anyline.plugin.licenseplate">LicensePlateScanPlugin</a></code>, <code><a href="meter/MeterScanPlugin.html" title="class in io.anyline.plugin.meter">MeterScanPlugin</a></code>, <code><a href="ocr/OcrScanPlugin.html" title="class in io.anyline.plugin.ocr">OcrScanPlugin</a></code>, <code><a href="tire/TireScanPlugin.html" title="class in io.anyline.plugin.tire">TireScanPlugin</a></code></dd>
+<dd><code><a href="barcode/BarcodeScanPlugin.html" title="class in io.anyline.plugin.barcode">BarcodeScanPlugin</a></code>, <code><a href="document/DocumentScanPlugin.html" title="class in io.anyline.plugin.document">DocumentScanPlugin</a></code>, <code><a href="id/IdScanPlugin.html" title="class in io.anyline.plugin.id">IdScanPlugin</a></code>, <code><a href="licenseplate/LicensePlateScanPlugin.html" title="class in io.anyline.plugin.licenseplate">LicensePlateScanPlugin</a></code>, <code><a href="meter/MeterScanPlugin.html" title="class in io.anyline.plugin.meter">MeterScanPlugin</a></code>, <code><a href="ocr/OcrScanPlugin.html" title="class in io.anyline.plugin.ocr">OcrScanPlugin</a></code></dd>
 </dl>
 <hr>
-<pre>public abstract class <span class="typeNameLabel">AbstractScanPlugin&lt;ResultType extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</span>
+<pre>public abstract class <span class="typeNameLabel">AbstractScanPlugin&lt;ResultType extends &lt;any&gt;&gt;</span>
 extends java.lang.Object
 implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;ResultType&gt;</pre>
 <div class="block"><p>
@@ -433,7 +433,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getId()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the identifier of the plugin</dd>
 </dl>
@@ -459,7 +459,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">Set the provider, where the plugin can get the images from.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#setImageProvider(io.anyline.ImageProvider)">setImageProvider</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#setImageProvider(io.anyline.ImageProvider)">setImageProvider</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -487,7 +487,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <pre class="methodSignature">public&nbsp;<a href="../ImageProvider.html" title="interface in io.anyline">ImageProvider</a>&nbsp;getImageProvider()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#getImageProvider()">getImageProvider</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#getImageProvider()">getImageProvider</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -502,7 +502,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">Add a listener that is called if a result is found.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#addScanResultListener(io.anyline.plugin.ScanResultListener)">addScanResultListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#addScanResultListener(io.anyline.plugin.ScanResultListener)">addScanResultListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>listener</code> - the result listener</dd>
 </dl>
@@ -519,7 +519,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">Remove the given info listener. (Does nothing if listener has not been added before)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#removeScanResultListener(io.anyline.plugin.ScanResultListener)">removeScanResultListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#removeScanResultListener(io.anyline.plugin.ScanResultListener)">removeScanResultListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>listener</code> - the result listener to remove</dd>
 </dl>
@@ -536,7 +536,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">Add a listener that is called with intermediate processing information.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#addScanInfoListener(io.anyline.plugin.ScanInfoListener)">addScanInfoListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#addScanInfoListener(io.anyline.plugin.ScanInfoListener)">addScanInfoListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>listener</code> - the info listener</dd>
 </dl>
@@ -553,7 +553,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">Remove the given info listener. (Does nothing if listener has not been added before)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#removeScanInfoListener(io.anyline.plugin.ScanInfoListener)">removeScanInfoListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#removeScanInfoListener(io.anyline.plugin.ScanInfoListener)">removeScanInfoListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>listener</code> - the info listener to remove</dd>
 </dl>
@@ -570,7 +570,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">Add a listener that is called if an image was skipped (did not produce a result) with the reason for skipping.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#addScanRunSkippedListener(io.anyline.plugin.ScanRunSkippedListener)">addScanRunSkippedListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#addScanRunSkippedListener(io.anyline.plugin.ScanRunSkippedListener)">addScanRunSkippedListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>listener</code> - the listener to be called if an image was skipped</dd>
 </dl>
@@ -587,7 +587,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">Remove an info listener. (Does nothing if listener has not been added before)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#removeScanRunSkippedListener(io.anyline.plugin.ScanRunSkippedListener)">removeScanRunSkippedListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#removeScanRunSkippedListener(io.anyline.plugin.ScanRunSkippedListener)">removeScanRunSkippedListener</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>listener</code> - the listener to remove</dd>
 </dl>
@@ -613,7 +613,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">Start the processing of the plugin</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#start()">start</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#start()">start</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -637,7 +637,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">Stop the processing of the plugin</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#stop()">stop</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#stop()">stop</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -768,7 +768,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <pre class="methodSignature">public abstract&nbsp;java.lang.String&nbsp;getModuleIdentifier()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#getModuleIdentifier()">getModuleIdentifier</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#getModuleIdentifier()">getModuleIdentifier</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the module identifier of the plugin</dd>
 </dl>
@@ -785,7 +785,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">When full frame scanning is enabled, the SDK uses the whole image for scanning.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#enableFullFrameScanning()">enableFullFrameScanning</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#enableFullFrameScanning()">enableFullFrameScanning</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -800,7 +800,7 @@ implements <a href="ScanPlugin.html" title="interface in io.anyline.plugin">Scan
 <div class="block">When full frame scanning is disabled, the SDK only uses the area in the cutout for scanning.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ScanPlugin.html#disableFullFrameScanning()">disableFullFrameScanning</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends <a href="ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</code></dd>
+<dd><code><a href="ScanPlugin.html#disableFullFrameScanning()">disableFullFrameScanning</a></code>&nbsp;in interface&nbsp;<code><a href="ScanPlugin.html" title="interface in io.anyline.plugin">ScanPlugin</a>&lt;<a href="AbstractScanPlugin.html" title="type parameter in AbstractScanPlugin">ResultType</a> extends &lt;any&gt;&gt;</code></dd>
 </dl>
 </li>
 </ul>

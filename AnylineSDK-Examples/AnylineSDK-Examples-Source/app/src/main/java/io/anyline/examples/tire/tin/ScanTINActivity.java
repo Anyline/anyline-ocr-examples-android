@@ -8,6 +8,7 @@ import android.widget.Button;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
@@ -105,8 +106,8 @@ public class ScanTINActivity extends ScanActivity {
         }
     }
 
-    protected HashMap<String, String> getTINResult(String result) {
-        HashMap<String, String> tinResult = new HashMap();
+    protected LinkedHashMap<String, String> getTINResult(String result) {
+        LinkedHashMap<String, String> tinResult = new LinkedHashMap();
         tinResult.put(getResources().getString(R.string.tin), result.isEmpty() ? getResources().getString(R.string.not_available) : result);
         return tinResult;
     }

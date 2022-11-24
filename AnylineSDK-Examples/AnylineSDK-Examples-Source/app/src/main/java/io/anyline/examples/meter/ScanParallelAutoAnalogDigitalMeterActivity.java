@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.examples.R;
 import io.anyline.examples.scanviewresult.ScanViewResultActivity;
@@ -150,15 +151,15 @@ public class ScanParallelAutoAnalogDigitalMeterActivity extends AppCompatActivit
     }
 
 
-    protected HashMap<String, String> getMeterReadingResult(String result) {
-        HashMap<String, String> meterReadingResult = new HashMap();
+    protected LinkedHashMap<String, String> getMeterReadingResult(String result) {
+        LinkedHashMap<String, String> meterReadingResult = new LinkedHashMap();
         meterReadingResult.put(getResources().getString(R.string.reading_result), (result.isEmpty() || result == null) ? getResources().getString(R.string.not_available) : result);
         meterReadingResult.put(getResources().getString(R.string.barcode), (foundBarcodeString.isEmpty() || foundBarcodeString == null) ? getResources().getString(R.string.not_available) : foundBarcodeString);
         return meterReadingResult;
     }
 
 
-    protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String... path) {
+    protected void startScanResultIntent(String scanMode, LinkedHashMap<String, String> scanResult, String... path) {
         // String path = setupImagePath(anylineOcrResult.getCutoutImage());
         Intent i = new Intent(getBaseContext(), ScanViewResultActivity.class);
         i.putExtra(Constant.SCAN_MODULE, scanMode);

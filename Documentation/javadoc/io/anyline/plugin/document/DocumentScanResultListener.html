@@ -115,7 +115,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <main role="main">
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">io.anyline.plugin.document</a></div>
-<h2 title="Interface DocumentScanResultListener" class="title">Interface DocumentScanResultListener&lt;T extends <a href="../ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</h2>
+<h2 title="Interface DocumentScanResultListener" class="title">Interface DocumentScanResultListener&lt;T extends &lt;any&gt;&gt;</h2>
 </div>
 <div class="contentContainer">
 <div class="description">
@@ -126,7 +126,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code><a href="../ScanResultListener.html" title="interface in io.anyline.plugin">ScanResultListener</a>&lt;T&gt;</code></dd>
 </dl>
 <hr>
-<pre>public interface <span class="typeNameLabel">DocumentScanResultListener&lt;T extends <a href="../ScanResult.html" title="class in io.anyline.plugin">ScanResult</a>&gt;</span>
+<pre>public interface <span class="typeNameLabel">DocumentScanResultListener&lt;T extends &lt;any&gt;&gt;</span>
 extends <a href="../ScanResultListener.html" title="interface in io.anyline.plugin">ScanResultListener</a>&lt;T&gt;</pre>
 <div class="block">Created by peter on 18/06/18.</div>
 </li>
@@ -250,7 +250,7 @@ extends <a href="../ScanResultListener.html" title="interface in io.anyline.plug
 <pre class="methodSignature">void&nbsp;onPreviewProcessingSuccess&#8203;(<a href="../../models/AnylineImage.html" title="class in io.anyline.models">AnylineImage</a>&nbsp;anylineImage)</pre>
 <div class="block">Called if the preview scan detected a sharp and correctly placed document.
  After this callback, a full frame scan of the document starts automatically, and results either in a
- <a href="../ScanResultListener.html#onResult(T)"><code>ScanResultListener.onResult(ScanResult)</code></a>,
+ <code>DocumentScanResultListener#onResult(ScanResult)</code>,
  or a
  <a href="#onPictureProcessingFailure(io.anyline.plugin.document.DocumentScanViewPlugin.DocumentError)"><code>onPictureProcessingFailure(DocumentScanViewPlugin.DocumentError)</code></a>
  callback call.</div>

@@ -164,7 +164,7 @@ dependencies {
 
     /* Desugaring, see https://github.com/google/desugar_jdk_libs/blob/master/CHANGELOG.md
      * Version 2.0.0 requires AGP 7.4.0 */
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:${versions.desugar_jdk_libs}"
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

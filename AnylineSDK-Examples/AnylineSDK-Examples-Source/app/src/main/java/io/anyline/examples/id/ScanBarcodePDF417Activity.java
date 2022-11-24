@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.camera.CameraController;
 import io.anyline.camera.CameraOpenListener;
@@ -118,8 +119,8 @@ public class ScanBarcodePDF417Activity extends ScanActivity implements CameraOpe
         throw new RuntimeException(e);
     }
 
-    protected HashMap<String, String> getBarcodeResult(BarcodeScanResult result) {
-        HashMap<String, String> serialNumberResult = new HashMap<>();
+    protected LinkedHashMap<String, String> getBarcodeResult(BarcodeScanResult result) {
+        LinkedHashMap<String, String> serialNumberResult = new LinkedHashMap<>();
 
         Barcode barcode = result.getResult().get(0);
         String resultString = barcode.getValue();

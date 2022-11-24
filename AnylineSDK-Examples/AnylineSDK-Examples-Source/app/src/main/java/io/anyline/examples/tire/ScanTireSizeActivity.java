@@ -9,14 +9,17 @@ import android.widget.Button;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
 import io.anyline.examples.ScanModuleEnum;
 import io.anyline.plugin.ScanResultListener;
+import io.anyline.plugin.tire.TireScanDetailedResult;
 import io.anyline.plugin.tire.TireScanResult;
 import io.anyline.plugin.tire.TireScanViewPlugin;
 import io.anyline.plugin.tire.TireSizeConfig;
+import io.anyline.plugin.tire.TireSizeScanResult;
 import io.anyline.view.ScanView;
 
 public class ScanTireSizeActivity extends ScanActivity {
@@ -61,8 +64,32 @@ public class ScanTireSizeActivity extends ScanActivity {
         TireScanViewPlugin scanViewPlugin = new TireScanViewPlugin(this, tireSizeConfig, scanView.getScanViewPluginConfig(), "TIRE_SIZE");
 
         scanViewPlugin.addScanResultListener((ScanResultListener<TireScanResult>) result -> {
+
+            // Cast to TireScanResult in order to get a simple result string
+            TireScanResult tireScanResult = (TireScanResult) result;
+
+            // simpleResult contains simply the result as a string
+            String simpleResult = tireScanResult.getResult();
+
+
+            // Cast to TireSizeScanResult in order to get detailed results
+            TireSizeScanResult tireSizeScanResult = (TireSizeScanResult) result;
+
+            // tireScanDetailedResult contains many more properties, e.g. a prettified result, prettified result with meta data, etc.
+            TireScanDetailedResult tireScanDetailedResult = tireSizeScanResult.getResult();
+
+            // Example: get prettified result with meta data
+            String prettifiedResultWithMetaData = tireScanDetailedResult.getPrettifiedStringWithMeta().getText();
+
+            // Example: get simple string result from TireScanDetailedResult
+            String alsoSimpleResult = tireScanDetailedResult.getText().getText();
+
+            // Example: get confidence for simple string result
+            int simpleResultConfidence = tireScanDetailedResult.getText().getConfidence();
+
+
             String path = setupImagePath(result.getCutoutImage());
-            startScanResultIntent(getResources().getString(R.string.tire_size), getResult(result.getResult()), path);
+            startScanResultIntent(getResources().getString(R.string.tire_size), getResult(tireSizeScanResult.getResult()), path);
             setupScanProcessView(ScanTireSizeActivity.this, result, getScanModule());
         });
         return scanViewPlugin;
@@ -110,10 +137,80 @@ public class ScanTireSizeActivity extends ScanActivity {
         }
     }
 
-    protected HashMap<String, String> getResult(String result) {
-        HashMap<String, String> r = new HashMap();
-        r.put(getResources().getString(R.string.tire_size), result.isEmpty() ? getResources().getString(R.string.not_available) : result);
-        return r;
+    protected LinkedHashMap<String, String> getResult(TireScanDetailedResult result) {
+        LinkedHashMap<String, String> resultMap = new LinkedHashMap();
+
+        if (result.getPrettifiedString()!= null) {
+            resultMap.put(
+                    getString(R.string.text),
+                    result.getPrettifiedString().getText()
+            );
+        }
+
+        if (result.getWidth() != null) {
+            resultMap.put(
+                    getString(R.string.width),
+                    result.getWidth().getText()
+            );
+        }
+
+        if (result.getRatio() != null) {
+            resultMap.put(
+                    getString(R.string.ratio),
+                    result.getRatio().getText()
+            );
+        }
+
+        if (result.getConstruction() != null && !result.getConstruction().getText().equals("R)")) {
+            resultMap.put(
+                    getString(R.string.construction),
+                    result.getConstruction().getText()
+            );
+        }
+
+        if (result.getDiameter() != null) {
+            resultMap.put(
+                    getString(R.string.diameter),
+                    result.getDiameter().getText()
+            );
+        }
+
+        if (result.getLoadIndex() != null) {
+            resultMap.put(
+                    getString(R.string.load_index),
+                    result.getLoadIndex().getText()
+            );
+        }
+
+        if (result.getSpeedRating() != null) {
+            resultMap.put(
+                    getString(R.string.speed_rating),
+                    result.getSpeedRating().getText()
+            );
+        }
+
+        if (result.getPrettifiedStringWithMeta() != null) {
+            resultMap.put(
+                    getString(R.string.text_long),
+                    result.getPrettifiedStringWithMeta().getText()
+            );
+        }
+
+        if (result.getText().getText() != null) {
+            resultMap.put(
+                    getString(R.string.scanned_text),
+                    result.getText().getText()
+            );
+        }
+
+        if (result.toJson() != null) {
+            resultMap.put(
+                    getString(R.string.complete_json),
+                    result.toJson()
+            );
+        }
+
+        return resultMap;
     }
 }
 

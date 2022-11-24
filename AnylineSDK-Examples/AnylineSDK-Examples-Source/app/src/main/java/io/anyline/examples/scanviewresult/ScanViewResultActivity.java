@@ -13,6 +13,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -35,7 +37,7 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
     private static final String SCAN_MODULE_MULTI_METER = "MULTI_METER";
 
     private String scanModule;
-    private HashMap<String, String> result;
+    private LinkedHashMap<String, String> result;
     // private ScanViewResultAdapter scanResultAdapter;
     private BaseGridAdapter scanResultAdapter;
     private RecyclerView recyclerView;
@@ -74,7 +76,8 @@ public class ScanViewResultActivity extends ScanningConfigurationActivity {
 
         if (savedInstanceState == null) {
             Intent intent = getIntent();
-            result = (HashMap<String, String>) intent.getSerializableExtra(Constant.SCAN_RESULT_DATA);
+            String scanResultDataString = (String) intent.getSerializableExtra(Constant.SCAN_RESULT_DATA);
+            result = (LinkedHashMap<String, String>) new Gson().fromJson(scanResultDataString, LinkedHashMap.class);
 
             Bundle extras = getIntent().getExtras();
             if (extras != null) {

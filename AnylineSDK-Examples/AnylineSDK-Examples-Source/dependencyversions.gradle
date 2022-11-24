@@ -17,10 +17,10 @@ def versions = [
         'compileSdk'                            : 31,
         'buildTools'                            : '33.0.0',
 
-        'anyline_android_sdk_name'              : '42.1.0',
+        'anyline_android_sdk_name'              : '42.2.0',
         'anyline_android_sdk_code'              : 'is defined someplace else',
-        'anyline_scanner_app_name'              : '42.1.0',
-        'anyline_scanner_app_code'              : 371,
+        'anyline_scanner_app_name'              : '42.2.0',
+        'anyline_scanner_app_code'              : 373,
 
         'kotlin'                                : '1.6.10',
         'gradle'                                : '7.3.0',
@@ -30,6 +30,11 @@ def versions = [
         'firebase_appdistribution'              : '3.0.1',
 
         'leakcanary'                            : '2.8.1',
+
+        'kotlinx_serialization_json'            : '1.4.1',
+        'core_ktx'                              : '1.8.0',
+
+        'desugar_jdk_libs'                      : '1.2.2',
 ]
 
 // Set the LinkedHashMap to the project's ExtraPropertiesExtension

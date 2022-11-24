@@ -14,6 +14,7 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.mlkit.vision.barcode.Barcode;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import io.anyline.camera.CameraController;
@@ -170,9 +171,9 @@ abstract public class AbstractEnergyActivity extends ScanActivity implements Cam
         throw new RuntimeException(e);
     }
 
-    protected HashMap<String, String> getMeterReadingResult(String result) {
+    protected LinkedHashMap<String, String> getMeterReadingResult(String result) {
 
-        HashMap<String, String> meterReadingResult = new HashMap();
+        LinkedHashMap<String, String> meterReadingResult = new LinkedHashMap();
 
         meterReadingResult.put(getResources().getString(R.string.reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
         meterReadingResult.put(getResources().getString(R.string.barcode), (foundBarcodeString.isEmpty() || foundBarcodeString ==null) ? getResources().getString(R.string.not_available) : foundBarcodeString);

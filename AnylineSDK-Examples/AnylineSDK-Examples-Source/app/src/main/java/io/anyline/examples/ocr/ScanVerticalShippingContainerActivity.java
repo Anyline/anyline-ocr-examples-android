@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
@@ -92,9 +93,9 @@ public class ScanVerticalShippingContainerActivity extends ScanActivity implemen
         scanView.releaseCameraInBackground();
     }
 
-    protected HashMap<String, String> getShippingcontainerResult (String result) {
+    protected LinkedHashMap<String, String> getShippingcontainerResult (String result) {
 
-        HashMap<String, String> shippingContainer = new HashMap();
+        LinkedHashMap<String, String> shippingContainer = new LinkedHashMap();
 
         shippingContainer.put(getResources().getString(R.string.reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
 

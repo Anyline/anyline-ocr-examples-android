@@ -232,7 +232,8 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getRotationCompensation</h4>
-<pre class="methodSignature">public static&nbsp;int&nbsp;getRotationCompensation&#8203;(android.content.Context&nbsp;context,
+<pre class="methodSignature">@RequiresApi(api=21)
+public static&nbsp;int&nbsp;getRotationCompensation&#8203;(android.content.Context&nbsp;context,
                                           int&nbsp;cameraId,
                                           boolean&nbsp;isFrontFacing)</pre>
 <div class="block">Get the angle by which an image must be rotated given the device's current
