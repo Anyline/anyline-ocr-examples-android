@@ -3,6 +3,7 @@ package io.anyline.examples.ocr;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
@@ -71,8 +72,8 @@ public class ScanIbanActivity extends ScanActivity implements AnylineDebugListen
 		scanViewPlugin.setDebugListener(this);
 	}
 
-	private HashMap<String, String> getIbanResult (String ibanResult){
-		HashMap<String, String> ibanHashMap = new HashMap<>();
+	private LinkedHashMap<String, String> getIbanResult (String ibanResult){
+		LinkedHashMap<String, String> ibanHashMap = new LinkedHashMap<>();
 
 		ibanHashMap.put(getResources().getString(R.string.iban_reading_result) , (ibanResult == null || ibanResult.isEmpty()) ?  getResources().getString(R.string.not_available) : ibanResult);
 

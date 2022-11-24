@@ -4,7 +4,6 @@
     <string name="characterSettings">Character settings</string>
     <string name="cutoutRatio">Aspect ratio height:width: 1:%1$d</string>
     <string name="aspectRatio">Aspect ratio</string>
-    <string name="width">Width</string>
     <string name="height">Height</string>
     <string name="colon">:</string>
     <string name="one">1</string>

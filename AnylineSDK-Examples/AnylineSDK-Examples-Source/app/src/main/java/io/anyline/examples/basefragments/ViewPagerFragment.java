@@ -35,7 +35,11 @@ public class ViewPagerFragment extends Fragment {
             public void onClick(View v) {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity()); //Read Update
                 alertDialog.setTitle("Build Version");
-                alertDialog.setMessage(getString(R.string.app_build_version, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE) + "\n" +getString(R.string.sdk_build_version, at.nineyards.anyline.BuildConfig.VERSION_NAME) );
+                alertDialog.setMessage(
+                        getString(R.string.app_build_version, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE) +
+                                "\n" +
+                                getString(R.string.sdk_build_version, at.nineyards.anyline.BuildConfig.VERSION_NAME_ANYLINE_SDK)
+                );
 
                 alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {

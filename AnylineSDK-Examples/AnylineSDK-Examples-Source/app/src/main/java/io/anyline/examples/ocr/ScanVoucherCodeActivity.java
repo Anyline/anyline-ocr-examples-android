@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
@@ -85,8 +86,8 @@ public class ScanVoucherCodeActivity extends ScanActivity implements AnylineDebu
         scanView.stop();
     }
 
-    private HashMap<String, String> getVoucherResult (String voucherResult){
-        HashMap<String, String> voucherCodeHashMap = new HashMap<>();
+    private LinkedHashMap<String, String> getVoucherResult (String voucherResult){
+        LinkedHashMap<String, String> voucherCodeHashMap = new LinkedHashMap<>();
 
         voucherCodeHashMap.put(getResources().getString(R.string.voucher_reading_result) , (voucherResult == null || voucherResult.isEmpty()) ?  getResources().getString(R.string.not_available) : voucherResult);
 

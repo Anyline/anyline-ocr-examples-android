@@ -9,6 +9,7 @@ import android.widget.Button;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.examples.R;
 import io.anyline.examples.ScanActivity;
@@ -110,8 +111,8 @@ public class ScanCommercialTireIdActivity extends ScanActivity {
         }
     }
 
-    protected HashMap<String, String> getResult(String result) {
-        HashMap<String, String> r = new HashMap();
+    protected LinkedHashMap<String, String> getResult(String result) {
+        LinkedHashMap<String, String> r = new LinkedHashMap();
         r.put(getResources().getString(R.string.commercial_tire_id), result.isEmpty() ? getResources().getString(R.string.not_available) : result);
         return r;
     }

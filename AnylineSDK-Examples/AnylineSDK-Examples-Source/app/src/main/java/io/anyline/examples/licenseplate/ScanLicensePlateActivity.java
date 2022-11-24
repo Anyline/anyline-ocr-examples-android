@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import at.nineyards.anyline.core.RunFailure;
 import io.anyline.AnylineDebugListener;
@@ -104,9 +105,9 @@ public class ScanLicensePlateActivity extends ScanActivity implements AnylineDeb
         scanView.releaseCameraInBackground();
     }
 
-    public HashMap<String, String> getLicensePlateResult(LicensePlateScanResult licensePlateResult) {
+    public LinkedHashMap<String, String> getLicensePlateResult(LicensePlateScanResult licensePlateResult) {
 
-        HashMap<String, String> licensePlateResultData = new HashMap<>();
+        LinkedHashMap<String, String> licensePlateResultData = new LinkedHashMap<>();
 
         if (getLicensePlateScanModeFromIntent() != LicensePlateScanMode.Africa) {
             licensePlateResultData.put(getResources().getString(R.string.license_plate_country), (licensePlateResult.getCountry() == null || licensePlateResult.getCountry().isEmpty()) ? getResources().getString(R.string.not_available) : licensePlateResult.getCountry());

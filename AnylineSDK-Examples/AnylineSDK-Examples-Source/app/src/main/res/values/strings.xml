@@ -472,4 +472,20 @@
     <string name="barcode_settings_multiscanbutton_text">Multi scan trigger button</string>
     <string name="barcode_settings_resetcategory_text">Reset Settings</string>
     <string name="barcode_settings_reset_text">Reset all settings to default</string>
+
+    <string name="text">Text</string>
+    <string name="prettified_string">Prettified String</string>
+    <string name="text_long">Text (long)</string>
+    <string name="vehicle_type">Vehicle Type</string>
+    <string name="width">Width</string>
+    <string name="ratio">Ratio</string>
+    <string name="construction">Construction</string>
+    <string name="diameter">Diameter</string>
+    <string name="commercial_tire">Commercial Tire</string>
+    <string name="load_index">Load Index</string>
+    <string name="speed_rating">Speed Rating</string>
+    <string name="extra_load">Extra Load</string>
+    <string name="winter">Winter</string>
+    <string name="scanned_text">Scanned Text</string>
+    <string name="complete_json">Complete JSON</string>
 </resources>

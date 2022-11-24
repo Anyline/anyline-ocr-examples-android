@@ -11,9 +11,12 @@ import android.widget.RelativeLayout;
 
 import androidx.appcompat.widget.Toolbar;
 
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.examples.ocr.feedback.FeedbackType;
 import io.anyline.examples.ocr.feedback.FeedbackView;
@@ -192,12 +195,14 @@ abstract public class ScanActivity extends ScanningConfigurationActivity {
         return imagePath;
     }
 
-    protected void startScanResultIntent(String scanMode, HashMap<String, String> scanResult, String... path) {
+    protected void startScanResultIntent(String scanMode, LinkedHashMap<String, String> scanResult, String... path) {
         // String path = setupImagePath(anylineOcrResult.getCutoutImage());
+
+        String scanResultDataString = new JSONObject(scanResult).toString();
 
         Intent i = new Intent(getBaseContext(), ScanViewResultActivity.class);
         i.putExtra(Constant.SCAN_MODULE, scanMode);
-        i.putExtra(Constant.SCAN_RESULT_DATA, scanResult);
+        i.putExtra(Constant.SCAN_RESULT_DATA, scanResultDataString);
         if (path.length == 2) {
             i.putExtra(Constant.SCAN_FULL_PICTURE_PATH, path[0]);
             i.putExtra(Constant.SCAN_FACE_PICTURE_PATH, path[1]);

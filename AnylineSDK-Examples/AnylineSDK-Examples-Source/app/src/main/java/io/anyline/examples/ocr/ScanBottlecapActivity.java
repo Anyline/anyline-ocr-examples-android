@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.appcompat.widget.Toolbar;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
@@ -99,9 +100,9 @@ public class ScanBottlecapActivity extends ScanActivity implements AnylineDebugL
 
     }
 
-    protected HashMap<String, String> getSerialNumberResult (String result) {
+    protected LinkedHashMap<String, String> getSerialNumberResult (String result) {
 
-        HashMap<String, String> serialNumberResult = new HashMap();
+        LinkedHashMap<String, String> serialNumberResult = new LinkedHashMap();
 
         serialNumberResult.put(getResources().getString(R.string.bottlecap_reading_result), (result.isEmpty() || result ==null) ? getResources().getString(R.string.not_available) : result );
 

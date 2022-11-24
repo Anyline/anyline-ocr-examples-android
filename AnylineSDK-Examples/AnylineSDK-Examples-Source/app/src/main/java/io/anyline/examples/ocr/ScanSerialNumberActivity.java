@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import io.anyline.AnylineDebugListener;
 import at.nineyards.anyline.core.RunFailure;
@@ -160,9 +161,9 @@ public class ScanSerialNumberActivity extends ScanActivity implements AnylineDeb
         }
     }
 
-    protected HashMap<String, String> getSerialNumberResult(String result) {
+    protected LinkedHashMap<String, String> getSerialNumberResult(String result) {
 
-        HashMap<String, String> serialNumberResult = new HashMap();
+        LinkedHashMap<String, String> serialNumberResult = new LinkedHashMap();
 
         serialNumberResult.put(getResources().getString(R.string.universal_reading_result),
                                (result.isEmpty() || result == null) ? getResources().getString(R.string.not_available) : result);
