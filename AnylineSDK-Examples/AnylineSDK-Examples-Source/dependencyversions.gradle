@@ -17,10 +17,10 @@ def versions = [
         'compileSdk'                            : 31,
         'buildTools'                            : '33.0.0',
 
-        'anyline_android_sdk_name'              : '42.2.0',
+        'anyline_android_sdk_name'              : '42.3.0',
         'anyline_android_sdk_code'              : 'is defined someplace else',
-        'anyline_scanner_app_name'              : '42.2.0',
-        'anyline_scanner_app_code'              : 373,
+        'anyline_scanner_app_name'              : '42.3.0',
+        'anyline_scanner_app_code'              : 374,
 
         'kotlin'                                : '1.6.10',
         'gradle'                                : '7.3.0',
