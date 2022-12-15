@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="universal_id_project_id">f34bd75f-1acd-4330-814f-0ddd25e0c4c0</string>
-    <string name="universal_id_customer_id">8ea08c49-7738-4bdc-91eb-d964b0ed9420</string>
-    <string name="universal_id_api_url">https://trainer-api.anyline.com"</string>
-    <string name="universal_id_api_key">937964ed-ca87-435f-8edb-e8580e180929</string>
-</resources>
