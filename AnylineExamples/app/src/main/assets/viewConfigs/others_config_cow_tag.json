@@ -11,8 +11,7 @@
       "id": "Cattle Tags",
       "ocrConfig": {
         "scanMode": "auto",
-        "customCmdFile": "cow.ale",
-        "model": "USNr.any"
+        "customCmdFile": "cow.ale"
       },
       "cancelOnResult": true
     },
