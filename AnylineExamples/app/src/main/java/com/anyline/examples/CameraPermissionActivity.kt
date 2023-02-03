@@ -7,7 +7,12 @@ import pub.devrel.easypermissions.EasyPermissions
 
 open class CameraPermissionActivity : AppCompatActivity() {
 
+    private val permission = Manifest.permission.CAMERA
     var functionToCallWithCameraPermissionGranted: () -> Unit = {}
+
+    fun checkIfCameraPermissionGranted() : Boolean {
+        return EasyPermissions.hasPermissions(this, permission)
+    }
 
     fun executeIfCameraPermissionGranted(function: () -> Unit) {
         functionToCallWithCameraPermissionGranted = function
@@ -16,8 +21,7 @@ open class CameraPermissionActivity : AppCompatActivity() {
 
     @AfterPermissionGranted(REQUEST_CAMERA_PERMISSION)
     private fun checkAndRequestCameraPermission() {
-        val permission = Manifest.permission.CAMERA
-        if (EasyPermissions.hasPermissions(this, permission)) {
+        if (checkIfCameraPermissionGranted()) {
             // Requested permissions have been granted, invoke the function
             functionToCallWithCameraPermissionGranted.invoke()
         } else {

@@ -25,6 +25,9 @@ class MainActivity : CameraPermissionActivity() {
                 finish()
             }
         }
+        binding.otaUpdateButton.setOnClickListener {
+            startActivity(OTAScanActivity.buildIntent(this))
+        }
     }
 
     private fun updateUi() {
@@ -34,6 +37,17 @@ class MainActivity : CameraPermissionActivity() {
             dateFormat.format(expiryDate)
         } catch (e: LicenseException) {
             "(Error getting expiry date: ${e.message})"
+        }
+
+        when (checkIfCameraPermissionGranted()) {
+            true -> {
+                binding.requestCameraPermissionButton.text = getString(R.string.start_scanning)
+                binding.otaUpdateButton.isEnabled = true
+            }
+            false -> {
+                binding.requestCameraPermissionButton.text = getString(R.string.request_camera_permission)
+                binding.otaUpdateButton.isEnabled = false
+            }
         }
 
         binding.versionTextview.text =

@@ -4,12 +4,12 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "43.0.0-preview.1"
+    anylinesdk_version = "43.0.0-rc.3"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
     // Only increase anyline_examples_version_code to update build versions!
-    anyline_examples_version_code = 8
+    anyline_examples_version_code = 9
     // anyline_examples_build_number is replaced by jenkins!
     anyline_examples_build_number = "+0"
     anyline_examples_version_name = "43.0.0-snapshot.${anyline_examples_version_code}${anyline_examples_build_number}"

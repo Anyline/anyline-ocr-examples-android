@@ -5,6 +5,11 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
 
     <application
         android:name="com.anyline.examples.MainApplication"
@@ -17,6 +22,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamplesApp"
         tools:targetApi="31">
+        <activity
+            android:name="com.anyline.examples.NFCMrzActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:label="NFCMrzActivity">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.anyline.examples.OTAScanActivity"
+            android:exported="false"
+            android:label="OTAScanActivity"/>
         <activity
             android:name="com.anyline.examples.ScanActivity"
             android:exported="false"

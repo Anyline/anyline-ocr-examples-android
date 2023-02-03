@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ScanActivity">
 
-    <io.anyline.view.ScanView
+    <io.anyline2.view.ScanView
         android:id="@+id/scan_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
