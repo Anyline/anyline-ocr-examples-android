@@ -10,6 +10,7 @@
     "pluginConfig": {
       "id": "Tire|Tire Size Specifications",
       "tireSizeConfig": {
+        "upsideDownMode": "AUTO"
       },
       "cancelOnResult": true
     },
