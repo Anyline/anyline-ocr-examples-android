@@ -1,0 +1,48 @@
+﻿{
+  "cameraConfig": {
+    "captureResolution": "720p"
+  },
+  "flashConfig": {
+    "mode": "auto",
+    "alignment": "bottom_right"
+  },
+  "viewPluginConfig": {
+    "pluginConfig": {
+      "id": "Meter|Dial Meters",
+      "meterConfig": {
+        "scanMode": "dial_meter"
+      },
+      "cancelOnResult": true
+    },
+    "cutoutConfig": {
+      "style": "contour_rect",
+      "alignment": "top",
+      "strokeWidth": 2,
+      "strokeColor": "FFFFFF",
+      "cornerRadius": 4,
+      "outerColor": "000000",
+      "outerAlpha": 0.5,
+      "feedbackStrokeColor": "0099FF",
+      "maxWidthPercent": "90%",
+      "maxHeightPercent": "90%",
+      "ratioFromSize": {
+        "width": 2.25,
+        "height": 1
+      },
+      "offset": {
+        "x": 0,
+        "y": 120
+      }
+    },
+    "scanFeedbackConfig": {
+      "animation": "traverse_multi",
+      "animationDuration": 250,
+      "style": "contour_rect",
+      "strokeColor": "0099FF",
+      "fillColor": "220099FF",
+      "blinkAnimationOnResult": true,
+      "beepOnResult": true,
+      "vibrateOnResult": true
+    }
+  }
+}

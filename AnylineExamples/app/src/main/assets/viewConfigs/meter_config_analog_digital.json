@@ -1,0 +1,52 @@
+﻿{
+  "cameraConfig": {
+    "captureResolution": "1080p",
+    "pictureResolution": "1080p"
+  },
+  "flashConfig": {
+    "mode": "manual",
+    "alignment": "top_right"
+  },
+  "viewPluginConfig": {
+    "pluginConfig": {
+      "id": "Meter|Analog/Digital Auto",
+      "meterConfig": {
+        "scanMode": "auto_analog_digital_meter"
+      },
+      "cancelOnResult": true
+    },
+    "cutoutConfig": {
+      "style": "rect",
+      "alignment": "top_half",
+      "strokeWidth": 2,
+      "strokeColor": "FFFFFF",
+      "cornerRadius": 4,
+      "outerColor": "000000",
+      "outerAlpha": 0.5,
+      "feedbackStrokeColor": "0099FF",
+      "width": 550,
+      "maxWidthPercent": "90%",
+      "maxHeightPercent": "90%",
+      "ratioFromSize": {
+        "width": 2.25,
+        "height": 1
+      },
+      "offset": {
+        "x": 0,
+        "y": 120
+      }
+    },
+    "scanFeedbackConfig": {
+      "style": "CONTOUR_RECT",
+      "strokeColor": "0099FF",
+      "strokeWidth": 2,
+      "fillColor": "220099FF",
+      "cornerRadius": 2,
+      "redrawTimeout": 200,
+      "animationDuration": 75,
+      "blinkAnimationOnResult": true,
+      "beepOnResult": true,
+      "vibrateOnResult": true
+    }
+  }
+}
