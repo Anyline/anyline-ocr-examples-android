@@ -1,0 +1,91 @@
+{
+  "cameraConfig": {
+    "captureResolution": "1080p",
+    "pictureResolution": "1080p"
+  },
+  "flashConfig": {
+    "mode": "manual",
+    "alignment": "top_right"
+  },
+  "viewPluginCompositeConfig": {
+    "id": "Workflows|Meter & Barcode (parallel)",
+    "processingMode": "parallel",
+    "viewPlugins": [
+      {
+        "viewPluginConfig": {
+          "pluginConfig": {
+            "id": "METER",
+            "meterConfig": {
+              "scanMode": "auto_analog_digital_meter"
+            }
+          },
+          "cutoutConfig": {
+            "style": "rect",
+            "maxWidthPercent": "80%",
+            "maxHeightPercent": "80%",
+            "alignment": "top_half",
+            "width": 550,
+            "ratioFromSize": {
+              "width": 3,
+              "height": 1
+            },
+            "strokeWidth": 2,
+            "cornerRadius": 10,
+            "strokeColor": "FFFFFF",
+            "outerColor": "000000",
+            "outerAlpha": 0.3,
+            "feedbackStrokeColor": "0099FF"
+          },
+          "scanFeedbackConfig": {
+            "style": "rect",
+            "strokeWidth": 2,
+            "strokeColor": "0099FF",
+            "fillColor": "330099FF",
+            "cornerRadius": 0,
+            "beepOnResult": true,
+            "vibrateOnResult": true,
+            "blinkAnimationOnResult": true
+          }
+        }
+      },
+      {
+        "viewPluginConfig": {
+          "pluginConfig": {
+            "id": "BARCODE",
+            "barcodeConfig": {
+              "barcodeFormats": [
+                "ALL"
+              ]
+            }
+          },
+          "cutoutConfig": {
+            "style": "rect",
+            "maxWidthPercent": "100%",
+            "maxHeightPercent": "100%",
+            "alignment": "center",
+            "ratioFromSize": {
+              "width": 9,
+              "height": 16
+            },
+            "strokeWidth": 0,
+            "cornerRadius": 3,
+            "strokeColor": "FFFFFF",
+            "outerColor": "000000",
+            "outerAlpha": 0.0,
+            "feedbackStrokeColor": "0099FF"
+          },
+          "scanFeedbackConfig": {
+            "style": "rect",
+            "strokeColor": "0099FF",
+            "fillColor": "220099FF",
+            "animationDuration": 150,
+            "blinkAnimationOnResult": true,
+            "beepOnResult": true,
+            "vibrateOnResult": false
+          }
+        }
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="view_configs">
+        <item>Barcode</item>
+        <item>ID</item>
+        <item>Meter</item>
+        <item>TIN</item>
+    </string-array>
+</resources>

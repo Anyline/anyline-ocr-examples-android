@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Anyline Examples</string>
+    <string name="anyline_license_key" translatable="false">ew0KICAibGljZW5zZUtleVZlcnNpb24iOiAiMy4wIiwNCiAgImRlYnVnUmVwb3J0aW5nIjogIm9uIiwNCiAgIm1ham9yVmVyc2lvbiI6ICIzNyIsDQogICJzY29wZSI6IFsNCiAgICAiQUxMIg0KICBdLA0KICAibWF4RGF5c05vdFJlcG9ydGVkIjogMzAsDQogICJhZHZhbmNlZEJhcmNvZGUiOiB0cnVlLA0KICAibXVsdGlCYXJjb2RlIjogdHJ1ZSwNCiAgInN1cHBvcnRlZEJhcmNvZGVGb3JtYXRzIjogWw0KICAgICJBTEwiDQogIF0sDQogICJwbGF0Zm9ybSI6IFsNCiAgICAiaU9TIiwNCiAgICAiQW5kcm9pZCIsDQogICAgIldpbmRvd3MiLA0KICAgICJKUyINCiAgXSwNCiAgInNob3dXYXRlcm1hcmsiOiB0cnVlLA0KICAidG9sZXJhbmNlRGF5cyI6IDMwLA0KICAidmFsaWQiOiAiMjAyMy0xMi0xMiIsDQogICJpb3NJZGVudGlmaWVyIjogWw0KICAgICJpby5hbnlsaW5lLmV4YW1wbGVzIiwNCiAgICAiaW8uYW55bGluZS5leGFtcGxlcy5zdG9yZSIsDQogICAgImlvLmFueWxpbmUuZXhhbXBsZXMuYnVuZGxlIiwNCiAgICAiaW8uYW55bGluZS5BbnlsaW5lRXhhbXBsZXMiLA0KICAgICJpby5hbnlsaW5lLkFueWxpbmVFeGFtcGxlcy5iZXRhIiwNCiAgICAiaW8uYW55bGluZS5BbnlsaW5lRXhhbXBsZXMudGVzdCIsDQogICAgImlvLmFueWxpbmUuZXhhbXBsZXMuc25hcHNob3QiDQogIF0sDQogICJhbmRyb2lkSWRlbnRpZmllciI6IFsNCiAgICAiaW8uYW55bGluZS5leGFtcGxlcyIsDQogICAgImlvLmFueWxpbmUuZXhhbXBsZXMuc3RvcmUiLA0KICAgICJpby5hbnlsaW5lLmV4YW1wbGVzLmJ1bmRsZSIsDQogICAgImlvLmFueWxpbmUuQW55bGluZUV4YW1wbGVzIiwNCiAgICAiaW8uYW55bGluZS5BbnlsaW5lRXhhbXBsZXMuYmV0YSIsDQogICAgImlvLmFueWxpbmUuZXhhbXBsZXMuc25hcHNob3QiDQogIF0sDQogICJ3aW5kb3dzSWRlbnRpZmllciI6IFsNCiAgICAiaW8uYW55bGluZS5leGFtcGxlcy5zbmFwc2hvdCINCiAgXSwNCiAgImpzSWRlbnRpZmllciI6IFsNCiAgICAiaW8uYW55bGluZS5leGFtcGxlcy5zbmFwc2hvdCINCiAgXQ0KfQpxRjdMMllGL2EyWXh3TjNFd292S3ZiQjNJaFB1N1FuYmRGYkgzSGdXZGpjdkxFb28wMUJVSzN1Zm91LzJUUlV2a08zNHVQeVFtVkZNd2dEODVGS2tyMlVlMkMybHo3WjlJazRJZEo1VEdQQnJqVEtEQ1d1SUh3ZDB0ejE3ZEFob2kwNGVzYStVTi9OalJLMFNVbTJia1gyeDhmaDlrT2lSLzdsZWlDLzZRMWQ3MVYyRmlXRGRueDRsTDFRczJLRTFIbEJGSFJzODU2UVRvT3BsNVNIYXBLUFZNd3N4bFBVSjE0NmYzUkhJbVZhdXVTVHZJZjFITlJYOE5DZlVxRGJKTHZpS1BjMTRTSlQzRDRva1FzRmRFeDA4aFE1YWtSQ1dMVjd5SW5KdnhmSjg0N1JVMDNrRFpFUi9wSFo5ZEZ0S2hHWWFzRk5ET3hhNStPRzN5VE92dnc9PQ==</string>
+    <string name="start_scanning">Start Scanning</string>
+    <string name="request_camera_permission">Request Camera Permission</string>
+    <string name="last_result">Last Result</string>
+    <string name="scan_again">Scan Again</string>
+    <string name="ota_checkForUpdate_label">OTA</string>
+    <string name="ota_checkForUpdate_checking">Checking for new updates</string>
+    <string name="ota_checkForUpdate_downloading">Downloading new updates</string>
+    <string name="ota_checkForUpdate_error">An error occurred while getting new updates</string>
+    <string name="ota_checkForUpdate_error_barcode">Invalid barcode update content</string>
+    <string name="ota_checkForUpdate_uptodate">No update found for asset</string>
+    <string name="ota_checkForUpdate_completed">Asset update process complete</string>
+    <string name="ota_initAsset_error">An error occurred while initializing plugin with asset</string>
+    <string name="scan_mrz">Scan MRZ</string>
+    <string name="mrz_info_title">MRZ Info</string>
+    <string name="mrz_info_message_read_nfc">"Would you like to read additional information from the NFC chip?"</string>
+    <string name="read_nfc">Read NFC</string>
+    <string name="nfc_error_title">NFC Error</string>
+    <string name="nfc_error_message_not_supported">"NFC passport reading is not supported on this device."</string>
+    <string name="nfc_error_message_enable_nfc">"You first have to enable NFC in your options!"</string>
+    <string name="nfc_adapter_error_prefix">"NFC Adapter Error: %1$s</string>
+    <string name="nfc_failure_error_prefix">NFC Failure: %1$s</string>
+    <string name="nationality">Nationality</string>
+    <string name="mrz_document_number">Document Number</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_settings">Settings</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+    <string name="button_not_now">Not Now</string>
+</resources>
