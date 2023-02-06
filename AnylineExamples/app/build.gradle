@@ -16,7 +16,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "io.anyline.examples.github"
+        applicationId "io.anyline.examples"
         minSdk 21
         targetSdk 32
         versionCode anyline_examples_version_code
