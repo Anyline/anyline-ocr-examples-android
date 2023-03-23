@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Handler
 import android.os.Looper
-import android.util.Base64
 import io.anyline2.ScanResult
 import io.anyline2.core.ScanController
 import io.anyline2.legacy.products.AnylineUpdater
@@ -23,12 +22,8 @@ class OTAScanActivity : ScanActivity(), IAnylineUpdateDelegate {
     override val onResult: (ScanResult) -> Unit = { scanResult ->
         if (scanResult.pluginResult.barcodeResult.barcodes.size > 0) {
             scanResult.pluginResult.barcodeResult.barcodes[0].apply {
-                val decodedResult = when (this.isBase64) {
-                    true -> Base64.decode(this.value, Base64.DEFAULT).toString(charset("UTF-8"))
-                    else -> this.value
-                }
                  try {
-                     val jsonResult = JSONObject(decodedResult)
+                     val jsonResult = JSONObject(this.value)
                      assetContext = ProjectContext(this@OTAScanActivity, jsonResult).apply {
                          if (jsonResult.has("projectId")) {
                              //json projectId attr differs from TrainerUtil.k_projectID by "d" upper/lower case

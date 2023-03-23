@@ -194,6 +194,16 @@ open class ScanActivity : AppCompatActivity() {
             resultReceived = Event { data -> onResult.invoke(data)}
             resultsReceived = Event { data -> onResults.invoke(data) }
         }
+
+        scanView.onCutoutChanged = Event { data ->
+            data.forEach {pair ->
+                Timber.tag(TAG).e("onCutoutChanged from ${pair.first.id()}: " +
+                        "left: ${pair.second.left}, " +
+                        "top: ${pair.second.top}, " +
+                        "right: ${pair.second.right}, " +
+                        "bottom: ${pair.second.bottom} ")
+            }
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
