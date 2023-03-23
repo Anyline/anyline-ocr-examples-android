@@ -4,12 +4,12 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "43.1.0"
+    anylinesdk_version = "44.0.0"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
     anyline_examples_version_code = 10
-    anyline_examples_version_name = "43.1.0"
+    anyline_examples_version_name = "44.0.0"
 }
 
 android {
@@ -69,7 +69,7 @@ dependencies {
 
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
