@@ -5,7 +5,7 @@
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "bottom_left"
+    "alignment": "top_left"
   },
   "viewPluginCompositeConfig": {
     "id": "Workflows|License Plate / DrivingLicense / VIN (sequential)",
