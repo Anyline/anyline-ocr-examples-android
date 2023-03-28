@@ -4,7 +4,7 @@
   },
   "flashConfig": {
     "mode": "auto",
-    "alignment": "bottom_right"
+    "alignment": "top_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
@@ -17,22 +17,6 @@
         "multiBarcode": true
       },
       "cancelOnResult": false
-    },
-    "cutoutConfig": {
-      "style": "rect",
-      "maxWidthPercent": "100%",
-      "maxHeightPercent": "100%",
-      "alignment": "center",
-      "ratioFromSize": {
-        "width": 9,
-        "height": 16
-      },
-      "strokeWidth": 0,
-      "cornerRadius": 3,
-      "strokeColor": "FFFFFF",
-      "outerColor": "000000",
-      "outerAlpha": 0.0,
-      "feedbackStrokeColor": "0099FF"
     },
     "scanFeedbackConfig": {
       "style": "rect",
