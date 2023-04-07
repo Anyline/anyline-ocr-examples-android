@@ -75,7 +75,6 @@ open class ScanActivity : AppCompatActivity() {
         "barcodes":[{
             "coordinates":[383,289,851,283,842,419,383,417],
             "format":"TRIOPTIC",
-            "isBase64":true,
             "value":"NjU0OTg3"}]},
     "confidence":-1,
     "cropRect":{"height":692,"width":864,"x":108,"y":616},
