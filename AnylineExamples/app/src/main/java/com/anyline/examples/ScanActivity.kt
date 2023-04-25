@@ -3,17 +3,22 @@ package com.anyline.examples
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.util.Pair
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.anyline.examples.databinding.ActivityScanBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.anyline2.view.ScanView
+import io.anyline.models.AnylineYuvImage
+import io.anyline.plugin.barcode.BarcodeFormat
+import io.anyline.plugin.result.BarcodeResult
 import io.anyline2.Event
 import io.anyline2.ScanResult
 import io.anyline2.legacy.trainer.AssetContext
 import io.anyline2.legacy.trainer.ProjectContext
+import io.anyline2.view.ScanView
 import org.json.JSONObject
 import timber.log.Timber
 import java.util.*
@@ -27,44 +32,44 @@ open class ScanActivity : AppCompatActivity() {
     private var lastScanResult: ScanResult? = null
 
     /**
-    * Receives intrinsic run information
+     * Receives intrinsic run information
     {"name":
-        "$resizeWidth",
-        "type":"Int",
-        "value":1080}"
-    */
+    "$resizeWidth",
+    "type":"Int",
+    "value":1080}"
+     */
     private val onScanInfo: (JSONObject) -> Unit = {
         Timber.tag(TAG).e("onScanInfo: $it")
     }
 
     /**
-    * Receives errors during runs
-    */
+     * Receives errors during runs
+     */
     private val onError: (JSONObject) -> Unit = {
         Timber.tag(TAG).e("onError: $it")
     }
 
     /**
-    * Receives info for unsuccessful runs
+     * Receives info for unsuccessful runs
     {"code":
-        5016,
-        "line":0,
-        "message":"NoLinesFound"}
-    */
+    5016,
+    "line":0,
+    "message":"NoLinesFound"}
+     */
     private val onRunSkipped: (JSONObject) -> Unit = {
         Timber.tag(TAG).e("onRunSkipped: $it")
     }
 
     /**
-    * Receives visual feedback
+     * Receives visual feedback
     {"squares":[
-        {"downLeft":{"x":414,"y":847},
-        "downRight":{"x":788,"y":842},
-        "upLeft":{"x":414,"y":949},
-        "upRight":{ x":781,"y":951}
-        }
+    {"downLeft":{"x":414,"y":847},
+    "downRight":{"x":788,"y":842},
+    "upLeft":{"x":414,"y":949},
+    "upRight":{ x":781,"y":951}
+    }
     ]}
-    */
+     */
     private val onVisualFeedback: (JSONObject) -> Unit = {
         Timber.tag(TAG).e("onVisualFeedback: $it")
     }
@@ -72,14 +77,14 @@ open class ScanActivity : AppCompatActivity() {
     /**
      * Receives scan results
     {"barcodeResult":{
-        "barcodes":[{
-            "coordinates":[383,289,851,283,842,419,383,417],
-            "format":"TRIOPTIC",
-            "value":"NjU0OTg3"}]},
+    "barcodes":[{
+    "coordinates":[383,289,851,283,842,419,383,417],
+    "format":"TRIOPTIC",
+    "value":"NjU0OTg3"}]},
     "confidence":-1,
     "cropRect":{"height":692,"width":864,"x":108,"y":616},
     "pluginID":"Barcode|Barcodes"}
-    */
+     */
     open val onResult: (ScanResult) -> Unit = {
         evalResults(
             listOf(it),
@@ -92,7 +97,7 @@ open class ScanActivity : AppCompatActivity() {
     }
 
     private fun evalResults(scanResults: List<ScanResult>, showScanAgain: Boolean) {
-        for(it: ScanResult in scanResults) {
+        for (it: ScanResult in scanResults) {
             Timber.tag(TAG).e("onResult: ${it.result}")
 
             lastScanResult = it
@@ -103,15 +108,15 @@ open class ScanActivity : AppCompatActivity() {
              */
             if (it.pluginResult.pluginID.lowercase(Locale.getDefault()).contains("barcode")) {
                 scanCount += it.pluginResult.barcodeResult.barcodes.size
-            }
-            else if (it.pluginResult.pluginID.lowercase(Locale.getDefault()).contains("mrz")) {
+            } else if (it.pluginResult.pluginID.lowercase(Locale.getDefault()).contains("mrz")) {
                 MaterialAlertDialogBuilder(this)
                     .setTitle(resources.getString(R.string.mrz_info_title))
                     .setMessage(resources.getString(R.string.mrz_info_message_read_nfc))
                     .setPositiveButton(resources.getString(R.string.button_yes)) { dialog, which ->
                         if (NFCMrzActivity.isNfcEnabled(this)) {
                             val intent = NFCMrzActivity.buildIntent(this, it.pluginResult.mrzResult)
-                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                            intent.flags =
+                                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
                             startActivity(intent)
                         }
                     }
@@ -120,8 +125,7 @@ open class ScanActivity : AppCompatActivity() {
                     }
                     .show()
                 break
-            }
-            else {
+            } else {
                 scanCount++
             }
         }
@@ -169,9 +173,9 @@ open class ScanActivity : AppCompatActivity() {
                 //initialize ScanView with AssetContext Info
                 scanView.init(assetContext, 30)
                 setupScanViewListeners()
-            }
-            catch (e: Exception) {
-                showAlertDialog("Error",
+            } catch (e: Exception) {
+                showAlertDialog(
+                    "Error",
                     resources.getString(R.string.ota_initAsset_error) + ": " + e
                 ) { finish() }
             }
@@ -186,28 +190,30 @@ open class ScanActivity : AppCompatActivity() {
     private fun setupScanViewListeners() {
         //set ScanViewPlugin listeners
         scanView.scanViewPlugin.apply {
-            scanInfoReceived = Event { data -> onScanInfo.invoke(data)}
-            runSkippedReceived = Event { data -> onRunSkipped.invoke(data)}
-            errorReceived = Event { data -> onError.invoke(data)}
-            visualFeedbackReceived = Event { data -> onVisualFeedback.invoke(data)}
-            resultReceived = Event { data -> onResult.invoke(data)}
+            scanInfoReceived = Event { data -> onScanInfo.invoke(data) }
+            runSkippedReceived = Event { data -> onRunSkipped.invoke(data) }
+            errorReceived = Event { data -> onError.invoke(data) }
+            visualFeedbackReceived = Event { data -> onVisualFeedback.invoke(data) }
+            resultReceived = Event { data -> onResult.invoke(data) }
             resultsReceived = Event { data -> onResults.invoke(data) }
         }
 
         scanView.onCutoutChanged = Event { data ->
-            data.forEach {pair ->
-                Timber.tag(TAG).e("onCutoutChanged from ${pair.first.id()}: " +
-                        "left: ${pair.second.left}, " +
-                        "top: ${pair.second.top}, " +
-                        "right: ${pair.second.right}, " +
-                        "bottom: ${pair.second.bottom} ")
+            data.forEach { pair ->
+                Timber.tag(TAG).e(
+                    "onCutoutChanged from ${pair.first.id()}: " +
+                            "left: ${pair.second.left}, " +
+                            "top: ${pair.second.top}, " +
+                            "right: ${pair.second.right}, " +
+                            "bottom: ${pair.second.bottom} "
+                )
             }
         }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            android.R.id.home ->  {
+            android.R.id.home -> {
                 onBackPressed()
             }
         }
@@ -262,7 +268,10 @@ open class ScanActivity : AppCompatActivity() {
 
         fun buildIntent(context: Context, assetContext: AssetContext): Intent {
             val intent = Intent(context, ScanActivity::class.java)
-            intent.putExtra(INTENT_EXTRA_ASSETCONTEXT_INFO_CONTENT, assetContext.toJSONObject().toString())
+            intent.putExtra(
+                INTENT_EXTRA_ASSETCONTEXT_INFO_CONTENT,
+                assetContext.toJSONObject().toString()
+            )
             return intent
         }
     }
