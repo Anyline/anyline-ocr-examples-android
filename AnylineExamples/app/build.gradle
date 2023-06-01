@@ -4,7 +4,7 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "46.1.0"
+    anylinesdk_version = "47.0.0"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
