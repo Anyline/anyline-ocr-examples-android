@@ -11,6 +11,7 @@
       "id": "ID|MRZ & Passports",
       "cancelOnResult": true,
       "mrzConfig": {
+        "faceDetectionEnabled": true,
         "mrzFieldScanOptions": {
           "vizAddress": "optional",
           "vizDateOfIssue": "optional"

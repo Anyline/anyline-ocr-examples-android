@@ -4,21 +4,21 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "48.0.0"
+    anylinesdk_version = "49.0.0"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
     anyline_examples_version_code = 11
-    anyline_examples_version_name = "48.0.0"
+    anyline_examples_version_name = "49.0.0"
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "io.anyline.examples"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode anyline_examples_version_code
         versionName anyline_examples_version_name
 
