@@ -22,11 +22,12 @@ import com.google.android.material.snackbar.Snackbar
 import io.anyline.nfc.NFC.DataGroup1
 import io.anyline.nfc.NFC.NFCResult
 import io.anyline.nfc.NFC.SOD
+import io.anyline.nfc.NfcDetectionHandler
 import io.anyline.nfc.NfcDetector
 import io.anyline.nfc.TagProvider
 import io.anyline.plugin.result.MrzResult
 
-class NFCMrzActivity : AppCompatActivity(), NfcDetector.NfcDetectionHandler {
+class NFCMrzActivity : AppCompatActivity(), NfcDetectionHandler {
 
     private lateinit var binding: ActivityNfcMrzBinding
 

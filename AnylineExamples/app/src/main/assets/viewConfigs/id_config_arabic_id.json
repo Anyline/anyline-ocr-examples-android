@@ -21,49 +21,49 @@
         "alphabet": "arabic",
         "idFront": {
           "fullName": {
-            "scanOption": 0,
+            "scanOption": "mandatory",
             "minConfidence": 60
           },
           "dateOfBirth": {
-            "scanOption": 0,
+            "scanOption": "mandatory",
             "minConfidence": 60
           },
           "placeOfBirth": {
-            "scanOption": 1,
+            "scanOption": "optional",
             "minConfidence": 60
           },
           "dateOfExpiry": {
-            "scanOption": 1,
+            "scanOption": "optional",
             "minConfidence": 60
           },
           "documentNumber": {
-            "scanOption": 0,
+            "scanOption": "mandatory",
             "minConfidence": 60
           },
           "nationality": {
-            "scanOption": 1,
+            "scanOption": "optional",
             "minConfidence": 60
           }
         },
         "drivingLicense": {
           "fullName": {
-            "scanOption": 0,
+            "scanOption": "mandatory",
             "minConfidence": 60
           },
           "dateOfBirth": {
-            "scanOption": 0,
+            "scanOption": "mandatory",
             "minConfidence": 60
           },
           "placeOfBirth": {
-            "scanOption": 1,
+            "scanOption": "optional",
             "minConfidence": 60
           },
           "dateOfExpiry": {
-            "scanOption": 1,
+            "scanOption": "optional",
             "minConfidence": 60
           },
           "documentNumber": {
-            "scanOption": 0,
+            "scanOption": "mandatory",
             "minConfidence": 60
           }
         }
