@@ -4,12 +4,12 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "49.0.0"
+    anylinesdk_version = "50.0.0"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
-    anyline_examples_version_code = 11
-    anyline_examples_version_name = "49.0.0"
+    anyline_examples_version_code = 12
+    anyline_examples_version_name = "50.0.0"
 }
 
 android {
