@@ -20,7 +20,6 @@
             }
           },
           "cutoutConfig": {
-            "style": "rect",
             "maxWidthPercent": "80%",
             "maxHeightPercent": "80%",
             "alignment": "top_half",
@@ -59,7 +58,6 @@
             }
           },
           "cutoutConfig": {
-            "style": "rect",
             "maxWidthPercent": "99%",
             "maxHeightPercent": "100%",
             "alignment": "center",
@@ -92,7 +90,6 @@
             "vinConfig": {}
           },
           "cutoutConfig": {
-            "style": "rect",
             "maxWidthPercent": "70%",
             "alignment": "top_half",
             "ratioFromSize": {

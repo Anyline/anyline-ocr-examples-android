@@ -15,7 +15,6 @@
       "cancelOnResult": true
     },
     "cutoutConfig": {
-      "style": "contour_rect",
       "alignment": "top",
       "strokeWidth": 2,
       "strokeColor": "FFFFFF",

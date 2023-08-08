@@ -16,7 +16,6 @@
       }
     },
     "cutoutConfig": {
-      "style": "rect",
       "width": 720,
       "alignment": "center",
       "maxWidthPercent": "80%",

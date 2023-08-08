@@ -13,7 +13,6 @@
       "cancelOnResult": true
     },
     "cutoutConfig": {
-      "style": "rect",
       "width": 720,
       "alignment": "top_half",
       "maxWidthPercent": "70%",
