@@ -22,10 +22,10 @@
       "outerColor": "000000",
       "outerAlpha": 0.5,
       "feedbackStrokeColor": "0099FF",
-      "maxWidthPercent": "90%",
-      "maxHeightPercent": "90%",
+      "maxWidthPercent": "80%",
+      "maxHeightPercent": "80%",
       "ratioFromSize": {
-        "width": 2.25,
+        "width": 2,
         "height": 1
       },
       "offset": {

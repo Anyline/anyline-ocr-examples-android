@@ -16,7 +16,7 @@
       "cancelOnResult": true
     },
     "cutoutConfig": {
-      "alignment": "top_half",
+      "alignment": "top",
       "strokeWidth": 2,
       "strokeColor": "FFFFFF",
       "cornerRadius": 4,
@@ -24,10 +24,10 @@
       "outerAlpha": 0.5,
       "feedbackStrokeColor": "0099FF",
       "width": 550,
-      "maxWidthPercent": "90%",
-      "maxHeightPercent": "90%",
+      "maxWidthPercent": "80%",
+      "maxHeightPercent": "80%",
       "ratioFromSize": {
-        "width": 2.25,
+        "width": 2,
         "height": 1
       },
       "offset": {
