@@ -15,13 +15,12 @@
       "cancelOnResult": true
     },
     "cutoutConfig": {
-      "style": "rect",
       "width": 720,
       "alignment": "center",
       "maxWidthPercent": "80%",
       "ratioFromSize": {
         "width": 720,
-        "height": 144
+        "height": 288
       },
       "strokeWidth": 2,
       "strokeColor": "FFFFFF",

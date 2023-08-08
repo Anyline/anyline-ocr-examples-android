@@ -16,7 +16,6 @@
       "cancelOnResult" : true
     },
     "cutoutConfig" : {
-      "style" : "rect",
       "alignment" : "top",
       "strokeWidth" : 2,
       "strokeColor" : "FFFFFF",
@@ -28,7 +27,7 @@
       "maxWidthPercent": "90%",
       "maxHeightPercent": "90%",
       "ratioFromSize": {
-        "width": 3.75,
+        "width": 2.75,
         "height": 1
       },
       "offset": {
