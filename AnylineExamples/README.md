@@ -9,15 +9,15 @@ Anyline - A powerful OCR SDK for Android
 
 ## API Reference
 
-The API reference for the Anyline SDK for Android can be found here: https://documentation-preview.anyline.com/android-sdk-component/latest
+The API reference for the Anyline SDK for Android can be found here: https://documentation.anyline.com/android-sdk-component/latest
 
 ## Getting Started
 
-Check out our getting-started section here: https://documentation-preview.anyline.com/android-sdk-component/latest/getting-started.html
+Check out our getting-started section here: https://documentation.anyline.com/android-sdk-component/latest/getting-started.html
 
 ## Documentation
 
-Check out our developer guide here: https://documentation-preview.anyline.com/android-sdk-component/latest/index.html
+Check out our developer guide here: https://documentation.anyline.com/android-sdk-component/latest/index.html
 
 ## License
 
