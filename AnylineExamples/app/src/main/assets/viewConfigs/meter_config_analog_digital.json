@@ -1,7 +1,7 @@
 ﻿{
   "cameraConfig": {
-    "captureResolution": "1080p",
-    "pictureResolution": "1080p"
+    "captureResolution": "720p",
+    "pictureResolution": "720p"
   },
   "flashConfig": {
     "mode": "manual",
@@ -23,9 +23,8 @@
       "outerColor": "000000",
       "outerAlpha": 0.5,
       "feedbackStrokeColor": "0099FF",
-      "width": 550,
-      "maxWidthPercent": "80%",
-      "maxHeightPercent": "80%",
+      "maxWidthPercent": "85%",
+      "maxHeightPercent": "85%",
       "ratioFromSize": {
         "width": 2,
         "height": 1

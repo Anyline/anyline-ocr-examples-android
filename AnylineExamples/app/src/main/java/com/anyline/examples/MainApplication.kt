@@ -17,7 +17,8 @@ class MainApplication : Application() {
         // This must be called before doing anything Anyline-related!
         // Try/Catch this to check whether or not your license key is valid!
         try {
-            AnylineSdk.init(getString(R.string.anyline_license_key), this)
+            AnylineSdk.init(getString(R.string.anyline_license_key),
+                this)
         } catch (e: LicenseException) {
             // handle exception
             Timber.tag("LicenseException").e(e)

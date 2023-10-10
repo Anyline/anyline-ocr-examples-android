@@ -13,9 +13,9 @@
       "cancelOnResult": true
     },
     "cutoutConfig": {
-      "width": 720,
       "alignment": "top_half",
       "maxWidthPercent": "70%",
+      "maxHeightPercent": "70%",
       "ratioFromSize": {
         "width": 7,
         "height": 1
