@@ -22,8 +22,8 @@
       "outerColor": "000000",
       "outerAlpha": 0.5,
       "feedbackStrokeColor": "0099FF",
-      "maxWidthPercent": "80%",
-      "maxHeightPercent": "80%",
+      "maxWidthPercent": "85%",
+      "maxHeightPercent": "85%",
       "ratioFromSize": {
         "width": 2,
         "height": 1
