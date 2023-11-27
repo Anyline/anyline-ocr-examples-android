@@ -3,17 +3,12 @@ package com.anyline.examples
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.util.Pair
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.anyline.examples.databinding.ActivityScanBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import io.anyline.models.AnylineYuvImage
-import io.anyline.plugin.barcode.BarcodeFormat
-import io.anyline.plugin.result.BarcodeResult
 import io.anyline2.Event
 import io.anyline2.ScanResult
 import io.anyline2.legacy.trainer.AssetContext
