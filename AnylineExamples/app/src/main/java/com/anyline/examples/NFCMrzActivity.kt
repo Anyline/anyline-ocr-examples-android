@@ -15,7 +15,7 @@ import android.os.Looper
 import android.provider.Settings
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import at.nineyards.anyline.core.LicenseException
+import io.anyline2.core.LicenseException
 import com.anyline.examples.databinding.ActivityNfcMrzBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
@@ -108,7 +108,8 @@ class NFCMrzActivity : AppCompatActivity(), NfcDetectionHandler {
         //already checked in starting activity if nfc exists and is switched on
         handleIntents(intent)
         pendingIntent = PendingIntent.getActivity(
-            this, 0, Intent(this, this.javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0
+            this, 0, Intent(this, this.javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
+            PendingIntent.FLAG_IMMUTABLE
         )
 
     }
