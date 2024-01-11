@@ -10,7 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://anylinesdk.blob.core.windows.net/maven/' }
+        maven { url 'https://mobile-sdk-android.anyline.io/release/' }
     }
 }
 rootProject.name = "New SDK App"

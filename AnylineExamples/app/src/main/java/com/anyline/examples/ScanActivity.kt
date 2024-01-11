@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.anyline.examples.databinding.ActivityScanBinding
@@ -14,6 +15,8 @@ import io.anyline2.ScanResult
 import io.anyline2.legacy.trainer.AssetContext
 import io.anyline2.legacy.trainer.ProjectContext
 import io.anyline2.view.ScanView
+import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayInfoEntry
+import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayViewElementEventContent
 import org.json.JSONObject
 import timber.log.Timber
 import java.util.*
@@ -67,6 +70,26 @@ open class ScanActivity : AppCompatActivity() {
      */
     private val onVisualFeedback: (JSONObject) -> Unit = {
         Timber.tag(TAG).e("onVisualFeedback: $it")
+    }
+
+    /**
+     * Receives UIFeedback messages
+    {"messages":[
+    {"level":"Error","message":"Preset tin_custom_v11 not found."}
+    ]}
+     */
+    private val onUIFeedbackInfo: (JSONObject) -> Unit = {
+        it.optJSONArray("messages")?.let { msgArray ->
+            for (i in 0 until msgArray.length()) {
+                UIFeedbackOverlayInfoEntry.fromJson(msgArray[i] as JSONObject).also { msgEntry ->
+                    when (msgEntry.level) {
+                        UIFeedbackOverlayInfoEntry.Level.Info -> Timber.tag(TAG).i("onUIFeedbackInfo: ${msgEntry.message}")
+                        UIFeedbackOverlayInfoEntry.Level.Warning -> Timber.tag(TAG).w("onUIFeedbackInfo: ${msgEntry.message}")
+                        UIFeedbackOverlayInfoEntry.Level.Error -> Timber.tag(TAG).e("onUIFeedbackInfo: ${msgEntry.message}")
+                    }
+                }
+            }
+        }
     }
 
     /**
@@ -129,6 +152,7 @@ open class ScanActivity : AppCompatActivity() {
             binding.scanAgainButton.visibility = View.VISIBLE
         }
         binding.lastresultImageview.setImageBitmap(scanResults.last().cutoutImage.bitmap)
+        binding.lastresultImageview.visibility = View.VISIBLE
         binding.textTotalscannedCountValue.text = scanCount.toString()
         binding.textLastscannedResultValue.text = scanResults
             .map {
@@ -156,6 +180,7 @@ open class ScanActivity : AppCompatActivity() {
 
             binding.scanAgainButton.visibility = View.GONE
             binding.lastresultImageview.setImageBitmap(null)
+            binding.lastresultImageview.visibility = View.GONE
             binding.textLastscannedResultValue.text = ""
         }
 
@@ -189,6 +214,7 @@ open class ScanActivity : AppCompatActivity() {
             runSkippedReceived = Event { data -> onRunSkipped.invoke(data) }
             errorReceived = Event { data -> onError.invoke(data) }
             visualFeedbackReceived = Event { data -> onVisualFeedback.invoke(data) }
+            uiFeedbackInfoReceived = Event { data -> onUIFeedbackInfo.invoke(data) }
             resultReceived = Event { data -> onResult.invoke(data) }
             resultsReceived = Event { data -> onResults.invoke(data) }
         }
@@ -202,6 +228,16 @@ open class ScanActivity : AppCompatActivity() {
                             "right: ${pair.second.right}, " +
                             "bottom: ${pair.second.bottom} "
                 )
+            }
+        }
+
+        scanView.onUIFeedbackOverlayViewClickedEvent = Event { data ->
+            val elementEventContent: UIFeedbackOverlayViewElementEventContent = data.second
+            if (elementEventContent.element.tag.isNotEmpty()) {
+                Toast.makeText(this,
+                    elementEventContent.element.tag,
+                    Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }
@@ -236,7 +272,6 @@ open class ScanActivity : AppCompatActivity() {
             showAlertDialog(getString(R.string.last_result), it.toString(2))
         }
     }
-
 
     /**
      * Show an AlertDialog with [title] and [message]

@@ -1,0 +1,129 @@
+﻿{
+  "cameraConfig": {
+    "captureResolution": "1080"
+  },
+  "flashConfig": {
+    "mode": "manual",
+    "alignment": "top_left"
+  },
+  "viewPluginConfig": {
+    "pluginConfig": {
+      "id": "Tire|Universal TIN Numbers",
+      "tinConfig": {
+        "scanMode": "UNIVERSAL",
+        "upsideDownMode": "AUTO"
+      },
+      "cancelOnResult": true
+    },
+    "cutoutConfig": {
+      "alignment": "center",
+      "maxWidthPercent": "60%",
+      "maxHeightPercent": "60%",
+      "ratioFromSize": {
+        "width": 5,
+        "height": 1
+      },
+      "strokeWidth": 2,
+      "strokeColor": "FFFFFF",
+      "cornerRadius": 4,
+      "outerColor": "000000",
+      "outerAlpha": 0.5,
+      "feedbackStrokeColor": "0099FF",
+      "offset": {
+        "x": 0,
+        "y": -15
+      }
+    },
+    "scanFeedbackConfig": {
+      "animation": "traverse_multi",
+      "animationDuration": 250,
+      "style": "contour_rect",
+      "strokeWidth": 2,
+      "strokeColor": "0099FF",
+      "beepOnResult": false,
+      "vibrateOnResult": true,
+      "blinkAnimationOnResult": true
+    },
+    "uiFeedbackConfig": {
+      "presets": [
+        {
+          "presetName": "tin_custom_v1",
+          "presetAttributes": [
+            {
+              "attributeName": "lighting_toodark_image",
+              "attributeValue": "ic_too_dark"
+            },
+            {
+              "attributeName": "lighting_toobright_image",
+              "attributeValue": "ic_too_bright"
+            },
+            {
+              "attributeName": "distance_moveback_image",
+              "attributeValue": "ic_move_back"
+            },
+            {
+              "attributeName": "distance_movecloser_image",
+              "attributeValue": "ic_move_closer"
+            },
+            {
+              "attributeName": "format_wrong_image",
+              "attributeValue": "ic_wrong_format"
+            },
+            {
+              "attributeName": "date_wrong_image",
+              "attributeValue": "ic_wrong_date"
+            },
+            {
+              "attributeName": "lighting_toodark_text",
+              "attributeValue": "Too dark"
+            },
+            {
+              "attributeName": "lighting_toobright_text",
+              "attributeValue": "Too bright"
+            },
+            {
+              "attributeName": "distance_moveback_text",
+              "attributeValue": "Position cutout correctly"
+            },
+            {
+              "attributeName": "distance_movecloser_text",
+              "attributeValue": "Position cutout correctly"
+            },
+            {
+              "attributeName": "format_wrong_text",
+              "attributeValue": "Wrong format detected"
+            },
+            {
+              "attributeName": "date_wrong_text",
+              "attributeValue": "Wrong date detected"
+            },
+            {
+              "attributeName": "lighting_toodark_sound",
+              "attributeValue": "info_sound_TIN.wav"
+            },
+            {
+              "attributeName": "lighting_toobright_sound",
+              "attributeValue": "info_sound_TIN.wav"
+            },
+            {
+              "attributeName": "distance_moveback_sound",
+              "attributeValue": "info_sound_TIN.wav"
+            },
+            {
+              "attributeName": "distance_movecloser_sound",
+              "attributeValue": "info_sound_TIN.wav"
+            },
+            {
+              "attributeName": "format_wrong_sound",
+              "attributeValue": "info_sound_TIN.wav"
+            },
+            {
+              "attributeName": "date_wrong_sound",
+              "attributeValue": "info_sound_TIN.wav"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
