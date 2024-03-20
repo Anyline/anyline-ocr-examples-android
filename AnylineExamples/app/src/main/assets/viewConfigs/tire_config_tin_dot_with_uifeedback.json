@@ -51,51 +51,51 @@
           "presetAttributes": [
             {
               "attributeName": "lighting_toodark_image",
-              "attributeValue": "ic_too_dark"
+              "attributeValue": "uifeedback_tin_toodark"
             },
             {
               "attributeName": "lighting_toobright_image",
-              "attributeValue": "ic_too_bright"
+              "attributeValue": "uifeedback_tin_toobright"
             },
             {
               "attributeName": "distance_moveback_image",
-              "attributeValue": "ic_move_back"
+              "attributeValue": "uifeedback_tin_moveback"
             },
             {
               "attributeName": "distance_movecloser_image",
-              "attributeValue": "ic_move_closer"
+              "attributeValue": "uifeedback_tin_movecloser"
             },
             {
               "attributeName": "format_wrong_image",
-              "attributeValue": "ic_wrong_format"
+              "attributeValue": "uifeedback_tin_wrongformat"
             },
             {
               "attributeName": "date_wrong_image",
-              "attributeValue": "ic_wrong_date"
+              "attributeValue": "uifeedback_tin_wrongformat"
             },
             {
               "attributeName": "lighting_toodark_text",
-              "attributeValue": "Too dark"
+              "attributeValue": ""
             },
             {
               "attributeName": "lighting_toobright_text",
-              "attributeValue": "Too bright"
+              "attributeValue": ""
             },
             {
               "attributeName": "distance_moveback_text",
-              "attributeValue": "Position cutout correctly"
+              "attributeValue": ""
             },
             {
               "attributeName": "distance_movecloser_text",
-              "attributeValue": "Position cutout correctly"
+              "attributeValue": ""
             },
             {
               "attributeName": "format_wrong_text",
-              "attributeValue": "Wrong format detected"
+              "attributeValue": ""
             },
             {
               "attributeName": "date_wrong_text",
-              "attributeValue": "Wrong date detected"
+              "attributeValue": ""
             },
             {
               "attributeName": "lighting_toodark_sound",
