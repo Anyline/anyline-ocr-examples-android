@@ -42,6 +42,19 @@
       "beepOnResult": false,
       "vibrateOnResult": true,
       "blinkAnimationOnResult": true
+    },
+    "uiFeedbackConfig": {
+      "presets": [
+        {
+          "presetName": "simple_instruction_label",
+          "presetAttributes": [
+            {
+              "attributeName": "instruction_text",
+              "attributeValue": "Look for a standardized number sequence, like 205/55 R16"
+            }
+          ]
+        }
+      ]
     }
   }
 }

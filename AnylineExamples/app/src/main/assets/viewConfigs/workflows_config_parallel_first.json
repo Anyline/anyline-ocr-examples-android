@@ -44,6 +44,19 @@
             "beepOnResult": true,
             "vibrateOnResult": true,
             "blinkAnimationOnResult": true
+          },
+          "uiFeedbackConfig": {
+            "presets": [
+              {
+                "presetName": "simple_instruction_label",
+                "presetAttributes": [
+                  {
+                    "attributeName": "instruction_text",
+                    "attributeValue": "Position the meter within the cutout. The barcode can be anywhere inside the camera frame."
+                  }
+                ]
+              }
+            ]
           }
         }
       },
@@ -56,21 +69,6 @@
                 "ALL"
               ]
             }
-          },
-          "cutoutConfig": {
-            "maxWidthPercent": "100%",
-            "maxHeightPercent": "100%",
-            "alignment": "center",
-            "ratioFromSize": {
-              "width": 9,
-              "height": 16
-            },
-            "strokeWidth": 0,
-            "cornerRadius": 3,
-            "strokeColor": "FFFFFF",
-            "outerColor": "000000",
-            "outerAlpha": 0.0,
-            "feedbackStrokeColor": "0099FF"
           },
           "scanFeedbackConfig": {
             "style": "rect",

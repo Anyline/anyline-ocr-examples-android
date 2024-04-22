@@ -44,6 +44,19 @@
             "beepOnResult": true,
             "vibrateOnResult": true,
             "blinkAnimationOnResult": true
+          },
+          "uiFeedbackConfig": {
+            "presets": [
+              {
+                "presetName": "simple_instruction_label",
+                "presetAttributes": [
+                  {
+                    "attributeName": "instruction_text",
+                    "attributeValue": "Position the entire License Plate within the cutout"
+                  }
+                ]
+              }
+            ]
           }
         }
       },
@@ -58,8 +71,8 @@
             }
           },
           "cutoutConfig": {
-            "maxWidthPercent": "99%",
-            "maxHeightPercent": "100%",
+            "maxWidthPercent": "90%",
+            "maxHeightPercent": "90%",
             "alignment": "center",
             "ratioFromSize": {
               "width": 560,
@@ -80,6 +93,19 @@
             "blinkAnimationOnResult": true,
             "beepOnResult": true,
             "vibrateOnResult": true
+          },
+          "uiFeedbackConfig": {
+            "presets": [
+              {
+                "presetName": "simple_instruction_label",
+                "presetAttributes": [
+                  {
+                    "attributeName": "instruction_text",
+                    "attributeValue": "Position the entire Driving License within the cutout"
+                  }
+                ]
+              }
+            ]
           }
         }
       },
@@ -113,6 +139,19 @@
             "beepOnResult": true,
             "vibrateOnResult": true,
             "blinkAnimationOnResult": true
+          },
+          "uiFeedbackConfig": {
+            "presets": [
+              {
+                "presetName": "simple_instruction_label",
+                "presetAttributes": [
+                  {
+                    "attributeName": "instruction_text",
+                    "attributeValue": "Position the VIN within the cutout"
+                  }
+                ]
+              }
+            ]
           }
         }
       }
