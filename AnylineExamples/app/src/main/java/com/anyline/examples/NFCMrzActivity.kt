@@ -109,7 +109,7 @@ class NFCMrzActivity : AppCompatActivity(), NfcDetectionHandler {
         handleIntents(intent)
         pendingIntent = PendingIntent.getActivity(
             this, 0, Intent(this, this.javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
-            PendingIntent.FLAG_IMMUTABLE
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE
         )
 
     }
@@ -145,7 +145,13 @@ class NFCMrzActivity : AppCompatActivity(), NfcDetectionHandler {
                         val nfcDetector = NfcDetector(applicationContext, this)
                         nfcDetector.startNfcDetection(passportNumber, dateOfBirth, dateOfExpiry)
                     } catch (e: LicenseException) {
-                        e.printStackTrace()
+                        MaterialAlertDialogBuilder(this)
+                            .setTitle("LicenseException")
+                            .setMessage(e.reason())
+                            .setPositiveButton(resources.getString(R.string.button_ok)) { dialog, which ->
+                                finish()
+                            }
+                            .show()
                     }
                 }
             }

@@ -151,6 +151,7 @@ open class ScanActivity : AppCompatActivity() {
         if (showScanAgain) {
             binding.scanAgainButton.visibility = View.VISIBLE
         }
+        binding.bottomScrollView.visibility = View.VISIBLE
         binding.lastresultImageview.setImageBitmap(scanResults.last().cutoutImage.bitmap)
         binding.lastresultImageview.visibility = View.VISIBLE
         binding.textTotalscannedCountValue.text = scanCount.toString()
@@ -179,6 +180,7 @@ open class ScanActivity : AppCompatActivity() {
             lastScanResult = null
 
             binding.scanAgainButton.visibility = View.GONE
+            binding.bottomScrollView.visibility = View.GONE
             binding.lastresultImageview.setImageBitmap(null)
             binding.lastresultImageview.visibility = View.GONE
             binding.textLastscannedResultValue.text = ""
