@@ -46,7 +46,7 @@
     },
     "scanFeedbackConfig": {
       "style": "contour_rect",
-      "visualFeedbackRedrawTimeout": 100,
+      "redrawTimeout": 100,
       "strokeColor": "0099FF",
       "fillColor": "220099FF",
       "beepOnResult": true,
