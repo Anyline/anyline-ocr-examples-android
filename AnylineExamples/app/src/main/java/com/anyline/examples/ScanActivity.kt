@@ -106,7 +106,7 @@ open class ScanActivity : AppCompatActivity() {
     open val onResult: (ScanResult) -> Unit = {
         evalResults(
             listOf(it),
-            scanView.scanViewPlugin.activeScanViewPlugin.first().scanPlugin.scanPluginConfig.shouldCancelOnResult()
+            scanView.scanViewPlugin.activeScanViewPlugin.first().scanPlugin.scanPluginConfig.cancelOnResult
         )
     }
 
@@ -203,9 +203,16 @@ open class ScanActivity : AppCompatActivity() {
             }
 
         } ?: run {
-            //initialize ScanView with JSON asset file config
-            scanView.init(intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG)!!)
-            setupScanViewListeners()
+            try {
+                //initialize ScanView with JSON asset file config
+                scanView.init(intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG)!!)
+                setupScanViewListeners()
+            } catch (e: Exception) {
+                showAlertDialog(
+                    "Error",
+                    resources.getString(R.string.scanview_init_error) + ": " + e
+                ) { finish() }
+            }
         }
     }
 
@@ -255,14 +262,18 @@ open class ScanActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        //Starts scanning on Activity resume
-        scanView.start()
-        title = scanView.scanViewPlugin.id()
+        if (scanView.isInitialized) {
+            //Starts scanning on Activity resume
+            scanView.start()
+            title = scanView.scanViewPlugin.id()
+        }
     }
 
     override fun onPause() {
-        //Stop scanning on Activity pause
-        scanView.stop()
+        if (scanView.isInitialized) {
+            //Stop scanning on Activity pause
+            scanView.stop()
+        }
         super.onPause()
     }
 

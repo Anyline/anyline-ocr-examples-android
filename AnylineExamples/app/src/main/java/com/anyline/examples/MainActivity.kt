@@ -1,10 +1,14 @@
 package com.anyline.examples
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.format.DateFormat
 import at.nineyards.anyline.BuildConfig.VERSION_CODE_ANYLINE_SDK
 import at.nineyards.anyline.BuildConfig.VERSION_NAME_ANYLINE_SDK
 import com.anyline.examples.databinding.ActivityMainBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import io.anyline2.AnylineSdk
 import io.anyline2.core.LicenseException
 import timber.log.Timber
 
@@ -19,6 +23,10 @@ class MainActivity : CameraPermissionActivity() {
         setContentView(view)
         updateUi()
         binding.requestCameraPermissionButton.setOnClickListener {
+            if (!AnylineSdk.isInitialized()) {
+                showLicenseKeyAlertDialog()
+                return@setOnClickListener
+            }
             executeIfCameraPermissionGranted {
                 Timber.d("--- Camera permission has been granted!")
                 startActivity(SelectConfigActivity.buildIntent(this))
@@ -28,6 +36,22 @@ class MainActivity : CameraPermissionActivity() {
         binding.otaUpdateButton.setOnClickListener {
             startActivity(OTAScanActivity.buildIntent(this))
         }
+    }
+
+    private fun showLicenseKeyAlertDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle(resources.getString(R.string.license_key_not_initialized_title))
+            .setMessage(resources.getString(R.string.license_key_not_initialized_message))
+            .setNegativeButton(resources.getString(R.string.button_cancel)) { dialog, which ->
+
+            }
+            .setNeutralButton(resources.getString(R.string.license_key_not_initialized_documentation_button)) { dialog, which ->
+                val intent = Intent()
+                intent.setAction(Intent.ACTION_VIEW)
+                intent.setData(Uri.parse(resources.getString(R.string.license_key_not_initialized_documentation_url)))
+                startActivity(Intent.createChooser(intent, null))
+            }
+            .show()
     }
 
     private fun updateUi() {

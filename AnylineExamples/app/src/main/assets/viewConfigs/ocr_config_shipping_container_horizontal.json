@@ -34,7 +34,7 @@
       }
     },
     "scanFeedbackConfig": {
-      "style": "CONTOUR_RECT",
+      "style": "contour_rect",
       "strokeColor": "0099FF",
       "fillColor": "220099FF",
       "blinkAnimationOnResult": true,
