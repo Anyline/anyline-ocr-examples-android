@@ -33,9 +33,6 @@ class MainActivity : CameraPermissionActivity() {
                 finish()
             }
         }
-        binding.otaUpdateButton.setOnClickListener {
-            startActivity(OTAScanActivity.buildIntent(this))
-        }
     }
 
     private fun showLicenseKeyAlertDialog() {
@@ -66,11 +63,9 @@ class MainActivity : CameraPermissionActivity() {
         when (checkIfCameraPermissionGranted()) {
             true -> {
                 binding.requestCameraPermissionButton.text = getString(R.string.start_scanning)
-                binding.otaUpdateButton.isEnabled = true
             }
             false -> {
                 binding.requestCameraPermissionButton.text = getString(R.string.request_camera_permission)
-                binding.otaUpdateButton.isEnabled = false
             }
         }
 

@@ -45,10 +45,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.anyline.examples.OTAScanActivity"
-            android:exported="false"
-            android:label="OTAScanActivity"/>
-        <activity
             android:name="com.anyline.examples.ScanActivity"
             android:exported="false"
             android:label="ScanActivity"/>
