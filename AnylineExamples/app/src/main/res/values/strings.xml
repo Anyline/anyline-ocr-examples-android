@@ -10,14 +10,6 @@
     <string name="scanview_init_error">An error occurred while initializing ScanView with json</string>
     <string name="last_result">Last Result</string>
     <string name="scan_again">Scan Again</string>
-    <string name="ota_checkForUpdate_label">OTA</string>
-    <string name="ota_checkForUpdate_checking">Checking for new updates</string>
-    <string name="ota_checkForUpdate_downloading">Downloading new updates</string>
-    <string name="ota_checkForUpdate_error">An error occurred while getting new updates</string>
-    <string name="ota_checkForUpdate_error_barcode">Invalid barcode update content</string>
-    <string name="ota_checkForUpdate_uptodate">No update found for asset</string>
-    <string name="ota_checkForUpdate_completed">Asset update process complete</string>
-    <string name="ota_initAsset_error">An error occurred while initializing plugin with asset</string>
     <string name="scan_mrz">Scan MRZ</string>
     <string name="mrz_info_title">MRZ Info</string>
     <string name="mrz_info_message_read_nfc">"Would you like to read additional information from the NFC chip?"</string>

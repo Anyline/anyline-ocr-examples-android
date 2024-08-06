@@ -12,8 +12,6 @@ import com.anyline.examples.databinding.ActivityScanBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import io.anyline2.Event
 import io.anyline2.ScanResult
-import io.anyline2.legacy.trainer.AssetContext
-import io.anyline2.legacy.trainer.ProjectContext
 import io.anyline2.view.ScanView
 import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayInfoEntry
 import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayViewElementEventContent
@@ -186,33 +184,15 @@ open class ScanActivity : AppCompatActivity() {
             binding.textLastscannedResultValue.text = ""
         }
 
-        val assetContextInfo = intent.getStringExtra(INTENT_EXTRA_ASSETCONTEXT_INFO_CONTENT)
-        assetContextInfo?.let { assetInfo ->
-            val assetContextJSON = JSONObject(assetInfo)
-            val assetContext = ProjectContext(this, assetContextJSON)
-
-            try {
-                //initialize ScanView with AssetContext Info
-                scanView.init(assetContext, 30)
-                setupScanViewListeners()
-            } catch (e: Exception) {
-                showAlertDialog(
-                    "Error",
-                    resources.getString(R.string.ota_initAsset_error) + ": " + e
-                ) { finish() }
-            }
-
-        } ?: run {
-            try {
-                //initialize ScanView with JSON asset file config
-                scanView.init(intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG)!!)
-                setupScanViewListeners()
-            } catch (e: Exception) {
-                showAlertDialog(
-                    "Error",
-                    resources.getString(R.string.scanview_init_error) + ": " + e
-                ) { finish() }
-            }
+        try {
+            //initialize ScanView with JSON asset file config
+            scanView.init(intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG)!!)
+            setupScanViewListeners()
+        } catch (e: Exception) {
+            showAlertDialog(
+                "Error",
+                resources.getString(R.string.scanview_init_error) + ": " + e
+            ) { finish() }
         }
     }
 
@@ -301,20 +281,10 @@ open class ScanActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "AnylineScanActivity"
         const val INTENT_EXTRA_VIEW_CONFIG = "INTENT_EXTRA_VIEW_CONFIG"
-        const val INTENT_EXTRA_ASSETCONTEXT_INFO_CONTENT = "INTENT_EXTRA_ASSET_INFO_CONTENT"
 
         fun buildIntent(context: Context, viewConfig: String): Intent {
             val intent = Intent(context, ScanActivity::class.java)
             intent.putExtra(INTENT_EXTRA_VIEW_CONFIG, viewConfig)
-            return intent
-        }
-
-        fun buildIntent(context: Context, assetContext: AssetContext): Intent {
-            val intent = Intent(context, ScanActivity::class.java)
-            intent.putExtra(
-                INTENT_EXTRA_ASSETCONTEXT_INFO_CONTENT,
-                assetContext.toJSONObject().toString()
-            )
             return intent
         }
     }
