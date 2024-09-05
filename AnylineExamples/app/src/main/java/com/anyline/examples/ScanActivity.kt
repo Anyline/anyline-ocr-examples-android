@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.anyline.examples.databinding.ActivityScanBinding
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import io.anyline2.Event
 import io.anyline2.ScanResult
 import io.anyline2.view.ScanView
@@ -124,23 +123,6 @@ open class ScanActivity : AppCompatActivity() {
              */
             if (it.pluginResult.pluginID.lowercase(Locale.getDefault()).contains("barcode")) {
                 scanCount += it.pluginResult.barcodeResult.barcodes.size
-            } else if (it.pluginResult.pluginID.lowercase(Locale.getDefault()).contains("mrz")) {
-                MaterialAlertDialogBuilder(this)
-                    .setTitle(resources.getString(R.string.mrz_info_title))
-                    .setMessage(resources.getString(R.string.mrz_info_message_read_nfc))
-                    .setPositiveButton(resources.getString(R.string.button_yes)) { dialog, which ->
-                        if (NFCMrzActivity.isNfcEnabled(this)) {
-                            val intent = NFCMrzActivity.buildIntent(this, it.pluginResult.mrzResult)
-                            intent.flags =
-                                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
-                            startActivity(intent)
-                        }
-                    }
-                    .setNegativeButton(resources.getString(R.string.button_not_now)) { dialog, which ->
-
-                    }
-                    .show()
-                break
             } else {
                 scanCount++
             }
@@ -208,18 +190,6 @@ open class ScanActivity : AppCompatActivity() {
             resultsReceived = Event { data -> onResults.invoke(data) }
         }
 
-        scanView.onCutoutChanged = Event { data ->
-            data.forEach { pair ->
-                Timber.tag(TAG).e(
-                    "onCutoutChanged from ${pair.first.id()}: " +
-                            "left: ${pair.second.left}, " +
-                            "top: ${pair.second.top}, " +
-                            "right: ${pair.second.right}, " +
-                            "bottom: ${pair.second.bottom} "
-                )
-            }
-        }
-
         scanView.onUIFeedbackOverlayViewClickedEvent = Event { data ->
             val elementEventContent: UIFeedbackOverlayViewElementEventContent = data.second
             if (elementEventContent.element.tag.isNotEmpty()) {
@@ -255,15 +225,6 @@ open class ScanActivity : AppCompatActivity() {
             scanView.stop()
         }
         super.onPause()
-    }
-
-    /**
-     * Display the last recognized result as prettified JSON in an AlertDialog Window
-     */
-    private fun showDialogWithlastResult() {
-        lastScanResult?.result?.let {
-            showAlertDialog(getString(R.string.last_result), it.toString(2))
-        }
     }
 
     /**

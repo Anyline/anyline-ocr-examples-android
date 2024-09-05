@@ -1,0 +1,44 @@
+﻿{
+  "cameraConfig": {
+    "captureResolution": "720",
+    "zoomGesture": true
+  },
+  "flashConfig": {
+    "mode": "manual",
+    "alignment": "top_right"
+  },
+  "viewPluginConfig": {
+    "pluginConfig": {
+      "id": "Vehicle|License Plates (EU + VIS)",
+      "licensePlateConfig": {
+        "vehicleInspectionSticker": "OPTIONAL"
+      },
+      "cancelOnResult": true
+    },
+    "cutoutConfig": {
+      "maxWidthPercent": "80%",
+      "maxHeightPercent": "80%",
+      "alignment": "top_half",
+      "ratioFromSize": {
+        "width": 2,
+        "height": 1
+      },
+      "strokeWidth": 2,
+      "cornerRadius": 10,
+      "strokeColor": "FFFFFF",
+      "outerColor": "000000",
+      "outerAlpha": 0.3,
+      "feedbackStrokeColor": "0099FF"
+    },
+    "scanFeedbackConfig": {
+      "style": "rect",
+      "strokeWidth": 2,
+      "strokeColor": "0099FF",
+      "fillColor": "330099FF",
+      "cornerRadius": 0,
+      "beepOnResult": true,
+      "vibrateOnResult": true,
+      "blinkAnimationOnResult": true
+    }
+  }
+}
