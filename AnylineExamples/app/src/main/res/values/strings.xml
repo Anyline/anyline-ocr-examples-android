@@ -10,17 +10,6 @@
     <string name="scanview_init_error">An error occurred while initializing ScanView with json</string>
     <string name="last_result">Last Result</string>
     <string name="scan_again">Scan Again</string>
-    <string name="scan_mrz">Scan MRZ</string>
-    <string name="mrz_info_title">MRZ Info</string>
-    <string name="mrz_info_message_read_nfc">"Would you like to read additional information from the NFC chip?"</string>
-    <string name="read_nfc">Read NFC</string>
-    <string name="nfc_error_title">NFC Error</string>
-    <string name="nfc_error_message_not_supported">"NFC passport reading is not supported on this device."</string>
-    <string name="nfc_error_message_enable_nfc">"You first have to enable NFC in your options!"</string>
-    <string name="nfc_adapter_error_prefix">"NFC Adapter Error: %1$s</string>
-    <string name="nfc_failure_error_prefix">NFC Failure: %1$s</string>
-    <string name="nationality">Nationality</string>
-    <string name="mrz_document_number">Document Number</string>
     <string name="button_ok">OK</string>
     <string name="button_cancel">Cancel</string>
     <string name="button_settings">Settings</string>
