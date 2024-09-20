@@ -1,11 +1,12 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for US license plates, with instruction label.",
   "cameraConfig": {
-    "captureResolution": "720",
+    "captureResolution": "1080p",
     "zoomGesture": true
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_right"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
@@ -39,6 +40,19 @@
       "beepOnResult": true,
       "vibrateOnResult": true,
       "blinkAnimationOnResult": true
+    },
+    "uiFeedbackConfig": {
+      "presets": [
+        {
+          "presetName": "simple_instruction_label",
+          "presetAttributes": [
+            {
+              "attributeName": "instruction_text",
+              "attributeValue": "Place the whole plate inside the cutout"
+            }
+          ]
+        }
+      ]
     }
   }
 }

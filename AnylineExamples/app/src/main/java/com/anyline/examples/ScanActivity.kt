@@ -3,14 +3,24 @@ package com.anyline.examples
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.anyline.examples.databinding.ActivityScanBinding
+import com.anyline.examples.viewConfigEditor.ViewConfigEditorDefinition
+import com.anyline.examples.viewConfigEditor.ViewConfigEditorFragment
 import io.anyline2.Event
 import io.anyline2.ScanResult
+import io.anyline2.sdk.ScanViewConfigHolder
+import io.anyline2.sdk.extension.getViewPluginCompositeConfigFromJsonObject
+import io.anyline2.sdk.extension.getViewPluginConfigFromJsonObject
+import io.anyline2.sdk.extension.toJsonObject
 import io.anyline2.view.ScanView
 import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayInfoEntry
 import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayViewElementEventContent
@@ -19,7 +29,7 @@ import timber.log.Timber
 import java.util.*
 
 open class ScanActivity : AppCompatActivity() {
-
+    private val uiHandler = Handler(Looper.getMainLooper())
     private lateinit var binding: ActivityScanBinding
     protected lateinit var scanView: ScanView
 
@@ -128,6 +138,7 @@ open class ScanActivity : AppCompatActivity() {
             }
         }
 
+        hideViewConfigEditFragment()
         if (showScanAgain) {
             binding.scanAgainButton.visibility = View.VISIBLE
         }
@@ -150,6 +161,16 @@ open class ScanActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (binding.fragmentContainerViewConfigEdit.visibility == View.VISIBLE) {
+                    hideViewConfigEditFragment()
+                    return
+                }
+                finish()
+            }
+        })
+
         binding.scanAgainButton.setOnClickListener {
             /*
              This button is used to get a new scan for ScanPluginConfigs
@@ -166,16 +187,47 @@ open class ScanActivity : AppCompatActivity() {
             binding.textLastscannedResultValue.text = ""
         }
 
+        if (intent.hasExtra(INTENT_EXTRA_VIEW_CONFIG_FILE)) {
+            //initialize ScanView with asset file config
+            initScanView(ScanViewInitOption.InitWithAssetFile(
+                intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG_FILE)!!))
+        }
+        else {
+            //initialize ScanView with JSON object
+            initScanView(ScanViewInitOption.InitWithJsonObject(
+                JSONObject(intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG_JSON)!!)))
+        }
+    }
+
+    sealed class ScanViewInitOption {
+        data class InitWithAssetFile(val assetFileName: String): ScanViewInitOption()
+        data class InitWithJsonObject(val jsonObject: JSONObject): ScanViewInitOption()
+    }
+
+    private fun initScanView(scanViewInitOption: ScanViewInitOption,
+                             autoStart: Boolean = false,
+                             onError: (() -> Unit) = { finish() }): Boolean {
         try {
-            //initialize ScanView with JSON asset file config
-            scanView.init(intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG)!!)
+            when (scanViewInitOption) {
+                is ScanViewInitOption.InitWithAssetFile -> {
+                    scanView.init(scanViewInitOption.assetFileName)
+                }
+                is ScanViewInitOption.InitWithJsonObject -> {
+                    scanView.init(scanViewInitOption.jsonObject)
+                }
+            }
             setupScanViewListeners()
+            if (autoStart) {
+                uiHandler.post { scanView.start() }
+            }
+            return true
         } catch (e: Exception) {
             showAlertDialog(
                 "Error",
                 resources.getString(R.string.scanview_init_error) + ": " + e
-            ) { finish() }
+            ) { onError.invoke() }
         }
+        return false
     }
 
     private fun setupScanViewListeners() {
@@ -201,13 +253,86 @@ open class ScanActivity : AppCompatActivity() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menu?.let { rootMenu ->
+            rootMenu.add(Menu.NONE, EDIT_CONFIG_MENU_ID, Menu.NONE, "Edit Config").apply {
+                setIcon(R.drawable.ic_action_pencil)
+                setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM)
+            }
+        }
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                onBackPressed()
+                onBackPressedDispatcher.onBackPressed()
+            }
+            EDIT_CONFIG_MENU_ID -> {
+                scanView.scanViewConfigHolder?.let { scanViewConfigHolder ->
+                    scanViewConfigHolder.modifyViewConfig { currentScanViewConfig ->
+                        currentScanViewConfig.viewPluginConfig?.let { viewPluginConfig ->
+                            showViewConfigEditFragment(ViewConfigEditorDefinition.ViewPluginConfig,
+                                viewPluginConfig.toJsonObject()
+                            ) { json ->
+                                scanViewConfigHolder.modifyViewConfig { updatedScanViewConfig ->
+                                    updatedScanViewConfig.viewPluginConfig = getViewPluginConfigFromJsonObject(json)
+                                    ScanViewConfigHolder.ModifyViewConfigResult.Apply
+                                }
+                            }
+                        }
+                        currentScanViewConfig.viewPluginCompositeConfig?.let { viewPluginCompositeConfig ->
+                            showViewConfigEditFragment(ViewConfigEditorDefinition.ViewPluginCompositeConfig,
+                                viewPluginCompositeConfig.toJsonObject()
+                            ) { json ->
+                                scanViewConfigHolder.modifyViewConfig { updatedScanViewConfig ->
+                                    updatedScanViewConfig.viewPluginCompositeConfig = getViewPluginCompositeConfigFromJsonObject(json)
+                                    ScanViewConfigHolder.ModifyViewConfigResult.Apply
+                                }
+                            }
+                        }
+
+                        ScanViewConfigHolder.ModifyViewConfigResult.Discard
+                    }
+                }
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private var webContentFragment: ViewConfigEditorFragment? = null
+
+    private fun showViewConfigEditFragment(viewConfigEditorDefinition: ViewConfigEditorDefinition,
+                                   jsonContent: JSONObject,
+                                   onJsonApply: ((JSONObject) -> Unit)) {
+        if (webContentFragment == null) {
+            webContentFragment = ViewConfigEditorFragment(
+                viewConfigEditorDefinition,
+                jsonContent,
+                onJsonApply).also { fragment ->
+                binding.fragmentContainerViewConfigEdit.apply {
+                    supportFragmentManager.beginTransaction()
+                        .add(this.id, fragment)
+                        .commit()
+                }
+            }
+        }
+        binding.fragmentContainerViewConfigEdit.visibility = View.VISIBLE
+    }
+
+    private fun hideViewConfigEditFragment() {
+        binding.fragmentContainerViewConfigEdit.visibility = View.GONE
+    }
+
+    private fun disposeViewConfigEditFragment() {
+        binding.fragmentContainerViewConfigEdit.apply {
+            webContentFragment?.let {
+                supportFragmentManager.beginTransaction()
+                    .remove(it)
+                    .commit()
+            }
+        }
     }
 
     override fun onResume() {
@@ -227,6 +352,11 @@ open class ScanActivity : AppCompatActivity() {
         super.onPause()
     }
 
+    override fun onStop() {
+        disposeViewConfigEditFragment()
+        super.onStop()
+    }
+
     /**
      * Show an AlertDialog with [title] and [message]
      */
@@ -241,11 +371,20 @@ open class ScanActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "AnylineScanActivity"
-        const val INTENT_EXTRA_VIEW_CONFIG = "INTENT_EXTRA_VIEW_CONFIG"
+        const val INTENT_EXTRA_VIEW_CONFIG_FILE = "INTENT_EXTRA_VIEW_CONFIG_FILE"
+        const val INTENT_EXTRA_VIEW_CONFIG_JSON = "INTENT_EXTRA_VIEW_CONFIG_JSON"
 
-        fun buildIntent(context: Context, viewConfig: String): Intent {
+        private const val EDIT_CONFIG_MENU_ID = 1
+
+        fun buildIntent(context: Context, viewConfigFile: String): Intent {
             val intent = Intent(context, ScanActivity::class.java)
-            intent.putExtra(INTENT_EXTRA_VIEW_CONFIG, viewConfig)
+            intent.putExtra(INTENT_EXTRA_VIEW_CONFIG_FILE, viewConfigFile)
+            return intent
+        }
+
+        fun buildIntent(context: Context, viewConfigJson: JSONObject): Intent {
+            val intent = Intent(context, ScanActivity::class.java)
+            intent.putExtra(INTENT_EXTRA_VIEW_CONFIG_JSON, viewConfigJson.toString())
             return intent
         }
     }

@@ -1,10 +1,11 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for Tire Identification Numbers (TIN) with upside down support and UI feedback.",
   "cameraConfig": {
     "captureResolution": "1080"
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_left"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
@@ -20,7 +21,7 @@
       "maxWidthPercent": "60%",
       "maxHeightPercent": "60%",
       "ratioFromSize": {
-        "width": 5,
+        "width": 6.25,
         "height": 1
       },
       "strokeWidth": 2,

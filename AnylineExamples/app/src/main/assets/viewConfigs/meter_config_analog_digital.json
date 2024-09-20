@@ -1,11 +1,12 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for analog and digital meters.",
   "cameraConfig": {
-    "captureResolution": "720p",
-    "pictureResolution": "720p"
+    "captureResolution": "1080p",
+    "pictureResolution": "1080p"
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_right"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {

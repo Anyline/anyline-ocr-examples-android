@@ -1,11 +1,12 @@
 {
+  "scanViewConfigDescription": "Optimized for Odometer.",
   "cameraConfig":{
-    "captureResolution" : "720p",
+    "captureResolution" : "1080p",
     "zoomGesture": true
   },
   "flashConfig" : {
     "mode": "manual",
-    "alignment": "top_right"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig" : {
     "pluginConfig" : {
@@ -28,6 +29,10 @@
       "ratioFromSize": {
         "width": 2.75,
         "height": 1
+      },
+      "cropOffset": {
+        "x": 0,
+        "y": 120
       },
       "offset": {
         "x": 0,

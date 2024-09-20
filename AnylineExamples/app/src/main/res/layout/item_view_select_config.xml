@@ -7,13 +7,60 @@
     android:padding="16dp"
     tools:ignore="MissingDefaultResource">
 
-    <TextView
-        android:id="@+id/view_config"
+    <LinearLayout
+        android:id="@+id/view_config_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/view_config_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:id="@+id/view_config_description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/view_config_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/view_config_image"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/view_config_description_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/view_config_help_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="end"
+            android:layout_weight="0"
+            android:visibility="gone"
+            android:adjustViewBounds="true"/>
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,47 +1,45 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for scanning meter serial numbers.",
   "cameraConfig": {
-    "captureResolution": "720p"
+    "captureResolution": "1080p"
   },
   "flashConfig": {
-    "mode": "auto",
-    "alignment": "top_right"
+    "mode": "manual",
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
-      "id": "Meter|Dial Meters",
-      "meterConfig": {
-        "scanMode": "dial_meter"
-      },
+      "id": "Meter Serial Numbers",
+      "ocrConfig": {},
+      "startScanDelay": 1000,
       "cancelOnResult": true
     },
     "cutoutConfig": {
-      "alignment": "top",
+      "alignment": "top_half",
+      "maxWidthPercent": "80%",
+      "maxHeightPercent": "80%",
+      "ratioFromSize": {
+        "width": 720,
+        "height": 360
+      },
       "strokeWidth": 2,
       "strokeColor": "FFFFFF",
       "cornerRadius": 4,
       "outerColor": "000000",
       "outerAlpha": 0.5,
       "feedbackStrokeColor": "0099FF",
-      "maxWidthPercent": "85%",
-      "maxHeightPercent": "85%",
-      "ratioFromSize": {
-        "width": 2,
-        "height": 1
-      },
       "offset": {
         "x": 0,
-        "y": 120
+        "y": -15
       }
     },
     "scanFeedbackConfig": {
-      "animation": "traverse_multi",
-      "animationDuration": 250,
       "style": "contour_rect",
       "strokeColor": "0099FF",
       "fillColor": "220099FF",
-      "blinkAnimationOnResult": true,
       "beepOnResult": true,
-      "vibrateOnResult": true
+      "vibrateOnResult": true,
+      "blinkAnimationOnResult": true
     }
   }
 }

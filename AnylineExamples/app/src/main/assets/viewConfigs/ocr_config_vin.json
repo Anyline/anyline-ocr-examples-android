@@ -1,10 +1,11 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for vehicle identification numbers (VIN).",
   "cameraConfig": {
-    "captureResolution": "720"
+    "captureResolution": "1080p"
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_left"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
@@ -17,8 +18,8 @@
       "maxWidthPercent": "70%",
       "maxHeightPercent": "70%",
       "ratioFromSize": {
-        "width": 7,
-        "height": 1
+        "width": 689,
+        "height": 100
       },
       "strokeWidth": 1,
       "strokeColor": "FFFFFF",

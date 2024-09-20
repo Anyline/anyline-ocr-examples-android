@@ -1,10 +1,11 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for Tire Make with upside down support.",
   "cameraConfig": {
     "captureResolution": "1080"
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_left"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
@@ -19,8 +20,8 @@
       "maxWidthPercent": "60%",
       "maxHeightPercent": "60%",
       "ratioFromSize": {
-        "width": 25,
-        "height": 10
+        "width": 5,
+        "height": 1
       },
       "strokeWidth": 2,
       "strokeColor": "FFFFFF",
