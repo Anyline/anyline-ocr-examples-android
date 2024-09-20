@@ -18,13 +18,17 @@
         android:theme="@style/Theme.ExamplesApp"
         tools:targetApi="31">
         <activity
+            android:name="com.anyline.examples.viewConfigEditor.ViewConfigEditorActivity"
+            android:exported="false"
+            android:label="ViewConfigEditorActivity"/>
+        <activity
             android:name="com.anyline.examples.ScanActivity"
             android:exported="false"
             android:label="ScanActivity"/>
         <activity
             android:name="com.anyline.examples.SelectConfigActivity"
             android:exported="false"
-            android:label="ScanActivity"/>
+            android:label="SelectConfigActivity"/>
         <activity
             android:name="com.anyline.examples.MainActivity"
             android:exported="true">

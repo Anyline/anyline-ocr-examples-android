@@ -1,14 +1,16 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for Commercial Tire with upside down support.",
   "cameraConfig": {
     "captureResolution": "1080"
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_left"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
       "id": "Tire|Commercial Tire ID",
+      "startScanDelay": 1000,
       "cancelOnResult": true,
       "commercialTireIdConfig": {
         "upsideDownMode": "AUTO",

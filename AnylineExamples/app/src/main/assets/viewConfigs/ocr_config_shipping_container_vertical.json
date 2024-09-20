@@ -1,10 +1,11 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for scanning vertical containers.",
   "cameraConfig": {
     "captureResolution": "1080p"
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_right"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
@@ -28,6 +29,10 @@
       "outerAlpha": 0.5,
       "feedbackStrokeColor": "0099FF",
       "offset": {
+        "x": 0,
+        "y": -15
+      },
+      "cropOffset": {
         "x": 0,
         "y": -15
       }

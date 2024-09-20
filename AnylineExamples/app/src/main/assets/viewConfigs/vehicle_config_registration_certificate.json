@@ -1,4 +1,5 @@
 {
+  "scanViewConfigDescription": "Optimized for vehicle registration certificates with fields like license plate, VIN, and owner details, configurable as optional or mandatory based on the use case.",
   "cameraConfig" : {
     "captureResolution" : "1080p"
   },

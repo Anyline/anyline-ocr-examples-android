@@ -1,11 +1,12 @@
 {
+  "scanViewConfigDescription": "Demo config for scanning tire sizes and TINs in parallel.",
   "cameraConfig": {
     "captureResolution": "1080p",
     "pictureResolution": "1080p"
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_right"
+    "alignment": "bottom_right"
   },
   "viewPluginCompositeConfig": {
     "id": "Workflows|TIN / Tire Size / Tire Make",

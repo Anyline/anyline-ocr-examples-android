@@ -1,10 +1,11 @@
 {
+  "scanViewConfigDescription": "Optimized for full frame scanning of multiple barcodes simultaneously. All formats enabled.",
   "cameraConfig": {
     "captureResolution": "1080p"
   },
   "flashConfig": {
     "mode": "auto",
-    "alignment": "top_right"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {

@@ -1,26 +1,28 @@
-﻿{
+{
+  "scanViewConfigDescription": "Demo config for scanning using custom script.",
   "cameraConfig": {
-    "captureResolution": "720",
-    "zoomGesture": true
+    "captureResolution": "1080"
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_right"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
-      "id": "Vehicle|License Plates (Africa)",
-      "licensePlateConfig": {
-        "scanMode": "africa"
+      "id": "Cattle Tags",
+      "ocrConfig": {
+        "scanMode": "auto",
+        "customCmdFile": "cow.ale"
       },
       "cancelOnResult": true
     },
     "cutoutConfig": {
       "maxWidthPercent": "80%",
       "maxHeightPercent": "80%",
-      "alignment": "top_half",
+      "alignment": "center",
+      "width": 600,
       "ratioFromSize": {
-        "width": 2,
+        "width": 1,
         "height": 1
       },
       "strokeWidth": 2,
@@ -28,7 +30,15 @@
       "strokeColor": "FFFFFF",
       "outerColor": "000000",
       "outerAlpha": 0.3,
-      "feedbackStrokeColor": "0099FF"
+      "feedbackStrokeColor": "0099FF",
+      "cropPadding": {
+        "x": 60,
+        "y": 60
+      },
+      "cropOffset": {
+        "x": 0,
+        "y": 0
+      }
     },
     "scanFeedbackConfig": {
       "style": "rect",

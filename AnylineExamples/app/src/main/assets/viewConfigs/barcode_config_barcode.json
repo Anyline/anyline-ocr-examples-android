@@ -1,10 +1,11 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for scanning single barcodes with a cutout. All formats enabled.",
   "cameraConfig": {
     "captureResolution": "1080p"
   },
   "flashConfig": {
     "mode": "auto",
-    "alignment": "top_right"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {

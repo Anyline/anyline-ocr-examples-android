@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ViewConfig JSON Editor</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <script src="json-editor/jsoneditor.js"></script>
+
+    <script>
+        // Set the default CSS theme and icon library globally
+        JSONEditor.defaults.theme = 'spectre';
+        JSONEditor.defaults.iconlib = 'spectre';
+    </script>
+    <style>
+
+        .transparent-background {
+              background-color: rgba(0, 0, 0, 0.1);
+              position: absolute;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 1.0;
+        }
+
+        .container {
+          bg-color-light: #00FFFFFF;
+          accent-color: #007ACC;
+          max-width:960px;
+          background-color: rgba(180, 180, 180, 0.1);
+          margin: 0 auto
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background: rgba(100, 100, 100, 0.5);
+        }
+    </style>
+</head>
+<body class='transparent-background'>
+<div class='container'>
+    <div class='columns'>
+        <div class='column col-md-12'>
+            <button id='restore' class='btn'>Restore to Default</button>
+        </div>
+    </div>
+    <div class='columns'>
+        <div class='column col-md-12' id='editor_holder'></div>
+    </div>
+    <div class='columns'>
+        <div class='column col-md-12'>
+            <span id='valid_indicator' class='label'></span>
+        </div>
+    </div>
+    <div id='footer'>
+        <footer >
+            <div class='columns'>
+                <div class='column col-md-12'>
+                    <button id='submit' class='btn btn-primary'>Apply Changes</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script>
+    // This is the starting value for the editor
+    // We will use this to seed the initial editor
+    // and to provide a "Restore to Default" button.
+    var starting_value = {};
+
+    // Initialize the editor
+    var editor = new JSONEditor(document.getElementById('editor_holder'),{
+      // Enable fetching schemas via ajax
+      ajax: true,
+
+      // Cache external URLs schemas in localStorage to avoid subsequent ajax calls
+      ajax_cache_responses: true,
+
+      // If true, the label will not be displayed/added
+      compact: true,
+
+      // The schema for the editor
+      schema: {},
+
+      // Seed the form with a starting value
+      startval: starting_value
+    });
+
+    editor.on('ready',() => {
+      // Now the api methods will be available
+      console.log("{ 'readyState': 'true' }");
+    });
+
+    // Hook up the submit button to log to the console
+    document.getElementById('submit').addEventListener('click',function() {
+      // Get the value from the editor
+      console.log("{ 'content': " + JSON.stringify(editor.getValue()) + "}");
+    });
+
+    // Hook up the Restore to Default button
+    document.getElementById('restore').addEventListener('click',function() {
+      editor.setValue(starting_value);
+    });
+
+    // Hook up the validation indicator to update its
+    // status whenever the editor changes
+    editor.on('change',function() {
+      // Get an array of errors from the validator
+      var errors = editor.validate();
+
+      var indicator = document.getElementById('valid_indicator');
+
+      // Not valid
+      if(errors.length) {
+        indicator.className = 'label alert';
+        indicator.textContent = 'not valid';
+      }
+      // Valid
+      else {
+        indicator.className = 'label success';
+        indicator.textContent = 'valid';
+      }
+    });
+</script>
+</body>
+</html>

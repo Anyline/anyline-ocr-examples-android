@@ -7,6 +7,8 @@
     <string name="license_key_not_initialized_documentation_url">https://documentation.anyline.com/main-component/license-key-generation.html</string>
     <string name="start_scanning">Start Scanning</string>
     <string name="request_camera_permission">Request Camera Permission</string>
+    <string name="selectconfig_view_options">View Options</string>
+    <string name="selectconfig_validation_error">The json file could not be validated</string>
     <string name="scanview_init_error">An error occurred while initializing ScanView with json</string>
     <string name="last_result">Last Result</string>
     <string name="scan_again">Scan Again</string>
@@ -16,4 +18,10 @@
     <string name="button_yes">Yes</string>
     <string name="button_no">No</string>
     <string name="button_not_now">Not Now</string>
+    <string name="webcontent_no_network_default_errormessage">Looks like there’s no network connection right now.\n Check your Wi-Fi or mobile data settings and try again!</string>
+    <string name="webcontent_no_network_continue_text">Continue</string>
+    <string name="no_internet_error_title">Oops! No Internet Connection!</string>
+    <string name="no_internet_error_text">Please check your network settings and try again. While you can use the scanners offline, accessing the webpage requires an internet connection.</string>
+    <string name="no_internet_error_button_text">Got it</string>
+    <string name="open_in_external_browser">Open in external browser</string>
 </resources>

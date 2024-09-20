@@ -1,11 +1,12 @@
-﻿{
+{
+  "scanViewConfigDescription": "Optimized for Cyrillic script ID scanning, includes all layouts with full configurability to include or exclude specific layouts as needed.",
   "cameraConfig": {
     "captureResolution": "1080p",
     "zoomGesture": true
   },
   "flashConfig": {
     "mode": "manual",
-    "alignment": "top_right"
+    "alignment": "bottom_right"
   },
   "viewPluginConfig": {
     "pluginConfig": {
