@@ -13,12 +13,12 @@ ext {
 }
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "io.anyline.examples"
         minSdk 21
-        targetSdk 33
+        targetSdk 34
         versionCode anyline_examples_version_code
         versionName anyline_examples_version_name
 
