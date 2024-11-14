@@ -61,7 +61,9 @@ data class ScanViewConfigFolder(val assetFolderName: String,
                                 } ?: ScanViewConfigFolder(file.assetFolderName, pluginType.description, this).also {
                                     folderList.add(it)
                                 }
-                                folder.fileList.add(file)
+                                if (!folder.fileList.contains(file)) {
+                                    folder.fileList.add(file)
+                                }
                             }
                         }
                         this
@@ -77,7 +79,9 @@ data class ScanViewConfigFolder(val assetFolderName: String,
                                     } ?: ScanViewConfigFolder(file.assetFolderName, pluginCategory.description, this).also {
                                         folderList.add(it)
                                     }
-                                    folder.fileList.add(file)
+                                    if (!folder.fileList.contains(file)) {
+                                        folder.fileList.add(file)
+                                    }
                                 }
                             }
                         }
@@ -92,7 +96,9 @@ data class ScanViewConfigFolder(val assetFolderName: String,
                             } ?: ScanViewConfigFolder(file.assetFolderName, file.pluginWorkflow.description, this).also {
                                 folderList.add(it)
                             }
-                            folder.fileList.add(file)
+                            if (!folder.fileList.contains(file)) {
+                                folder.fileList.add(file)
+                            }
                         }
                         this
                     }
