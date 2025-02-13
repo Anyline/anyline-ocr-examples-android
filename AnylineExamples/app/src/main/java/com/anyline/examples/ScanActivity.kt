@@ -3,8 +3,6 @@ package com.anyline.examples
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -18,10 +16,9 @@ import com.anyline.examples.viewConfigEditor.ViewConfigEditorFragment
 import io.anyline2.Event
 import io.anyline2.ScanResult
 import io.anyline2.sdk.ScanViewConfigHolder
-import io.anyline2.sdk.extension.getViewPluginCompositeConfigFromJsonObject
-import io.anyline2.sdk.extension.getViewPluginConfigFromJsonObject
 import io.anyline2.sdk.extension.toJsonObject
 import io.anyline2.view.ScanView
+import io.anyline2.view.ScanViewLoadResult
 import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayInfoEntry
 import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayViewElementEventContent
 import org.json.JSONObject
@@ -29,7 +26,6 @@ import timber.log.Timber
 import java.util.*
 
 open class ScanActivity : AppCompatActivity() {
-    private val uiHandler = Handler(Looper.getMainLooper())
     private lateinit var binding: ActivityScanBinding
     protected lateinit var scanView: ScanView
 
@@ -158,6 +154,7 @@ open class ScanActivity : AppCompatActivity() {
         binding = ActivityScanBinding.inflate(layoutInflater)
         setContentView(binding.root)
         scanView = binding.scanView
+        scanView.setOnScanViewLoaded { result -> onScanViewLoaded(result) }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -186,17 +183,35 @@ open class ScanActivity : AppCompatActivity() {
             binding.lastresultImageview.visibility = View.GONE
             binding.textLastscannedResultValue.text = ""
         }
+    }
 
-        if (intent.hasExtra(INTENT_EXTRA_VIEW_CONFIG_FILE)) {
-            //initialize ScanView with asset file config
-            initScanView(ScanViewInitOption.InitWithAssetFile(
-                intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG_FILE)!!))
+    private fun onScanViewLoaded(result: ScanViewLoadResult) {
+        when (result) {
+            is ScanViewLoadResult.Succeeded -> {
+                if (intent.hasExtra(INTENT_EXTRA_VIEW_CONFIG_FILE)) {
+                    //initialize ScanView with asset file config
+                    initScanView(ScanViewInitOption.InitWithAssetFile(
+                        intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG_FILE)!!),
+                        true)
+                }
+                else {
+                    //initialize ScanView with JSON object
+                    initScanView(ScanViewInitOption.InitWithJsonObject(
+                        JSONObject(intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG_JSON)!!)),
+                        true)
+                }
+            }
+            is ScanViewLoadResult.Failed -> {
+                result.getErrorMessage()?.let { errorString ->
+                    showAlertDialog(
+                        "Error",
+                        resources.getString(R.string.scanview_load_error) + ": " + errorString,
+                        { finish() }
+                    )
+                }
+            }
         }
-        else {
-            //initialize ScanView with JSON object
-            initScanView(ScanViewInitOption.InitWithJsonObject(
-                JSONObject(intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG_JSON)!!)))
-        }
+
     }
 
     sealed class ScanViewInitOption {
@@ -205,8 +220,7 @@ open class ScanActivity : AppCompatActivity() {
     }
 
     private fun initScanView(scanViewInitOption: ScanViewInitOption,
-                             autoStart: Boolean = false,
-                             onError: (() -> Unit) = { finish() }): Boolean {
+                             autoStart: Boolean = false): Boolean {
         try {
             when (scanViewInitOption) {
                 is ScanViewInitOption.InitWithAssetFile -> {
@@ -216,16 +230,17 @@ open class ScanActivity : AppCompatActivity() {
                     scanView.init(scanViewInitOption.jsonObject)
                 }
             }
+            title = scanView.scanViewPlugin.id()
             setupScanViewListeners()
             if (autoStart) {
-                uiHandler.post { scanView.start() }
+                scanView.start()
             }
             return true
         } catch (e: Exception) {
             showAlertDialog(
                 "Error",
                 resources.getString(R.string.scanview_init_error) + ": " + e
-            ) { onError.invoke() }
+            )
         }
         return false
     }
@@ -272,27 +287,11 @@ open class ScanActivity : AppCompatActivity() {
             EDIT_CONFIG_MENU_ID -> {
                 scanView.scanViewConfigHolder?.let { scanViewConfigHolder ->
                     scanViewConfigHolder.modifyViewConfig { currentScanViewConfig ->
-                        currentScanViewConfig.viewPluginConfig?.let { viewPluginConfig ->
-                            showViewConfigEditFragment(ViewConfigEditorDefinition.ViewPluginConfig,
-                                viewPluginConfig.toJsonObject()
-                            ) { json ->
-                                scanViewConfigHolder.modifyViewConfig { updatedScanViewConfig ->
-                                    updatedScanViewConfig.viewPluginConfig = getViewPluginConfigFromJsonObject(json)
-                                    ScanViewConfigHolder.ModifyViewConfigResult.Apply
-                                }
-                            }
+                        showViewConfigEditFragment(ViewConfigEditorDefinition.ScanViewConfig,
+                            currentScanViewConfig.toJsonObject()
+                        ) { json ->
+                            initScanView(ScanViewInitOption.InitWithJsonObject(json), true)
                         }
-                        currentScanViewConfig.viewPluginCompositeConfig?.let { viewPluginCompositeConfig ->
-                            showViewConfigEditFragment(ViewConfigEditorDefinition.ViewPluginCompositeConfig,
-                                viewPluginCompositeConfig.toJsonObject()
-                            ) { json ->
-                                scanViewConfigHolder.modifyViewConfig { updatedScanViewConfig ->
-                                    updatedScanViewConfig.viewPluginCompositeConfig = getViewPluginCompositeConfigFromJsonObject(json)
-                                    ScanViewConfigHolder.ModifyViewConfigResult.Apply
-                                }
-                            }
-                        }
-
                         ScanViewConfigHolder.ModifyViewConfigResult.Discard
                     }
                 }
@@ -340,7 +339,6 @@ open class ScanActivity : AppCompatActivity() {
         if (scanView.isInitialized) {
             //Starts scanning on Activity resume
             scanView.start()
-            title = scanView.scanViewPlugin.id()
         }
     }
 

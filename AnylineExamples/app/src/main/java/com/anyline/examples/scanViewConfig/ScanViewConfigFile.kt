@@ -106,7 +106,7 @@ data class ScanViewConfigFile(
                                 ViewPluginCompositeConfig.ProcessingMode.SEQUENTIAL ->
                                     ScanPluginWorkflow.CompositeSequential
                             }
-                            viewPluginCompositeConfig.viewPlugins.map { it.viewPluginConfig }
+                            viewPluginCompositeConfig.viewPlugins?.map { it.viewPluginConfig }
                         }
                     }
                 viewPluginConfigs?.forEach { viewPluginConfig ->

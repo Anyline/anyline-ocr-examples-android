@@ -4,12 +4,12 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "54.5.1"
+    anylinesdk_version = "54.6.0"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
     anyline_examples_version_code = 13
-    anyline_examples_version_name = "54.5.1"
+    anyline_examples_version_name = "54.6.0"
 }
 
 android {
@@ -68,7 +68,6 @@ dependencies {
     implementation "io.anyline:anylinesdk:$anylinesdk_version"
 
     implementation "com.jakewharton.timber:timber:$timber_version"
-    implementation 'pub.devrel:easypermissions:3.0.0'
     implementation "androidx.fragment:fragment-ktx:1.6.1"
     implementation 'androidx.webkit:webkit:1.7.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
