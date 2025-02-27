@@ -1,0 +1,160 @@
+{
+    "licences": [
+        {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+            "dependencies": [
+                "kotlin-stdlib-jdk8-1.8.22.jar",
+                "kotlin-stdlib-1.9.21.jar",
+                "kotlin-stdlib-jdk7-1.8.22.jar"
+            ]
+        },
+        {
+            "name": "Apache License 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+            "dependencies": [
+                "validation-api-2.0.1.Final.jar",
+                "jakarta.validation-api-3.0.0.jar"
+            ]
+        },
+        {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+            "dependencies": [
+                "ktor-utils-jvm-2.3.2.jar",
+                "ktor-client-core-jvm-2.3.2.jar",
+                "kotlinx-coroutines-android-1.7.1.jar",
+                "kotlinx-coroutines-slf4j-1.7.1.jar",
+                "ktor-io-jvm-2.3.2.jar",
+                "ktor-client-auth-jvm-2.3.2.jar",
+                "kotlinx-coroutines-jdk8-1.7.1.jar",
+                "annotations-23.0.0.jar",
+                "ktor-client-android-jvm-2.3.2.jar",
+                "moshi-1.15.2.jar",
+                "ktor-http-jvm-2.3.2.jar",
+                "ktor-events-jvm-2.3.2.jar",
+                "kotlinx-coroutines-core-jvm-1.7.1.jar",
+                "ktor-websocket-serialization-jvm-2.3.2.jar",
+                "ktor-websockets-jvm-2.3.2.jar",
+                "ktor-serialization-jvm-2.3.2.jar"
+            ]
+        },
+        {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+            "dependencies": [
+                "activity-1.6.0.aar",
+                "concurrent-futures-1.0.0.jar",
+                "core-common-2.1.0.jar",
+                "tracing-1.0.0.aar",
+                "transport-api-2.2.1.aar",
+                "lifecycle-process-2.4.1.aar",
+                "vectordrawable-1.1.0.aar",
+                "failureaccess-1.0.1.jar",
+                "firebase-annotations-16.0.0.jar",
+                "lifecycle-viewmodel-2.5.1.aar",
+                "lifecycle-common-2.5.1.jar",
+                "multidex-2.0.1.aar",
+                "okio-jvm-3.7.0.jar",
+                "core-1.10.1.aar",
+                "cursoradapter-1.0.0.aar",
+                "emoji2-1.2.0.aar",
+                "lifecycle-livedata-ktx-2.5.1.aar",
+                "drawerlayout-1.0.0.aar",
+                "core-ktx-1.10.1.aar",
+                "transport-runtime-2.2.6.aar",
+                "annotation-jvm-1.6.0.jar",
+                "firebase-encoders-16.1.0.jar",
+                "appcompat-resources-1.6.1.aar",
+                "lifecycle-livedata-core-ktx-2.5.1.aar",
+                "vectordrawable-animated-1.1.0.aar",
+                "resourceinspection-annotation-1.0.1.jar",
+                "lifecycle-runtime-2.5.1.aar",
+                "core-runtime-2.1.0.aar",
+                "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+                "versionedparcelable-1.1.1.aar",
+                "interpolator-1.0.0.aar",
+                "javax.inject-1.jar",
+                "jsr305-3.0.2.jar",
+                "annotation-experimental-1.3.0.aar",
+                "savedstate-1.2.0.aar",
+                "lifecycle-livedata-2.5.1.aar",
+                "emoji2-views-helper-1.2.0.aar",
+                "exifinterface-1.0.0.aar",
+                "collection-1.1.0.jar",
+                "fragment-1.3.6.aar",
+                "lifecycle-viewmodel-savedstate-2.5.1.aar",
+                "startup-runtime-1.1.1.aar",
+                "loader-1.0.0.aar",
+                "viewpager-1.0.0.aar",
+                "firebase-components-16.1.0.aar",
+                "appcompat-1.6.1.aar",
+                "transport-backend-cct-2.3.3.aar",
+                "firebase-encoders-json-17.1.0.aar",
+                "j2objc-annotations-1.3.jar",
+                "lifecycle-livedata-core-2.5.1.aar",
+                "customview-1.0.0.aar"
+            ]
+        },
+        {
+            "name": "Android Software Development Kit License",
+            "url": "https://developer.android.com/studio/terms.html",
+            "dependencies": [
+                "image-1.0.0-beta1.aar",
+                "play-services-tasks-18.2.0.aar",
+                "play-services-base-18.5.0.aar",
+                "play-services-basement-18.4.0.aar"
+            ]
+        },
+        {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+            "dependencies": [
+                "error_prone_annotations-2.3.4.jar",
+                "okhttp-3.14.9.jar"
+            ]
+        },
+        {
+            "name": "GNU General Public License, version 2 (GPL2), with the classpath exception",
+            "url": "http://www.gnu.org/software/classpath/license.html",
+            "dependencies": [
+                "checker-compat-qual-2.5.5.jar"
+            ]
+        },
+        {
+            "name": "The MIT License",
+            "url": "http://opensource.org/licenses/MIT",
+            "dependencies": [
+                "checker-compat-qual-2.5.5.jar"
+            ]
+        },
+        {
+            "name": "ML Kit Terms of Service",
+            "url": "https://developers.google.com/ml-kit/terms",
+            "dependencies": [
+                "face-detection-16.1.7.aar",
+                "play-services-mlkit-face-detection-17.1.0.aar",
+                "vision-interfaces-16.3.0.aar",
+                "vision-common-17.3.0.aar",
+                "barcode-scanning-common-17.0.0.aar",
+                "common-18.11.0.aar",
+                "play-services-mlkit-barcode-scanning-18.3.1.aar",
+                "barcode-scanning-17.3.0.aar"
+            ]
+        },
+        {
+            "name": "Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+            "dependencies": [
+                "guava-29.0-android.jar"
+            ]
+        },
+        {
+            "name": "MIT License",
+            "url": "http://www.opensource.org/licenses/mit-license.php",
+            "dependencies": [
+                "slf4j-api-1.7.36.jar"
+            ]
+        }
+    ]
+}
