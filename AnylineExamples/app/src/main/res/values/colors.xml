@@ -19,4 +19,6 @@
     <color name="blue">#0099FF</color>
     <color name="blue_light">#32ADFF</color>
     <color name="blue_very_light">#CCEBFF</color>
+
+    <color name="selected_overlay">#B213BB80</color>
 </resources>

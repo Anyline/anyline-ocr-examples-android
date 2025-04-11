@@ -165,6 +165,16 @@ data class ScanViewConfigFile(
         return updatedDescription
     }
 
+    /*
+     * Returns true when configured for a single barcode scanner without any ScanFeedbackConfig
+     */
+    fun shouldUseOverlayActivity(): Boolean {
+        return scanViewConfig?.viewPluginConfig?.let { viewPluginConfig ->
+            viewPluginConfig.pluginConfig?.barcodeConfig != null &&
+                    (scanViewConfig?.scanViewConfigDescription?.contains("overlay") ?: false)
+        } ?: run {false }
+    }
+
     companion object {
         private val urlPattern = Pattern.compile(
             "(?:^|[\\W])((ht|f)tp(s?):\\/\\/|www\\.)"

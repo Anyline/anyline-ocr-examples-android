@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.anyline.examples.barcodeOverlay.BarcodeOverlayScanActivity
 import com.anyline.examples.databinding.ActivitySelectViewConfigBinding
 import com.anyline.examples.scanViewConfig.ScanViewConfigFile
 import com.anyline.examples.scanViewConfig.ScanViewConfigFolder
@@ -125,7 +126,12 @@ class SelectConfigActivity : AppCompatActivity() {
 
     private fun onFileSelected(viewConfig: ScanViewConfigFile) {
         if (viewConfig.isValid()) {
-            val intent = ScanActivity.buildIntent(this,  viewConfig.fileNameWithPath())
+            val intent = if (viewConfig.shouldUseOverlayActivity()) {
+                BarcodeOverlayScanActivity.buildIntent(this, viewConfig.fileNameWithPath())
+            }
+            else {
+                ScanActivity.buildIntent(this, viewConfig.fileNameWithPath())
+            }
             startActivity(intent)
         }
         else {

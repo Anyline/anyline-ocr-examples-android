@@ -18,6 +18,10 @@
         android:theme="@style/Theme.ExamplesApp"
         tools:targetApi="31">
         <activity
+            android:name="com.anyline.examples.barcodeOverlay.BarcodeOverlayScanActivity"
+            android:exported="false"
+            android:label="OverlayScanActivity"/>
+        <activity
             android:name="com.anyline.examples.viewConfigEditor.ViewConfigEditorActivity"
             android:exported="false"
             android:label="ViewConfigEditorActivity"/>
