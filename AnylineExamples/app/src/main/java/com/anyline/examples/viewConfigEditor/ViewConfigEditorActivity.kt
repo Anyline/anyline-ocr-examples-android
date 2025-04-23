@@ -63,7 +63,7 @@ class ViewConfigEditorActivity : AppCompatActivity() {
         webContentAction?.let {
             val canGoBack = it.goBack()
             if (!canGoBack) {
-                super.onBackPressed()
+                onBackPressedDispatcher.onBackPressed()
             }
         }
     }

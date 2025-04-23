@@ -4,15 +4,16 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "54.8.0"
+    anylinesdk_version = "55.0.0"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
     anyline_examples_version_code = 13
-    anyline_examples_version_name = "54.8.0"
+    anyline_examples_version_name = "55.0.0"
 }
 
 android {
+    namespace "com.anyline.examples"
     compileSdk 34
 
     defaultConfig {
@@ -26,6 +27,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig true
         viewBinding true
         dataBinding true
     }
@@ -44,16 +46,17 @@ android {
         }
         release {
             signingConfig signingConfigs.debug
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     sourceSets {
@@ -67,6 +70,8 @@ dependencies {
 
     implementation "io.anyline:anylinesdk:$anylinesdk_version"
 
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:1.2.2"
+
     implementation "com.jakewharton.timber:timber:$timber_version"
     implementation "androidx.fragment:fragment-ktx:1.6.1"
     implementation 'androidx.webkit:webkit:1.7.0'
@@ -75,7 +80,7 @@ dependencies {
 
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
-    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'

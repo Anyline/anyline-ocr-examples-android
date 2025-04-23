@@ -16,28 +16,6 @@
 #   public *;
 #}
 
-# rules for Anyline SDK classes
--keep public class io.anyline.plugin.config.** {
-  public protected *;
-}
-
--keep public class io.anyline.plugin.result.** {
-  public protected *;
-}
-
--keep public class io.anyline2.core.** {
-  public protected *;
-}
-
-# rules for Moshi classes
--dontwarn com.squareup.moshi.**
--keep class com.squareup.moshi.** { *; }
--keepclassmembers class * {
-    @com.squareup.moshi.* <fields>;
-}
--keep @com.squareup.moshi.JsonClass class * { *; }
--keepclassmembers class kotlin.Metadata { *; }
--dontwarn org.jetbrains.annotations.**
 
 # [-- Kotlin Serialization Library
 # Keep `Companion` object fields of serializable classes.

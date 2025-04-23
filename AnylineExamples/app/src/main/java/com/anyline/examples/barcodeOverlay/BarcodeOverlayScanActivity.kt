@@ -3,33 +3,43 @@ package com.anyline.examples.barcodeOverlay
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Size
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.anyline.examples.CameraStateObserver
 import com.anyline.examples.R
 import com.anyline.examples.databinding.ActivityScanBinding
 import io.anyline2.Event
 import io.anyline2.ScanResult
+import io.anyline2.sdk.extension.preferredPreviewHeight
+import io.anyline2.sdk.extension.preferredPreviewWidth
 import io.anyline2.view.ScanView
 import io.anyline2.viewplugin.ar.BarcodeOverlayListener
 import io.anyline2.viewplugin.ar.BarcodeOverlayView
 import io.anyline2.viewplugin.ar.OverlayViewHolder
 import io.anyline2.view.ScanViewLoadResult
+import io.anyline2.viewplugin.ScanViewPlugin
 
 class BarcodeOverlayScanActivity: AppCompatActivity(), BarcodeOverlayListener {
     private lateinit var binding: ActivityScanBinding
     private lateinit var scanView: ScanView
+    private lateinit var cameraStateObserver: CameraStateObserver
 
     private var scanCount: Long = 0
     private var lastScanResult: ScanResult? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityScanBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
         scanView = binding.scanView
         scanView.setOnScanViewLoaded { result -> onScanViewLoaded(result) }
+
+        cameraStateObserver = CameraStateObserver(this, scanView)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -52,6 +62,21 @@ class BarcodeOverlayScanActivity: AppCompatActivity(), BarcodeOverlayListener {
                 scanView.start()
                 title = scanView.scanViewPlugin.id()
                 setupScanViewListeners()
+
+                cameraStateObserver.apply {
+                    /* Reset CameraStateObserver and set a new expected value for the resolution
+                     * as defined in the ScanViewConfig. Use this to e.g. notify the end user
+                     * if the device doesn't support a requested 4K resolution and needs to switch
+                     * to using 1080p.
+                     */
+                    reset()
+                    expectedViewConfigCameraSize =
+                        scanView.scanViewConfigHolder.getCameraConfig()?.let { scanViewCameraConfig ->
+                            Size(
+                                scanViewCameraConfig.preferredPreviewWidth(),
+                                scanViewCameraConfig.preferredPreviewHeight())
+                        } ?: run { null }
+                }
             }
             is ScanViewLoadResult.Failed -> {
                 result.getErrorMessage()?.let { errorString ->
@@ -72,11 +97,25 @@ class BarcodeOverlayScanActivity: AppCompatActivity(), BarcodeOverlayListener {
                 binding.textTotalscannedCountValue.text = scanCount.toString()
             }
 
-            //create an instance of BarcodeOverlays which calls evalResults method
-            //when user clicks on an overlay view
-            activeScanViewPlugin.first().enableBarcodeOverlays(this@BarcodeOverlayScanActivity)
+            enableBarcodeOverlays(activeScanViewPlugin.first())
         }
+
         scanView.start()
+    }
+
+    private fun enableBarcodeOverlays(scanViewPlugin: ScanViewPlugin) {
+        //create an instance of BarcodeOverlays which calls evalResults method
+        //when user clicks on an overlay view
+        scanViewPlugin.enableBarcodeOverlays(this@BarcodeOverlayScanActivity)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun showAlertDialog(title: String, message: String, onDismiss: (() -> Unit)? = null) {
@@ -88,20 +127,12 @@ class BarcodeOverlayScanActivity: AppCompatActivity(), BarcodeOverlayListener {
         alertDialog.show()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressed()
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
     override fun onResume() {
         super.onResume()
         if (scanView.isInitialized) {
             //Starts scanning on Activity resume
             scanView.start()
+            enableBarcodeOverlays(scanView.scanViewPlugin.activeScanViewPlugin.first())
         }
     }
 
