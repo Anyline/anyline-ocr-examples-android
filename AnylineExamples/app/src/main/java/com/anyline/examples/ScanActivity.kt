@@ -3,6 +3,7 @@ package com.anyline.examples
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Size
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -16,6 +17,8 @@ import com.anyline.examples.viewConfigEditor.ViewConfigEditorFragment
 import io.anyline2.Event
 import io.anyline2.ScanResult
 import io.anyline2.sdk.ScanViewConfigHolder
+import io.anyline2.sdk.extension.preferredPreviewWidth
+import io.anyline2.sdk.extension.preferredPreviewHeight
 import io.anyline2.sdk.extension.toJsonObject
 import io.anyline2.view.ScanView
 import io.anyline2.view.ScanViewLoadResult
@@ -28,6 +31,7 @@ import java.util.*
 open class ScanActivity : AppCompatActivity() {
     private lateinit var binding: ActivityScanBinding
     protected lateinit var scanView: ScanView
+    private lateinit var cameraStateObserver: CameraStateObserver
 
     private var scanCount: Long = 0
     private var lastScanResult: ScanResult? = null
@@ -156,6 +160,8 @@ open class ScanActivity : AppCompatActivity() {
         scanView = binding.scanView
         scanView.setOnScanViewLoaded { result -> onScanViewLoaded(result) }
 
+        cameraStateObserver = CameraStateObserver(this, scanView)
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
@@ -235,6 +241,22 @@ open class ScanActivity : AppCompatActivity() {
             if (autoStart) {
                 scanView.start()
             }
+
+            cameraStateObserver.apply {
+                /* Reset CameraStateObserver and set a new expected value for the resolution
+                 * as defined in the ScanViewConfig. Use this to e.g. notify the end user
+                 * if the device doesn't support a requested 4K resolution and needs to switch
+                 * to using 1080p.
+                 */
+                reset()
+                expectedViewConfigCameraSize =
+                    scanView.scanViewConfigHolder.getCameraConfig()?.let { scanViewCameraConfig ->
+                        Size(
+                            scanViewCameraConfig.preferredPreviewWidth(),
+                            scanViewCameraConfig.preferredPreviewHeight())
+                    } ?: run { null }
+            }
+
             return true
         } catch (e: Exception) {
             showAlertDialog(
