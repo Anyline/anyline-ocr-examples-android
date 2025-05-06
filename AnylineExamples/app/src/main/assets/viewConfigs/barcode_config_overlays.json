@@ -1,5 +1,5 @@
 {
-  "scanViewConfigDescription": "Beta functionality: Optimized for demonstrating overlay + visual feedback feature for scanning of multiple barcodes simultaneously. All formats enabled.",
+  "scanViewConfigDescription": "Optimized for demonstrating overlay feature for scanning of multiple barcodes simultaneously. All formats enabled.",
   "cameraConfig": {
     "captureResolution": "1080p"
   },
@@ -11,6 +11,7 @@
     "pluginConfig": {
       "id": "Barcode|Barcodes",
       "barcodeConfig": {
+        "fastProcessMode": true,
         "barcodeFormats": [
           "ALL"
         ],
@@ -29,16 +30,6 @@
       "outerColor": "000000",
       "outerAlpha": 0.5,
       "feedbackStrokeColor": "0099FF"
-    },
-    "scanFeedbackConfig": {
-      "style": "rect",
-      "strokeWidth": 2,
-      "strokeColor": "3C3C43",
-      "fillColor": "223C3C43",
-      "animationDuration": 150,
-      "blinkAnimationOnResult": false,
-      "beepOnResult": false,
-      "vibrateOnResult": false
     },
     "uiFeedbackConfig": {
       "presets": [
