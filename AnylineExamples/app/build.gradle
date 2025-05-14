@@ -4,12 +4,12 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "55.0.3"
+    anylinesdk_version = "55.1.0"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
     anyline_examples_version_code = 13
-    anyline_examples_version_name = "55.0.3"
+    anyline_examples_version_name = "55.1.0"
 }
 
 android {
@@ -46,6 +46,7 @@ android {
         }
         release {
             signingConfig signingConfigs.debug
+            shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
