@@ -1,7 +1,7 @@
 {
-  "scanViewConfigDescription": "Optimized for DOT numbers with upside down support and UI feedback.",
+  "scanViewConfigDescription": "Optimized for vehicle identification numbers (VIN).",
   "cameraConfig": {
-    "captureResolution": "1080"
+    "captureResolution": "1080p"
   },
   "flashConfig": {
     "mode": "manual",
@@ -9,31 +9,26 @@
   },
   "viewPluginConfig": {
     "pluginConfig": {
-      "id": "Tire|TIN DOT Numbers",
-      "tinConfig": {
-        "scanMode": "DOT",
-        "upsideDownMode": "AUTO"
+      "id": "Vehicle|Vehicle Identification Numbers",
+      "vinConfig": {
+        "validateCheckDigit": true
       },
       "cancelOnResult": true
     },
     "cutoutConfig": {
-      "alignment": "center",
-      "maxWidthPercent": "60%",
-      "maxHeightPercent": "60%",
+      "alignment": "top_half",
+      "maxWidthPercent": "70%",
+      "maxHeightPercent": "70%",
       "ratioFromSize": {
-        "width": 6.25,
-        "height": 1
+        "width": 689,
+        "height": 100
       },
-      "strokeWidth": 2,
+      "strokeWidth": 1,
       "strokeColor": "FFFFFF",
-      "cornerRadius": 4,
+      "cornerRadius": 2,
       "outerColor": "000000",
-      "outerAlpha": 0.5,
-      "feedbackStrokeColor": "0099FF",
-      "offset": {
-        "x": 0,
-        "y": -15
-      }
+      "outerAlpha": 0.3,
+      "feedbackStrokeColor": "0099FF"
     },
     "scanFeedbackConfig": {
       "animation": "traverse_multi",
@@ -48,15 +43,11 @@
     "uiFeedbackConfig": {
       "presets": [
         {
-          "presetName": "tin_with_instruction_overlay_image_text_sound_feedback",
+          "presetName": "vin_with_instruction_image_text_sound_feedback",
           "presetAttributes": [
             {
               "attributeName": "instruction_text",
-              "attributeValue": "Please make sure the entire DOT number is inside the cutout."
-            },
-            {
-              "attributeName": "left_overlay_image",
-              "attributeValue": "dot_overlay"
+              "attributeValue": "Please make sure the entire VIN number is inside the cutout."
             },
             {
               "attributeName": "lighting_toodark_image",
@@ -75,12 +66,8 @@
               "attributeValue": "uifeedback_default_movecloser"
             },
             {
-              "attributeName": "format_wrong_image",
-              "attributeValue": "uifeedback_tin_wrongformat"
-            },
-            {
-              "attributeName": "date_wrong_image",
-              "attributeValue": "uifeedback_tin_wrongformat"
+              "attributeName": "format_invalid_image",
+              "attributeValue": "uifeedback_vin_invalid"
             },
             {
               "attributeName": "lighting_toodark_text",
@@ -99,11 +86,7 @@
               "attributeValue": ""
             },
             {
-              "attributeName": "format_wrong_text",
-              "attributeValue": ""
-            },
-            {
-              "attributeName": "date_wrong_text",
+              "attributeName": "format_invalid_text",
               "attributeValue": ""
             },
             {
@@ -123,11 +106,7 @@
               "attributeValue": "info_sound_default.wav"
             },
             {
-              "attributeName": "format_wrong_sound",
-              "attributeValue": "info_sound_default.wav"
-            },
-            {
-              "attributeName": "date_wrong_sound",
+              "attributeName": "format_invalid_sound",
               "attributeValue": "info_sound_default.wav"
             }
           ]
