@@ -141,8 +141,7 @@
             "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
             "dependencies": [
                 "auto-value-annotations-1.6.3.jar",
-                "error_prone_annotations-2.15.0.jar",
-                "okhttp-3.14.9.jar"
+                "error_prone_annotations-2.15.0.jar"
             ]
         },
         {
