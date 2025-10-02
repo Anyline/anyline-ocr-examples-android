@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.startScanningButton.setOnClickListener {
-            when (val initializationState = AnylineSdk.initializationState.value) {
+            when (val initializationState = AnylineSdk.getCurrentInitializationState()) {
                 is SdkInitializationState.NotInitialized -> {
                     showLicenseKeyAlertDialog(initializationState)
                     return@setOnClickListener
