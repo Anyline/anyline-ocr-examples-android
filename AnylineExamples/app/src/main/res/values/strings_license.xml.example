@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Template for license key configuration.
+
+  To set up your license key:
+
+  Option 1 (Recommended): Use environment variable
+  1. Set the ANYLINE_MOBILE_SDK_LICENSE_KEY environment variable in your shell:
+     export ANYLINE_MOBILE_SDK_LICENSE_KEY='your-license-key-here'
+  2. Run the generation script:
+     ./AnylineExamples/scripts/generate_license_key.sh
+
+  Option 2: Manual setup
+  1. Copy this file to strings_license.xml (same directory)
+  2. Replace YOUR_LICENSE_KEY_HERE with your actual license key
+
+  Get your license key at: https://documentation.anyline.com/main-component/license-key-generation.html
+-->
+<resources>
+    <string name="anyline_license_key" translatable="false">YOUR_LICENSE_KEY_HERE</string>
+</resources>

@@ -3,6 +3,9 @@
 .gradle
 build/
 local.properties
+
+# License keys - generated at build time, never commit
+**/res/values/strings_license.xml
 AnylineSDK-Examples/AnylineSDK-Examples-Source/gradle
 AnylineSDK-Examples/AnylineSDK-Examples-Source/gradlew
 AnylineSDK-Examples/AnylineSDK-Examples-Source/gradlew.bat
