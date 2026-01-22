@@ -13,6 +13,7 @@
   Option 2: Manual setup
   1. Copy this file to strings_license.xml (same directory)
   2. Replace YOUR_LICENSE_KEY_HERE with your actual license key
+  3. Delete this file
 
   Get your license key at: https://documentation.anyline.com/main-component/license-key-generation.html
 -->

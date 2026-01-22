@@ -28,3 +28,10 @@ cat > "$OUTPUT_FILE" << EOF
 EOF
 
 echo "Generated $OUTPUT_FILE with license key"
+
+# Remove the .example file as it's not allowed in res/values folder
+EXAMPLE_FILE="$SCRIPT_DIR/../app/src/main/res/values/strings_license.xml.example"
+if [ -f "$EXAMPLE_FILE" ]; then
+    rm "$EXAMPLE_FILE"
+    echo "Removed $EXAMPLE_FILE"
+fi
