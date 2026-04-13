@@ -202,16 +202,29 @@ open class WebContentFragment : Fragment(), WebContentFragmentAction {
     }
 
     @SuppressLint("SetTextI18n")
-    private fun switchErrorState(errorState: Boolean, error: WebResourceErrorCompat?) {
+    protected fun switchErrorState(errorState: Boolean, error: WebResourceErrorCompat) {
+        when (errorState) {
+            false -> switchErrorState(false)
+            true -> {
+                if (WebViewFeature.isFeatureSupported(WEB_RESOURCE_ERROR_GET_DESCRIPTION)) {
+                    switchErrorState(true, error?.description.toString())
+                } else {
+                    switchErrorState(true)
+                }
+            }
+        }
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    protected fun switchErrorState(errorState: Boolean, errorDescription: String? = null) {
         Handler(Looper.getMainLooper()).post {
             when (errorState) {
                 true -> {
                     binding.webLayout.visibility = View.GONE
                     binding.errorLayout.visibility = View.VISIBLE
-                    error?.let {
-                        if (WebViewFeature.isFeatureSupported(WEB_RESOURCE_ERROR_GET_DESCRIPTION)) {
-                            binding.errorMessageText.text = "(${it.description})"
-                        }
+                    errorDescription?.let {
+                        binding.errorMessageText.text = "(${it})"
                     }
                     binding.errorContinueButton.setOnClickListener {
                         reload()
@@ -240,17 +253,17 @@ open class WebContentFragment : Fragment(), WebContentFragmentAction {
     }
 
     override fun loadUrl(url: String) {
-        switchErrorState(false, null)
+        switchErrorState(false)
         binding.webview.loadUrl(url)
     }
 
     override fun loadDataWithBaseURL(urlData: WebContentFragmentCallback.UrlData) {
-        switchErrorState(false, null)
+        switchErrorState(false)
         binding.webview.loadDataWithBaseURL(urlData.baseUrl, urlData.data, urlData.mimeType, urlData.encoding, urlData.historyUrl)
     }
 
     override fun reload() {
-        switchErrorState(false, null)
+        switchErrorState(false)
         // by calling reload from js (instead of webview.reload())
         // prevents the webview to add same page to history
         binding.webview.loadUrl( "javascript:window.location.reload( true )" )

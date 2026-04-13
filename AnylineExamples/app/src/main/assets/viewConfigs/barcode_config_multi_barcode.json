@@ -9,7 +9,7 @@
   },
   "viewPluginConfig": {
     "pluginConfig": {
-      "id": "Barcode|Barcodes",
+      "id": "barcode_multi",
       "barcodeConfig": {
         "fastProcessMode": true,
         "barcodeFormats": [
