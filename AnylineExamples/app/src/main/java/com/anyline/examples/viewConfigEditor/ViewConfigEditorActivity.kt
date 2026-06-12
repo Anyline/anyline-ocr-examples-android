@@ -3,11 +3,11 @@ package com.anyline.examples.viewConfigEditor
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.anyline.examples.ScanActivity
 import com.anyline.examples.databinding.ActivityViewConfigEditorBinding
+import com.anyline.examples.extensions.setContentViewUsingEdgeToEdge
 import org.json.JSONObject
 
 class ViewConfigEditorActivity : AppCompatActivity() {
@@ -20,7 +20,7 @@ class ViewConfigEditorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityViewConfigEditorBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentViewUsingEdgeToEdge(binding.root)
 
         val webContentFragment = ViewConfigEditorFragment(
             ViewConfigEditorDefinition.ScanViewConfig,
@@ -39,32 +39,23 @@ class ViewConfigEditorActivity : AppCompatActivity() {
                 .commit()
         }
 
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                val canGoBack = webContentAction?.goBack() ?: false
+                if (!canGoBack) {
+                    isEnabled = false
+                    onBackPressedDispatcher.onBackPressed()
+                }
+            }
+        })
+
         setupToolbar()
     }
 
     private fun setupToolbar() {
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        title = intent.getStringExtra(EXTRA_TITLE)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressed()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    override fun onBackPressed() {
-        webContentAction?.let {
-            val canGoBack = it.goBack()
-            if (!canGoBack) {
-                onBackPressedDispatcher.onBackPressed()
-            }
+        binding.toolbar.title = intent.getStringExtra(EXTRA_TITLE)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
     }
 

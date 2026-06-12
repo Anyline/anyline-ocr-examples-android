@@ -7,12 +7,24 @@
     android:keepScreenOn="true"
     tools:context=".ScanActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="?attr/homeAsUpIndicator" />
+    </com.google.android.material.appbar.AppBarLayout>
+
     <io.anyline2.view.ScanView
         android:id="@+id/scan_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintVertical_weight="0"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:layout_marginStart="0dp"
@@ -37,9 +49,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:visibility="gone"
+        android:fillViewport="true"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
@@ -48,24 +62,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent">
+            android:gravity="bottom">
             <ImageView
                 android:id="@+id/lastresult_imageview"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/layout_linear"
-                android:layout_marginRight="64dp"
                 android:layout_marginEnd="64dp"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:visibility="gone"
                 />
             <LinearLayout
                 android:id="@+id/layout_linear"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:background="#99000000"

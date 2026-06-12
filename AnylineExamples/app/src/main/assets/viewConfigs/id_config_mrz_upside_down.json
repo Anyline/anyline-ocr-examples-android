@@ -1,7 +1,9 @@
 {
-  "scanViewConfigDescription": "Optimized for MRZ and passports scanning.",
+  "scanViewConfigDescription": "Optimized for upside down MRZ and passports scanning (enableFlipFramesLeftRight + enableFlipFramesTopBottom).",
   "cameraConfig": {
-    "captureResolution": "1080p"
+    "captureResolution": "1080p",
+    "enableFlipFramesLeftRight": true,
+    "enableFlipFramesTopBottom": true
   },
   "flashConfig": {
     "mode": "manual",
@@ -36,7 +38,7 @@
       },
       "cropOffset": {
         "x": 0,
-        "y": 90
+        "y": -90
       },
       "ratioFromSize": {
         "width": 50,
@@ -58,14 +60,14 @@
         "presetName": "simple_instruction_label",
         "presetAttributes": [{
           "attributeName": "instruction_text",
-          "attributeValue": "Hold your passport inside the frame until the scan is complete"
+          "attributeValue": "Hold your passport upside down inside the frame until the scan is complete"
         }]
       }],
       "elements": [{
         "id": "guide_image",
         "contentType": "image",
         "defaultContent": {
-          "contentValue": "uifeedback_mrz_wireframe",
+          "contentValue": "uifeedback_mrz_wireframe_upsidedown",
           "durationMills": 3000
         },
         "defaultAttributes": {

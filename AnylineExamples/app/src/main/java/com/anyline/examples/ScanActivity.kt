@@ -12,6 +12,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.anyline.examples.databinding.ActivityScanBinding
+import com.anyline.examples.extensions.setContentViewUsingEdgeToEdge
 import com.anyline.examples.viewConfigEditor.ViewConfigEditorDefinition
 import com.anyline.examples.viewConfigEditor.ViewConfigEditorFragment
 import io.anyline2.Event
@@ -156,13 +157,34 @@ open class ScanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityScanBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentViewUsingEdgeToEdge(binding.root)
         scanView = binding.scanView
         scanView.setOnScanViewLoaded { result -> onScanViewLoaded(result) }
 
         cameraStateObserver = CameraStateObserver(this, scanView)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+        binding.toolbar.menu.add(Menu.NONE, EDIT_CONFIG_MENU_ID, Menu.NONE, "Edit Config").apply {
+            setIcon(R.drawable.ic_action_pencil)
+            setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM)
+        }
+        binding.toolbar.setOnMenuItemClickListener { item ->
+            if (item.itemId == EDIT_CONFIG_MENU_ID) {
+                scanView.scanViewConfigHolder?.let { scanViewConfigHolder ->
+                    scanViewConfigHolder.modifyViewConfig { currentScanViewConfig ->
+                        showViewConfigEditFragment(ViewConfigEditorDefinition.ScanViewConfig,
+                            currentScanViewConfig.toJsonObject()
+                        ) { json ->
+                            initScanView(ScanViewInitOption.InitWithJsonObject(json), true)
+                        }
+                        ScanViewConfigHolder.ModifyViewConfigResult.Discard
+                    }
+                }
+                true
+            } else false
+        }
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -236,7 +258,7 @@ open class ScanActivity : AppCompatActivity() {
                     scanView.init(scanViewInitOption.jsonObject)
                 }
             }
-            title = scanView.scanViewPlugin.id()
+            binding.toolbar.title = scanView.scanViewPlugin.id()
             setupScanViewListeners()
             if (autoStart) {
                 scanView.start()
@@ -288,38 +310,6 @@ open class ScanActivity : AppCompatActivity() {
                     .show()
             }
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menu?.let { rootMenu ->
-            rootMenu.add(Menu.NONE, EDIT_CONFIG_MENU_ID, Menu.NONE, "Edit Config").apply {
-                setIcon(R.drawable.ic_action_pencil)
-                setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM)
-            }
-        }
-
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressedDispatcher.onBackPressed()
-            }
-            EDIT_CONFIG_MENU_ID -> {
-                scanView.scanViewConfigHolder?.let { scanViewConfigHolder ->
-                    scanViewConfigHolder.modifyViewConfig { currentScanViewConfig ->
-                        showViewConfigEditFragment(ViewConfigEditorDefinition.ScanViewConfig,
-                            currentScanViewConfig.toJsonObject()
-                        ) { json ->
-                            initScanView(ScanViewInitOption.InitWithJsonObject(json), true)
-                        }
-                        ScanViewConfigHolder.ModifyViewConfigResult.Discard
-                    }
-                }
-            }
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     private var webContentFragment: ViewConfigEditorFragment? = null
