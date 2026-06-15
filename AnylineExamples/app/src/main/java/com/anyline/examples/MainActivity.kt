@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import at.nineyards.anyline.BuildConfig.VERSION_CODE_ANYLINE_SDK
 import at.nineyards.anyline.BuildConfig.VERSION_NAME_ANYLINE_SDK
 import com.anyline.examples.databinding.ActivityMainBinding
+import com.anyline.examples.extensions.setContentViewUsingEdgeToEdge
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import io.anyline2.AnylineSdk
 import io.anyline2.init.SdkInitializationState
@@ -21,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
-        setContentView(view)
+        setContentViewUsingEdgeToEdge(view)
+        binding.toolbar.title = title
 
         AnylineSdk.initializationState.observe(this) { sdkInitializationState ->
             updateUi(sdkInitializationState)

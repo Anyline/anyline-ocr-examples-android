@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.anyline.examples.barcodeOverlay.BarcodeOverlayScanActivity
 import com.anyline.examples.databinding.ActivitySelectViewConfigBinding
+import com.anyline.examples.extensions.setContentViewUsingEdgeToEdge
 import com.anyline.examples.scanViewConfig.ScanViewConfigFile
 import com.anyline.examples.scanViewConfig.ScanViewConfigFolder
 import com.anyline.examples.viewConfigEditor.ViewConfigEditorActivity
@@ -41,9 +42,20 @@ class SelectConfigActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySelectViewConfigBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentViewUsingEdgeToEdge(binding.root)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+        binding.toolbar.menu.add(Menu.NONE, VIEW_OPTIONS_MENU_ID, Menu.NONE, R.string.selectconfig_view_options)
+            .setIcon(R.drawable.ic_action_filter)
+            .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM)
+        binding.toolbar.setOnMenuItemClickListener { item ->
+            if (item.itemId == VIEW_OPTIONS_MENU_ID) {
+                showViewOptionsDialog()
+                true
+            } else false
+        }
 
         binding.swiperefresh.apply {
             isEnabled = false
@@ -77,24 +89,6 @@ class SelectConfigActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menu?.add(Menu.NONE, VIEW_OPTIONS_MENU_ID, Menu.NONE, R.string.selectconfig_view_options)
-            ?.setIcon(R.drawable.ic_action_filter)
-            ?.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressedDispatcher.onBackPressed()
-            return true
-        }
-        else if (item.itemId == VIEW_OPTIONS_MENU_ID) {
-            showViewOptionsDialog()
-        }
-        return false
-    }
-
     private fun loadFromFolder(onFinish: ((ScanViewConfigFolder) -> Unit)) {
         loadingFilesState.update { true }
         lifecycleScope.launch(dispatcherIO) {
@@ -121,7 +115,7 @@ class SelectConfigActivity : AppCompatActivity() {
             onViewConfigSelected = ::onFileSelected,
             onViewConfigHelpRequested = ::onFileHelpSelected
         ) { viewConfig -> onViewConfigEdit(viewConfig) }
-        title = scanViewConfigFolder.friendlyName
+        binding.toolbar.title = scanViewConfigFolder.friendlyName
     }
 
     private fun onFileSelected(viewConfig: ScanViewConfigFile) {

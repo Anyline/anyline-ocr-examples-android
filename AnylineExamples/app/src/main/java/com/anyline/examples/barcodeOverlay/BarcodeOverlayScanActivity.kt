@@ -4,13 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Size
-import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.anyline.examples.CameraStateObserver
 import com.anyline.examples.R
 import com.anyline.examples.databinding.ActivityScanBinding
+import com.anyline.examples.extensions.setContentViewUsingEdgeToEdge
 import io.anyline2.Event
 import io.anyline2.ScanResult
 import io.anyline2.sdk.extension.preferredPreviewHeight
@@ -35,13 +35,15 @@ class BarcodeOverlayScanActivity: AppCompatActivity(), BarcodeOverlayListener {
 
         binding = ActivityScanBinding.inflate(layoutInflater)
 
-        setContentView(binding.root)
+        setContentViewUsingEdgeToEdge(binding.root)
         scanView = binding.scanView
         scanView.setOnScanViewLoaded { result -> onScanViewLoaded(result) }
 
         cameraStateObserver = CameraStateObserver(this, scanView)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
 
         binding.scanAgainButton.setOnClickListener {
             scanView.start()
@@ -60,7 +62,7 @@ class BarcodeOverlayScanActivity: AppCompatActivity(), BarcodeOverlayListener {
             is ScanViewLoadResult.Succeeded -> {
                 scanView.init(intent.getStringExtra(INTENT_EXTRA_VIEW_CONFIG_FILE)!!)
                 scanView.start()
-                title = scanView.scanViewPlugin.id()
+                binding.toolbar.title = scanView.scanViewPlugin.id()
                 setupScanViewListeners()
 
                 cameraStateObserver.apply {
@@ -107,15 +109,6 @@ class BarcodeOverlayScanActivity: AppCompatActivity(), BarcodeOverlayListener {
         //create an instance of BarcodeOverlays which calls evalResults method
         //when user clicks on an overlay view
         scanViewPlugin.enableBarcodeOverlays(this@BarcodeOverlayScanActivity)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressedDispatcher.onBackPressed()
-            }
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun showAlertDialog(title: String, message: String, onDismiss: (() -> Unit)? = null) {

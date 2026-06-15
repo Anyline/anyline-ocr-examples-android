@@ -4,22 +4,22 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "56.0.2"
+    anylinesdk_version = "56.1.0"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
     anyline_examples_version_code = 15
-    anyline_examples_version_name = "56.0.2"
+    anyline_examples_version_name = "56.1.0"
 }
 
 android {
     namespace "com.anyline.examples"
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "io.anyline.examples"
         minSdk 21
-        targetSdk 34
+        targetSdk 35
         versionCode anyline_examples_version_code
         versionName anyline_examples_version_name
 
@@ -59,7 +59,6 @@ android {
         }
     }
     compileOptions {
-        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
@@ -77,8 +76,6 @@ android {
 dependencies {
 
     implementation "io.anyline:anylinesdk:$anylinesdk_version"
-
-    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:1.2.2"
 
     implementation "com.jakewharton.timber:timber:$timber_version"
     implementation "androidx.fragment:fragment-ktx:1.6.1"
