@@ -33,7 +33,12 @@ class ViewConfigTest {
                 }
                 val jsonObject = JSONObject(fileContent)
 
-                val validationResult = ScanViewConfigHolder.validateJsonObject(context, jsonObject)
+                // validateForRun goes beyond schema validation: it also asserts that the optional
+                // runtime dependencies a config asks for are actually on the classpath.
+                val validationResult = ScanViewConfigHolder.validateJsonObject(
+                    context = context,
+                    jsonConfig = jsonObject,
+                    validateForRun = true)
                 when (validationResult) {
                     is ScanViewConfigHolder.ScanViewJsonValidationResult.ValidationSucceeded ->
                         assert(true) {

@@ -4,12 +4,12 @@ plugins {
 }
 
 ext {
-    anylinesdk_version = "56.2.0"
+    anylinesdk_version = "56.3.0"
     timber_version = "5.0.1"
     leakcanary_version = "2.9.1"
 
     anyline_examples_version_code = 15
-    anyline_examples_version_name = "56.2.0"
+    anyline_examples_version_name = "56.3.0"
 }
 
 android {
@@ -76,6 +76,11 @@ android {
 dependencies {
 
     implementation "io.anyline:anylinesdk:$anylinesdk_version"
+    // Google ML Kit is opt-in: the SDK declares it compileOnly and does not export it. No example
+    // scan view config sets faceDetectionEnabled, so this app does not need it. The line is left
+    // here, commented, to show exactly where the dependency goes. Uncomment it to
+    // enable face detection on Universal ID / MRZ.
+//    implementation 'com.google.mlkit:face-detection:16.1.7'    // for faceDetectionEnabled
 
     implementation "com.jakewharton.timber:timber:$timber_version"
     implementation "androidx.fragment:fragment-ktx:1.6.1"
