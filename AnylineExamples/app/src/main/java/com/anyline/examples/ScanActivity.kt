@@ -26,7 +26,6 @@ import io.anyline2.view.ScanViewLoadResult
 import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayInfoEntry
 import io.anyline2.viewplugin.ar.uiFeedback.UIFeedbackOverlayViewElementEventContent
 import org.json.JSONObject
-import timber.log.Timber
 import java.util.*
 
 open class ScanActivity : AppCompatActivity() {
@@ -45,14 +44,14 @@ open class ScanActivity : AppCompatActivity() {
     "value":1080}"
      */
     private val onScanInfo: (JSONObject) -> Unit = {
-        Timber.tag(TAG).e("onScanInfo: $it")
+        DebugLog.e(TAG, "onScanInfo: $it")
     }
 
     /**
      * Receives errors during runs
      */
     private val onError: (JSONObject) -> Unit = {
-        Timber.tag(TAG).e("onError: $it")
+        DebugLog.e(TAG, "onError: $it")
     }
 
     /**
@@ -63,7 +62,7 @@ open class ScanActivity : AppCompatActivity() {
     "message":"NoLinesFound"}
      */
     private val onRunSkipped: (JSONObject) -> Unit = {
-        Timber.tag(TAG).e("onRunSkipped: $it")
+        DebugLog.e(TAG, "onRunSkipped: $it")
     }
 
     /**
@@ -77,7 +76,7 @@ open class ScanActivity : AppCompatActivity() {
     ]}
      */
     private val onVisualFeedback: (JSONObject) -> Unit = {
-        Timber.tag(TAG).e("onVisualFeedback: $it")
+        DebugLog.e(TAG, "onVisualFeedback: $it")
     }
 
     /**
@@ -91,9 +90,9 @@ open class ScanActivity : AppCompatActivity() {
             for (i in 0 until msgArray.length()) {
                 UIFeedbackOverlayInfoEntry.fromJson(msgArray[i] as JSONObject).also { msgEntry ->
                     when (msgEntry.level) {
-                        UIFeedbackOverlayInfoEntry.Level.Info -> Timber.tag(TAG).i("onUIFeedbackInfo: ${msgEntry.message}")
-                        UIFeedbackOverlayInfoEntry.Level.Warning -> Timber.tag(TAG).w("onUIFeedbackInfo: ${msgEntry.message}")
-                        UIFeedbackOverlayInfoEntry.Level.Error -> Timber.tag(TAG).e("onUIFeedbackInfo: ${msgEntry.message}")
+                        UIFeedbackOverlayInfoEntry.Level.Info -> DebugLog.i(TAG, "onUIFeedbackInfo: ${msgEntry.message}")
+                        UIFeedbackOverlayInfoEntry.Level.Warning -> DebugLog.w(TAG, "onUIFeedbackInfo: ${msgEntry.message}")
+                        UIFeedbackOverlayInfoEntry.Level.Error -> DebugLog.e(TAG, "onUIFeedbackInfo: ${msgEntry.message}")
                     }
                 }
             }
@@ -124,7 +123,7 @@ open class ScanActivity : AppCompatActivity() {
 
     private fun evalResults(scanResults: List<ScanResult>, showScanAgain: Boolean) {
         for (it: ScanResult in scanResults) {
-            Timber.tag(TAG).e("onResult: ${it.result}")
+            DebugLog.e(TAG, "onResult: ${it.result}")
 
             lastScanResult = it
 

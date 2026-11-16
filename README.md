@@ -29,7 +29,7 @@ Before building the example app, you need to configure your Anyline license key.
 
 1. Copy the template file:
    ```bash
-   cp AnylineExamples/app/src/main/res/values/strings_license.xml.example \
+   cp AnylineExamples/strings_license.xml.example \
       AnylineExamples/app/src/main/res/values/strings_license.xml
    ```
 
